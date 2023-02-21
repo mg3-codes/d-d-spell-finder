@@ -4,17 +4,10 @@
  * @format
  */
 
-import React, {
-	ReactNode,
-	useCallback,
-	useMemo,
-	useRef,
-	useState,
-} from "react";
-import Table from "react-bootstrap/Table";
+import React, { useMemo, useRef, useState } from "react";
+import { AgGridReact } from "ag-grid-react";
+import { ColDef } from "ag-grid-community";
 
-import TableHead from "./components/table-head/table-head";
-import TableRow from "./components/table-row/table-row";
 import Spell from "./types/spell";
 
 import "./app.css";
@@ -22,8 +15,6 @@ import "ag-grid-community/styles/ag-grid.css"; // Core grid CSS, always needed
 import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
 
 import spellData from "./assets/5e-spells.json";
-import { AgGridReact } from "ag-grid-react";
-import { ColDef } from "ag-grid-community";
 
 const App = () => {
 	const gridRef = useRef(); // Optional - for accessing Grid's API
