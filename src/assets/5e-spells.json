@@ -3,7 +3,7 @@
 		{
 			"name": "Acid Splash",
 			"level": 0,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -22,7 +22,7 @@
 		{
 			"name": "Blade Ward",
 			"level": 0,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": "Self",
@@ -41,7 +41,7 @@
 		{
 			"name": "Booming Blade",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": "Self (5 ft)",
@@ -60,7 +60,7 @@
 		{
 			"name": "Chill Touch",
 			"level": 0,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": 120,
@@ -79,7 +79,7 @@
 		{
 			"name": "Control Flames",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -98,7 +98,7 @@
 		{
 			"name": "Create Bonfire",
 			"level": 0,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -117,7 +117,7 @@
 		{
 			"name": "Dancing Lights",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -136,7 +136,7 @@
 		{
 			"name": "Druidcraft",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -155,7 +155,7 @@
 		{
 			"name": "Eldritch Blast",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -174,7 +174,7 @@
 		{
 			"name": "Encode Thoughts",
 			"level": 0,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": "Self",
@@ -193,7 +193,7 @@
 		{
 			"name": "Fire Bolt",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -212,7 +212,7 @@
 		{
 			"name": "Friends",
 			"level": 0,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -231,7 +231,7 @@
 		{
 			"name": "Frostbite",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -250,7 +250,7 @@
 		{
 			"name": "Green-Flame Blade",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self (5 ft)",
@@ -269,7 +269,7 @@
 		{
 			"name": "Guidance",
 			"level": 0,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Touch",
@@ -288,7 +288,7 @@
 		{
 			"name": "Gust",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -307,7 +307,7 @@
 		{
 			"name": "Infestation",
 			"level": 0,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -326,7 +326,7 @@
 		{
 			"name": "Light",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -345,7 +345,7 @@
 		{
 			"name": "Lightning Lure",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self (15 ft)",
@@ -364,7 +364,7 @@
 		{
 			"name": "Mage Hand",
 			"level": 0,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -383,7 +383,7 @@
 		{
 			"name": "Magic Stone",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Touch",
@@ -402,7 +402,7 @@
 		{
 			"name": "Mending",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Minute",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -421,7 +421,7 @@
 		{
 			"name": "Message",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": 120,
@@ -440,7 +440,7 @@
 		{
 			"name": "Mind Sliver",
 			"level": 0,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -459,7 +459,7 @@
 		{
 			"name": "Minor Illusion",
 			"level": 0,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -478,7 +478,7 @@
 		{
 			"name": "Mold earth",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -497,7 +497,7 @@
 		{
 			"name": "Poison Spray",
 			"level": 0,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 10,
@@ -516,7 +516,7 @@
 		{
 			"name": "Prestidigitation",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 10,
@@ -535,7 +535,7 @@
 		{
 			"name": "Primal Savagery",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -554,7 +554,7 @@
 		{
 			"name": "Produce Flame",
 			"level": 0,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -573,7 +573,7 @@
 		{
 			"name": "Ray of Frost",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -592,7 +592,7 @@
 		{
 			"name": "Resistance",
 			"level": 0,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Touch",
@@ -611,7 +611,7 @@
 		{
 			"name": "Sacred Flame",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -630,7 +630,7 @@
 		{
 			"name": "Sapping Sting",
 			"level": 0,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -649,7 +649,7 @@
 		{
 			"name": "Shape Water",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -668,7 +668,7 @@
 		{
 			"name": "Shillelagh",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Touch",
@@ -687,7 +687,7 @@
 		{
 			"name": "Shocking Grasp",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -706,7 +706,7 @@
 		{
 			"name": "Spare the Dying",
 			"level": 0,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -725,7 +725,7 @@
 		{
 			"name": "Sword Burst",
 			"level": 0,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self (5 ft)",
@@ -744,7 +744,7 @@
 		{
 			"name": "Thaumaturgy",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -763,7 +763,7 @@
 		{
 			"name": "Thorn Whip",
 			"level": 0,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -782,7 +782,7 @@
 		{
 			"name": "Thunderclap",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 5,
@@ -801,7 +801,7 @@
 		{
 			"name": "Toll the Dead",
 			"level": 0,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -820,7 +820,7 @@
 		{
 			"name": "True Strike",
 			"level": 0,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": 30,
@@ -839,7 +839,7 @@
 		{
 			"name": "Vicious Mockery",
 			"level": 0,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -858,7 +858,7 @@
 		{
 			"name": "Word of Radiance",
 			"level": 0,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 5,
@@ -877,7 +877,7 @@
 		{
 			"name": "Absorb Elements",
 			"level": 1,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Reaction *",
 			"duration": "1 Round",
 			"range": "Self",
@@ -896,7 +896,7 @@
 		{
 			"name": "Alarm",
 			"level": 1,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Minute",
 			"duration": "8 Hours",
 			"range": 30,
@@ -915,7 +915,7 @@
 		{
 			"name": "Animal Friendship",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "24 Hours",
 			"range": 30,
@@ -934,7 +934,7 @@
 		{
 			"name": "Armor of Agathys",
 			"level": 1,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -953,7 +953,7 @@
 		{
 			"name": "Arms of Hadar",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -972,7 +972,7 @@
 		{
 			"name": "Bane",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -991,7 +991,7 @@
 		{
 			"name": "Beast Bond",
 			"level": 1,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Touch",
@@ -1010,7 +1010,7 @@
 		{
 			"name": "Bless",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -1029,7 +1029,7 @@
 		{
 			"name": "Burning Hands",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -1048,7 +1048,7 @@
 		{
 			"name": "Catapult",
 			"level": 1,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -1067,7 +1067,7 @@
 		{
 			"name": "Cause Fear",
 			"level": 1,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -1086,7 +1086,7 @@
 		{
 			"name": "Ceremony",
 			"level": 1,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Hour",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -1105,7 +1105,7 @@
 		{
 			"name": "Chaos Bolt",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -1124,7 +1124,7 @@
 		{
 			"name": "Charm Person",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -1143,7 +1143,7 @@
 		{
 			"name": "Chromatic Orb",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 90,
@@ -1162,7 +1162,7 @@
 		{
 			"name": "Color Spray",
 			"level": 1,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": "Self",
@@ -1181,7 +1181,7 @@
 		{
 			"name": "Command",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": 60,
@@ -1200,7 +1200,7 @@
 		{
 			"name": "Compelled Duel",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -1219,7 +1219,7 @@
 		{
 			"name": "Comprehend Languages",
 			"level": 1,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -1238,7 +1238,7 @@
 		{
 			"name": "Create or Destroy Water",
 			"level": 1,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -1257,7 +1257,7 @@
 		{
 			"name": "Cure Wounds",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -1276,7 +1276,7 @@
 		{
 			"name": "Evil and Good",
 			"level": 1,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -1295,7 +1295,7 @@
 		{
 			"name": "Detect Magic",
 			"level": 1,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -1314,7 +1314,7 @@
 		{
 			"name": "Detect Poison and Disease",
 			"level": 1,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -1333,7 +1333,7 @@
 		{
 			"name": "Disguise Self",
 			"level": 1,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -1352,7 +1352,7 @@
 		{
 			"name": "Dissonant Whispers",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -1371,7 +1371,7 @@
 		{
 			"name": "Distort Value",
 			"level": 1,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Minute",
 			"duration": "8 Hours",
 			"range": "Touch",
@@ -1390,7 +1390,7 @@
 		{
 			"name": "Divine Favor",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -1409,7 +1409,7 @@
 		{
 			"name": "Earth Tremor",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 10,
@@ -1428,7 +1428,7 @@
 		{
 			"name": "Ensnaring Strike",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -1447,7 +1447,7 @@
 		{
 			"name": "Entangle",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 90,
@@ -1466,7 +1466,7 @@
 		{
 			"name": "Expeditious Retreat",
 			"level": 1,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Bonus Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -1485,7 +1485,7 @@
 		{
 			"name": "Faerie Fire",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -1504,7 +1504,7 @@
 		{
 			"name": "False Life",
 			"level": 1,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -1523,7 +1523,7 @@
 		{
 			"name": "Feather Fall",
 			"level": 1,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Reaction *",
 			"duration": "1 Minute",
 			"range": 60,
@@ -1542,7 +1542,7 @@
 		{
 			"name": "Find Familiar",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Hour",
 			"duration": "Instantaneous",
 			"range": 10,
@@ -1561,7 +1561,7 @@
 		{
 			"name": "Floating Disk",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -1580,7 +1580,7 @@
 		{
 			"name": "Fog Cloud",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 120,
@@ -1599,7 +1599,7 @@
 		{
 			"name": "Gift of Alacrity",
 			"level": 1,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Minute",
 			"duration": "8 Hours",
 			"range": "Touch",
@@ -1618,7 +1618,7 @@
 		{
 			"name": "Goodberry",
 			"level": 1,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -1637,7 +1637,7 @@
 		{
 			"name": "Grease",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -1656,7 +1656,7 @@
 		{
 			"name": "Guiding Bolt",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": 120,
@@ -1675,7 +1675,7 @@
 		{
 			"name": "Hail of Thorns",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -1694,7 +1694,7 @@
 		{
 			"name": "Healing Word",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -1713,7 +1713,7 @@
 		{
 			"name": "Hellish Rebuke",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Reaction *",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -1732,7 +1732,7 @@
 		{
 			"name": "Heroism",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Touch",
@@ -1751,7 +1751,7 @@
 		{
 			"name": "Hex",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -1770,7 +1770,7 @@
 		{
 			"name": "Hideous Laughter",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -1789,7 +1789,7 @@
 		{
 			"name": "Hunter's Mark",
 			"level": 1,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -1808,7 +1808,7 @@
 		{
 			"name": "Ice Knife",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -1827,7 +1827,7 @@
 		{
 			"name": "Identify",
 			"level": 1,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Minute",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -1846,7 +1846,7 @@
 		{
 			"name": "Illusory Script",
 			"level": 1,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Minute",
 			"duration": "10 Days",
 			"range": "Touch",
@@ -1865,7 +1865,7 @@
 		{
 			"name": "Inflict Wounds",
 			"level": 1,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -1884,7 +1884,7 @@
 		{
 			"name": "Jim's Magic Missile",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -1903,7 +1903,7 @@
 		{
 			"name": "Jump",
 			"level": 1,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Touch",
@@ -1922,7 +1922,7 @@
 		{
 			"name": "Longstrider",
 			"level": 1,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -1941,7 +1941,7 @@
 		{
 			"name": "Mage Armor",
 			"level": 1,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": "Touch",
@@ -1960,7 +1960,7 @@
 		{
 			"name": "Magic Missile",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -1979,7 +1979,7 @@
 		{
 			"name": "Magnify Gravity",
 			"level": 1,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": 60,
@@ -1998,7 +1998,7 @@
 		{
 			"name": "Protection from Evil and Good",
 			"level": 1,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Touch",
@@ -2017,7 +2017,7 @@
 		{
 			"name": "Purify Food and Drink",
 			"level": 1,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 10,
@@ -2036,7 +2036,7 @@
 		{
 			"name": "Ray of Sickness",
 			"level": 1,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -2055,7 +2055,7 @@
 		{
 			"name": "Sanctuary",
 			"level": 1,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -2074,7 +2074,7 @@
 		{
 			"name": "Searing Smite",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -2093,7 +2093,7 @@
 		{
 			"name": "Shield",
 			"level": 1,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Reaction *",
 			"duration": "1 Round",
 			"range": "Self",
@@ -2112,7 +2112,7 @@
 		{
 			"name": "Shield of Faith",
 			"level": 1,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Bonus Action",
 			"duration": "10 Minutes",
 			"range": 60,
@@ -2131,7 +2131,7 @@
 		{
 			"name": "Silent Image",
 			"level": 1,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 60,
@@ -2150,7 +2150,7 @@
 		{
 			"name": "Sleep",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 90,
@@ -2169,7 +2169,7 @@
 		{
 			"name": "Snare",
 			"level": 1,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Minute",
 			"duration": "8 Hours",
 			"range": "Touch",
@@ -2188,7 +2188,7 @@
 		{
 			"name": "Speak with Animals",
 			"level": 1,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -2207,7 +2207,7 @@
 		{
 			"name": "Tasha's Caustic Brew",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self (30 ft)",
@@ -2226,7 +2226,7 @@
 		{
 			"name": "Tasha's Hideous Laughter",
 			"level": 1,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -2245,7 +2245,7 @@
 		{
 			"name": "Tenser's Floating Disk",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -2264,7 +2264,7 @@
 		{
 			"name": "Thunderous Smite",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -2283,7 +2283,7 @@
 		{
 			"name": "Thunderwave",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -2302,7 +2302,7 @@
 		{
 			"name": "Unseen Servant",
 			"level": 1,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -2321,7 +2321,7 @@
 		{
 			"name": "Witch Bolt",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -2340,7 +2340,7 @@
 		{
 			"name": "Wrathful Smite",
 			"level": 1,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -2359,7 +2359,7 @@
 		{
 			"name": "Zephyr Strike",
 			"level": 1,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -2378,7 +2378,7 @@
 		{
 			"name": "Acid Arrow",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 90,
@@ -2397,7 +2397,7 @@
 		{
 			"name": "Aganazzar's Scorcher",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -2416,7 +2416,7 @@
 		{
 			"name": "Aid",
 			"level": 2,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": 30,
@@ -2435,7 +2435,7 @@
 		{
 			"name": "Alter Self",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -2454,7 +2454,7 @@
 		{
 			"name": "Animal Messenger",
 			"level": 2,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "24 Hours",
 			"range": 30,
@@ -2473,7 +2473,7 @@
 		{
 			"name": "Arcane Lock",
 			"level": 2,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "Until Dispelled",
 			"range": "Touch",
@@ -2492,7 +2492,7 @@
 		{
 			"name": "Arcanist's Magic Aura",
 			"level": 2,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "24 Hours",
 			"range": "Touch",
@@ -2511,7 +2511,7 @@
 		{
 			"name": "Augury",
 			"level": 2,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Minute",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -2530,7 +2530,7 @@
 		{
 			"name": "Barkskin",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -2549,7 +2549,7 @@
 		{
 			"name": "Beast Sense",
 			"level": 2,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -2568,7 +2568,7 @@
 		{
 			"name": "Blindness/Deafness",
 			"level": 2,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -2587,7 +2587,7 @@
 		{
 			"name": "Blur",
 			"level": 2,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -2606,7 +2606,7 @@
 		{
 			"name": "Branding Smite",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -2625,7 +2625,7 @@
 		{
 			"name": "Calm Emotions",
 			"level": 2,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -2644,7 +2644,7 @@
 		{
 			"name": "Cloud of Daggers",
 			"level": 2,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -2663,7 +2663,7 @@
 		{
 			"name": "Continual Flame",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Until Dispelled",
 			"range": "Touch",
@@ -2682,7 +2682,7 @@
 		{
 			"name": "Cordon of Arrows",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": 5,
@@ -2701,7 +2701,7 @@
 		{
 			"name": "Crown of Madness",
 			"level": 2,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -2720,7 +2720,7 @@
 		{
 			"name": "Darkness",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 60,
@@ -2739,7 +2739,7 @@
 		{
 			"name": "Darkvision",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": "Touch",
@@ -2758,7 +2758,7 @@
 		{
 			"name": "Detect Thoughts",
 			"level": 2,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -2777,7 +2777,7 @@
 		{
 			"name": "Dragon's Breath",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Touch",
@@ -2796,7 +2796,7 @@
 		{
 			"name": "Dust Devil",
 			"level": 2,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -2815,7 +2815,7 @@
 		{
 			"name": "Earthbind",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 300,
@@ -2834,7 +2834,7 @@
 		{
 			"name": "Enhance Ability",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -2853,7 +2853,7 @@
 		{
 			"name": "Enlarge/Reduce",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -2872,7 +2872,7 @@
 		{
 			"name": "Enthrall",
 			"level": 2,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -2891,7 +2891,7 @@
 		{
 			"name": "Find Steed",
 			"level": 2,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "10 Minutes",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -2910,7 +2910,7 @@
 		{
 			"name": "Find Traps",
 			"level": 2,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -2929,7 +2929,7 @@
 		{
 			"name": "Flame Blade",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -2948,7 +2948,7 @@
 		{
 			"name": "Flaming Sphere",
 			"level": 2,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -2967,7 +2967,7 @@
 		{
 			"name": "Flock of Familiars",
 			"level": 2,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -2986,7 +2986,7 @@
 		{
 			"name": "Fortune's Favor",
 			"level": 2,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": 60,
@@ -3005,7 +3005,7 @@
 		{
 			"name": "Gentle Repose",
 			"level": 2,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "10 Days",
 			"range": "Touch",
@@ -3024,7 +3024,7 @@
 		{
 			"name": "Gift of Gab",
 			"level": 2,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Reaction *",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -3043,7 +3043,7 @@
 		{
 			"name": "Gust of Wind",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -3062,7 +3062,7 @@
 		{
 			"name": "Healing Spirit",
 			"level": 2,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -3081,7 +3081,7 @@
 		{
 			"name": "Heat Metal",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -3100,7 +3100,7 @@
 		{
 			"name": "Hold Person",
 			"level": 2,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -3119,7 +3119,7 @@
 		{
 			"name": "Immovable Object",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -3138,7 +3138,7 @@
 		{
 			"name": "Invisibility",
 			"level": 2,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -3157,7 +3157,7 @@
 		{
 			"name": "Jim's Glowing Coin",
 			"level": 2,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -3176,7 +3176,7 @@
 		{
 			"name": "Knock",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -3195,7 +3195,7 @@
 		{
 			"name": "Lesser Restoration",
 			"level": 2,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -3214,7 +3214,7 @@
 		{
 			"name": "Levitate",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 60,
@@ -3233,7 +3233,7 @@
 		{
 			"name": "Locate Animals or Plants",
 			"level": 2,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -3252,7 +3252,7 @@
 		{
 			"name": "Locate Object",
 			"level": 2,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -3271,7 +3271,7 @@
 		{
 			"name": "Magic Mouth",
 			"level": 2,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Minute",
 			"duration": "Until Dispelled",
 			"range": 30,
@@ -3290,7 +3290,7 @@
 		{
 			"name": "Magic Weapon",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -3309,7 +3309,7 @@
 		{
 			"name": "Maximilian's Earthen Grasp",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -3328,7 +3328,7 @@
 		{
 			"name": "Melf's Acid Arrow",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 90,
@@ -3347,7 +3347,7 @@
 		{
 			"name": "Mind Spike",
 			"level": 2,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -3366,7 +3366,7 @@
 		{
 			"name": "Mirror Image",
 			"level": 2,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -3385,7 +3385,7 @@
 		{
 			"name": "Misty Step",
 			"level": 2,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Bonus Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -3404,7 +3404,7 @@
 		{
 			"name": "Moonbeam",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -3423,7 +3423,7 @@
 		{
 			"name": "Nystul's Magic Aura",
 			"level": 2,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "24 Hours",
 			"range": "Touch",
@@ -3442,7 +3442,7 @@
 		{
 			"name": "Pass Without Trace",
 			"level": 2,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -3461,7 +3461,7 @@
 		{
 			"name": "Phantasmal Force",
 			"level": 2,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -3480,7 +3480,7 @@
 		{
 			"name": "Prayer of Healing",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "10 Minutes",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -3499,7 +3499,7 @@
 		{
 			"name": "Protection from Poison",
 			"level": 2,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -3518,7 +3518,7 @@
 		{
 			"name": "Pyrotechnics",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -3537,7 +3537,7 @@
 		{
 			"name": "Ray of Enfeeblement",
 			"level": 2,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -3556,7 +3556,7 @@
 		{
 			"name": "Rope Trick",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -3575,7 +3575,7 @@
 		{
 			"name": "Scorching Ray",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -3594,7 +3594,7 @@
 		{
 			"name": "See invisibility",
 			"level": 2,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -3613,7 +3613,7 @@
 		{
 			"name": "Shadow Blade",
 			"level": 2,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -3632,7 +3632,7 @@
 		{
 			"name": "Shatter",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -3651,7 +3651,7 @@
 		{
 			"name": "Silence",
 			"level": 2,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 120,
@@ -3670,7 +3670,7 @@
 		{
 			"name": "Skywrite",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Sight",
@@ -3689,7 +3689,7 @@
 		{
 			"name": "Snilloc's Snowball Swarm",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 90,
@@ -3708,7 +3708,7 @@
 		{
 			"name": "Spider Climb",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -3727,7 +3727,7 @@
 		{
 			"name": "Spike Growth",
 			"level": 2,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 150,
@@ -3746,7 +3746,7 @@
 		{
 			"name": "Spiritual Weapon",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -3765,7 +3765,7 @@
 		{
 			"name": "Suggestion",
 			"level": 2,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": 30,
@@ -3784,7 +3784,7 @@
 		{
 			"name": "Summon Beast",
 			"level": 2,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -3803,7 +3803,7 @@
 		{
 			"name": "Tasha's Mind Whip",
 			"level": 2,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": 90,
@@ -3822,7 +3822,7 @@
 		{
 			"name": "Warding Bond",
 			"level": 2,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -3841,7 +3841,7 @@
 		{
 			"name": "Warding Wind",
 			"level": 2,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -3860,7 +3860,7 @@
 		{
 			"name": "Web",
 			"level": 2,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -3879,7 +3879,7 @@
 		{
 			"name": "Wristpocket",
 			"level": 2,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -3898,7 +3898,7 @@
 		{
 			"name": "Zone of Truth",
 			"level": 2,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 60,
@@ -3917,7 +3917,7 @@
 		{
 			"name": "Animate Dead",
 			"level": 3,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Minute",
 			"duration": "Instantaneous",
 			"range": 10,
@@ -3936,7 +3936,7 @@
 		{
 			"name": "Aura of Vitality",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -3955,7 +3955,7 @@
 		{
 			"name": "Beacon of Hope",
 			"level": 3,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -3974,7 +3974,7 @@
 		{
 			"name": "Bestow Curse",
 			"level": 3,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Touch",
@@ -3993,7 +3993,7 @@
 		{
 			"name": "Blinding Smite",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -4012,7 +4012,7 @@
 		{
 			"name": "Blink",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -4031,7 +4031,7 @@
 		{
 			"name": "Call Lightning",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 120,
@@ -4050,7 +4050,7 @@
 		{
 			"name": "Catnap",
 			"level": 3,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 30,
@@ -4069,7 +4069,7 @@
 		{
 			"name": "Clairvoyance",
 			"level": 3,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "10 Minutes",
 			"duration": "10 Minutes",
 			"range": "1 mile",
@@ -4088,7 +4088,7 @@
 		{
 			"name": "Conjure Animals",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -4107,7 +4107,7 @@
 		{
 			"name": "Conjure Barrage",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -4126,7 +4126,7 @@
 		{
 			"name": "Counterspell",
 			"level": 3,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Reaction *",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -4145,7 +4145,7 @@
 		{
 			"name": "Create Food and Water",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -4164,7 +4164,7 @@
 		{
 			"name": "Crusader's Mantle",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -4183,7 +4183,7 @@
 		{
 			"name": "Daylight",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -4202,7 +4202,7 @@
 		{
 			"name": "Dispel Magic",
 			"level": 3,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -4221,7 +4221,7 @@
 		{
 			"name": "Elemental Weapon",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -4240,7 +4240,7 @@
 		{
 			"name": "Enemies abound",
 			"level": 3,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -4259,7 +4259,7 @@
 		{
 			"name": "Erupting Earth",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -4278,7 +4278,7 @@
 		{
 			"name": "Fast Friends",
 			"level": 3,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -4297,7 +4297,7 @@
 		{
 			"name": "Fear",
 			"level": 3,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -4316,7 +4316,7 @@
 		{
 			"name": "Feign Death",
 			"level": 3,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -4335,7 +4335,7 @@
 		{
 			"name": "Fireball",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 150,
@@ -4354,7 +4354,7 @@
 		{
 			"name": "Flame Arrows",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -4373,7 +4373,7 @@
 		{
 			"name": "Fly",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Touch",
@@ -4392,7 +4392,7 @@
 		{
 			"name": "Galder's Tower",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "10 Minutes",
 			"duration": "24 Hours",
 			"range": 30,
@@ -4411,7 +4411,7 @@
 		{
 			"name": "Gaseous Form",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -4430,7 +4430,7 @@
 		{
 			"name": "Glyph of Warding",
 			"level": 3,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Hour",
 			"duration": "Until Dispelled or Triggered",
 			"range": "Touch",
@@ -4449,7 +4449,7 @@
 		{
 			"name": "Haste",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -4468,7 +4468,7 @@
 		{
 			"name": "Hunger of Hadar",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 150,
@@ -4487,7 +4487,7 @@
 		{
 			"name": "Hypnotic Pattern",
 			"level": 3,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -4506,7 +4506,7 @@
 		{
 			"name": "Incite Greed",
 			"level": 3,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -4525,7 +4525,7 @@
 		{
 			"name": "Intellect Fortress",
 			"level": 3,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -4544,7 +4544,7 @@
 		{
 			"name": "Leomund's Tiny Hut",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Minute",
 			"duration": "8 Hours",
 			"range": "Self",
@@ -4563,7 +4563,7 @@
 		{
 			"name": "Life Transference",
 			"level": 3,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -4582,7 +4582,7 @@
 		{
 			"name": "Lightning Arrow",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -4601,7 +4601,7 @@
 		{
 			"name": "Lightning Bolt",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -4620,7 +4620,7 @@
 		{
 			"name": "Magic Circle",
 			"level": 3,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": 10,
@@ -4639,7 +4639,7 @@
 		{
 			"name": "Major Image",
 			"level": 3,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 120,
@@ -4658,7 +4658,7 @@
 		{
 			"name": "Mass Healing Word",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -4677,7 +4677,7 @@
 		{
 			"name": "Meld into Stone",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": "Touch",
@@ -4696,7 +4696,7 @@
 		{
 			"name": "Melf's Minute Meteors",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -4715,7 +4715,7 @@
 		{
 			"name": "Motivational Speech",
 			"level": 3,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": 60,
@@ -4734,7 +4734,7 @@
 		{
 			"name": "Non-detection",
 			"level": 3,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": "Touch",
@@ -4753,7 +4753,7 @@
 		{
 			"name": "Phantom Steed",
 			"level": 3,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": 30,
@@ -4772,7 +4772,7 @@
 		{
 			"name": "Plant Growth",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "Special",
 			"duration": "Instantaneous",
 			"range": 150,
@@ -4791,7 +4791,7 @@
 		{
 			"name": "Protection from Energy",
 			"level": 3,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -4810,7 +4810,7 @@
 		{
 			"name": "Pulse Wave",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -4829,7 +4829,7 @@
 		{
 			"name": "Remove Curse",
 			"level": 3,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -4848,7 +4848,7 @@
 		{
 			"name": "Revivify",
 			"level": 3,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -4867,7 +4867,7 @@
 		{
 			"name": "Sending",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": "Unlimited",
@@ -4886,7 +4886,7 @@
 		{
 			"name": "Sleet Storm",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 150,
@@ -4905,7 +4905,7 @@
 		{
 			"name": "Slow",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -4924,7 +4924,7 @@
 		{
 			"name": "Speak with Dead",
 			"level": 3,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 10,
@@ -4943,7 +4943,7 @@
 		{
 			"name": "Speak with Plants",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -4962,7 +4962,7 @@
 		{
 			"name": "Spirit Guardians",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -4981,7 +4981,7 @@
 		{
 			"name": "Sprit Shroud",
 			"level": 3,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -5000,7 +5000,7 @@
 		{
 			"name": "Stinking Cloud",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 90,
@@ -5019,7 +5019,7 @@
 		{
 			"name": "Summon Fey",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -5038,7 +5038,7 @@
 		{
 			"name": "Summon Lesser Demons",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -5057,7 +5057,7 @@
 		{
 			"name": "Summon Shadowspawn",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -5076,7 +5076,7 @@
 		{
 			"name": "Summon Undead",
 			"level": 3,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -5095,7 +5095,7 @@
 		{
 			"name": "Thunder Step",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 90,
@@ -5114,7 +5114,7 @@
 		{
 			"name": "Tidal Wave",
 			"level": 3,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -5133,7 +5133,7 @@
 		{
 			"name": "Tiny Hut",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Minute",
 			"duration": "8 Hours",
 			"range": "Self",
@@ -5152,7 +5152,7 @@
 		{
 			"name": "Tiny Servant",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Minute",
 			"duration": "8 Hours",
 			"range": "Touch",
@@ -5171,7 +5171,7 @@
 		{
 			"name": "Tongues",
 			"level": 3,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -5190,7 +5190,7 @@
 		{
 			"name": "Vampiric Touch",
 			"level": 3,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -5209,7 +5209,7 @@
 		{
 			"name": "Wall of Sand",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 90,
@@ -5228,7 +5228,7 @@
 		{
 			"name": "Wall of Water",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 60,
@@ -5247,7 +5247,7 @@
 		{
 			"name": "Water Breathing",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "24 Hours",
 			"range": 30,
@@ -5266,7 +5266,7 @@
 		{
 			"name": "Water Walk",
 			"level": 3,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -5285,7 +5285,7 @@
 		{
 			"name": "Wind Wall",
 			"level": 3,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -5304,7 +5304,7 @@
 		{
 			"name": "Arcane Eye",
 			"level": 4,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -5323,7 +5323,7 @@
 		{
 			"name": "Aura of Life",
 			"level": 4,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -5342,7 +5342,7 @@
 		{
 			"name": "Aura of Purity",
 			"level": 4,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -5361,7 +5361,7 @@
 		{
 			"name": "Banishment",
 			"level": 4,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -5380,7 +5380,7 @@
 		{
 			"name": "Black Tentacles",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 90,
@@ -5399,7 +5399,7 @@
 		{
 			"name": "Blight",
 			"level": 4,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -5418,7 +5418,7 @@
 		{
 			"name": "Charm Monster",
 			"level": 4,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -5437,7 +5437,7 @@
 		{
 			"name": "Compulsion",
 			"level": 4,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -5456,7 +5456,7 @@
 		{
 			"name": "Confusion",
 			"level": 4,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 90,
@@ -5475,7 +5475,7 @@
 		{
 			"name": "Conjure Minor Elementals",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": 90,
@@ -5494,7 +5494,7 @@
 		{
 			"name": "Conjure Woodland Beings",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -5513,7 +5513,7 @@
 		{
 			"name": "Control Water",
 			"level": 4,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 300,
@@ -5532,7 +5532,7 @@
 		{
 			"name": "Death Ward",
 			"level": 4,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": "Touch",
@@ -5551,7 +5551,7 @@
 		{
 			"name": "Dimension Door",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 500,
@@ -5570,7 +5570,7 @@
 		{
 			"name": "Divination",
 			"level": 4,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -5589,7 +5589,7 @@
 		{
 			"name": "Dominate Beast",
 			"level": 4,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -5608,7 +5608,7 @@
 		{
 			"name": "Elemental Bane",
 			"level": 4,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 90,
@@ -5627,7 +5627,7 @@
 		{
 			"name": "Evard's Black Tentacles",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 90,
@@ -5646,7 +5646,7 @@
 		{
 			"name": "Fabricate",
 			"level": 4,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "10 Minutes",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -5665,7 +5665,7 @@
 		{
 			"name": "Faithful Hound",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": 30,
@@ -5684,7 +5684,7 @@
 		{
 			"name": "Find Greater Steed",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "10 Minutes",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -5703,7 +5703,7 @@
 		{
 			"name": "Fire Shield",
 			"level": 4,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -5722,7 +5722,7 @@
 		{
 			"name": "Freedom of Movement",
 			"level": 4,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -5741,7 +5741,7 @@
 		{
 			"name": "Galder's Speedy Courier",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 10,
@@ -5760,7 +5760,7 @@
 		{
 			"name": "Giant Insect",
 			"level": 4,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 30,
@@ -5779,7 +5779,7 @@
 		{
 			"name": "Grasping Vine",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -5798,7 +5798,7 @@
 		{
 			"name": "Gravity Sinkhole",
 			"level": 4,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -5817,7 +5817,7 @@
 		{
 			"name": "Greater Invisibility",
 			"level": 4,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Touch",
@@ -5836,7 +5836,7 @@
 		{
 			"name": "Guardian of Faith",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": 30,
@@ -5855,7 +5855,7 @@
 		{
 			"name": "Guardian of Nature",
 			"level": 4,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -5874,7 +5874,7 @@
 		{
 			"name": "Hallucinatory Terrain",
 			"level": 4,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "10 Minutes",
 			"duration": "24 Hours",
 			"range": 300,
@@ -5893,7 +5893,7 @@
 		{
 			"name": "Ice Storm",
 			"level": 4,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 300,
@@ -5912,7 +5912,7 @@
 		{
 			"name": "Leomund's Secret Chest",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -5931,7 +5931,7 @@
 		{
 			"name": "Locate Creature",
 			"level": 4,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -5950,7 +5950,7 @@
 		{
 			"name": "Mordenkainen's Faithful Hound",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": 30,
@@ -5969,7 +5969,7 @@
 		{
 			"name": "Mordenkainen's Private Sanctum",
 			"level": 4,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "10 Minutes",
 			"duration": "24 Hours",
 			"range": 120,
@@ -5988,7 +5988,7 @@
 		{
 			"name": "Otiluke's Resilient Sphere",
 			"level": 4,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -6007,7 +6007,7 @@
 		{
 			"name": "Phantasmal Killer",
 			"level": 4,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -6026,7 +6026,7 @@
 		{
 			"name": "Polymorph",
 			"level": 4,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -6045,7 +6045,7 @@
 		{
 			"name": "Private Sanctum",
 			"level": 4,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "10 Minutes",
 			"duration": "24 Hours",
 			"range": 120,
@@ -6064,7 +6064,7 @@
 		{
 			"name": "Resilient Sphere",
 			"level": 4,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -6083,7 +6083,7 @@
 		{
 			"name": "Secret Chest",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -6102,7 +6102,7 @@
 		{
 			"name": "Shadow of Moil",
 			"level": 4,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -6121,7 +6121,7 @@
 		{
 			"name": "Sickening Radiance",
 			"level": 4,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 120,
@@ -6140,7 +6140,7 @@
 		{
 			"name": "Staggering Smite",
 			"level": 4,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -6159,7 +6159,7 @@
 		{
 			"name": "Stone Shape",
 			"level": 4,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -6178,7 +6178,7 @@
 		{
 			"name": "Stoneskin",
 			"level": 4,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -6197,7 +6197,7 @@
 		{
 			"name": "Storm Sphere",
 			"level": 4,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 150,
@@ -6216,7 +6216,7 @@
 		{
 			"name": "Summon Aberration",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -6235,7 +6235,7 @@
 		{
 			"name": "Summon Construct",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -6254,7 +6254,7 @@
 		{
 			"name": "Summon Elemental",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -6273,7 +6273,7 @@
 		{
 			"name": "Summon Greater Demon",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -6292,7 +6292,7 @@
 		{
 			"name": "Vitriolic Sphere",
 			"level": 4,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 150,
@@ -6311,7 +6311,7 @@
 		{
 			"name": "Wall of Fire",
 			"level": 4,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -6330,7 +6330,7 @@
 		{
 			"name": "Watery Sphere",
 			"level": 4,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 90,
@@ -6349,7 +6349,7 @@
 		{
 			"name": "Animate Objects",
 			"level": 5,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -6369,7 +6369,7 @@
 		{
 			"name": "Anti-life Shell",
 			"level": 5,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -6388,7 +6388,7 @@
 		{
 			"name": "Arcane Hand",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -6407,7 +6407,7 @@
 		{
 			"name": "Awaken",
 			"level": 5,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "8 Hours",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -6426,7 +6426,7 @@
 		{
 			"name": "Banishing Smite",
 			"level": 5,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -6445,7 +6445,7 @@
 		{
 			"name": "Bigby's Hand",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -6464,7 +6464,7 @@
 		{
 			"name": "Circle of Power",
 			"level": 5,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -6483,7 +6483,7 @@
 		{
 			"name": "Cloudkill",
 			"level": 5,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 120,
@@ -6502,7 +6502,7 @@
 		{
 			"name": "Commune",
 			"level": 5,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Minute",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -6521,7 +6521,7 @@
 		{
 			"name": "Commune with Nature",
 			"level": 5,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Minute",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -6540,7 +6540,7 @@
 		{
 			"name": "Cone of Cold",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -6559,7 +6559,7 @@
 		{
 			"name": "Conjure Elemental",
 			"level": 5,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": 90,
@@ -6578,7 +6578,7 @@
 		{
 			"name": "Conjure Volley",
 			"level": 5,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 150,
@@ -6597,7 +6597,7 @@
 		{
 			"name": "Contact Other Plane",
 			"level": 5,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Minute",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -6616,7 +6616,7 @@
 		{
 			"name": "Contagion",
 			"level": 5,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "7 Days",
 			"range": "Touch",
@@ -6635,7 +6635,7 @@
 		{
 			"name": "Control Winds",
 			"level": 5,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 300,
@@ -6654,7 +6654,7 @@
 		{
 			"name": "Creation",
 			"level": 5,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Minute",
 			"duration": "Special",
 			"range": 30,
@@ -6673,7 +6673,7 @@
 		{
 			"name": "Danse Macabre",
 			"level": 5,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -6692,7 +6692,7 @@
 		{
 			"name": "Dawn",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -6711,7 +6711,7 @@
 		{
 			"name": "Destructive Wave",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -6730,7 +6730,7 @@
 		{
 			"name": "Dispel Evil and Good",
 			"level": 5,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -6749,7 +6749,7 @@
 		{
 			"name": "Dominate Person",
 			"level": 5,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -6768,7 +6768,7 @@
 		{
 			"name": "Dream",
 			"level": 5,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Minute",
 			"duration": "8 Hours",
 			"range": "Self",
@@ -6787,7 +6787,7 @@
 		{
 			"name": "Enervation",
 			"level": 5,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -6806,7 +6806,7 @@
 		{
 			"name": "Far Step",
 			"level": 5,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -6825,7 +6825,7 @@
 		{
 			"name": "Flame Strike",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -6844,7 +6844,7 @@
 		{
 			"name": "Geas",
 			"level": 5,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Minute",
 			"duration": "30 Days",
 			"range": 60,
@@ -6863,7 +6863,7 @@
 		{
 			"name": "Greater Restoration",
 			"level": 5,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -6882,7 +6882,7 @@
 		{
 			"name": "Hallow",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "24 Hours",
 			"duration": "Until Dispelled",
 			"range": "Touch",
@@ -6901,7 +6901,7 @@
 		{
 			"name": "Hold Monster",
 			"level": 5,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 90,
@@ -6920,7 +6920,7 @@
 		{
 			"name": "Holy Weapon",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -6939,7 +6939,7 @@
 		{
 			"name": "Immolation",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 90,
@@ -6958,7 +6958,7 @@
 		{
 			"name": "Infernal Calling",
 			"level": 5,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": 90,
@@ -6977,7 +6977,7 @@
 		{
 			"name": "Insect Plague",
 			"level": 5,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 300,
@@ -6996,7 +6996,7 @@
 		{
 			"name": "Legend Lore",
 			"level": 5,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "10 Minutes",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -7015,7 +7015,7 @@
 		{
 			"name": "Maelstrom",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -7034,7 +7034,7 @@
 		{
 			"name": "Mass Cure Wounds",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -7053,7 +7053,7 @@
 		{
 			"name": "Mislead",
 			"level": 5,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -7072,7 +7072,7 @@
 		{
 			"name": "Modify Memory",
 			"level": 5,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -7091,7 +7091,7 @@
 		{
 			"name": "Negative Energy Flood",
 			"level": 5,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -7110,7 +7110,7 @@
 		{
 			"name": "Passwall",
 			"level": 5,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -7129,7 +7129,7 @@
 		{
 			"name": "Planar Binding",
 			"level": 5,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Hour",
 			"duration": "24 Hours",
 			"range": 60,
@@ -7148,7 +7148,7 @@
 		{
 			"name": "Raise Dead",
 			"level": 5,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Hour",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -7167,7 +7167,7 @@
 		{
 			"name": "Rary's Telepathic Bond",
 			"level": 5,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -7186,7 +7186,7 @@
 		{
 			"name": "Reincarnate",
 			"level": 5,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Hour",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -7205,7 +7205,7 @@
 		{
 			"name": "Scrying",
 			"level": 5,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "10 Minutes",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -7224,7 +7224,7 @@
 		{
 			"name": "Seeming",
 			"level": 5,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": 30,
@@ -7243,7 +7243,7 @@
 		{
 			"name": "Skill Empowerment",
 			"level": 5,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -7262,7 +7262,7 @@
 		{
 			"name": "Steel Wind Strike",
 			"level": 5,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -7281,7 +7281,7 @@
 		{
 			"name": "Summon Celestial",
 			"level": 5,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -7300,7 +7300,7 @@
 		{
 			"name": "Swift Quiver",
 			"level": 5,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Touch",
@@ -7319,7 +7319,7 @@
 		{
 			"name": "Synaptic Static",
 			"level": 5,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "120 ft (20 ft )",
@@ -7338,7 +7338,7 @@
 		{
 			"name": "Telekinesis",
 			"level": 5,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 60,
@@ -7357,7 +7357,7 @@
 		{
 			"name": "Telepathic Bond",
 			"level": 5,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -7376,7 +7376,7 @@
 		{
 			"name": "Teleportation Circle",
 			"level": 5,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "1 Round",
 			"range": 10,
@@ -7395,7 +7395,7 @@
 		{
 			"name": "Temporal Shunt",
 			"level": 5,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Reaction *",
 			"duration": "1 Round",
 			"range": 120,
@@ -7414,7 +7414,7 @@
 		{
 			"name": "Transmute Rock",
 			"level": 5,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Until Dispelled",
 			"range": 120,
@@ -7433,7 +7433,7 @@
 		{
 			"name": "Tree Stride",
 			"level": 5,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -7452,7 +7452,7 @@
 		{
 			"name": "Wall of Force",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 120,
@@ -7471,7 +7471,7 @@
 		{
 			"name": "Wall of Light",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 120,
@@ -7490,7 +7490,7 @@
 		{
 			"name": "Wall of Stone",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 120,
@@ -7509,7 +7509,7 @@
 		{
 			"name": "Wrath of Nature",
 			"level": 5,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -7528,7 +7528,7 @@
 		{
 			"name": "Arcane Gate",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 500,
@@ -7547,7 +7547,7 @@
 		{
 			"name": "Blade Barrier",
 			"level": 6,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 90,
@@ -7566,7 +7566,7 @@
 		{
 			"name": "Bones of the Earth",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 120,
@@ -7585,7 +7585,7 @@
 		{
 			"name": "Chain Lightning",
 			"level": 6,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 150,
@@ -7604,7 +7604,7 @@
 		{
 			"name": "Circle of Death",
 			"level": 6,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 150,
@@ -7623,7 +7623,7 @@
 		{
 			"name": "Conjure Fey",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": 90,
@@ -7642,7 +7642,7 @@
 		{
 			"name": "Contingency",
 			"level": 6,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "10 Minutes",
 			"duration": "10 Days",
 			"range": "Self",
@@ -7661,7 +7661,7 @@
 		{
 			"name": "Create Homunculus",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Hour",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -7680,7 +7680,7 @@
 		{
 			"name": "Create Undead",
 			"level": 6,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Minute",
 			"duration": "Instantaneous",
 			"range": 10,
@@ -7699,7 +7699,7 @@
 		{
 			"name": "Disintegrate",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -7718,7 +7718,7 @@
 		{
 			"name": "Drawmij's Instant Summons",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "Until Dispelled",
 			"range": "Touch",
@@ -7737,7 +7737,7 @@
 		{
 			"name": "Druid Grove",
 			"level": 6,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "10 Minutes",
 			"duration": "24 Hours",
 			"range": "Touch",
@@ -7756,7 +7756,7 @@
 		{
 			"name": "Eyebite",
 			"level": 6,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -7775,7 +7775,7 @@
 		{
 			"name": "Find the Path",
 			"level": 6,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Minute",
 			"duration": "1 Day",
 			"range": "Self",
@@ -7794,7 +7794,7 @@
 		{
 			"name": "Flesh to Stone",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -7813,7 +7813,7 @@
 		{
 			"name": "Forbiddance",
 			"level": 6,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "10 Minutes",
 			"duration": "1 Day",
 			"range": "Touch",
@@ -7832,7 +7832,7 @@
 		{
 			"name": "Freezing Sphere",
 			"level": 6,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 300,
@@ -7851,7 +7851,7 @@
 		{
 			"name": "Globe of Invulnerability",
 			"level": 6,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -7870,7 +7870,7 @@
 		{
 			"name": "Gravity Fissure",
 			"level": 6,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -7889,7 +7889,7 @@
 		{
 			"name": "Guards and Wards",
 			"level": 6,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "10 Minutes",
 			"duration": "24 Hours",
 			"range": "Touch",
@@ -7908,7 +7908,7 @@
 		{
 			"name": "Harm",
 			"level": 6,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -7927,7 +7927,7 @@
 		{
 			"name": "Heal",
 			"level": 6,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -7946,7 +7946,7 @@
 		{
 			"name": "Heroes' Feast",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "10 Minutes",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -7965,7 +7965,7 @@
 		{
 			"name": "Instant Summons",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "Until Dispelled",
 			"range": "Touch",
@@ -7984,7 +7984,7 @@
 		{
 			"name": "Investiture of Flame",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -8003,7 +8003,7 @@
 		{
 			"name": "Investiture of Ice",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -8022,7 +8022,7 @@
 		{
 			"name": "Investiture of Stone",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -8041,7 +8041,7 @@
 		{
 			"name": "Investiture of Wind",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -8060,7 +8060,7 @@
 		{
 			"name": "Magic Jar",
 			"level": 6,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Minute",
 			"duration": "Until Dispelled",
 			"range": "Self",
@@ -8079,7 +8079,7 @@
 		{
 			"name": "Mass Suggestion",
 			"level": 6,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "24 Hours",
 			"range": 60,
@@ -8098,7 +8098,7 @@
 		{
 			"name": "Mental Prison",
 			"level": 6,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -8117,7 +8117,7 @@
 		{
 			"name": "Move Earth",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "2 Hours",
 			"range": 120,
@@ -8136,7 +8136,7 @@
 		{
 			"name": "Otiluke's Freezing Sphere",
 			"level": 6,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -8155,7 +8155,7 @@
 		{
 			"name": "Otto's Irresistible Dance",
 			"level": 6,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 30,
@@ -8174,7 +8174,7 @@
 		{
 			"name": "Planar Ally",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "10 Minutes",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -8193,7 +8193,7 @@
 		{
 			"name": "Primordial Ward",
 			"level": 6,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -8212,7 +8212,7 @@
 		{
 			"name": "Programmed Illusion",
 			"level": 6,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "Until Dispelled",
 			"range": 120,
@@ -8231,7 +8231,7 @@
 		{
 			"name": "Scatter",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -8250,7 +8250,7 @@
 		{
 			"name": "Soul Cage",
 			"level": 6,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Reaction *",
 			"duration": "8 Hours",
 			"range": 60,
@@ -8269,7 +8269,7 @@
 		{
 			"name": "Summon Fiend",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 90,
@@ -8288,7 +8288,7 @@
 		{
 			"name": "Sunbeam",
 			"level": 6,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self (60 ft )",
@@ -8307,7 +8307,7 @@
 		{
 			"name": "Tasha's Other-Worldly Guise",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -8326,7 +8326,7 @@
 		{
 			"name": "Tenser's Transformation",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -8345,7 +8345,7 @@
 		{
 			"name": "Transport via Plants",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Round",
 			"range": 10,
@@ -8364,7 +8364,7 @@
 		{
 			"name": "True Seeing",
 			"level": 6,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -8383,7 +8383,7 @@
 		{
 			"name": "Wall of Ice",
 			"level": 6,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 120,
@@ -8402,7 +8402,7 @@
 		{
 			"name": "Wall of Thorns",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 120,
@@ -8421,7 +8421,7 @@
 		{
 			"name": "Wind Walk",
 			"level": 6,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Minute",
 			"duration": "8 Hours",
 			"range": 30,
@@ -8440,7 +8440,7 @@
 		{
 			"name": "Word of Recall",
 			"level": 6,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 5,
@@ -8459,7 +8459,7 @@
 		{
 			"name": "Conjure Celestial",
 			"level": 7,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": 90,
@@ -8478,7 +8478,7 @@
 		{
 			"name": "Crown of Stars",
 			"level": 7,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -8497,7 +8497,7 @@
 		{
 			"name": "Delayed Blast Fireball",
 			"level": 7,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 150,
@@ -8516,7 +8516,7 @@
 		{
 			"name": "Divine Word",
 			"level": 7,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Bonus Action",
 			"duration": "Instantaneous",
 			"range": 30,
@@ -8535,7 +8535,7 @@
 		{
 			"name": "Dream of the Blue Veil",
 			"level": 7,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "10 Minutes",
 			"duration": "10 Minutes",
 			"range": 20,
@@ -8554,7 +8554,7 @@
 		{
 			"name": "Etherealness",
 			"level": 7,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "8 Hours",
 			"range": "Self",
@@ -8573,7 +8573,7 @@
 		{
 			"name": "Finger of Death",
 			"level": 7,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -8592,7 +8592,7 @@
 		{
 			"name": "Fire Storm",
 			"level": 7,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 150,
@@ -8611,7 +8611,7 @@
 		{
 			"name": "Forcecage",
 			"level": 7,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 100,
@@ -8630,7 +8630,7 @@
 		{
 			"name": "Magnificent Mansion",
 			"level": 7,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "24 Hours",
 			"range": 300,
@@ -8649,7 +8649,7 @@
 		{
 			"name": "Mirage Arcane",
 			"level": 7,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "10 Minutes",
 			"duration": "10 Days",
 			"range": "Sight",
@@ -8668,7 +8668,7 @@
 		{
 			"name": "Mordenkainen's Magnificent Mansion",
 			"level": 7,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "24 Hours",
 			"range": 300,
@@ -8687,7 +8687,7 @@
 		{
 			"name": "Mordenkainen's Sword",
 			"level": 7,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -8706,7 +8706,7 @@
 		{
 			"name": "Plane Shift",
 			"level": 7,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -8725,7 +8725,7 @@
 		{
 			"name": "Power Word Pain",
 			"level": 7,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -8744,7 +8744,7 @@
 		{
 			"name": "Prismatic Spray",
 			"level": 7,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -8763,7 +8763,7 @@
 		{
 			"name": "Project Image",
 			"level": 7,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Day",
 			"range": "500 miles",
@@ -8782,7 +8782,7 @@
 		{
 			"name": "Regenerate",
 			"level": 7,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Minute",
 			"duration": "1 Hour",
 			"range": "Touch",
@@ -8801,7 +8801,7 @@
 		{
 			"name": "Resurrection",
 			"level": 7,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Hour",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -8820,7 +8820,7 @@
 		{
 			"name": "Reverse Gravity",
 			"level": 7,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 100,
@@ -8839,7 +8839,7 @@
 		{
 			"name": "Sequester",
 			"level": 7,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Until Dispelled",
 			"range": "Touch",
@@ -8858,7 +8858,7 @@
 		{
 			"name": "Simulacrum",
 			"level": 7,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "12 Hours",
 			"duration": "Until Dispelled",
 			"range": "Touch",
@@ -8877,7 +8877,7 @@
 		{
 			"name": "Symbol",
 			"level": 7,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Minute",
 			"duration": "Until Dispelled or Triggered",
 			"range": "Touch (60 ft )",
@@ -8896,7 +8896,7 @@
 		{
 			"name": "Teleport",
 			"level": 7,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 10,
@@ -8915,7 +8915,7 @@
 		{
 			"name": "Temple of the Gods",
 			"level": 7,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Hour",
 			"duration": "24 Hours",
 			"range": 120,
@@ -8934,7 +8934,7 @@
 		{
 			"name": "Tether Essence",
 			"level": 7,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -8953,7 +8953,7 @@
 		{
 			"name": "Whirlwind",
 			"level": 7,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 300,
@@ -8972,7 +8972,7 @@
 		{
 			"name": "Abi-Dalzim's Horrid Wilting",
 			"level": 8,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 150,
@@ -8991,7 +8991,7 @@
 		{
 			"name": "Animal Shapes",
 			"level": 8,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "24 Hours",
 			"range": 30,
@@ -9010,7 +9010,7 @@
 		{
 			"name": "anti-magic Field",
 			"level": 8,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -9029,7 +9029,7 @@
 		{
 			"name": "Antipathy/Sympathy",
 			"level": 8,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Hour",
 			"duration": "10 Days",
 			"range": 60,
@@ -9048,7 +9048,7 @@
 		{
 			"name": "Clone",
 			"level": 8,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Hour",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -9067,7 +9067,7 @@
 		{
 			"name": "Control Weather",
 			"level": 8,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "10 Minutes",
 			"duration": "8 Hours",
 			"range": "Self",
@@ -9086,7 +9086,7 @@
 		{
 			"name": "Dark Star",
 			"level": 8,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 150,
@@ -9105,7 +9105,7 @@
 		{
 			"name": "Demiplane",
 			"level": 8,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -9124,7 +9124,7 @@
 		{
 			"name": "Dominate Monster",
 			"level": 8,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 60,
@@ -9143,7 +9143,7 @@
 		{
 			"name": "Earthquake",
 			"level": 8,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 500,
@@ -9162,7 +9162,7 @@
 		{
 			"name": "Feeblemind",
 			"level": 8,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 150,
@@ -9181,7 +9181,7 @@
 		{
 			"name": "Glibness",
 			"level": 8,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -9200,7 +9200,7 @@
 		{
 			"name": "Holy Aura",
 			"level": 8,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Self",
@@ -9219,7 +9219,7 @@
 		{
 			"name": "Illusory Dragon",
 			"level": 8,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -9238,7 +9238,7 @@
 		{
 			"name": "Incendiary Cloud",
 			"level": 8,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 150,
@@ -9257,7 +9257,7 @@
 		{
 			"name": "Maddening Darkness",
 			"level": 8,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 150,
@@ -9276,7 +9276,7 @@
 		{
 			"name": "Maze",
 			"level": 8,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 60,
@@ -9295,7 +9295,7 @@
 		{
 			"name": "Mighty Fortress",
 			"level": 8,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "Instantaneous",
 			"range": "1 mile",
@@ -9314,7 +9314,7 @@
 		{
 			"name": "Mind Blank",
 			"level": 8,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "24 Hours",
 			"range": "Touch",
@@ -9333,7 +9333,7 @@
 		{
 			"name": "Power Word Stun",
 			"level": 8,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -9352,7 +9352,7 @@
 		{
 			"name": "Reality Break",
 			"level": 8,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -9371,7 +9371,7 @@
 		{
 			"name": "Sunburst",
 			"level": 8,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "150 ft (60 ft )",
@@ -9390,7 +9390,7 @@
 		{
 			"name": "Telepathy",
 			"level": 8,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "24 Hours",
 			"range": "Unlimited",
@@ -9409,7 +9409,7 @@
 		{
 			"name": "Tsunami",
 			"level": 8,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Minute",
 			"duration": "6 Rounds",
 			"range": "Sight",
@@ -9428,7 +9428,7 @@
 		{
 			"name": "Astral Projection",
 			"level": 9,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Hour",
 			"duration": "Special",
 			"range": 10,
@@ -9447,7 +9447,7 @@
 		{
 			"name": "Blade of Disaster",
 			"level": 9,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Bonus Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -9466,7 +9466,7 @@
 		{
 			"name": "Foresight",
 			"level": 9,
-			"school": "Divination",
+			"school": 2,
 			"castingTime": "1 Minute",
 			"duration": "8 Hours",
 			"range": "Touch",
@@ -9485,7 +9485,7 @@
 		{
 			"name": "Gate",
 			"level": 9,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 60,
@@ -9504,7 +9504,7 @@
 		{
 			"name": "Imprisonment",
 			"level": 9,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Minute",
 			"duration": "Until Dispelled",
 			"range": 30,
@@ -9523,7 +9523,7 @@
 		{
 			"name": "Invulnerability",
 			"level": 9,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": "Self",
@@ -9542,7 +9542,7 @@
 		{
 			"name": "Mass Heal",
 			"level": 9,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -9561,7 +9561,7 @@
 		{
 			"name": "Mass Polymorph",
 			"level": 9,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 120,
@@ -9580,7 +9580,7 @@
 		{
 			"name": "Meteor Swarm",
 			"level": 9,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "1 mile",
@@ -9599,7 +9599,7 @@
 		{
 			"name": "Power Word Heal",
 			"level": 9,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -9618,7 +9618,7 @@
 		{
 			"name": "Power Word Kill",
 			"level": 9,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 60,
@@ -9637,7 +9637,7 @@
 		{
 			"name": "Prismatic Wall",
 			"level": 9,
-			"school": "Abjuration",
+			"school": 0,
 			"castingTime": "1 Action",
 			"duration": "10 Minutes",
 			"range": 60,
@@ -9656,7 +9656,7 @@
 		{
 			"name": "Psychic Scream",
 			"level": 9,
-			"school": "Enchantment",
+			"school": 3,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 90,
@@ -9675,7 +9675,7 @@
 		{
 			"name": "Ravenous Void",
 			"level": 9,
-			"school": "Evocation",
+			"school": 4,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 1000,
@@ -9694,7 +9694,7 @@
 		{
 			"name": "Shapechange",
 			"level": 9,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": "Self",
@@ -9713,7 +9713,7 @@
 		{
 			"name": "Storm of Vengeance",
 			"level": 9,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": "Sight",
@@ -9732,7 +9732,7 @@
 		{
 			"name": "Time Ravage",
 			"level": 9,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": 90,
@@ -9751,7 +9751,7 @@
 		{
 			"name": "Time Stop",
 			"level": 9,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",
@@ -9770,7 +9770,7 @@
 		{
 			"name": "True Polymorph",
 			"level": 9,
-			"school": "Transmutation",
+			"school": 7,
 			"castingTime": "1 Action",
 			"duration": "1 Hour",
 			"range": 30,
@@ -9789,7 +9789,7 @@
 		{
 			"name": "True Resurrection",
 			"level": 9,
-			"school": "Necromancy",
+			"school": 6,
 			"castingTime": "1 Hour",
 			"duration": "Instantaneous",
 			"range": "Touch",
@@ -9808,7 +9808,7 @@
 		{
 			"name": "Weird",
 			"level": 9,
-			"school": "Illusion",
+			"school": 5,
 			"castingTime": "1 Action",
 			"duration": "1 Minute",
 			"range": 120,
@@ -9827,7 +9827,7 @@
 		{
 			"name": "Wish",
 			"level": 9,
-			"school": "Conjuration",
+			"school": 1,
 			"castingTime": "1 Action",
 			"duration": "Instantaneous",
 			"range": "Self",

@@ -5,9 +5,9 @@
  */
 
 type Spell = {
-	name?: string;
-	level?: number;
-	school?: string;
+	name: string;
+	level: number;
+	school: string;
 	castingTime?: string;
 	duration?: string;
 	range?: number | string;
@@ -22,7 +22,6 @@ type Spell = {
 	material?: string;
 	source?: string;
 	details?: string;
-	link?: string;
 };
 
 export default Spell;
