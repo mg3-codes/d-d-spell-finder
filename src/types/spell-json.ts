@@ -4,6 +4,7 @@
  * @format
  */
 
+import { mapNumberToCastingTimeName } from "../enums/casting-times";
 import { mapNumberToSchoolName } from "../enums/schools";
 import { mapNumberToSourceName } from "../enums/sources";
 import Spell from "./spell";
@@ -12,7 +13,7 @@ export type SpellJson = {
 	name: string;
 	level: number;
 	school: number;
-	castingTime?: string;
+	castingTime: number;
 	duration?: string;
 	range?: number | string;
 	area?: string;
@@ -34,7 +35,7 @@ export const mapSpellJsonToSpell = (json: SpellJson): Spell => {
 		name: json.name,
 		level: json.level,
 		school: mapNumberToSchoolName(json.school),
-		castingTime: json.castingTime,
+		castingTime: mapNumberToCastingTimeName(json.castingTime),
 		duration: json.duration,
 		range: json.range,
 		area: json.area,

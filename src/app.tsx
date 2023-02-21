@@ -11,6 +11,7 @@ import { ColDef } from "ag-grid-community";
 import LevelFilter from "./components/level-filter/level-filter";
 import SchoolFilter from "./components/school-filter/school-filter";
 import SourceFilter from "./components/source-filter/source-filter";
+import CastingTimeFilter from "./components/casting-time-filter/casting-time-filter";
 
 import Spell from "./types/spell";
 import { SpellJson, mapSpellJsonToSpell } from "./types/spell-json";
@@ -32,8 +33,8 @@ const App = () => {
 	const [rowData, setRowData] = useState<Spell[]>(setDefaultData()); // Set rowData to Array of Objects, one Object per Row
 
 	useEffect(() => {
-		const sources = spellData.spells.map((x) => x.source);
-		console.log(...new Set(sources));
+		const results = spellData.spells.map((x) => x.castingTime);
+		console.log(...new Set(results));
 	}, []);
 
 	// Each Column Definition results in one Column.
@@ -59,7 +60,12 @@ const App = () => {
 			filter: SchoolFilter,
 			initialWidth: 130,
 		},
-		{ field: "castingTime", headerName: "Casting Time", initialWidth: 110 },
+		{
+			field: "castingTime",
+			headerName: "Casting Time",
+			filter: CastingTimeFilter,
+			initialWidth: 110,
+		},
 		{ field: "duration", headerName: "Duration", initialWidth: 140 },
 		{ field: "range", headerName: "Range", initialWidth: 100 },
 		{ field: "area", headerName: "Area", initialWidth: 100 },
