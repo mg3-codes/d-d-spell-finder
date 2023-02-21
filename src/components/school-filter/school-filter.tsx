@@ -47,7 +47,7 @@ export default forwardRef(function SchoolFilter(props: any, ref): ReactElement {
 			},
 
 			isFilterActive() {
-				return selectedSchools.length !== 10;
+				return selectedSchools.length !== filterDisabledArray.length;
 			},
 
 			getModel() {

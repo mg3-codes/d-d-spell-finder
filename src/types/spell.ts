@@ -20,7 +20,7 @@ type Spell = {
 	verbal?: boolean;
 	somatic?: boolean;
 	material?: string;
-	source?: string;
+	source: string;
 	details?: string;
 };
 

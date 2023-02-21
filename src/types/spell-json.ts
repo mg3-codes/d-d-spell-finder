@@ -5,6 +5,7 @@
  */
 
 import { mapNumberToSchoolName } from "../enums/schools";
+import { mapNumberToSourceName } from "../enums/sources";
 import Spell from "./spell";
 
 export type SpellJson = {
@@ -23,7 +24,7 @@ export type SpellJson = {
 	verbal?: boolean;
 	somatic?: boolean;
 	material?: string;
-	source?: string;
+	source: number;
 	details?: string;
 	link?: string;
 };
@@ -45,7 +46,7 @@ export const mapSpellJsonToSpell = (json: SpellJson): Spell => {
 		verbal: json.verbal,
 		somatic: json.somatic,
 		material: json.material,
-		source: json.source,
+		source: mapNumberToSourceName(json.school),
 		details: json.details,
 	};
 };

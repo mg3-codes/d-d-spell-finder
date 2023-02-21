@@ -4,12 +4,13 @@
  * @format
  */
 
-import React, { useMemo, useRef, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { AgGridReact } from "ag-grid-react";
 import { ColDef } from "ag-grid-community";
 
 import LevelFilter from "./components/level-filter/level-filter";
 import SchoolFilter from "./components/school-filter/school-filter";
+import SourceFilter from "./components/source-filter/source-filter";
 
 import Spell from "./types/spell";
 import { SpellJson, mapSpellJsonToSpell } from "./types/spell-json";
@@ -30,9 +31,10 @@ const App = () => {
 	const gridRef = useRef(); // Optional - for accessing Grid's API
 	const [rowData, setRowData] = useState<Spell[]>(setDefaultData()); // Set rowData to Array of Objects, one Object per Row
 
-	// useEffect(() => {
-	// 	// console.log(1 === School.Abjuration);
-	// }, []);
+	useEffect(() => {
+		const sources = spellData.spells.map((x) => x.source);
+		console.log(...new Set(sources));
+	}, []);
 
 	// Each Column Definition results in one Column.
 	const [columnDefs, setColumnDefs] = useState<ColDef[]>([
@@ -77,7 +79,7 @@ const App = () => {
 		{ field: "verbal", headerName: "Verbal", initialWidth: 100 },
 		{ field: "somatic", headerName: "Somatic", initialWidth: 100 },
 		{ field: "material", headerName: "Material" },
-		{ field: "source", headerName: "Source" },
+		{ field: "source", headerName: "Source", filter: SourceFilter },
 		{ field: "details", headerName: "Details" },
 	]);
 
