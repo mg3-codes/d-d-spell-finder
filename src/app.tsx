@@ -13,6 +13,7 @@ import SchoolFilter from "./components/school-filter/school-filter";
 import SourceFilter from "./components/source-filter/source-filter";
 import CastingTimeFilter from "./components/casting-time-filter/casting-time-filter";
 import RangeFilter from "./components/range-filter/range-filter";
+import DurationFilter from "./components/duration-filter/duration-filter";
 
 import Spell from "./types/spell";
 import { schoolDataFormatter } from "./enums/schools";
@@ -25,13 +26,14 @@ import "ag-grid-community/styles/ag-grid.css"; // Core grid CSS, always needed
 import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
 
 import spellData from "./assets/5e-spells.json";
+import { durationDataFormatter } from "./enums/duration";
 
 const App = () => {
 	const gridRef = useRef(); // Optional - for accessing Grid's API
 	const [rowData, setRowData] = useState<Spell[]>(spellData.spells); // Set rowData to Array of Objects, one Object per Row
 
 	useEffect(() => {
-		const results = spellData.spells.map((x) => x.range);
+		const results = spellData.spells.map((x) => x.duration);
 		const set = new Set(results);
 		console.log(set);
 	}, []);
@@ -67,7 +69,13 @@ const App = () => {
 			valueFormatter: castingTimeDataFormatter,
 			initialWidth: 110,
 		},
-		{ field: "duration", headerName: "Duration", initialWidth: 140 },
+		{
+			field: "duration",
+			headerName: "Duration",
+			filter: DurationFilter,
+			valueFormatter: durationDataFormatter,
+			initialWidth: 140,
+		},
 		{
 			field: "range",
 			headerName: "Range",

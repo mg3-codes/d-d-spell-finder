@@ -9,7 +9,7 @@ type Spell = {
 	level: number;
 	school: number;
 	castingTime: number;
-	duration?: string;
+	duration: number;
 	range: number;
 	area?: string;
 	attack?: string;
