@@ -10,7 +10,7 @@ type Spell = {
 	school: number;
 	castingTime: number;
 	duration?: string;
-	range?: number | string;
+	range: number;
 	area?: string;
 	attack?: string;
 	save?: string;

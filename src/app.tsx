@@ -12,11 +12,13 @@ import LevelFilter from "./components/level-filter/level-filter";
 import SchoolFilter from "./components/school-filter/school-filter";
 import SourceFilter from "./components/source-filter/source-filter";
 import CastingTimeFilter from "./components/casting-time-filter/casting-time-filter";
+import RangeFilter from "./components/range-filter/range-filter";
 
 import Spell from "./types/spell";
 import { schoolDataFormatter } from "./enums/schools";
 import { castingTimeDataFormatter } from "./enums/casting-times";
 import { sourceDataFormatter } from "./enums/sources";
+import { rangeDataFormatter } from "./enums/ranges";
 
 import "./app.css";
 import "ag-grid-community/styles/ag-grid.css"; // Core grid CSS, always needed
@@ -29,8 +31,9 @@ const App = () => {
 	const [rowData, setRowData] = useState<Spell[]>(spellData.spells); // Set rowData to Array of Objects, one Object per Row
 
 	useEffect(() => {
-		const results = spellData.spells.map((x) => x.castingTime);
-		console.log(...new Set(results));
+		const results = spellData.spells.map((x) => x.range);
+		const set = new Set(results);
+		console.log(set);
 	}, []);
 
 	// Each Column Definition results in one Column.
@@ -65,7 +68,13 @@ const App = () => {
 			initialWidth: 110,
 		},
 		{ field: "duration", headerName: "Duration", initialWidth: 140 },
-		{ field: "range", headerName: "Range", initialWidth: 100 },
+		{
+			field: "range",
+			headerName: "Range",
+			filter: RangeFilter,
+			valueFormatter: rangeDataFormatter,
+			initialWidth: 100,
+		},
 		{ field: "area", headerName: "Area", initialWidth: 100 },
 		{ field: "attack", headerName: "Attack", initialWidth: 100 },
 		{ field: "save", headerName: "Save", initialWidth: 110 },
