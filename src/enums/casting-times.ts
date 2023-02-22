@@ -4,6 +4,9 @@
  * @format
  */
 
+import { ValueFormatterParams } from "ag-grid-community";
+import Spell from "../types/spell";
+
 enum CastingTime {
 	Action = 0,
 	Reaction = 1,
@@ -42,26 +45,26 @@ const mapNumberToCastingTime = (x: number): number | undefined => {
 	}
 };
 
-const mapNumberToCastingTimeName = (x: number): string => {
+const mapNumberToCastingTimeDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:
 			return "Action";
 		case 1:
 			return "Reaction";
 		case 2:
-			return "BonusAction";
+			return "Bonus Action";
 		case 3:
-			return "OneMinute";
+			return "1 Minute";
 		case 4:
-			return "TenMinutes";
+			return "10 Minutes";
 		case 5:
-			return "OneHour";
+			return "1 Hour";
 		case 6:
-			return "EightHours";
+			return "8 Hours";
 		case 7:
-			return "TwelveHours";
+			return "12 Hours";
 		case 8:
-			return "TwentyFourHours";
+			return "24 Hours";
 		case 9:
 			return "Special";
 	}
@@ -69,4 +72,13 @@ const mapNumberToCastingTimeName = (x: number): string => {
 	return "";
 };
 
-export { CastingTime, mapNumberToCastingTime, mapNumberToCastingTimeName };
+const castingTimeDataFormatter = (
+	params: ValueFormatterParams<Spell>,
+): string => mapNumberToCastingTimeDisplayName(params.value);
+
+export {
+	CastingTime,
+	mapNumberToCastingTime,
+	mapNumberToCastingTimeDisplayName,
+	castingTimeDataFormatter,
+};

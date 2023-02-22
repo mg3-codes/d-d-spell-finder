@@ -14,7 +14,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapNumberToSchoolName, School } from "../../enums/schools";
+import { mapNumberToSchoolDisplayName, School } from "../../enums/schools";
 import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
@@ -47,7 +47,6 @@ export default forwardRef(function SchoolFilter(
 				return numberBasedFilterDoesFilterPass(
 					props?.data?.school,
 					selectedSchools,
-					mapNumberToSchoolName,
 				);
 			},
 
@@ -83,49 +82,49 @@ export default forwardRef(function SchoolFilter(
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(School.Abjuration)}
-				label={mapNumberToSchoolName(School.Abjuration)}
+				label={mapNumberToSchoolDisplayName(School.Abjuration)}
 				checked={isChecked(School.Abjuration)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(School.Conjuration)}
-				label={mapNumberToSchoolName(School.Conjuration)}
+				label={mapNumberToSchoolDisplayName(School.Conjuration)}
 				checked={isChecked(School.Conjuration)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(School.Divination)}
-				label={mapNumberToSchoolName(School.Divination)}
+				label={mapNumberToSchoolDisplayName(School.Divination)}
 				checked={isChecked(School.Divination)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(School.Enchantment)}
-				label={mapNumberToSchoolName(School.Enchantment)}
+				label={mapNumberToSchoolDisplayName(School.Enchantment)}
 				checked={isChecked(School.Enchantment)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(School.Evocation)}
-				label={mapNumberToSchoolName(School.Evocation)}
+				label={mapNumberToSchoolDisplayName(School.Evocation)}
 				checked={isChecked(School.Evocation)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(School.Illusion)}
-				label={mapNumberToSchoolName(School.Illusion)}
+				label={mapNumberToSchoolDisplayName(School.Illusion)}
 				checked={isChecked(School.Illusion)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(School.Necromancy)}
-				label={mapNumberToSchoolName(School.Necromancy)}
+				label={mapNumberToSchoolDisplayName(School.Necromancy)}
 				checked={isChecked(School.Necromancy)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(School.Transmutation)}
-				label={mapNumberToSchoolName(School.Transmutation)}
+				label={mapNumberToSchoolDisplayName(School.Transmutation)}
 				checked={isChecked(School.Transmutation)}
 			/>
 			<Button

@@ -7,8 +7,8 @@
 type Spell = {
 	name: string;
 	level: number;
-	school: string;
-	castingTime?: string;
+	school: number;
+	castingTime: number;
 	duration?: string;
 	range?: number | string;
 	area?: string;
@@ -20,7 +20,7 @@ type Spell = {
 	verbal?: boolean;
 	somatic?: boolean;
 	material?: string;
-	source: string;
+	source: number;
 	details?: string;
 };
 

@@ -44,9 +44,8 @@ export default forwardRef(function LevelFilter(
 		return {
 			doesFilterPass(props: NumberBasedFilterProps) {
 				return numberBasedFilterDoesFilterPass(
-					props?.data?.level.toString(),
+					props?.data?.level,
 					selectedLevels,
-					(x: number) => x.toString(),
 				);
 			},
 

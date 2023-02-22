@@ -14,7 +14,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapNumberToSourceName, Source } from "../../enums/sources";
+import { mapNumberToSourceDisplayName, Source } from "../../enums/sources";
 import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
@@ -47,7 +47,6 @@ export default forwardRef(function SourceFilter(
 				return numberBasedFilterDoesFilterPass(
 					props?.data?.source,
 					selectedSources,
-					mapNumberToSourceName,
 				);
 			},
 
@@ -85,7 +84,7 @@ export default forwardRef(function SourceFilter(
 				onChange={() =>
 					handleCheck(Source["Acquisitions Incorporated"])
 				}
-				label={mapNumberToSourceName(
+				label={mapNumberToSourceDisplayName(
 					Source["Acquisitions Incorporated"],
 				)}
 				checked={isChecked(Source["Acquisitions Incorporated"])}
@@ -93,13 +92,13 @@ export default forwardRef(function SourceFilter(
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(Source["Basic Rules"])}
-				label={mapNumberToSourceName(Source["Basic Rules"])}
+				label={mapNumberToSourceDisplayName(Source["Basic Rules"])}
 				checked={isChecked(Source["Basic Rules"])}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(Source["Elemental Evil"])}
-				label={mapNumberToSourceName(Source["Elemental Evil"])}
+				label={mapNumberToSourceDisplayName(Source["Elemental Evil"])}
 				checked={isChecked(Source["Elemental Evil"])}
 			/>
 			<Form.Check
@@ -107,7 +106,7 @@ export default forwardRef(function SourceFilter(
 				onChange={() =>
 					handleCheck(Source["Explorer's Guide to Wildemount"])
 				}
-				label={mapNumberToSourceName(
+				label={mapNumberToSourceDisplayName(
 					Source["Explorer's Guide to Wildemount"],
 				)}
 				checked={isChecked(Source["Explorer's Guide to Wildemount"])}
@@ -117,7 +116,7 @@ export default forwardRef(function SourceFilter(
 				onChange={() =>
 					handleCheck(Source["Guildmasters' Guide to Ravnica"])
 				}
-				label={mapNumberToSourceName(
+				label={mapNumberToSourceDisplayName(
 					Source["Guildmasters' Guide to Ravnica"],
 				)}
 				checked={isChecked(Source["Guildmasters' Guide to Ravnica"])}
@@ -127,7 +126,7 @@ export default forwardRef(function SourceFilter(
 				onChange={() =>
 					handleCheck(Source["Lost Laboratory of Kwalish"])
 				}
-				label={mapNumberToSourceName(
+				label={mapNumberToSourceDisplayName(
 					Source["Lost Laboratory of Kwalish"],
 				)}
 				checked={isChecked(Source["Lost Laboratory of Kwalish"])}
@@ -135,7 +134,9 @@ export default forwardRef(function SourceFilter(
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(Source["Player's Handbook"])}
-				label={mapNumberToSourceName(Source["Player's Handbook"])}
+				label={mapNumberToSourceDisplayName(
+					Source["Player's Handbook"],
+				)}
 				checked={isChecked(Source["Player's Handbook"])}
 			/>
 			<Form.Check
@@ -143,7 +144,7 @@ export default forwardRef(function SourceFilter(
 				onChange={() =>
 					handleCheck(Source["Tasha's Cauldron of Everything"])
 				}
-				label={mapNumberToSourceName(
+				label={mapNumberToSourceDisplayName(
 					Source["Tasha's Cauldron of Everything"],
 				)}
 				checked={isChecked(Source["Tasha's Cauldron of Everything"])}
@@ -153,7 +154,7 @@ export default forwardRef(function SourceFilter(
 				onChange={() =>
 					handleCheck(Source["Xanathar's Guide to Everything"])
 				}
-				label={mapNumberToSourceName(
+				label={mapNumberToSourceDisplayName(
 					Source["Xanathar's Guide to Everything"],
 				)}
 				checked={isChecked(Source["Xanathar's Guide to Everything"])}

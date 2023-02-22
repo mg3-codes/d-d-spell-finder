@@ -21,16 +21,13 @@ export const createDisabledFilterArray = (numFilters: number): number[] =>
 	Array.from({ length: numFilters }, (v, index) => index);
 
 export const numberBasedFilterDoesFilterPass = (
-	submittedValue: string | undefined,
+	submittedValue: number | undefined,
 	selectedFilters: number[],
-	nameMappingFunction: (x: number) => string,
 ): boolean => {
 	if (!submittedValue) return false;
 
 	return (
-		selectedFilters.find(
-			(value) => nameMappingFunction(value) === submittedValue,
-		) !== undefined
+		selectedFilters.find((value) => value === submittedValue) !== undefined
 	);
 };
 

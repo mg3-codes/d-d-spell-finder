@@ -17,7 +17,7 @@ import Form from "react-bootstrap/Form";
 
 import {
 	CastingTime,
-	mapNumberToCastingTimeName,
+	mapNumberToCastingTimeDisplayName,
 } from "../../enums/casting-times";
 import {
 	createDisabledFilterArray,
@@ -51,7 +51,6 @@ export default forwardRef(function CastingTimeFilter(
 				return numberBasedFilterDoesFilterPass(
 					props?.data?.castingTime,
 					selectedCastingTimes,
-					mapNumberToCastingTimeName,
 				);
 			},
 
@@ -91,61 +90,71 @@ export default forwardRef(function CastingTimeFilter(
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(CastingTime.Action)}
-				label={mapNumberToCastingTimeName(CastingTime.Action)}
+				label={mapNumberToCastingTimeDisplayName(CastingTime.Action)}
 				checked={isChecked(CastingTime.Action)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(CastingTime.BonusAction)}
-				label={mapNumberToCastingTimeName(CastingTime.BonusAction)}
+				label={mapNumberToCastingTimeDisplayName(
+					CastingTime.BonusAction,
+				)}
 				checked={isChecked(CastingTime.BonusAction)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(CastingTime.Reaction)}
-				label={mapNumberToCastingTimeName(CastingTime.Reaction)}
+				label={mapNumberToCastingTimeDisplayName(CastingTime.Reaction)}
 				checked={isChecked(CastingTime.Reaction)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(CastingTime.OneMinute)}
-				label={mapNumberToCastingTimeName(CastingTime.OneMinute)}
+				label={mapNumberToCastingTimeDisplayName(CastingTime.OneMinute)}
 				checked={isChecked(CastingTime.OneMinute)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(CastingTime.TenMinutes)}
-				label={mapNumberToCastingTimeName(CastingTime.TenMinutes)}
+				label={mapNumberToCastingTimeDisplayName(
+					CastingTime.TenMinutes,
+				)}
 				checked={isChecked(CastingTime.TenMinutes)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(CastingTime.OneHour)}
-				label={mapNumberToCastingTimeName(CastingTime.OneHour)}
+				label={mapNumberToCastingTimeDisplayName(CastingTime.OneHour)}
 				checked={isChecked(CastingTime.OneHour)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(CastingTime.EightHours)}
-				label={mapNumberToCastingTimeName(CastingTime.EightHours)}
+				label={mapNumberToCastingTimeDisplayName(
+					CastingTime.EightHours,
+				)}
 				checked={isChecked(CastingTime.EightHours)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(CastingTime.TwelveHours)}
-				label={mapNumberToCastingTimeName(CastingTime.TwelveHours)}
+				label={mapNumberToCastingTimeDisplayName(
+					CastingTime.TwelveHours,
+				)}
 				checked={isChecked(CastingTime.TwelveHours)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(CastingTime.TwentyFourHours)}
-				label={mapNumberToCastingTimeName(CastingTime.TwentyFourHours)}
+				label={mapNumberToCastingTimeDisplayName(
+					CastingTime.TwentyFourHours,
+				)}
 				checked={isChecked(CastingTime.TwentyFourHours)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(CastingTime.Special)}
-				label={mapNumberToCastingTimeName(CastingTime.Special)}
+				label={mapNumberToCastingTimeDisplayName(CastingTime.Special)}
 				checked={isChecked(CastingTime.Special)}
 			/>
 			<Button

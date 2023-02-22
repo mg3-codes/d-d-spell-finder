@@ -4,6 +4,9 @@
  * @format
  */
 
+import { ValueFormatterParams } from "ag-grid-community";
+import Spell from "../types/spell";
+
 enum School {
 	Abjuration = 0,
 	Conjuration = 1,
@@ -36,7 +39,7 @@ const mapNumberToSchool = (x: number): number | undefined => {
 	}
 };
 
-const mapNumberToSchoolName = (x: number): string => {
+const mapNumberToSchoolDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:
 			return "Abjuration";
@@ -59,4 +62,12 @@ const mapNumberToSchoolName = (x: number): string => {
 	return "";
 };
 
-export { School, mapNumberToSchool, mapNumberToSchoolName };
+const schoolDataFormatter = (params: ValueFormatterParams<Spell>): string =>
+	mapNumberToSchoolDisplayName(params.value);
+
+export {
+	School,
+	mapNumberToSchool,
+	mapNumberToSchoolDisplayName,
+	schoolDataFormatter,
+};
