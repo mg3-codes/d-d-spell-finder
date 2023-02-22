@@ -11,29 +11,33 @@ import React, {
 	useImperativeHandle,
 	useState,
 } from "react";
-import { RowNode } from "ag-grid-community";
-import Form from "react-bootstrap/Form";
-import { Button } from "react-bootstrap";
 
-import Spell from "../../types/spell";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+
 import {
 	CastingTime,
 	mapNumberToCastingTimeName,
 } from "../../enums/casting-times";
+import {
+	createDisabledFilterArray,
+	numberBasedFilterDoesFilterPass,
+	numberBasedFilterHandleCheck,
+	numberBasedFilterIsChecked,
+	numberBasedFilterIsFilterActive,
+	NumberBasedFilterProps,
+	NumberBasedFilterSetModel,
+} from "../shared/number-based-filter/number-based-filter";
+import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
 
 import "./casting-time-filter.css";
 
-type FilterProps = {
-	data: Spell;
-	node: RowNode;
-};
+const filterDisabledArray = createDisabledFilterArray(10);
 
 export default forwardRef(function CastingTimeFilter(
-	props: any,
+	props: AgGridFilterProps,
 	ref,
 ): ReactElement {
-	const filterDisabledArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
 	const [selectedCastingTimes, setSelectedCastingTimes] =
 		useState<number[]>(filterDisabledArray);
 
@@ -43,19 +47,18 @@ export default forwardRef(function CastingTimeFilter(
 
 	useImperativeHandle(ref, () => {
 		return {
-			doesFilterPass(props: FilterProps) {
-				return (
-					selectedCastingTimes.find(
-						(value) =>
-							mapNumberToCastingTimeName(value) ===
-							props?.data?.castingTime,
-					) !== undefined
+			doesFilterPass(props: NumberBasedFilterProps) {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.castingTime,
+					selectedCastingTimes,
+					mapNumberToCastingTimeName,
 				);
 			},
 
 			isFilterActive() {
-				return (
-					selectedCastingTimes.length !== filterDisabledArray.length
+				return numberBasedFilterIsFilterActive(
+					selectedCastingTimes.length,
+					filterDisabledArray.length,
 				);
 			},
 
@@ -67,27 +70,21 @@ export default forwardRef(function CastingTimeFilter(
 				return { value: selectedCastingTimes };
 			},
 
-			setModel(model: any) {
+			setModel(model: NumberBasedFilterSetModel) {
 				setSelectedCastingTimes(model?.value ?? []);
 			},
 		};
 	});
 
-	const handleCheck = (x: CastingTime): void => {
-		if (selectedCastingTimes.find((value) => x === value) === undefined)
-			setSelectedCastingTimes([...selectedCastingTimes, x]);
-		else
-			setSelectedCastingTimes(
-				selectedCastingTimes.filter((value) => value !== x),
-			);
-	};
+	const handleCheck = (x: CastingTime): void =>
+		numberBasedFilterHandleCheck(
+			selectedCastingTimes,
+			setSelectedCastingTimes,
+			x,
+		);
 
-	const isChecked = (x: number): boolean | undefined => {
-		if (selectedCastingTimes.find((value) => value === x) !== undefined)
-			return true;
-
-		return false;
-	};
+	const isChecked = (x: number): boolean | undefined =>
+		numberBasedFilterIsChecked(selectedCastingTimes, x);
 
 	return (
 		<div className="casting-time-filter">

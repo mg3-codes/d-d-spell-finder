@@ -11,22 +11,29 @@ import React, {
 	useImperativeHandle,
 	useState,
 } from "react";
-import { RowNode } from "ag-grid-community";
+import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Spell from "../../types/spell";
+
+import { mapNumberToSourceName, Source } from "../../enums/sources";
+import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
+import {
+	createDisabledFilterArray,
+	numberBasedFilterDoesFilterPass,
+	numberBasedFilterHandleCheck,
+	numberBasedFilterIsChecked,
+	numberBasedFilterIsFilterActive,
+	NumberBasedFilterProps,
+	NumberBasedFilterSetModel,
+} from "../shared/number-based-filter/number-based-filter";
 
 import "./source-filter.css";
-import { Button } from "react-bootstrap";
-import { mapNumberToSourceName, Source } from "../../enums/sources";
 
-type FilterProps = {
-	data: Spell;
-	node: RowNode;
-};
+const filterDisabledArray = createDisabledFilterArray(9);
 
-export default forwardRef(function SourceFilter(props: any, ref): ReactElement {
-	const filterDisabledArray = [0, 1, 2, 3, 4, 5, 6, 7, 8];
-
+export default forwardRef(function SourceFilter(
+	props: AgGridFilterProps,
+	ref,
+): ReactElement {
 	const [selectedSources, setSelectedSources] =
 		useState<number[]>(filterDisabledArray);
 
@@ -36,18 +43,19 @@ export default forwardRef(function SourceFilter(props: any, ref): ReactElement {
 
 	useImperativeHandle(ref, () => {
 		return {
-			doesFilterPass(props: FilterProps) {
-				return (
-					selectedSources.find(
-						(value) =>
-							mapNumberToSourceName(value) ===
-							props?.data?.source,
-					) !== undefined
+			doesFilterPass(props: NumberBasedFilterProps) {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.source,
+					selectedSources,
+					mapNumberToSourceName,
 				);
 			},
 
 			isFilterActive() {
-				return selectedSources.length !== filterDisabledArray.length;
+				return numberBasedFilterIsFilterActive(
+					selectedSources.length,
+					filterDisabledArray.length,
+				);
 			},
 
 			getModel() {
@@ -58,24 +66,17 @@ export default forwardRef(function SourceFilter(props: any, ref): ReactElement {
 				return { value: selectedSources };
 			},
 
-			setModel(model: any) {
+			setModel(model: NumberBasedFilterSetModel) {
 				setSelectedSources(model?.value ?? []);
 			},
 		};
 	});
 
-	const handleCheck = (x: Source): void => {
-		if (selectedSources.find((value) => x === value) === undefined)
-			setSelectedSources([...selectedSources, x]);
-		else setSelectedSources(selectedSources.filter((value) => value !== x));
-	};
+	const handleCheck = (x: Source): void =>
+		numberBasedFilterHandleCheck(selectedSources, setSelectedSources, x);
 
-	const isChecked = (x: number): boolean | undefined => {
-		if (selectedSources.find((value) => value === x) !== undefined)
-			return true;
-
-		return false;
-	};
+	const isChecked = (x: number): boolean | undefined =>
+		numberBasedFilterIsChecked(selectedSources, x);
 
 	return (
 		<div className="source-filter">

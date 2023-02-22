@@ -11,22 +11,29 @@ import React, {
 	useImperativeHandle,
 	useState,
 } from "react";
-import { RowNode } from "ag-grid-community";
+import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Spell from "../../types/spell";
+
+import { mapNumberToSchoolName, School } from "../../enums/schools";
+import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
+import {
+	createDisabledFilterArray,
+	numberBasedFilterDoesFilterPass,
+	numberBasedFilterHandleCheck,
+	numberBasedFilterIsChecked,
+	numberBasedFilterIsFilterActive,
+	NumberBasedFilterProps,
+	NumberBasedFilterSetModel,
+} from "../shared/number-based-filter/number-based-filter";
 
 import "./school-filter.css";
-import { Button } from "react-bootstrap";
-import { mapNumberToSchoolName, School } from "../../enums/schools";
 
-type FilterProps = {
-	data: Spell;
-	node: RowNode;
-};
+const filterDisabledArray = createDisabledFilterArray(8);
 
-export default forwardRef(function SchoolFilter(props: any, ref): ReactElement {
-	const filterDisabledArray = [0, 1, 2, 3, 4, 5, 6, 7];
-
+export default forwardRef(function SchoolFilter(
+	props: AgGridFilterProps,
+	ref,
+): ReactElement {
 	const [selectedSchools, setSelectedSchools] =
 		useState<number[]>(filterDisabledArray);
 
@@ -36,18 +43,19 @@ export default forwardRef(function SchoolFilter(props: any, ref): ReactElement {
 
 	useImperativeHandle(ref, () => {
 		return {
-			doesFilterPass(props: FilterProps) {
-				return (
-					selectedSchools.find(
-						(value) =>
-							mapNumberToSchoolName(value) ===
-							props?.data?.school,
-					) !== undefined
+			doesFilterPass(props: NumberBasedFilterProps) {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.school,
+					selectedSchools,
+					mapNumberToSchoolName,
 				);
 			},
 
 			isFilterActive() {
-				return selectedSchools.length !== filterDisabledArray.length;
+				return numberBasedFilterIsFilterActive(
+					selectedSchools.length,
+					filterDisabledArray.length,
+				);
 			},
 
 			getModel() {
@@ -58,24 +66,17 @@ export default forwardRef(function SchoolFilter(props: any, ref): ReactElement {
 				return { value: selectedSchools };
 			},
 
-			setModel(model: any) {
+			setModel(model: NumberBasedFilterSetModel) {
 				setSelectedSchools(model?.value ?? []);
 			},
 		};
 	});
 
-	const handleCheck = (x: School): void => {
-		if (selectedSchools.find((value) => x === value) === undefined)
-			setSelectedSchools([...selectedSchools, x]);
-		else setSelectedSchools(selectedSchools.filter((value) => value !== x));
-	};
+	const handleCheck = (x: School): void =>
+		numberBasedFilterHandleCheck(selectedSchools, setSelectedSchools, x);
 
-	const isChecked = (x: number): boolean | undefined => {
-		if (selectedSchools.find((value) => value === x) !== undefined)
-			return true;
-
-		return false;
-	};
+	const isChecked = (x: number): boolean | undefined =>
+		numberBasedFilterIsChecked(selectedSchools, x);
 
 	return (
 		<div className="school-filter">

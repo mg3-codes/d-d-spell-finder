@@ -11,21 +11,28 @@ import React, {
 	useImperativeHandle,
 	useState,
 } from "react";
-import { RowNode } from "ag-grid-community";
+import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-import Spell from "../../types/spell";
+
+import {
+	createDisabledFilterArray,
+	numberBasedFilterDoesFilterPass,
+	numberBasedFilterHandleCheck,
+	numberBasedFilterIsChecked,
+	numberBasedFilterIsFilterActive,
+	NumberBasedFilterProps,
+	NumberBasedFilterSetModel,
+} from "../shared/number-based-filter/number-based-filter";
+import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
 
 import "./level-filter.css";
-import { Button } from "react-bootstrap";
 
-type FilterProps = {
-	data: Spell;
-	node: RowNode;
-};
+const filterDisabledArray = createDisabledFilterArray(10);
 
-export default forwardRef(function LevelFilter(props: any, ref): ReactElement {
-	const filterDisabledArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
+export default forwardRef(function LevelFilter(
+	props: AgGridFilterProps,
+	ref,
+): ReactElement {
 	const [selectedLevels, setSelectedLevels] =
 		useState<number[]>(filterDisabledArray);
 
@@ -35,16 +42,19 @@ export default forwardRef(function LevelFilter(props: any, ref): ReactElement {
 
 	useImperativeHandle(ref, () => {
 		return {
-			doesFilterPass(props: FilterProps) {
-				return (
-					selectedLevels.find(
-						(value) => value === props?.data?.level,
-					) !== undefined
+			doesFilterPass(props: NumberBasedFilterProps) {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.level.toString(),
+					selectedLevels,
+					(x: number) => x.toString(),
 				);
 			},
 
 			isFilterActive() {
-				return selectedLevels.length !== filterDisabledArray.length;
+				return numberBasedFilterIsFilterActive(
+					selectedLevels.length,
+					filterDisabledArray.length,
+				);
 			},
 
 			getModel() {
@@ -55,24 +65,17 @@ export default forwardRef(function LevelFilter(props: any, ref): ReactElement {
 				return { value: selectedLevels };
 			},
 
-			setModel(model: any) {
+			setModel(model: NumberBasedFilterSetModel) {
 				setSelectedLevels(model?.value ?? []);
 			},
 		};
 	});
 
-	const handleCheck = (x: number): void => {
-		if (selectedLevels.find((value) => x === value) === undefined)
-			setSelectedLevels([...selectedLevels, x]);
-		else setSelectedLevels(selectedLevels.filter((value) => value !== x));
-	};
+	const handleCheck = (x: number): void =>
+		numberBasedFilterHandleCheck(selectedLevels, setSelectedLevels, x);
 
-	const isChecked = (x: number): boolean | undefined => {
-		if (selectedLevels.find((value) => value === x) !== undefined)
-			return true;
-
-		return false;
-	};
+	const isChecked = (x: number): boolean | undefined =>
+		numberBasedFilterIsChecked(selectedLevels, x);
 
 	return (
 		<div className="level-filter">
