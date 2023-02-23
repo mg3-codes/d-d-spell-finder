@@ -24,7 +24,7 @@ import {
 	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
 	NumberBasedFilterSetModel,
-} from "../shared/number-based-filter/number-based-filter";
+} from "../../utility/filters/number-based-filter";
 
 import "./range-filter.css";
 

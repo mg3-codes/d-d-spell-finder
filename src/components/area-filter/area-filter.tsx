@@ -27,7 +27,7 @@ import {
 	numberBasedFilterIsChecked,
 	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
-} from "../shared/number-based-filter/number-based-filter";
+} from "../../utility/filters/number-based-filter";
 
 import "./area-filter.css";
 

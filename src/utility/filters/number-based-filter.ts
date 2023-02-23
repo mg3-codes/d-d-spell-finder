@@ -6,7 +6,7 @@
 
 import { RowNode } from "ag-grid-community";
 
-import { TableRow } from "../../../types/table-row";
+import { TableRow } from "../../types/table-row";
 
 export type NumberBasedFilterProps = {
 	data: TableRow;

@@ -22,7 +22,7 @@ import {
 	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
 	NumberBasedFilterSetModel,
-} from "../shared/number-based-filter/number-based-filter";
+} from "../../utility/filters/number-based-filter";
 import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
 
 import "./duration-filter.css";
