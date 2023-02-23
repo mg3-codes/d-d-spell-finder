@@ -7,6 +7,7 @@
 import { ColDef } from "ag-grid-community";
 
 import AreaFilter from "../components/area-filter/area-filter";
+import BooleanFilter from "../components/boolean-filter/boolean-filter";
 import CastingTimeFilter from "../components/casting-time-filter/casting-time-filter";
 import DurationFilter from "../components/duration-filter/duration-filter";
 import LevelFilter from "../components/level-filter/level-filter";
@@ -17,6 +18,7 @@ import SourceFilter from "../components/source-filter/source-filter";
 import { areaValueComparator } from "./comparators";
 import {
 	areaValueFormatter,
+	booleanValueFormatter,
 	castingTimeValueFormatter,
 	durationValueFormatter,
 	rangeValueFormatter,
@@ -90,14 +92,46 @@ export const columnDefinition: ColDef[] = [
 		headerName: "Damage/Effect",
 		initialWidth: 110,
 	},
-	{ field: "ritual", headerName: "Ritual", initialWidth: 100 },
+	{
+		field: "ritual",
+		headerName: "Ritual",
+		filter: BooleanFilter,
+		filterParams: {
+			spellPropertyName: "ritual",
+		},
+		valueFormatter: booleanValueFormatter,
+		initialWidth: 100,
+	},
 	{
 		field: "concentration",
 		headerName: "Concentration",
+		filter: BooleanFilter,
+		filterParams: {
+			spellPropertyName: "concentration",
+		},
+		valueFormatter: booleanValueFormatter,
 		initialWidth: 100,
 	},
-	{ field: "verbal", headerName: "Verbal", initialWidth: 100 },
-	{ field: "somatic", headerName: "Somatic", initialWidth: 100 },
+	{
+		field: "verbal",
+		headerName: "Verbal",
+		filter: BooleanFilter,
+		filterParams: {
+			spellPropertyName: "verbal",
+		},
+		valueFormatter: booleanValueFormatter,
+		initialWidth: 100,
+	},
+	{
+		field: "somatic",
+		headerName: "Somatic",
+		filterParams: {
+			spellPropertyName: "somatic",
+		},
+		filter: BooleanFilter,
+		valueFormatter: booleanValueFormatter,
+		initialWidth: 100,
+	},
 	{ field: "material", headerName: "Material" },
 	{
 		field: "source",

@@ -22,6 +22,10 @@ export const areaValueFormatter = (
 		params.value.distance,
 	)} ${mapNumberToShapeDisplayName(params.value.shape)}`;
 
+export const booleanValueFormatter = (
+	params: ValueFormatterParams<boolean>,
+): string => (params.value == true ? "✅" : "❌");
+
 export const castingTimeValueFormatter = (
 	params: ValueFormatterParams<Spell>,
 ): string => mapNumberToCastingTimeDisplayName(params.value);

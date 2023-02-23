@@ -12,6 +12,7 @@ export type RowArea = {
 };
 
 export type TableRow = {
+	[index: string]: string | number | boolean | RowArea | undefined;
 	name: string;
 	level: number;
 	school: number;
