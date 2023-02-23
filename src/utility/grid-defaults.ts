@@ -7,6 +7,7 @@
 import { ColDef } from "ag-grid-community";
 
 import AreaFilter from "../components/area-filter/area-filter";
+import AttackFilter from "../components/attack-filter/attack-filter";
 import BooleanFilter from "../components/boolean-filter/boolean-filter";
 import CastingTimeFilter from "../components/casting-time-filter/casting-time-filter";
 import DurationFilter from "../components/duration-filter/duration-filter";
@@ -18,6 +19,7 @@ import SourceFilter from "../components/source-filter/source-filter";
 import { areaValueComparator } from "./comparators";
 import {
 	areaValueFormatter,
+	attackValueFormatter,
 	booleanValueFormatter,
 	castingTimeValueFormatter,
 	durationValueFormatter,
@@ -85,7 +87,13 @@ export const columnDefinition: ColDef[] = [
 		comparator: areaValueComparator,
 		initialWidth: 100,
 	},
-	{ field: "attack", headerName: "Attack", initialWidth: 100 },
+	{
+		field: "attack",
+		headerName: "Attack",
+		filter: AttackFilter,
+		valueFormatter: attackValueFormatter,
+		initialWidth: 100,
+	},
 	{ field: "save", headerName: "Save", initialWidth: 110 },
 	{
 		field: "damageAndEffect",

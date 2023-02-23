@@ -13,7 +13,7 @@ type Spell = {
 	range: number;
 	area: number;
 	areaShape?: number;
-	attack?: string;
+	attack: number;
 	save?: string;
 	damageAndEffect?: string;
 	ritual?: boolean;

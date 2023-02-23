@@ -5,6 +5,7 @@
  */
 
 import { ValueFormatterParams } from "ag-grid-community";
+import { mapNumberToAttackDisplayName } from "../enums/attacks";
 import { mapNumberToCastingTimeDisplayName } from "../enums/casting-times";
 import { mapNumberToDistanceDisplayName } from "../enums/distances";
 import { mapNumberToDurationDisplayName } from "../enums/durations";
@@ -21,6 +22,11 @@ export const areaValueFormatter = (
 	`${mapNumberToDistanceDisplayName(
 		params.value.distance,
 	)} ${mapNumberToShapeDisplayName(params.value.shape)}`;
+
+export const attackValueFormatter = (
+	params: ValueFormatterParams<number>,
+): string =>
+	params.value == 0 ? "" : mapNumberToAttackDisplayName(params.value);
 
 export const booleanValueFormatter = (
 	params: ValueFormatterParams<boolean>,

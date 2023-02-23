@@ -20,7 +20,7 @@ export type TableRow = {
 	duration: number;
 	range: number;
 	area: RowArea;
-	attack?: string;
+	attack: number;
 	save?: string;
 	damageAndEffect?: string;
 	ritual?: boolean;
