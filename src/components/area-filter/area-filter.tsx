@@ -13,6 +13,8 @@ import React, {
 } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import Tooltip from "react-bootstrap/Tooltip";
 
 import {
 	mapNumberToDistanceDisplayName,
@@ -53,6 +55,7 @@ export default forwardRef(function SchoolFilter(
 	const [selectedShapes, setSelectedShapes] = useState<number[]>(
 		shapeFilterDisabledArray,
 	);
+	const [showOverlay, setShowOverlay] = useState<boolean>(false);
 
 	useEffect(() => {
 		props.filterChangedCallback();
@@ -124,15 +127,50 @@ export default forwardRef(function SchoolFilter(
 	const isShapeChecked = (x: Shape): boolean | undefined =>
 		numberBasedFilterIsChecked(selectedShapes, x);
 
+	const isUnknownDisabled = (): boolean => {
+		if (selectedShapes.length !== shapeFilterDisabledArray.length) {
+			if (isDistanceChecked(Distance.Unknown))
+				handleDistanceCheck(Distance.Unknown);
+			return true;
+		}
+		return false;
+	};
+
+	const onOverlayToggle = (nextShow: boolean): void => {
+		if (isUnknownDisabled() && nextShow) {
+			setShowOverlay(true);
+		} else setShowOverlay(false);
+	};
+
 	return (
 		<div className="area-filter">
 			<div className="distances">
-				<Form.Check
-					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.Unknown)}
-					label={mapNumberToDistanceDisplayName(Distance.Unknown)}
-					checked={isDistanceChecked(Distance.Unknown)}
-				/>
+				<OverlayTrigger
+					onToggle={onOverlayToggle}
+					show={showOverlay}
+					placement="left"
+					overlay={
+						<Tooltip>
+							{`${mapNumberToDistanceDisplayName(
+								Distance.Unknown,
+							)} is disabled when shape filter is active. Select all shapes to re-enable this filter option.`}
+						</Tooltip>
+					}
+				>
+					<div>
+						<Form.Check
+							type={"checkbox"}
+							onChange={() =>
+								handleDistanceCheck(Distance.Unknown)
+							}
+							label={mapNumberToDistanceDisplayName(
+								Distance.Unknown,
+							)}
+							checked={isDistanceChecked(Distance.Unknown)}
+							disabled={isUnknownDisabled()}
+						/>
+					</div>
+				</OverlayTrigger>
 				<Form.Check
 					type={"checkbox"}
 					onChange={() => handleDistanceCheck(Distance.One)}
