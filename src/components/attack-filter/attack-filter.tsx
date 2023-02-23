@@ -30,7 +30,7 @@ import "./attack-filter.css";
 
 const attackFilterDisabledArray = createDisabledFilterArray(3);
 
-export default forwardRef(function SchoolFilter(
+export default forwardRef(function AttackFilter(
 	props: AgGridFilterProps,
 	ref,
 ): ReactElement {

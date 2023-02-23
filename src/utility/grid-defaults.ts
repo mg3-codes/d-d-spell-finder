@@ -13,6 +13,7 @@ import CastingTimeFilter from "../components/casting-time-filter/casting-time-fi
 import DurationFilter from "../components/duration-filter/duration-filter";
 import LevelFilter from "../components/level-filter/level-filter";
 import RangeFilter from "../components/range-filter/range-filter";
+import SavingThrowFilter from "../components/saving-throw-filter/saving-throw-filter";
 import SchoolFilter from "../components/school-filter/school-filter";
 import SourceFilter from "../components/source-filter/source-filter";
 
@@ -24,6 +25,7 @@ import {
 	castingTimeValueFormatter,
 	durationValueFormatter,
 	rangeValueFormatter,
+	savingThrowValueFormatter,
 	schoolValueFormatter,
 	sourceValueFormatter,
 } from "./value-formatters";
@@ -94,7 +96,13 @@ export const columnDefinition: ColDef[] = [
 		valueFormatter: attackValueFormatter,
 		initialWidth: 100,
 	},
-	{ field: "save", headerName: "Save", initialWidth: 110 },
+	{
+		field: "save",
+		headerName: "Save",
+		filter: SavingThrowFilter,
+		valueFormatter: savingThrowValueFormatter,
+		initialWidth: 110,
+	},
 	{
 		field: "damageAndEffect",
 		headerName: "Damage/Effect",

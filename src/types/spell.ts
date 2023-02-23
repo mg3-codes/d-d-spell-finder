@@ -14,7 +14,7 @@ type Spell = {
 	area: number;
 	areaShape?: number;
 	attack: number;
-	save?: string;
+	save: number;
 	damageAndEffect?: string;
 	ritual?: boolean;
 	concentration?: boolean;

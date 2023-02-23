@@ -21,7 +21,7 @@ export type TableRow = {
 	range: number;
 	area: RowArea;
 	attack: number;
-	save?: string;
+	save: number;
 	damageAndEffect?: string;
 	ritual?: boolean;
 	concentration?: boolean;

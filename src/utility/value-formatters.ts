@@ -10,6 +10,7 @@ import { mapNumberToCastingTimeDisplayName } from "../enums/casting-times";
 import { mapNumberToDistanceDisplayName } from "../enums/distances";
 import { mapNumberToDurationDisplayName } from "../enums/durations";
 import { mapNumberToRangeDisplayName } from "../enums/ranges";
+import { mapNumberToSavingThrowDisplayName } from "../enums/saving-throws";
 import { mapNumberToSchoolDisplayName } from "../enums/schools";
 import { mapNumberToShapeDisplayName } from "../enums/shapes";
 import { mapNumberToSourceDisplayName } from "../enums/sources";
@@ -43,6 +44,11 @@ export const durationValueFormatter = (
 export const rangeValueFormatter = (
 	params: ValueFormatterParams<Spell>,
 ): string => mapNumberToRangeDisplayName(params.value);
+
+export const savingThrowValueFormatter = (
+	params: ValueFormatterParams<number>,
+): string =>
+	params.value == 0 ? "" : mapNumberToSavingThrowDisplayName(params.value);
 
 export const schoolValueFormatter = (
 	params: ValueFormatterParams<Spell>,
