@@ -49,6 +49,7 @@ export const columnDefinition: ColDef[] = [
 	{
 		field: "check",
 		headerName: "",
+		headerCheckboxSelection: true,
 		checkboxSelection: true,
 		lockVisible: true,
 		lockPosition: true,
