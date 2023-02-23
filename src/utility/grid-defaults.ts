@@ -21,6 +21,10 @@ import SourceFilter from "../components/source-filter/source-filter";
 
 import { areaValueComparator } from "./comparators";
 import {
+	rangeTooltipValueGetter,
+	sourceTooltipValueGetter,
+} from "./tooltip-value-getters";
+import {
 	areaValueFormatter,
 	attackValueFormatter,
 	booleanValueFormatter,
@@ -83,6 +87,7 @@ export const columnDefinition: ColDef[] = [
 		headerName: "Range",
 		filter: RangeFilter,
 		valueFormatter: rangeValueFormatter,
+		tooltipValueGetter: rangeTooltipValueGetter,
 		initialWidth: 100,
 	},
 	{
@@ -161,12 +166,23 @@ export const columnDefinition: ColDef[] = [
 		valueFormatter: booleanValueFormatter,
 		initialWidth: 100,
 	},
-	{ field: "material", headerName: "Material" },
+	{
+		field: "material",
+		headerName: "Material",
+		tooltipField: "material",
+		sortable: false,
+	},
 	{
 		field: "source",
 		headerName: "Source",
 		valueFormatter: sourceValueFormatter,
 		filter: SourceFilter,
+		tooltipValueGetter: sourceTooltipValueGetter,
 	},
-	{ field: "details", headerName: "Details" },
+	{
+		field: "details",
+		headerName: "Details",
+		tooltipField: "details",
+		sortable: false,
+	},
 ];
