@@ -11,7 +11,8 @@ type Spell = {
 	castingTime: number;
 	duration: number;
 	range: number;
-	area?: string;
+	area: number;
+	areaShape?: number;
 	attack?: string;
 	save?: string;
 	damageAndEffect?: string;

@@ -26,7 +26,10 @@ import {
 import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
 
 import "./duration-filter.css";
-import { Duration, mapNumberToDurationDisplayName } from "../../enums/duration";
+import {
+	Duration,
+	mapNumberToDurationDisplayName,
+} from "../../enums/durations";
 
 const filterDisabledArray = createDisabledFilterArray(15);
 

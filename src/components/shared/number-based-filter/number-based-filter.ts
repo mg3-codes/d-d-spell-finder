@@ -6,10 +6,10 @@
 
 import { RowNode } from "ag-grid-community";
 
-import Spell from "../../../types/spell";
+import { TableRow } from "../../../types/table-row";
 
 export type NumberBasedFilterProps = {
-	data: Spell;
+	data: TableRow;
 	node: RowNode;
 };
 
