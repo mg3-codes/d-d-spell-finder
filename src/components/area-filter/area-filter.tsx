@@ -61,16 +61,23 @@ export default forwardRef(function SchoolFilter(
 	useImperativeHandle(ref, () => {
 		return {
 			doesFilterPass(props: NumberBasedFilterProps) {
-				return (
-					numberBasedFilterDoesFilterPass(
-						props?.data?.area?.distance,
-						selectedDistances,
-					) &&
-					numberBasedFilterDoesFilterPass(
-						props?.data?.area?.shape,
-						selectedShapes,
-					)
+				const distanceResult = numberBasedFilterDoesFilterPass(
+					props?.data?.area?.distance,
+					selectedDistances,
 				);
+				const shapeResult = numberBasedFilterDoesFilterPass(
+					props?.data?.area?.shape,
+					selectedShapes,
+				);
+
+				if (
+					props?.data?.area?.distance === Distance.Unknown &&
+					isDistanceChecked(Distance.Unknown) &&
+					selectedShapes.length === shapeFilterDisabledArray.length
+				)
+					return true;
+
+				return distanceResult && shapeResult;
 			},
 
 			isFilterActive() {
