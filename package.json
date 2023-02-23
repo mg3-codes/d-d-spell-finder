@@ -12,8 +12,8 @@
 		"lint-check": "yarn prettier-check && yarn eslint && yarn stylelint-check",
 		"lint": "yarn prettier; yarn eslint; yarn stylelint",
 		"eslint": "eslint '*/**/*.{js,ts,tsx}'",
-		"stylelint": "stylelint --config ./.stylelintrc --fix \"**/*.css\" --color --cache",
-		"stylelint-check": "stylelint --config ./.stylelintrc \"**/*.css\" --color --cache"
+		"stylelint": "stylelint --config ./.stylelintrc --fix \"src/**/*.css\" --color --cache",
+		"stylelint-check": "stylelint --config ./.stylelintrc \"src/**/*.css\" --color --cache"
 	},
 	"dependencies": {
 		"ag-grid-community": "^29.1.0",
