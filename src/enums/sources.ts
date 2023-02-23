@@ -4,45 +4,42 @@
  * @format
  */
 
-import { ValueFormatterParams } from "ag-grid-community";
-import Spell from "../types/spell";
-
-enum Source {
-	"Acquisitions Incorporated" = 0,
-	"Basic Rules" = 1,
-	"Elemental Evil" = 2,
-	"Explorer's Guide to Wildemount" = 3,
-	"Guildmasters' Guide to Ravnica" = 4,
-	"Lost Laboratory of Kwalish" = 5,
-	"Player's Handbook" = 6,
-	"Tasha's Cauldron of Everything" = 7,
-	"Xanathar's Guide to Everything" = 8,
+export enum Source {
+	AcquisitionsIncorporated = 0,
+	BasicRules = 1,
+	ElementalEvil = 2,
+	ExplorersGuideToWildemount = 3,
+	GuildmastersGuideToRavnica = 4,
+	LostLaboratoryOfKwalish = 5,
+	PlayersHandbook = 6,
+	TashasCauldronOfEverything = 7,
+	XanatharsGuideToEverything = 8,
 }
 
-const mapNumberToSource = (x: number): number | undefined => {
+export const mapNumberToSource = (x: number): number | undefined => {
 	switch (x) {
 		case 0:
-			return Source["Acquisitions Incorporated"];
+			return Source.AcquisitionsIncorporated;
 		case 1:
-			return Source["Basic Rules"];
+			return Source.BasicRules;
 		case 2:
-			return Source["Elemental Evil"];
+			return Source.ElementalEvil;
 		case 3:
-			return Source["Explorer's Guide to Wildemount"];
+			return Source.ExplorersGuideToWildemount;
 		case 4:
-			return Source["Guildmasters' Guide to Ravnica"];
+			return Source.GuildmastersGuideToRavnica;
 		case 5:
-			return Source["Lost Laboratory of Kwalish"];
+			return Source.LostLaboratoryOfKwalish;
 		case 6:
-			return Source["Player's Handbook"];
+			return Source.PlayersHandbook;
 		case 7:
-			return Source["Tasha's Cauldron of Everything"];
+			return Source.TashasCauldronOfEverything;
 		case 8:
-			return Source["Xanathar's Guide to Everything"];
+			return Source.XanatharsGuideToEverything;
 	}
 };
 
-const mapNumberToSourceDisplayName = (x: number): string => {
+export const mapNumberToSourceDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:
 			return "Acquisitions Incorporated";
@@ -65,14 +62,4 @@ const mapNumberToSourceDisplayName = (x: number): string => {
 	}
 
 	return "";
-};
-
-const sourceDataFormatter = (params: ValueFormatterParams<Spell>): string =>
-	mapNumberToSourceDisplayName(params.value);
-
-export {
-	Source,
-	mapNumberToSource,
-	mapNumberToSourceDisplayName,
-	sourceDataFormatter,
 };

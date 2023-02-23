@@ -4,10 +4,7 @@
  * @format
  */
 
-import { ValueFormatterParams } from "ag-grid-community";
-import Spell from "../types/spell";
-
-enum Duration {
+export enum Duration {
 	Instantaneous = 0,
 	OneRound = 1,
 	OneMinute = 2,
@@ -25,7 +22,7 @@ enum Duration {
 	UntilDispelledOrTriggered = 14,
 }
 
-const mapNumberToDuration = (x: number): number | undefined => {
+export const mapNumberToDuration = (x: number): number | undefined => {
 	switch (x) {
 		case 0:
 			return Duration.Instantaneous;
@@ -60,7 +57,7 @@ const mapNumberToDuration = (x: number): number | undefined => {
 	}
 };
 
-const mapNumberToDurationDisplayName = (x: number): string => {
+export const mapNumberToDurationDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:
 			return "Instantaneous";
@@ -95,14 +92,4 @@ const mapNumberToDurationDisplayName = (x: number): string => {
 	}
 
 	return "";
-};
-
-const durationDataFormatter = (params: ValueFormatterParams<Spell>): string =>
-	mapNumberToDurationDisplayName(params.value);
-
-export {
-	Duration,
-	mapNumberToDuration,
-	mapNumberToDurationDisplayName,
-	durationDataFormatter,
 };

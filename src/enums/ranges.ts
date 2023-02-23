@@ -4,10 +4,7 @@
  * @format
  */
 
-import { ValueFormatterParams } from "ag-grid-community";
-import Spell from "../types/spell";
-
-enum Range {
+export enum Range {
 	Self = 0,
 	SelfByFive = 1,
 	SelfByFifteen = 2,
@@ -35,7 +32,7 @@ enum Range {
 	Unlimited = 24,
 }
 
-const mapNumberToRange = (x: number): number | undefined => {
+export const mapNumberToRange = (x: number): number | undefined => {
 	switch (x) {
 		case 0:
 			return Range.Self;
@@ -90,7 +87,7 @@ const mapNumberToRange = (x: number): number | undefined => {
 	}
 };
 
-const mapNumberToRangeDisplayName = (x: number): string => {
+export const mapNumberToRangeDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:
 			return "Self";
@@ -145,14 +142,4 @@ const mapNumberToRangeDisplayName = (x: number): string => {
 	}
 
 	return "";
-};
-
-const rangeDataFormatter = (params: ValueFormatterParams<Spell>): string =>
-	mapNumberToRangeDisplayName(params.value);
-
-export {
-	Range,
-	mapNumberToRange,
-	mapNumberToRangeDisplayName,
-	rangeDataFormatter,
 };

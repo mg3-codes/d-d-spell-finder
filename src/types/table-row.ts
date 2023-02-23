@@ -4,9 +4,6 @@
  * @format
  */
 
-import { RowNode, ValueFormatterParams } from "ag-grid-community";
-import { mapNumberToDistanceDisplayName } from "../enums/distances";
-import { mapNumberToShapeDisplayName } from "../enums/shapes";
 import Spell from "./spell";
 
 export type RowArea = {
@@ -56,11 +53,3 @@ export const buildRow = (spell: Spell): TableRow => ({
 	source: spell.source,
 	details: spell.details,
 });
-
-export const areaValueFormatter = (
-	params: ValueFormatterParams<RowArea>,
-): string => {
-	return `${mapNumberToDistanceDisplayName(
-		params.value.distance,
-	)} ${mapNumberToShapeDisplayName(params.value.shape)}`;
-};

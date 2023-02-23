@@ -4,7 +4,7 @@
  * @format
  */
 
-enum Shape {
+export enum Shape {
 	Cube = 0,
 	Square = 1,
 	Sphere = 2,
@@ -13,7 +13,7 @@ enum Shape {
 	Line = 5,
 }
 
-const mapNumberToShape = (x: number): number | undefined => {
+export const mapNumberToShape = (x: number): number | undefined => {
 	switch (x) {
 		case 0:
 			return Shape.Cube;
@@ -30,7 +30,7 @@ const mapNumberToShape = (x: number): number | undefined => {
 	}
 };
 
-const mapNumberToShapeDisplayName = (x: number): string => {
+export const mapNumberToShapeDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:
 			return "Cube";
@@ -48,5 +48,3 @@ const mapNumberToShapeDisplayName = (x: number): string => {
 
 	return "";
 };
-
-export { Shape, mapNumberToShape, mapNumberToShapeDisplayName };

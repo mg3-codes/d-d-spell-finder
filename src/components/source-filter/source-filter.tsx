@@ -81,83 +81,69 @@ export default forwardRef(function SourceFilter(
 		<div className="source-filter">
 			<Form.Check
 				type={"checkbox"}
-				onChange={() =>
-					handleCheck(Source["Acquisitions Incorporated"])
-				}
+				onChange={() => handleCheck(Source.AcquisitionsIncorporated)}
 				label={mapNumberToSourceDisplayName(
-					Source["Acquisitions Incorporated"],
+					Source.AcquisitionsIncorporated,
 				)}
-				checked={isChecked(Source["Acquisitions Incorporated"])}
+				checked={isChecked(Source.AcquisitionsIncorporated)}
 			/>
 			<Form.Check
 				type={"checkbox"}
-				onChange={() => handleCheck(Source["Basic Rules"])}
-				label={mapNumberToSourceDisplayName(Source["Basic Rules"])}
-				checked={isChecked(Source["Basic Rules"])}
+				onChange={() => handleCheck(Source.BasicRules)}
+				label={mapNumberToSourceDisplayName(Source.BasicRules)}
+				checked={isChecked(Source.BasicRules)}
 			/>
 			<Form.Check
 				type={"checkbox"}
-				onChange={() => handleCheck(Source["Elemental Evil"])}
-				label={mapNumberToSourceDisplayName(Source["Elemental Evil"])}
-				checked={isChecked(Source["Elemental Evil"])}
+				onChange={() => handleCheck(Source.ElementalEvil)}
+				label={mapNumberToSourceDisplayName(Source.ElementalEvil)}
+				checked={isChecked(Source.ElementalEvil)}
 			/>
 			<Form.Check
 				type={"checkbox"}
-				onChange={() =>
-					handleCheck(Source["Explorer's Guide to Wildemount"])
-				}
+				onChange={() => handleCheck(Source.ExplorersGuideToWildemount)}
 				label={mapNumberToSourceDisplayName(
-					Source["Explorer's Guide to Wildemount"],
+					Source.ExplorersGuideToWildemount,
 				)}
-				checked={isChecked(Source["Explorer's Guide to Wildemount"])}
+				checked={isChecked(Source.ExplorersGuideToWildemount)}
 			/>
 			<Form.Check
 				type={"checkbox"}
-				onChange={() =>
-					handleCheck(Source["Guildmasters' Guide to Ravnica"])
-				}
+				onChange={() => handleCheck(Source.GuildmastersGuideToRavnica)}
 				label={mapNumberToSourceDisplayName(
-					Source["Guildmasters' Guide to Ravnica"],
+					Source.GuildmastersGuideToRavnica,
 				)}
-				checked={isChecked(Source["Guildmasters' Guide to Ravnica"])}
+				checked={isChecked(Source.GuildmastersGuideToRavnica)}
 			/>
 			<Form.Check
 				type={"checkbox"}
-				onChange={() =>
-					handleCheck(Source["Lost Laboratory of Kwalish"])
-				}
+				onChange={() => handleCheck(Source.LostLaboratoryOfKwalish)}
 				label={mapNumberToSourceDisplayName(
-					Source["Lost Laboratory of Kwalish"],
+					Source.LostLaboratoryOfKwalish,
 				)}
-				checked={isChecked(Source["Lost Laboratory of Kwalish"])}
+				checked={isChecked(Source.LostLaboratoryOfKwalish)}
 			/>
 			<Form.Check
 				type={"checkbox"}
-				onChange={() => handleCheck(Source["Player's Handbook"])}
-				label={mapNumberToSourceDisplayName(
-					Source["Player's Handbook"],
-				)}
-				checked={isChecked(Source["Player's Handbook"])}
+				onChange={() => handleCheck(Source.PlayersHandbook)}
+				label={mapNumberToSourceDisplayName(Source.PlayersHandbook)}
+				checked={isChecked(Source.PlayersHandbook)}
 			/>
 			<Form.Check
 				type={"checkbox"}
-				onChange={() =>
-					handleCheck(Source["Tasha's Cauldron of Everything"])
-				}
+				onChange={() => handleCheck(Source.TashasCauldronOfEverything)}
 				label={mapNumberToSourceDisplayName(
-					Source["Tasha's Cauldron of Everything"],
+					Source.TashasCauldronOfEverything,
 				)}
-				checked={isChecked(Source["Tasha's Cauldron of Everything"])}
+				checked={isChecked(Source.TashasCauldronOfEverything)}
 			/>
 			<Form.Check
 				type={"checkbox"}
-				onChange={() =>
-					handleCheck(Source["Xanathar's Guide to Everything"])
-				}
+				onChange={() => handleCheck(Source.XanatharsGuideToEverything)}
 				label={mapNumberToSourceDisplayName(
-					Source["Xanathar's Guide to Everything"],
+					Source.XanatharsGuideToEverything,
 				)}
-				checked={isChecked(Source["Xanathar's Guide to Everything"])}
+				checked={isChecked(Source.XanatharsGuideToEverything)}
 			/>
 			<Button
 				variant="outline-primary"
