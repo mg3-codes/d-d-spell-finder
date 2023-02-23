@@ -12,7 +12,7 @@ export type RowArea = {
 };
 
 export type TableRow = {
-	[index: string]: string | number | boolean | RowArea | undefined;
+	[index: string]: string | number | number[] | boolean | RowArea | undefined;
 	name: string;
 	level: number;
 	school: number;
@@ -22,7 +22,8 @@ export type TableRow = {
 	area: RowArea;
 	attack: number;
 	save: number;
-	damageAndEffect?: string;
+	damage?: number;
+	effect?: number[];
 	ritual?: boolean;
 	concentration?: boolean;
 	verbal?: boolean;
@@ -45,7 +46,8 @@ export const buildRow = (spell: Spell): TableRow => ({
 	},
 	attack: spell.attack,
 	save: spell.save,
-	damageAndEffect: spell.damageAndEffect,
+	damage: spell.damage,
+	effect: spell.effect,
 	ritual: spell.ritual,
 	concentration: spell.concentration,
 	verbal: spell.verbal,

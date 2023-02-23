@@ -10,7 +10,9 @@ import AreaFilter from "../components/area-filter/area-filter";
 import AttackFilter from "../components/attack-filter/attack-filter";
 import BooleanFilter from "../components/boolean-filter/boolean-filter";
 import CastingTimeFilter from "../components/casting-time-filter/casting-time-filter";
+import DamageTypeFilter from "../components/damage-type-filter/damage-type-filter";
 import DurationFilter from "../components/duration-filter/duration-filter";
+import EffectFilter from "../components/effect-filter/effect-filter";
 import LevelFilter from "../components/level-filter/level-filter";
 import RangeFilter from "../components/range-filter/range-filter";
 import SavingThrowFilter from "../components/saving-throw-filter/saving-throw-filter";
@@ -23,7 +25,9 @@ import {
 	attackValueFormatter,
 	booleanValueFormatter,
 	castingTimeValueFormatter,
+	damageTypeValueFormatter,
 	durationValueFormatter,
+	effectValueFormatter,
 	rangeValueFormatter,
 	savingThrowValueFormatter,
 	schoolValueFormatter,
@@ -104,8 +108,17 @@ export const columnDefinition: ColDef[] = [
 		initialWidth: 110,
 	},
 	{
-		field: "damageAndEffect",
-		headerName: "Damage/Effect",
+		field: "damage",
+		headerName: "Damage",
+		filter: DamageTypeFilter,
+		valueFormatter: damageTypeValueFormatter,
+		initialWidth: 110,
+	},
+	{
+		field: "effect",
+		headerName: "Effect",
+		filter: EffectFilter,
+		valueFormatter: effectValueFormatter,
 		initialWidth: 110,
 	},
 	{

@@ -10,7 +10,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Acid",
+			"damage": 0,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -29,7 +29,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Combat (...)",
+			"effect": [
+				6
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -48,7 +50,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Thunder (...)",
+			"damage": 12,
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -67,7 +69,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -87,7 +89,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -107,7 +111,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -126,7 +130,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -145,7 +151,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -164,7 +172,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -183,7 +191,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Creation (...)",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -202,7 +212,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -221,7 +231,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -240,7 +252,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Cold",
+			"damage": 2,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -259,7 +271,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Fire (...)",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -278,7 +290,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -297,7 +311,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -316,7 +332,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Poison",
+			"damage": 8,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -336,7 +352,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Creation (...)",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -355,7 +373,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Lightning",
+			"damage": 5,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -374,7 +392,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -393,7 +413,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -412,7 +432,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -431,7 +453,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication (...)",
+			"effect": [
+				7
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -450,7 +474,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 4,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -470,7 +494,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -490,7 +516,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -509,7 +537,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Poison",
+			"damage": 8,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -528,7 +556,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -547,7 +577,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Acid",
+			"damage": 0,
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -566,7 +596,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -585,7 +615,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Cold",
+			"damage": 2,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -604,7 +634,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -623,7 +655,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -642,7 +674,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -662,7 +694,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -681,7 +715,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -700,7 +734,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Lightning",
+			"damage": 5,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -719,7 +753,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -738,7 +774,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -757,7 +793,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -776,7 +814,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Piercing",
+			"damage": 7,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -795,7 +833,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Thunder",
+			"damage": 12,
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -814,7 +852,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -833,7 +871,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Foreknowledge",
+			"effect": [
+				16
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -852,7 +892,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -871,7 +911,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -890,7 +930,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -909,7 +949,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -928,7 +970,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -947,7 +991,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Cold",
+			"damage": 2,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -967,7 +1011,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -986,7 +1030,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Debuff",
+			"effect": [
+				11
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1005,7 +1051,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1024,7 +1072,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1044,7 +1094,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1063,7 +1113,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -1082,7 +1132,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Frightened",
+			"effect": [
+				17
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1101,7 +1153,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -1120,7 +1174,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1139,7 +1193,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1158,7 +1214,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1178,7 +1234,9 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Blinded",
+			"effect": [
+				3
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1197,7 +1255,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Prone",
+			"effect": [
+				24
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1216,7 +1276,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1235,7 +1297,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Social",
+			"effect": [
+				27
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -1255,7 +1319,9 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Creation",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1274,7 +1340,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1294,7 +1362,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1314,7 +1384,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": true,
 			"concentration": true,
 			"verbal": true,
@@ -1334,7 +1406,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": true,
 			"concentration": true,
 			"verbal": true,
@@ -1353,7 +1427,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Shapechanging",
+			"effect": [
+				26
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1372,7 +1448,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1391,8 +1467,10 @@
 			"area": 1,
 			"areaShape": 0,
 			"attack": 0,
-			"save": 0,
-			"damageAndEffect": "",
+			"save": 4,
+			"effect": [
+				12
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1411,7 +1489,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1430,7 +1508,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1449,7 +1527,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Piercing",
+			"damage": 7,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1469,7 +1547,9 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Restrained",
+			"effect": [
+				25
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1488,7 +1568,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Movement",
+			"effect": [
+				20
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1508,7 +1590,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Debuff",
+			"effect": [
+				11
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1527,7 +1611,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1546,7 +1632,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Exploration (...)",
+			"effect": [
+				33
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1565,7 +1653,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -1584,7 +1674,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Movement (...)",
+			"effect": [
+				20
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -1604,7 +1696,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1623,7 +1717,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1642,7 +1738,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1662,7 +1760,9 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Prone",
+			"effect": [
+				24
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1681,7 +1781,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1700,7 +1800,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Piercing",
+			"damage": 7,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1719,7 +1819,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1738,7 +1840,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1757,7 +1859,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1776,7 +1880,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1795,7 +1899,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Prone (...)",
+			"effect": [
+				24
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1814,7 +1920,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Bludgeoning (...)",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1834,7 +1940,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Piercing (...)",
+			"damage": 7,
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -1853,7 +1959,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -1872,7 +1980,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication",
+			"effect": [
+				7
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": false,
@@ -1891,7 +2001,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1910,7 +2020,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1929,7 +2039,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Movement",
+			"effect": [
+				20
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1948,7 +2060,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1967,7 +2081,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1986,7 +2102,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2006,7 +2122,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2025,7 +2141,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2045,7 +2163,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2064,7 +2184,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Poison",
+			"damage": 8,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2083,7 +2203,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2102,7 +2224,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Fire (...)",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2121,7 +2243,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Warding",
+			"effect": [
+				32
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2140,7 +2264,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2160,7 +2286,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2180,7 +2308,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Unconscious",
+			"effect": [
+				30
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2199,7 +2329,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Restrained",
+			"effect": [
+				25
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -2218,7 +2350,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication (...)",
+			"effect": [
+				7
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2238,7 +2372,7 @@
 			"areaShape": 5,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Acid",
+			"damage": 0,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2257,7 +2391,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Prone (...)",
+			"effect": [
+				24
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2276,7 +2412,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Movement (...)",
+			"effect": [
+				20
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2295,7 +2433,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Thunder",
+			"damage": 12,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2315,7 +2453,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Thunder",
+			"damage": 12,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2334,7 +2472,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2353,7 +2493,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Lightning",
+			"damage": 5,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2372,7 +2512,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2391,7 +2531,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2410,7 +2550,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2430,7 +2570,7 @@
 			"areaShape": 5,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2449,7 +2589,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2468,7 +2610,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Shapechanging",
+			"effect": [
+				26
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2487,7 +2631,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication (...)",
+			"effect": [
+				7
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2506,7 +2652,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility (...)",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2525,7 +2673,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Deception",
+			"effect": [
+				12
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2544,7 +2694,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Foreknowledge",
+			"effect": [
+				16
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2563,7 +2715,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2582,7 +2736,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": true,
 			"concentration": true,
 			"verbal": false,
@@ -2601,7 +2757,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Blinded (...)",
+			"effect": [
+				3
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2620,7 +2778,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Deception (...)",
+			"effect": [
+				12
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2639,7 +2799,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2659,7 +2819,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Charmed (...)",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2679,7 +2841,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Slashing",
+			"damage": 11,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2698,7 +2860,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Creation",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2717,7 +2881,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Piercing",
+			"damage": 7,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2736,7 +2900,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2756,7 +2922,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2775,7 +2943,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2794,7 +2964,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Detection (...)",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2814,7 +2986,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2834,7 +3006,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2853,7 +3025,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2872,7 +3046,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2891,7 +3067,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2910,7 +3088,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2929,7 +3109,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2948,7 +3130,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2967,7 +3151,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2987,7 +3171,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3006,7 +3190,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3025,7 +3211,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3044,7 +3232,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Warding",
+			"effect": [
+				32
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -3059,11 +3249,13 @@
 			"school": 3,
 			"castingTime": 1,
 			"duration": 0,
-			"range": 0,
+			"range": 7,
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "",
+			"effect": [
+				12
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3082,7 +3274,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3102,7 +3296,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3121,7 +3317,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3140,7 +3336,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Paralyzed",
+			"effect": [
+				22
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3159,7 +3357,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Dunamancy (...)",
+			"effect": [
+				14
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3178,7 +3378,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Invisible",
+			"effect": [
+				19
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3196,8 +3398,10 @@
 			"range": 11,
 			"area": -1,
 			"attack": 0,
-			"save": 0,
-			"damageAndEffect": "WIS Save",
+			"save": 6,
+			"effect": [
+				35
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -3216,7 +3420,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3235,7 +3441,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3254,7 +3462,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Movement",
+			"effect": [
+				20
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3273,7 +3483,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -3292,7 +3504,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3311,7 +3525,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication",
+			"effect": [
+				7
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -3330,7 +3546,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Bludgeoning (...)",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3350,7 +3566,7 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Bludgeoning (...)",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3369,7 +3585,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3388,7 +3604,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -3407,7 +3623,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Deception (...)",
+			"effect": [
+				12
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3426,7 +3644,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Teleportation",
+			"effect": [
+				29
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3446,7 +3666,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3465,7 +3685,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Deception",
+			"effect": [
+				12
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3484,7 +3706,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3504,7 +3728,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 4,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3523,7 +3747,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3542,7 +3768,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3562,7 +3790,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Blinded",
+			"effect": [
+				3
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3581,7 +3811,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Debuff",
+			"effect": [
+				11
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3600,7 +3832,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3619,7 +3853,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3638,7 +3872,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3657,7 +3893,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3677,7 +3913,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Thunder",
+			"damage": 12,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3697,7 +3933,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": true,
 			"concentration": true,
 			"verbal": true,
@@ -3716,7 +3954,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication (...)",
+			"effect": [
+				7
+			],
 			"ritual": true,
 			"concentration": true,
 			"verbal": true,
@@ -3736,7 +3976,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Cold",
+			"damage": 2,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3755,7 +3995,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3775,7 +4017,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3794,7 +4038,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -3813,7 +4057,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3832,7 +4078,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3851,7 +4099,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 4,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3870,7 +4118,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3890,7 +4140,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Deafened",
+			"effect": [
+				10
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3910,7 +4162,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Restrained",
+			"effect": [
+				25
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3929,7 +4183,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Dunamancy (...)",
+			"effect": [
+				14
+			],
 			"ritual": true,
 			"concentration": true,
 			"verbal": false,
@@ -3949,7 +4205,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3968,7 +4226,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Creation",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3988,7 +4248,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4007,7 +4269,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4026,7 +4290,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Debuff",
+			"effect": [
+				11
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4045,7 +4311,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4064,7 +4330,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4084,7 +4352,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Lightning (...)",
+			"damage": 5,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4103,7 +4371,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -4122,7 +4392,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection (...)",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4141,7 +4413,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4161,7 +4435,9 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Additional",
+			"effect": [
+				1
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4180,7 +4456,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Negation",
+			"effect": [
+				21
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -4199,7 +4477,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Creation",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4219,7 +4499,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4239,7 +4519,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4258,7 +4540,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4277,7 +4561,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4296,7 +4580,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 4,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4316,7 +4602,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4335,7 +4621,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4355,7 +4643,9 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Frightened",
+			"effect": [
+				17
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4374,7 +4664,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Blinded (...)",
+			"effect": [
+				3
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -4394,7 +4686,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4413,7 +4705,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4432,7 +4724,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Movement",
+			"effect": [
+				20
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4451,7 +4745,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4470,7 +4766,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4489,7 +4787,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4508,7 +4806,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4528,7 +4828,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Cold (...)",
+			"damage": 2,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4548,7 +4848,9 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -4567,7 +4869,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4586,7 +4890,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4606,7 +4912,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -4625,7 +4933,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4644,7 +4952,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Lightning (...)",
+			"damage": 5,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4664,7 +4972,7 @@
 			"areaShape": 5,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Lightning",
+			"damage": 5,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4684,7 +4992,9 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4704,7 +5014,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4723,7 +5035,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4742,7 +5056,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Movement",
+			"effect": [
+				20
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -4761,7 +5077,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4780,7 +5096,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4799,7 +5117,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Deception",
+			"effect": [
+				12
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4818,7 +5138,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Movement",
+			"effect": [
+				20
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -4837,7 +5159,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4856,7 +5180,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4876,7 +5202,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4895,7 +5221,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4914,7 +5242,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4933,7 +5263,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication",
+			"effect": [
+				7
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4953,7 +5285,9 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Prone",
+			"effect": [
+				24
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4973,7 +5307,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4992,7 +5328,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication (...)",
+			"effect": [
+				7
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5011,7 +5349,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication (...)",
+			"effect": [
+				7
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5030,7 +5370,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Radiant (...)",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5049,7 +5389,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Cold (...)",
+			"damage": 2,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5069,7 +5409,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5088,7 +5430,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5107,7 +5451,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5126,7 +5472,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5145,7 +5493,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5164,7 +5514,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Thunder",
+			"damage": 12,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5183,7 +5533,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5203,7 +5553,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -5222,7 +5574,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5241,7 +5595,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication (...)",
+			"effect": [
+				7
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5260,7 +5616,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5279,7 +5635,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Blinded",
+			"effect": [
+				3
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5298,7 +5656,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5317,7 +5677,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -5336,7 +5698,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Movement",
+			"effect": [
+				20
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -5355,7 +5719,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5374,7 +5738,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5394,7 +5760,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing (...)",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5414,7 +5782,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5433,7 +5803,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Banishment (...)",
+			"effect": [
+				2
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5453,7 +5825,7 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5472,7 +5844,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5491,7 +5863,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5510,7 +5884,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5530,7 +5906,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5549,7 +5927,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5568,7 +5948,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5587,7 +5969,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5606,7 +5988,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5625,7 +6009,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Teleportation",
+			"effect": [
+				29
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5644,7 +6030,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Foreknowledge",
+			"effect": [
+				16
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -5663,7 +6051,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5682,7 +6072,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5702,7 +6092,7 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5722,7 +6112,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Creation",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5741,7 +6133,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Piercing",
+			"damage": 7,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5760,7 +6152,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5779,7 +6173,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Fire (...)",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5798,7 +6192,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5817,7 +6213,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5836,7 +6234,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5855,7 +6255,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5875,7 +6277,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5894,7 +6296,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Invisible",
+			"effect": [
+				19
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5913,7 +6317,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5932,7 +6336,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5952,7 +6358,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5972,7 +6380,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning (...)",
+			"damage": 1,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5991,7 +6399,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6010,7 +6420,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6029,7 +6441,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Piercing",
+			"damage": 7,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6049,7 +6461,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6068,7 +6482,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6087,7 +6503,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6106,7 +6522,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6126,7 +6544,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6146,7 +6566,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6165,7 +6587,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6184,7 +6608,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6204,7 +6628,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6223,7 +6647,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6242,7 +6666,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6261,7 +6687,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6281,7 +6709,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Bludgeoning (...)",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6300,7 +6728,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6319,7 +6749,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6338,7 +6770,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6357,7 +6791,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6377,7 +6813,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6396,7 +6832,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6416,7 +6852,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Restrained (...)",
+			"effect": [
+				25
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6435,7 +6873,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Creation (...)",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6456,7 +6896,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6475,7 +6917,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Force (...)",
+			"damage": 4,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6494,7 +6936,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6513,7 +6957,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6532,7 +6976,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Force (...)",
+			"damage": 4,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6552,7 +6996,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6572,7 +7018,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Poison",
+			"damage": 8,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6591,7 +7037,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Foreknowledge",
+			"effect": [
+				16
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -6610,7 +7058,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Environment (...)",
+			"effect": [
+				15
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -6630,7 +7080,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Cold",
+			"damage": 2,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6649,7 +7099,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6669,7 +7121,9 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Additional",
+			"effect": [
+				1
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6688,7 +7142,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication (...)",
+			"effect": [
+				7
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -6707,7 +7163,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Blinded (...)",
+			"effect": [
+				3
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6727,7 +7185,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Prone",
+			"effect": [
+				24
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6747,7 +7207,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Creation",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6766,7 +7228,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6786,7 +7250,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6806,7 +7270,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Thunder (...)",
+			"damage": 12,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6825,7 +7289,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Charmed (...)",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6844,7 +7310,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6863,7 +7331,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Communication (...)",
+			"effect": [
+				7
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6882,7 +7352,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6901,7 +7371,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Teleportation",
+			"effect": [
+				29
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6921,7 +7393,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire (...)",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6940,7 +7412,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6959,7 +7433,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6979,7 +7455,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6998,7 +7476,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Paralyzed",
+			"effect": [
+				22
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7017,7 +7497,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Radiant (...)",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7036,7 +7516,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire (...)",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7055,7 +7535,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7075,7 +7557,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Piercing",
+			"damage": 7,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7094,7 +7576,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7113,7 +7597,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7133,7 +7617,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7152,7 +7638,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Deception",
+			"effect": [
+				12
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -7171,7 +7659,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7190,7 +7680,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7209,7 +7699,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7228,7 +7720,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7247,7 +7741,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7266,7 +7762,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication",
+			"effect": [
+				7
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -7285,7 +7783,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7304,7 +7804,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7323,7 +7825,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7342,7 +7846,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7361,7 +7867,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -7380,7 +7886,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7399,7 +7907,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7419,7 +7929,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 4,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7438,7 +7948,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7457,7 +7969,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication",
+			"effect": [
+				7
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -7476,7 +7990,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Teleportation",
+			"effect": [
+				29
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7495,7 +8011,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Banishment (...)",
+			"effect": [
+				2
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7515,7 +8033,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7534,7 +8052,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Movement (...)",
+			"effect": [
+				20
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7553,7 +8073,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7572,7 +8094,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7591,7 +8113,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7611,7 +8135,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Slashing (...)",
+			"damage": 11,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7630,7 +8154,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Teleportation",
+			"effect": [
+				29
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7649,7 +8175,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Slashing",
+			"damage": 11,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7669,7 +8195,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7688,7 +8214,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Lightning",
+			"damage": 5,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7708,7 +8234,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7727,7 +8253,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7746,7 +8274,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7765,7 +8295,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Creation (...)",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7784,7 +8316,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7803,7 +8337,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7822,7 +8356,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection (...)",
+			"effect": [
+				13
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -7842,7 +8378,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Debuff (...)",
+			"effect": [
+				11
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7861,7 +8399,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Unconscious (...)",
+			"effect": [
+				30
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7880,7 +8420,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7899,7 +8441,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Petrified",
+			"effect": [
+				23
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7919,7 +8463,7 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Radiant (...)",
+			"damage": 10,
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -7939,7 +8483,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Cold",
+			"damage": 2,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7959,7 +8503,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Negation (...)",
+			"effect": [
+				21
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7979,7 +8525,7 @@
 			"areaShape": 5,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7999,7 +8545,9 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8018,7 +8566,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8037,7 +8585,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Blinded (...)",
+			"effect": [
+				3
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8056,7 +8606,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8075,7 +8627,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection (...)",
+			"effect": [
+				13
+			],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -8094,7 +8648,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire (...)",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8114,7 +8668,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Cold",
+			"damage": 2,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8133,7 +8687,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Prone",
+			"effect": [
+				24
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8153,7 +8709,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8172,7 +8728,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8191,7 +8749,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8210,7 +8770,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 4,
-			"damageAndEffect": "Psychic (...)",
+			"damage": 9,
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -8229,7 +8789,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8248,7 +8810,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8267,7 +8831,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8286,7 +8852,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8305,7 +8873,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Warding",
+			"effect": [
+				32
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8325,7 +8895,9 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8344,7 +8916,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8363,7 +8937,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8382,7 +8958,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8402,7 +8980,7 @@
 			"areaShape": 5,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8421,7 +8999,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8440,7 +9020,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8459,7 +9041,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Teleportation",
+			"effect": [
+				29
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8478,7 +9062,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Detection",
+			"effect": [
+				13
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8497,7 +9083,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Cold (...)",
+			"damage": 2,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8516,7 +9102,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Piercing (...)",
+			"damage": 7,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8535,7 +9121,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8554,7 +9142,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Teleportation",
+			"effect": [
+				29
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8573,7 +9163,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Summoning",
+			"effect": [
+				34
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8592,7 +9184,7 @@
 			"area": -1,
 			"attack": 2,
 			"save": 0,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8612,7 +9204,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire (...)",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8631,7 +9223,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Deafened (...)",
+			"effect": [
+				10
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8650,7 +9244,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8669,7 +9265,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8688,7 +9286,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8707,7 +9305,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8727,7 +9325,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8747,7 +9347,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Exploration (...)",
+			"effect": [
+				33
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8767,7 +9369,9 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8786,7 +9390,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Exploration (...)",
+			"effect": [
+				33
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8805,7 +9411,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8824,7 +9430,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Banishment (...)",
+			"effect": [
+				2
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8843,7 +9451,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Debuff",
+			"effect": [
+				11
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8863,7 +9473,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire (...)",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8882,7 +9492,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8901,7 +9513,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8920,7 +9534,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8940,7 +9556,9 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8959,7 +9577,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Deception",
+			"effect": [
+				12
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8978,7 +9598,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Deception (...)",
+			"effect": [
+				12
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8998,7 +9620,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9017,7 +9639,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Teleportation",
+			"effect": [
+				29
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9036,7 +9660,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"damageAndEffect": "Creation (...)",
+			"effect": [
+				9
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9055,7 +9681,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9075,7 +9703,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9095,7 +9723,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9114,7 +9742,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Shapechanging",
+			"effect": [
+				26
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9134,7 +9764,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9154,7 +9786,9 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Frightened",
+			"effect": [
+				17
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9173,7 +9807,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9193,7 +9829,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9213,7 +9851,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9232,7 +9870,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -9251,7 +9891,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Charmed",
+			"effect": [
+				5
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9270,7 +9912,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9289,7 +9931,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 4,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9308,7 +9950,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Social",
+			"effect": [
+				27
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9328,7 +9972,9 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Blinded",
+			"effect": [
+				3
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9347,7 +9993,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Acid (...)",
+			"damage": 0,
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -9367,7 +10013,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire",
+			"damage": 3,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9387,7 +10033,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9406,7 +10052,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Banishment (...)",
+			"effect": [
+				2
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9425,7 +10073,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Utility",
+			"effect": [
+				31
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9444,7 +10094,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9463,7 +10115,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Stunned",
+			"effect": [
+				28
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9482,7 +10136,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9502,7 +10158,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Radiant",
+			"damage": 10,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9521,7 +10177,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Communication",
+			"effect": [
+				7
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9540,7 +10198,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Bludgeoning",
+			"damage": 1,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9559,7 +10217,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Teleportation",
+			"effect": [
+				29
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9578,7 +10238,7 @@
 			"area": -1,
 			"attack": 1,
 			"save": 0,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9597,7 +10257,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9616,7 +10278,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9635,7 +10299,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Restrained (...)",
+			"effect": [
+				25
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9654,7 +10320,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Warding",
+			"effect": [
+				32
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9673,7 +10341,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Blinded (...)",
+			"effect": [
+				3
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9692,7 +10362,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9712,7 +10384,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"damageAndEffect": "Fire (...)",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9731,7 +10403,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9750,7 +10424,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control (...)",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9769,7 +10445,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Fire (...)",
+			"damage": 3,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9788,7 +10464,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 4,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -9808,7 +10484,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 5,
-			"damageAndEffect": "Force",
+			"damage": 4,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9827,7 +10503,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Shapechanging",
+			"effect": [
+				26
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9846,7 +10524,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Thunder (...)",
+			"damage": 12,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9865,7 +10543,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"damageAndEffect": "Necrotic",
+			"damage": 6,
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9884,7 +10562,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Control",
+			"effect": [
+				8
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9903,7 +10583,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9922,7 +10604,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Healing",
+			"effect": [
+				18
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9942,7 +10626,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 6,
-			"damageAndEffect": "Psychic",
+			"damage": 9,
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9961,7 +10645,9 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"damageAndEffect": "Buff (...)",
+			"effect": [
+				4
+			],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,

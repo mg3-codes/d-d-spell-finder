@@ -7,8 +7,10 @@
 import { ValueFormatterParams } from "ag-grid-community";
 import { mapNumberToAttackDisplayName } from "../enums/attacks";
 import { mapNumberToCastingTimeDisplayName } from "../enums/casting-times";
+import { DamageType, mapDamageTypeToDisplayName } from "../enums/damage-types";
 import { mapNumberToDistanceDisplayName } from "../enums/distances";
 import { mapNumberToDurationDisplayName } from "../enums/durations";
+import { Effect, mapEffectToDisplayName } from "../enums/effects";
 import { mapNumberToRangeDisplayName } from "../enums/ranges";
 import { mapNumberToSavingThrowDisplayName } from "../enums/saving-throws";
 import { mapNumberToSchoolDisplayName } from "../enums/schools";
@@ -37,9 +39,29 @@ export const castingTimeValueFormatter = (
 	params: ValueFormatterParams<Spell>,
 ): string => mapNumberToCastingTimeDisplayName(params.value);
 
+export const damageTypeValueFormatter = (
+	params: ValueFormatterParams<DamageType>,
+): string => {
+	if (!params?.value || params?.value === DamageType.None) return "";
+	return mapDamageTypeToDisplayName(params.value);
+};
+
 export const durationValueFormatter = (
 	params: ValueFormatterParams<Spell>,
 ): string => mapNumberToDurationDisplayName(params.value);
+
+export const effectValueFormatter = (
+	params: ValueFormatterParams<Effect[]>,
+): string => {
+	const names: string[] | null = params.value
+		?.map((effect: Effect) => {
+			if (effect === Effect.None) return null;
+			return mapEffectToDisplayName(effect);
+		})
+		.filter((x: string | null) => x);
+
+	return names?.join(", ") ?? "";
+};
 
 export const rangeValueFormatter = (
 	params: ValueFormatterParams<Spell>,
