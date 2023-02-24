@@ -17,8 +17,8 @@ import Form from "react-bootstrap/Form";
 import {
 	mapDamageTypeToDisplayName,
 	DamageType,
-} from "../../enums/damage-types";
-import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
+} from "../../../enums/damage-types";
+import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
@@ -27,7 +27,7 @@ import {
 	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
 	NumberBasedFilterSetModel,
-} from "../../utility/filters/number-based-filter";
+} from "../../../utility/filters/number-based-filter";
 
 import "./damage-type-filter.css";
 

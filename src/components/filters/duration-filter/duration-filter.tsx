@@ -22,14 +22,14 @@ import {
 	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
 	NumberBasedFilterSetModel,
-} from "../../utility/filters/number-based-filter";
-import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
+} from "../../../utility/filters/number-based-filter";
+import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 
 import "./duration-filter.css";
 import {
 	Duration,
 	mapNumberToDurationDisplayName,
-} from "../../enums/durations";
+} from "../../../enums/durations";
 
 const filterDisabledArray = createDisabledFilterArray(15);
 

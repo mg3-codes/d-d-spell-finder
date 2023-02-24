@@ -19,9 +19,9 @@ import Tooltip from "react-bootstrap/Tooltip";
 import {
 	mapNumberToDistanceDisplayName,
 	Distance,
-} from "../../enums/distances";
-import { mapNumberToShapeDisplayName, Shape } from "../../enums/shapes";
-import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
+} from "../../../enums/distances";
+import { mapNumberToShapeDisplayName, Shape } from "../../../enums/shapes";
+import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
@@ -29,7 +29,7 @@ import {
 	numberBasedFilterIsChecked,
 	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
-} from "../../utility/filters/number-based-filter";
+} from "../../../utility/filters/number-based-filter";
 
 import "./area-filter.css";
 

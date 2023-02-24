@@ -6,18 +6,18 @@
 
 import { ColDef } from "ag-grid-community";
 
-import AreaFilter from "../components/area-filter/area-filter";
-import AttackFilter from "../components/attack-filter/attack-filter";
-import BooleanFilter from "../components/boolean-filter/boolean-filter";
-import CastingTimeFilter from "../components/casting-time-filter/casting-time-filter";
-import DamageTypeFilter from "../components/damage-type-filter/damage-type-filter";
-import DurationFilter from "../components/duration-filter/duration-filter";
-import EffectFilter from "../components/effect-filter/effect-filter";
-import LevelFilter from "../components/level-filter/level-filter";
-import RangeFilter from "../components/range-filter/range-filter";
-import SavingThrowFilter from "../components/saving-throw-filter/saving-throw-filter";
-import SchoolFilter from "../components/school-filter/school-filter";
-import SourceFilter from "../components/source-filter/source-filter";
+import AreaFilter from "../components/filters/area-filter/area-filter";
+import AttackFilter from "../components/filters/attack-filter/attack-filter";
+import BooleanFilter from "../components/filters/boolean-filter/boolean-filter";
+import CastingTimeFilter from "../components/filters/casting-time-filter/casting-time-filter";
+import DamageTypeFilter from "../components/filters/damage-type-filter/damage-type-filter";
+import DurationFilter from "../components/filters/duration-filter/duration-filter";
+import EffectFilter from "../components/filters/effect-filter/effect-filter";
+import LevelFilter from "../components/filters/level-filter/level-filter";
+import RangeFilter from "../components/filters/range-filter/range-filter";
+import SavingThrowFilter from "../components/filters/saving-throw-filter/saving-throw-filter";
+import SchoolFilter from "../components/filters/school-filter/school-filter";
+import SourceFilter from "../components/filters/source-filter/source-filter";
 
 import { areaValueComparator } from "./comparators";
 import {

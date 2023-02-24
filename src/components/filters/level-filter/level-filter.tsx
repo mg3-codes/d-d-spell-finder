@@ -22,8 +22,8 @@ import {
 	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
 	NumberBasedFilterSetModel,
-} from "../../utility/filters/number-based-filter";
-import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
+} from "../../../utility/filters/number-based-filter";
+import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 
 import "./level-filter.css";
 

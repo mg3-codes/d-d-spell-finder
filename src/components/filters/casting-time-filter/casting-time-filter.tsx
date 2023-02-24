@@ -18,7 +18,7 @@ import Form from "react-bootstrap/Form";
 import {
 	CastingTime,
 	mapNumberToCastingTimeDisplayName,
-} from "../../enums/casting-times";
+} from "../../../enums/casting-times";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
@@ -27,8 +27,8 @@ import {
 	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
 	NumberBasedFilterSetModel,
-} from "../../utility/filters/number-based-filter";
-import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
+} from "../../../utility/filters/number-based-filter";
+import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 
 import "./casting-time-filter.css";
 

@@ -14,8 +14,8 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapNumberToSourceDisplayName, Source } from "../../enums/sources";
-import { AgGridFilterProps } from "../../types/ag-grid-filter-props";
+import { mapNumberToSourceDisplayName, Source } from "../../../enums/sources";
+import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
@@ -24,7 +24,7 @@ import {
 	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
 	NumberBasedFilterSetModel,
-} from "../../utility/filters/number-based-filter";
+} from "../../../utility/filters/number-based-filter";
 
 import "./source-filter.css";
 
