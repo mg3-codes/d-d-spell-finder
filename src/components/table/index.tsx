@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useState, useRef } from "react";
 import { AgGridReact } from "ag-grid-react";
 import { CellClickedEvent, ColDef } from "ag-grid-community";
 import Button from "react-bootstrap/Button";
@@ -22,11 +22,17 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 
 import spellData from "../../assets/5e-spells.json";
 import Spell from "../../types/spell";
+import { Column, mapColumnToDisplayName } from "../../enums/columns";
 
-export const Table = (): JSX.Element => {
+export interface ITableProps {
+	selectedColumns: Column[];
+}
+
+export const Table = ({ selectedColumns }: ITableProps): JSX.Element => {
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 	const [modalTitle, setModalTitle] = useState<string>("");
 	const [modalText, setModalText] = useState<string>("");
+	const gridRef = useRef<AgGridReact>(null);
 
 	const showModalWithMessage = (message: string): void => {
 		setModalText(message);
@@ -58,6 +64,27 @@ export const Table = (): JSX.Element => {
 		[],
 	);
 
+	const [columnDefinitions, setColumnDefinitions] = useState(
+		startingColumnDefinition,
+	);
+
+	useEffect(() => {
+		for (const columnDefinition of columnDefinitions) {
+			if (columnDefinition.checkboxSelection === true) continue;
+			if (
+				selectedColumns.find(
+					(value) =>
+						columnDefinition.headerName ===
+						mapColumnToDisplayName(value),
+				) === undefined
+			)
+				columnDefinition.hide = true;
+			else columnDefinition.hide = false;
+
+			setColumnDefinitions([...columnDefinitions, columnDefinition]);
+		}
+	}, [selectedColumns]);
+
 	return (
 		<React.Fragment>
 			<Modal show={modalIsOpen} onHide={handleModalClose}>
@@ -73,7 +100,8 @@ export const Table = (): JSX.Element => {
 			</Modal>
 			<div className="app ag-theme-alpine">
 				<AgGridReact
-					columnDefs={startingColumnDefinition}
+					ref={gridRef}
+					columnDefs={columnDefinitions}
 					rowData={spellData.spells.map(buildRow)}
 					defaultColDef={useMemo<ColDef>(() => defaultColDef, [])}
 					animateRows={true}

@@ -4,14 +4,7 @@
  * @format
  */
 
-body,
-.root,
-.app {
-	width: 100vw;
-	height: 100vh;
-}
-
-.heading {
-	display: flex;
-	justify-content: space-between;
+export enum Theme {
+	Light,
+	Dark,
 }
