@@ -14,7 +14,7 @@ import React, {
 import Form from "react-bootstrap/Form";
 import { IFilterParams, RowNode } from "ag-grid-community";
 
-import { TableRow } from "../../types/table-row";
+import { TableRow } from "../../../types/table-row";
 
 import "./boolean-filter.css";
 
