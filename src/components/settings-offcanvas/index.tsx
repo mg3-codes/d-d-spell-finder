@@ -88,6 +88,14 @@ export const SettingsOffcanvas = ({
 								/>
 								<Form.Check
 									type="checkbox"
+									label={mapColumnToDisplayName(Column.Level)}
+									onChange={() =>
+										handleColumnCheckboxChange(Column.Level)
+									}
+									checked={isCheckboxChecked(Column.Level)}
+								/>
+								<Form.Check
+									type="checkbox"
 									label={mapColumnToDisplayName(
 										Column.School,
 									)}
@@ -97,14 +105,6 @@ export const SettingsOffcanvas = ({
 										)
 									}
 									checked={isCheckboxChecked(Column.School)}
-								/>
-								<Form.Check
-									type="checkbox"
-									label={mapColumnToDisplayName(Column.Level)}
-									onChange={() =>
-										handleColumnCheckboxChange(Column.Level)
-									}
-									checked={isCheckboxChecked(Column.Level)}
 								/>
 								<Form.Check
 									type="checkbox"
