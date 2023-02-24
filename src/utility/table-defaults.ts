@@ -4,7 +4,7 @@
  * @format
  */
 
-import { ColDef } from "ag-grid-community";
+import { CellClickedEvent, ColDef } from "ag-grid-community";
 
 import AreaFilter from "../components/filters/area-filter/area-filter";
 import AttackFilter from "../components/filters/attack-filter/attack-filter";
@@ -18,6 +18,7 @@ import RangeFilter from "../components/filters/range-filter/range-filter";
 import SavingThrowFilter from "../components/filters/saving-throw-filter/saving-throw-filter";
 import SchoolFilter from "../components/filters/school-filter/school-filter";
 import SourceFilter from "../components/filters/source-filter/source-filter";
+import Spell from "../types/spell";
 
 import { areaValueComparator } from "./comparators";
 import {
@@ -45,7 +46,10 @@ export const defaultColDef: ColDef = {
 	wrapHeaderText: true,
 };
 
-export const columnDefinition: ColDef[] = [
+export const defaultColumnDefinitions = (
+	onMaterialCellClicked: (event: CellClickedEvent<Spell>) => void,
+	onDetailsCellClicked: (event: CellClickedEvent<Spell>) => void,
+): ColDef[] => [
 	{
 		field: "check",
 		headerName: "",
@@ -171,6 +175,7 @@ export const columnDefinition: ColDef[] = [
 		field: "material",
 		headerName: "Material",
 		tooltipField: "material",
+		onCellClicked: onMaterialCellClicked,
 		sortable: false,
 	},
 	{
@@ -184,6 +189,7 @@ export const columnDefinition: ColDef[] = [
 		field: "details",
 		headerName: "Details",
 		tooltipField: "details",
+		onCellClicked: onDetailsCellClicked,
 		sortable: false,
 	},
 ];

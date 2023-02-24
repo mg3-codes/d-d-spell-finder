@@ -4,33 +4,16 @@
  * @format
  */
 
-import React, { useMemo } from "react";
-import { AgGridReact } from "ag-grid-react";
+import React from "react";
 
-import { buildRow } from "./types/table-row";
-
-import { defaultColDef, columnDefinition } from "./utility/grid-defaults";
+import { Table } from "./components/table";
 
 import "./app.css";
-import "ag-grid-community/styles/ag-grid.css";
-import "ag-grid-community/styles/ag-theme-alpine.css";
-
-import spellData from "./assets/5e-spells.json";
-import { ColDef } from "ag-grid-community";
 
 const App = () => {
 	return (
 		<div>
-			<div className="app ag-theme-alpine">
-				<AgGridReact
-					columnDefs={columnDefinition}
-					rowData={spellData.spells.map(buildRow)}
-					defaultColDef={useMemo<ColDef>(() => defaultColDef, [])}
-					animateRows={true}
-					rowSelection="multiple"
-					suppressRowClickSelection
-				/>
-			</div>
+			<Table />
 		</div>
 	);
 };
