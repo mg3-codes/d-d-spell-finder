@@ -30,7 +30,7 @@ export const Page = () => {
 
 	return (
 		<div
-			className={`${
+			className={`page ${
 				currentTheme === Theme.Light ? "light" : "dark"
 			}-theme`}
 		>
