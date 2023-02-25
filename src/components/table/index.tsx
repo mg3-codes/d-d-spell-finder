@@ -22,20 +22,18 @@ import "ag-grid-community/styles/ag-theme-alpine.css";
 
 import spellData from "../../assets/5e-spells.json";
 import Spell from "../../types/spell";
-import { Column, mapColumnToDisplayName } from "../../enums/columns";
+import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
 import { ThemeContext } from "../theme-context-provider";
+import { ColumnContext } from "../column-context-provider";
 
-export interface ITableProps {
-	selectedColumns: Column[];
-}
-
-export const Table = ({ selectedColumns }: ITableProps): JSX.Element => {
+export const Table = (): JSX.Element => {
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 	const [modalTitle, setModalTitle] = useState<string>("");
 	const [modalText, setModalText] = useState<string>("");
 	const gridRef = useRef<AgGridReact>(null);
 	const { currentTheme: selectedTheme } = useContext(ThemeContext);
+	const { selectedColumns } = useContext(ColumnContext);
 
 	const showModalWithMessage = (message: string): void => {
 		setModalText(message);

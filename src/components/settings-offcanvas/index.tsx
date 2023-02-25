@@ -13,19 +13,13 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { Column, mapColumnToDisplayName } from "../../enums/columns";
 
 import { Theme } from "../../enums/theme";
+import { ColumnContext } from "../column-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
-export interface ISettingsOffcanvasProps {
-	handleColumnChange: (column: Column) => void;
-	selectedColumns: Column[];
-}
-
-export const SettingsOffcanvas = ({
-	handleColumnChange,
-	selectedColumns,
-}: ISettingsOffcanvasProps): JSX.Element => {
+export const SettingsOffcanvas = (): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);
 	const { currentTheme, setCurrentTheme } = useContext(ThemeContext);
+	const { selectedColumns, handleColumnChange } = useContext(ColumnContext);
 
 	const handleOpen = () => setShow(true);
 
