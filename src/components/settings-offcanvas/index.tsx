@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
@@ -13,21 +13,19 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { Column, mapColumnToDisplayName } from "../../enums/columns";
 
 import { Theme } from "../../enums/theme";
+import { ThemeContext } from "../theme-context-provider";
 
 export interface ISettingsOffcanvasProps {
-	currentTheme: Theme;
-	handleThemeChange: (theme: Theme) => void;
 	handleColumnChange: (column: Column) => void;
 	selectedColumns: Column[];
 }
 
 export const SettingsOffcanvas = ({
-	currentTheme,
-	handleThemeChange,
 	handleColumnChange,
 	selectedColumns,
 }: ISettingsOffcanvasProps): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);
+	const { currentTheme, setCurrentTheme } = useContext(ThemeContext);
 
 	const handleOpen = () => setShow(true);
 
@@ -57,7 +55,7 @@ export const SettingsOffcanvas = ({
 									<Button
 										variant="primary"
 										onClick={() =>
-											handleThemeChange(Theme.Light)
+											setCurrentTheme(Theme.Light)
 										}
 										disabled={currentTheme === Theme.Light}
 									>
@@ -66,7 +64,7 @@ export const SettingsOffcanvas = ({
 									<Button
 										variant="primary"
 										onClick={() =>
-											handleThemeChange(Theme.Dark)
+											setCurrentTheme(Theme.Dark)
 										}
 										disabled={currentTheme === Theme.Dark}
 									>

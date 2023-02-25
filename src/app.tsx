@@ -4,23 +4,21 @@
  * @format
  */
 
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 
 import { Table } from "./components/table";
 
 import { SettingsOffcanvas } from "./components/settings-offcanvas";
 import { Column } from "./enums/columns";
-import { Theme } from "./enums/theme";
 import { defaultSelectedColumns } from "./utility/table-defaults";
 
 import "./app.css";
+import { ThemeContextProvider } from "./components/theme-context-provider";
 
 const App = () => {
 	const [selectedColumns, setSelectedColumns] = useState<Column[]>(
 		defaultSelectedColumns,
 	);
-
-	const handleThemeChange = (theme: Theme): void => alert(theme);
 
 	const handleColumnChange = (column: Column): void => {
 		if (selectedColumns.find((value) => column === value) === undefined)
@@ -33,16 +31,16 @@ const App = () => {
 
 	return (
 		<div>
-			<div className="heading">
-				<h1>D&D Spell Details</h1>
-				<SettingsOffcanvas
-					currentTheme={Theme.Light}
-					handleThemeChange={handleThemeChange}
-					handleColumnChange={handleColumnChange}
-					selectedColumns={selectedColumns}
-				/>
-			</div>
-			<Table selectedColumns={selectedColumns} />
+			<ThemeContextProvider>
+				<div className="heading">
+					<h1>D&D Spell Details</h1>
+					<SettingsOffcanvas
+						handleColumnChange={handleColumnChange}
+						selectedColumns={selectedColumns}
+					/>
+				</div>
+				<Table selectedColumns={selectedColumns} />
+			</ThemeContextProvider>
 		</div>
 	);
 };
