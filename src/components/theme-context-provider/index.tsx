@@ -29,7 +29,11 @@ export interface IThemeContextProviderProps {
 export const ThemeContextProvider = ({
 	children,
 }: IThemeContextProviderProps) => {
-	const [currentTheme, setCurrentTheme] = useState<Theme>(Theme.Light);
+	const [currentTheme, setCurrentTheme] = useState<Theme>(
+		window?.matchMedia("(prefers-color-scheme: dark)")?.matches
+			? Theme.Dark
+			: Theme.Light,
+	);
 
 	const toggleCurrentTheme = (): void => {
 		switch (currentTheme) {

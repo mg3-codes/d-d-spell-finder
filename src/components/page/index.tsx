@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect as useLayoutEffect } from "react";
 import { Table } from "../../components/table";
 import { SettingsOffcanvas } from "../../components/settings-offcanvas";
 import { ThemeContext } from "../theme-context-provider";
@@ -16,7 +16,7 @@ import "./page.css";
 export const Page = () => {
 	const { currentTheme } = useContext(ThemeContext);
 
-	useEffect(() => {
+	useLayoutEffect(() => {
 		const elements: HTMLCollectionOf<HTMLElement> =
 			document.getElementsByTagName("html");
 
