@@ -33,8 +33,8 @@ export const SettingsOffcanvas = (): JSX.Element => {
 
 	return (
 		<div>
-			<Button variant="outline-secondary" onClick={handleOpen}>
-				settings
+			<Button variant="link" onClick={handleOpen}>
+				<i className="bi bi-gear" style={{ fontSize: "1.5rem" }} />
 			</Button>
 			<Offcanvas show={show} onHide={handleClose} placement="end">
 				<Offcanvas.Header closeButton>
