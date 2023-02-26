@@ -107,7 +107,7 @@ const Table = (): JSX.Element => {
 				</Modal.Footer>
 			</Modal>
 			<div
-				className={`app ag-theme-alpine${
+				className={`grid-container ag-theme-alpine${
 					selectedTheme === Theme.Dark ? "-dark" : ""
 				}`}
 			>

@@ -37,11 +37,7 @@ export const Page = () => {
 	}, [currentTheme]);
 
 	return (
-		<div
-			className={`page ${
-				currentTheme === Theme.Light ? "light" : "dark"
-			}-theme`}
-		>
+		<div className="page">
 			<Suspense fallback={<LoadingSpinner />}>
 				<div className="heading">
 					<h1>D&D Spell Details</h1>

@@ -4,19 +4,10 @@
  * @format
  */
 
-body {
-	width: 100vw;
-}
-
-.app {
-	width: 100%;
-}
-
-.gutter-container {
-	margin: 20px 30px;
-}
-
-.heading {
+.check-container {
 	display: flex;
-	justify-content: space-between;
+}
+
+.check-column {
+	width: 50%;
 }

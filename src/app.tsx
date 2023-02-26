@@ -14,11 +14,15 @@ import "./app.css";
 
 const App = () => {
 	return (
-		<ThemeContextProvider>
-			<ColumnContextProvider>
-				<Page />
-			</ColumnContextProvider>
-		</ThemeContextProvider>
+		<div className="app">
+			<div className="gutter-container">
+				<ThemeContextProvider>
+					<ColumnContextProvider>
+						<Page />
+					</ColumnContextProvider>
+				</ThemeContextProvider>
+			</div>
+		</div>
 	);
 };
 
