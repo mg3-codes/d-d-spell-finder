@@ -4,20 +4,48 @@
  * @format
  */
 
-import { CellClickedEvent, ColDef } from "ag-grid-community";
+import React from "react";
+import { CellClickedEvent, ColDef } from "@ag-grid-community/core";
 
-import AreaFilter from "../components/filters/area-filter/area-filter";
-import AttackFilter from "../components/filters/attack-filter/attack-filter";
-import BooleanFilter from "../components/filters/boolean-filter/boolean-filter";
-import CastingTimeFilter from "../components/filters/casting-time-filter/casting-time-filter";
-import DamageTypeFilter from "../components/filters/damage-type-filter/damage-type-filter";
-import DurationFilter from "../components/filters/duration-filter/duration-filter";
-import EffectFilter from "../components/filters/effect-filter/effect-filter";
-import LevelFilter from "../components/filters/level-filter/level-filter";
-import RangeFilter from "../components/filters/range-filter/range-filter";
-import SavingThrowFilter from "../components/filters/saving-throw-filter/saving-throw-filter";
-import SchoolFilter from "../components/filters/school-filter/school-filter";
-import SourceFilter from "../components/filters/source-filter/source-filter";
+// const Table = React.lazy(() => import("../../components/table"));
+const AreaFilter = React.lazy(
+	() => import("../components/filters/area-filter/area-filter"),
+);
+const AttackFilter = React.lazy(
+	() => import("../components/filters/attack-filter/attack-filter"),
+);
+const BooleanFilter = React.lazy(
+	() => import("../components/filters/boolean-filter/boolean-filter"),
+);
+const CastingTimeFilter = React.lazy(
+	() =>
+		import("../components/filters/casting-time-filter/casting-time-filter"),
+);
+const DamageTypeFilter = React.lazy(
+	() => import("../components/filters/damage-type-filter/damage-type-filter"),
+);
+const DurationFilter = React.lazy(
+	() => import("../components/filters/duration-filter/duration-filter"),
+);
+const EffectFilter = React.lazy(
+	() => import("../components/filters/effect-filter/effect-filter"),
+);
+const LevelFilter = React.lazy(
+	() => import("../components/filters/level-filter/level-filter"),
+);
+const RangeFilter = React.lazy(
+	() => import("../components/filters/range-filter/range-filter"),
+);
+const SavingThrowFilter = React.lazy(
+	() =>
+		import("../components/filters/saving-throw-filter/saving-throw-filter"),
+);
+const SchoolFilter = React.lazy(
+	() => import("../components/filters/school-filter/school-filter"),
+);
+const SourceFilter = React.lazy(
+	() => import("../components/filters/source-filter/source-filter"),
+);
 import { Column, mapColumnToDisplayName } from "../enums/columns";
 import Spell from "../types/spell";
 

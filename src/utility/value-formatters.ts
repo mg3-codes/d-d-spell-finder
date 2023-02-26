@@ -4,7 +4,7 @@
  * @format
  */
 
-import { ValueFormatterParams } from "ag-grid-community";
+import { ValueFormatterParams } from "@ag-grid-community/core";
 import { mapNumberToAttackDisplayName } from "../enums/attacks";
 import { mapNumberToCastingTimeDisplayName } from "../enums/casting-times";
 import { DamageType, mapDamageTypeToDisplayName } from "../enums/damage-types";

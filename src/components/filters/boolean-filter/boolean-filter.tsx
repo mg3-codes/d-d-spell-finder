@@ -12,7 +12,7 @@ import React, {
 	ReactElement,
 } from "react";
 import Form from "react-bootstrap/Form";
-import { IFilterParams, RowNode } from "ag-grid-community";
+import { IFilterParams, RowNode } from "@ag-grid-community/core";
 
 import { TableRow } from "../../../types/table-row";
 

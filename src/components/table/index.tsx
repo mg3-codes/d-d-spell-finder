@@ -5,19 +5,20 @@
  */
 
 import React, { useEffect, useMemo, useState, useRef, useContext } from "react";
-import { AgGridReact } from "ag-grid-react";
-import { CellClickedEvent, ColDef } from "ag-grid-community";
+import { AgGridReact } from "@ag-grid-community/react";
+import { ModuleRegistry } from "@ag-grid-community/core";
+import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
+import { CellClickedEvent, ColDef } from "@ag-grid-community/core";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-import { buildRow } from "../../types/table-row";
+import { buildRow, TableRow } from "../../types/table-row";
 
 import {
 	defaultColDef,
 	defaultColumnDefinitions,
 } from "../../utility/table-defaults";
 
-import spellData from "../../assets/5e-spells.json";
 import Spell from "../../types/spell";
 import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
@@ -26,7 +27,14 @@ import { ColumnContext } from "../column-context-provider";
 
 import "./table.css";
 
-export const Table = (): JSX.Element => {
+ModuleRegistry.registerModules([ClientSideRowModelModule]);
+
+const Table = (): JSX.Element => {
+	const [spellRows, setSpellRows] = useState<TableRow[] | null>();
+	useMemo(async () => {
+		const data = await import("../../assets/5e-spells.json");
+		setSpellRows(data.spells.map(buildRow));
+	}, []);
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 	const [modalTitle, setModalTitle] = useState<string>("");
 	const [modalText, setModalText] = useState<string>("");
@@ -106,7 +114,7 @@ export const Table = (): JSX.Element => {
 				<AgGridReact
 					ref={gridRef}
 					columnDefs={columnDefinitions}
-					rowData={spellData.spells.map(buildRow)}
+					rowData={spellRows}
 					defaultColDef={useMemo<ColDef>(() => defaultColDef, [])}
 					animateRows={true}
 					rowSelection="multiple"
@@ -116,3 +124,5 @@ export const Table = (): JSX.Element => {
 		</React.Fragment>
 	);
 };
+
+export default Table;

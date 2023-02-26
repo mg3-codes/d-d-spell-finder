@@ -2,6 +2,25 @@
 # yarn lockfile v1
 
 
+"@ag-grid-community/client-side-row-model@^29.1.0":
+  version "29.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/client-side-row-model/-/client-side-row-model-29.1.0.tgz#7715f22f2d60227e0ea01c737283d9c7568c5205"
+  integrity sha512-SaJnYe58k0teHXQtnoMSTWnxc0jwY5MwOL+VeaxqpGX32LQoVIB1u9z3lgG0uGmR95+mngLer9cI4u7FqBZ5iA==
+  dependencies:
+    "@ag-grid-community/core" "~29.1.0"
+
+"@ag-grid-community/core@^29.1.0", "@ag-grid-community/core@~29.1.0":
+  version "29.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/core/-/core-29.1.0.tgz#5cf672f67ff3cf2efcb77d4d809dda7852967d9c"
+  integrity sha512-l68/3whSJ4ql2yvgx5FlT7V8op35z7+htx9PZ6VyzIPgnNVXSv5XuIU7JCzqobRwPOXSeyjRfH2Q4/tZrYVvmw==
+
+"@ag-grid-community/react@^29.1.0":
+  version "29.1.0"
+  resolved "https://registry.yarnpkg.com/@ag-grid-community/react/-/react-29.1.0.tgz#3ea7d5e6b6eb66101e7945d43361a608e7fda44e"
+  integrity sha512-MwCkgBU9cH0yEVbzuil0lMeZz3vATZx2q40hlQIfixc1KyZsp2BlyqOxazpCOk5svBWSjs2ZekMObGxX9WgZxw==
+  dependencies:
+    prop-types "^15.8.1"
+
 "@babel/code-frame@^7.0.0":
   version "7.18.6"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.18.6.tgz#3b25d38c89600baa2dcc219edfa88a74eb2c427a"
@@ -480,18 +499,6 @@ acorn@^8.8.0:
   version "8.8.2"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-8.8.2.tgz#1b2f25db02af965399b9776b0c2c391276d37c4a"
   integrity sha512-xjIYgE8HBrkpd/sJqOGNspf8uHG+NOHGOw6a/Urj8taM2EXfdNAH2oFcPeIFfsv3+kz/mJrS5VuMqbNLjCa2vw==
-
-ag-grid-community@^29.1.0:
-  version "29.1.0"
-  resolved "https://registry.yarnpkg.com/ag-grid-community/-/ag-grid-community-29.1.0.tgz#acf74ecb9018d9ee3b2a7e468ffba595e6621606"
-  integrity sha512-QJZi1qP7fpK/sxXbEFZWR3/Jf3HVRK0Xm3Tw55tn0ehNdkuSxRBOmOvjE3lPWqgRlT2rcL1xmjdqM4mpB1fobQ==
-
-ag-grid-react@^29.1.0:
-  version "29.1.0"
-  resolved "https://registry.yarnpkg.com/ag-grid-react/-/ag-grid-react-29.1.0.tgz#06d75de91f753a865650ba3b01e2f6bc016a4590"
-  integrity sha512-csAT+PEodEjJ1GhBrx0kVAgkfm8eafsxA8ugSEM+iiSGwc13mPS2Qrye3yz/Wp0vf7ho1CDJgnZraWfSBER42Q==
-  dependencies:
-    prop-types "^15.8.1"
 
 ajv@^6.10.0, ajv@^6.12.4:
   version "6.12.6"

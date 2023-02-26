@@ -4,7 +4,7 @@
  * @format
  */
 
-import { ITooltipParams } from "ag-grid-community";
+import { ITooltipParams } from "@ag-grid-community/core";
 import { mapNumberToRangeDisplayName } from "../enums/ranges";
 
 import { mapNumberToSourceDisplayName } from "../enums/sources";

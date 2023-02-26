@@ -16,7 +16,7 @@ import { Theme } from "../../enums/theme";
 import { ColumnContext } from "../column-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
-export const SettingsOffcanvas = (): JSX.Element => {
+const SettingsOffcanvas = (): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);
 	const { currentTheme, setCurrentTheme } = useContext(ThemeContext);
 	const { selectedColumns, handleColumnChange } = useContext(ColumnContext);
@@ -278,3 +278,5 @@ export const SettingsOffcanvas = (): JSX.Element => {
 		</div>
 	);
 };
+
+export default SettingsOffcanvas;

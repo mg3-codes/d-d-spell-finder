@@ -4,9 +4,17 @@
  * @format
  */
 
-import React, { useContext, useEffect as useLayoutEffect } from "react";
-import { Table } from "../../components/table";
-import { SettingsOffcanvas } from "../../components/settings-offcanvas";
+import React, {
+	Suspense,
+	useContext,
+	useEffect as useLayoutEffect,
+} from "react";
+import LoadingSpinner from "../loading-spinner";
+
+const Table = React.lazy(() => import("../../components/table"));
+const SettingsOffcanvas = React.lazy(
+	() => import("../../components/settings-offcanvas"),
+);
 import { ThemeContext } from "../theme-context-provider";
 
 import { Theme } from "../../enums/theme";
@@ -34,11 +42,13 @@ export const Page = () => {
 				currentTheme === Theme.Light ? "light" : "dark"
 			}-theme`}
 		>
-			<div className="heading">
-				<h1>D&D Spell Details</h1>
-				<SettingsOffcanvas />
-			</div>
-			<Table />
+			<Suspense fallback={<LoadingSpinner />}>
+				<div className="heading">
+					<h1>D&D Spell Details</h1>
+					<SettingsOffcanvas />
+				</div>
+				<Table />
+			</Suspense>
 		</div>
 	);
 };
