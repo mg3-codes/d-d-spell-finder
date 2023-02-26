@@ -17,15 +17,14 @@ import {
 	defaultColumnDefinitions,
 } from "../../utility/table-defaults";
 
-import "ag-grid-community/styles/ag-grid.css";
-import "ag-grid-community/styles/ag-theme-alpine.css";
-
 import spellData from "../../assets/5e-spells.json";
 import Spell from "../../types/spell";
 import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
 import { ThemeContext } from "../theme-context-provider";
 import { ColumnContext } from "../column-context-provider";
+
+import "./table.css";
 
 export const Table = (): JSX.Element => {
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);

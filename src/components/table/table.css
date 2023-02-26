@@ -1,0 +1,31 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+.ag-theme-alpine,
+.ag-theme-alpine-dark {
+	--ag-alpine-active-color: var(--bs-primary);
+	--ag-selected-row-background-color: var(--bs-primary-bg-subtle);
+	--ag-row-hover-color: var(--bs-primary-bg-subtle);
+	--ag-column-hover-color: var(--bs-primary-bg-subtle);
+	--ag-input-focus-border-color: var(--bs-primary-border-subtle);
+	--ag-header-foreground-color: var(--bs-black);
+	--ag-range-selection-border-color: #00000000;
+	--ag-background-color: var(--bs-body-bg);
+	--ag-foreground-color: var(--bs-text-dark);
+	--ag-border-color: var(--bs-border-color);
+	--ag-header-background-color: var(--bs-gray-100);
+	--ag-odd-row-background-color: var(--bs-gray-100);
+	--ag-invalid-color: var(--bs-danger);
+	--ag-font-family: var(--bs-body-font-family);
+	--ag-data-color: var(--bs-dark-text);
+}
+
+.ag-theme-alpine-dark {
+	--ag-odd-row-background-color: var(--bs-gray-800);
+	--ag-header-background-color: var(--bs-body-bg);
+	--ag-header-foreground-color: var(--bs-white);
+	--ag-foreground-color: var(--bs-white);
+}
