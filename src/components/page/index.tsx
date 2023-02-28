@@ -7,9 +7,8 @@
 import React, { Suspense, useState, useContext, useLayoutEffect } from "react";
 import Button from "react-bootstrap/Button";
 
-import { PrintModal } from "../print-modal";
-import LoadingSpinner from "../loading-spinner";
-
+const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
+const PrintModal = React.lazy(() => import("../print-modal"));
 const Table = React.lazy(() => import("../../components/table"));
 const SettingsOffcanvas = React.lazy(
 	() => import("../../components/settings-offcanvas"),
@@ -47,7 +46,7 @@ const row = {
 
 export const Page = () => {
 	const { currentTheme } = useContext(ThemeContext);
-	const [printModalIsOpen, setPrintModalIsOpen] = useState<boolean>(true);
+	const [printModalIsOpen, setPrintModalIsOpen] = useState<boolean>(false);
 
 	useLayoutEffect(() => {
 		const elements: HTMLCollectionOf<HTMLElement> =

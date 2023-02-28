@@ -30,11 +30,7 @@ export interface IPrintModalProps {
 	rows?: TableRow[];
 }
 
-export const PrintModal = ({
-	isOpen,
-	toggleIsOpen,
-	rows,
-}: IPrintModalProps) => {
+const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 	const [selectedNumberPerRow, setSelectedNumberPerRow] = useState<number>(1);
 	const [selectedExportType, setSelectedExportType] = useState<ExportType>(
 		ExportType.Card,
@@ -196,3 +192,5 @@ export const PrintModal = ({
 		</Modal>
 	);
 };
+
+export default PrintModal;
