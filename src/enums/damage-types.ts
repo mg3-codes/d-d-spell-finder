@@ -54,7 +54,9 @@ export const mapNumberToDamageType = (x: number): DamageType | undefined => {
 	}
 };
 
-export const mapDamageTypeToDisplayName = (x: DamageType): string => {
+export const mapNumberToDamageTypeDisplayName = (
+	x: number | undefined,
+): string => {
 	switch (x) {
 		case 0:
 			return "Acid";
@@ -84,6 +86,6 @@ export const mapDamageTypeToDisplayName = (x: DamageType): string => {
 			return "Thunder";
 		case 13:
 		default:
-			return "None";
+			return "";
 	}
 };

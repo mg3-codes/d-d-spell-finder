@@ -7,7 +7,10 @@
 import { ValueFormatterParams } from "@ag-grid-community/core";
 import { mapNumberToAttackDisplayName } from "../enums/attacks";
 import { mapNumberToCastingTimeDisplayName } from "../enums/casting-times";
-import { DamageType, mapDamageTypeToDisplayName } from "../enums/damage-types";
+import {
+	DamageType,
+	mapNumberToDamageTypeDisplayName,
+} from "../enums/damage-types";
 import { mapNumberToDistanceDisplayName } from "../enums/distances";
 import { mapNumberToDurationDisplayName } from "../enums/durations";
 import { Effect, mapEffectToDisplayName } from "../enums/effects";
@@ -43,7 +46,7 @@ export const damageTypeValueFormatter = (
 	params: ValueFormatterParams<DamageType>,
 ): string => {
 	if (!params?.value || params?.value === DamageType.None) return "";
-	return mapDamageTypeToDisplayName(params.value);
+	return mapNumberToDamageTypeDisplayName(params.value);
 };
 
 export const durationValueFormatter = (

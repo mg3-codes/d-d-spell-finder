@@ -38,17 +38,17 @@ export const mapNumberToSavingThrowDisplayName = (x: number): string => {
 		case 0:
 			return "None";
 		case 1:
-			return "Charisma Saving Throw";
+			return "Charisma";
 		case 2:
-			return "Constitution Saving Throw";
+			return "Constitution";
 		case 3:
-			return "Dexterity Saving Throw";
+			return "Dexterity";
 		case 4:
-			return "Intelligence Saving Throw";
+			return "Intelligence";
 		case 5:
-			return "Strength Saving Throw";
+			return "Strength";
 		case 6:
-			return "Wisdom Saving Throw";
+			return "Wisdom";
 	}
 
 	return "";

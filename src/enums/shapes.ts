@@ -30,7 +30,7 @@ export const mapNumberToShape = (x: number): number | undefined => {
 	}
 };
 
-export const mapNumberToShapeDisplayName = (x: number): string => {
+export const mapNumberToShapeDisplayName = (x: number | undefined): string => {
 	switch (x) {
 		case 0:
 			return "Cube";
@@ -44,7 +44,7 @@ export const mapNumberToShapeDisplayName = (x: number): string => {
 			return "Cone";
 		case 5:
 			return "Line";
+		default:
+			return "";
 	}
-
-	return "";
 };

@@ -4,7 +4,15 @@
  * @format
  */
 
+@use "../../styles/bootstrap.scss";
+
 .page {
 	color: var(--bs-body-color);
 	background-color: var(--bs-body-bg);
+
+	.printer-button {
+		&:hover {
+			color: bootstrap.$white;
+		}
+	}
 }
