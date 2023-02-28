@@ -15,7 +15,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import {
-	mapDamageTypeToDisplayName,
+	mapNumberToDamageTypeDisplayName,
 	DamageType,
 } from "../../../enums/damage-types";
 import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
@@ -29,7 +29,7 @@ import {
 	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
 
-import "./damage-type-filter.css";
+import "./damage-type-filter.scss";
 
 const damageTypeFilterDisabledArray = createDisabledFilterArray(14);
 
@@ -92,85 +92,85 @@ export default forwardRef(function DamageTypeFilter(
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.None)}
-				label={mapDamageTypeToDisplayName(DamageType.None)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.None)}
 				checked={isChecked(DamageType.None)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Acid)}
-				label={mapDamageTypeToDisplayName(DamageType.Acid)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Acid)}
 				checked={isChecked(DamageType.Acid)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Bludgeoning)}
-				label={mapDamageTypeToDisplayName(DamageType.Bludgeoning)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Bludgeoning)}
 				checked={isChecked(DamageType.Bludgeoning)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Cold)}
-				label={mapDamageTypeToDisplayName(DamageType.Cold)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Cold)}
 				checked={isChecked(DamageType.Cold)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Fire)}
-				label={mapDamageTypeToDisplayName(DamageType.Fire)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Fire)}
 				checked={isChecked(DamageType.Fire)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Force)}
-				label={mapDamageTypeToDisplayName(DamageType.Force)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Force)}
 				checked={isChecked(DamageType.Force)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Lightning)}
-				label={mapDamageTypeToDisplayName(DamageType.Lightning)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Lightning)}
 				checked={isChecked(DamageType.Lightning)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Necrotic)}
-				label={mapDamageTypeToDisplayName(DamageType.Necrotic)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Necrotic)}
 				checked={isChecked(DamageType.Necrotic)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Piercing)}
-				label={mapDamageTypeToDisplayName(DamageType.Piercing)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Piercing)}
 				checked={isChecked(DamageType.Piercing)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Poison)}
-				label={mapDamageTypeToDisplayName(DamageType.Poison)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Poison)}
 				checked={isChecked(DamageType.Poison)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Psychic)}
-				label={mapDamageTypeToDisplayName(DamageType.Psychic)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Psychic)}
 				checked={isChecked(DamageType.Psychic)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Radiant)}
-				label={mapDamageTypeToDisplayName(DamageType.Radiant)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Radiant)}
 				checked={isChecked(DamageType.Radiant)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Slashing)}
-				label={mapDamageTypeToDisplayName(DamageType.Slashing)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Slashing)}
 				checked={isChecked(DamageType.Slashing)}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={() => handleCheck(DamageType.Thunder)}
-				label={mapDamageTypeToDisplayName(DamageType.Thunder)}
+				label={mapNumberToDamageTypeDisplayName(DamageType.Thunder)}
 				checked={isChecked(DamageType.Thunder)}
 			/>
 			<Button

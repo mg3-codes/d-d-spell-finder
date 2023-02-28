@@ -26,7 +26,7 @@ import {
 	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
 
-import "./range-filter.css";
+import "./range-filter.scss";
 
 const filterDisabledArray = createDisabledFilterArray(25);
 

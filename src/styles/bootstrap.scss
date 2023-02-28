@@ -4,19 +4,4 @@
  * @format
  */
 
-body {
-	width: 100vw;
-}
-
-.app {
-	width: 100%;
-}
-
-.gutter-container {
-	margin: 20px 30px;
-}
-
-.heading {
-	display: flex;
-	justify-content: space-between;
-}
+@import "~bootstrap/scss/bootstrap";

@@ -26,7 +26,7 @@ import {
 	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
 
-import "./effect-filter.css";
+import "./effect-filter.scss";
 
 const effectFilterDisabledArray = createDisabledFilterArray(36);
 

@@ -30,7 +30,7 @@ import {
 } from "../../../utility/filters/number-based-filter";
 import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 
-import "./casting-time-filter.css";
+import "./casting-time-filter.scss";
 
 const filterDisabledArray = createDisabledFilterArray(10);
 

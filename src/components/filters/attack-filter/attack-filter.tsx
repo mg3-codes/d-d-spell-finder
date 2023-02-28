@@ -26,7 +26,7 @@ import {
 	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
 
-import "./attack-filter.css";
+import "./attack-filter.scss";
 
 const attackFilterDisabledArray = createDisabledFilterArray(3);
 

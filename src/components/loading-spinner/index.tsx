@@ -7,7 +7,7 @@
 import React from "react";
 import Spinner from "react-bootstrap/Spinner";
 
-import "./spinner.css";
+import "./spinner.scss";
 
 const LoadingSpinner = () => {
 	return (

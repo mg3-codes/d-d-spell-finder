@@ -26,7 +26,7 @@ import {
 	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
 
-import "./school-filter.css";
+import "./school-filter.scss";
 
 const filterDisabledArray = createDisabledFilterArray(8);
 

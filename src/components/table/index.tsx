@@ -25,7 +25,7 @@ import { Theme } from "../../enums/theme";
 import { ThemeContext } from "../theme-context-provider";
 import { ColumnContext } from "../column-context-provider";
 
-import "./table.css";
+import "./table.scss";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 

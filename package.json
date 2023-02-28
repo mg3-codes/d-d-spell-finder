@@ -8,25 +8,28 @@
 		"dev": "vite",
 		"build": "tsc && vite build",
 		"preview": "vite preview",
-		"prettier": "prettier --config ./.prettierrc --ignore-path  ./.prettierignore --write \"**/*.ts*\" \"**/*.css\" \"*.json\" \"*.md\"",
-		"prettier-check": "prettier --list-different --config ./.prettierrc --ignore-path  ./.prettierignore \"**/*.ts*\" \"**/*.css\" \"*.json\" \"*.md\"",
+		"prettier": "prettier --config ./.prettierrc --ignore-path  ./.prettierignore --write \"**/*.ts*\" \"**/*.scss\" \"*.json\" \"*.md\"",
+		"prettier-check": "prettier --list-different --config ./.prettierrc --ignore-path  ./.prettierignore \"**/*.ts*\" \"**/*.scss\" \"*.json\" \"*.md\"",
 		"lint-check": "yarn prettier-check && yarn eslint && yarn stylelint-check",
 		"lint": "yarn prettier; yarn eslint; yarn stylelint",
 		"eslint": "eslint '*/**/*.{js,ts,tsx}'",
-		"stylelint": "stylelint --config ./.stylelintrc --fix \"src/**/*.css\" --color --cache",
-		"stylelint-check": "stylelint --config ./.stylelintrc \"src/**/*.css\" --color --cache"
+		"stylelint": "stylelint --config ./.stylelintrc --fix \"src/**/*.scss\" --color --cache",
+		"stylelint-check": "stylelint --config ./.stylelintrc \"src/**/*.scss\" --color --cache"
 	},
 	"dependencies": {
 		"@ag-grid-community/client-side-row-model": "^29.1.0",
 		"@ag-grid-community/core": "^29.1.0",
 		"@ag-grid-community/react": "^29.1.0",
 		"@popperjs/core": "^2.11.6",
-		"bootstrap": "^5.2.3",
+		"bootstrap": "^5.3.0-alpha1",
+		"html2canvas": "^1.4.1",
+		"path": "^0.12.7",
 		"react": "^18.2.0",
 		"react-bootstrap": "^2.7.2",
 		"react-dom": "^18.2.0"
 	},
 	"devDependencies": {
+		"@types/node": "^18.14.2",
 		"@types/react": "^18.0.27",
 		"@types/react-dom": "^18.0.10",
 		"@typescript-eslint/eslint-plugin": "^5.53.0",
@@ -37,6 +40,7 @@
 		"eslint-plugin-prettier": "^4.2.1",
 		"eslint-plugin-react": "^7.32.2",
 		"prettier": "^2.8.4",
+		"sass": "^1.58.3",
 		"stylelint": "^15.2.0",
 		"typescript": "^4.9.3",
 		"vite": "^4.1.4"

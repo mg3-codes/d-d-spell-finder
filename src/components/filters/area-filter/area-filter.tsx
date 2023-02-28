@@ -31,7 +31,7 @@ import {
 	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./area-filter.css";
+import "./area-filter.scss";
 
 type AreaFilterSetModel = {
 	value?: {

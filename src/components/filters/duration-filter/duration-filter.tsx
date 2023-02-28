@@ -25,7 +25,7 @@ import {
 } from "../../../utility/filters/number-based-filter";
 import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 
-import "./duration-filter.css";
+import "./duration-filter.scss";
 import {
 	Duration,
 	mapNumberToDurationDisplayName,

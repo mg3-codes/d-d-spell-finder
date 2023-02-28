@@ -25,7 +25,7 @@ import {
 } from "../../../utility/filters/number-based-filter";
 import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 
-import "./level-filter.css";
+import "./level-filter.scss";
 
 const filterDisabledArray = createDisabledFilterArray(10);
 

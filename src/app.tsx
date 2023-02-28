@@ -10,7 +10,7 @@ import { ThemeContextProvider } from "./components/theme-context-provider";
 import { ColumnContextProvider } from "./components/column-context-provider";
 import { Page } from "./components/page";
 
-import "./app.css";
+import "./app.scss";
 
 const App = () => {
 	return (

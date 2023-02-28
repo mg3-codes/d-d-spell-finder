@@ -16,7 +16,7 @@ import { IFilterParams, RowNode } from "@ag-grid-community/core";
 
 import { TableRow } from "../../../types/table-row";
 
-import "./boolean-filter.css";
+import "./boolean-filter.scss";
 
 interface IBooleanFilterProps extends IFilterParams {
 	spellPropertyName: string;

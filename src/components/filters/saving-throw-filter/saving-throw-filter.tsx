@@ -29,7 +29,7 @@ import {
 	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
 
-import "./saving-throw-filter.css";
+import "./saving-throw-filter.scss";
 
 const savingThrowFilterDisabledArray = createDisabledFilterArray(7);
 

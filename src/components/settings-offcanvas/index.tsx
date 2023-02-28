@@ -16,7 +16,7 @@ import { Theme } from "../../enums/theme";
 import { ColumnContext } from "../column-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
-import "./settings-offcanvas.css";
+import "./settings-offcanvas.scss";
 
 const SettingsOffcanvas = (): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);
