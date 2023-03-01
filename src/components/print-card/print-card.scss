@@ -75,6 +75,27 @@
 			align-items: center;
 			justify-content: space-between;
 			flex-grow: 1;
+
+			p {
+				margin-bottom: 8px;
+			}
+
+			@mixin max-lines {
+				display: -webkit-box;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				-webkit-line-clamp: 9;
+				-webkit-box-orient: vertical;
+			}
+
+			p.max-lines-9 {
+				@include max-lines();
+			}
+
+			p.max-lines-11 {
+				@include max-lines();
+				-webkit-line-clamp: 11;
+			}
 		}
 	}
 }

@@ -131,7 +131,15 @@ export const PrintCard = ({ row }: IPrintCard) => {
 				<div className="details-section">
 					<div>
 						{row.material !== "" && <p>Material: {row.material}</p>}
-						{row.details !== "" && <p>Details: {row.details}</p>}
+						{row.details !== "" && (
+							<p
+								className={`max-lines-${
+									row.material ? "9" : "11"
+								}`}
+							>
+								Details: {row.details}
+							</p>
+						)}
 					</div>
 					<div>{mapNumberToSourceDisplayName(row.source)}</div>
 				</div>
