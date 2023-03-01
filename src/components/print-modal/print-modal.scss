@@ -20,12 +20,37 @@
 	}
 }
 
+// Override Bootstrap CSS
+[data-bs-theme="dark"] .carousel,
+.carousel {
+	.carousel-indicators {
+		display: none;
+	}
+
+	.carousel-control-next-icon,
+	.carousel-control-prev-icon {
+		filter: none;
+	}
+}
+
+.carousel {
+	.carousel-indicators {
+		display: none;
+	}
+
+	.carousel-control-next-icon,
+	.carousel-control-prev-icon {
+		filter: invert(1) grayscale(100);
+	}
+}
+
 .preview-container {
 	height: 60vh;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: bootstrap.$gray-400;
+	position: relative;
 
 	&.dark {
 		background-color: bootstrap.$body-bg-dark;
@@ -35,6 +60,7 @@
 		background-color: bootstrap.$white;
 		height: 96%;
 		aspect-ratio: 3 / 5;
+		max-height: 482px;
 
 		&.landscape {
 			width: 96%;

@@ -8,6 +8,7 @@ import React from "react";
 
 import { ThemeContextProvider } from "./components/theme-context-provider";
 import { ColumnContextProvider } from "./components/column-context-provider";
+import { SelectedRowContextProvider } from "./selected-row-context-provider";
 import { Page } from "./components/page";
 
 import "./app.scss";
@@ -18,7 +19,9 @@ const App = () => {
 			<div className="gutter-container">
 				<ThemeContextProvider>
 					<ColumnContextProvider>
-						<Page />
+						<SelectedRowContextProvider>
+							<Page />
+						</SelectedRowContextProvider>
 					</ColumnContextProvider>
 				</ThemeContextProvider>
 			</div>

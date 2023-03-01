@@ -6,6 +6,7 @@
 
 import React, { useContext, useState } from "react";
 import Alert from "react-bootstrap/Alert";
+import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import Dropdown from "react-bootstrap/Dropdown";
 import Modal from "react-bootstrap/Modal";
@@ -169,17 +170,25 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 						</Dropdown>
 					</div>
 				</div>
-				<div
-					className={`preview-container ${
-						currentTheme === Theme.Dark ? "dark" : ""
-					}`}
-				>
-					<div className="preview" id="print-area">
+				{rows?.length ? (
+					<Carousel pause="hover">
 						{rows?.map((row, index) => (
-							<PrintCard key={index} row={row} />
+							<Carousel.Item key={index}>
+								<div
+									className={`preview-container ${
+										currentTheme === Theme.Dark
+											? "dark"
+											: ""
+									}`}
+								>
+									<div className="preview" id="print-area">
+										<PrintCard key={index} row={row} />
+									</div>
+								</div>
+							</Carousel.Item>
 						))}
-					</div>
-				</div>
+					</Carousel>
+				) : null}
 			</Modal.Body>
 			<Modal.Footer>
 				<Button variant="outline-danger" onClick={toggleIsOpen}>

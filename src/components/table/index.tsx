@@ -6,7 +6,7 @@
 
 import React, { useEffect, useMemo, useState, useRef, useContext } from "react";
 import { AgGridReact } from "@ag-grid-community/react";
-import { ModuleRegistry } from "@ag-grid-community/core";
+import { ModuleRegistry, SelectionChangedEvent } from "@ag-grid-community/core";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
 import { CellClickedEvent, ColDef } from "@ag-grid-community/core";
 import Button from "react-bootstrap/Button";
@@ -24,6 +24,7 @@ import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
 import { ThemeContext } from "../theme-context-provider";
 import { ColumnContext } from "../column-context-provider";
+import { SelectedRowContext } from "../../selected-row-context-provider";
 
 import "./table.scss";
 
@@ -41,6 +42,7 @@ const Table = (): JSX.Element => {
 	const gridRef = useRef<AgGridReact>(null);
 	const { currentTheme: selectedTheme } = useContext(ThemeContext);
 	const { selectedColumns } = useContext(ColumnContext);
+	const { setSelectedRows } = useContext(SelectedRowContext);
 
 	const showModalWithMessage = (message: string): void => {
 		setModalText(message);
@@ -60,6 +62,16 @@ const Table = (): JSX.Element => {
 		if (event?.data?.details) {
 			setModalTitle("Details");
 			showModalWithMessage(event?.data?.details);
+		}
+	};
+
+	const onRowSelectionChanged = (): void => {
+		try {
+			const rows = gridRef.current?.api.getSelectedRows() as TableRow[];
+
+			setSelectedRows(rows);
+		} catch (e) {
+			console.error("error updating selected rows", e);
 		}
 	};
 
@@ -119,6 +131,7 @@ const Table = (): JSX.Element => {
 					animateRows={true}
 					rowSelection="multiple"
 					suppressRowClickSelection
+					onSelectionChanged={onRowSelectionChanged}
 				/>
 			</div>
 		</React.Fragment>
