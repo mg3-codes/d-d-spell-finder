@@ -11,6 +11,8 @@
 	color: bootstrap.$black;
 	display: flex;
 	flex-direction: column;
+	aspect-ratio: 3 / 5;
+	max-height: 482px;
 
 	.container {
 		display: flex;

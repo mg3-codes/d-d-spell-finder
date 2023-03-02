@@ -1,0 +1,102 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+@mixin A1-portrait {
+	height: $A1-long;
+	width: $A1-short;
+}
+
+@mixin A1-landscape {
+	height: $A1-short;
+	width: $A1-long;
+}
+
+@mixin A2-portrait {
+	height: $A2-long;
+	width: $A2-short;
+}
+
+@mixin A2-landscape {
+	height: $A2-short;
+	width: $A2-long;
+}
+
+@mixin A3-portrait {
+	height: $A3-long;
+	width: $A3-short;
+}
+
+@mixin A3-landscape {
+	height: $A3-short;
+	width: $A3-long;
+}
+
+@mixin A4-portrait {
+	height: $A4-long;
+	width: $A4-short;
+}
+
+@mixin A4-landscape {
+	height: $A4-short;
+	width: $A4-long;
+}
+
+@mixin A5-portrait {
+	height: $A5-long;
+	width: $A5-short;
+}
+
+@mixin A5-landscape {
+	height: $A5-short;
+	width: $A5-long;
+}
+
+@mixin A6-portrait {
+	height: $A6-long;
+	width: $A6-short;
+}
+
+@mixin A6-landscape {
+	height: $A6-short;
+	width: $A6-long;
+}
+
+@mixin letter-portrait {
+	height: $letter-long;
+	width: $letter-short;
+}
+
+@mixin letter-landscape {
+	height: $letter-short;
+	width: $letter-long;
+}
+
+@mixin legal-portrait {
+	height: $legal-long;
+	width: $legal-short;
+}
+
+@mixin legal-landscape {
+	height: $legal-short;
+	width: $legal-long;
+}
+
+$A1-long: 33.1in;
+$A1-short: 23.4in;
+$A2-long: 23.4in;
+$A2-short: 16.5in;
+$A3-long: 16.5in;
+$A3-short: 11.7in;
+$A4-long: 11.7in;
+$A4-short: 8.3in;
+$A5-long: 8.3in;
+$A5-short: 5.8in;
+$A6-long: 5.8in;
+$A6-short: 4.1in;
+$letter-long: 11in;
+$letter-short: 8.5in;
+$legal-long: 14in;
+$legal-short: 8.5in;

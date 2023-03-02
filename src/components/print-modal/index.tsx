@@ -5,6 +5,7 @@
  */
 
 import React, { useContext, useState } from "react";
+import { Link, redirect } from "react-router-dom";
 import Alert from "react-bootstrap/Alert";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
@@ -18,7 +19,6 @@ import { Theme } from "../../enums/theme";
 import { TableRow } from "../../types/table-row";
 
 import "./print-modal.scss";
-import html2canvas from "html2canvas";
 
 enum ExportType {
 	Card = "Card",
@@ -44,40 +44,6 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 
 	const handleExportTypeClick = (selection: ExportType): void =>
 		setSelectedExportType(selection);
-
-	const print = async (): Promise<void> => {
-		try {
-			const printingContent = document.getElementById("print-area");
-
-			if (!printingContent) throw "no printing content";
-
-			html2canvas(printingContent, {
-				backgroundColor: null,
-			}).then((canvas) => {
-				const contentDataURL = canvas.toDataURL("image/png");
-				if (!contentDataURL) throw "no image url";
-
-				const image = new Image();
-				image.src = contentDataURL;
-
-				const printWindow = window.open(
-					"",
-					"",
-					"toolbar=0,scrollbars=0,status=0",
-				);
-
-				if (!printWindow) throw "no printing window opened";
-
-				printWindow?.document.write(image.outerHTML);
-				printWindow?.document.close();
-				printWindow?.focus();
-			});
-		} catch (e) {
-			console.error("Error printing");
-			console.error(e);
-			setPrintError(true);
-		}
-	};
 
 	return (
 		<Modal show={isOpen}>
@@ -181,7 +147,7 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 											: ""
 									}`}
 								>
-									<div className="preview" id="print-area">
+									<div className="preview">
 										<PrintCard key={index} row={row} />
 									</div>
 								</div>
@@ -194,9 +160,9 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 				<Button variant="outline-danger" onClick={toggleIsOpen}>
 					Close
 				</Button>
-				<Button variant="success" onClick={print}>
-					Print
-				</Button>
+				<Link to={"/export"}>
+					<Button variant="success">Print</Button>
+				</Link>
 			</Modal.Footer>
 		</Modal>
 	);

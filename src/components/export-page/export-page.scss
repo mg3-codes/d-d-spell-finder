@@ -1,0 +1,81 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+@use "../../styles/paper-sizes.scss" as paper;
+
+body {
+	background-color: #ffffff;
+}
+
+.export-page {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+	.A1-portrait {
+		@include paper.A1-portrait;
+	}
+
+	.A1-landscape {
+		@include paper.A1-landscape;
+	}
+
+	.A2-portrait {
+		@include paper.A2-portrait;
+	}
+
+	.A2-landscape {
+		@include paper.A2-landscape;
+	}
+
+	.A3-portrait {
+		@include paper.A3-portrait;
+	}
+
+	.A3-landscape {
+		@include paper.A3-landscape;
+	}
+
+	.A4-portrait {
+		@include paper.A4-portrait;
+	}
+
+	.A4-landscape {
+		@include paper.A4-landscape;
+	}
+
+	.A5-portrait {
+		@include paper.A5-portrait;
+	}
+
+	.A5-landscape {
+		@include paper.A5-landscape;
+	}
+
+	.A6-portrait {
+		@include paper.A6-portrait;
+	}
+
+	.A6-landscape {
+		@include paper.A6-landscape;
+	}
+
+	.letter-portrait {
+		@include paper.letter-portrait;
+	}
+
+	.letter-landscape {
+		@include paper.letter-landscape;
+	}
+
+	.landscape-portrait {
+		@include paper.landscape-portrait;
+	}
+
+	.landscape-landscape {
+		@include paper.landscape-landscape;
+	}
+}

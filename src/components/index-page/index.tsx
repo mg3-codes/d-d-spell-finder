@@ -9,10 +9,8 @@ import Button from "react-bootstrap/Button";
 
 const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
 const PrintModal = React.lazy(() => import("../print-modal"));
-const Table = React.lazy(() => import("../../components/table"));
-const SettingsOffcanvas = React.lazy(
-	() => import("../../components/settings-offcanvas"),
-);
+const Table = React.lazy(() => import("../table"));
+const SettingsOffcanvas = React.lazy(() => import("../settings-offcanvas"));
 import { ThemeContext } from "../theme-context-provider";
 
 import { Theme } from "../../enums/theme";
@@ -20,7 +18,7 @@ import { Theme } from "../../enums/theme";
 import "./page.scss";
 import { SelectedRowContext } from "../../selected-row-context-provider";
 
-export const Page = () => {
+export const IndexPage = () => {
 	const { currentTheme } = useContext(ThemeContext);
 	const { selectedRows } = useContext(SelectedRowContext);
 	const [printModalIsOpen, setPrintModalIsOpen] = useState<boolean>(false);
