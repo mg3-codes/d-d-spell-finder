@@ -6,7 +6,7 @@
 
 import React, { useState, createContext } from "react";
 
-import { TableRow } from "../types/table-row";
+import { TableRow } from "../../types/table-row";
 
 export type SelectedRowContext = {
 	selectedRows: TableRow[];

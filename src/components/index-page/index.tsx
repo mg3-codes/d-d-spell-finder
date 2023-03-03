@@ -16,7 +16,7 @@ import { ThemeContext } from "../theme-context-provider";
 import { Theme } from "../../enums/theme";
 
 import "./page.scss";
-import { SelectedRowContext } from "../../selected-row-context-provider";
+import { SelectedRowContext } from "../selected-row-context-provider";
 
 export const IndexPage = () => {
 	const { currentTheme } = useContext(ThemeContext);

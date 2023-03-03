@@ -8,7 +8,7 @@ import React, { useContext, useMemo } from "react";
 import Alert from "react-bootstrap/Alert";
 import { useSearchParams } from "react-router-dom";
 
-import { SelectedRowContext } from "../../selected-row-context-provider";
+import { SelectedRowContext } from "../selected-row-context-provider";
 import { PrintCard } from "../print-card";
 
 import "./export-page.scss";

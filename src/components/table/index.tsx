@@ -24,7 +24,7 @@ import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
 import { ThemeContext } from "../theme-context-provider";
 import { ColumnContext } from "../column-context-provider";
-import { SelectedRowContext } from "../../selected-row-context-provider";
+import { SelectedRowContext } from "../selected-row-context-provider";
 
 import "./table.scss";
 

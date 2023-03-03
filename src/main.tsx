@@ -11,7 +11,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ColumnContextProvider } from "./components/column-context-provider";
 import LoadingSpinner from "./components/loading-spinner";
 import { ThemeContextProvider } from "./components/theme-context-provider";
-import { SelectedRowContextProvider } from "./selected-row-context-provider";
+import { SelectedRowContextProvider } from "./components/selected-row-context-provider";
 
 const Index = React.lazy(() => import("./components/routes"));
 const Export = React.lazy(() => import("./components/routes/export"));
