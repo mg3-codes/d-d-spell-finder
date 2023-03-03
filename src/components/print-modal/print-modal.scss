@@ -9,11 +9,12 @@
 .options {
 	display: flex;
 	justify-content: flex-start;
+	flex-wrap: wrap;
 	margin-bottom: 24px;
 }
 
 .option {
-	margin: 0 6px;
+	margin: 6px;
 
 	label {
 		margin-bottom: 4px;

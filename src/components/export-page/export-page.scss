@@ -6,14 +6,26 @@
 
 @use "../../styles/paper-sizes.scss" as paper;
 
-body {
+[data-bs-theme="dark"]body {
 	background-color: #ffffff;
 }
 
 .export-page {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
+	.page {
+		background-color: #ffffff;
+		padding: 4px;
+	}
+
+	.page-row {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-bottom: 4px;
+	}
+
+	.print-card {
+		zoom: 160%;
+	}
 
 	.A1-portrait {
 		@include paper.A1-portrait;
@@ -71,11 +83,11 @@ body {
 		@include paper.letter-landscape;
 	}
 
-	.landscape-portrait {
-		@include paper.landscape-portrait;
+	.legal-portrait {
+		@include paper.legal-portrait;
 	}
 
-	.landscape-landscape {
-		@include paper.landscape-landscape;
+	.legal-landscape {
+		@include paper.legal-landscape;
 	}
 }

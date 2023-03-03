@@ -5,7 +5,7 @@
  */
 
 import React, { useContext, useState } from "react";
-import { Link, redirect } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Alert from "react-bootstrap/Alert";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
@@ -16,6 +16,7 @@ import { PrintCard } from "../print-card";
 import { ThemeContext } from "../theme-context-provider";
 
 import { Theme } from "../../enums/theme";
+import { PageSize } from "../../enums/page-size";
 import { TableRow } from "../../types/table-row";
 
 import "./print-modal.scss";
@@ -25,6 +26,11 @@ enum ExportType {
 	Spreadsheet = "Spreadsheet",
 }
 
+enum Orientation {
+	Portrait = "Portrait",
+	Landscape = "Landscape",
+}
+
 export interface IPrintModalProps {
 	isOpen: boolean;
 	toggleIsOpen: () => void;
@@ -32,9 +38,16 @@ export interface IPrintModalProps {
 }
 
 const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
-	const [selectedNumberPerRow, setSelectedNumberPerRow] = useState<number>(1);
 	const [selectedExportType, setSelectedExportType] = useState<ExportType>(
 		ExportType.Card,
+	);
+	const [selectedNumberPerRow, setSelectedNumberPerRow] = useState<number>(3);
+	const [selectedRowsPerPage, setSelectedRowsPerPage] = useState<number>(2);
+	const [selectedPageSize, setSelectedPageSize] = useState<PageSize>(
+		PageSize.Letter,
+	);
+	const [selectedOrientation, setSelectedOrientation] = useState<Orientation>(
+		Orientation.Landscape,
 	);
 	const [printError, setPrintError] = useState<boolean>(false);
 	const { currentTheme } = useContext(ThemeContext);
@@ -44,6 +57,15 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 
 	const handleExportTypeClick = (selection: ExportType): void =>
 		setSelectedExportType(selection);
+
+	const handleRowsPerPageClick = (selection: number): void =>
+		setSelectedRowsPerPage(selection);
+
+	const handlePageSizeClick = (selection: PageSize): void =>
+		setSelectedPageSize(selection);
+
+	const handleOrientationClick = (selection: Orientation): void =>
+		setSelectedOrientation(selection);
 
 	return (
 		<Modal show={isOpen}>
@@ -135,6 +157,161 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 							</Dropdown.Menu>
 						</Dropdown>
 					</div>
+					<div className="option">
+						<Dropdown>
+							<Dropdown.Toggle
+								disabled={
+									selectedExportType !== ExportType.Card
+								}
+							>
+								Rows Per Page
+							</Dropdown.Toggle>
+							<Dropdown.Menu>
+								<Dropdown.Item
+									onClick={() => handleRowsPerPageClick(1)}
+									active={selectedRowsPerPage === 1}
+								>
+									1
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() => handleRowsPerPageClick(2)}
+									active={selectedRowsPerPage === 2}
+								>
+									2
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() => handleRowsPerPageClick(3)}
+									active={selectedRowsPerPage === 3}
+								>
+									3
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() => handleRowsPerPageClick(4)}
+									active={selectedRowsPerPage === 4}
+								>
+									4
+								</Dropdown.Item>
+							</Dropdown.Menu>
+						</Dropdown>
+					</div>
+					<div className="option">
+						<Dropdown>
+							<Dropdown.Toggle
+								disabled={
+									selectedExportType !== ExportType.Card
+								}
+							>
+								Page Size
+							</Dropdown.Toggle>
+							<Dropdown.Menu>
+								<Dropdown.Item
+									onClick={() =>
+										handlePageSizeClick(PageSize.Letter)
+									}
+									active={
+										selectedPageSize === PageSize.Letter
+									}
+								>
+									{PageSize.Letter}
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() =>
+										handlePageSizeClick(PageSize.Legal)
+									}
+									active={selectedPageSize === PageSize.Legal}
+								>
+									{PageSize.Legal}
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() =>
+										handlePageSizeClick(PageSize.A1)
+									}
+									active={selectedPageSize === PageSize.A1}
+								>
+									{PageSize.A1}
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() =>
+										handlePageSizeClick(PageSize.A2)
+									}
+									active={selectedPageSize === PageSize.A2}
+								>
+									{PageSize.A2}
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() =>
+										handlePageSizeClick(PageSize.A3)
+									}
+									active={selectedPageSize === PageSize.A3}
+								>
+									{PageSize.A3}
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() =>
+										handlePageSizeClick(PageSize.A4)
+									}
+									active={selectedPageSize === PageSize.A4}
+								>
+									{PageSize.A4}
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() =>
+										handlePageSizeClick(PageSize.A5)
+									}
+									active={selectedPageSize === PageSize.A5}
+								>
+									{PageSize.A5}
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() =>
+										handlePageSizeClick(PageSize.A6)
+									}
+									active={selectedPageSize === PageSize.A6}
+								>
+									{PageSize.A6}
+								</Dropdown.Item>
+							</Dropdown.Menu>
+						</Dropdown>
+					</div>
+					<div className="option">
+						<Dropdown>
+							<Dropdown.Toggle
+								disabled={
+									selectedExportType !== ExportType.Card
+								}
+							>
+								Orientation
+							</Dropdown.Toggle>
+							<Dropdown.Menu>
+								<Dropdown.Item
+									onClick={() =>
+										handleOrientationClick(
+											Orientation.Landscape,
+										)
+									}
+									active={
+										selectedOrientation ===
+										Orientation.Landscape
+									}
+								>
+									{Orientation.Landscape}
+								</Dropdown.Item>
+								<Dropdown.Item
+									onClick={() =>
+										handleOrientationClick(
+											Orientation.Portrait,
+										)
+									}
+									active={
+										selectedOrientation ===
+										Orientation.Portrait
+									}
+								>
+									{Orientation.Portrait}
+								</Dropdown.Item>
+							</Dropdown.Menu>
+						</Dropdown>
+					</div>
 				</div>
 				{rows?.length ? (
 					<Carousel pause="hover">
@@ -157,10 +334,12 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 				) : null}
 			</Modal.Body>
 			<Modal.Footer>
-				<Button variant="outline-danger" onClick={toggleIsOpen}>
+				<Button variant="outline-secondary" onClick={toggleIsOpen}>
 					Close
 				</Button>
-				<Link to={"/export"}>
+				<Link
+					to={`/export?numPerRow=${selectedNumberPerRow}&rowsPerPage=${selectedRowsPerPage}&paperSize=${selectedPageSize.toLowerCase()}&orientation=${selectedOrientation.toLowerCase()}`}
+				>
 					<Button variant="success">Print</Button>
 				</Link>
 			</Modal.Footer>
