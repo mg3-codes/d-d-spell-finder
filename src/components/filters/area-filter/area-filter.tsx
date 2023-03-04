@@ -58,6 +58,37 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 		props.filterChangedCallback();
 	}, [selectedDistances, selectedShapes]);
 
+	const handleDistanceCheck = (x: Distance): void =>
+		numberBasedFilterHandleCheck(
+			selectedDistances,
+			setSelectedDistances,
+			x,
+		);
+
+	const handleShapeCheck = (x: Shape): void =>
+		numberBasedFilterHandleCheck(selectedShapes, setSelectedShapes, x);
+
+	const isDistanceChecked = (x: Distance): boolean | undefined =>
+		numberBasedFilterIsChecked(selectedDistances, x);
+
+	const isShapeChecked = (x: Shape): boolean | undefined =>
+		numberBasedFilterIsChecked(selectedShapes, x);
+
+	const isUnknownDisabled = (): boolean => {
+		if (selectedShapes.length !== shapeFilterDisabledArray.length) {
+			if (isDistanceChecked(Distance.Unknown))
+				handleDistanceCheck(Distance.Unknown);
+			return true;
+		}
+		return false;
+	};
+
+	const onOverlayToggle = (nextShow: boolean): void => {
+		if (isUnknownDisabled() && nextShow) {
+			setShowOverlay(true);
+		} else setShowOverlay(false);
+	};
+
 	useImperativeHandle(ref, () => {
 		return {
 			doesFilterPass(props: NumberBasedFilterProps) {
@@ -107,37 +138,6 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 			},
 		};
 	});
-
-	const handleDistanceCheck = (x: Distance): void =>
-		numberBasedFilterHandleCheck(
-			selectedDistances,
-			setSelectedDistances,
-			x,
-		);
-
-	const handleShapeCheck = (x: Shape): void =>
-		numberBasedFilterHandleCheck(selectedShapes, setSelectedShapes, x);
-
-	const isDistanceChecked = (x: Distance): boolean | undefined =>
-		numberBasedFilterIsChecked(selectedDistances, x);
-
-	const isShapeChecked = (x: Shape): boolean | undefined =>
-		numberBasedFilterIsChecked(selectedShapes, x);
-
-	const isUnknownDisabled = (): boolean => {
-		if (selectedShapes.length !== shapeFilterDisabledArray.length) {
-			if (isDistanceChecked(Distance.Unknown))
-				handleDistanceCheck(Distance.Unknown);
-			return true;
-		}
-		return false;
-	};
-
-	const onOverlayToggle = (nextShow: boolean): void => {
-		if (isUnknownDisabled() && nextShow) {
-			setShowOverlay(true);
-		} else setShowOverlay(false);
-	};
 
 	return (
 		<div className="area-filter">
