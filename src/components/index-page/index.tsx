@@ -40,30 +40,32 @@ export const IndexPage = () => {
 		setPrintModalIsOpen(!printModalIsOpen);
 
 	return (
-		<div className="page">
-			<Suspense fallback={<LoadingSpinner />}>
-				<div className="heading">
-					<h1>D&D Spell Details</h1>
-					<div>
-						<Button
-							variant="outline-primary"
-							className="printer-button"
-							onClick={togglePrintModalIsOpen}
-						>
-							<i className="bi bi-printer" />
-							&nbsp; Print
-						</Button>
-						<PrintModal
-							isOpen={printModalIsOpen}
-							toggleIsOpen={togglePrintModalIsOpen}
-							rows={selectedRows}
-						/>
-						<SettingsOffcanvas />
+		<div className="gutter-container">
+			<div className="page">
+				<Suspense fallback={<LoadingSpinner />}>
+					<div className="heading">
+						<h1>D&D Spell Details</h1>
+						<div>
+							<Button
+								variant="outline-primary"
+								className="printer-button"
+								onClick={togglePrintModalIsOpen}
+							>
+								<i className="bi bi-printer" />
+								&nbsp; Print
+							</Button>
+							<PrintModal
+								isOpen={printModalIsOpen}
+								toggleIsOpen={togglePrintModalIsOpen}
+								rows={selectedRows}
+							/>
+							<SettingsOffcanvas />
+						</div>
 					</div>
-				</div>
-				<Table />
+					<Table />
 					<Footer />
-			</Suspense>
+				</Suspense>
+			</div>
 		</div>
 	);
 };

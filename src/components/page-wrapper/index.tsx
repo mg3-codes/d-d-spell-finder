@@ -13,11 +13,7 @@ export interface IPageWrapperProps {
 }
 
 const PageWrapper = ({ children }: IPageWrapperProps): JSX.Element => {
-	return (
-		<div className="app">
-			<div className="gutter-container">{children}</div>
-		</div>
-	);
+	return <div className="app">{children}</div>;
 };
 
 export default PageWrapper;

@@ -6,11 +6,9 @@
 
 @use "../../styles/paper-sizes.scss" as paper;
 
-[data-bs-theme="dark"]body {
-	background-color: #ffffff;
-}
-
 .export-page {
+	background-color: #ffffff;
+
 	.page {
 		background-color: #ffffff;
 		padding: 4px;
