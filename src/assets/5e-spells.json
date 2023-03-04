@@ -29,9 +29,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				6
-			],
+			"effect": [6],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -89,9 +87,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -130,9 +126,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -151,9 +145,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -191,9 +183,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -231,9 +221,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -290,9 +278,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -311,9 +297,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -352,9 +336,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -392,9 +374,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -432,9 +412,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -453,9 +431,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -494,9 +470,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -516,9 +490,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -556,9 +528,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -634,9 +604,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -694,9 +662,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -753,9 +719,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -793,9 +757,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -871,9 +833,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				16
-			],
+			"effect": [16],
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -949,9 +909,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -970,9 +928,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1030,9 +986,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				11
-			],
+			"effect": [11],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1051,9 +1005,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1072,9 +1024,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1132,9 +1082,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				17
-			],
+			"effect": [17],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1153,9 +1101,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -1193,9 +1139,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1234,9 +1178,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				3
-			],
+			"effect": [3],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1255,9 +1197,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				24
-			],
+			"effect": [24],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1276,9 +1216,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1297,9 +1235,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				27
-			],
+			"effect": [27],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -1319,9 +1255,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1340,9 +1274,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1362,9 +1294,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1384,9 +1314,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": true,
 			"concentration": true,
 			"verbal": true,
@@ -1406,9 +1334,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": true,
 			"concentration": true,
 			"verbal": true,
@@ -1427,9 +1353,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				26
-			],
+			"effect": [26],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1468,9 +1392,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 4,
-			"effect": [
-				12
-			],
+			"effect": [12],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1547,9 +1469,7 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 5,
-			"effect": [
-				25
-			],
+			"effect": [25],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1568,9 +1488,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				20
-			],
+			"effect": [20],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1590,9 +1508,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				11
-			],
+			"effect": [11],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1611,9 +1527,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1632,9 +1546,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				33
-			],
+			"effect": [33],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1653,9 +1565,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -1674,9 +1584,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				20
-			],
+			"effect": [20],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -1696,9 +1604,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1717,9 +1623,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1738,9 +1642,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1760,9 +1662,7 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				24
-			],
+			"effect": [24],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1819,9 +1719,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -1859,9 +1757,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1899,9 +1795,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				24
-			],
+			"effect": [24],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -1959,9 +1853,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -1980,9 +1872,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": true,
 			"concentration": false,
 			"verbal": false,
@@ -2039,9 +1929,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				20
-			],
+			"effect": [20],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2060,9 +1948,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2081,9 +1967,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2141,9 +2025,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2163,9 +2045,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2203,9 +2083,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2243,9 +2121,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				32
-			],
+			"effect": [32],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2264,9 +2140,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2286,9 +2160,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2308,9 +2180,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				30
-			],
+			"effect": [30],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2329,9 +2199,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				25
-			],
+			"effect": [25],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -2350,9 +2218,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2391,9 +2257,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				24
-			],
+			"effect": [24],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2412,9 +2276,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				20
-			],
+			"effect": [20],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2472,9 +2334,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2589,9 +2449,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2610,9 +2468,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				26
-			],
+			"effect": [26],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2631,9 +2487,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2652,9 +2506,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2673,9 +2525,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				12
-			],
+			"effect": [12],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2694,9 +2544,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				16
-			],
+			"effect": [16],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -2715,9 +2563,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2736,9 +2582,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": true,
 			"concentration": true,
 			"verbal": false,
@@ -2757,9 +2601,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				3
-			],
+			"effect": [3],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2778,9 +2620,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				12
-			],
+			"effect": [12],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2819,9 +2659,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2860,9 +2698,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2900,9 +2736,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2922,9 +2756,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -2943,9 +2775,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -2964,9 +2794,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3025,9 +2853,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3046,9 +2872,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3067,9 +2891,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3088,9 +2910,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3109,9 +2929,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3130,9 +2948,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3190,9 +3006,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3211,9 +3025,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3232,9 +3044,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				32
-			],
+			"effect": [32],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -3253,9 +3063,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				12
-			],
+			"effect": [12],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3274,9 +3082,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 5,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3296,9 +3102,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3336,9 +3140,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				22
-			],
+			"effect": [22],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3357,9 +3159,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				14
-			],
+			"effect": [14],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3378,9 +3178,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				19
-			],
+			"effect": [19],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3399,9 +3197,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				35
-			],
+			"effect": [35],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -3420,9 +3216,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3441,9 +3235,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3462,9 +3254,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				20
-			],
+			"effect": [20],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3483,9 +3273,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -3504,9 +3292,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3525,9 +3311,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -3623,9 +3407,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				12
-			],
+			"effect": [12],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3644,9 +3426,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				29
-			],
+			"effect": [29],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3685,9 +3465,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				12
-			],
+			"effect": [12],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3706,9 +3484,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3747,9 +3523,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3768,9 +3542,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3790,9 +3562,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				3
-			],
+			"effect": [3],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3811,9 +3581,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				11
-			],
+			"effect": [11],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -3832,9 +3600,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3872,9 +3638,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -3933,9 +3697,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": true,
 			"concentration": true,
 			"verbal": true,
@@ -3954,9 +3716,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": true,
 			"concentration": true,
 			"verbal": true,
@@ -3995,9 +3755,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4017,9 +3775,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4057,9 +3813,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4078,9 +3832,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4118,9 +3870,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4140,9 +3890,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				10
-			],
+			"effect": [10],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4162,9 +3910,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				25
-			],
+			"effect": [25],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4183,9 +3929,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				14
-			],
+			"effect": [14],
 			"ritual": true,
 			"concentration": true,
 			"verbal": false,
@@ -4205,9 +3949,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4226,9 +3968,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4248,9 +3988,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4269,9 +4007,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4290,9 +4026,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				11
-			],
+			"effect": [11],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4330,9 +4064,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4371,9 +4103,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -4392,9 +4122,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4413,9 +4141,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4435,9 +4161,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				1
-			],
+			"effect": [1],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4456,9 +4180,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				21
-			],
+			"effect": [21],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -4477,9 +4199,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4519,9 +4239,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4540,9 +4258,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4580,9 +4296,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 4,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4621,9 +4335,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4643,9 +4355,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				17
-			],
+			"effect": [17],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4664,9 +4374,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				3
-			],
+			"effect": [3],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -4724,9 +4432,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				20
-			],
+			"effect": [20],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4745,9 +4451,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -4766,9 +4470,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4806,9 +4508,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4848,9 +4548,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -4869,9 +4567,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4890,9 +4586,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -4912,9 +4606,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -4992,9 +4684,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5014,9 +4704,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5035,9 +4723,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5056,9 +4742,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				20
-			],
+			"effect": [20],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -5096,9 +4780,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5117,9 +4799,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				12
-			],
+			"effect": [12],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5138,9 +4818,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				20
-			],
+			"effect": [20],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -5159,9 +4837,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5180,9 +4856,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5221,9 +4895,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5242,9 +4914,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5263,9 +4933,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5285,9 +4953,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				24
-			],
+			"effect": [24],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5307,9 +4973,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5328,9 +4992,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5349,9 +5011,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5409,9 +5069,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5430,9 +5088,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5451,9 +5107,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5472,9 +5126,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5493,9 +5145,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5553,9 +5203,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -5574,9 +5222,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5595,9 +5241,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5635,9 +5279,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				3
-			],
+			"effect": [3],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5656,9 +5298,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5677,9 +5317,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -5698,9 +5336,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				20
-			],
+			"effect": [20],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -5738,9 +5374,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5760,9 +5394,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5782,9 +5414,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5803,9 +5433,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				2
-			],
+			"effect": [2],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5863,9 +5491,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -5884,9 +5510,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5906,9 +5530,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5927,9 +5549,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5948,9 +5568,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -5988,9 +5606,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6009,9 +5625,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				29
-			],
+			"effect": [29],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6030,9 +5644,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				16
-			],
+			"effect": [16],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -6051,9 +5663,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6112,9 +5722,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6152,9 +5760,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6192,9 +5798,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6213,9 +5817,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6234,9 +5836,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6255,9 +5855,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6296,9 +5894,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				19
-			],
+			"effect": [19],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6336,9 +5932,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6358,9 +5952,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6399,9 +5991,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6420,9 +6010,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6461,9 +6049,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6482,9 +6068,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6522,9 +6106,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6544,9 +6126,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6566,9 +6146,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6587,9 +6165,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6666,9 +6242,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6687,9 +6261,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6728,9 +6300,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6749,9 +6319,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6770,9 +6338,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6791,9 +6357,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6852,9 +6416,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 5,
-			"effect": [
-				25
-			],
+			"effect": [25],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6873,9 +6435,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6896,9 +6456,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -6936,9 +6494,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -6996,9 +6552,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7037,9 +6591,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				16
-			],
+			"effect": [16],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -7058,9 +6610,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				15
-			],
+			"effect": [15],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -7099,9 +6649,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7121,9 +6669,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				1
-			],
+			"effect": [1],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7142,9 +6688,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -7163,9 +6707,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				3
-			],
+			"effect": [3],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7185,9 +6727,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 5,
-			"effect": [
-				24
-			],
+			"effect": [24],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7207,9 +6747,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7228,9 +6766,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7289,9 +6825,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7310,9 +6844,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7331,9 +6863,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7371,9 +6901,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				29
-			],
+			"effect": [29],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7412,9 +6940,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7433,9 +6959,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7455,9 +6979,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7476,9 +6998,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				22
-			],
+			"effect": [22],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7535,9 +7055,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7576,9 +7094,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7617,9 +7133,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7638,9 +7152,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				12
-			],
+			"effect": [12],
 			"ritual": false,
 			"concentration": true,
 			"verbal": false,
@@ -7659,9 +7171,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7699,9 +7209,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7720,9 +7228,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7741,9 +7247,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7762,9 +7266,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -7783,9 +7285,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7804,9 +7304,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7825,9 +7323,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -7846,9 +7342,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7886,9 +7380,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7907,9 +7399,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7948,9 +7438,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -7969,9 +7457,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -7990,9 +7476,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				29
-			],
+			"effect": [29],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8011,9 +7495,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				2
-			],
+			"effect": [2],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8052,9 +7534,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				20
-			],
+			"effect": [20],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8073,9 +7553,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8113,9 +7591,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8154,9 +7630,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				29
-			],
+			"effect": [29],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8253,9 +7727,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8274,9 +7746,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8295,9 +7765,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8316,9 +7784,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8356,9 +7822,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -8378,9 +7842,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				11
-			],
+			"effect": [11],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8399,9 +7861,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				30
-			],
+			"effect": [30],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8420,9 +7880,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8441,9 +7899,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				23
-			],
+			"effect": [23],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8503,9 +7959,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				21
-			],
+			"effect": [21],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8545,9 +7999,7 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8585,9 +8037,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				3
-			],
+			"effect": [3],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8606,9 +8056,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8627,9 +8075,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": true,
 			"concentration": false,
 			"verbal": true,
@@ -8687,9 +8133,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				24
-			],
+			"effect": [24],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8728,9 +8172,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8749,9 +8191,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8789,9 +8229,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8810,9 +8248,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8831,9 +8267,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8852,9 +8286,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8873,9 +8305,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				32
-			],
+			"effect": [32],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8895,9 +8325,7 @@
 			"areaShape": 4,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8916,9 +8344,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8937,9 +8363,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -8958,9 +8382,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -8999,9 +8421,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9020,9 +8440,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9041,9 +8459,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				29
-			],
+			"effect": [29],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9062,9 +8478,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				13
-			],
+			"effect": [13],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9121,9 +8535,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9142,9 +8554,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				29
-			],
+			"effect": [29],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9163,9 +8573,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				34
-			],
+			"effect": [34],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9223,9 +8631,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				10
-			],
+			"effect": [10],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9244,9 +8650,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9265,9 +8669,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9325,9 +8727,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9347,9 +8747,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				33
-			],
+			"effect": [33],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9369,9 +8767,7 @@
 			"areaShape": 1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9390,9 +8786,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				33
-			],
+			"effect": [33],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9430,9 +8824,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				2
-			],
+			"effect": [2],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9451,9 +8843,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				11
-			],
+			"effect": [11],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9492,9 +8882,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9513,9 +8901,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9534,9 +8920,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9556,9 +8940,7 @@
 			"areaShape": 3,
 			"attack": 0,
 			"save": 3,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9577,9 +8959,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				12
-			],
+			"effect": [12],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9598,9 +8978,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				12
-			],
+			"effect": [12],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9639,9 +9017,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				29
-			],
+			"effect": [29],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9660,9 +9036,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 1,
-			"effect": [
-				9
-			],
+			"effect": [9],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9681,9 +9055,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9742,9 +9114,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				26
-			],
+			"effect": [26],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9764,9 +9134,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9786,9 +9154,7 @@
 			"areaShape": 0,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				17
-			],
+			"effect": [17],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9807,9 +9173,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9829,9 +9193,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9870,9 +9232,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": false,
@@ -9891,9 +9251,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				5
-			],
+			"effect": [5],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -9950,9 +9308,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				27
-			],
+			"effect": [27],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -9972,9 +9328,7 @@
 			"areaShape": 2,
 			"attack": 0,
 			"save": 2,
-			"effect": [
-				3
-			],
+			"effect": [3],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -10052,9 +9406,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				2
-			],
+			"effect": [2],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -10073,9 +9425,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				31
-			],
+			"effect": [31],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10094,9 +9444,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10115,9 +9463,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				28
-			],
+			"effect": [28],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10136,9 +9482,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -10177,9 +9521,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				7
-			],
+			"effect": [7],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10217,9 +9559,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				29
-			],
+			"effect": [29],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10257,9 +9597,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10278,9 +9616,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -10299,9 +9635,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				25
-			],
+			"effect": [25],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10320,9 +9654,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				32
-			],
+			"effect": [32],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -10341,9 +9673,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				3
-			],
+			"effect": [3],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10362,9 +9692,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -10403,9 +9731,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10424,9 +9750,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10503,9 +9827,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				26
-			],
+			"effect": [26],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -10562,9 +9884,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				8
-			],
+			"effect": [8],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10583,9 +9903,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 6,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": true,
 			"verbal": true,
@@ -10604,9 +9922,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				18
-			],
+			"effect": [18],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
@@ -10645,9 +9961,7 @@
 			"area": -1,
 			"attack": 0,
 			"save": 0,
-			"effect": [
-				4
-			],
+			"effect": [4],
 			"ritual": false,
 			"concentration": false,
 			"verbal": true,
