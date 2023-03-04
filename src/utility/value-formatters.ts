@@ -32,11 +32,11 @@ export const areaValueFormatter = (
 export const attackValueFormatter = (
 	params: ValueFormatterParams<number>,
 ): string =>
-	params.value == 0 ? "" : mapNumberToAttackDisplayName(params.value);
+	params.value === 0 ? "" : mapNumberToAttackDisplayName(params.value);
 
 export const booleanValueFormatter = (
 	params: ValueFormatterParams<boolean>,
-): string => (params.value == true ? "✅" : "❌");
+): string => (params.value === true ? "✅" : "❌");
 
 export const castingTimeValueFormatter = (
 	params: ValueFormatterParams<Spell>,
@@ -73,7 +73,7 @@ export const rangeValueFormatter = (
 export const savingThrowValueFormatter = (
 	params: ValueFormatterParams<number>,
 ): string =>
-	params.value == 0 ? "" : mapNumberToSavingThrowDisplayName(params.value);
+	params.value === 0 ? "" : mapNumberToSavingThrowDisplayName(params.value);
 
 export const schoolValueFormatter = (
 	params: ValueFormatterParams<Spell>,
