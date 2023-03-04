@@ -59,31 +59,34 @@ const BooleanFilter = forwardRef(
 		};
 
 		useImperativeHandle(ref, () => {
+			const doesFilterPass = (props: BooleanBasedFilterProps) => {
+				return (
+					mapStateToBoolean(selectedState) ===
+					props?.data[filterProps?.spellPropertyName]
+				);
+			};
+
+			const isFilterActive = () => {
+				return selectedState !== BooleanBasedFilterState.All;
+			};
+
+			const getModel = () => {
+				if (!isFilterActive()) {
+					return null;
+				}
+
+				return { value: selectedState };
+			};
+
+			const setModel = (model: BooleanBasedFilterSetModel) => {
+				setSelectedState(model?.value ?? BooleanBasedFilterState.All);
+			};
+
 			return {
-				doesFilterPass(props: BooleanBasedFilterProps) {
-					return (
-						mapStateToBoolean(selectedState) ===
-						props?.data[filterProps?.spellPropertyName]
-					);
-				},
-
-				isFilterActive() {
-					return selectedState !== BooleanBasedFilterState.All;
-				},
-
-				getModel() {
-					if (!this.isFilterActive()) {
-						return null;
-					}
-
-					return { value: selectedState };
-				},
-
-				setModel(model: BooleanBasedFilterSetModel) {
-					setSelectedState(
-						model?.value ?? BooleanBasedFilterState.All,
-					);
-				},
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
 			};
 		});
 

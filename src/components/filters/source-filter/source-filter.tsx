@@ -40,32 +40,37 @@ const SourceFilter = forwardRef(
 		}, [selectedSources]);
 
 		useImperativeHandle(ref, () => {
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.source,
+					selectedSources,
+				);
+			};
+
+			const isFilterActive = () => {
+				return numberBasedFilterIsFilterActive(
+					selectedSources.length,
+					filterDisabledArray.length,
+				);
+			};
+
+			const getModel = () => {
+				if (!isFilterActive()) {
+					return null;
+				}
+
+				return { value: selectedSources };
+			};
+
+			const setModel = (model: NumberBasedFilterSetModel) => {
+				setSelectedSources(model?.value ?? []);
+			};
+
 			return {
-				doesFilterPass(props: NumberBasedFilterProps) {
-					return numberBasedFilterDoesFilterPass(
-						props?.data?.source,
-						selectedSources,
-					);
-				},
-
-				isFilterActive() {
-					return numberBasedFilterIsFilterActive(
-						selectedSources.length,
-						filterDisabledArray.length,
-					);
-				},
-
-				getModel() {
-					if (!this.isFilterActive()) {
-						return null;
-					}
-
-					return { value: selectedSources };
-				},
-
-				setModel(model: NumberBasedFilterSetModel) {
-					setSelectedSources(model?.value ?? []);
-				},
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
 			};
 		});
 

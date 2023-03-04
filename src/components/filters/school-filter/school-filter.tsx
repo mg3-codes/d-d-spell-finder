@@ -40,32 +40,37 @@ const SchoolFilter = forwardRef(
 		}, [selectedSchools]);
 
 		useImperativeHandle(ref, () => {
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.school,
+					selectedSchools,
+				);
+			};
+
+			const isFilterActive = () => {
+				return numberBasedFilterIsFilterActive(
+					selectedSchools.length,
+					filterDisabledArray.length,
+				);
+			};
+
+			const getModel = () => {
+				if (!isFilterActive()) {
+					return null;
+				}
+
+				return { value: selectedSchools };
+			};
+
+			const setModel = (model: NumberBasedFilterSetModel) => {
+				setSelectedSchools(model?.value ?? []);
+			};
+
 			return {
-				doesFilterPass(props: NumberBasedFilterProps) {
-					return numberBasedFilterDoesFilterPass(
-						props?.data?.school,
-						selectedSchools,
-					);
-				},
-
-				isFilterActive() {
-					return numberBasedFilterIsFilterActive(
-						selectedSchools.length,
-						filterDisabledArray.length,
-					);
-				},
-
-				getModel() {
-					if (!this.isFilterActive()) {
-						return null;
-					}
-
-					return { value: selectedSchools };
-				},
-
-				setModel(model: NumberBasedFilterSetModel) {
-					setSelectedSchools(model?.value ?? []);
-				},
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
 			};
 		});
 

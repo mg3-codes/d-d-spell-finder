@@ -44,35 +44,35 @@ const DamageTypeFilter = forwardRef(
 		}, [selectedDamageTypes]);
 
 		useImperativeHandle(ref, () => {
-			return {
-				doesFilterPass(props: NumberBasedFilterProps) {
-					return numberBasedFilterDoesFilterPass(
-						props?.data?.damage,
-						selectedDamageTypes,
-					);
-				},
-
-				isFilterActive() {
-					return numberBasedFilterIsFilterActive(
-						selectedDamageTypes.length,
-						damageTypeFilterDisabledArray.length,
-					);
-				},
-
-				getModel() {
-					if (!this.isFilterActive()) {
-						return null;
-					}
-
-					return {
-						value: selectedDamageTypes,
-					};
-				},
-
-				setModel(model: NumberBasedFilterSetModel) {
-					setSelectedDamageTypes(model?.value ?? []);
-				},
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.damage,
+					selectedDamageTypes,
+				);
 			};
+
+			const isFilterActive = () => {
+				return numberBasedFilterIsFilterActive(
+					selectedDamageTypes.length,
+					damageTypeFilterDisabledArray.length,
+				);
+			};
+
+			const getModel = () => {
+				if (!isFilterActive()) {
+					return null;
+				}
+
+				return {
+					value: selectedDamageTypes,
+				};
+			};
+
+			const setModel = (model: NumberBasedFilterSetModel) => {
+				setSelectedDamageTypes(model?.value ?? []);
+			};
+
+			return { doesFilterPass, isFilterActive, getModel, setModel };
 		});
 
 		const handleCheck = (x: DamageType): void =>

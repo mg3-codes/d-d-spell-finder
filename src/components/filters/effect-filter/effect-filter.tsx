@@ -41,46 +41,48 @@ const EffectFilter = forwardRef(
 		}, [selectedEffectTypes]);
 
 		useImperativeHandle(ref, () => {
-			return {
-				doesFilterPass(props: NumberBasedFilterProps) {
-					if (
-						!props?.data?.effect ||
-						props?.data?.effect?.length === 0
-					)
-						return false;
-
-					for (const value of props.data.effect) {
-						const passes = numberBasedFilterDoesFilterPass(
-							value,
-							selectedEffectTypes,
-						);
-
-						if (passes) return true;
-					}
-
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
+				if (!props?.data?.effect || props?.data?.effect?.length === 0)
 					return false;
-				},
 
-				isFilterActive() {
-					return numberBasedFilterIsFilterActive(
-						selectedEffectTypes.length,
-						effectFilterDisabledArray.length,
+				for (const value of props.data.effect) {
+					const passes = numberBasedFilterDoesFilterPass(
+						value,
+						selectedEffectTypes,
 					);
-				},
 
-				getModel() {
-					if (!this.isFilterActive()) {
-						return null;
-					}
+					if (passes) return true;
+				}
 
-					return {
-						value: selectedEffectTypes,
-					};
-				},
+				return false;
+			};
 
-				setModel(model: NumberBasedFilterSetModel) {
-					setSelectedEffectTypes(model?.value ?? []);
-				},
+			const isFilterActive = () => {
+				return numberBasedFilterIsFilterActive(
+					selectedEffectTypes.length,
+					effectFilterDisabledArray.length,
+				);
+			};
+
+			const getModel = () => {
+				if (!isFilterActive()) {
+					return null;
+				}
+
+				return {
+					value: selectedEffectTypes,
+				};
+			};
+
+			const setModel = (model: NumberBasedFilterSetModel) => {
+				setSelectedEffectTypes(model?.value ?? []);
+			};
+
+			return {
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
 			};
 		});
 

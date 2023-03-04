@@ -43,32 +43,37 @@ const DurationFilter = forwardRef(
 		}, [selectedDurations]);
 
 		useImperativeHandle(ref, () => {
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.duration,
+					selectedDurations,
+				);
+			};
+
+			const isFilterActive = () => {
+				return numberBasedFilterIsFilterActive(
+					selectedDurations.length,
+					filterDisabledArray.length,
+				);
+			};
+
+			const getModel = () => {
+				if (!isFilterActive()) {
+					return null;
+				}
+
+				return { value: selectedDurations };
+			};
+
+			const setModel = (model: NumberBasedFilterSetModel) => {
+				setSelectedDurations(model?.value ?? []);
+			};
+
 			return {
-				doesFilterPass(props: NumberBasedFilterProps) {
-					return numberBasedFilterDoesFilterPass(
-						props?.data?.duration,
-						selectedDurations,
-					);
-				},
-
-				isFilterActive() {
-					return numberBasedFilterIsFilterActive(
-						selectedDurations.length,
-						filterDisabledArray.length,
-					);
-				},
-
-				getModel() {
-					if (!this.isFilterActive()) {
-						return null;
-					}
-
-					return { value: selectedDurations };
-				},
-
-				setModel(model: NumberBasedFilterSetModel) {
-					setSelectedDurations(model?.value ?? []);
-				},
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
 			};
 		});
 

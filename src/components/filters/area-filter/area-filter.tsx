@@ -90,52 +90,57 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 	};
 
 	useImperativeHandle(ref, () => {
-		return {
-			doesFilterPass(props: NumberBasedFilterProps) {
-				const distanceResult = numberBasedFilterDoesFilterPass(
-					props?.data?.area?.distance,
-					selectedDistances,
-				);
-				const shapeResult = numberBasedFilterDoesFilterPass(
-					props?.data?.area?.shape,
-					selectedShapes,
-				);
+		const doesFilterPass = (props: NumberBasedFilterProps) => {
+			const distanceResult = numberBasedFilterDoesFilterPass(
+				props?.data?.area?.distance,
+				selectedDistances,
+			);
+			const shapeResult = numberBasedFilterDoesFilterPass(
+				props?.data?.area?.shape,
+				selectedShapes,
+			);
 
-				if (
-					props?.data?.area?.distance === Distance.Unknown &&
-					isDistanceChecked(Distance.Unknown) &&
-					selectedShapes.length === shapeFilterDisabledArray.length
+			if (
+				props?.data?.area?.distance === Distance.Unknown &&
+				isDistanceChecked(Distance.Unknown) &&
+				selectedShapes.length === shapeFilterDisabledArray.length
+			)
+				return true;
+
+			return distanceResult && shapeResult;
+		};
+
+		const isFilterActive = () => {
+			return (
+				numberBasedFilterIsFilterActive(
+					selectedDistances.length,
+					distanceFilterDisabledArray.length,
+				) ||
+				numberBasedFilterIsFilterActive(
+					selectedShapes.length,
+					shapeFilterDisabledArray.length,
 				)
-					return true;
+			);
+		};
 
-				return distanceResult && shapeResult;
-			},
+		const getModel = () => {
+			if (!isFilterActive()) {
+				return null;
+			}
 
-			isFilterActive() {
-				return (
-					numberBasedFilterIsFilterActive(
-						selectedDistances.length,
-						distanceFilterDisabledArray.length,
-					) ||
-					numberBasedFilterIsFilterActive(
-						selectedShapes.length,
-						shapeFilterDisabledArray.length,
-					)
-				);
-			},
+			return { value: { selectedDistances, selectedShapes } };
+		};
 
-			getModel() {
-				if (!this.isFilterActive()) {
-					return null;
-				}
+		const setModel = (model: AreaFilterSetModel) => {
+			setSelectedDistances(model?.value?.selectedDistances ?? []);
+			setSelectedShapes(model?.value?.selectedShapes ?? []);
+		};
 
-				return { value: { selectedDistances, selectedShapes } };
-			},
-
-			setModel(model: AreaFilterSetModel) {
-				setSelectedDistances(model?.value?.selectedDistances ?? []);
-				setSelectedShapes(model?.value?.selectedShapes ?? []);
-			},
+		return {
+			doesFilterPass,
+			isFilterActive,
+			getModel,
+			setModel,
 		};
 	});
 

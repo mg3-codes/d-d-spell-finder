@@ -41,34 +41,39 @@ const AttackFilter = forwardRef(
 		}, [selectedAttacks]);
 
 		useImperativeHandle(ref, () => {
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.attack,
+					selectedAttacks,
+				);
+			};
+
+			const isFilterActive = () => {
+				return numberBasedFilterIsFilterActive(
+					selectedAttacks.length,
+					attackFilterDisabledArray.length,
+				);
+			};
+
+			const getModel = () => {
+				if (!isFilterActive()) {
+					return null;
+				}
+
+				return {
+					value: selectedAttacks,
+				};
+			};
+
+			const setModel = (model: NumberBasedFilterSetModel) => {
+				setSelectedAttacks(model?.value ?? []);
+			};
+
 			return {
-				doesFilterPass(props: NumberBasedFilterProps) {
-					return numberBasedFilterDoesFilterPass(
-						props?.data?.attack,
-						selectedAttacks,
-					);
-				},
-
-				isFilterActive() {
-					return numberBasedFilterIsFilterActive(
-						selectedAttacks.length,
-						attackFilterDisabledArray.length,
-					);
-				},
-
-				getModel() {
-					if (!this.isFilterActive()) {
-						return null;
-					}
-
-					return {
-						value: selectedAttacks,
-					};
-				},
-
-				setModel(model: NumberBasedFilterSetModel) {
-					setSelectedAttacks(model?.value ?? []);
-				},
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
 			};
 		});
 

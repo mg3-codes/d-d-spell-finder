@@ -40,32 +40,37 @@ const RangeFilter = forwardRef(
 		}, [selectedRanges]);
 
 		useImperativeHandle(ref, () => {
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.range,
+					selectedRanges,
+				);
+			};
+
+			const isFilterActive = () => {
+				return numberBasedFilterIsFilterActive(
+					selectedRanges.length,
+					filterDisabledArray.length,
+				);
+			};
+
+			const getModel = () => {
+				if (!isFilterActive()) {
+					return null;
+				}
+
+				return { value: selectedRanges };
+			};
+
+			const setModel = (model: NumberBasedFilterSetModel) => {
+				setSelectedRanges(model?.value ?? []);
+			};
+
 			return {
-				doesFilterPass(props: NumberBasedFilterProps) {
-					return numberBasedFilterDoesFilterPass(
-						props?.data?.range,
-						selectedRanges,
-					);
-				},
-
-				isFilterActive() {
-					return numberBasedFilterIsFilterActive(
-						selectedRanges.length,
-						filterDisabledArray.length,
-					);
-				},
-
-				getModel() {
-					if (!this.isFilterActive()) {
-						return null;
-					}
-
-					return { value: selectedRanges };
-				},
-
-				setModel(model: NumberBasedFilterSetModel) {
-					setSelectedRanges(model?.value ?? []);
-				},
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
 			};
 		});
 

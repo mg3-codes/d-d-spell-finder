@@ -44,33 +44,33 @@ const CastingTimeFilter = forwardRef(
 		}, [selectedCastingTimes]);
 
 		useImperativeHandle(ref, () => {
-			return {
-				doesFilterPass(props: NumberBasedFilterProps) {
-					return numberBasedFilterDoesFilterPass(
-						props?.data?.castingTime,
-						selectedCastingTimes,
-					);
-				},
-
-				isFilterActive() {
-					return numberBasedFilterIsFilterActive(
-						selectedCastingTimes.length,
-						filterDisabledArray.length,
-					);
-				},
-
-				getModel() {
-					if (!this.isFilterActive()) {
-						return null;
-					}
-
-					return { value: selectedCastingTimes };
-				},
-
-				setModel(model: NumberBasedFilterSetModel) {
-					setSelectedCastingTimes(model?.value ?? []);
-				},
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.castingTime,
+					selectedCastingTimes,
+				);
 			};
+
+			const isFilterActive = () => {
+				return numberBasedFilterIsFilterActive(
+					selectedCastingTimes.length,
+					filterDisabledArray.length,
+				);
+			};
+
+			const getModel = () => {
+				if (!isFilterActive()) {
+					return null;
+				}
+
+				return { value: selectedCastingTimes };
+			};
+
+			const setModel = (model: NumberBasedFilterSetModel) => {
+				setSelectedCastingTimes(model?.value ?? []);
+			};
+
+			return { doesFilterPass, isFilterActive, getModel, setModel };
 		});
 
 		const handleCheck = (x: CastingTime): void =>

@@ -44,34 +44,39 @@ const SavingThrowFilter = forwardRef(
 		}, [selectedSavingThrows]);
 
 		useImperativeHandle(ref, () => {
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
+				return numberBasedFilterDoesFilterPass(
+					props?.data?.save,
+					selectedSavingThrows,
+				);
+			};
+
+			const isFilterActive = () => {
+				return numberBasedFilterIsFilterActive(
+					selectedSavingThrows.length,
+					savingThrowFilterDisabledArray.length,
+				);
+			};
+
+			const getModel = () => {
+				if (!isFilterActive()) {
+					return null;
+				}
+
+				return {
+					value: selectedSavingThrows,
+				};
+			};
+
+			const setModel = (model: NumberBasedFilterSetModel) => {
+				setSelectedSavingThrows(model?.value ?? []);
+			};
+
 			return {
-				doesFilterPass(props: NumberBasedFilterProps) {
-					return numberBasedFilterDoesFilterPass(
-						props?.data?.save,
-						selectedSavingThrows,
-					);
-				},
-
-				isFilterActive() {
-					return numberBasedFilterIsFilterActive(
-						selectedSavingThrows.length,
-						savingThrowFilterDisabledArray.length,
-					);
-				},
-
-				getModel() {
-					if (!this.isFilterActive()) {
-						return null;
-					}
-
-					return {
-						value: selectedSavingThrows,
-					};
-				},
-
-				setModel(model: NumberBasedFilterSetModel) {
-					setSelectedSavingThrows(model?.value ?? []);
-				},
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
 			};
 		});
 
