@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -77,12 +78,15 @@ const AttackFilter = forwardRef(
 			};
 		});
 
-		const handleCheck = (x: Attack): void =>
-			numberBasedFilterHandleCheck(
-				selectedAttacks,
-				setSelectedAttacks,
-				x,
-			);
+		const handleCheck = useCallback(
+			(x: Attack): void =>
+				numberBasedFilterHandleCheck(
+					selectedAttacks,
+					setSelectedAttacks,
+					x,
+				),
+			[],
+		);
 
 		const isChecked = (x: Attack): boolean | undefined =>
 			numberBasedFilterIsChecked(selectedAttacks, x);
@@ -110,14 +114,19 @@ const AttackFilter = forwardRef(
 				<Button
 					variant="outline-primary"
 					onClick={() =>
-						setSelectedAttacks(attackFilterDisabledArray)
+						useCallback(
+							() => setSelectedAttacks(attackFilterDisabledArray),
+							[],
+						)
 					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedAttacks([])}
+					onClick={() =>
+						useCallback(() => setSelectedAttacks([]), [])
+					}
 				>
 					None
 				</Button>

@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useContext, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import Alert from "react-bootstrap/Alert";
 import Carousel from "react-bootstrap/Carousel";
@@ -52,20 +52,30 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 	const [printError, setPrintError] = useState<boolean>(false);
 	const { currentTheme } = useContext(ThemeContext);
 
-	const handleNumberPerRowClick = (selection: number): void =>
-		setSelectedNumberPerRow(selection);
+	const handleNumberPerRowClick = useCallback(
+		(selection: number): void => setSelectedNumberPerRow(selection),
+		[],
+	);
 
-	const handleExportTypeClick = (selection: ExportType): void =>
-		setSelectedExportType(selection);
+	const handleExportTypeClick = useCallback(
+		(selection: ExportType): void => setSelectedExportType(selection),
+		[],
+	);
 
-	const handleRowsPerPageClick = (selection: number): void =>
-		setSelectedRowsPerPage(selection);
+	const handleRowsPerPageClick = useCallback(
+		(selection: number): void => setSelectedRowsPerPage(selection),
+		[],
+	);
 
-	const handlePageSizeClick = (selection: PageSize): void =>
-		setSelectedPageSize(selection);
+	const handlePageSizeClick = useCallback(
+		(selection: PageSize): void => setSelectedPageSize(selection),
+		[],
+	);
 
-	const handleOrientationClick = (selection: Orientation): void =>
-		setSelectedOrientation(selection);
+	const handleOrientationClick = useCallback(
+		(selection: Orientation): void => setSelectedOrientation(selection),
+		[],
+	);
 
 	return (
 		<Modal show={isOpen}>

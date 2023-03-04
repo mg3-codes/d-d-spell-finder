@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -73,8 +74,15 @@ const LevelFilter = forwardRef(
 			};
 		});
 
-		const handleCheck = (x: number): void =>
-			numberBasedFilterHandleCheck(selectedLevels, setSelectedLevels, x);
+		const handleCheck = useCallback(
+			(x: number): void =>
+				numberBasedFilterHandleCheck(
+					selectedLevels,
+					setSelectedLevels,
+					x,
+				),
+			[],
+		);
 
 		const isChecked = (x: number): boolean | undefined =>
 			numberBasedFilterIsChecked(selectedLevels, x);
@@ -143,13 +151,18 @@ const LevelFilter = forwardRef(
 				/>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedLevels(filterDisabledArray)}
+					onClick={() =>
+						useCallback(
+							() => setSelectedLevels(filterDisabledArray),
+							[],
+						)
+					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedLevels([])}
+					onClick={() => useCallback(() => setSelectedLevels([]), [])}
 				>
 					None
 				</Button>

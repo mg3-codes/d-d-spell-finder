@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -74,8 +75,15 @@ const RangeFilter = forwardRef(
 			};
 		});
 
-		const handleCheck = (x: Range): void =>
-			numberBasedFilterHandleCheck(selectedRanges, setSelectedRanges, x);
+		const handleCheck = useCallback(
+			(x: Range): void =>
+				numberBasedFilterHandleCheck(
+					selectedRanges,
+					setSelectedRanges,
+					x,
+				),
+			[],
+		);
 
 		const isChecked = (x: number): boolean | undefined =>
 			numberBasedFilterIsChecked(selectedRanges, x);
@@ -238,13 +246,18 @@ const RangeFilter = forwardRef(
 				/>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedRanges(filterDisabledArray)}
+					onClick={() =>
+						useCallback(
+							() => setSelectedRanges(filterDisabledArray),
+							[],
+						)
+					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedRanges([])}
+					onClick={() => useCallback(() => setSelectedRanges([]), [])}
 				>
 					None
 				</Button>

@@ -8,6 +8,7 @@ import React, {
 	forwardRef,
 	useState,
 	useEffect,
+	useCallback,
 	useImperativeHandle,
 	ReactElement,
 } from "react";
@@ -90,8 +91,10 @@ const BooleanFilter = forwardRef(
 			};
 		});
 
-		const handleClick = (x: BooleanBasedFilterState): void =>
-			setSelectedState(x);
+		const handleClick = useCallback(
+			(x: BooleanBasedFilterState): void => setSelectedState(x),
+			[],
+		);
 
 		const isSelected = (x: BooleanBasedFilterState): boolean =>
 			selectedState === x;

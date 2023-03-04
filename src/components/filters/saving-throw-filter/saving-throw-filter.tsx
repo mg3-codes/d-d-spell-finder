@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -80,12 +81,15 @@ const SavingThrowFilter = forwardRef(
 			};
 		});
 
-		const handleCheck = (x: SavingThrow): void =>
-			numberBasedFilterHandleCheck(
-				selectedSavingThrows,
-				setSelectedSavingThrows,
-				x,
-			);
+		const handleCheck = useCallback(
+			(x: SavingThrow): void =>
+				numberBasedFilterHandleCheck(
+					selectedSavingThrows,
+					setSelectedSavingThrows,
+					x,
+				),
+			[],
+		);
 
 		const isChecked = (x: SavingThrow): boolean | undefined =>
 			numberBasedFilterIsChecked(selectedSavingThrows, x);
@@ -149,14 +153,22 @@ const SavingThrowFilter = forwardRef(
 				<Button
 					variant="outline-primary"
 					onClick={() =>
-						setSelectedSavingThrows(savingThrowFilterDisabledArray)
+						useCallback(
+							() =>
+								setSelectedSavingThrows(
+									savingThrowFilterDisabledArray,
+								),
+							[],
+						)
 					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedSavingThrows([])}
+					onClick={() =>
+						useCallback(() => setSelectedSavingThrows([]), [])
+					}
 				>
 					None
 				</Button>
