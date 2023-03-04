@@ -117,7 +117,7 @@ const Table = (): JSX.Element => {
 	}, []);
 
 	return (
-		<React.Fragment>
+		<>
 			<Modal show={modalIsOpen} onHide={handleModalClose}>
 				<Modal.Header closeButton>
 					<Modal.Title>{modalTitle}</Modal.Title>
@@ -147,7 +147,7 @@ const Table = (): JSX.Element => {
 					onSelectionChanged={onRowSelectionChanged}
 				/>
 			</div>
-		</React.Fragment>
+		</>
 	);
 };
 
