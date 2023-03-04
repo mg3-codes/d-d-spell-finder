@@ -20,12 +20,12 @@ jobs:
             node-version: '18.x'
 
        - uses: actions/cache@v3
-        with:
-          path: ~/node_modules
-          # Look to see if there is a cache hit for the corresponding requirements file
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-yarn
+         with:
+            path: ~/node_modules
+            # Look to see if there is a cache hit for the corresponding requirements file
+            key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+            restore-keys: |
+              ${{ runner.os }}-yarn
 
       - name: Install Dependencies
         run: yarn install --frozen-lockfile
