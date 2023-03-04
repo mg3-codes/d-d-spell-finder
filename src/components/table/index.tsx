@@ -141,7 +141,7 @@ const Table = (): JSX.Element => {
 					rowData={spellRows}
 					getRowId={getRowId}
 					defaultColDef={useMemo<ColDef>(() => defaultColDef, [])}
-					animateRows={true}
+					animateRows
 					rowSelection="multiple"
 					suppressRowClickSelection
 					onSelectionChanged={onRowSelectionChanged}
