@@ -14,9 +14,14 @@
 	color: var(--bs-body-color);
 	background-color: var(--bs-body-bg);
 
-	.printer-button {
-		&:hover {
-			color: bootstrap.$white;
+	.header-buttons {
+		display: flex;
+		align-items: center;
+
+		.printer-button {
+			&:hover {
+				color: bootstrap.$white;
+			}
 		}
 	}
 }

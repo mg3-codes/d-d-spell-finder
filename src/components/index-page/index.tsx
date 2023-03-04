@@ -45,7 +45,7 @@ export const IndexPage = () => {
 				<Suspense fallback={<LoadingSpinner />}>
 					<div className="heading">
 						<h1>D&D Spell Details</h1>
-						<div>
+						<div className="header-buttons">
 							<Button
 								variant="outline-primary"
 								className="printer-button"
