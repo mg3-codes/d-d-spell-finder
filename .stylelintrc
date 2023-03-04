@@ -1,4 +1,5 @@
 {
+  "customSyntax": "postcss-scss",
   "rules": {
     "color-hex-length": "long",
     "comment-whitespace-inside": "always",
