@@ -43,6 +43,9 @@ export const ThemeContextProvider = ({
 			case Theme.Dark:
 				setCurrentTheme(Theme.Light);
 				break;
+			default:
+				setCurrentTheme(Theme.Light);
+				break;
 		}
 	};
 

@@ -91,7 +91,7 @@ export const mapNumberToDurationDisplayName = (x: number): string => {
 			return "Until Dispelled";
 		case 14:
 			return "Until Dispelled Or Triggered";
+		default:
+			return "";
 	}
-
-	return "";
 };

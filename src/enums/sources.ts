@@ -61,7 +61,7 @@ export const mapNumberToSourceDisplayName = (x: number): string => {
 			return "Tasha's Cauldron of Everything";
 		case 8:
 			return "Xanathar's Guide to Everything";
+		default:
+			return "";
 	}
-
-	return "";
 };

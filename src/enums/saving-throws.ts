@@ -51,7 +51,7 @@ export const mapNumberToSavingThrowDisplayName = (x: number): string => {
 			return "Strength";
 		case 6:
 			return "Wisdom";
+		default:
+			return "";
 	}
-
-	return "";
 };

@@ -31,7 +31,7 @@ export const mapNumberToAttackDisplayName = (x: number): string => {
 			return "Melee";
 		case 2:
 			return "Ranged";
+		default:
+			return "";
 	}
-
-	return "";
 };

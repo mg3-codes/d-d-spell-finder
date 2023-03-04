@@ -56,7 +56,7 @@ export const mapNumberToSchoolDisplayName = (x: number): string => {
 			return "Necromancy";
 		case 7:
 			return "Transmutation";
+		default:
+			return "";
 	}
-
-	return "";
 };

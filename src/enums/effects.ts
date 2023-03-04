@@ -196,7 +196,7 @@ export const mapEffectToDisplayName = (x: Effect): string => {
 			return "Summoning";
 		case 35:
 			return "Distracted";
+		default:
+			return "";
 	}
-
-	return "";
 };

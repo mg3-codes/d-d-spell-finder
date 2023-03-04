@@ -66,7 +66,7 @@ export const mapNumberToCastingTimeDisplayName = (x: number): string => {
 			return "24 Hours";
 		case 9:
 			return "Special";
+		default:
+			return "";
 	}
-
-	return "";
 };

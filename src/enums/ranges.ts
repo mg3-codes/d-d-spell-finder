@@ -141,7 +141,7 @@ export const mapNumberToRangeDisplayName = (x: number): string => {
 			return "500 miles";
 		case 24:
 			return "Unlimited";
+		default:
+			return "";
 	}
-
-	return "";
 };
