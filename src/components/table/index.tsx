@@ -6,7 +6,7 @@
 
 import React, { useEffect, useMemo, useState, useRef, useContext } from "react";
 import { AgGridReact } from "@ag-grid-community/react";
-import { ModuleRegistry, SelectionChangedEvent } from "@ag-grid-community/core";
+import { GetRowIdParams, ModuleRegistry } from "@ag-grid-community/core";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
 import { CellClickedEvent, ColDef } from "@ag-grid-community/core";
 import Button from "react-bootstrap/Button";
@@ -42,7 +42,7 @@ const Table = (): JSX.Element => {
 	const gridRef = useRef<AgGridReact>(null);
 	const { currentTheme: selectedTheme } = useContext(ThemeContext);
 	const { selectedColumns } = useContext(ColumnContext);
-	const { setSelectedRows } = useContext(SelectedRowContext);
+	const { selectedRows, setSelectedRows } = useContext(SelectedRowContext);
 
 	const showModalWithMessage = (message: string): void => {
 		setModalText(message);
@@ -105,6 +105,17 @@ const Table = (): JSX.Element => {
 		}
 	}, [selectedColumns]);
 
+	const setSelectionIfNeeded = () => {
+		for (const row of selectedRows) {
+			const gridRow = gridRef?.current?.api?.getRowNode(row.name);
+			gridRow?.setSelected(true);
+		}
+	};
+
+	const getRowId = useMemo(() => {
+		return (params: GetRowIdParams): string => params.data.name;
+	}, []);
+
 	return (
 		<React.Fragment>
 			<Modal show={modalIsOpen} onHide={handleModalClose}>
@@ -126,7 +137,9 @@ const Table = (): JSX.Element => {
 				<AgGridReact
 					ref={gridRef}
 					columnDefs={columnDefinitions}
+					onFirstDataRendered={setSelectionIfNeeded}
 					rowData={spellRows}
+					getRowId={getRowId}
 					defaultColDef={useMemo<ColDef>(() => defaultColDef, [])}
 					animateRows={true}
 					rowSelection="multiple"
