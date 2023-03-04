@@ -1,0 +1,43 @@
+name: Build
+
+on:
+  push:
+    branches: [ main, development ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+            node-version: '18.x'
+
+       - uses: actions/cache@v3
+        with:
+          path: ~/node_modules
+          # Look to see if there is a cache hit for the corresponding requirements file
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn
+
+      - name: Install Dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Prettier Check
+        run: yarn prettier-check
+
+      - name: ESlint
+        run: yarn eslint
+
+      - name: Stylelint
+        run: yarn stylelint-check
+
+      - name: Build
+        run: yarn build
