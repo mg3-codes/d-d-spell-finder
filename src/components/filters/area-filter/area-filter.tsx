@@ -45,10 +45,7 @@ const distanceFilterDisabledArray = [
 ];
 const shapeFilterDisabledArray = createDisabledFilterArray(16);
 
-export default forwardRef(function SchoolFilter(
-	props: AgGridFilterProps,
-	ref,
-): ReactElement {
+const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 	const [selectedDistances, setSelectedDistances] = useState<number[]>(
 		distanceFilterDisabledArray,
 	);
@@ -335,3 +332,7 @@ export default forwardRef(function SchoolFilter(
 		</div>
 	);
 });
+
+AreaFilter.displayName = "AreaFilter";
+
+export default AreaFilter;

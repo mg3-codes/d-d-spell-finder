@@ -37,83 +37,87 @@ enum BooleanBasedFilterState {
 	False,
 }
 
-export default forwardRef(function BooleanFilter(
-	filterProps: IBooleanFilterProps,
-	ref,
-): ReactElement {
-	const [selectedState, setSelectedState] = useState<BooleanBasedFilterState>(
-		BooleanBasedFilterState.All,
-	);
+const BooleanFilter = forwardRef(
+	(filterProps: IBooleanFilterProps, ref): ReactElement => {
+		const [selectedState, setSelectedState] =
+			useState<BooleanBasedFilterState>(BooleanBasedFilterState.All);
 
-	useEffect(() => {
-		filterProps.filterChangedCallback();
-	}, [selectedState]);
+		useEffect(() => {
+			filterProps.filterChangedCallback();
+		}, [selectedState]);
 
-	const mapStateToBoolean = (state: BooleanBasedFilterState): boolean => {
-		switch (state) {
-			case BooleanBasedFilterState.All:
-			case BooleanBasedFilterState.True:
-				return true;
-			case BooleanBasedFilterState.False:
-				return false;
-			default:
-				return false;
-		}
-	};
-
-	useImperativeHandle(ref, () => {
-		return {
-			doesFilterPass(props: BooleanBasedFilterProps) {
-				return (
-					mapStateToBoolean(selectedState) ===
-					props?.data[filterProps?.spellPropertyName]
-				);
-			},
-
-			isFilterActive() {
-				return selectedState !== BooleanBasedFilterState.All;
-			},
-
-			getModel() {
-				if (!this.isFilterActive()) {
-					return null;
-				}
-
-				return { value: selectedState };
-			},
-
-			setModel(model: BooleanBasedFilterSetModel) {
-				setSelectedState(model?.value ?? BooleanBasedFilterState.All);
-			},
+		const mapStateToBoolean = (state: BooleanBasedFilterState): boolean => {
+			switch (state) {
+				case BooleanBasedFilterState.All:
+				case BooleanBasedFilterState.True:
+					return true;
+				case BooleanBasedFilterState.False:
+					return false;
+				default:
+					return false;
+			}
 		};
-	});
 
-	const handleClick = (x: BooleanBasedFilterState): void =>
-		setSelectedState(x);
+		useImperativeHandle(ref, () => {
+			return {
+				doesFilterPass(props: BooleanBasedFilterProps) {
+					return (
+						mapStateToBoolean(selectedState) ===
+						props?.data[filterProps?.spellPropertyName]
+					);
+				},
 
-	const isSelected = (x: BooleanBasedFilterState): boolean =>
-		selectedState === x;
+				isFilterActive() {
+					return selectedState !== BooleanBasedFilterState.All;
+				},
 
-	return (
-		<Form className="boolean-filter">
-			<Form.Check
-				type={"radio"}
-				onChange={() => handleClick(BooleanBasedFilterState.All)}
-				label={"All"}
-				checked={isSelected(BooleanBasedFilterState.All)}
-			/>
-			<Form.Check
-				type={"radio"}
-				onChange={() => handleClick(BooleanBasedFilterState.True)}
-				label={"True"}
-				checked={isSelected(BooleanBasedFilterState.True)}
-			/>
-			<Form.Check
-				type={"radio"}
-				onChange={() => handleClick(BooleanBasedFilterState.False)}
-				label={"False"}
-				checked={isSelected(BooleanBasedFilterState.False)}
-			/>
-		</Form>
-	);
-});
+				getModel() {
+					if (!this.isFilterActive()) {
+						return null;
+					}
+
+					return { value: selectedState };
+				},
+
+				setModel(model: BooleanBasedFilterSetModel) {
+					setSelectedState(
+						model?.value ?? BooleanBasedFilterState.All,
+					);
+				},
+			};
+		});
+
+		const handleClick = (x: BooleanBasedFilterState): void =>
+			setSelectedState(x);
+
+		const isSelected = (x: BooleanBasedFilterState): boolean =>
+			selectedState === x;
+
+		return (
+			<Form className="boolean-filter">
+				<Form.Check
+					type={"radio"}
+					onChange={() => handleClick(BooleanBasedFilterState.All)}
+					label={"All"}
+					checked={isSelected(BooleanBasedFilterState.All)}
+				/>
+				<Form.Check
+					type={"radio"}
+					onChange={() => handleClick(BooleanBasedFilterState.True)}
+					label={"True"}
+					checked={isSelected(BooleanBasedFilterState.True)}
+				/>
+				<Form.Check
+					type={"radio"}
+					onChange={() => handleClick(BooleanBasedFilterState.False)}
+					label={"False"}
+					checked={isSelected(BooleanBasedFilterState.False)}
+				/>
+			</Form>
+		);
+	},
+);
+
+BooleanFilter.displayName = "BooleanFilter";
+
+export default BooleanFilter;
