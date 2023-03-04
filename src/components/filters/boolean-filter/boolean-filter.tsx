@@ -56,6 +56,8 @@ export default forwardRef(function BooleanFilter(
 				return true;
 			case BooleanBasedFilterState.False:
 				return false;
+			default:
+				return false;
 		}
 	};
 

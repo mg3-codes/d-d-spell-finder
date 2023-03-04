@@ -43,7 +43,7 @@ export enum Effect {
 	Warding = 32,
 }
 
-export const mapNumberToEffect = (x: number): Effect | undefined => {
+export const mapNumberToEffect = (x: number): Effect | null => {
 	switch (x) {
 		case 0:
 			return Effect.None;
@@ -117,6 +117,8 @@ export const mapNumberToEffect = (x: number): Effect | undefined => {
 			return Effect.Summoning;
 		case 35:
 			return Effect.Distracted;
+		default:
+			return null;
 	}
 };
 

@@ -15,7 +15,7 @@ export enum School {
 	Transmutation = 7,
 }
 
-export const mapNumberToSchool = (x: number): number | undefined => {
+export const mapNumberToSchool = (x: number): number | null => {
 	switch (x) {
 		case 0:
 			return School.Abjuration;
@@ -33,6 +33,8 @@ export const mapNumberToSchool = (x: number): number | undefined => {
 			return School.Necromancy;
 		case 7:
 			return School.Transmutation;
+		default:
+			return null;
 	}
 };
 

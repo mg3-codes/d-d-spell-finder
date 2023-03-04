@@ -16,7 +16,7 @@ export enum Source {
 	XanatharsGuideToEverything = 8,
 }
 
-export const mapNumberToSource = (x: number): number | undefined => {
+export const mapNumberToSource = (x: number): number | null => {
 	switch (x) {
 		case 0:
 			return Source.AcquisitionsIncorporated;
@@ -36,6 +36,8 @@ export const mapNumberToSource = (x: number): number | undefined => {
 			return Source.TashasCauldronOfEverything;
 		case 8:
 			return Source.XanatharsGuideToEverything;
+		default:
+			return null;
 	}
 };
 

@@ -32,7 +32,7 @@ export enum Range {
 	Unlimited = 24,
 }
 
-export const mapNumberToRange = (x: number): number | undefined => {
+export const mapNumberToRange = (x: number): number | null => {
 	switch (x) {
 		case 0:
 			return Range.Self;
@@ -84,6 +84,8 @@ export const mapNumberToRange = (x: number): number | undefined => {
 			return Range.FiveHundredMiles;
 		case 24:
 			return Range.Unlimited;
+		default:
+			return null;
 	}
 };
 

@@ -22,7 +22,7 @@ export enum Duration {
 	UntilDispelledOrTriggered = 14,
 }
 
-export const mapNumberToDuration = (x: number): number | undefined => {
+export const mapNumberToDuration = (x: number): number | null => {
 	switch (x) {
 		case 0:
 			return Duration.Instantaneous;
@@ -54,6 +54,8 @@ export const mapNumberToDuration = (x: number): number | undefined => {
 			return Duration.UntilDispelled;
 		case 14:
 			return Duration.UntilDispelledOrTriggered;
+		default:
+			return null;
 	}
 };
 

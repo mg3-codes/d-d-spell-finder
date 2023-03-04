@@ -10,7 +10,7 @@ export enum Attack {
 	Ranged = 2,
 }
 
-export const mapNumberToAttack = (x: number): Attack | undefined => {
+export const mapNumberToAttack = (x: number): Attack | null => {
 	switch (x) {
 		case 0:
 			return Attack.None;
@@ -18,6 +18,8 @@ export const mapNumberToAttack = (x: number): Attack | undefined => {
 			return Attack.Melee;
 		case 2:
 			return Attack.Ranged;
+		default:
+			return null;
 	}
 };
 

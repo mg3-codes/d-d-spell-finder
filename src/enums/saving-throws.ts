@@ -14,7 +14,7 @@ export enum SavingThrow {
 	Wisdom = 6,
 }
 
-export const mapNumberToSavingThrow = (x: number): SavingThrow | undefined => {
+export const mapNumberToSavingThrow = (x: number): SavingThrow | null => {
 	switch (x) {
 		case 0:
 			return SavingThrow.None;
@@ -30,6 +30,8 @@ export const mapNumberToSavingThrow = (x: number): SavingThrow | undefined => {
 			return SavingThrow.Strength;
 		case 6:
 			return SavingThrow.Wisdom;
+		default:
+			return null;
 	}
 };
 
