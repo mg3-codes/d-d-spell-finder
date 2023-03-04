@@ -1,3 +1,5 @@
+<!-- @format -->
+
 # Contributing :wave:
 
 Thank you for considering contributing to this project! Please read below to learn about our rules and processes.
@@ -13,10 +15,10 @@ Thank you for considering contributing to this project! Please read below to lea
 
 In no particular order, here are some things to keep in mind.
 
-- Reuse code whenever possible
-- Extend interfaces and reuse types wherever possible
-- Use descriptive variable names that make sense for the context
-- Consider suggestions from automated tools we use
+-   Reuse code whenever possible
+-   Extend interfaces and reuse types wherever possible
+-   Use descriptive variable names that make sense for the context
+-   Consider suggestions from automated tools we use
 
 ## Linting
 
@@ -30,7 +32,7 @@ const myCoolFunc = () => {
 	/* eslint-disable @typescript-eslint/no-empty-function */
 	const func = () => {};
 	/* eslint-disable @typescript-eslint/no-empty-function */
-}
+};
 ```
 
 ## Opening a PR

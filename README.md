@@ -1,3 +1,5 @@
+<!-- @format -->
+
 # D&D Spell Finder :mage: + :detective:
 
 ## About :mega:
