@@ -45,10 +45,7 @@ const distanceFilterDisabledArray = [
 ];
 const shapeFilterDisabledArray = createDisabledFilterArray(16);
 
-export default forwardRef(function SchoolFilter(
-	props: AgGridFilterProps,
-	ref,
-): ReactElement {
+const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 	const [selectedDistances, setSelectedDistances] = useState<number[]>(
 		distanceFilterDisabledArray,
 	);
@@ -60,56 +57,6 @@ export default forwardRef(function SchoolFilter(
 	useEffect(() => {
 		props.filterChangedCallback();
 	}, [selectedDistances, selectedShapes]);
-
-	useImperativeHandle(ref, () => {
-		return {
-			doesFilterPass(props: NumberBasedFilterProps) {
-				const distanceResult = numberBasedFilterDoesFilterPass(
-					props?.data?.area?.distance,
-					selectedDistances,
-				);
-				const shapeResult = numberBasedFilterDoesFilterPass(
-					props?.data?.area?.shape,
-					selectedShapes,
-				);
-
-				if (
-					props?.data?.area?.distance === Distance.Unknown &&
-					isDistanceChecked(Distance.Unknown) &&
-					selectedShapes.length === shapeFilterDisabledArray.length
-				)
-					return true;
-
-				return distanceResult && shapeResult;
-			},
-
-			isFilterActive() {
-				return (
-					numberBasedFilterIsFilterActive(
-						selectedDistances.length,
-						distanceFilterDisabledArray.length,
-					) ||
-					numberBasedFilterIsFilterActive(
-						selectedShapes.length,
-						shapeFilterDisabledArray.length,
-					)
-				);
-			},
-
-			getModel() {
-				if (!this.isFilterActive()) {
-					return null;
-				}
-
-				return { value: { selectedDistances, selectedShapes } };
-			},
-
-			setModel(model: AreaFilterSetModel) {
-				setSelectedDistances(model?.value?.selectedDistances ?? []);
-				setSelectedShapes(model?.value?.selectedShapes ?? []);
-			},
-		};
-	});
 
 	const handleDistanceCheck = (x: Distance): void =>
 		numberBasedFilterHandleCheck(
@@ -141,6 +88,61 @@ export default forwardRef(function SchoolFilter(
 			setShowOverlay(true);
 		} else setShowOverlay(false);
 	};
+
+	useImperativeHandle(ref, () => {
+		const doesFilterPass = (props: NumberBasedFilterProps) => {
+			const distanceResult = numberBasedFilterDoesFilterPass(
+				props?.data?.area?.distance,
+				selectedDistances,
+			);
+			const shapeResult = numberBasedFilterDoesFilterPass(
+				props?.data?.area?.shape,
+				selectedShapes,
+			);
+
+			if (
+				props?.data?.area?.distance === Distance.Unknown &&
+				isDistanceChecked(Distance.Unknown) &&
+				selectedShapes.length === shapeFilterDisabledArray.length
+			)
+				return true;
+
+			return distanceResult && shapeResult;
+		};
+
+		const isFilterActive = () => {
+			return (
+				numberBasedFilterIsFilterActive(
+					selectedDistances.length,
+					distanceFilterDisabledArray.length,
+				) ||
+				numberBasedFilterIsFilterActive(
+					selectedShapes.length,
+					shapeFilterDisabledArray.length,
+				)
+			);
+		};
+
+		const getModel = () => {
+			if (!isFilterActive()) {
+				return null;
+			}
+
+			return { value: { selectedDistances, selectedShapes } };
+		};
+
+		const setModel = (model: AreaFilterSetModel) => {
+			setSelectedDistances(model?.value?.selectedDistances ?? []);
+			setSelectedShapes(model?.value?.selectedShapes ?? []);
+		};
+
+		return {
+			doesFilterPass,
+			isFilterActive,
+			getModel,
+			setModel,
+		};
+	});
 
 	return (
 		<div className="area-filter">
@@ -335,3 +337,7 @@ export default forwardRef(function SchoolFilter(
 		</div>
 	);
 });
+
+AreaFilter.displayName = "AreaFilter";
+
+export default AreaFilter;

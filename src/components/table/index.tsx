@@ -4,7 +4,14 @@
  * @format
  */
 
-import React, { useEffect, useMemo, useState, useRef, useContext } from "react";
+import React, {
+	useEffect,
+	useMemo,
+	useState,
+	useRef,
+	useContext,
+	useCallback,
+} from "react";
 import { AgGridReact } from "@ag-grid-community/react";
 import { GetRowIdParams, ModuleRegistry } from "@ag-grid-community/core";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
@@ -49,7 +56,7 @@ const Table = (): JSX.Element => {
 		setModalIsOpen(true);
 	};
 
-	const handleModalClose = () => setModalIsOpen(false);
+	const handleModalClose = useCallback((): void => setModalIsOpen(false), []);
 
 	const onMaterialCellClicked = (event: CellClickedEvent<Spell>): void => {
 		if (event?.data?.material) {
@@ -65,7 +72,7 @@ const Table = (): JSX.Element => {
 		}
 	};
 
-	const onRowSelectionChanged = (): void => {
+	const onRowSelectionChanged = useCallback((): void => {
 		try {
 			const rows = gridRef.current?.api.getSelectedRows() as TableRow[];
 
@@ -73,7 +80,7 @@ const Table = (): JSX.Element => {
 		} catch (e) {
 			console.error("error updating selected rows", e);
 		}
-	};
+	}, []);
 
 	const startingColumnDefinition = useMemo<ColDef[]>(
 		() =>
@@ -105,19 +112,19 @@ const Table = (): JSX.Element => {
 		}
 	}, [selectedColumns]);
 
-	const setSelectionIfNeeded = () => {
+	const setSelectionIfNeeded = useCallback((): void => {
 		for (const row of selectedRows) {
 			const gridRow = gridRef?.current?.api?.getRowNode(row.name);
 			gridRow?.setSelected(true);
 		}
-	};
+	}, []);
 
 	const getRowId = useMemo(() => {
 		return (params: GetRowIdParams): string => params.data.name;
 	}, []);
 
 	return (
-		<React.Fragment>
+		<>
 			<Modal show={modalIsOpen} onHide={handleModalClose}>
 				<Modal.Header closeButton>
 					<Modal.Title>{modalTitle}</Modal.Title>
@@ -147,7 +154,7 @@ const Table = (): JSX.Element => {
 					onSelectionChanged={onRowSelectionChanged}
 				/>
 			</div>
-		</React.Fragment>
+		</>
 	);
 };
 

@@ -13,7 +13,7 @@ export enum Shape {
 	Line = 5,
 }
 
-export const mapNumberToShape = (x: number): number | undefined => {
+export const mapNumberToShape = (x: number): number | null => {
 	switch (x) {
 		case 0:
 			return Shape.Cube;
@@ -27,6 +27,8 @@ export const mapNumberToShape = (x: number): number | undefined => {
 			return Shape.Cone;
 		case 5:
 			return Shape.Line;
+		default:
+			return null;
 	}
 };
 

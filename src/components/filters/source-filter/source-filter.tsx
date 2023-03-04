@@ -30,133 +30,155 @@ import "./source-filter.scss";
 
 const filterDisabledArray = createDisabledFilterArray(9);
 
-export default forwardRef(function SourceFilter(
-	props: AgGridFilterProps,
-	ref,
-): ReactElement {
-	const [selectedSources, setSelectedSources] =
-		useState<number[]>(filterDisabledArray);
+const SourceFilter = forwardRef(
+	(props: AgGridFilterProps, ref): ReactElement => {
+		const [selectedSources, setSelectedSources] =
+			useState<number[]>(filterDisabledArray);
 
-	useEffect(() => {
-		props.filterChangedCallback();
-	}, [selectedSources]);
+		useEffect(() => {
+			props.filterChangedCallback();
+		}, [selectedSources]);
 
-	useImperativeHandle(ref, () => {
-		return {
-			doesFilterPass(props: NumberBasedFilterProps) {
+		useImperativeHandle(ref, () => {
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
 				return numberBasedFilterDoesFilterPass(
 					props?.data?.source,
 					selectedSources,
 				);
-			},
+			};
 
-			isFilterActive() {
+			const isFilterActive = () => {
 				return numberBasedFilterIsFilterActive(
 					selectedSources.length,
 					filterDisabledArray.length,
 				);
-			},
+			};
 
-			getModel() {
-				if (!this.isFilterActive()) {
+			const getModel = () => {
+				if (!isFilterActive()) {
 					return null;
 				}
 
 				return { value: selectedSources };
-			},
+			};
 
-			setModel(model: NumberBasedFilterSetModel) {
+			const setModel = (model: NumberBasedFilterSetModel) => {
 				setSelectedSources(model?.value ?? []);
-			},
-		};
-	});
+			};
 
-	const handleCheck = (x: Source): void =>
-		numberBasedFilterHandleCheck(selectedSources, setSelectedSources, x);
+			return {
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
+			};
+		});
 
-	const isChecked = (x: number): boolean | undefined =>
-		numberBasedFilterIsChecked(selectedSources, x);
+		const handleCheck = (x: Source): void =>
+			numberBasedFilterHandleCheck(
+				selectedSources,
+				setSelectedSources,
+				x,
+			);
 
-	return (
-		<div className="source-filter">
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(Source.AcquisitionsIncorporated)}
-				label={mapNumberToSourceDisplayName(
-					Source.AcquisitionsIncorporated,
-				)}
-				checked={isChecked(Source.AcquisitionsIncorporated)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(Source.BasicRules)}
-				label={mapNumberToSourceDisplayName(Source.BasicRules)}
-				checked={isChecked(Source.BasicRules)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(Source.ElementalEvil)}
-				label={mapNumberToSourceDisplayName(Source.ElementalEvil)}
-				checked={isChecked(Source.ElementalEvil)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(Source.ExplorersGuideToWildemount)}
-				label={mapNumberToSourceDisplayName(
-					Source.ExplorersGuideToWildemount,
-				)}
-				checked={isChecked(Source.ExplorersGuideToWildemount)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(Source.GuildmastersGuideToRavnica)}
-				label={mapNumberToSourceDisplayName(
-					Source.GuildmastersGuideToRavnica,
-				)}
-				checked={isChecked(Source.GuildmastersGuideToRavnica)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(Source.LostLaboratoryOfKwalish)}
-				label={mapNumberToSourceDisplayName(
-					Source.LostLaboratoryOfKwalish,
-				)}
-				checked={isChecked(Source.LostLaboratoryOfKwalish)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(Source.PlayersHandbook)}
-				label={mapNumberToSourceDisplayName(Source.PlayersHandbook)}
-				checked={isChecked(Source.PlayersHandbook)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(Source.TashasCauldronOfEverything)}
-				label={mapNumberToSourceDisplayName(
-					Source.TashasCauldronOfEverything,
-				)}
-				checked={isChecked(Source.TashasCauldronOfEverything)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(Source.XanatharsGuideToEverything)}
-				label={mapNumberToSourceDisplayName(
-					Source.XanatharsGuideToEverything,
-				)}
-				checked={isChecked(Source.XanatharsGuideToEverything)}
-			/>
-			<Button
-				variant="outline-primary"
-				onClick={() => setSelectedSources(filterDisabledArray)}
-			>
-				All
-			</Button>
-			<Button
-				variant="outline-primary"
-				onClick={() => setSelectedSources([])}
-			>
-				None
-			</Button>
-		</div>
-	);
-});
+		const isChecked = (x: number): boolean | undefined =>
+			numberBasedFilterIsChecked(selectedSources, x);
+
+		return (
+			<div className="source-filter">
+				<Form.Check
+					type={"checkbox"}
+					onChange={() =>
+						handleCheck(Source.AcquisitionsIncorporated)
+					}
+					label={mapNumberToSourceDisplayName(
+						Source.AcquisitionsIncorporated,
+					)}
+					checked={isChecked(Source.AcquisitionsIncorporated)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(Source.BasicRules)}
+					label={mapNumberToSourceDisplayName(Source.BasicRules)}
+					checked={isChecked(Source.BasicRules)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(Source.ElementalEvil)}
+					label={mapNumberToSourceDisplayName(Source.ElementalEvil)}
+					checked={isChecked(Source.ElementalEvil)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() =>
+						handleCheck(Source.ExplorersGuideToWildemount)
+					}
+					label={mapNumberToSourceDisplayName(
+						Source.ExplorersGuideToWildemount,
+					)}
+					checked={isChecked(Source.ExplorersGuideToWildemount)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() =>
+						handleCheck(Source.GuildmastersGuideToRavnica)
+					}
+					label={mapNumberToSourceDisplayName(
+						Source.GuildmastersGuideToRavnica,
+					)}
+					checked={isChecked(Source.GuildmastersGuideToRavnica)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(Source.LostLaboratoryOfKwalish)}
+					label={mapNumberToSourceDisplayName(
+						Source.LostLaboratoryOfKwalish,
+					)}
+					checked={isChecked(Source.LostLaboratoryOfKwalish)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(Source.PlayersHandbook)}
+					label={mapNumberToSourceDisplayName(Source.PlayersHandbook)}
+					checked={isChecked(Source.PlayersHandbook)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() =>
+						handleCheck(Source.TashasCauldronOfEverything)
+					}
+					label={mapNumberToSourceDisplayName(
+						Source.TashasCauldronOfEverything,
+					)}
+					checked={isChecked(Source.TashasCauldronOfEverything)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() =>
+						handleCheck(Source.XanatharsGuideToEverything)
+					}
+					label={mapNumberToSourceDisplayName(
+						Source.XanatharsGuideToEverything,
+					)}
+					checked={isChecked(Source.XanatharsGuideToEverything)}
+				/>
+				<Button
+					variant="outline-primary"
+					onClick={() => setSelectedSources(filterDisabledArray)}
+				>
+					All
+				</Button>
+				<Button
+					variant="outline-primary"
+					onClick={() => setSelectedSources([])}
+				>
+					None
+				</Button>
+			</div>
+		);
+	},
+);
+
+SourceFilter.displayName = "SourceFilter";
+
+export default SourceFilter;

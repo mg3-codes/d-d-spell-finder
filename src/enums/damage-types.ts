@@ -21,7 +21,7 @@ export enum DamageType {
 	None = 13,
 }
 
-export const mapNumberToDamageType = (x: number): DamageType | undefined => {
+export const mapNumberToDamageType = (x: number): DamageType | null => {
 	switch (x) {
 		case 0:
 			return DamageType.Acid;
@@ -51,6 +51,8 @@ export const mapNumberToDamageType = (x: number): DamageType | undefined => {
 			return DamageType.Thunder;
 		case 13:
 			return DamageType.None;
+		default:
+			return null;
 	}
 };
 

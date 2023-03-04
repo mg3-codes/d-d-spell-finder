@@ -37,81 +37,90 @@ enum BooleanBasedFilterState {
 	False,
 }
 
-export default forwardRef(function BooleanFilter(
-	filterProps: IBooleanFilterProps,
-	ref,
-): ReactElement {
-	const [selectedState, setSelectedState] = useState<BooleanBasedFilterState>(
-		BooleanBasedFilterState.All,
-	);
+const BooleanFilter = forwardRef(
+	(filterProps: IBooleanFilterProps, ref): ReactElement => {
+		const [selectedState, setSelectedState] =
+			useState<BooleanBasedFilterState>(BooleanBasedFilterState.All);
 
-	useEffect(() => {
-		filterProps.filterChangedCallback();
-	}, [selectedState]);
+		useEffect(() => {
+			filterProps.filterChangedCallback();
+		}, [selectedState]);
 
-	const mapStateToBoolean = (state: BooleanBasedFilterState): boolean => {
-		switch (state) {
-			case BooleanBasedFilterState.All:
-			case BooleanBasedFilterState.True:
-				return true;
-			case BooleanBasedFilterState.False:
-				return false;
-		}
-	};
+		const mapStateToBoolean = (state: BooleanBasedFilterState): boolean => {
+			switch (state) {
+				case BooleanBasedFilterState.All:
+				case BooleanBasedFilterState.True:
+					return true;
+				case BooleanBasedFilterState.False:
+					return false;
+				default:
+					return false;
+			}
+		};
 
-	useImperativeHandle(ref, () => {
-		return {
-			doesFilterPass(props: BooleanBasedFilterProps) {
+		useImperativeHandle(ref, () => {
+			const doesFilterPass = (props: BooleanBasedFilterProps) => {
 				return (
 					mapStateToBoolean(selectedState) ===
 					props?.data[filterProps?.spellPropertyName]
 				);
-			},
+			};
 
-			isFilterActive() {
+			const isFilterActive = () => {
 				return selectedState !== BooleanBasedFilterState.All;
-			},
+			};
 
-			getModel() {
-				if (!this.isFilterActive()) {
+			const getModel = () => {
+				if (!isFilterActive()) {
 					return null;
 				}
 
 				return { value: selectedState };
-			},
+			};
 
-			setModel(model: BooleanBasedFilterSetModel) {
+			const setModel = (model: BooleanBasedFilterSetModel) => {
 				setSelectedState(model?.value ?? BooleanBasedFilterState.All);
-			},
-		};
-	});
+			};
 
-	const handleClick = (x: BooleanBasedFilterState): void =>
-		setSelectedState(x);
+			return {
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
+			};
+		});
 
-	const isSelected = (x: BooleanBasedFilterState): boolean =>
-		selectedState === x;
+		const handleClick = (x: BooleanBasedFilterState): void =>
+			setSelectedState(x);
 
-	return (
-		<Form className="boolean-filter">
-			<Form.Check
-				type={"radio"}
-				onChange={() => handleClick(BooleanBasedFilterState.All)}
-				label={"All"}
-				checked={isSelected(BooleanBasedFilterState.All)}
-			/>
-			<Form.Check
-				type={"radio"}
-				onChange={() => handleClick(BooleanBasedFilterState.True)}
-				label={"True"}
-				checked={isSelected(BooleanBasedFilterState.True)}
-			/>
-			<Form.Check
-				type={"radio"}
-				onChange={() => handleClick(BooleanBasedFilterState.False)}
-				label={"False"}
-				checked={isSelected(BooleanBasedFilterState.False)}
-			/>
-		</Form>
-	);
-});
+		const isSelected = (x: BooleanBasedFilterState): boolean =>
+			selectedState === x;
+
+		return (
+			<Form className="boolean-filter">
+				<Form.Check
+					type={"radio"}
+					onChange={() => handleClick(BooleanBasedFilterState.All)}
+					label={"All"}
+					checked={isSelected(BooleanBasedFilterState.All)}
+				/>
+				<Form.Check
+					type={"radio"}
+					onChange={() => handleClick(BooleanBasedFilterState.True)}
+					label={"True"}
+					checked={isSelected(BooleanBasedFilterState.True)}
+				/>
+				<Form.Check
+					type={"radio"}
+					onChange={() => handleClick(BooleanBasedFilterState.False)}
+					label={"False"}
+					checked={isSelected(BooleanBasedFilterState.False)}
+				/>
+			</Form>
+		);
+	},
+);
+
+BooleanFilter.displayName = "BooleanFilter";
+
+export default BooleanFilter;

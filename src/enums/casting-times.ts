@@ -17,7 +17,7 @@ export enum CastingTime {
 	Special = 9,
 }
 
-export const mapNumberToCastingTime = (x: number): number | undefined => {
+export const mapNumberToCastingTime = (x: number): number | null => {
 	switch (x) {
 		case 0:
 			return CastingTime.Action;
@@ -39,6 +39,8 @@ export const mapNumberToCastingTime = (x: number): number | undefined => {
 			return CastingTime.TwentyFourHours;
 		case 9:
 			return CastingTime.Special;
+		default:
+			return null;
 	}
 };
 
@@ -64,7 +66,7 @@ export const mapNumberToCastingTimeDisplayName = (x: number): string => {
 			return "24 Hours";
 		case 9:
 			return "Special";
+		default:
+			return "";
 	}
-
-	return "";
 };

@@ -33,122 +33,138 @@ import "./saving-throw-filter.scss";
 
 const savingThrowFilterDisabledArray = createDisabledFilterArray(7);
 
-export default forwardRef(function SavingThrowFilter(
-	props: AgGridFilterProps,
-	ref,
-): ReactElement {
-	const [selectedSavingThrows, setSelectedSavingThrows] = useState<number[]>(
-		savingThrowFilterDisabledArray,
-	);
+const SavingThrowFilter = forwardRef(
+	(props: AgGridFilterProps, ref): ReactElement => {
+		const [selectedSavingThrows, setSelectedSavingThrows] = useState<
+			number[]
+		>(savingThrowFilterDisabledArray);
 
-	useEffect(() => {
-		props.filterChangedCallback();
-	}, [selectedSavingThrows]);
+		useEffect(() => {
+			props.filterChangedCallback();
+		}, [selectedSavingThrows]);
 
-	useImperativeHandle(ref, () => {
-		return {
-			doesFilterPass(props: NumberBasedFilterProps) {
+		useImperativeHandle(ref, () => {
+			const doesFilterPass = (props: NumberBasedFilterProps) => {
 				return numberBasedFilterDoesFilterPass(
 					props?.data?.save,
 					selectedSavingThrows,
 				);
-			},
+			};
 
-			isFilterActive() {
+			const isFilterActive = () => {
 				return numberBasedFilterIsFilterActive(
 					selectedSavingThrows.length,
 					savingThrowFilterDisabledArray.length,
 				);
-			},
+			};
 
-			getModel() {
-				if (!this.isFilterActive()) {
+			const getModel = () => {
+				if (!isFilterActive()) {
 					return null;
 				}
 
 				return {
 					value: selectedSavingThrows,
 				};
-			},
+			};
 
-			setModel(model: NumberBasedFilterSetModel) {
+			const setModel = (model: NumberBasedFilterSetModel) => {
 				setSelectedSavingThrows(model?.value ?? []);
-			},
-		};
-	});
+			};
 
-	const handleCheck = (x: SavingThrow): void =>
-		numberBasedFilterHandleCheck(
-			selectedSavingThrows,
-			setSelectedSavingThrows,
-			x,
+			return {
+				doesFilterPass,
+				isFilterActive,
+				getModel,
+				setModel,
+			};
+		});
+
+		const handleCheck = (x: SavingThrow): void =>
+			numberBasedFilterHandleCheck(
+				selectedSavingThrows,
+				setSelectedSavingThrows,
+				x,
+			);
+
+		const isChecked = (x: SavingThrow): boolean | undefined =>
+			numberBasedFilterIsChecked(selectedSavingThrows, x);
+
+		return (
+			<div className="saving-throw-filter">
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(SavingThrow.None)}
+					label={mapNumberToSavingThrowDisplayName(SavingThrow.None)}
+					checked={isChecked(SavingThrow.None)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(SavingThrow.Charisma)}
+					label={mapNumberToSavingThrowDisplayName(
+						SavingThrow.Charisma,
+					)}
+					checked={isChecked(SavingThrow.Charisma)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(SavingThrow.Constitution)}
+					label={mapNumberToSavingThrowDisplayName(
+						SavingThrow.Constitution,
+					)}
+					checked={isChecked(SavingThrow.Constitution)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(SavingThrow.Dexterity)}
+					label={mapNumberToSavingThrowDisplayName(
+						SavingThrow.Dexterity,
+					)}
+					checked={isChecked(SavingThrow.Dexterity)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(SavingThrow.Intelligence)}
+					label={mapNumberToSavingThrowDisplayName(
+						SavingThrow.Intelligence,
+					)}
+					checked={isChecked(SavingThrow.Intelligence)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(SavingThrow.Strength)}
+					label={mapNumberToSavingThrowDisplayName(
+						SavingThrow.Strength,
+					)}
+					checked={isChecked(SavingThrow.Strength)}
+				/>
+				<Form.Check
+					type={"checkbox"}
+					onChange={() => handleCheck(SavingThrow.Wisdom)}
+					label={mapNumberToSavingThrowDisplayName(
+						SavingThrow.Wisdom,
+					)}
+					checked={isChecked(SavingThrow.Wisdom)}
+				/>
+				<Button
+					variant="outline-primary"
+					onClick={() =>
+						setSelectedSavingThrows(savingThrowFilterDisabledArray)
+					}
+				>
+					All
+				</Button>
+				<Button
+					variant="outline-primary"
+					onClick={() => setSelectedSavingThrows([])}
+				>
+					None
+				</Button>
+			</div>
 		);
+	},
+);
 
-	const isChecked = (x: SavingThrow): boolean | undefined =>
-		numberBasedFilterIsChecked(selectedSavingThrows, x);
+SavingThrowFilter.displayName = "SavingThrowFilter";
 
-	return (
-		<div className="saving-throw-filter">
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(SavingThrow.None)}
-				label={mapNumberToSavingThrowDisplayName(SavingThrow.None)}
-				checked={isChecked(SavingThrow.None)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(SavingThrow.Charisma)}
-				label={mapNumberToSavingThrowDisplayName(SavingThrow.Charisma)}
-				checked={isChecked(SavingThrow.Charisma)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(SavingThrow.Constitution)}
-				label={mapNumberToSavingThrowDisplayName(
-					SavingThrow.Constitution,
-				)}
-				checked={isChecked(SavingThrow.Constitution)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(SavingThrow.Dexterity)}
-				label={mapNumberToSavingThrowDisplayName(SavingThrow.Dexterity)}
-				checked={isChecked(SavingThrow.Dexterity)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(SavingThrow.Intelligence)}
-				label={mapNumberToSavingThrowDisplayName(
-					SavingThrow.Intelligence,
-				)}
-				checked={isChecked(SavingThrow.Intelligence)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(SavingThrow.Strength)}
-				label={mapNumberToSavingThrowDisplayName(SavingThrow.Strength)}
-				checked={isChecked(SavingThrow.Strength)}
-			/>
-			<Form.Check
-				type={"checkbox"}
-				onChange={() => handleCheck(SavingThrow.Wisdom)}
-				label={mapNumberToSavingThrowDisplayName(SavingThrow.Wisdom)}
-				checked={isChecked(SavingThrow.Wisdom)}
-			/>
-			<Button
-				variant="outline-primary"
-				onClick={() =>
-					setSelectedSavingThrows(savingThrowFilterDisabledArray)
-				}
-			>
-				All
-			</Button>
-			<Button
-				variant="outline-primary"
-				onClick={() => setSelectedSavingThrows([])}
-			>
-				None
-			</Button>
-		</div>
-	);
-});
+export default SavingThrowFilter;
