@@ -32,6 +32,7 @@ import { Theme } from "../../enums/theme";
 import { ThemeContext } from "../theme-context-provider";
 import { ColumnContext } from "../column-context-provider";
 import { SelectedRowContext } from "../selected-row-context-provider";
+import spellJson from "../../assets/5e-spells.json";
 
 import "./table.scss";
 
@@ -39,9 +40,8 @@ ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
 const Table = (): JSX.Element => {
 	const [spellRows, setSpellRows] = useState<TableRow[] | null>();
-	useMemo(async () => {
-		const data = await import("../../assets/5e-spells.json");
-		setSpellRows(data.spells.map(buildRow));
+	useEffect(() => {
+		setSpellRows(spellJson.spells.map(buildRow));
 	}, []);
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 	const [modalTitle, setModalTitle] = useState<string>("");
