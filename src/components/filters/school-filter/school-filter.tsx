@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -74,12 +75,15 @@ const SchoolFilter = forwardRef(
 			};
 		});
 
-		const handleCheck = (x: School): void =>
-			numberBasedFilterHandleCheck(
-				selectedSchools,
-				setSelectedSchools,
-				x,
-			);
+		const handleCheck = useCallback(
+			(x: School): void =>
+				numberBasedFilterHandleCheck(
+					selectedSchools,
+					setSelectedSchools,
+					x,
+				),
+			[],
+		);
 
 		const isChecked = (x: number): boolean | undefined =>
 			numberBasedFilterIsChecked(selectedSchools, x);
@@ -136,13 +140,20 @@ const SchoolFilter = forwardRef(
 				/>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedSchools(filterDisabledArray)}
+					onClick={() =>
+						useCallback(
+							() => setSelectedSchools(filterDisabledArray),
+							[],
+						)
+					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedSchools([])}
+					onClick={() =>
+						useCallback(() => setSelectedSchools([]), [])
+					}
 				>
 					None
 				</Button>

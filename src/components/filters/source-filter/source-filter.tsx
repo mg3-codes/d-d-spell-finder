@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -74,12 +75,15 @@ const SourceFilter = forwardRef(
 			};
 		});
 
-		const handleCheck = (x: Source): void =>
-			numberBasedFilterHandleCheck(
-				selectedSources,
-				setSelectedSources,
-				x,
-			);
+		const handleCheck = useCallback(
+			(x: Source): void =>
+				numberBasedFilterHandleCheck(
+					selectedSources,
+					setSelectedSources,
+					x,
+				),
+			[],
+		);
 
 		const isChecked = (x: number): boolean | undefined =>
 			numberBasedFilterIsChecked(selectedSources, x);
@@ -164,13 +168,20 @@ const SourceFilter = forwardRef(
 				/>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedSources(filterDisabledArray)}
+					onClick={() =>
+						useCallback(
+							() => setSelectedSources(filterDisabledArray),
+							[],
+						)
+					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedSources([])}
+					onClick={() =>
+						useCallback(() => setSelectedSources([]), [])
+					}
 				>
 					None
 				</Button>

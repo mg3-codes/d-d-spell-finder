@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useContext, useState } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
@@ -23,12 +23,14 @@ const SettingsOffcanvas = (): JSX.Element => {
 	const { currentTheme, setCurrentTheme } = useContext(ThemeContext);
 	const { selectedColumns, handleColumnChange } = useContext(ColumnContext);
 
-	const handleOpen = () => setShow(true);
+	const handleOpen = useCallback(() => setShow(true), []);
 
-	const handleClose = () => setShow(false);
+	const handleClose = useCallback(() => setShow(false), []);
 
-	const handleColumnCheckboxChange = (column: Column): void =>
-		handleColumnChange(column);
+	const handleColumnCheckboxChange = useCallback(
+		(column: Column): void => handleColumnChange(column),
+		[],
+	);
 
 	const isCheckboxChecked = (column: Column): boolean =>
 		selectedColumns.find((value) => value === column) !== undefined;

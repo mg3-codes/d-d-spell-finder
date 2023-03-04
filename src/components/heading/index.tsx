@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useCallback } from "react";
 import Button from "react-bootstrap/Button";
 const PrintModal = React.lazy(() => import("../print-modal"));
 const SettingsOffcanvas = React.lazy(() => import("../settings-offcanvas"));
@@ -14,8 +14,10 @@ const Heading = () => {
 	const { selectedRows } = useContext(SelectedRowContext);
 	const [printModalIsOpen, setPrintModalIsOpen] = useState<boolean>(false);
 
-	const togglePrintModalIsOpen = (): void =>
-		setPrintModalIsOpen(!printModalIsOpen);
+	const togglePrintModalIsOpen = useCallback(
+		(): void => setPrintModalIsOpen(!printModalIsOpen),
+		[],
+	);
 
 	return (
 		<div className="heading">

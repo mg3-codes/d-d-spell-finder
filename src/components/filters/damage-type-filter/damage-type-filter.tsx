@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -75,12 +76,15 @@ const DamageTypeFilter = forwardRef(
 			return { doesFilterPass, isFilterActive, getModel, setModel };
 		});
 
-		const handleCheck = (x: DamageType): void =>
-			numberBasedFilterHandleCheck(
-				selectedDamageTypes,
-				setSelectedDamageTypes,
-				x,
-			);
+		const handleCheck = useCallback(
+			(x: DamageType): void =>
+				numberBasedFilterHandleCheck(
+					selectedDamageTypes,
+					setSelectedDamageTypes,
+					x,
+				),
+			[],
+		);
 
 		const isChecked = (x: DamageType): boolean | undefined =>
 			numberBasedFilterIsChecked(selectedDamageTypes, x);
@@ -184,14 +188,22 @@ const DamageTypeFilter = forwardRef(
 				<Button
 					variant="outline-primary"
 					onClick={() =>
-						setSelectedDamageTypes(damageTypeFilterDisabledArray)
+						useCallback(
+							() =>
+								setSelectedDamageTypes(
+									damageTypeFilterDisabledArray,
+								),
+							[],
+						)
 					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedDamageTypes([])}
+					onClick={() =>
+						useCallback(() => setSelectedDamageTypes([]), [])
+					}
 				>
 					None
 				</Button>

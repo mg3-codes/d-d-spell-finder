@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useState } from "react";
+import React, { useCallback, useState } from "react";
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -22,10 +22,10 @@ const Footer = () => {
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 	const [selectedContent, setSelectedContent] = useState<Content>(0);
 
-	const handleButtonClick = (content: Content): void => {
+	const handleButtonClick = useCallback((content: Content): void => {
 		setSelectedContent(content);
 		setModalIsOpen(true);
-	};
+	}, []);
 
 	return (
 		<div className="footer">
@@ -47,15 +47,22 @@ const Footer = () => {
 			<button
 				className="github-button"
 				onClick={() =>
-					window.open(
-						"https://github.com/mg3-codes/d-d-spell-finder",
-						"_blank",
+					useCallback(
+						() =>
+							window.open(
+								"https://github.com/mg3-codes/d-d-spell-finder",
+								"_blank",
+							),
+						[],
 					)
 				}
 			>
 				<i className="bi bi-github github-icon" />
 			</button>
-			<Modal show={modalIsOpen} onHide={() => setModalIsOpen(false)}>
+			<Modal
+				show={modalIsOpen}
+				onHide={() => useCallback(() => setModalIsOpen(false), [])}
+			>
 				<Modal.Header closeButton>
 					<Modal.Title>
 						{selectedContent === Content.Attribution ? (
@@ -75,7 +82,9 @@ const Footer = () => {
 				<Modal.Footer>
 					<Button
 						variant="outline-secondary"
-						onClick={() => setModalIsOpen(false)}
+						onClick={() =>
+							useCallback(() => setModalIsOpen(false), [])
+						}
 					>
 						Close
 					</Button>

@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -86,12 +87,15 @@ const EffectFilter = forwardRef(
 			};
 		});
 
-		const handleCheck = (x: Effect): void =>
-			numberBasedFilterHandleCheck(
-				selectedEffectTypes,
-				setSelectedEffectTypes,
-				x,
-			);
+		const handleCheck = useCallback(
+			(x: Effect): void =>
+				numberBasedFilterHandleCheck(
+					selectedEffectTypes,
+					setSelectedEffectTypes,
+					x,
+				),
+			[],
+		);
 
 		const isChecked = (x: Effect): boolean | undefined =>
 			numberBasedFilterIsChecked(selectedEffectTypes, x);
@@ -323,14 +327,22 @@ const EffectFilter = forwardRef(
 				<Button
 					variant="outline-primary"
 					onClick={() =>
-						setSelectedEffectTypes(effectFilterDisabledArray)
+						useCallback(
+							() =>
+								setSelectedEffectTypes(
+									effectFilterDisabledArray,
+								),
+							[],
+						)
 					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedEffectTypes([])}
+					onClick={() =>
+						useCallback(() => setSelectedEffectTypes([]), [])
+					}
 				>
 					None
 				</Button>

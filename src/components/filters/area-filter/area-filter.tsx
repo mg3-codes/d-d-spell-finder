@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -58,15 +59,21 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 		props.filterChangedCallback();
 	}, [selectedDistances, selectedShapes]);
 
-	const handleDistanceCheck = (x: Distance): void =>
-		numberBasedFilterHandleCheck(
-			selectedDistances,
-			setSelectedDistances,
-			x,
-		);
+	const handleDistanceCheck = useCallback(
+		(x: Distance): void =>
+			numberBasedFilterHandleCheck(
+				selectedDistances,
+				setSelectedDistances,
+				x,
+			),
+		[],
+	);
 
-	const handleShapeCheck = (x: Shape): void =>
-		numberBasedFilterHandleCheck(selectedShapes, setSelectedShapes, x);
+	const handleShapeCheck = useCallback(
+		(x: Shape): void =>
+			numberBasedFilterHandleCheck(selectedShapes, setSelectedShapes, x),
+		[],
+	);
 
 	const isDistanceChecked = (x: Distance): boolean | undefined =>
 		numberBasedFilterIsChecked(selectedDistances, x);
@@ -83,11 +90,11 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 		return false;
 	};
 
-	const onOverlayToggle = (nextShow: boolean): void => {
+	const onOverlayToggle = useCallback((nextShow: boolean): void => {
 		if (isUnknownDisabled() && nextShow) {
 			setShowOverlay(true);
 		} else setShowOverlay(false);
-	};
+	}, []);
 
 	useImperativeHandle(ref, () => {
 		const doesFilterPass = (props: NumberBasedFilterProps) => {
@@ -272,14 +279,22 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 				<Button
 					variant="outline-primary"
 					onClick={() =>
-						setSelectedDistances(distanceFilterDisabledArray)
+						useCallback(
+							() =>
+								setSelectedDistances(
+									distanceFilterDisabledArray,
+								),
+							[],
+						)
 					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedDistances([])}
+					onClick={() =>
+						useCallback(() => setSelectedDistances([]), [])
+					}
 				>
 					None
 				</Button>
@@ -323,13 +338,18 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 				/>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedShapes(shapeFilterDisabledArray)}
+					onClick={() =>
+						useCallback(
+							() => setSelectedShapes(shapeFilterDisabledArray),
+							[],
+						)
+					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedShapes([])}
+					onClick={() => useCallback(() => setSelectedShapes([]), [])}
 				>
 					None
 				</Button>

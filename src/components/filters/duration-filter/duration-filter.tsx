@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -77,12 +78,15 @@ const DurationFilter = forwardRef(
 			};
 		});
 
-		const handleCheck = (x: number): void =>
-			numberBasedFilterHandleCheck(
-				selectedDurations,
-				setSelectedDurations,
-				x,
-			);
+		const handleCheck = useCallback(
+			(x: number): void =>
+				numberBasedFilterHandleCheck(
+					selectedDurations,
+					setSelectedDurations,
+					x,
+				),
+			[],
+		);
 
 		const isChecked = (x: number): boolean | undefined =>
 			numberBasedFilterIsChecked(selectedDurations, x);
@@ -189,13 +193,20 @@ const DurationFilter = forwardRef(
 				/>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedDurations(filterDisabledArray)}
+					onClick={() =>
+						useCallback(
+							() => setSelectedDurations(filterDisabledArray),
+							[],
+						)
+					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedDurations([])}
+					onClick={() =>
+						useCallback(() => setSelectedDurations([]), [])
+					}
 				>
 					None
 				</Button>

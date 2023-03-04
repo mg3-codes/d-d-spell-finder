@@ -4,7 +4,7 @@
  * @format
  */
 
-import React from "react";
+import React, { useCallback } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
@@ -20,9 +20,13 @@ export const AttributionBody = () => {
 				<Button
 					variant="link"
 					onClick={() =>
-						window.open(
-							"https://dnd.wizards.com/resources/systems-reference-document",
-							"_blank",
+						useCallback(
+							() =>
+								window.open(
+									"https://dnd.wizards.com/resources/systems-reference-document",
+									"_blank",
+								),
+							[],
 						)
 					}
 				>
@@ -34,9 +38,13 @@ export const AttributionBody = () => {
 				<Button
 					variant="link"
 					onClick={() =>
-						window.open(
-							"https://creativecommons.org/licenses/by/4.0/legalcode",
-							"_blank",
+						useCallback(
+							() =>
+								window.open(
+									"https://creativecommons.org/licenses/by/4.0/legalcode",
+									"_blank",
+								),
+							[],
 						)
 					}
 				>

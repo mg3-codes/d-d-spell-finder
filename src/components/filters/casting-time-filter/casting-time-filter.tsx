@@ -7,6 +7,7 @@
 import React, {
 	forwardRef,
 	ReactElement,
+	useCallback,
 	useEffect,
 	useImperativeHandle,
 	useState,
@@ -73,12 +74,15 @@ const CastingTimeFilter = forwardRef(
 			return { doesFilterPass, isFilterActive, getModel, setModel };
 		});
 
-		const handleCheck = (x: CastingTime): void =>
-			numberBasedFilterHandleCheck(
-				selectedCastingTimes,
-				setSelectedCastingTimes,
-				x,
-			);
+		const handleCheck = useCallback(
+			(x: CastingTime): void =>
+				numberBasedFilterHandleCheck(
+					selectedCastingTimes,
+					setSelectedCastingTimes,
+					x,
+				),
+			[],
+		);
 
 		const isChecked = (x: number): boolean | undefined =>
 			numberBasedFilterIsChecked(selectedCastingTimes, x);
@@ -167,13 +171,20 @@ const CastingTimeFilter = forwardRef(
 				/>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedCastingTimes(filterDisabledArray)}
+					onClick={() =>
+						useCallback(
+							() => setSelectedCastingTimes(filterDisabledArray),
+							[],
+						)
+					}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() => setSelectedCastingTimes([])}
+					onClick={() =>
+						useCallback(() => setSelectedCastingTimes([]), [])
+					}
 				>
 					None
 				</Button>
