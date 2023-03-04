@@ -2,7 +2,7 @@
 name: Spell update
 about: Change information on an existing spell or add a new one
 title: ''
-labels: ''
+labels: 'spell update'
 assignees: ''
 
 ---
