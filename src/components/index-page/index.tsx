@@ -11,6 +11,7 @@ const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
 const PrintModal = React.lazy(() => import("../print-modal"));
 const Table = React.lazy(() => import("../table"));
 const SettingsOffcanvas = React.lazy(() => import("../settings-offcanvas"));
+const Footer = React.lazy(() => import("../footer"));
 import { ThemeContext } from "../theme-context-provider";
 
 import { Theme } from "../../enums/theme";
@@ -61,6 +62,7 @@ export const IndexPage = () => {
 					</div>
 				</div>
 				<Table />
+					<Footer />
 			</Suspense>
 		</div>
 	);
