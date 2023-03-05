@@ -52,28 +52,45 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 	const [printError, setPrintError] = useState<boolean>(false);
 	const { currentTheme } = useContext(ThemeContext);
 
+	const clearPrintError = useCallback(() => setPrintError(false), []);
+
 	const handleNumberPerRowClick = useCallback(
-		(selection: number): void => setSelectedNumberPerRow(selection),
+		(e: React.BaseSyntheticEvent): void => {
+			const selection = e.target.getAttribute("data-cards");
+			setSelectedNumberPerRow(selection);
+		},
 		[],
 	);
 
 	const handleExportTypeClick = useCallback(
-		(selection: ExportType): void => setSelectedExportType(selection),
+		(e: React.BaseSyntheticEvent): void => {
+			const exportType: ExportType = e.target.getAttribute("data-type");
+			setSelectedExportType(exportType);
+		},
 		[],
 	);
 
 	const handleRowsPerPageClick = useCallback(
-		(selection: number): void => setSelectedRowsPerPage(selection),
+		(e: React.BaseSyntheticEvent): void => {
+			const selection = parseInt(e.target.getAttribute("data-rows"));
+			setSelectedRowsPerPage(selection);
+		},
 		[],
 	);
 
 	const handlePageSizeClick = useCallback(
-		(selection: PageSize): void => setSelectedPageSize(selection),
+		(e: React.BaseSyntheticEvent): void => {
+			const selection: PageSize = e.target.getAttribute("data-size");
+			setSelectedPageSize(selection);
+		},
 		[],
 	);
 
 	const handleOrientationClick = useCallback(
-		(selection: Orientation): void => setSelectedOrientation(selection),
+		(e: React.BaseSyntheticEvent): void => {
+			const selection = e.target.getAttribute("data-orientation");
+			setSelectedOrientation(selection);
+		},
 		[],
 	);
 
@@ -93,7 +110,7 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 					<Alert
 						variant="danger"
 						dismissible
-						onClose={() => setPrintError(false)}
+						onClose={clearPrintError}
 					>
 						<i className="bi bi-exclamation-triangle" />
 						&nbsp; There was an error printing.
@@ -105,25 +122,21 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 							<Dropdown.Toggle>Export Type</Dropdown.Toggle>
 							<Dropdown.Menu>
 								<Dropdown.Item
-									onClick={() =>
-										handleExportTypeClick(ExportType.Card)
-									}
+									onClick={handleExportTypeClick}
 									active={
 										selectedExportType === ExportType.Card
 									}
+									data-type={ExportType.Card}
 								>
 									{ExportType[ExportType.Card]}
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() =>
-										handleExportTypeClick(
-											ExportType.Spreadsheet,
-										)
-									}
+									onClick={handleExportTypeClick}
 									active={
 										selectedExportType ===
 										ExportType.Spreadsheet
 									}
+									data-type={ExportType.Spreadsheet}
 								>
 									{ExportType[ExportType.Spreadsheet]}
 								</Dropdown.Item>
@@ -141,26 +154,30 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 							</Dropdown.Toggle>
 							<Dropdown.Menu>
 								<Dropdown.Item
-									onClick={() => handleNumberPerRowClick(1)}
+									onClick={handleNumberPerRowClick}
 									active={selectedNumberPerRow === 1}
+									data-cards={1}
 								>
 									1
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() => handleNumberPerRowClick(2)}
+									onClick={handleNumberPerRowClick}
 									active={selectedNumberPerRow === 2}
+									data-cards={2}
 								>
 									2
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() => handleNumberPerRowClick(3)}
+									onClick={handleNumberPerRowClick}
 									active={selectedNumberPerRow === 3}
+									data-cards={3}
 								>
 									3
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() => handleNumberPerRowClick(4)}
+									onClick={handleNumberPerRowClick}
 									active={selectedNumberPerRow === 4}
+									data-cards={4}
 								>
 									4
 								</Dropdown.Item>
@@ -178,26 +195,30 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 							</Dropdown.Toggle>
 							<Dropdown.Menu>
 								<Dropdown.Item
-									onClick={() => handleRowsPerPageClick(1)}
+									onClick={handleRowsPerPageClick}
 									active={selectedRowsPerPage === 1}
+									data-rows={1}
 								>
 									1
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() => handleRowsPerPageClick(2)}
+									onClick={handleRowsPerPageClick}
 									active={selectedRowsPerPage === 2}
+									data-rows={2}
 								>
 									2
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() => handleRowsPerPageClick(3)}
+									onClick={handleRowsPerPageClick}
 									active={selectedRowsPerPage === 3}
+									data-rows={3}
 								>
 									3
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() => handleRowsPerPageClick(4)}
+									onClick={handleRowsPerPageClick}
 									active={selectedRowsPerPage === 4}
+									data-rows={4}
 								>
 									4
 								</Dropdown.Item>
@@ -215,68 +236,60 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 							</Dropdown.Toggle>
 							<Dropdown.Menu>
 								<Dropdown.Item
-									onClick={() =>
-										handlePageSizeClick(PageSize.Letter)
-									}
+									onClick={handlePageSizeClick}
 									active={
 										selectedPageSize === PageSize.Letter
 									}
+									data-size={PageSize.Letter}
 								>
 									{PageSize.Letter}
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() =>
-										handlePageSizeClick(PageSize.Legal)
-									}
+									onClick={handlePageSizeClick}
 									active={selectedPageSize === PageSize.Legal}
+									data-size={PageSize.Legal}
 								>
 									{PageSize.Legal}
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() =>
-										handlePageSizeClick(PageSize.A1)
-									}
+									onClick={handlePageSizeClick}
 									active={selectedPageSize === PageSize.A1}
+									data-size={PageSize.A1}
 								>
 									{PageSize.A1}
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() =>
-										handlePageSizeClick(PageSize.A2)
-									}
+									onClick={handlePageSizeClick}
 									active={selectedPageSize === PageSize.A2}
+									data-size={PageSize.A2}
 								>
 									{PageSize.A2}
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() =>
-										handlePageSizeClick(PageSize.A3)
-									}
+									onClick={handlePageSizeClick}
 									active={selectedPageSize === PageSize.A3}
+									data-size={PageSize.A3}
 								>
 									{PageSize.A3}
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() =>
-										handlePageSizeClick(PageSize.A4)
-									}
+									onClick={handlePageSizeClick}
 									active={selectedPageSize === PageSize.A4}
+									data-size={PageSize.A4}
 								>
 									{PageSize.A4}
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() =>
-										handlePageSizeClick(PageSize.A5)
-									}
+									onClick={handlePageSizeClick}
 									active={selectedPageSize === PageSize.A5}
+									data-size={PageSize.A5}
 								>
 									{PageSize.A5}
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() =>
-										handlePageSizeClick(PageSize.A6)
-									}
+									onClick={handlePageSizeClick}
 									active={selectedPageSize === PageSize.A6}
+									data-size={PageSize.A6}
 								>
 									{PageSize.A6}
 								</Dropdown.Item>
@@ -294,28 +307,22 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 							</Dropdown.Toggle>
 							<Dropdown.Menu>
 								<Dropdown.Item
-									onClick={() =>
-										handleOrientationClick(
-											Orientation.Landscape,
-										)
-									}
+									onClick={handleOrientationClick}
 									active={
 										selectedOrientation ===
 										Orientation.Landscape
 									}
+									data-orientation={Orientation.Landscape}
 								>
 									{Orientation.Landscape}
 								</Dropdown.Item>
 								<Dropdown.Item
-									onClick={() =>
-										handleOrientationClick(
-											Orientation.Portrait,
-										)
-									}
+									onClick={handleOrientationClick}
 									active={
 										selectedOrientation ===
 										Orientation.Portrait
 									}
+									data-orientation={Orientation.Portrait}
 								>
 									{Orientation.Portrait}
 								</Dropdown.Item>
@@ -325,8 +332,8 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 				</div>
 				{rows?.length ? (
 					<Carousel pause="hover">
-						{rows?.map((row, index) => (
-							<Carousel.Item key={index}>
+						{rows?.map((row) => (
+							<Carousel.Item key={`${row.name}-carousel-item`}>
 								<div
 									className={`preview-container ${
 										currentTheme === Theme.Dark
@@ -335,7 +342,10 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 									}`}
 								>
 									<div className="preview">
-										<PrintCard key={index} row={row} />
+										<PrintCard
+											key={`${row.name}-print-card`}
+											row={row}
+										/>
 									</div>
 								</div>
 							</Carousel.Item>

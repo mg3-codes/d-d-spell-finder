@@ -78,14 +78,23 @@ const AttackFilter = forwardRef(
 			};
 		});
 
+		const selectAllAttacks = useCallback(
+			() => setSelectedAttacks(attackFilterDisabledArray),
+			[],
+		);
+
+		const selectNoAttacks = useCallback(() => setSelectedAttacks([]), []);
+
 		const handleCheck = useCallback(
-			(x: Attack): void =>
+			(e: React.BaseSyntheticEvent): void => {
+				const attack = e.target.getAttribute("data-attack") as Attack;
 				numberBasedFilterHandleCheck(
 					selectedAttacks,
 					setSelectedAttacks,
-					x,
-				),
-			[],
+					attack,
+				);
+			},
+			[selectedAttacks],
 		);
 
 		const isChecked = (x: Attack): boolean | undefined =>
@@ -95,39 +104,29 @@ const AttackFilter = forwardRef(
 			<div className="attack-filter">
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Attack.None)}
+					onChange={handleCheck}
 					label={mapNumberToAttackDisplayName(Attack.None)}
 					checked={isChecked(Attack.None)}
+					data-attack={Attack.None}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Attack.Melee)}
+					onChange={handleCheck}
 					label={mapNumberToAttackDisplayName(Attack.Melee)}
 					checked={isChecked(Attack.Melee)}
+					data-attack={Attack.Melee}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Attack.Ranged)}
+					onChange={handleCheck}
 					label={mapNumberToAttackDisplayName(Attack.Ranged)}
 					checked={isChecked(Attack.Ranged)}
+					data-attack={Attack.Ranged}
 				/>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(
-							() => setSelectedAttacks(attackFilterDisabledArray),
-							[],
-						)
-					}
-				>
+				<Button variant="outline-primary" onClick={selectAllAttacks}>
 					All
 				</Button>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(() => setSelectedAttacks([]), [])
-					}
-				>
+				<Button variant="outline-primary" onClick={selectNoAttacks}>
 					None
 				</Button>
 			</div>

@@ -74,14 +74,26 @@ const CastingTimeFilter = forwardRef(
 			return { doesFilterPass, isFilterActive, getModel, setModel };
 		});
 
+		const selectAllCastingTimes = useCallback(
+			() => setSelectedCastingTimes(filterDisabledArray),
+			[],
+		);
+
+		const selectNoCastingTimes = useCallback(
+			() => setSelectedCastingTimes([]),
+			[],
+		);
+
 		const handleCheck = useCallback(
-			(x: CastingTime): void =>
+			(e: React.BaseSyntheticEvent): void => {
+				const castingTime = e.target.getAttribute("data-casting-time");
 				numberBasedFilterHandleCheck(
 					selectedCastingTimes,
 					setSelectedCastingTimes,
-					x,
-				),
-			[],
+					castingTime,
+				);
+			},
+			[selectedCastingTimes],
 		);
 
 		const isChecked = (x: number): boolean | undefined =>
@@ -91,100 +103,103 @@ const CastingTimeFilter = forwardRef(
 			<div className="casting-time-filter">
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(CastingTime.Action)}
+					onChange={handleCheck}
 					label={mapNumberToCastingTimeDisplayName(
 						CastingTime.Action,
 					)}
 					checked={isChecked(CastingTime.Action)}
+					data-casting-time={CastingTime.Action}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(CastingTime.BonusAction)}
+					onChange={handleCheck}
 					label={mapNumberToCastingTimeDisplayName(
 						CastingTime.BonusAction,
 					)}
 					checked={isChecked(CastingTime.BonusAction)}
+					data-casting-time={CastingTime.BonusAction}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(CastingTime.Reaction)}
+					onChange={handleCheck}
 					label={mapNumberToCastingTimeDisplayName(
 						CastingTime.Reaction,
 					)}
 					checked={isChecked(CastingTime.Reaction)}
+					data-casting-time={CastingTime.Reaction}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(CastingTime.OneMinute)}
+					onChange={handleCheck}
 					label={mapNumberToCastingTimeDisplayName(
 						CastingTime.OneMinute,
 					)}
 					checked={isChecked(CastingTime.OneMinute)}
+					data-casting-time={CastingTime.OneMinute}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(CastingTime.TenMinutes)}
+					onChange={handleCheck}
 					label={mapNumberToCastingTimeDisplayName(
 						CastingTime.TenMinutes,
 					)}
 					checked={isChecked(CastingTime.TenMinutes)}
+					data-casting-time={CastingTime.TenMinutes}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(CastingTime.OneHour)}
+					onChange={handleCheck}
 					label={mapNumberToCastingTimeDisplayName(
 						CastingTime.OneHour,
 					)}
 					checked={isChecked(CastingTime.OneHour)}
+					data-casting-time={CastingTime.OneHour}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(CastingTime.EightHours)}
+					onChange={handleCheck}
 					label={mapNumberToCastingTimeDisplayName(
 						CastingTime.EightHours,
 					)}
 					checked={isChecked(CastingTime.EightHours)}
+					data-casting-time={CastingTime.EightHours}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(CastingTime.TwelveHours)}
+					onChange={handleCheck}
 					label={mapNumberToCastingTimeDisplayName(
 						CastingTime.TwelveHours,
 					)}
 					checked={isChecked(CastingTime.TwelveHours)}
+					data-casting-time={CastingTime.TwelveHours}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(CastingTime.TwentyFourHours)}
+					onChange={handleCheck}
 					label={mapNumberToCastingTimeDisplayName(
 						CastingTime.TwentyFourHours,
 					)}
 					checked={isChecked(CastingTime.TwentyFourHours)}
+					data-casting-time={CastingTime.TwentyFourHours}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(CastingTime.Special)}
+					onChange={handleCheck}
 					label={mapNumberToCastingTimeDisplayName(
 						CastingTime.Special,
 					)}
 					checked={isChecked(CastingTime.Special)}
+					data-casting-time={CastingTime.Special}
 				/>
 				<Button
 					variant="outline-primary"
-					onClick={() =>
-						useCallback(
-							() => setSelectedCastingTimes(filterDisabledArray),
-							[],
-						)
-					}
+					onClick={selectAllCastingTimes}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() =>
-						useCallback(() => setSelectedCastingTimes([]), [])
-					}
+					onClick={selectNoCastingTimes}
 				>
 					None
 				</Button>

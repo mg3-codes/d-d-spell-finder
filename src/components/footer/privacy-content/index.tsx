@@ -11,6 +11,24 @@ import Modal from "react-bootstrap/Modal";
 export const PrivacyHeader = () => <Modal.Title>Privacy</Modal.Title>;
 
 export const PrivacyBody = () => {
+	const openSRD = useCallback(
+		() =>
+			window.open(
+				"https://dnd.wizards.com/resources/systems-reference-document",
+				"_blank",
+			),
+		[],
+	);
+
+	const openCreativeCommons = useCallback(
+		() =>
+			window.open(
+				"https://creativecommons.org/licenses/by/4.0/legalcode",
+				"_blank",
+			),
+		[],
+	);
+
 	return (
 		<div>
 			<h1>Privacy Policy of D&D Spell Finder</h1>
@@ -18,19 +36,7 @@ export const PrivacyBody = () => {
 				Michael Gamlem III operates the dnd-spells.mg3.codes website,
 				which provides information from the System Reference Document
 				5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at
-				<Button
-					variant="link"
-					onClick={() =>
-						useCallback(
-							() =>
-								window.open(
-									"https://dnd.wizards.com/resources/systems-reference-document",
-									"_blank",
-								),
-							[],
-						)
-					}
-				>
+				<Button variant="link" onClick={openSRD}>
 					https://dnd.wizards.com/resources/systems-reference-document.&nbsp;
 					<i className="bi bi-box-arrow-up-right" />
 				</Button>{" "}
@@ -39,19 +45,7 @@ export const PrivacyBody = () => {
 			<p>
 				The SRD 5.1 is licensed under the Creative Commons Attribution
 				4.0 International License available at
-				<Button
-					variant="link"
-					onClick={() =>
-						useCallback(
-							() =>
-								window.open(
-									"https://creativecommons.org/licenses/by/4.0/legalcode",
-									"_blank",
-								),
-							[],
-						)
-					}
-				>
+				<Button variant="link" onClick={openCreativeCommons}>
 					https://creativecommons.org/licenses/by/4.0/legalcode.&nbsp;
 					<i className="bi bi-box-arrow-up-right" />
 				</Button>{" "}

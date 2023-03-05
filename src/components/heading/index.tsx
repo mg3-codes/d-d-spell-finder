@@ -16,7 +16,7 @@ const Heading = () => {
 
 	const togglePrintModalIsOpen = useCallback(
 		(): void => setPrintModalIsOpen(!printModalIsOpen),
-		[],
+		[printModalIsOpen],
 	);
 
 	return (
