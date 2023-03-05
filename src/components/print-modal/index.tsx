@@ -325,8 +325,8 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 				</div>
 				{rows?.length ? (
 					<Carousel pause="hover">
-						{rows?.map((row, index) => (
-							<Carousel.Item key={index}>
+						{rows?.map((row) => (
+							<Carousel.Item key={`${row.name}-carousel-item`}>
 								<div
 									className={`preview-container ${
 										currentTheme === Theme.Dark
@@ -335,7 +335,10 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 									}`}
 								>
 									<div className="preview">
-										<PrintCard key={index} row={row} />
+										<PrintCard
+											key={`${row.name}-print-card`}
+											row={row}
+										/>
 									</div>
 								</div>
 							</Carousel.Item>
