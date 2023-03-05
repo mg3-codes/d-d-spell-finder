@@ -22,10 +22,24 @@ const Footer = () => {
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 	const [selectedContent, setSelectedContent] = useState<Content>(0);
 
-	const handleButtonClick = useCallback((content: Content): void => {
-		setSelectedContent(content);
-		setModalIsOpen(true);
-	}, []);
+	const handleButtonClick = useCallback(
+		(e: React.BaseSyntheticEvent): void => {
+			setSelectedContent(parseInt(e.target.getAttribute("data-type")));
+			setModalIsOpen(true);
+		},
+		[],
+	);
+
+	const openGithub = useCallback(
+		() =>
+			window.open(
+				"https://github.com/mg3-codes/d-d-spell-finder",
+				"_blank",
+			),
+		[],
+	);
+
+	const closeModal = useCallback(() => setModalIsOpen(false), []);
 
 	return (
 		<div className="footer">
@@ -33,36 +47,23 @@ const Footer = () => {
 			<div>
 				<Button
 					variant="link"
-					onClick={() => handleButtonClick(Content.Attribution)}
+					onClick={handleButtonClick}
+					data-type={Content.Attribution}
 				>
 					Attribution
 				</Button>
 				<Button
 					variant="link"
-					onClick={() => handleButtonClick(Content.Privacy)}
+					onClick={handleButtonClick}
+					data-type={Content.Privacy}
 				>
 					Privacy
 				</Button>
 			</div>
-			<button
-				className="github-button"
-				onClick={() =>
-					useCallback(
-						() =>
-							window.open(
-								"https://github.com/mg3-codes/d-d-spell-finder",
-								"_blank",
-							),
-						[],
-					)
-				}
-			>
+			<button className="github-button" onClick={openGithub}>
 				<i className="bi bi-github github-icon" />
 			</button>
-			<Modal
-				show={modalIsOpen}
-				onHide={() => useCallback(() => setModalIsOpen(false), [])}
-			>
+			<Modal show={modalIsOpen} onHide={closeModal}>
 				<Modal.Header closeButton>
 					<Modal.Title>
 						{selectedContent === Content.Attribution ? (
@@ -80,12 +81,7 @@ const Footer = () => {
 					)}
 				</Modal.Body>
 				<Modal.Footer>
-					<Button
-						variant="outline-secondary"
-						onClick={() =>
-							useCallback(() => setModalIsOpen(false), [])
-						}
-					>
+					<Button variant="outline-secondary" onClick={closeModal}>
 						Close
 					</Button>
 				</Modal.Footer>

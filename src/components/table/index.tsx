@@ -80,7 +80,7 @@ const Table = (): JSX.Element => {
 		} catch (e) {
 			console.error("error updating selected rows", e);
 		}
-	}, []);
+	}, [selectedRows]);
 
 	const startingColumnDefinition = useMemo<ColDef[]>(
 		() =>

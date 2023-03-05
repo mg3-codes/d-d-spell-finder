@@ -87,14 +87,26 @@ const EffectFilter = forwardRef(
 			};
 		});
 
+		const selectAllEffects = useCallback(
+			() => setSelectedEffectTypes(effectFilterDisabledArray),
+			[],
+		);
+
+		const selectNoEffects = useCallback(
+			() => setSelectedEffectTypes([]),
+			[],
+		);
+
 		const handleCheck = useCallback(
-			(x: Effect): void =>
+			(e: React.BaseSyntheticEvent): void => {
+				const effect = e.target.getAttribute("data-effect");
 				numberBasedFilterHandleCheck(
 					selectedEffectTypes,
 					setSelectedEffectTypes,
-					x,
-				),
-			[],
+					effect,
+				);
+			},
+			[selectedEffectTypes],
 		);
 
 		const isChecked = (x: Effect): boolean | undefined =>
@@ -104,246 +116,260 @@ const EffectFilter = forwardRef(
 			<div className="effect-filter">
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.None)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.None)}
 					checked={isChecked(Effect.None)}
+					data-effect={Effect.None}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Additional)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Additional)}
 					checked={isChecked(Effect.Additional)}
+					data-effect={Effect.Additional}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Banishment)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Banishment)}
 					checked={isChecked(Effect.Banishment)}
+					data-effect={Effect.Banishment}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Blinded)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Blinded)}
 					checked={isChecked(Effect.Blinded)}
+					data-effect={Effect.Blinded}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Buff)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Buff)}
 					checked={isChecked(Effect.Buff)}
+					data-effect={Effect.Buff}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Charmed)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Charmed)}
 					checked={isChecked(Effect.Charmed)}
+					data-effect={Effect.Charmed}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Combat)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Combat)}
 					checked={isChecked(Effect.Combat)}
+					data-effect={Effect.Combat}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Communication)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Communication)}
 					checked={isChecked(Effect.Communication)}
+					data-effect={Effect.Communication}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Control)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Control)}
 					checked={isChecked(Effect.Control)}
+					data-effect={Effect.Control}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Creation)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Creation)}
 					checked={isChecked(Effect.Creation)}
+					data-effect={Effect.Creation}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Deafened)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Deafened)}
 					checked={isChecked(Effect.Deafened)}
+					data-effect={Effect.Deafened}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Debuff)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Debuff)}
 					checked={isChecked(Effect.Debuff)}
+					data-effect={Effect.Debuff}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Deception)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Deception)}
 					checked={isChecked(Effect.Deception)}
+					data-effect={Effect.Deception}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Detection)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Detection)}
 					checked={isChecked(Effect.Detection)}
+					data-effect={Effect.Detection}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Detection)}
-					label={mapEffectToDisplayName(Effect.Detection)}
-					checked={isChecked(Effect.Detection)}
-				/>
-				<Form.Check
-					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Distracted)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Distracted)}
 					checked={isChecked(Effect.Distracted)}
+					data-effect={Effect.Distracted}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Dunamancy)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Dunamancy)}
 					checked={isChecked(Effect.Dunamancy)}
+					data-effect={Effect.Dunamancy}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Environment)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Environment)}
 					checked={isChecked(Effect.Environment)}
+					data-effect={Effect.Environment}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Exploration)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Exploration)}
 					checked={isChecked(Effect.Exploration)}
+					data-effect={Effect.Exploration}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Foreknowledge)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Foreknowledge)}
 					checked={isChecked(Effect.Foreknowledge)}
+					data-effect={Effect.Foreknowledge}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Frightened)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Frightened)}
 					checked={isChecked(Effect.Frightened)}
+					data-effect={Effect.Frightened}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Healing)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Healing)}
 					checked={isChecked(Effect.Healing)}
+					data-effect={Effect.Healing}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Invisible)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Invisible)}
 					checked={isChecked(Effect.Invisible)}
+					data-effect={Effect.Invisible}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Movement)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Movement)}
 					checked={isChecked(Effect.Movement)}
+					data-effect={Effect.Movement}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Negation)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Negation)}
 					checked={isChecked(Effect.Negation)}
+					data-effect={Effect.Negation}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Paralyzed)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Paralyzed)}
 					checked={isChecked(Effect.Paralyzed)}
+					data-effect={Effect.Paralyzed}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Petrified)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Petrified)}
 					checked={isChecked(Effect.Petrified)}
+					data-effect={Effect.Petrified}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Prone)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Prone)}
 					checked={isChecked(Effect.Prone)}
+					data-effect={Effect.Prone}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Restrained)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Restrained)}
 					checked={isChecked(Effect.Restrained)}
+					data-effect={Effect.Restrained}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Shapechanging)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Shapechanging)}
 					checked={isChecked(Effect.Shapechanging)}
+					data-effect={Effect.Shapechanging}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Social)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Social)}
 					checked={isChecked(Effect.Social)}
+					data-effect={Effect.Social}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Stunned)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Stunned)}
 					checked={isChecked(Effect.Stunned)}
+					data-effect={Effect.Stunned}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Summoning)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Summoning)}
 					checked={isChecked(Effect.Summoning)}
+					data-effect={Effect.Summoning}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Teleportation)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Teleportation)}
 					checked={isChecked(Effect.Teleportation)}
+					data-effect={Effect.Teleportation}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Unconscious)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Unconscious)}
 					checked={isChecked(Effect.Unconscious)}
+					data-effect={Effect.Unconscious}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Utility)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Utility)}
 					checked={isChecked(Effect.Utility)}
+					data-effect={Effect.Utility}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Effect.Warding)}
+					onChange={handleCheck}
 					label={mapEffectToDisplayName(Effect.Warding)}
 					checked={isChecked(Effect.Warding)}
+					data-effect={Effect.Warding}
 				/>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(
-							() =>
-								setSelectedEffectTypes(
-									effectFilterDisabledArray,
-								),
-							[],
-						)
-					}
-				>
+				<Button variant="outline-primary" onClick={selectAllEffects}>
 					All
 				</Button>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(() => setSelectedEffectTypes([]), [])
-					}
-				>
+				<Button variant="outline-primary" onClick={selectNoEffects}>
 					None
 				</Button>
 			</div>

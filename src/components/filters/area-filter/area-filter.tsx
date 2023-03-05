@@ -60,20 +60,35 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 	}, [selectedDistances, selectedShapes]);
 
 	const handleDistanceCheck = useCallback(
-		(x: Distance): void =>
+		(e: React.BaseSyntheticEvent): void => {
+			const distance: Distance = e.target.getAttribute("data-shape");
 			numberBasedFilterHandleCheck(
 				selectedDistances,
 				setSelectedDistances,
-				x,
-			),
-		[],
+				distance,
+			);
+		},
+		[selectedDistances],
 	);
 
 	const handleShapeCheck = useCallback(
-		(x: Shape): void =>
-			numberBasedFilterHandleCheck(selectedShapes, setSelectedShapes, x),
+		(e: React.BaseSyntheticEvent): void => {
+			const shape: Shape = e.target.getAttribute("data-shape");
+			numberBasedFilterHandleCheck(
+				selectedShapes,
+				setSelectedShapes,
+				shape,
+			);
+		},
+		[selectedShapes],
+	);
+
+	const selectAllShapes = useCallback(
+		() => setSelectedShapes(shapeFilterDisabledArray),
 		[],
 	);
+
+	const selectNoShapes = useCallback(() => setSelectedShapes([]), []);
 
 	const isDistanceChecked = (x: Distance): boolean | undefined =>
 		numberBasedFilterIsChecked(selectedDistances, x);
@@ -84,7 +99,11 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 	const isUnknownDisabled = (): boolean => {
 		if (selectedShapes.length !== shapeFilterDisabledArray.length) {
 			if (isDistanceChecked(Distance.Unknown))
-				handleDistanceCheck(Distance.Unknown);
+				numberBasedFilterHandleCheck(
+					selectedShapes,
+					setSelectedShapes,
+					Distance.Unknown,
+				);
 			return true;
 		}
 		return false;
@@ -169,112 +188,124 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 					<div>
 						<Form.Check
 							type={"checkbox"}
-							onChange={() =>
-								handleDistanceCheck(Distance.Unknown)
-							}
+							onChange={handleDistanceCheck}
 							label={mapNumberToDistanceDisplayName(
 								Distance.Unknown,
 							)}
 							checked={isDistanceChecked(Distance.Unknown)}
 							disabled={isUnknownDisabled()}
+							data-distance={Distance.Unknown}
 						/>
 					</div>
 				</OverlayTrigger>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.One)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.One)}
 					checked={isDistanceChecked(Distance.One)}
+					data-distance={Distance.One}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.Five)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.Five)}
 					checked={isDistanceChecked(Distance.Five)}
+					data-distance={Distance.Five}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.Ten)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.Ten)}
 					checked={isDistanceChecked(Distance.Ten)}
+					data-distance={Distance.Ten}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.Fifteen)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.Fifteen)}
 					checked={isDistanceChecked(Distance.Fifteen)}
+					data-distance={Distance.Fifteen}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.Twenty)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.Twenty)}
 					checked={isDistanceChecked(Distance.Twenty)}
+					data-distance={Distance.Twenty}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.Thirty)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.Thirty)}
 					checked={isDistanceChecked(Distance.Thirty)}
+					data-distance={Distance.Thirty}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.Forty)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.Forty)}
 					checked={isDistanceChecked(Distance.Forty)}
+					data-distance={Distance.Forty}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.Fifty)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.Fifty)}
 					checked={isDistanceChecked(Distance.Fifty)}
+					data-distance={Distance.Fifty}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.Sixty)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.Sixty)}
 					checked={isDistanceChecked(Distance.Sixty)}
+					data-distance={Distance.Sixty}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.OneHundred)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.OneHundred)}
 					checked={isDistanceChecked(Distance.OneHundred)}
+					data-distance={Distance.OneHundred}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.TwoHundred)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.TwoHundred)}
 					checked={isDistanceChecked(Distance.TwoHundred)}
+					data-distance={Distance.TwoHundred}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() =>
-						handleDistanceCheck(Distance.TwoThousandFiveHundred)
-					}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(
 						Distance.TwoThousandFiveHundred,
 					)}
 					checked={isDistanceChecked(Distance.TwoThousandFiveHundred)}
+					data-distance={Distance.TwoThousandFiveHundred}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.OneMile)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.OneMile)}
 					checked={isDistanceChecked(Distance.OneMile)}
+					data-distance={Distance.OneMile}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.FiveMiles)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(Distance.FiveMiles)}
 					checked={isDistanceChecked(Distance.FiveMiles)}
+					data-distance={Distance.FiveMiles}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleDistanceCheck(Distance.FortyThousand)}
+					onChange={handleDistanceCheck}
 					label={mapNumberToDistanceDisplayName(
 						Distance.FortyThousand,
 					)}
 					checked={isDistanceChecked(Distance.FortyThousand)}
+					data-distance={Distance.FortyThousand}
 				/>
 				<Button
 					variant="outline-primary"
@@ -302,55 +333,50 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 			<div className="shapes">
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleShapeCheck(Shape.Cube)}
+					onChange={handleShapeCheck}
 					label={mapNumberToShapeDisplayName(Shape.Cube)}
 					checked={isShapeChecked(Shape.Cube)}
+					data-shape={Shape.Cube}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleShapeCheck(Shape.Square)}
+					onChange={handleShapeCheck}
 					label={mapNumberToShapeDisplayName(Shape.Square)}
 					checked={isShapeChecked(Shape.Square)}
+					data-shape={Shape.Square}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleShapeCheck(Shape.Sphere)}
+					onChange={handleShapeCheck}
 					label={mapNumberToShapeDisplayName(Shape.Sphere)}
 					checked={isShapeChecked(Shape.Sphere)}
+					data-shape={Shape.Sphere}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleShapeCheck(Shape.Cylinder)}
+					onChange={handleShapeCheck}
 					label={mapNumberToShapeDisplayName(Shape.Cylinder)}
 					checked={isShapeChecked(Shape.Cylinder)}
+					data-shape={Shape.Cylinder}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleShapeCheck(Shape.Cone)}
+					onChange={handleShapeCheck}
 					label={mapNumberToShapeDisplayName(Shape.Cone)}
 					checked={isShapeChecked(Shape.Cone)}
+					data-shape={Shape.Cone}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleShapeCheck(Shape.Line)}
+					onChange={handleShapeCheck}
 					label={mapNumberToShapeDisplayName(Shape.Line)}
 					checked={isShapeChecked(Shape.Line)}
+					data-shape={Shape.Line}
 				/>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(
-							() => setSelectedShapes(shapeFilterDisabledArray),
-							[],
-						)
-					}
-				>
+				<Button variant="outline-primary" onClick={selectAllShapes}>
 					All
 				</Button>
-				<Button
-					variant="outline-primary"
-					onClick={() => useCallback(() => setSelectedShapes([]), [])}
-				>
+				<Button variant="outline-primary" onClick={selectNoShapes}>
 					None
 				</Button>
 			</div>

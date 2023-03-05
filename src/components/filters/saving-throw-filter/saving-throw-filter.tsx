@@ -81,14 +81,26 @@ const SavingThrowFilter = forwardRef(
 			};
 		});
 
+		const selectAllSavingThrows = useCallback(
+			() => setSelectedSavingThrows(savingThrowFilterDisabledArray),
+			[],
+		);
+
+		const selectNoSavingThrows = useCallback(
+			() => setSelectedSavingThrows([]),
+			[],
+		);
+
 		const handleCheck = useCallback(
-			(x: SavingThrow): void =>
+			(e: React.BaseSyntheticEvent): void => {
+				const savingThrow = e.target.getAttribute("data-throw");
 				numberBasedFilterHandleCheck(
 					selectedSavingThrows,
 					setSelectedSavingThrows,
-					x,
-				),
-			[],
+					savingThrow,
+				);
+			},
+			[selectedSavingThrows],
 		);
 
 		const isChecked = (x: SavingThrow): boolean | undefined =>
@@ -98,77 +110,74 @@ const SavingThrowFilter = forwardRef(
 			<div className="saving-throw-filter">
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(SavingThrow.None)}
+					onChange={handleCheck}
 					label={mapNumberToSavingThrowDisplayName(SavingThrow.None)}
 					checked={isChecked(SavingThrow.None)}
+					data-throw={SavingThrow.None}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(SavingThrow.Charisma)}
+					onChange={handleCheck}
 					label={mapNumberToSavingThrowDisplayName(
 						SavingThrow.Charisma,
 					)}
 					checked={isChecked(SavingThrow.Charisma)}
+					data-throw={SavingThrow.Charisma}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(SavingThrow.Constitution)}
+					onChange={handleCheck}
 					label={mapNumberToSavingThrowDisplayName(
 						SavingThrow.Constitution,
 					)}
 					checked={isChecked(SavingThrow.Constitution)}
+					data-throw={SavingThrow.Constitution}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(SavingThrow.Dexterity)}
+					onChange={handleCheck}
 					label={mapNumberToSavingThrowDisplayName(
 						SavingThrow.Dexterity,
 					)}
 					checked={isChecked(SavingThrow.Dexterity)}
+					data-throw={SavingThrow.Dexterity}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(SavingThrow.Intelligence)}
+					onChange={handleCheck}
 					label={mapNumberToSavingThrowDisplayName(
 						SavingThrow.Intelligence,
 					)}
 					checked={isChecked(SavingThrow.Intelligence)}
+					data-throw={SavingThrow.Intelligence}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(SavingThrow.Strength)}
+					onChange={handleCheck}
 					label={mapNumberToSavingThrowDisplayName(
 						SavingThrow.Strength,
 					)}
 					checked={isChecked(SavingThrow.Strength)}
+					data-throw={SavingThrow.Strength}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(SavingThrow.Wisdom)}
+					onChange={handleCheck}
 					label={mapNumberToSavingThrowDisplayName(
 						SavingThrow.Wisdom,
 					)}
 					checked={isChecked(SavingThrow.Wisdom)}
+					data-throw={SavingThrow.Wisdom}
 				/>
 				<Button
 					variant="outline-primary"
-					onClick={() =>
-						useCallback(
-							() =>
-								setSelectedSavingThrows(
-									savingThrowFilterDisabledArray,
-								),
-							[],
-						)
-					}
+					onClick={selectAllSavingThrows}
 				>
 					All
 				</Button>
 				<Button
 					variant="outline-primary"
-					onClick={() =>
-						useCallback(() => setSelectedSavingThrows([]), [])
-					}
+					onClick={selectNoSavingThrows}
 				>
 					None
 				</Button>

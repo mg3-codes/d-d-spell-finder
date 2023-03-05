@@ -75,14 +75,23 @@ const SourceFilter = forwardRef(
 			};
 		});
 
+		const selectAllSources = useCallback(
+			() => setSelectedSources(filterDisabledArray),
+			[],
+		);
+
+		const selectNoSources = useCallback(() => setSelectedSources([]), []);
+
 		const handleCheck = useCallback(
-			(x: Source): void =>
+			(e: React.BaseSyntheticEvent): void => {
+				const source = e.target.getAttribute("data-source");
 				numberBasedFilterHandleCheck(
 					selectedSources,
 					setSelectedSources,
-					x,
-				),
-			[],
+					source,
+				);
+			},
+			[selectedSources],
 		);
 
 		const isChecked = (x: number): boolean | undefined =>
@@ -92,97 +101,83 @@ const SourceFilter = forwardRef(
 			<div className="source-filter">
 				<Form.Check
 					type={"checkbox"}
-					onChange={() =>
-						handleCheck(Source.AcquisitionsIncorporated)
-					}
+					onChange={handleCheck}
 					label={mapNumberToSourceDisplayName(
 						Source.AcquisitionsIncorporated,
 					)}
 					checked={isChecked(Source.AcquisitionsIncorporated)}
+					data-source={Source.AcquisitionsIncorporated}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Source.BasicRules)}
+					onChange={handleCheck}
 					label={mapNumberToSourceDisplayName(Source.BasicRules)}
 					checked={isChecked(Source.BasicRules)}
+					data-source={Source.BasicRules}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Source.ElementalEvil)}
+					onChange={handleCheck}
 					label={mapNumberToSourceDisplayName(Source.ElementalEvil)}
 					checked={isChecked(Source.ElementalEvil)}
+					data-source={Source.ElementalEvil}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() =>
-						handleCheck(Source.ExplorersGuideToWildemount)
-					}
+					onChange={handleCheck}
 					label={mapNumberToSourceDisplayName(
 						Source.ExplorersGuideToWildemount,
 					)}
 					checked={isChecked(Source.ExplorersGuideToWildemount)}
+					data-source={Source.ExplorersGuideToWildemount}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() =>
-						handleCheck(Source.GuildmastersGuideToRavnica)
-					}
+					onChange={handleCheck}
 					label={mapNumberToSourceDisplayName(
 						Source.GuildmastersGuideToRavnica,
 					)}
 					checked={isChecked(Source.GuildmastersGuideToRavnica)}
+					data-source={Source.GuildmastersGuideToRavnica}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Source.LostLaboratoryOfKwalish)}
+					onChange={handleCheck}
 					label={mapNumberToSourceDisplayName(
 						Source.LostLaboratoryOfKwalish,
 					)}
 					checked={isChecked(Source.LostLaboratoryOfKwalish)}
+					data-source={Source.LostLaboratoryOfKwalish}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(Source.PlayersHandbook)}
+					onChange={handleCheck}
 					label={mapNumberToSourceDisplayName(Source.PlayersHandbook)}
 					checked={isChecked(Source.PlayersHandbook)}
+					data-source={Source.PlayersHandbook}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() =>
-						handleCheck(Source.TashasCauldronOfEverything)
-					}
+					onChange={handleCheck}
 					label={mapNumberToSourceDisplayName(
 						Source.TashasCauldronOfEverything,
 					)}
 					checked={isChecked(Source.TashasCauldronOfEverything)}
+					data-source={Source.TashasCauldronOfEverything}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() =>
-						handleCheck(Source.XanatharsGuideToEverything)
-					}
+					onChange={handleCheck}
 					label={mapNumberToSourceDisplayName(
 						Source.XanatharsGuideToEverything,
 					)}
 					checked={isChecked(Source.XanatharsGuideToEverything)}
+					data-source={Source.XanatharsGuideToEverything}
 				/>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(
-							() => setSelectedSources(filterDisabledArray),
-							[],
-						)
-					}
-				>
+				<Button variant="outline-primary" onClick={selectAllSources}>
 					All
 				</Button>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(() => setSelectedSources([]), [])
-					}
-				>
+				<Button variant="outline-primary" onClick={selectNoSources}>
 					None
 				</Button>
 			</div>

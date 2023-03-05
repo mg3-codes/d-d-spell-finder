@@ -75,14 +75,23 @@ const SchoolFilter = forwardRef(
 			};
 		});
 
+		const selectAllSchools = useCallback(
+			() => setSelectedSchools(filterDisabledArray),
+			[],
+		);
+
+		const selectNoSchools = useCallback(() => setSelectedSchools([]), []);
+
 		const handleCheck = useCallback(
-			(x: School): void =>
+			(e: React.BaseSyntheticEvent): void => {
+				const school = e.target.getAttribute("data-school");
 				numberBasedFilterHandleCheck(
 					selectedSchools,
 					setSelectedSchools,
-					x,
-				),
-			[],
+					school,
+				);
+			},
+			[selectedSchools],
 		);
 
 		const isChecked = (x: number): boolean | undefined =>
@@ -92,69 +101,64 @@ const SchoolFilter = forwardRef(
 			<div className="school-filter">
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(School.Abjuration)}
+					onChange={handleCheck}
 					label={mapNumberToSchoolDisplayName(School.Abjuration)}
 					checked={isChecked(School.Abjuration)}
+					data-school={School.Abjuration}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(School.Conjuration)}
+					onChange={handleCheck}
 					label={mapNumberToSchoolDisplayName(School.Conjuration)}
 					checked={isChecked(School.Conjuration)}
+					data-school={School.Conjuration}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(School.Divination)}
+					onChange={handleCheck}
 					label={mapNumberToSchoolDisplayName(School.Divination)}
 					checked={isChecked(School.Divination)}
+					data-school={School.Divination}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(School.Enchantment)}
+					onChange={handleCheck}
 					label={mapNumberToSchoolDisplayName(School.Enchantment)}
 					checked={isChecked(School.Enchantment)}
+					data-school={School.Enchantment}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(School.Evocation)}
+					onChange={handleCheck}
 					label={mapNumberToSchoolDisplayName(School.Evocation)}
 					checked={isChecked(School.Evocation)}
+					data-school={School.Evocation}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(School.Illusion)}
+					onChange={handleCheck}
 					label={mapNumberToSchoolDisplayName(School.Illusion)}
 					checked={isChecked(School.Illusion)}
+					data-school={School.Illusion}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(School.Necromancy)}
+					onChange={handleCheck}
 					label={mapNumberToSchoolDisplayName(School.Necromancy)}
 					checked={isChecked(School.Necromancy)}
+					data-school={School.Necromancy}
 				/>
 				<Form.Check
 					type={"checkbox"}
-					onChange={() => handleCheck(School.Transmutation)}
+					onChange={handleCheck}
 					label={mapNumberToSchoolDisplayName(School.Transmutation)}
 					checked={isChecked(School.Transmutation)}
+					data-school={School.Transmutation}
 				/>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(
-							() => setSelectedSchools(filterDisabledArray),
-							[],
-						)
-					}
-				>
+				<Button variant="outline-primary" onClick={selectAllSchools}>
 					All
 				</Button>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(() => setSelectedSchools([]), [])
-					}
-				>
+				<Button variant="outline-primary" onClick={selectNoSchools}>
 					None
 				</Button>
 			</div>
