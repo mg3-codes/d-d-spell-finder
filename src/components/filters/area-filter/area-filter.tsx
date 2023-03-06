@@ -71,6 +71,13 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 		[selectedDistances],
 	);
 
+	const selectAllDistances = useCallback(
+		() => setSelectedDistances(distanceFilterDisabledArray),
+		[],
+	);
+
+	const selectNoDistances = useCallback(() => setSelectedDistances([]), []);
+
 	const handleShapeCheck = useCallback(
 		(e: React.BaseSyntheticEvent): void => {
 			const shape: Shape = e.target.getAttribute("data-shape");
@@ -307,26 +314,10 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 					checked={isDistanceChecked(Distance.FortyThousand)}
 					data-distance={Distance.FortyThousand}
 				/>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(
-							() =>
-								setSelectedDistances(
-									distanceFilterDisabledArray,
-								),
-							[],
-						)
-					}
-				>
+				<Button variant="outline-primary" onClick={selectAllDistances}>
 					All
 				</Button>
-				<Button
-					variant="outline-primary"
-					onClick={() =>
-						useCallback(() => setSelectedDistances([]), [])
-					}
-				>
+				<Button variant="outline-primary" onClick={selectNoDistances}>
 					None
 				</Button>
 			</div>
