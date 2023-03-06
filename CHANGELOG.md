@@ -7,6 +7,7 @@
 -   Remove unused grid export option
 -   Make grid shorter so that footer stays in view
 -   Add `postcss` to fix missing dev peer dependency
+-   Fix hook use violations
 
 ## 0.1.3
 
