@@ -21,11 +21,6 @@ import { TableRow } from "../../types/table-row";
 
 import "./print-modal.scss";
 
-enum ExportType {
-	Card = "Card",
-	Spreadsheet = "Spreadsheet",
-}
-
 enum Orientation {
 	Portrait = "Portrait",
 	Landscape = "Landscape",
@@ -38,9 +33,6 @@ export interface IPrintModalProps {
 }
 
 const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
-	const [selectedExportType, setSelectedExportType] = useState<ExportType>(
-		ExportType.Card,
-	);
 	const [selectedNumberPerRow, setSelectedNumberPerRow] = useState<number>(3);
 	const [selectedRowsPerPage, setSelectedRowsPerPage] = useState<number>(2);
 	const [selectedPageSize, setSelectedPageSize] = useState<PageSize>(
@@ -58,14 +50,6 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 		(e: React.BaseSyntheticEvent): void => {
 			const selection = e.target.getAttribute("data-cards");
 			setSelectedNumberPerRow(selection);
-		},
-		[],
-	);
-
-	const handleExportTypeClick = useCallback(
-		(e: React.BaseSyntheticEvent): void => {
-			const exportType: ExportType = e.target.getAttribute("data-type");
-			setSelectedExportType(exportType);
 		},
 		[],
 	);
@@ -119,39 +103,7 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 				<div className="options">
 					<div className="option">
 						<Dropdown>
-							<Dropdown.Toggle>Export Type</Dropdown.Toggle>
-							<Dropdown.Menu>
-								<Dropdown.Item
-									onClick={handleExportTypeClick}
-									active={
-										selectedExportType === ExportType.Card
-									}
-									data-type={ExportType.Card}
-								>
-									{ExportType[ExportType.Card]}
-								</Dropdown.Item>
-								<Dropdown.Item
-									onClick={handleExportTypeClick}
-									active={
-										selectedExportType ===
-										ExportType.Spreadsheet
-									}
-									data-type={ExportType.Spreadsheet}
-								>
-									{ExportType[ExportType.Spreadsheet]}
-								</Dropdown.Item>
-							</Dropdown.Menu>
-						</Dropdown>
-					</div>
-					<div className="option">
-						<Dropdown>
-							<Dropdown.Toggle
-								disabled={
-									selectedExportType !== ExportType.Card
-								}
-							>
-								Cards per Row
-							</Dropdown.Toggle>
+							<Dropdown.Toggle>Cards per Row</Dropdown.Toggle>
 							<Dropdown.Menu>
 								<Dropdown.Item
 									onClick={handleNumberPerRowClick}
@@ -186,13 +138,7 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 					</div>
 					<div className="option">
 						<Dropdown>
-							<Dropdown.Toggle
-								disabled={
-									selectedExportType !== ExportType.Card
-								}
-							>
-								Rows Per Page
-							</Dropdown.Toggle>
+							<Dropdown.Toggle>Rows Per Page</Dropdown.Toggle>
 							<Dropdown.Menu>
 								<Dropdown.Item
 									onClick={handleRowsPerPageClick}
@@ -227,13 +173,7 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 					</div>
 					<div className="option">
 						<Dropdown>
-							<Dropdown.Toggle
-								disabled={
-									selectedExportType !== ExportType.Card
-								}
-							>
-								Page Size
-							</Dropdown.Toggle>
+							<Dropdown.Toggle>Page Size</Dropdown.Toggle>
 							<Dropdown.Menu>
 								<Dropdown.Item
 									onClick={handlePageSizeClick}
@@ -298,13 +238,7 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 					</div>
 					<div className="option">
 						<Dropdown>
-							<Dropdown.Toggle
-								disabled={
-									selectedExportType !== ExportType.Card
-								}
-							>
-								Orientation
-							</Dropdown.Toggle>
+							<Dropdown.Toggle>Orientation</Dropdown.Toggle>
 							<Dropdown.Menu>
 								<Dropdown.Item
 									onClick={handleOrientationClick}
