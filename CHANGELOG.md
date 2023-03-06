@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.1.5
+
+-   Update favicon
+
 ## 0.1.4
 
 -   Remove unused grid export option
