@@ -32,6 +32,8 @@ export enum Range {
 	Unlimited = 24,
 }
 
+// function requires complexity to map all values
+// skipcq: JS-0044
 export const mapNumberToRange = (x: number): number | null => {
 	switch (x) {
 		case 0:
@@ -89,6 +91,8 @@ export const mapNumberToRange = (x: number): number | null => {
 	}
 };
 
+// function requires complexity to map all values
+// skipcq: JS-0044
 export const mapNumberToRangeDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:
