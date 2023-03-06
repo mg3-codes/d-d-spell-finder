@@ -43,6 +43,8 @@ export enum Effect {
 	Warding = 32,
 }
 
+// function requires complexity to map all values
+// skipcq: JS-0044
 export const mapNumberToEffect = (x: number): Effect | null => {
 	switch (x) {
 		case 0:
@@ -122,6 +124,8 @@ export const mapNumberToEffect = (x: number): Effect | null => {
 	}
 };
 
+// function requires complexity to map all values
+// skipcq: JS-0044
 export const mapEffectToDisplayName = (x: Effect): string => {
 	switch (x) {
 		case 0:
