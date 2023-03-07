@@ -108,7 +108,12 @@ const Table = (): JSX.Element => {
 				columnDefinition.hide = true;
 			else columnDefinition.hide = false;
 
-			setColumnDefinitions([...columnDefinitions, columnDefinition]);
+			setColumnDefinitions([
+				...columnDefinitions.filter(
+					(x) => x.field !== columnDefinition.field,
+				),
+				columnDefinition,
+			]);
 		}
 	}, [selectedColumns]);
 
