@@ -2,6 +2,12 @@
 
 # Changelog
 
+## 0.1.6
+
+-   Fix duplicate column bug
+-   Fix crash when opening filters
+-   Add Rollbar
+
 ## 0.1.5
 
 -   Update favicon
