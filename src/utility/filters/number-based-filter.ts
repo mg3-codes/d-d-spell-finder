@@ -24,11 +24,9 @@ export const numberBasedFilterDoesFilterPass = (
 	submittedValue: number | undefined,
 	selectedFilters: number[],
 ): boolean => {
-	if (submittedValue === null) return false;
+	if (submittedValue === undefined) return false;
 
-	return (
-		selectedFilters.find((value) => value === submittedValue) !== undefined
-	);
+	return selectedFilters.includes(submittedValue);
 };
 
 export const numberBasedFilterIsFilterActive = (
