@@ -44,7 +44,7 @@ type AreaFilterSetModel = {
 const distanceFilterDisabledArray = [
 	-1, 1, 5, 10, 15, 20, 30, 40, 50, 60, 100, 200, 2500, 5280, 26400, 40000,
 ];
-const shapeFilterDisabledArray = createDisabledFilterArray(16);
+const shapeFilterDisabledArray = createDisabledFilterArray(6);
 
 const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 	const [selectedDistances, setSelectedDistances] = useState<number[]>(
@@ -61,7 +61,7 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 
 	const handleDistanceCheck = useCallback(
 		(e: React.BaseSyntheticEvent): void => {
-			const distance: Distance = e.target.getAttribute("data-shape");
+			const distance = e.target.getAttribute("data-distance");
 			numberBasedFilterHandleCheck(
 				selectedDistances,
 				setSelectedDistances,
@@ -80,7 +80,7 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 
 	const handleShapeCheck = useCallback(
 		(e: React.BaseSyntheticEvent): void => {
-			const shape: Shape = e.target.getAttribute("data-shape");
+			const shape = e.target.getAttribute("data-shape");
 			numberBasedFilterHandleCheck(
 				selectedShapes,
 				setSelectedShapes,
@@ -107,9 +107,9 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 		if (selectedShapes.length !== shapeFilterDisabledArray.length) {
 			if (isDistanceChecked(Distance.Unknown))
 				numberBasedFilterHandleCheck(
-					selectedShapes,
-					setSelectedShapes,
-					Distance.Unknown,
+					selectedDistances,
+					setSelectedDistances,
+					Distance.Unknown.toString(),
 				);
 			return true;
 		}
@@ -124,6 +124,13 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 
 	useImperativeHandle(ref, () => {
 		const doesFilterPass = (props: NumberBasedFilterProps) => {
+			if (
+				props?.data?.area?.distance === Distance.Unknown &&
+				isDistanceChecked(Distance.Unknown) &&
+				selectedShapes.length === shapeFilterDisabledArray.length
+			)
+				return true;
+
 			const distanceResult = numberBasedFilterDoesFilterPass(
 				props?.data?.area?.distance,
 				selectedDistances,
@@ -132,13 +139,6 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 				props?.data?.area?.shape,
 				selectedShapes,
 			);
-
-			if (
-				props?.data?.area?.distance === Distance.Unknown &&
-				isDistanceChecked(Distance.Unknown) &&
-				selectedShapes.length === shapeFilterDisabledArray.length
-			)
-				return true;
 
 			return distanceResult && shapeResult;
 		};

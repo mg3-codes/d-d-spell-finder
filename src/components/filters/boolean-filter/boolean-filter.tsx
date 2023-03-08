@@ -93,9 +93,8 @@ const BooleanFilter = forwardRef(
 
 		const handleClick = useCallback(
 			(e: React.BaseSyntheticEvent): void => {
-				const state: BooleanBasedFilterState =
-					e.target.getAttribute("data=boolean");
-				setSelectedState(state);
+				const state = e.target.getAttribute("data-boolean");
+				setSelectedState(parseInt(state) as BooleanBasedFilterState);
 			},
 			[selectedState],
 		);
@@ -117,12 +116,14 @@ const BooleanFilter = forwardRef(
 					onChange={handleClick}
 					label={"True"}
 					checked={isSelected(BooleanBasedFilterState.True)}
+					data-boolean={BooleanBasedFilterState.True}
 				/>
 				<Form.Check
 					type={"radio"}
 					onChange={handleClick}
 					label={"False"}
 					checked={isSelected(BooleanBasedFilterState.False)}
+					data-boolean={BooleanBasedFilterState.False}
 				/>
 			</Form>
 		);

@@ -87,7 +87,7 @@ const AttackFilter = forwardRef(
 
 		const handleCheck = useCallback(
 			(e: React.BaseSyntheticEvent): void => {
-				const attack = e.target.getAttribute("data-attack") as Attack;
+				const attack = e.target.getAttribute("data-attack");
 				numberBasedFilterHandleCheck(
 					selectedAttacks,
 					setSelectedAttacks,
