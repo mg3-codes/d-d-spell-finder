@@ -39,13 +39,14 @@ export const numberBasedFilterIsFilterActive = (
 export const numberBasedFilterHandleCheck = (
 	selectedFilters: number[],
 	setSelectedFilters: (value: React.SetStateAction<number[]>) => void,
-	submittedValue: number,
+	submittedValue: string,
 ): void => {
-	if (selectedFilters.find((value) => submittedValue === value) === undefined)
-		setSelectedFilters([...selectedFilters, submittedValue]);
+	const numValue = parseInt(submittedValue);
+	if (!selectedFilters.includes(numValue))
+		setSelectedFilters([...selectedFilters, numValue]);
 	else
 		setSelectedFilters(
-			selectedFilters.filter((value) => value !== submittedValue),
+			selectedFilters.filter((value) => value !== numValue),
 		);
 };
 
