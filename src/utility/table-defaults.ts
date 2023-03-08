@@ -4,7 +4,12 @@
  * @format
  */
 
-import { CellClickedEvent, ColDef } from "@ag-grid-community/core";
+import {
+	CellClassParams,
+	CellClickedEvent,
+	CellStyle,
+	ColDef,
+} from "@ag-grid-community/core";
 
 import AreaFilter from "../components/filters/area-filter/area-filter";
 import AttackFilter from "../components/filters/attack-filter/attack-filter";
@@ -20,6 +25,7 @@ import SchoolFilter from "../components/filters/school-filter/school-filter";
 import SourceFilter from "../components/filters/source-filter/source-filter";
 import { Column, mapColumnToDisplayName } from "../enums/columns";
 import Spell from "../types/spell";
+import { TableRow } from "../types/table-row";
 
 import { areaValueComparator } from "./comparators";
 import {
@@ -215,6 +221,11 @@ export const defaultColumnDefinitions = (
 		onCellClicked: onMaterialCellClicked,
 		sortable: false,
 		hide: defaultColumnIsHidden(Column.Material),
+		cellStyle: (params: CellClassParams<TableRow>): CellStyle | null => {
+			if (params.data?.material !== "") return { cursor: "pointer" };
+
+			return null;
+		},
 	},
 	{
 		field: "source",
@@ -231,5 +242,10 @@ export const defaultColumnDefinitions = (
 		onCellClicked: onDetailsCellClicked,
 		sortable: false,
 		hide: defaultColumnIsHidden(Column.Details),
+		cellStyle: (params: CellClassParams<TableRow>): CellStyle | null => {
+			if (params.data?.details) return { cursor: "pointer" };
+
+			return null;
+		},
 	},
 ];
