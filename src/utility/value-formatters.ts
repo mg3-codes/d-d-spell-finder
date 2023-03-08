@@ -11,7 +11,7 @@ import {
 	DamageType,
 	mapNumberToDamageTypeDisplayName,
 } from "../enums/damage-types";
-import { mapNumberToDistanceDisplayName } from "../enums/distances";
+import { Distance, mapNumberToDistanceDisplayName } from "../enums/distances";
 import { mapNumberToDurationDisplayName } from "../enums/durations";
 import { Effect, mapEffectToDisplayName } from "../enums/effects";
 import { mapNumberToRangeDisplayName } from "../enums/ranges";
@@ -24,10 +24,12 @@ import { RowArea } from "../types/table-row";
 
 export const areaValueFormatter = (
 	params: ValueFormatterParams<RowArea>,
-): string =>
-	`${mapNumberToDistanceDisplayName(
+): string => {
+	if (!params.value || params.value.distance === Distance.Unknown) return "";
+	return `${mapNumberToDistanceDisplayName(
 		params.value.distance,
 	)} ${mapNumberToShapeDisplayName(params.value.shape)}`;
+};
 
 export const attackValueFormatter = (
 	params: ValueFormatterParams<number>,
