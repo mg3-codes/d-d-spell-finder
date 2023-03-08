@@ -87,6 +87,7 @@ export const mapNumberToDamageTypeDisplayName = (
 		case 12:
 			return "Thunder";
 		case 13:
+			return "None";
 		default:
 			return "";
 	}

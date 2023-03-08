@@ -87,7 +87,7 @@ const LevelFilter = forwardRef(
 				numberBasedFilterHandleCheck(
 					selectedLevels,
 					setSelectedLevels,
-					level,
+					level.toString(),
 				);
 			},
 			[selectedLevels],

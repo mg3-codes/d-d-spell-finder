@@ -2,6 +2,11 @@
 
 # Changelog
 
+## 0.1.7
+
+-   Fix multiple issues with filtering data
+-   Use cursor on cells that can be opened
+
 ## 0.1.6
 
 -   Fix duplicate column bug

@@ -20,7 +20,7 @@ const Export = React.lazy(() => import("./components/routes/export"));
 const rollbarConfig = {
 	accessToken: "9da11dd53b1c4323a3fb09861e6dd841",
 	environment: import.meta.env.MODE,
-	version: "0.1.6",
+	version: "0.1.7",
 	enabled: import.meta.env.MODE === "production",
 	captureUncaught: true,
 	captureUnhandledRejections: true,
