@@ -43,7 +43,7 @@ const Footer = () => {
 
 	return (
 		<div className="footer">
-			<span>Version: 0.1.7</span>
+			<span>Version: 0.1.8</span>
 			<div>
 				<Button
 					variant="link"
