@@ -6,7 +6,7 @@
 
 describe("general tests", () => {
 	beforeEach(() => {
-		cy.visit("http://localhost:5173");
+		cy.visit("http://localhost:3000");
 	});
 
 	it("changes dark and light mode", () => {
@@ -19,12 +19,12 @@ describe("general tests", () => {
 			.get(".btn-group")
 			.as("theme-button-group")
 			.within(() => {
-				cy.get(".btn.btn-primary").first().click();
+				cy.get(".btn.btn-primary").last().click();
 			});
-		cy.get("html").invoke("attr", "data-bs-theme").should("eq", "");
-		cy.get("@theme-button-group").within(() => {
-			cy.get(".btn.btn-primary").last().click();
-		});
 		cy.get("html").invoke("attr", "data-bs-theme").should("eq", "dark");
+		cy.get("@theme-button-group").within(() => {
+			cy.get(".btn.btn-primary").first().click();
+		});
+		cy.get("html").invoke("attr", "data-bs-theme").should("eq", "");
 	});
 });

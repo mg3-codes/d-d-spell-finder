@@ -23,7 +23,7 @@ const defaultColumns = [
 
 describe("table tests", () => {
 	beforeEach(() => {
-		cy.visit("http://localhost:5173");
+		cy.visit("http://localhost:3000");
 	});
 
 	it("renders", () => {

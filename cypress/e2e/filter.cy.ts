@@ -6,7 +6,7 @@
 
 describe("filter tests", () => {
 	beforeEach(() => {
-		cy.visit("http://localhost:5173");
+		cy.visit("http://localhost:3000");
 	});
 
 	it("can filter names", () => {
