@@ -11,6 +11,14 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [react(), splitVendorChunkPlugin()],
+	server: {
+		port: 3000,
+		strictPort: true,
+	},
+	preview: {
+		port: 3000,
+		strictPort: true,
+	},
 	resolve: {
 		alias: {
 			"~bootstrap": path.resolve(__dirname, "node_modules/bootstrap"),

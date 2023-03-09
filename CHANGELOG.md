@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.1.8
+
+-   Fix a bug where some values would not render in cells
+
 ## 0.1.7
 
 -   Fix multiple issues with filtering data

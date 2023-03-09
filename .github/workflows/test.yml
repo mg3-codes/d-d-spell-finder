@@ -1,0 +1,22 @@
+# @format
+
+name: Test
+
+on:
+    push:
+        branches: ["**", "!master"]
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+        container: cypress/browsers:node-18.14.1-chrome-110.0.5481.96-1-ff-109.0-edge-110.0.1587.41-1
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v3
+
+            - name: Cypress run
+              uses: cypress-io/github-action@v5.3.0
+              with:
+                  build: yarn build
+                  start: yarn preview
+                  browser: chrome

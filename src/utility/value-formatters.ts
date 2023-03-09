@@ -47,7 +47,8 @@ export const castingTimeValueFormatter = (
 export const damageTypeValueFormatter = (
 	params: ValueFormatterParams<DamageType>,
 ): string => {
-	if (!params?.value || params?.value === DamageType.None) return "";
+	if (!params?.value === undefined || params?.value === DamageType.None)
+		return "";
 	return mapNumberToDamageTypeDisplayName(params.value);
 };
 
