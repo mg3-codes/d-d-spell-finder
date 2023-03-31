@@ -17,7 +17,7 @@
 		"stylelint-check": "stylelint --config ./.stylelintrc \"src/**/*.scss\" --color --cache"
 	},
 	"dependencies": {
-		"@ag-grid-community/client-side-row-model": "^29.1.0",
+		"@ag-grid-community/client-side-row-model": "^29.2.0",
 		"@ag-grid-community/core": "^29.1.0",
 		"@ag-grid-community/react": "^29.1.0",
 		"@popperjs/core": "^2.11.6",
