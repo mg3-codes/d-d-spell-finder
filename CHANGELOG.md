@@ -2,6 +2,11 @@
 
 # Changelog
 
+## 0.1.10
+
+-   Add 404 page for app
+-   Redirect GitHub 404 page to our 404 page
+
 ## 0.1.9
 
 -   Upgrade dependencies
