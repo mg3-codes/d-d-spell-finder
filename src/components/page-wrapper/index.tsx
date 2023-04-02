@@ -4,7 +4,11 @@
  * @format
  */
 
-import React from "react";
+import React, { useContext, useLayoutEffect } from "react";
+
+import { ThemeContext } from "../theme-context-provider";
+
+import { Theme } from "../../enums/theme";
 
 import "./page-wrapper.scss";
 
@@ -13,6 +17,20 @@ export interface IPageWrapperProps {
 }
 
 const PageWrapper = ({ children }: IPageWrapperProps): JSX.Element => {
+	const { currentTheme } = useContext(ThemeContext);
+
+	useLayoutEffect(() => {
+		const elements: HTMLCollectionOf<HTMLElement> =
+			document.getElementsByTagName("html");
+
+		if (elements.length === 0) return;
+
+		if (currentTheme === Theme.Light)
+			elements[0]?.setAttribute("data-bs-theme", "");
+		else if (currentTheme === Theme.Dark)
+			elements[0]?.setAttribute("data-bs-theme", "dark");
+	}, [currentTheme]);
+
 	return <div className="app">{children}</div>;
 };
 
