@@ -4,7 +4,8 @@
  * @format
  */
 
-import React, { Suspense } from "react";
+import React, { Suspense, useEffect } from "react";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Heading = React.lazy(() => import("../heading"));
 const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
@@ -14,6 +15,13 @@ const Footer = React.lazy(() => import("../footer"));
 import "./page.scss";
 
 export const IndexPage = () => {
+	const [searchParams] = useSearchParams();
+	const navigate = useNavigate();
+	useEffect(() => {
+		const redirectParam = searchParams.get("redirect");
+		if (redirectParam) navigate(redirectParam);
+	}, []);
+
 	return (
 		<div className="gutter-container">
 			<div className="page">
