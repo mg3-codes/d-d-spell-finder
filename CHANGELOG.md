@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.1.9
+
+-   Upgrade dependencies
+
 ## 0.1.8
 
 -   Fix a bug where some values would not render in cells
