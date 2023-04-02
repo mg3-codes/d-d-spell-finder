@@ -6,7 +6,11 @@
 
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import {
+	createBrowserRouter,
+	Navigate,
+	RouterProvider,
+} from "react-router-dom";
 import { Provider as RollbarProvider, ErrorBoundary } from "@rollbar/react";
 
 import { ColumnContextProvider } from "./components/column-context-provider";
@@ -16,11 +20,12 @@ import { SelectedRowContextProvider } from "./components/selected-row-context-pr
 
 const Index = React.lazy(() => import("./components/routes"));
 const Export = React.lazy(() => import("./components/routes/export"));
+const NotFound = React.lazy(() => import("./components/routes/not-found"));
 
 const rollbarConfig = {
 	accessToken: "9da11dd53b1c4323a3fb09861e6dd841",
 	environment: import.meta.env.MODE,
-	version: "0.1.9",
+	version: "0.1.10",
 	enabled: import.meta.env.MODE === "production",
 	captureUncaught: true,
 	captureUnhandledRejections: true,
@@ -34,6 +39,14 @@ const router = createBrowserRouter([
 	{
 		path: "/export",
 		element: <Export />,
+	},
+	{
+		path: "/404",
+		element: <NotFound />,
+	},
+	{
+		path: "*",
+		element: <Navigate to="/404" replace />,
 	},
 ]);
 

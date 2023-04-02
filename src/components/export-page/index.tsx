@@ -4,14 +4,17 @@
  * @format
  */
 
-import React, { useContext, useMemo } from "react";
+import React, { useContext, useEffect, useMemo } from "react";
 import Alert from "react-bootstrap/Alert";
 import { useSearchParams } from "react-router-dom";
 
 import { SelectedRowContext } from "../selected-row-context-provider";
 import { PrintCard } from "../print-card";
 
+import { Theme } from "../../enums/theme";
+
 import "./export-page.scss";
+import { ThemeContext } from "../theme-context-provider";
 
 export interface IExportPageQueryParams {
 	numPerRow?: number;
@@ -21,6 +24,20 @@ export interface IExportPageQueryParams {
 const ExportPage = () => {
 	const { selectedRows } = useContext(SelectedRowContext);
 	const [queryParams] = useSearchParams();
+	const { currentTheme, setCurrentTheme } = useContext(ThemeContext);
+	useEffect(() => {
+		const userSelectedTheme = currentTheme;
+		let themeOverridden = false;
+
+		if (currentTheme !== Theme.Light) {
+			themeOverridden = true;
+			setCurrentTheme(Theme.Light);
+		}
+
+		return () => {
+			if (themeOverridden) setCurrentTheme(userSelectedTheme);
+		};
+	}, []);
 
 	const generatedCards = useMemo(() => {
 		const elements: JSX.Element[] = [];
