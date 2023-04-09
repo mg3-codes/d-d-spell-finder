@@ -2,6 +2,11 @@
 
 # Changelog
 
+## 0.1.11
+
+-   Fix layout bugs on export page for some browsers
+-   Remove unsupported export options
+
 ## 0.1.10
 
 -   Add 404 page for app
