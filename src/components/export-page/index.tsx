@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useContext, useEffect, useMemo } from "react";
+import React, { useCallback, useContext, useEffect, useMemo } from "react";
 import Alert from "react-bootstrap/Alert";
 import { useSearchParams } from "react-router-dom";
 
@@ -39,47 +39,70 @@ const ExportPage = () => {
 		};
 	}, []);
 
+	const getColumnClassName = useCallback(
+		(number: number) => {
+			switch (number) {
+				case 2:
+					return "two-columns";
+				default:
+				case 3:
+					return "three-columns";
+				case 4:
+					return "four-columns";
+			}
+		},
+		[queryParams],
+	);
+
+	const getRowClassName = useCallback(
+		(number: number) => {
+			switch (number) {
+				default:
+				case 2:
+					return "two-rows";
+				case 3:
+					return "three-rows";
+				case 4:
+					return "four-columns";
+			}
+		},
+		[queryParams],
+	);
+
 	const generatedCards = useMemo(() => {
 		const elements: JSX.Element[] = [];
-		const numPerRow = queryParams.get("numPerRow");
-		const cardsPerRow = numPerRow ? parseInt(numPerRow) : 3;
-		const rowsPerPage = parseInt(queryParams.get("rowsPerPage") ?? "3");
+		const numColumns = parseInt(queryParams.get("numPerRow") ?? "3");
+		const rowsPerPage = parseInt(queryParams.get("rowsPerPage") ?? "2");
 		let counter = 0;
 		while (counter <= selectedRows.length) {
 			const pageElements: JSX.Element[] = [];
 			for (let i = 0; i < rowsPerPage; i++) {
 				const rowSlice = selectedRows.slice(
-					i * cardsPerRow + counter,
-					i * cardsPerRow + counter + cardsPerRow,
+					i * numColumns + counter,
+					i * numColumns + counter + numColumns,
 				);
 
 				pageElements.push(
-					<div
-						key={`${i}-${counter}`}
-						className="page-row"
-						style={{
-							zoom: `${100 / rowsPerPage}%`,
-						}}
-					>
+					<>
 						{rowSlice.map((row) => (
 							<PrintCard key={row.name} row={row} />
 						))}
-					</div>,
+					</>,
 				);
 			}
 
 			elements.push(
 				<div
-					className={`${queryParams.get(
-						"paperSize",
-					)}-${queryParams.get("orientation")} page`}
+					className={`letter-landscape page ${getColumnClassName(
+						numColumns,
+					)} ${getRowClassName(rowsPerPage)}`}
 					key={counter}
 				>
 					{pageElements}
 				</div>,
 			);
 
-			counter += cardsPerRow * rowsPerPage;
+			counter += numColumns * rowsPerPage;
 		}
 
 		return elements;

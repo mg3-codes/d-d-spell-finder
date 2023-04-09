@@ -4,88 +4,41 @@
  * @format
  */
 
-@use "../../styles/paper-sizes.scss" as paper;
-
 .export-page {
 	background-color: #ffffff;
 
 	.page {
 		background-color: #ffffff;
 		padding: 4px;
+		display: grid;
 	}
 
-	.page-row {
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-		margin-bottom: 4px;
+	.page.two-columns {
+		grid-template-columns: 50% 50%;
 	}
 
-	.print-card {
-		zoom: 160%;
+	.page.three-columns {
+		grid-template-columns: 33% 33% 33%;
 	}
 
-	.A1-portrait {
-		@include paper.A1-portrait;
+	.page.four-columns {
+		grid-template-columns: 25% 25% 25% 25%;
 	}
 
-	.A1-landscape {
-		@include paper.A1-landscape;
+	.page.two-rows {
+		grid-template-rows: 50% 50%;
 	}
 
-	.A2-portrait {
-		@include paper.A2-portrait;
+	.page.three-rows {
+		grid-template-rows: 33% 33% 33%;
 	}
 
-	.A2-landscape {
-		@include paper.A2-landscape;
-	}
-
-	.A3-portrait {
-		@include paper.A3-portrait;
-	}
-
-	.A3-landscape {
-		@include paper.A3-landscape;
-	}
-
-	.A4-portrait {
-		@include paper.A4-portrait;
-	}
-
-	.A4-landscape {
-		@include paper.A4-landscape;
-	}
-
-	.A5-portrait {
-		@include paper.A5-portrait;
-	}
-
-	.A5-landscape {
-		@include paper.A5-landscape;
-	}
-
-	.A6-portrait {
-		@include paper.A6-portrait;
-	}
-
-	.A6-landscape {
-		@include paper.A6-landscape;
-	}
-
-	.letter-portrait {
-		@include paper.letter-portrait;
+	.page.four-rows {
+		grid-template-rows: 25% 25% 25% 25%;
 	}
 
 	.letter-landscape {
-		@include paper.letter-landscape;
-	}
-
-	.legal-portrait {
-		@include paper.legal-portrait;
-	}
-
-	.legal-landscape {
-		@include paper.legal-landscape;
+		height: 8.5in;
+		width: 11in;
 	}
 }
