@@ -134,7 +134,7 @@ export const PrintCard = ({ row }: IPrintCard) => {
 						{row.details !== "" && (
 							<p
 								className={`max-lines-${
-									row.material ? "9" : "11"
+									row.material ? "5" : "8"
 								}`}
 							>
 								Details: {row.details}
