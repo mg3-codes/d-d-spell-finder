@@ -4,10 +4,16 @@
  * @format
  */
 
+@use "../../styles/bootstrap.scss" as bootstrap;
+
 .check-container {
 	display: flex;
 }
 
 .check-column {
 	width: 50%;
+}
+
+i {
+	color: bootstrap.$primary
 }
