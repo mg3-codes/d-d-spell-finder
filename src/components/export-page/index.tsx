@@ -54,25 +54,10 @@ const ExportPage = () => {
 		[queryParams],
 	);
 
-	const getRowClassName = useCallback(
-		(number: number) => {
-			switch (number) {
-				default:
-				case 2:
-					return "two-rows";
-				case 3:
-					return "three-rows";
-				case 4:
-					return "four-columns";
-			}
-		},
-		[queryParams],
-	);
-
 	const generatedCards = useMemo(() => {
 		const elements: JSX.Element[] = [];
 		const numColumns = parseInt(queryParams.get("numPerRow") ?? "3");
-		const rowsPerPage = parseInt(queryParams.get("rowsPerPage") ?? "2");
+		const rowsPerPage = 2;
 		let counter = 0;
 		while (counter <= selectedRows.length) {
 			const pageElements: JSX.Element[] = [];
@@ -95,7 +80,7 @@ const ExportPage = () => {
 				<div
 					className={`letter-landscape page ${getColumnClassName(
 						numColumns,
-					)} ${getRowClassName(rowsPerPage)}`}
+					)} two-rows`}
 					key={counter}
 				>
 					{pageElements}
