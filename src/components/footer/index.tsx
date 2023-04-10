@@ -44,6 +44,8 @@ const Footer = () => {
 
 	const closeModal = useCallback(() => setModalIsOpen(false), []);
 
+	const openHelpModal = useCallback(() => setHelpModalIsOpen(true), []);
+
 	const toggleHelpModalState = useCallback(() => {
 		setHelpModalIsOpen(!helpModalIsOpen);
 	}, [helpModalIsOpen]);
@@ -52,7 +54,7 @@ const Footer = () => {
 		<div className="footer">
 			<span>Version: 0.2.0</span>
 			<div>
-				<Button variant="link" onClick={() => setHelpModalIsOpen(true)}>
+				<Button variant="link" onClick={openHelpModal}>
 					Help
 				</Button>
 				<Button

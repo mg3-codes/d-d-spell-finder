@@ -125,7 +125,7 @@ export const HelpModal = ({
 							</p>
 							<a href="https://github.com/mg3-codes/d-d-spell-finder/issues/new/choose">
 								GitHub Issues&nbsp;
-								<i className="bi bi-box-arrow-up-right"></i>
+								<i className="bi bi-box-arrow-up-right" />
 							</a>
 						</Accordion.Body>
 					</Accordion.Item>
@@ -140,7 +140,7 @@ export const HelpModal = ({
 							</p>
 							<a href="https://github.com/mg3-codes/d-d-spell-finder/issues/new/choose">
 								GitHub Issues&nbsp;
-								<i className="bi bi-box-arrow-up-right"></i>
+								<i className="bi bi-box-arrow-up-right" />
 							</a>
 						</Accordion.Body>
 					</Accordion.Item>
