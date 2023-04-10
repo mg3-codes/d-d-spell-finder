@@ -21,6 +21,9 @@
 		.printer-button {
 			&:hover {
 				color: bootstrap.$white;
+				i {
+					color: bootstrap.$white;
+				}
 			}
 		}
 	}
