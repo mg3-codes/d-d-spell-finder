@@ -12,6 +12,7 @@ import { AttributionBody, AttributionHeader } from "./attribution-content";
 
 import "./footer.scss";
 import { PrivacyBody, PrivacyHeader } from "./privacy-content";
+import { HelpModal } from "../help-modal";
 
 const Footer = () => {
 	enum Content {
@@ -20,6 +21,7 @@ const Footer = () => {
 	}
 
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+	const [helpModalIsOpen, setHelpModalIsOpen] = useState<boolean>(false);
 	const [selectedContent, setSelectedContent] = useState<Content>(0);
 
 	const handleButtonClick = useCallback(
@@ -41,10 +43,17 @@ const Footer = () => {
 
 	const closeModal = useCallback(() => setModalIsOpen(false), []);
 
+	const toggleHelpModalState = useCallback(() => {
+		setHelpModalIsOpen(!helpModalIsOpen);
+	}, [helpModalIsOpen]);
+
 	return (
 		<div className="footer">
 			<span>Version: 0.1.11</span>
 			<div>
+				<Button variant="link" onClick={() => setHelpModalIsOpen(true)}>
+					Help
+				</Button>
 				<Button
 					variant="link"
 					onClick={handleButtonClick}
@@ -86,6 +95,10 @@ const Footer = () => {
 					</Button>
 				</Modal.Footer>
 			</Modal>
+			<HelpModal
+				modalIsOpen={helpModalIsOpen}
+				toggleModalState={toggleHelpModalState}
+			/>
 		</div>
 	);
 };
