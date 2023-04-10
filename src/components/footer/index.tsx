@@ -8,11 +8,12 @@ import React, { useCallback, useState } from "react";
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { AttributionBody, AttributionHeader } from "./attribution-content";
 
-import "./footer.scss";
+import { AttributionBody, AttributionHeader } from "./attribution-content";
 import { PrivacyBody, PrivacyHeader } from "./privacy-content";
 import { HelpModal } from "../help-modal";
+
+import "./footer.scss";
 
 const Footer = () => {
 	enum Content {
@@ -49,7 +50,7 @@ const Footer = () => {
 
 	return (
 		<div className="footer">
-			<span>Version: 0.1.11</span>
+			<span>Version: 0.2.0</span>
 			<div>
 				<Button variant="link" onClick={() => setHelpModalIsOpen(true)}>
 					Help
