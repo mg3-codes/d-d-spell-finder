@@ -43,7 +43,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 	);
 
 	return (
-		<div>
+		<div className="settings-offcanvas">
 			<Button variant="link" onClick={handleOpen}>
 				<i className="bi bi-gear" style={{ fontSize: "1.5rem" }} />
 			</Button>

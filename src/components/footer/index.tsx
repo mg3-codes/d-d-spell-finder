@@ -8,10 +8,12 @@ import React, { useCallback, useState } from "react";
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+
 import { AttributionBody, AttributionHeader } from "./attribution-content";
+import { PrivacyBody, PrivacyHeader } from "./privacy-content";
+import { HelpModal } from "../help-modal";
 
 import "./footer.scss";
-import { PrivacyBody, PrivacyHeader } from "./privacy-content";
 
 const Footer = () => {
 	enum Content {
@@ -20,6 +22,7 @@ const Footer = () => {
 	}
 
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+	const [helpModalIsOpen, setHelpModalIsOpen] = useState<boolean>(false);
 	const [selectedContent, setSelectedContent] = useState<Content>(0);
 
 	const handleButtonClick = useCallback(
@@ -41,10 +44,19 @@ const Footer = () => {
 
 	const closeModal = useCallback(() => setModalIsOpen(false), []);
 
+	const openHelpModal = useCallback(() => setHelpModalIsOpen(true), []);
+
+	const toggleHelpModalState = useCallback(() => {
+		setHelpModalIsOpen(!helpModalIsOpen);
+	}, [helpModalIsOpen]);
+
 	return (
 		<div className="footer">
-			<span>Version: 0.1.11</span>
+			<span>Version: 0.2.0</span>
 			<div>
+				<Button variant="link" onClick={openHelpModal}>
+					Help
+				</Button>
 				<Button
 					variant="link"
 					onClick={handleButtonClick}
@@ -86,6 +98,10 @@ const Footer = () => {
 					</Button>
 				</Modal.Footer>
 			</Modal>
+			<HelpModal
+				modalIsOpen={helpModalIsOpen}
+				toggleModalState={toggleHelpModalState}
+			/>
 		</div>
 	);
 };
