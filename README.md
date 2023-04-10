@@ -23,7 +23,7 @@ If you are comfortable coding you could even submit a PR!
 
 ### Code
 
-See [CONTRIBUTING.md](./contributing.md) for instructions on how to contribute.
+See [CONTRIBUTING.md](https://github.com/mg3-codes/d-d-spell-finder/blob/main/CONTRIBUTING.md) for instructions on how to contribute.
 
 ## Attribution
 
