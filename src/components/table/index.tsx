@@ -134,7 +134,9 @@ const Table = (): JSX.Element => {
 				<Modal.Header closeButton>
 					<Modal.Title>{modalTitle}</Modal.Title>
 				</Modal.Header>
-				<Modal.Body>{modalText}</Modal.Body>
+				<Modal.Body style={{ whiteSpace: "pre-line" }}>
+					{modalText}
+				</Modal.Body>
 				<Modal.Footer>
 					<Button variant="secondary" onClick={handleModalClose}>
 						Close

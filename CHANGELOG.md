@@ -2,6 +2,15 @@
 
 # Changelog
 
+## 0.2.1
+
+-   Update spell description styling
+-   Fix material descriptions on some spells to remove extra `)`
+
+## 0.2.0
+
+-   Add help modal
+
 ## 0.1.11
 
 -   Fix layout bugs on export page for some browsers
