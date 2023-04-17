@@ -47,7 +47,7 @@ jobs:
               id: deployment
               uses: actions/deploy-pages@v2
             - name: Notify deploy to Rollbar
-              uses: rollbar/github-deploy-action@2.1.1
+              uses: rollbar/github-deploy-action@2.1.2
               id: rollbar_deploy
               with:
                   environment: "production"
