@@ -60,14 +60,14 @@ const Table = (): JSX.Element => {
 
 	const onMaterialCellClicked = (event: CellClickedEvent<Spell>): void => {
 		if (event?.data?.material) {
-			setModalTitle("Material");
+			setModalTitle(`${event?.data?.name} Material`);
 			showModalWithMessage(event?.data?.material);
 		}
 	};
 
 	const onDetailsCellClicked = (event: CellClickedEvent<Spell>): void => {
 		if (event?.data?.details) {
-			setModalTitle("Details");
+			setModalTitle(`${event?.data?.name} Details`);
 			showModalWithMessage(event?.data?.details);
 		}
 	};

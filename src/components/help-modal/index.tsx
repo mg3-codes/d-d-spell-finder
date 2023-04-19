@@ -67,10 +67,11 @@ export const HelpModal = ({
 							<p>
 								Columns can be filtered to show only matching
 								results. Hover over the left side of the column
-								header to show the filter button. Then type or
-								select to control which results are shown.
-								Multiple filters can be active at one time and
-								results must match all filters to be displayed.
+								header to show the filter button. (On mobile tap
+								and hold to open the menu.) Then type or select
+								to control which results are shown. Multiple
+								filters can be active at one time and results
+								must match all filters to be displayed.
 							</p>
 							<h5>Re-Arrange Columns:</h5>
 							<p>
