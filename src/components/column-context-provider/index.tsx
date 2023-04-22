@@ -4,9 +4,11 @@
  * @format
  */
 
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useEffect, useState } from "react";
 import { Column } from "../../enums/columns";
 import { defaultSelectedColumns } from "../../utility/table-defaults";
+import { getCookie, setCookie } from "../../utility/cookies";
+import { AppSettingsContext } from "../app-settings-provider";
 
 export type ColumnContext = {
 	selectedColumns: Column[];
@@ -26,12 +28,25 @@ export interface IColumnContextProviderProps {
 	children: React.ReactNode;
 }
 
+const cookieName = "selectedColumns";
+
 export const ColumnContextProvider = ({
 	children,
 }: IColumnContextProviderProps) => {
-	const [selectedColumns, setSelectedColumns] = useState<Column[]>(
-		defaultSelectedColumns,
-	);
+	const { useCookies } = useContext(AppSettingsContext);
+	const [selectedColumns, setSelectedColumns] = useState<Column[]>(() => {
+		const cookie = getCookie(cookieName);
+
+		if (cookie && useCookies)
+			return cookie.split(",").map((x) => parseInt(x));
+
+		return defaultSelectedColumns;
+	});
+
+	useEffect(() => {
+		if (useCookies)
+			setCookie(cookieName, selectedColumns.toString(), false);
+	}, [selectedColumns]);
 
 	const handleColumnChange = (column: Column): void => {
 		if (selectedColumns.find((value) => column === value) === undefined)

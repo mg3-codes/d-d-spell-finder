@@ -17,6 +17,8 @@ import { GetRowIdParams, ModuleRegistry } from "@ag-grid-community/core";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
 import { CellClickedEvent, ColDef } from "@ag-grid-community/core";
 import Button from "react-bootstrap/Button";
+import Toast from "react-bootstrap/Toast";
+import ToastContainer from "react-bootstrap/ToastContainer";
 import Modal from "react-bootstrap/Modal";
 
 import { buildRow, TableRow } from "../../types/table-row";
@@ -35,6 +37,7 @@ import { SelectedRowContext } from "../selected-row-context-provider";
 import spellJson from "../../assets/5e-spells.json";
 
 import "./table.scss";
+import { AppSettingsContext } from "../app-settings-provider";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
@@ -43,13 +46,17 @@ const Table = (): JSX.Element => {
 	useEffect(() => {
 		setSpellRows(spellJson.spells.map(buildRow));
 	}, []);
-	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
-	const [modalTitle, setModalTitle] = useState<string>("");
-	const [modalText, setModalText] = useState<string>("");
-	const gridRef = useRef<AgGridReact>(null);
+	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
 	const { currentTheme: selectedTheme } = useContext(ThemeContext);
 	const { selectedColumns } = useContext(ColumnContext);
 	const { selectedRows, setSelectedRows } = useContext(SelectedRowContext);
+	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+	const [modalTitle, setModalTitle] = useState<string>("");
+	const [modalText, setModalText] = useState<string>("");
+	const [showCookieToast, setShowCookieToast] = useState<boolean>(
+		!useCookies,
+	);
+	const gridRef = useRef<AgGridReact>(null);
 
 	const showModalWithMessage = (message: string): void => {
 		setModalText(message);
@@ -128,6 +135,15 @@ const Table = (): JSX.Element => {
 		return (params: GetRowIdParams): string => params.data.name;
 	}, []);
 
+	const acceptCookies = useCallback((): void => {
+		setShowCookieToast(false);
+		setUseCookies(true);
+	}, []);
+
+	const rejectCookies = useCallback((): void => {
+		setShowCookieToast(false);
+	}, []);
+
 	return (
 		<>
 			<Modal show={modalIsOpen} onHide={handleModalClose}>
@@ -160,6 +176,55 @@ const Table = (): JSX.Element => {
 					suppressRowClickSelection
 					onSelectionChanged={onRowSelectionChanged}
 				/>
+			</div>
+			<div
+				style={{
+					width: "98vw",
+					height: "98vh",
+					position: "fixed",
+					top: 0,
+					left: 0,
+					pointerEvents: "none",
+				}}
+			>
+				<ToastContainer position="bottom-end">
+					<Toast show={showCookieToast}>
+						<Toast.Header closeButton={false}>
+							<strong className="me-auto">Allow Cookies?</strong>
+						</Toast.Header>
+						<Toast.Body>
+							<div className="cookie-toast-content">
+								<p>
+									Allowing these cookies doesn&apos;t allow us
+									to track you. It only allows us to save some
+									preferences so we can load your settings and
+									table layout when you return.
+								</p>
+								<p>
+									See exactly what we do with cookies{" "}
+									<a href="https://github.com">
+										here
+										<i className="bi bi-box-arrow-up-right" />
+									</a>
+								</p>
+								<div>
+									<Button
+										variant="success"
+										onClick={acceptCookies}
+									>
+										Accept
+									</Button>
+									<Button
+										variant="outline-danger"
+										onClick={rejectCookies}
+									>
+										Reject
+									</Button>
+								</div>
+							</div>
+						</Toast.Body>
+					</Toast>
+				</ToastContainer>
 			</div>
 		</>
 	);
