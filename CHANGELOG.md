@@ -2,6 +2,12 @@
 
 # Changelog
 
+## 0.2.2
+
+-   Add spell name to modal title when viewing long text content
+-   Add instructions for how to use mobile filtering
+-   Various package updates
+
 ## 0.2.1
 
 -   Update spell description styling
