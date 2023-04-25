@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 import { Theme } from "../../enums/theme";
 import { AppSettingsContext } from "../app-settings-provider";
