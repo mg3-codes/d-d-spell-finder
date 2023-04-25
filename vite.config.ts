@@ -34,6 +34,7 @@ export default defineConfig({
 						"@ag-grid-community/client-side-row-model",
 					],
 				},
+				sourcemap: true,
 				assetFileNames: "[hash].g.[ext]",
 				chunkFileNames: "[hash].g.js",
 				banner: "/*! Copyright © 2023 Michael Gamlem III | github.com/mg3-codes | github.com/mgamlem3 | MIT License applies to code | CC-BY-4.0 applies to D&D content **/",
