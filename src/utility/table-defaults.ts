@@ -72,7 +72,25 @@ export const defaultSelectedColumns: Column[] = [
 const defaultColumnIsHidden = (column: Column): boolean =>
 	defaultSelectedColumns.find((value) => value === column) === undefined;
 
-export const defaultColumnDefinitions = (
+export const setColumnDefinitionOrder = (
+	columnDefinitions: ColDef[],
+	desiredOrder: string[] | undefined,
+): ColDef[] => {
+	if (!desiredOrder) return [];
+	const orderedArray: ColDef[] = [];
+
+	for (const name of desiredOrder) {
+		const def = columnDefinitions.find((x) => x.field === name);
+
+		if (!def) continue;
+
+		orderedArray.push(def);
+	}
+
+	return orderedArray;
+};
+
+export const getDefaultColumnDefinitions = (
 	onMaterialCellClicked: (event: CellClickedEvent<Spell>) => void,
 	onDetailsCellClicked: (event: CellClickedEvent<Spell>) => void,
 ): ColDef[] => [

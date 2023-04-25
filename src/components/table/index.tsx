@@ -13,7 +13,11 @@ import React, {
 	useCallback,
 } from "react";
 import { AgGridReact } from "@ag-grid-community/react";
-import { GetRowIdParams, ModuleRegistry } from "@ag-grid-community/core";
+import {
+	ColumnMovedEvent,
+	GetRowIdParams,
+	ModuleRegistry,
+} from "@ag-grid-community/core";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
 import { CellClickedEvent, ColDef } from "@ag-grid-community/core";
 import Button from "react-bootstrap/Button";
@@ -25,7 +29,8 @@ import { buildRow, TableRow } from "../../types/table-row";
 
 import {
 	defaultColDef,
-	defaultColumnDefinitions,
+	getDefaultColumnDefinitions,
+	setColumnDefinitionOrder,
 } from "../../utility/table-defaults";
 
 import Spell from "../../types/spell";
@@ -38,8 +43,11 @@ import spellJson from "../../assets/5e-spells.json";
 
 import "./table.scss";
 import { AppSettingsContext } from "../app-settings-provider";
+import { getCookie, setCookie } from "../../utility/cookies";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
+
+const cookieName = "columnDefinition";
 
 const Table = (): JSX.Element => {
 	const [spellRows, setSpellRows] = useState<TableRow[] | null>();
@@ -89,14 +97,48 @@ const Table = (): JSX.Element => {
 		}
 	}, [selectedRows]);
 
-	const startingColumnDefinition = useMemo<ColDef[]>(
-		() =>
-			defaultColumnDefinitions(
-				onMaterialCellClicked,
-				onDetailsCellClicked,
-			),
+	const onColumnMoved = useCallback(
+		(event: ColumnMovedEvent<ColDef>): void => {
+			if (event.finished) {
+				try {
+					const orderedColIds = gridRef.current?.columnApi
+						.getColumns()
+						?.filter((x) => x.isVisible)
+						?.sort((a, b) => {
+							const aLeft = a.getLeft();
+							const bLeft = b.getLeft();
+
+							if (aLeft === null || bLeft === null)
+								throw "unable to compare due to null value";
+
+							return aLeft - bLeft;
+						})
+						.map((x) => x.getColId());
+
+					if (orderedColIds)
+						setCookie(cookieName, orderedColIds.toString(), false);
+				} catch (e) {
+					console.error(`error comparing columns: ${e}`);
+				}
+			}
+		},
 		[],
 	);
+
+	const startingColumnDefinition = useMemo<ColDef[]>(() => {
+		const def = getDefaultColumnDefinitions(
+			onMaterialCellClicked,
+			onDetailsCellClicked,
+		);
+
+		if (!useCookies) return def;
+
+		const cookie = getCookie(cookieName);
+
+		if (!cookie) return def;
+
+		return setColumnDefinitionOrder(def, cookie?.split(","));
+	}, []);
 
 	const [columnDefinitions, setColumnDefinitions] = useState(
 		startingColumnDefinition,
@@ -175,6 +217,7 @@ const Table = (): JSX.Element => {
 					rowSelection="multiple"
 					suppressRowClickSelection
 					onSelectionChanged={onRowSelectionChanged}
+					onColumnMoved={onColumnMoved}
 				/>
 			</div>
 			<div
