@@ -17,6 +17,7 @@ import { ColumnContextProvider } from "./components/column-context-provider";
 import LoadingSpinner from "./components/loading-spinner";
 import { ThemeContextProvider } from "./components/theme-context-provider";
 import { SelectedRowContextProvider } from "./components/selected-row-context-provider";
+import { AppSettingsContextProvider } from "./components/app-settings-provider";
 
 const Index = React.lazy(() => import("./components/routes"));
 const Export = React.lazy(() => import("./components/routes/export"));
@@ -28,7 +29,7 @@ const rollbarConfig = {
 	enabled: import.meta.env.MODE === "production",
 	captureUncaught: true,
 	captureUnhandledRejections: true,
-	code_version: "0.2.2.2",
+	code_version: "0.3.1",
 	source_map_enabled: true,
 };
 
@@ -56,13 +57,15 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 		<RollbarProvider config={rollbarConfig}>
 			<ErrorBoundary>
 				<Suspense fallback={<LoadingSpinner />}>
-					<ThemeContextProvider>
-						<ColumnContextProvider>
-							<SelectedRowContextProvider>
-								<RouterProvider router={router} />
-							</SelectedRowContextProvider>
-						</ColumnContextProvider>
-					</ThemeContextProvider>
+					<AppSettingsContextProvider>
+						<ThemeContextProvider>
+							<ColumnContextProvider>
+								<SelectedRowContextProvider>
+									<RouterProvider router={router} />
+								</SelectedRowContextProvider>
+							</ColumnContextProvider>
+						</ThemeContextProvider>
+					</AppSettingsContextProvider>
 				</Suspense>
 			</ErrorBoundary>
 		</RollbarProvider>

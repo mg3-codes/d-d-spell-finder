@@ -16,6 +16,7 @@ export type SelectedRowContext = {
 export const SelectedRowContext = createContext<SelectedRowContext>({
 	selectedRows: [],
 	/* eslint-disable @typescript-eslint/no-empty-function */
+	// skipqc: JS-0321
 	setSelectedRows: () => {},
 	/* eslint-enable @typescript-eslint/no-empty-function */
 });

@@ -4,21 +4,25 @@
  * @format
  */
 
-import React, { createContext, useState } from "react";
+import React, { createContext, useContext, useState } from "react";
 
 import { Theme } from "../../enums/theme";
+import { AppSettingsContext } from "../app-settings-provider";
+import { getCookie, setCookie } from "../../utility/cookies";
 
 export type ThemeContext = {
 	currentTheme: Theme;
 	toggleCurrentTheme: () => void;
-	setCurrentTheme: React.Dispatch<React.SetStateAction<Theme>>;
+	updateTheme: (theme: Theme) => void;
 };
 
 export const ThemeContext = createContext<ThemeContext>({
 	currentTheme: Theme.Light,
 	/* eslint-disable @typescript-eslint/no-empty-function */
+	// skipqc: JS-0321
 	toggleCurrentTheme: () => {},
-	setCurrentTheme: () => {},
+	// skipqc: JS-0321
+	updateTheme: () => {},
 	/* eslint-enable @typescript-eslint/no-empty-function */
 });
 
@@ -26,14 +30,26 @@ export interface IThemeContextProviderProps {
 	children: React.ReactNode;
 }
 
+const cookieName = "userSelectedTheme";
+
 export const ThemeContextProvider = ({
 	children,
 }: IThemeContextProviderProps) => {
-	const [currentTheme, setCurrentTheme] = useState<Theme>(
-		window?.matchMedia("(prefers-color-scheme: dark)")?.matches
+	const [currentTheme, setCurrentTheme] = useState<Theme>(() => {
+		const cookie = getCookie(cookieName);
+
+		if (cookie) return parseInt(cookie);
+
+		return window?.matchMedia("(prefers-color-scheme: dark)")?.matches
 			? Theme.Dark
-			: Theme.Light,
-	);
+			: Theme.Light;
+	});
+	const { useCookies } = useContext(AppSettingsContext);
+
+	const updateTheme = (theme: Theme): void => {
+		setCurrentTheme(theme);
+		if (useCookies) setCookie(cookieName, theme.toString(), false);
+	};
 
 	const toggleCurrentTheme = (): void => {
 		switch (currentTheme) {
@@ -54,7 +70,7 @@ export const ThemeContextProvider = ({
 			value={{
 				currentTheme,
 				toggleCurrentTheme,
-				setCurrentTheme,
+				updateTheme,
 			}}
 		>
 			{children}

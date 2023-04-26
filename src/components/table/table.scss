@@ -34,3 +34,13 @@
 	--ag-header-foreground-color: var(--bs-white);
 	--ag-foreground-color: var(--bs-white);
 }
+
+.cookie-toast-content {
+	i.bi-box-arrow-up-right {
+		margin-left: 4px;
+	}
+
+	button {
+		margin-right: 10px;
+	}
+}

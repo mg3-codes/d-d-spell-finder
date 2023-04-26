@@ -13,17 +13,25 @@ import React, {
 	useCallback,
 } from "react";
 import { AgGridReact } from "@ag-grid-community/react";
-import { GetRowIdParams, ModuleRegistry } from "@ag-grid-community/core";
+import {
+	CellClickedEvent,
+	ColDef,
+	ColumnMovedEvent,
+	GetRowIdParams,
+	ModuleRegistry,
+} from "@ag-grid-community/core";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
-import { CellClickedEvent, ColDef } from "@ag-grid-community/core";
 import Button from "react-bootstrap/Button";
+import Toast from "react-bootstrap/Toast";
+import ToastContainer from "react-bootstrap/ToastContainer";
 import Modal from "react-bootstrap/Modal";
 
 import { buildRow, TableRow } from "../../types/table-row";
 
 import {
 	defaultColDef,
-	defaultColumnDefinitions,
+	getDefaultColumnDefinitions,
+	setColumnDefinitionOrder,
 } from "../../utility/table-defaults";
 
 import Spell from "../../types/spell";
@@ -35,21 +43,29 @@ import { SelectedRowContext } from "../selected-row-context-provider";
 import spellJson from "../../assets/5e-spells.json";
 
 import "./table.scss";
+import { AppSettingsContext } from "../app-settings-provider";
+import { getCookie, setCookie } from "../../utility/cookies";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
+
+const cookieName = "columnDefinition";
 
 const Table = (): JSX.Element => {
 	const [spellRows, setSpellRows] = useState<TableRow[] | null>();
 	useEffect(() => {
 		setSpellRows(spellJson.spells.map(buildRow));
 	}, []);
-	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
-	const [modalTitle, setModalTitle] = useState<string>("");
-	const [modalText, setModalText] = useState<string>("");
-	const gridRef = useRef<AgGridReact>(null);
+	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
 	const { currentTheme: selectedTheme } = useContext(ThemeContext);
 	const { selectedColumns } = useContext(ColumnContext);
 	const { selectedRows, setSelectedRows } = useContext(SelectedRowContext);
+	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
+	const [modalTitle, setModalTitle] = useState<string>("");
+	const [modalText, setModalText] = useState<string>("");
+	const [showCookieToast, setShowCookieToast] = useState<boolean>(
+		!useCookies,
+	);
+	const gridRef = useRef<AgGridReact>(null);
 
 	const showModalWithMessage = (message: string): void => {
 		setModalText(message);
@@ -82,14 +98,41 @@ const Table = (): JSX.Element => {
 		}
 	}, [selectedRows]);
 
-	const startingColumnDefinition = useMemo<ColDef[]>(
-		() =>
-			defaultColumnDefinitions(
-				onMaterialCellClicked,
-				onDetailsCellClicked,
-			),
+	const onColumnMoved = useCallback(
+		(event: ColumnMovedEvent<ColDef>): void => {
+			if (event.finished) {
+				const orderedColIds = gridRef.current?.columnApi
+					.getColumns()
+					?.filter((x) => x.isVisible())
+					?.sort((a, b) => {
+						const aLeft = a.getLeft() ?? 0;
+						const bLeft = b.getLeft() ?? 0;
+
+						return aLeft - bLeft;
+					})
+					.map((x) => x.getColId());
+
+				if (orderedColIds)
+					setCookie(cookieName, orderedColIds.toString(), false);
+			}
+		},
 		[],
 	);
+
+	const startingColumnDefinition = useMemo<ColDef[]>(() => {
+		const def = getDefaultColumnDefinitions(
+			onMaterialCellClicked,
+			onDetailsCellClicked,
+		);
+
+		if (!useCookies) return def;
+
+		const cookie = getCookie(cookieName);
+
+		if (!cookie) return def;
+
+		return setColumnDefinitionOrder(def, cookie?.split(","));
+	}, []);
 
 	const [columnDefinitions, setColumnDefinitions] = useState(
 		startingColumnDefinition,
@@ -128,6 +171,15 @@ const Table = (): JSX.Element => {
 		return (params: GetRowIdParams): string => params.data.name;
 	}, []);
 
+	const acceptCookies = useCallback((): void => {
+		setShowCookieToast(false);
+		setUseCookies(true);
+	}, []);
+
+	const rejectCookies = useCallback((): void => {
+		setShowCookieToast(false);
+	}, []);
+
 	return (
 		<>
 			<Modal show={modalIsOpen} onHide={handleModalClose}>
@@ -159,7 +211,61 @@ const Table = (): JSX.Element => {
 					rowSelection="multiple"
 					suppressRowClickSelection
 					onSelectionChanged={onRowSelectionChanged}
+					onColumnMoved={onColumnMoved}
 				/>
+			</div>
+			<div
+				style={{
+					width: "98vw",
+					height: "98vh",
+					position: "fixed",
+					top: 0,
+					left: 0,
+					pointerEvents: "none",
+				}}
+			>
+				<ToastContainer position="bottom-end">
+					<Toast show={showCookieToast}>
+						<Toast.Header closeButton={false}>
+							<strong className="me-auto">Allow Cookies?</strong>
+						</Toast.Header>
+						<Toast.Body>
+							<div className="cookie-toast-content">
+								<p>
+									Allowing these cookies doesn&apos;t allow us
+									to track you. It only allows us to save some
+									preferences so we can load your settings and
+									table layout when you return.
+								</p>
+								<p>
+									See exactly what we do with cookies{" "}
+									<a
+										href="https://github.com/search?q=repo%3Amg3-codes%2Fd-d-spell-finder%20cookie&type=code"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
+										here
+										<i className="bi bi-box-arrow-up-right" />
+									</a>
+								</p>
+								<div>
+									<Button
+										variant="success"
+										onClick={acceptCookies}
+									>
+										Accept
+									</Button>
+									<Button
+										variant="outline-danger"
+										onClick={rejectCookies}
+									>
+										Reject
+									</Button>
+								</div>
+							</div>
+						</Toast.Body>
+					</Toast>
+				</ToastContainer>
 			</div>
 		</>
 	);

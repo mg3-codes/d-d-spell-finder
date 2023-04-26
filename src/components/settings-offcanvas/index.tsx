@@ -13,19 +13,29 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { Column, mapColumnToDisplayName } from "../../enums/columns";
 
 import { Theme } from "../../enums/theme";
+import { AppSettingsContext } from "../app-settings-provider";
 import { ColumnContext } from "../column-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
 import "./settings-offcanvas.scss";
+import { deleteAllCookies } from "../../utility/cookies";
 
 const SettingsOffcanvas = (): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);
-	const { currentTheme, setCurrentTheme } = useContext(ThemeContext);
+	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
+	const { currentTheme, updateTheme } = useContext(ThemeContext);
 	const { selectedColumns, handleColumnChange } = useContext(ColumnContext);
 
 	const handleOpen = useCallback(() => setShow(true), []);
 
 	const handleClose = useCallback(() => setShow(false), []);
+
+	const enableCookies = useCallback(() => setUseCookies(true), []);
+
+	const disableCookies = useCallback(() => {
+		setUseCookies(false);
+		deleteAllCookies();
+	}, []);
 
 	const handleColumnCheckboxChange = useCallback(
 		(e: React.BaseSyntheticEvent): void =>
@@ -38,7 +48,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 
 	const handleSetTheme = useCallback(
 		(e: React.BaseSyntheticEvent) =>
-			setCurrentTheme(parseInt(e.target.getAttribute("data-theme"))),
+			updateTheme(parseInt(e.target.getAttribute("data-theme"))),
 		[currentTheme],
 	);
 
@@ -53,7 +63,28 @@ const SettingsOffcanvas = (): JSX.Element => {
 				</Offcanvas.Header>
 				<Offcanvas.Body>
 					<Accordion>
-						<Accordion.Item eventKey="0">
+						<Accordion.Item eventKey="cookies">
+							<Accordion.Header>Cookies</Accordion.Header>
+							<Accordion.Body>
+								<ButtonGroup>
+									<Button
+										variant="primary"
+										onClick={enableCookies}
+										disabled={useCookies}
+									>
+										Enable
+									</Button>
+									<Button
+										variant="primary"
+										onClick={disableCookies}
+										disabled={!useCookies}
+									>
+										Disable
+									</Button>
+								</ButtonGroup>
+							</Accordion.Body>
+						</Accordion.Item>
+						<Accordion.Item eventKey="theme">
 							<Accordion.Header>Theme</Accordion.Header>
 							<Accordion.Body>
 								<ButtonGroup>
@@ -76,7 +107,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 								</ButtonGroup>
 							</Accordion.Body>
 						</Accordion.Item>
-						<Accordion.Item eventKey="1">
+						<Accordion.Item eventKey="columns">
 							<Accordion.Header>Columns</Accordion.Header>
 							<Accordion.Body>
 								<div className="check-container">

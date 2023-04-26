@@ -14,17 +14,20 @@ describe("general tests", () => {
 			cy.get(".btn-link").click();
 		});
 		cy.get(".accordion-item")
-			.first()
+			.eq(1)
 			.click()
 			.get(".btn-group")
 			.as("theme-button-group")
+			.eq(1)
 			.within(() => {
 				cy.get(".btn.btn-primary").last().click();
 			});
 		cy.get("html").invoke("attr", "data-bs-theme").should("eq", "dark");
-		cy.get("@theme-button-group").within(() => {
-			cy.get(".btn.btn-primary").first().click();
-		});
+		cy.get("@theme-button-group")
+			.eq(1)
+			.within(() => {
+				cy.get(".btn.btn-primary").first().click();
+			});
 		cy.get("html").invoke("attr", "data-bs-theme").should("eq", "");
 	});
 });

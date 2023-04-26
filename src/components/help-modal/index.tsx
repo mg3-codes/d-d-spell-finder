@@ -124,7 +124,11 @@ export const HelpModal = ({
 								GitHub using the link below and use the{" "}
 								<i>Bug report</i> template.
 							</p>
-							<a href="https://github.com/mg3-codes/d-d-spell-finder/issues/new/choose">
+							<a
+								href="https://github.com/mg3-codes/d-d-spell-finder/issues/new/choose"
+								target="_blank"
+								rel="noreferrer noopener"
+							>
 								GitHub Issues&nbsp;
 								<i className="bi bi-box-arrow-up-right" />
 							</a>
