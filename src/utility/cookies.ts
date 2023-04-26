@@ -4,6 +4,15 @@
  * @format
  */
 
+const getCookieExpiration = (deleteCookie: boolean): string => {
+	const date = new Date();
+
+	if (!deleteCookie) date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000);
+	else date.setTime(date.getTime() + -1 * 7 * 24 * 60 * 60 * 1000);
+
+	return `expires=${date.toUTCString()};`;
+};
+
 export const setCookie = (
 	name: string,
 	value: string,
@@ -34,13 +43,4 @@ export const deleteAllCookies = (): void => {
 	for (const cookie of cookies) {
 		deleteCookie(cookie.split("=")[0]);
 	}
-};
-
-const getCookieExpiration = (deleteCookie: boolean): string => {
-	const date = new Date();
-
-	if (!deleteCookie) date.setTime(date.getTime() + 7 * 24 * 60 * 60 * 1000);
-	else date.setTime(date.getTime() + -1 * 7 * 24 * 60 * 60 * 1000);
-
-	return `expires=${date.toUTCString()};`;
 };
