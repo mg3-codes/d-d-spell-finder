@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.3.1
+
+-   Minor bug fixes and code style improvements
+
 ## 0.3.0
 
 -   Add cookies to support re-loading state when you come back to the website.
