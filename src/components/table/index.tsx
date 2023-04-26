@@ -14,12 +14,13 @@ import React, {
 } from "react";
 import { AgGridReact } from "@ag-grid-community/react";
 import {
+	CellClickedEvent,
+	ColDef,
 	ColumnMovedEvent,
 	GetRowIdParams,
 	ModuleRegistry,
 } from "@ag-grid-community/core";
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
-import { CellClickedEvent, ColDef } from "@ag-grid-community/core";
 import Button from "react-bootstrap/Button";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
