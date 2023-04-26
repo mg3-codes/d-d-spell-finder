@@ -19,7 +19,9 @@ export type ThemeContext = {
 export const ThemeContext = createContext<ThemeContext>({
 	currentTheme: Theme.Light,
 	/* eslint-disable @typescript-eslint/no-empty-function */
+	// skipqc: JS-0321
 	toggleCurrentTheme: () => {},
+	// skipqc: JS-0321
 	updateTheme: () => {},
 	/* eslint-enable @typescript-eslint/no-empty-function */
 });

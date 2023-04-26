@@ -14,6 +14,7 @@ export type AppSettingsContext = {
 export const AppSettingsContext = createContext<AppSettingsContext>({
 	useCookies: false,
 	/* eslint-disable @typescript-eslint/no-empty-function */
+	// skipqc: JS-0321
 	setUseCookies: () => {},
 	/* eslint-enable @typescript-eslint/no-empty-function */
 });
