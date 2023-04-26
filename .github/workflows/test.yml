@@ -17,6 +17,6 @@ jobs:
             - name: Cypress run
               uses: cypress-io/github-action@v5.6.1
               with:
-                  build: yarn build
+                  build: yarn build-test
                   start: yarn preview
                   browser: chrome
