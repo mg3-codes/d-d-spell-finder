@@ -10,9 +10,6 @@ describe("general tests", () => {
 	});
 
 	it("changes dark and light mode", () => {
-		cy.get(".cookie-toast-content").within(() => {
-			cy.get(".btn.btn-success").first().click();
-		});
 		cy.get(".header-buttons").within(() => {
 			cy.get(".btn-link").click();
 		});
