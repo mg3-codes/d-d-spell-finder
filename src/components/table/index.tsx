@@ -100,26 +100,19 @@ const Table = (): JSX.Element => {
 	const onColumnMoved = useCallback(
 		(event: ColumnMovedEvent<ColDef>): void => {
 			if (event.finished) {
-				try {
-					const orderedColIds = gridRef.current?.columnApi
-						.getColumns()
-						?.filter((x) => x.isVisible)
-						?.sort((a, b) => {
-							const aLeft = a.getLeft();
-							const bLeft = b.getLeft();
+				const orderedColIds = gridRef.current?.columnApi
+					.getColumns()
+					?.filter((x) => x.isVisible())
+					?.sort((a, b) => {
+						const aLeft = a.getLeft() ?? 0;
+						const bLeft = b.getLeft() ?? 0;
 
-							if (aLeft === null || bLeft === null)
-								throw "unable to compare due to null value";
+						return aLeft - bLeft;
+					})
+					.map((x) => x.getColId());
 
-							return aLeft - bLeft;
-						})
-						.map((x) => x.getColId());
-
-					if (orderedColIds)
-						setCookie(cookieName, orderedColIds.toString(), false);
-				} catch (e) {
-					console.error(`error comparing columns: ${e}`);
-				}
+				if (orderedColIds)
+					setCookie(cookieName, orderedColIds.toString(), false);
 			}
 		},
 		[],
