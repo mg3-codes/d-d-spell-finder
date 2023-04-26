@@ -24,18 +24,18 @@ export interface IExportPageQueryParams {
 const ExportPage = () => {
 	const { selectedRows } = useContext(SelectedRowContext);
 	const [queryParams] = useSearchParams();
-	const { currentTheme, setCurrentTheme } = useContext(ThemeContext);
+	const { currentTheme, updateTheme } = useContext(ThemeContext);
 	useEffect(() => {
 		const userSelectedTheme = currentTheme;
 		let themeOverridden = false;
 
 		if (currentTheme !== Theme.Light) {
 			themeOverridden = true;
-			setCurrentTheme(Theme.Light);
+			updateTheme(Theme.Light);
 		}
 
 		return () => {
-			if (themeOverridden) setCurrentTheme(userSelectedTheme);
+			if (themeOverridden) updateTheme(userSelectedTheme);
 		};
 	}, []);
 
