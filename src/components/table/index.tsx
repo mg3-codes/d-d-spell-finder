@@ -238,7 +238,11 @@ const Table = (): JSX.Element => {
 								</p>
 								<p>
 									See exactly what we do with cookies{" "}
-									<a href="https://github.com">
+									<a
+										href="https://github.com/search?q=repo%3Amg3-codes%2Fd-d-spell-finder%20cookie&type=code"
+										target="_blank"
+										rel="noopener noreferrer"
+									>
 										here
 										<i className="bi bi-box-arrow-up-right" />
 									</a>
