@@ -52,7 +52,7 @@ const Footer = () => {
 
 	return (
 		<div className="footer">
-			<span>Version: 0.3.1</span>
+			<span>Version: 0.3.2</span>
 			<div>
 				<Button variant="link" onClick={openHelpModal}>
 					Help
