@@ -1,6 +1,5 @@
 {
 	"name": "dnd-spell-organizer",
-	"private": false,
 	"license": "MIT",
 	"version": "0.3.2",
 	"type": "module",
@@ -54,5 +53,6 @@
 		"stylelint": "^15.6.0",
 		"typescript": "^5.0.3",
 		"vite": "4.3.1"
-	}
+	},
+	"packageManager": "yarn@3.5.1"
 }
