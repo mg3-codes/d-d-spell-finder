@@ -8,7 +8,7 @@ Tired of flipping through your book to find details on a specific spell for your
 
 ## Building :bricks:
 
-1. Install [yarn classic](https://classic.yarnpkg.com/)
+1. Install [yarn modern](https://yarnpkg.com/getting-started/install)
 1. Clone code
 1. Run `yarn` in project root
 1. Run `yarn dev` to start development server
