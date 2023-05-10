@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.3.2
+
+-   Upgrade packages
+
 ## 0.3.1
 
 -   Minor bug fixes and code style improvements
