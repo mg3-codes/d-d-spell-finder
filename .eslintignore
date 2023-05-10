@@ -5,3 +5,6 @@ dist/
 .eslintignore
 LICENSE
 *.lock
+.yarn/*
+cypress/videos
+cypress/screenshots
