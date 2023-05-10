@@ -22,6 +22,15 @@ dist-ssr
 *.sln
 *.sw?
 
+# yarn
+.yarn/*
+!.yarn/cache
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
 # Cypress results
 cypress/videos
 cypress/screenshots
