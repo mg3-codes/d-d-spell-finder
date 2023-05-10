@@ -9,7 +9,6 @@ on:
 jobs:
     test:
         runs-on: ubuntu-latest
-        container: cypress/browsers:node-18.14.1-chrome-110.0.5481.96-1-ff-109.0-edge-110.0.1587.41-1
         steps:
             - name: Checkout
               uses: actions/checkout@v3
@@ -20,3 +19,4 @@ jobs:
                   build: yarn build-test
                   start: yarn preview
                   browser: chrome
+                  video: false

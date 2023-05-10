@@ -13,6 +13,16 @@ Tired of flipping through your book to find details on a specific spell for your
 1. Run `yarn` in project root
 1. Run `yarn dev` to start development server
 
+## Running Tests :microscope:
+
+Tests are run using [Cypress](https://www.cypress.io/). It is recommended that you run the tests before opening a pull request. They will run automatically when a pull request is opened and are required to pass before merging.
+
+The tests are run against the Chrome browser. It is recommended that you also run them against chrome.
+
+1. Open two terminals
+1. In one terminal run `yarn build-test && yarn preview`
+1. In the other terminal run `yarn cypress open` to run the tests using the GUI or run `yarn cypress run --browser chrome` to run without the GUI.
+
 ## Contributing :technologist:
 
 ### New / Missing / Updated Spells :magic_wand:
