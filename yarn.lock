@@ -21,16 +21,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ag-grid-community/react@npm:^29.3.4":
-  version: 29.3.4
-  resolution: "@ag-grid-community/react@npm:29.3.4"
+"@ag-grid-community/react@npm:^29.3.5":
+  version: 29.3.5
+  resolution: "@ag-grid-community/react@npm:29.3.5"
   dependencies:
     prop-types: ^15.8.1
   peerDependencies:
-    "@ag-grid-community/core": ~29.3.4
+    "@ag-grid-community/core": ~29.3.5
     react: ^16.3.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: 567a1c3637889d4b73949e67276135e2114317a0faf5d877e6687d6fcedc177ec451c7f7b1a3ab592c79963a4781078757dd8d289a30d2fc7c4b810bade364a7
+  checksum: 994cd5999409540f57f8365068d4882172241f25a0cd8d1ba2b5ad266acc8e800f1c761e42907f0e5933064c166a377285debe68084499e24f7e70ab23bfa2bd
   languageName: node
   linkType: hard
 
@@ -1804,7 +1804,7 @@ __metadata:
   dependencies:
     "@ag-grid-community/client-side-row-model": ^29.3.4
     "@ag-grid-community/core": ^29.3.4
-    "@ag-grid-community/react": ^29.3.4
+    "@ag-grid-community/react": ^29.3.5
     "@popperjs/core": ^2.11.7
     "@rollbar/react": ^0.11.1
     "@swc/core": 1.3.57
