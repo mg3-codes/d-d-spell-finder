@@ -11,10 +11,11 @@ const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
 const Footer = React.lazy(() => import("../footer"));
 
 import { DndDiceSelector } from "../dnd-dice-selector";
+import { NumberDiceResults } from "../number-dice-results";
+
+import NumberDie from "../../classes/number-die";
 
 import "./page.scss";
-import NumberDie from "../../classes/number-die";
-import { NumberDiceResults } from "../number-dice-results";
 
 export const DiceRollerPage = () => {
 	const [rollResults, setRollResults] = useState<NumberDie[] | null>(null);
