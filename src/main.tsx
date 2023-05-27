@@ -20,6 +20,7 @@ import { SelectedRowContextProvider } from "./components/selected-row-context-pr
 import { AppSettingsContextProvider } from "./components/app-settings-provider";
 
 const Index = React.lazy(() => import("./components/routes"));
+const DiceRoller = React.lazy(() => import("./components/routes/dice-roller"));
 const Export = React.lazy(() => import("./components/routes/export"));
 const NotFound = React.lazy(() => import("./components/routes/not-found"));
 
@@ -37,6 +38,18 @@ const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Index />,
+	},
+	{
+		path: "/dice-roller",
+		element: <DiceRoller />,
+	},
+	{
+		path: "/dice",
+		element: <Navigate to="/dice-roller" replace />,
+	},
+	{
+		path: "/roller",
+		element: <Navigate to="/dice-roller" replace />,
 	},
 	{
 		path: "/export",
