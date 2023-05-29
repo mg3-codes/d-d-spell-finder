@@ -130,9 +130,6 @@ export const NumberDiceResults = ({
 				<thead>
 					<tr className="title-row">
 						<td>
-							<h3>Results:</h3>
-						</td>
-						<td>
 							<Form.Check
 								type={"checkbox"}
 								label="Sum Results"

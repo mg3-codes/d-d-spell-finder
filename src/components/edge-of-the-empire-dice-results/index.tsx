@@ -93,11 +93,6 @@ export const EdgeOfTheEmpireDiceResults = ({
 		<div className="number-dice-results">
 			<Table className="results-table" striped bordered hover>
 				<thead>
-					<tr className="title-row">
-						<td>
-							<h3>Results:</h3>
-						</td>
-					</tr>
 					<tr className="header">
 						<td className="type">Type</td>
 						<td className="results">Results</td>
