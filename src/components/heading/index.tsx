@@ -6,6 +6,8 @@
 
 import React, { useState, useContext, useCallback } from "react";
 import Button from "react-bootstrap/Button";
+import { Link, useLocation } from "react-router-dom";
+
 const PrintModal = React.lazy(() => import("../print-modal"));
 const SettingsOffcanvas = React.lazy(() => import("../settings-offcanvas"));
 import { SelectedRowContext } from "../selected-row-context-provider";
@@ -13,6 +15,7 @@ import { SelectedRowContext } from "../selected-row-context-provider";
 const Heading = () => {
 	const { selectedRows } = useContext(SelectedRowContext);
 	const [printModalIsOpen, setPrintModalIsOpen] = useState<boolean>(false);
+	const location = useLocation();
 
 	const togglePrintModalIsOpen = useCallback(
 		(): void => setPrintModalIsOpen(!printModalIsOpen),
@@ -23,19 +26,39 @@ const Heading = () => {
 		<div className="heading">
 			<h1>D&D Spell Details</h1>
 			<div className="header-buttons">
-				<Button
-					variant="outline-primary"
-					className="printer-button"
-					onClick={togglePrintModalIsOpen}
-				>
-					<i className="bi bi-printer" />
-					&nbsp; Print
-				</Button>
-				<PrintModal
-					isOpen={printModalIsOpen}
-					toggleIsOpen={togglePrintModalIsOpen}
-					rows={selectedRows}
-				/>
+				{location.pathname !== "/" && (
+					<Link to={"/"}>
+						<Button variant="outline-primary">
+							<i className="bi bi-magic" />
+							&nbsp; Spells
+						</Button>
+					</Link>
+				)}
+				{location.pathname !== "/dice-roller" && (
+					<Link to={"/dice-roller"} style={{ marginRight: 6 }}>
+						<Button variant="outline-primary">
+							<i className="bi bi-dice-6" />
+							&nbsp; Dice Roller
+						</Button>
+					</Link>
+				)}
+				{location.pathname === "/" && (
+					<>
+						<Button
+							variant="outline-primary"
+							className="printer-button"
+							onClick={togglePrintModalIsOpen}
+						>
+							<i className="bi bi-printer" />
+							&nbsp; Print
+						</Button>
+						<PrintModal
+							isOpen={printModalIsOpen}
+							toggleIsOpen={togglePrintModalIsOpen}
+							rows={selectedRows}
+						/>
+					</>
+				)}
 				<SettingsOffcanvas />
 			</div>
 		</div>
