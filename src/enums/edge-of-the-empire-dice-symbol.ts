@@ -23,7 +23,7 @@ export const mapSymbolToCharacter = (
 		case EdgeOfTheEmpireDiceSymbol.Advantage:
 			return "a";
 		case EdgeOfTheEmpireDiceSymbol.Blank:
-			return "⃞ ";
+			return "☐";
 		case EdgeOfTheEmpireDiceSymbol.DarkSide:
 			return "z";
 		case EdgeOfTheEmpireDiceSymbol.Despair:
