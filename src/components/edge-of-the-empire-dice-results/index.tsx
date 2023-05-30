@@ -70,7 +70,10 @@ export const EdgeOfTheEmpireDiceResults = ({
 					results?.force.length > 0)) ??
 				false,
 		);
+		[results];
+	});
 
+	useEffect(() => {
 		if (!results || !resultsHaveDice) setCalculatedResults(null);
 		else {
 			setCalculatedResults(
@@ -87,7 +90,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 				]),
 			);
 		}
-	}, [results]);
+	}, [results, resultsHaveDice]);
 
 	return (
 		<div className="number-dice-results">
