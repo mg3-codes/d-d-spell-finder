@@ -80,17 +80,13 @@
 			}
 
 			.results-success-and-failure {
-				@include column1;
+				width: 50%
 			}
 
 			.results-advantage-and-threat {
-				@include column2;
-				flex-grow: 1;
+				width: 50%
 			}
 
-			.results-triumph-and-despair {
-				@include column3;
-			}
 
 			.roll-success {
 				display: flex;

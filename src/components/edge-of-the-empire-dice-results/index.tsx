@@ -224,11 +224,6 @@ export const EdgeOfTheEmpireDiceResults = ({
 									? "Advantage"
 									: "Threat"}
 							</td>
-							<td className="results-triumph-and-despair">
-								{calculatedResults?.triumphAndDespair > -1
-									? "Triumph"
-									: "Despair"}
-							</td>
 						</tr>
 						<tr>
 							<td className="results-success-and-failure">
@@ -236,9 +231,6 @@ export const EdgeOfTheEmpireDiceResults = ({
 							</td>
 							<td className="results-advantage-and-threat">
 								{Math.abs(calculatedResults.advantageAndThreat)}
-							</td>
-							<td className="results-triumph-and-despair">
-								{Math.abs(calculatedResults.triumphAndDespair)}
 							</td>
 						</tr>
 						<tr className="roll-success">

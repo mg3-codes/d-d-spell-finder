@@ -13,7 +13,6 @@ type EdgeOfTheEmpireDiceResult = {
 	despairs: number;
 	successAndFailure: number;
 	advantageAndThreat: number;
-	triumphAndDespair: number;
 	rollSuccess: boolean;
 };
 

@@ -19,7 +19,6 @@ export const getOutcomeFromSymbols = (
 		despairs: 0,
 		successAndFailure: 0,
 		advantageAndThreat: 0,
-		triumphAndDespair: 0,
 		rollSuccess: false,
 	};
 
@@ -51,9 +50,11 @@ export const getOutcomeFromSymbols = (
 		}
 	}
 
-	diceResult.successAndFailure = diceResult.successes - diceResult.failures;
+	diceResult.successAndFailure =
+		diceResult.successes +
+		diceResult.triumphs -
+		(diceResult.failures + diceResult.despairs);
 	diceResult.advantageAndThreat = diceResult.advantages - diceResult.threats;
-	diceResult.triumphAndDespair = diceResult.triumphs - diceResult.despairs;
 
 	diceResult.rollSuccess = determineRollSuccess(diceResult);
 
@@ -61,7 +62,6 @@ export const getOutcomeFromSymbols = (
 };
 
 const determineRollSuccess = (result: EdgeOfTheEmpireDiceResult): boolean => {
-	if (result.triumphAndDespair > 0) return true;
-	else if (result.successAndFailure > 0) return true;
+	if (result.successAndFailure > 0) return true;
 	else return false;
 };
