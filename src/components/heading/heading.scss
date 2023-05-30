@@ -6,11 +6,16 @@
 
 @use "../../styles/bootstrap.scss" as bootstrap;
 
-.gutter-container {
-	margin: 20px 30px;
-}
+.header-buttons {
+	display: flex;
+	align-items: center;
 
-.page {
-	color: var(--bs-body-color);
-	background-color: var(--bs-body-bg);
+	.printer-button {
+		&:hover {
+			color: bootstrap.$white;
+			i {
+				color: bootstrap.$white;
+			}
+		}
+	}
 }
