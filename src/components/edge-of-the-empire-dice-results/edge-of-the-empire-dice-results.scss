@@ -4,6 +4,8 @@
  * @format
  */
 
+@use "../../styles/bootstrap.scss" as bootstrap;
+
 @mixin column1 {
 	min-width: 25%;
 }
@@ -63,6 +65,11 @@
 				flex-grow: 1;
 				text-align: center;
 				font-family: "eote-symbols";
+			}
+
+			.force-results {
+				background-color: bootstrap.$white;
+				color: bootstrap.$black;
 			}
 
 			.sum {

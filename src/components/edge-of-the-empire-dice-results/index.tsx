@@ -195,7 +195,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					{hasForceResults && (
 						<tr className="results-section">
 							<td className="type">⬜️ Force</td>
-							<td className="results">
+							<td className="results force-results">
 								{results?.force.map((x, index) => (
 									<span key={`force-${index}`}>
 										{x
