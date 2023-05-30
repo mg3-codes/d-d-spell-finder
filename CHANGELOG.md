@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.4.0
+
+- Add dice roller
+
 ## 0.3.2
 
 -   Upgrade packages
