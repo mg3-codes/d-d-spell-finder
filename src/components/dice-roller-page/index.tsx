@@ -48,19 +48,26 @@ export const DiceRollerPage = () => {
 		return DiceType.Numbered;
 	});
 
-	const handleResultsClear = () => {
+	const handleResultsClear = useCallback(() => {
 		setNumberDiceRollResults(null);
 		setEdgeOfTheEmpireDiceRollResult(null);
-	};
+	}, []);
 
-	const handleDiceTypeChange = useCallback(
-		(type: DiceType): void => {
-			if (useCookies) setCookie(cookieName, type.toString(), false);
-
-			setDiceType(type);
-		},
-		[useCookies, diceType],
+	const handleNumberedDiceTypeClick = useCallback(
+		() => handleDiceTypeChange(DiceType.Numbered),
+		[],
 	);
+
+	const handleEdgeOfTheEmpireDiceTypeClick = useCallback(
+		() => handleDiceTypeChange(DiceType.EdgeOfTheEmpire),
+		[],
+	);
+
+	const handleDiceTypeChange = (type: DiceType): void => {
+		if (useCookies) setCookie(cookieName, type.toString(), false);
+
+		setDiceType(type);
+	};
 
 	return (
 		<div className="gutter-container">
@@ -71,17 +78,13 @@ export const DiceRollerPage = () => {
 					<DropdownButton title="Dice Type">
 						<Dropdown.Item
 							eventKey={DiceType.Numbered}
-							onClick={() =>
-								handleDiceTypeChange(DiceType.Numbered)
-							}
+							onClick={handleNumberedDiceTypeClick}
 						>
 							{mapNumberToDiceTypeDisplayName(DiceType.Numbered)}
 						</Dropdown.Item>
 						<Dropdown.Item
 							eventKey={DiceType.EdgeOfTheEmpire}
-							onClick={() =>
-								handleDiceTypeChange(DiceType.EdgeOfTheEmpire)
-							}
+							onClick={handleEdgeOfTheEmpireDiceTypeClick}
 						>
 							{mapNumberToDiceTypeDisplayName(
 								DiceType.EdgeOfTheEmpire,
@@ -92,9 +95,7 @@ export const DiceRollerPage = () => {
 						{diceType === DiceType.Numbered && (
 							<>
 								<DndDiceSelector
-									onRollClicked={(results: NumberDie[]) =>
-										setNumberDiceRollResults(results)
-									}
+									onRollClicked={setNumberDiceRollResults}
 								/>
 								<NumberDiceResults
 									results={numberDiceRollResults}
@@ -105,10 +106,8 @@ export const DiceRollerPage = () => {
 						{diceType === DiceType.EdgeOfTheEmpire && (
 							<>
 								<EdgeOfTheEmpireDiceSelector
-									onRollClicked={(
-										result: EdgeOfTheEmpireDiceCollection,
-									) =>
-										setEdgeOfTheEmpireDiceRollResult(result)
+									onRollClicked={
+										setEdgeOfTheEmpireDiceRollResult
 									}
 								/>
 								<EdgeOfTheEmpireDiceResults
