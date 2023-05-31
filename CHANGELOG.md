@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.4.1
+
+-   Fix force dice result font
+
 ## 0.4.0
 
 -   Add dice roller

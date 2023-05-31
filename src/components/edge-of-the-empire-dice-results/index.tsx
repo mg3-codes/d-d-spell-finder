@@ -196,7 +196,10 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="type">⬜️ Force</td>
 							<td className="results force-results">
 								{results?.force.map((x, index) => (
-									<span key={`force-${index}`}>
+									<span
+										className="force-result"
+										key={`force-${index}`}
+									>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
