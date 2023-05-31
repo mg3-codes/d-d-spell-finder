@@ -13,18 +13,4 @@
 .page {
 	color: var(--bs-body-color);
 	background-color: var(--bs-body-bg);
-
-	.header-buttons {
-		display: flex;
-		align-items: center;
-
-		.printer-button {
-			&:hover {
-				color: bootstrap.$white;
-				i {
-					color: bootstrap.$white;
-				}
-			}
-		}
-	}
 }

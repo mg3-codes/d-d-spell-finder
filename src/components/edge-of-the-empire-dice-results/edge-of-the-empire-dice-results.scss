@@ -1,0 +1,118 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+@use "../../styles/bootstrap.scss" as bootstrap;
+
+@mixin column1 {
+	min-width: 25%;
+}
+
+@mixin column2 {
+	flex-grow: 1;
+}
+
+@mixin column3 {
+	min-width: 16%;
+}
+
+@font-face {
+	font-family: "eote-symbols";
+	src: url("../../assets/EotE_Symbol-Regular_v1.otf") format("opentype");
+}
+
+.number-dice-results {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin-left: 12px;
+
+	.results-table {
+		min-height: 370px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+
+		.header {
+			display: flex;
+
+			.type {
+				@include column1;
+			}
+
+			.results {
+				@include column2;
+			}
+
+			.sum {
+				@include column3;
+			}
+		}
+
+		.results-section {
+			display: flex;
+			justify-content: space-between;
+
+			.type {
+				text-align: start;
+				@include column1;
+			}
+
+			.eote-results {
+				overflow: scroll;
+				flex-grow: 1;
+				text-align: center;
+
+				span {
+					font-family: "eote-symbols";
+				}
+			}
+
+			.force-results {
+				background-color: bootstrap.$white;
+				color: bootstrap.$black;
+			}
+
+			.sum {
+				min-width: 16%;
+			}
+		}
+
+		tfoot {
+			tr {
+				display: flex;
+			}
+
+			.totals-header {
+				flex-grow: 1;
+			}
+
+			.results-success-and-failure {
+				width: 50%;
+			}
+
+			.results-advantage-and-threat {
+				width: 50%;
+			}
+
+			.roll-success {
+				display: flex;
+
+				.label {
+					@include column1;
+				}
+
+				.result {
+					min-width: 50px;
+				}
+
+				.empty {
+					border-bottom: none;
+					flex-grow: 1;
+				}
+			}
+		}
+	}
+}
