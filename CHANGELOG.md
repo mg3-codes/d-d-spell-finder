@@ -4,7 +4,7 @@
 
 ## 0.4.0
 
-- Add dice roller
+-   Add dice roller
 
 ## 0.3.2
 
