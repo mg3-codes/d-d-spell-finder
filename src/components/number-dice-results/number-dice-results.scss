@@ -4,6 +4,8 @@
  * @format
  */
 
+@use "../../styles/bootstrap.scss" as bootstrap;
+
 @mixin column1 {
 	min-width: 16%;
 }
@@ -68,6 +70,10 @@
 				overflow: scroll;
 				flex-grow: 1;
 				text-align: center;
+
+				span {
+					font-family: bootstrap.$font-family-base;
+				}
 			}
 
 			.sum {

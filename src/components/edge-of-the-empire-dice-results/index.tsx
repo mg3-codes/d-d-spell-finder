@@ -104,7 +104,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					{hasBoostResults && (
 						<tr className="results-section">
 							<td className="type">🟦 Boost</td>
-							<td className="results">
+							<td className="eote-results">
 								{results?.boost.map((x, index) => (
 									<span key={`boost-${index}`}>
 										{x
@@ -119,7 +119,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					{hasSetbackResults && (
 						<tr className="results-section">
 							<td className="type">⬛️ Setback</td>
-							<td className="results">
+							<td className="eote-results">
 								{results?.setback.map((x, index) => (
 									<span key={`setback-${index}`}>
 										{x
@@ -134,7 +134,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					{hasAbilityResults && (
 						<tr className="results-section">
 							<td className="type">🟩 Ability</td>
-							<td className="results">
+							<td className="eote-results">
 								{results?.ability.map((x, index) => (
 									<span key={`ability-${index}`}>
 										{x
@@ -149,7 +149,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					{hasDifficultyResults && (
 						<tr className="results-section">
 							<td className="type">🟪 Difficulty</td>
-							<td className="results">
+							<td className="eote-results">
 								{results?.difficulty.map((x, index) => (
 									<span key={`difficulty-${index}`}>
 										{x
@@ -164,7 +164,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					{hasProficiencyResults && (
 						<tr className="results-section">
 							<td className="type">🟨 Proficiency</td>
-							<td className="results">
+							<td className="eote-results">
 								{results?.proficiency.map((x, index) => (
 									<span key={`proficiency-${index}`}>
 										{x
@@ -179,7 +179,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					{hasChallengeResults && (
 						<tr className="results-section">
 							<td className="type">🟥 Challenge</td>
-							<td className="results">
+							<td className="eote-results">
 								{results?.challenge.map((x, index) => (
 									<span key={`challenge-${index}`}>
 										{x
