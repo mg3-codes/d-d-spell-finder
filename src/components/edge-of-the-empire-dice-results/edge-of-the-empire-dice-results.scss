@@ -73,6 +73,10 @@
 			.force-results {
 				background-color: bootstrap.$white;
 				color: bootstrap.$black;
+
+				.force-result {
+					font-family: "eote-symbols";
+				}
 			}
 
 			.sum {
