@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.4.2
+
+-   Add page for direct navigation to dice roller
+
 ## 0.4.1
 
 -   Fix force dice result font
