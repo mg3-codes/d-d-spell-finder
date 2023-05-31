@@ -17,29 +17,6 @@ export default class ForceDie extends NumberDie {
 		super(12, value);
 	}
 
-	mapNumberToDiceFace = (x: number): ForceDieFace | null => {
-		switch (x) {
-			case 1:
-			case 2:
-			case 3:
-			case 4:
-			case 5:
-			case 6:
-				return ForceDieFace.DarkSide;
-			case 7:
-				return ForceDieFace.TwoDarkSide;
-			case 8:
-			case 9:
-				return ForceDieFace.LightSide;
-			case 10:
-			case 11:
-			case 12:
-				return ForceDieFace.TwoLightSide;
-			default:
-				return null;
-		}
-	};
-
 	mapValueToResults = (): EdgeOfTheEmpireDiceSymbol[] => {
 		switch (this.value) {
 			case 1:
@@ -68,11 +45,4 @@ export default class ForceDie extends NumberDie {
 				return [];
 		}
 	};
-}
-
-enum ForceDieFace {
-	DarkSide,
-	TwoDarkSide,
-	LightSide,
-	TwoLightSide,
 }

@@ -17,32 +17,6 @@ export default class ChallengeDie extends NumberDie {
 		super(12, value);
 	}
 
-	mapNumberToDiceFace = (x: number): ChallengeDieFace | null => {
-		switch (x) {
-			case 1:
-				return ChallengeDieFace.Blank;
-			case 2:
-			case 3:
-				return ChallengeDieFace.Failure;
-			case 4:
-			case 5:
-				return ChallengeDieFace.TwoFailure;
-			case 6:
-			case 7:
-				return ChallengeDieFace.Threat;
-			case 8:
-			case 9:
-				return ChallengeDieFace.FailureAndThreat;
-			case 10:
-			case 11:
-				return ChallengeDieFace.TwoThreat;
-			case 12:
-				return ChallengeDieFace.Despair;
-			default:
-				return null;
-		}
-	};
-
 	mapValueToResults = (): EdgeOfTheEmpireDiceSymbol[] => {
 		switch (this.value) {
 			case 1:
@@ -77,14 +51,4 @@ export default class ChallengeDie extends NumberDie {
 				return [];
 		}
 	};
-}
-
-enum ChallengeDieFace {
-	Blank,
-	Failure,
-	TwoFailure,
-	FailureAndThreat,
-	Threat,
-	TwoThreat,
-	Despair,
 }

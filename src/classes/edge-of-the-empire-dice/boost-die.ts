@@ -17,24 +17,6 @@ export default class BoostDie extends NumberDie {
 		super(6, value);
 	}
 
-	mapNumberToDiceFace = (x: number): BoostDieFace | null => {
-		switch (x) {
-			case 1:
-			case 2:
-				return BoostDieFace.Blank;
-			case 3:
-				return BoostDieFace.Success;
-			case 4:
-				return BoostDieFace.SuccessAndAdvantage;
-			case 5:
-				return BoostDieFace.TwoAdvantage;
-			case 6:
-				return BoostDieFace.Advantage;
-			default:
-				return null;
-		}
-	};
-
 	mapValueToResults = (): EdgeOfTheEmpireDiceSymbol[] => {
 		switch (this.value) {
 			case 1:
@@ -58,12 +40,4 @@ export default class BoostDie extends NumberDie {
 				return [];
 		}
 	};
-}
-
-enum BoostDieFace {
-	Blank,
-	Success,
-	SuccessAndAdvantage,
-	TwoAdvantage,
-	Advantage,
 }

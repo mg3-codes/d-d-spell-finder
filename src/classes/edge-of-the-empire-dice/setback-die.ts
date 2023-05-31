@@ -17,22 +17,6 @@ export default class SetbackDie extends NumberDie {
 		super(6, value);
 	}
 
-	mapNumberToDiceFace = (x: number): SetbackDieFace | null => {
-		switch (x) {
-			case 1:
-			case 2:
-				return SetbackDieFace.Blank;
-			case 3:
-			case 4:
-				return SetbackDieFace.Failure;
-			case 5:
-			case 6:
-				return SetbackDieFace.Threat;
-			default:
-				return null;
-		}
-	};
-
 	mapValueToResults = (): EdgeOfTheEmpireDiceSymbol[] => {
 		switch (this.value) {
 			case 1:
@@ -48,10 +32,4 @@ export default class SetbackDie extends NumberDie {
 				return [];
 		}
 	};
-}
-
-enum SetbackDieFace {
-	Blank,
-	Failure,
-	Threat,
 }
