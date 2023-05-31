@@ -53,6 +53,12 @@ export const DiceRollerPage = () => {
 		setEdgeOfTheEmpireDiceRollResult(null);
 	}, []);
 
+	const handleDiceTypeChange = (type: DiceType): void => {
+		if (useCookies) setCookie(cookieName, type.toString(), false);
+
+		setDiceType(type);
+	};
+
 	const handleNumberedDiceTypeClick = useCallback(
 		() => handleDiceTypeChange(DiceType.Numbered),
 		[],
@@ -62,12 +68,6 @@ export const DiceRollerPage = () => {
 		() => handleDiceTypeChange(DiceType.EdgeOfTheEmpire),
 		[],
 	);
-
-	const handleDiceTypeChange = (type: DiceType): void => {
-		if (useCookies) setCookie(cookieName, type.toString(), false);
-
-		setDiceType(type);
-	};
 
 	return (
 		<div className="gutter-container">
