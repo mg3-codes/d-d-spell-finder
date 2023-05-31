@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -78,21 +78,24 @@ export const EdgeOfTheEmpireDiceSelector = ({
 		onRollClicked(dice);
 	};
 
-	const onSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-		const form = e?.currentTarget;
+	const onSubmit = useCallback(
+		(e: React.FormEvent<HTMLFormElement>): void => {
+			const form = e?.currentTarget;
 
-		setValidated(false);
-		e.preventDefault();
-		e.stopPropagation();
+			setValidated(false);
+			e.preventDefault();
+			e.stopPropagation();
 
-		if (form.checkValidity() === false) {
-			setValidated(true);
-		}
+			if (form.checkValidity() === false) {
+				setValidated(true);
+			}
 
-		rollAllDice();
-	};
+			rollAllDice();
+		},
+		[],
+	);
 
-	const handleClearSelection = () => {
+	const handleClearSelection = useCallback(() => {
 		if (boostInput?.current) boostInput.current.value = "0";
 		if (setbackInput?.current) setbackInput.current.value = "0";
 		if (abilityInput?.current) abilityInput.current.value = "0";
@@ -100,7 +103,15 @@ export const EdgeOfTheEmpireDiceSelector = ({
 		if (proficiencyInput?.current) proficiencyInput.current.value = "0";
 		if (challengeInput?.current) challengeInput.current.value = "0";
 		if (forceInput?.current) forceInput.current.value = "0";
-	};
+	}, [
+		boostInput,
+		setbackInput,
+		abilityInput,
+		difficultyInput,
+		proficiencyInput,
+		challengeInput,
+		forceInput,
+	]);
 
 	return (
 		<Form

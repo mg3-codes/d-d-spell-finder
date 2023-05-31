@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useRef, useState } from "react";
+import React, { useCallback, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -69,21 +69,24 @@ export const DndDiceSelector = ({
 		onRollClicked(dice);
 	};
 
-	const onSubmit = (e: React.FormEvent<HTMLFormElement>): void => {
-		const form = e?.currentTarget;
+	const onSubmit = useCallback(
+		(e: React.FormEvent<HTMLFormElement>): void => {
+			const form = e?.currentTarget;
 
-		setValidated(false);
-		e.preventDefault();
-		e.stopPropagation();
+			setValidated(false);
+			e.preventDefault();
+			e.stopPropagation();
 
-		if (form.checkValidity() === false) {
-			setValidated(true);
-		}
+			if (form.checkValidity() === false) {
+				setValidated(true);
+			}
 
-		rollAllDice();
-	};
+			rollAllDice();
+		},
+		[],
+	);
 
-	const handleClearSelection = () => {
+	const handleClearSelection = useCallback(() => {
 		if (twoSidedInput?.current) twoSidedInput.current.value = "0";
 		if (fourSidedInput?.current) fourSidedInput.current.value = "0";
 		if (sixSidedInput?.current) sixSidedInput.current.value = "0";
@@ -93,7 +96,16 @@ export const DndDiceSelector = ({
 		if (twentySidedInput?.current) twentySidedInput.current.value = "0";
 		if (oneHundredSidedInput?.current)
 			oneHundredSidedInput.current.value = "0";
-	};
+	}, [
+		twoSidedInput,
+		fourSidedInput,
+		sixSidedInput,
+		eightSidedInput,
+		tenSidedInput,
+		twelveSidedInput,
+		twentySidedInput,
+		oneHundredSidedInput,
+	]);
 
 	return (
 		<Form

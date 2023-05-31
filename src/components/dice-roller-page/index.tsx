@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { Suspense, useContext, useState } from "react";
+import React, { Suspense, useCallback, useContext, useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 
@@ -53,11 +53,14 @@ export const DiceRollerPage = () => {
 		setEdgeOfTheEmpireDiceRollResult(null);
 	};
 
-	const handleDiceTypeChange = (type: DiceType): void => {
-		if (useCookies) setCookie(cookieName, type.toString(), false);
+	const handleDiceTypeChange = useCallback(
+		(type: DiceType): void => {
+			if (useCookies) setCookie(cookieName, type.toString(), false);
 
-		setDiceType(type);
-	};
+			setDiceType(type);
+		},
+		[useCookies, diceType],
+	);
 
 	return (
 		<div className="gutter-container">
