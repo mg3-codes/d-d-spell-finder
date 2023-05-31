@@ -70,8 +70,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					results?.force.length > 0)) ??
 				false,
 		);
-		[results];
-	});
+	}, [results]);
 
 	useEffect(() => {
 		if (!results || !resultsHaveDice) setCalculatedResults(null);
