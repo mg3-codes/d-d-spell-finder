@@ -7,6 +7,11 @@
 import { EdgeOfTheEmpireDiceSymbol } from "../enums/edge-of-the-empire-dice-symbol";
 import EdgeOfTheEmpireDiceResult from "../types/edge-of-the-empire-dice-result";
 
+const determineRollSuccess = (result: EdgeOfTheEmpireDiceResult): boolean => {
+	if (result.successAndFailure > 0) return true;
+	else return false;
+};
+
 export const getOutcomeFromSymbols = (
 	diceSymbols: EdgeOfTheEmpireDiceSymbol[] | null,
 ): EdgeOfTheEmpireDiceResult => {
@@ -59,9 +64,4 @@ export const getOutcomeFromSymbols = (
 	diceResult.rollSuccess = determineRollSuccess(diceResult);
 
 	return diceResult;
-};
-
-const determineRollSuccess = (result: EdgeOfTheEmpireDiceResult): boolean => {
-	if (result.successAndFailure > 0) return true;
-	else return false;
 };
