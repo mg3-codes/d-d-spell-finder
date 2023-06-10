@@ -4,6 +4,8 @@
  * @format
  */
 
+@use "../../styles/bootstrap.scss" as bootstrap;
+
 .footer {
 	margin-top: 12px;
 	display: flex;
@@ -21,5 +23,5 @@
 }
 
 [data-bs-theme="dark"] i.github-icon {
-	color: #ffffff;
+	color: bootstrap.$white;
 }
