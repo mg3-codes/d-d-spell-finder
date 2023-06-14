@@ -1249,12 +1249,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bootstrap@npm:^5.3.0-alpha3":
-  version: 5.3.0-alpha3
-  resolution: "bootstrap@npm:5.3.0-alpha3"
+"bootstrap@npm:^5.3.0":
+  version: 5.3.0
+  resolution: "bootstrap@npm:5.3.0"
   peerDependencies:
     "@popperjs/core": ^2.11.7
-  checksum: 1739c40e4033c134e9dc51235e8018f267a9fc8114feba6a5b402f2ab0c68e67c363e2f243c79f252d1cf8fcde82262b04bbaaf6ea1695c37537c02f34ae4f79
+  checksum: 29a83cc8cac96d70051e265a5da342cc488df8fc76dff6746ef7d155698286cd5bdfa3e52c6ebf09f8e5a97f25929ee97aee36237117732e52b0d3276a72c45c
   languageName: node
   linkType: hard
 
@@ -1834,7 +1834,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^5.59.8
     "@typescript-eslint/parser": ^5.59.8
     "@vitejs/plugin-react-swc": ^3.3.2
-    bootstrap: ^5.3.0-alpha3
+    bootstrap: ^5.3.0
     cypress: ^12.13.0
     eslint: ^8.42.0
     eslint-config-prettier: ^8.8.0
