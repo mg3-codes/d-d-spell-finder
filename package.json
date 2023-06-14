@@ -23,7 +23,7 @@
 		"@ag-grid-community/react": "^29.3.5",
 		"@popperjs/core": "^2.11.8",
 		"@rollbar/react": "^0.11.1",
-		"bootstrap": "^5.3.0-alpha3",
+		"bootstrap": "^5.3.0",
 		"path": "^0.12.7",
 		"prop-types": "^15.8.1",
 		"react": "^18.2.0",
