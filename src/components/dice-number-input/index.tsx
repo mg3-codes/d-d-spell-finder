@@ -39,6 +39,10 @@ export const DiceNumberInput = ({
 		else setShowError(false);
 	}, [value]);
 
+	const handleUpdateValue = useCallback((value: string): void => {
+		updateValue(value);
+	}, []);
+
 	const decreaseButtonIsDisabled = useCallback((): boolean => {
 		if (showError) return true;
 
@@ -63,7 +67,7 @@ export const DiceNumberInput = ({
 			</Button>
 			<Form.Control
 				value={value}
-				onChange={(e) => updateValue(e.target.value)}
+				onChange={(e) => handleUpdateValue(e.target.value)}
 				onBlur={handleBlur}
 				isInvalid={showError}
 			/>
