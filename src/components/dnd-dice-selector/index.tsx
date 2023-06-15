@@ -4,9 +4,11 @@
  * @format
  */
 
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
+
+import { DiceNumberInput } from "../dice-number-input";
 
 import NumberDie from "../../classes/number-die";
 
@@ -19,49 +21,51 @@ export interface IDndDiceSelectorProps {
 export const DndDiceSelector = ({
 	onRollClicked,
 }: IDndDiceSelectorProps): JSX.Element => {
-	const [validated, setValidated] = useState<boolean>(false);
-	const twoSidedInput = useRef<HTMLInputElement>(null);
-	const fourSidedInput = useRef<HTMLInputElement>(null);
-	const sixSidedInput = useRef<HTMLInputElement>(null);
-	const eightSidedInput = useRef<HTMLInputElement>(null);
-	const tenSidedInput = useRef<HTMLInputElement>(null);
-	const twelveSidedInput = useRef<HTMLInputElement>(null);
-	const twentySidedInput = useRef<HTMLInputElement>(null);
-	const oneHundredSidedInput = useRef<HTMLInputElement>(null);
+	const [twoSidedInputValue, setTwoSidedInputValue] = useState<string>("0");
+	const [fourSidedInputValue, setFourSidedInputValue] = useState<string>("0");
+	const [sixSidedInputValue, setSixSidedInputValue] = useState<string>("0");
+	const [eightSidedInputValue, setEightSidedInputValue] =
+		useState<string>("0");
+	const [tenSidedInputValue, setTenSidedInputValue] = useState<string>("0");
+	const [twelveSidedInputValue, setTwelveSidedInputValue] =
+		useState<string>("0");
+	const [twentySidedInputValue, setTwentySidedInputValue] =
+		useState<string>("0");
+	const [oneHundredSidedInputValue, setOneHundredSidedInputValue] =
+		useState<string>("0");
 
 	const rollAllDice = (): void => {
 		const dice: NumberDie[] = [];
 
-		const twoSided = twoSidedInput.current?.valueAsNumber ?? 0;
+		const twoSided = parseInt(twoSidedInputValue);
 		for (let rolls = 0; rolls < twoSided; rolls++) {
 			dice.push(new NumberDie(2));
 		}
-		const fourSided = fourSidedInput.current?.valueAsNumber ?? 0;
+		const fourSided = parseInt(fourSidedInputValue);
 		for (let rolls = 0; rolls < fourSided; rolls++) {
 			dice.push(new NumberDie(4));
 		}
-		const sixSided = sixSidedInput.current?.valueAsNumber ?? 0;
+		const sixSided = parseInt(sixSidedInputValue);
 		for (let rolls = 0; rolls < sixSided; rolls++) {
 			dice.push(new NumberDie(6));
 		}
-		const eightSided = eightSidedInput.current?.valueAsNumber ?? 0;
+		const eightSided = parseInt(eightSidedInputValue);
 		for (let rolls = 0; rolls < eightSided; rolls++) {
 			dice.push(new NumberDie(8));
 		}
-		const tenSided = tenSidedInput.current?.valueAsNumber ?? 0;
+		const tenSided = parseInt(tenSidedInputValue);
 		for (let rolls = 0; rolls < tenSided; rolls++) {
 			dice.push(new NumberDie(10));
 		}
-		const twelveSided = twelveSidedInput.current?.valueAsNumber ?? 0;
+		const twelveSided = parseInt(twelveSidedInputValue);
 		for (let rolls = 0; rolls < twelveSided; rolls++) {
 			dice.push(new NumberDie(12));
 		}
-		const twentySided = twentySidedInput.current?.valueAsNumber ?? 0;
+		const twentySided = parseInt(twentySidedInputValue);
 		for (let rolls = 0; rolls < twentySided; rolls++) {
 			dice.push(new NumberDie(20));
 		}
-		const oneHundredSided =
-			oneHundredSidedInput.current?.valueAsNumber ?? 0;
+		const oneHundredSided = parseInt(oneHundredSidedInputValue);
 		for (let rolls = 0; rolls < oneHundredSided; rolls++) {
 			dice.push(new NumberDie(100));
 		}
@@ -69,155 +73,198 @@ export const DndDiceSelector = ({
 		onRollClicked(dice);
 	};
 
-	const onSubmit = useCallback(
-		(e: React.FormEvent<HTMLFormElement>): void => {
-			const form = e?.currentTarget;
-
-			setValidated(false);
-			e.preventDefault();
-			e.stopPropagation();
-
-			if (form.checkValidity() === false) {
-				setValidated(true);
-			}
-
-			rollAllDice();
-		},
-		[],
-	);
-
 	const handleClearSelection = useCallback(() => {
-		if (twoSidedInput?.current) twoSidedInput.current.value = "0";
-		if (fourSidedInput?.current) fourSidedInput.current.value = "0";
-		if (sixSidedInput?.current) sixSidedInput.current.value = "0";
-		if (eightSidedInput?.current) eightSidedInput.current.value = "0";
-		if (tenSidedInput?.current) tenSidedInput.current.value = "0";
-		if (twelveSidedInput?.current) twelveSidedInput.current.value = "0";
-		if (twentySidedInput?.current) twentySidedInput.current.value = "0";
-		if (oneHundredSidedInput?.current)
-			oneHundredSidedInput.current.value = "0";
+		setTwoSidedInputValue("0");
+		setFourSidedInputValue("0");
+		setSixSidedInputValue("0");
+		setEightSidedInputValue("0");
+		setTenSidedInputValue("0");
+		setTwelveSidedInputValue("0");
+		setTwentySidedInputValue("0");
+		setOneHundredSidedInputValue("0");
 	}, [
-		twoSidedInput,
-		fourSidedInput,
-		sixSidedInput,
-		eightSidedInput,
-		tenSidedInput,
-		twelveSidedInput,
-		twentySidedInput,
-		oneHundredSidedInput,
+		twoSidedInputValue,
+		fourSidedInputValue,
+		sixSidedInputValue,
+		eightSidedInputValue,
+		tenSidedInputValue,
+		twelveSidedInputValue,
+		twentySidedInputValue,
+		oneHundredSidedInputValue,
 	]);
 
+	const handleIncrease = (
+		currentValue: string,
+		updateFunction: React.Dispatch<React.SetStateAction<string>>,
+	) => updateFunction((parseInt(currentValue) + 1).toString());
+
+	const handleDecrease = (
+		currentValue: string,
+		updateFunction: React.Dispatch<React.SetStateAction<string>>,
+	) => updateFunction(Math.max(parseInt(currentValue) - 1, 0).toString());
+
 	return (
-		<Form
-			noValidate
-			validated={validated}
-			onSubmit={onSubmit}
-			className="dnd-dice-selector"
-		>
+		<Form noValidate className="dnd-dice-selector">
 			<div className="dice-options-container">
 				<div className="dice-option-column">
 					<Form.Group className="dice-option">
 						<Form.Label>2 Sides</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={twoSidedInput}
+						<DiceNumberInput
+							value={twoSidedInputValue}
+							updateValue={(x) => setTwoSidedInputValue(x)}
+							handleIncreaseClick={() =>
+								handleIncrease(
+									twoSidedInputValue,
+									setTwoSidedInputValue,
+								)
+							}
+							handleDecreaseClick={() =>
+								handleDecrease(
+									twoSidedInputValue,
+									setTwoSidedInputValue,
+								)
+							}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 					<Form.Group className="dice-option">
 						<Form.Label>4 Sides</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={fourSidedInput}
+						<DiceNumberInput
+							value={fourSidedInputValue}
+							updateValue={(x) => setFourSidedInputValue(x)}
+							handleIncreaseClick={() =>
+								handleIncrease(
+									fourSidedInputValue,
+									setFourSidedInputValue,
+								)
+							}
+							handleDecreaseClick={() =>
+								handleDecrease(
+									fourSidedInputValue,
+									setFourSidedInputValue,
+								)
+							}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 					<Form.Group className="dice-option">
 						<Form.Label>6 Sides</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={sixSidedInput}
+						<DiceNumberInput
+							value={sixSidedInputValue}
+							updateValue={(x) => setSixSidedInputValue(x)}
+							handleIncreaseClick={() =>
+								handleIncrease(
+									sixSidedInputValue,
+									setSixSidedInputValue,
+								)
+							}
+							handleDecreaseClick={() =>
+								handleDecrease(
+									sixSidedInputValue,
+									setSixSidedInputValue,
+								)
+							}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 					<Form.Group className="dice-option">
 						<Form.Label>8 Sides</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={eightSidedInput}
+						<DiceNumberInput
+							value={eightSidedInputValue}
+							updateValue={(x) => setEightSidedInputValue(x)}
+							handleIncreaseClick={() =>
+								handleIncrease(
+									eightSidedInputValue,
+									setEightSidedInputValue,
+								)
+							}
+							handleDecreaseClick={() =>
+								handleDecrease(
+									eightSidedInputValue,
+									setEightSidedInputValue,
+								)
+							}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 				</div>
 				<div className="dice-option-column">
 					<Form.Group className="dice-option">
 						<Form.Label>10 Sides</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={tenSidedInput}
+						<DiceNumberInput
+							value={tenSidedInputValue}
+							updateValue={(x) => setTenSidedInputValue(x)}
+							handleIncreaseClick={() =>
+								handleIncrease(
+									tenSidedInputValue,
+									setTenSidedInputValue,
+								)
+							}
+							handleDecreaseClick={() =>
+								handleDecrease(
+									tenSidedInputValue,
+									setTenSidedInputValue,
+								)
+							}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 					<Form.Group className="dice-option">
 						<Form.Label>12 Sides</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={twelveSidedInput}
+						<DiceNumberInput
+							value={twelveSidedInputValue}
+							updateValue={(x) => setTwelveSidedInputValue(x)}
+							handleIncreaseClick={() =>
+								handleIncrease(
+									twelveSidedInputValue,
+									setTwelveSidedInputValue,
+								)
+							}
+							handleDecreaseClick={() =>
+								handleDecrease(
+									twelveSidedInputValue,
+									setTwelveSidedInputValue,
+								)
+							}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 					<Form.Group className="dice-option">
 						<Form.Label>20 Sides</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={twentySidedInput}
+						<DiceNumberInput
+							value={twentySidedInputValue}
+							updateValue={(x) => setTwentySidedInputValue(x)}
+							handleIncreaseClick={() =>
+								handleIncrease(
+									twentySidedInputValue,
+									setTwentySidedInputValue,
+								)
+							}
+							handleDecreaseClick={() =>
+								handleDecrease(
+									twentySidedInputValue,
+									setTwentySidedInputValue,
+								)
+							}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 					<Form.Group className="dice-option">
 						<Form.Label>100 Sides</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={oneHundredSidedInput}
+						<DiceNumberInput
+							value={oneHundredSidedInputValue}
+							updateValue={(x) => setOneHundredSidedInputValue(x)}
+							handleIncreaseClick={() =>
+								handleIncrease(
+									oneHundredSidedInputValue,
+									setOneHundredSidedInputValue,
+								)
+							}
+							handleDecreaseClick={() =>
+								handleDecrease(
+									oneHundredSidedInputValue,
+									setOneHundredSidedInputValue,
+								)
+							}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 				</div>
 			</div>
 			<div className="button-container">
-				<Button type="submit">Roll</Button>
+				<Button onClick={rollAllDice}>Roll</Button>
 				<Button variant="outline-danger" onClick={handleClearSelection}>
 					Clear
 				</Button>
