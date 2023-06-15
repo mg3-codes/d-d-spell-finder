@@ -29,8 +29,7 @@ export const DiceNumberInput = ({
 	const inputIsValid = (): boolean => {
 		const valueAsNumber = parseInt(value);
 
-		if (Number.isNaN(valueAsNumber)) return false;
-		if (valueAsNumber < 0) return false;
+		if (Number.isNaN(valueAsNumber) || valueAsNumber < 0) return false;
 
 		return true;
 	};
