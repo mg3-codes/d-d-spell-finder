@@ -109,6 +109,76 @@ export const EdgeOfTheEmpireDiceSelector = ({
 		updateFunction: React.Dispatch<React.SetStateAction<string>>,
 	) => updateFunction(Math.max(parseInt(currentValue) - 1, 0).toString());
 
+	const handleBoostIncreaseClick = useCallback(
+		() => handleIncrease(boostInputValue, setBoostInputValue),
+		[boostInputValue],
+	);
+
+	const handleBoostDecreaseClick = useCallback(
+		() => handleDecrease(boostInputValue, setBoostInputValue),
+		[boostInputValue],
+	);
+
+	const handleSetbackIncreaseClick = useCallback(
+		() => handleIncrease(setbackInputValue, setSetbackInputValue),
+		[setbackInputValue],
+	);
+
+	const handleSetbackDecreaseClick = useCallback(
+		() => handleDecrease(setbackInputValue, setSetbackInputValue),
+		[setbackInputValue],
+	);
+
+	const handleAbilityIncreaseClick = useCallback(
+		() => handleIncrease(abilityInputValue, setAbilityInputValue),
+		[abilityInputValue],
+	);
+
+	const handleAbilityDecreaseClick = useCallback(
+		() => handleDecrease(abilityInputValue, setAbilityInputValue),
+		[abilityInputValue],
+	);
+
+	const handleDifficultyIncreaseClick = useCallback(
+		() => handleIncrease(difficultyInputValue, setDifficultyInputValue),
+		[difficultyInputValue],
+	);
+
+	const handleDifficultyDecreaseClick = useCallback(
+		() => handleDecrease(difficultyInputValue, setDifficultyInputValue),
+		[difficultyInputValue],
+	);
+
+	const handleProficiencyIncreaseClick = useCallback(
+		() => handleIncrease(proficiencyInputValue, setProficiencyInputValue),
+		[proficiencyInputValue],
+	);
+
+	const handleProficiencyDecreaseClick = useCallback(
+		() => handleDecrease(proficiencyInputValue, setProficiencyInputValue),
+		[proficiencyInputValue],
+	);
+
+	const handleChallengeIncreaseClick = useCallback(
+		() => handleIncrease(challengeInputValue, setChallengeInputValue),
+		[challengeInputValue],
+	);
+
+	const handleChallengeDecreaseClick = useCallback(
+		() => handleDecrease(challengeInputValue, setChallengeInputValue),
+		[challengeInputValue],
+	);
+
+	const handleForceIncreaseClick = useCallback(
+		() => handleIncrease(forceInputValue, setForceInputValue),
+		[forceInputValue],
+	);
+
+	const handleForceDecreaseClick = useCallback(
+		() => handleDecrease(forceInputValue, setForceInputValue),
+		[forceInputValue],
+	);
+
 	return (
 		<Form noValidate className="edge-of-the-empire-dice-selector">
 			<div className="dice-options-container">
@@ -118,18 +188,8 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<DiceNumberInput
 							value={boostInputValue}
 							updateValue={setBoostInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									boostInputValue,
-									setBoostInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									boostInputValue,
-									setBoostInputValue,
-								)
-							}
+							handleIncreaseClick={handleBoostIncreaseClick}
+							handleDecreaseClick={handleBoostDecreaseClick}
 						/>
 					</Form.Group>
 					<Form.Group className="dice-option">
@@ -137,18 +197,8 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<DiceNumberInput
 							value={setbackInputValue}
 							updateValue={setSetbackInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									setbackInputValue,
-									setSetbackInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									setbackInputValue,
-									setSetbackInputValue,
-								)
-							}
+							handleIncreaseClick={handleSetbackIncreaseClick}
+							handleDecreaseClick={handleSetbackDecreaseClick}
 						/>
 					</Form.Group>
 				</div>
@@ -158,18 +208,8 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<DiceNumberInput
 							value={abilityInputValue}
 							updateValue={setAbilityInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									abilityInputValue,
-									setAbilityInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									abilityInputValue,
-									setAbilityInputValue,
-								)
-							}
+							handleIncreaseClick={handleAbilityIncreaseClick}
+							handleDecreaseClick={handleAbilityDecreaseClick}
 						/>
 					</Form.Group>
 					<Form.Group className="dice-option">
@@ -177,18 +217,8 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<DiceNumberInput
 							value={difficultyInputValue}
 							updateValue={setDifficultyInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									difficultyInputValue,
-									setDifficultyInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									difficultyInputValue,
-									setDifficultyInputValue,
-								)
-							}
+							handleIncreaseClick={handleDifficultyIncreaseClick}
+							handleDecreaseClick={handleDifficultyDecreaseClick}
 						/>
 					</Form.Group>
 				</div>
@@ -198,18 +228,8 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<DiceNumberInput
 							value={proficiencyInputValue}
 							updateValue={setProficiencyInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									proficiencyInputValue,
-									setProficiencyInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									proficiencyInputValue,
-									setProficiencyInputValue,
-								)
-							}
+							handleIncreaseClick={handleProficiencyIncreaseClick}
+							handleDecreaseClick={handleProficiencyDecreaseClick}
 						/>
 					</Form.Group>
 					<Form.Group className="dice-option">
@@ -217,18 +237,8 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<DiceNumberInput
 							value={challengeInputValue}
 							updateValue={setChallengeInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									challengeInputValue,
-									setChallengeInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									challengeInputValue,
-									setChallengeInputValue,
-								)
-							}
+							handleIncreaseClick={handleChallengeIncreaseClick}
+							handleDecreaseClick={handleChallengeDecreaseClick}
 						/>
 					</Form.Group>
 				</div>
@@ -238,18 +248,8 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<DiceNumberInput
 							value={forceInputValue}
 							updateValue={setForceInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									forceInputValue,
-									setForceInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									forceInputValue,
-									setForceInputValue,
-								)
-							}
+							handleIncreaseClick={handleForceIncreaseClick}
+							handleDecreaseClick={handleForceDecreaseClick}
 						/>
 					</Form.Group>
 				</div>

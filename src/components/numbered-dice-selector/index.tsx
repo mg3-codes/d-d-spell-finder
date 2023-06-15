@@ -103,6 +103,94 @@ export const NumberedDiceSelector = ({
 		updateFunction: React.Dispatch<React.SetStateAction<string>>,
 	) => updateFunction(Math.max(parseInt(currentValue) - 1, 0).toString());
 
+	const handleTwoSidedIncreaseClick = useCallback(
+		() => handleIncrease(twoSidedInputValue, setTwoSidedInputValue),
+		[twoSidedInputValue],
+	);
+
+	const handleTwoSidedDecreaseClick = useCallback(
+		() => handleDecrease(twoSidedInputValue, setTwoSidedInputValue),
+		[twoSidedInputValue],
+	);
+
+	const handleFourSidedIncreaseClick = useCallback(
+		() => handleIncrease(fourSidedInputValue, setFourSidedInputValue),
+		[fourSidedInputValue],
+	);
+
+	const handleFourSidedDecreaseClick = useCallback(
+		() => handleDecrease(fourSidedInputValue, setFourSidedInputValue),
+		[fourSidedInputValue],
+	);
+
+	const handleSixSidedIncreaseClick = useCallback(
+		() => handleIncrease(sixSidedInputValue, setSixSidedInputValue),
+		[sixSidedInputValue],
+	);
+
+	const handleSixSidedDecreaseClick = useCallback(
+		() => handleDecrease(sixSidedInputValue, setSixSidedInputValue),
+		[sixSidedInputValue],
+	);
+
+	const handleEightSidedIncreaseClick = useCallback(
+		() => handleIncrease(eightSidedInputValue, setEightSidedInputValue),
+		[eightSidedInputValue],
+	);
+
+	const handleEightSidedDecreaseClick = useCallback(
+		() => handleDecrease(eightSidedInputValue, setEightSidedInputValue),
+		[eightSidedInputValue],
+	);
+
+	const handleTenSidedIncreaseClick = useCallback(
+		() => handleIncrease(tenSidedInputValue, setTenSidedInputValue),
+		[tenSidedInputValue],
+	);
+
+	const handleTenSidedDecreaseClick = useCallback(
+		() => handleDecrease(tenSidedInputValue, setTenSidedInputValue),
+		[tenSidedInputValue],
+	);
+
+	const handleTwelveSidedIncreaseClick = useCallback(
+		() => handleIncrease(twelveSidedInputValue, setTwelveSidedInputValue),
+		[twelveSidedInputValue],
+	);
+
+	const handleTwelveSidedDecreaseClick = useCallback(
+		() => handleDecrease(twelveSidedInputValue, setTwelveSidedInputValue),
+		[twelveSidedInputValue],
+	);
+
+	const handleTwentySidedIncreaseClick = useCallback(
+		() => handleIncrease(twentySidedInputValue, setTwentySidedInputValue),
+		[twentySidedInputValue],
+	);
+
+	const handleTwentySidedDecreaseClick = useCallback(
+		() => handleDecrease(twentySidedInputValue, setTwentySidedInputValue),
+		[twentySidedInputValue],
+	);
+
+	const handleOneHundredSidedIncreaseClick = useCallback(
+		() =>
+			handleIncrease(
+				oneHundredSidedInputValue,
+				setOneHundredSidedInputValue,
+			),
+		[oneHundredSidedInputValue],
+	);
+
+	const handleOneHundredSidedDecreaseClick = useCallback(
+		() =>
+			handleDecrease(
+				oneHundredSidedInputValue,
+				setOneHundredSidedInputValue,
+			),
+		[oneHundredSidedInputValue],
+	);
+
 	return (
 		<Form noValidate className="dnd-dice-selector">
 			<div className="dice-options-container">
@@ -112,18 +200,8 @@ export const NumberedDiceSelector = ({
 						<DiceNumberInput
 							value={twoSidedInputValue}
 							updateValue={setTwoSidedInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									twoSidedInputValue,
-									setTwoSidedInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									twoSidedInputValue,
-									setTwoSidedInputValue,
-								)
-							}
+							handleIncreaseClick={handleTwoSidedIncreaseClick}
+							handleDecreaseClick={handleTwoSidedDecreaseClick}
 						/>
 					</Form.Group>
 					<Form.Group className="dice-option">
@@ -131,18 +209,8 @@ export const NumberedDiceSelector = ({
 						<DiceNumberInput
 							value={fourSidedInputValue}
 							updateValue={setFourSidedInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									fourSidedInputValue,
-									setFourSidedInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									fourSidedInputValue,
-									setFourSidedInputValue,
-								)
-							}
+							handleIncreaseClick={handleFourSidedIncreaseClick}
+							handleDecreaseClick={handleFourSidedDecreaseClick}
 						/>
 					</Form.Group>
 					<Form.Group className="dice-option">
@@ -150,18 +218,8 @@ export const NumberedDiceSelector = ({
 						<DiceNumberInput
 							value={sixSidedInputValue}
 							updateValue={setSixSidedInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									sixSidedInputValue,
-									setSixSidedInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									sixSidedInputValue,
-									setSixSidedInputValue,
-								)
-							}
+							handleIncreaseClick={handleSixSidedIncreaseClick}
+							handleDecreaseClick={handleSixSidedDecreaseClick}
 						/>
 					</Form.Group>
 					<Form.Group className="dice-option">
@@ -169,18 +227,8 @@ export const NumberedDiceSelector = ({
 						<DiceNumberInput
 							value={eightSidedInputValue}
 							updateValue={setEightSidedInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									eightSidedInputValue,
-									setEightSidedInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									eightSidedInputValue,
-									setEightSidedInputValue,
-								)
-							}
+							handleIncreaseClick={handleEightSidedIncreaseClick}
+							handleDecreaseClick={handleEightSidedDecreaseClick}
 						/>
 					</Form.Group>
 				</div>
@@ -190,18 +238,8 @@ export const NumberedDiceSelector = ({
 						<DiceNumberInput
 							value={tenSidedInputValue}
 							updateValue={setTenSidedInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									tenSidedInputValue,
-									setTenSidedInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									tenSidedInputValue,
-									setTenSidedInputValue,
-								)
-							}
+							handleIncreaseClick={handleTenSidedIncreaseClick}
+							handleDecreaseClick={handleTenSidedDecreaseClick}
 						/>
 					</Form.Group>
 					<Form.Group className="dice-option">
@@ -209,18 +247,8 @@ export const NumberedDiceSelector = ({
 						<DiceNumberInput
 							value={twelveSidedInputValue}
 							updateValue={setTwelveSidedInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									twelveSidedInputValue,
-									setTwelveSidedInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									twelveSidedInputValue,
-									setTwelveSidedInputValue,
-								)
-							}
+							handleIncreaseClick={handleTwelveSidedIncreaseClick}
+							handleDecreaseClick={handleTwelveSidedDecreaseClick}
 						/>
 					</Form.Group>
 					<Form.Group className="dice-option">
@@ -228,18 +256,8 @@ export const NumberedDiceSelector = ({
 						<DiceNumberInput
 							value={twentySidedInputValue}
 							updateValue={setTwentySidedInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									twentySidedInputValue,
-									setTwentySidedInputValue,
-								)
-							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									twentySidedInputValue,
-									setTwentySidedInputValue,
-								)
-							}
+							handleIncreaseClick={handleTwentySidedIncreaseClick}
+							handleDecreaseClick={handleTwentySidedDecreaseClick}
 						/>
 					</Form.Group>
 					<Form.Group className="dice-option">
@@ -247,17 +265,11 @@ export const NumberedDiceSelector = ({
 						<DiceNumberInput
 							value={oneHundredSidedInputValue}
 							updateValue={setOneHundredSidedInputValue}
-							handleIncreaseClick={() =>
-								handleIncrease(
-									oneHundredSidedInputValue,
-									setOneHundredSidedInputValue,
-								)
+							handleIncreaseClick={
+								handleOneHundredSidedIncreaseClick
 							}
-							handleDecreaseClick={() =>
-								handleDecrease(
-									oneHundredSidedInputValue,
-									setOneHundredSidedInputValue,
-								)
+							handleDecreaseClick={
+								handleOneHundredSidedDecreaseClick
 							}
 						/>
 					</Form.Group>
