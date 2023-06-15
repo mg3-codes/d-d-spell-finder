@@ -99,7 +99,7 @@ const Table = (): JSX.Element => {
 	}, [selectedRows]);
 
 	const onColumnMoved = useCallback(
-		(event: ColumnMovedEvent<ColDef>): void => {
+		(event: ColumnMovedEvent<unknown>): void => {
 			if (event.finished) {
 				const orderedColIds = gridRef.current?.columnApi
 					.getColumns()
