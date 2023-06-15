@@ -29,9 +29,7 @@ export const DiceNumberInput = ({
 	const inputIsValid = (): boolean => {
 		const valueAsNumber = parseInt(value);
 
-		if (Number.isNaN(valueAsNumber) || valueAsNumber < 0) return false;
-
-		return true;
+		return !Number.isNaN(valueAsNumber) || valueAsNumber < 0;
 	};
 
 	useEffect(() => {
@@ -47,9 +45,8 @@ export const DiceNumberInput = ({
 		if (showError) return true;
 
 		const valueAsNumber = parseInt(value);
-		if (Number.isNaN(valueAsNumber) || valueAsNumber <= 0) return true;
 
-		return false;
+		return Number.isNaN(valueAsNumber) || valueAsNumber <= 0;
 	}, [value]);
 
 	const handleBlur = useCallback(() => {
