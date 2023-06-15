@@ -5,6 +5,7 @@
  */
 
 import React, { useCallback, useEffect, useState } from "react";
+import { FormControl, FormControlProps } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -37,9 +38,12 @@ export const DiceNumberInput = ({
 		else setShowError(false);
 	}, [value]);
 
-	const handleUpdateValue = useCallback((value: string): void => {
-		updateValue(value);
-	}, []);
+	const handleUpdateValue = useCallback(
+		(e: React.ChangeEvent<HTMLInputElement>): void => {
+			updateValue(e.target.value);
+		},
+		[],
+	);
 
 	const decreaseButtonIsDisabled = useCallback((): boolean => {
 		if (showError) return true;
@@ -64,7 +68,7 @@ export const DiceNumberInput = ({
 			</Button>
 			<Form.Control
 				value={value}
-				onChange={(e) => handleUpdateValue(e.target.value)}
+				onChange={handleUpdateValue}
 				onBlur={handleBlur}
 				isInvalid={showError}
 			/>
