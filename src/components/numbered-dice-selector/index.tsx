@@ -34,7 +34,7 @@ export const NumberedDiceSelector = ({
 	const [oneHundredSidedInputValue, setOneHundredSidedInputValue] =
 		useState<string>("0");
 
-	const rollAllDice = (): void => {
+	const rollAllDice = useCallback((): void => {
 		const dice: NumberDie[] = [];
 
 		const twoSided = parseInt(twoSidedInputValue);
@@ -71,7 +71,16 @@ export const NumberedDiceSelector = ({
 		}
 
 		onRollClicked(dice);
-	};
+	}, [
+		twoSidedInputValue,
+		fourSidedInputValue,
+		sixSidedInputValue,
+		eightSidedInputValue,
+		tenSidedInputValue,
+		twelveSidedInputValue,
+		twentySidedInputValue,
+		oneHundredSidedInputValue,
+	]);
 
 	const handleClearSelection = useCallback(() => {
 		setTwoSidedInputValue("0");

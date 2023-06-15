@@ -38,7 +38,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 	const [challengeInputValue, setChallengeInputValue] = useState<string>("0");
 	const [forceInputValue, setForceInputValue] = useState<string>("0");
 
-	const rollAllDice = (): void => {
+	const rollAllDice = useCallback((): void => {
 		const dice: EdgeOfTheEmpireDiceCollection = {
 			boost: [],
 			setback: [],
@@ -79,7 +79,15 @@ export const EdgeOfTheEmpireDiceSelector = ({
 		}
 
 		onRollClicked(dice);
-	};
+	}, [
+		boostInputValue,
+		setbackInputValue,
+		abilityInputValue,
+		difficultyInputValue,
+		proficiencyInputValue,
+		challengeInputValue,
+		forceInputValue,
+	]);
 
 	const handleClearSelection = useCallback(() => {
 		setBoostInputValue("0");
