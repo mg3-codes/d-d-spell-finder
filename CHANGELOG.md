@@ -2,6 +2,11 @@
 
 # Changelog
 
+## 0.4.3
+
+-   Add +/- buttons to dice inputs
+-   Fix bug where github button could be wrong color
+
 ## 0.4.2
 
 -   Add page for direct navigation to dice roller
