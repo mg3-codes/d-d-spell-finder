@@ -111,7 +111,7 @@ export const NumberedDiceSelector = ({
 						<Form.Label>2 Sides</Form.Label>
 						<DiceNumberInput
 							value={twoSidedInputValue}
-							updateValue={(x) => setTwoSidedInputValue(x)}
+							updateValue={setTwoSidedInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									twoSidedInputValue,
@@ -130,7 +130,7 @@ export const NumberedDiceSelector = ({
 						<Form.Label>4 Sides</Form.Label>
 						<DiceNumberInput
 							value={fourSidedInputValue}
-							updateValue={(x) => setFourSidedInputValue(x)}
+							updateValue={setFourSidedInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									fourSidedInputValue,
@@ -149,7 +149,7 @@ export const NumberedDiceSelector = ({
 						<Form.Label>6 Sides</Form.Label>
 						<DiceNumberInput
 							value={sixSidedInputValue}
-							updateValue={(x) => setSixSidedInputValue(x)}
+							updateValue={setSixSidedInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									sixSidedInputValue,
@@ -168,7 +168,7 @@ export const NumberedDiceSelector = ({
 						<Form.Label>8 Sides</Form.Label>
 						<DiceNumberInput
 							value={eightSidedInputValue}
-							updateValue={(x) => setEightSidedInputValue(x)}
+							updateValue={setEightSidedInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									eightSidedInputValue,
@@ -189,7 +189,7 @@ export const NumberedDiceSelector = ({
 						<Form.Label>10 Sides</Form.Label>
 						<DiceNumberInput
 							value={tenSidedInputValue}
-							updateValue={(x) => setTenSidedInputValue(x)}
+							updateValue={setTenSidedInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									tenSidedInputValue,
@@ -208,7 +208,7 @@ export const NumberedDiceSelector = ({
 						<Form.Label>12 Sides</Form.Label>
 						<DiceNumberInput
 							value={twelveSidedInputValue}
-							updateValue={(x) => setTwelveSidedInputValue(x)}
+							updateValue={setTwelveSidedInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									twelveSidedInputValue,
@@ -227,7 +227,7 @@ export const NumberedDiceSelector = ({
 						<Form.Label>20 Sides</Form.Label>
 						<DiceNumberInput
 							value={twentySidedInputValue}
-							updateValue={(x) => setTwentySidedInputValue(x)}
+							updateValue={setTwentySidedInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									twentySidedInputValue,
@@ -246,7 +246,7 @@ export const NumberedDiceSelector = ({
 						<Form.Label>100 Sides</Form.Label>
 						<DiceNumberInput
 							value={oneHundredSidedInputValue}
-							updateValue={(x) => setOneHundredSidedInputValue(x)}
+							updateValue={setOneHundredSidedInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									oneHundredSidedInputValue,
