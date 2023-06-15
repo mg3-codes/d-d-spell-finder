@@ -4,13 +4,15 @@
  * @format
  */
 
-import React, { useCallback, useRef, useState } from "react";
+import React, { useCallback, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { DiceNumberInput } from "../dice-number-input";
+
+import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import BoostDie from "../../classes/edge-of-the-empire-dice/boost-die";
 import SetbackDie from "../../classes/edge-of-the-empire-dice/setback-die";
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import AbilityDie from "../../classes/edge-of-the-empire-dice/ability-die";
 import DifficultyDie from "../../classes/edge-of-the-empire-dice/difficulty-die";
 import ProficiencyDie from "../../classes/edge-of-the-empire-dice/proficiency-die";
@@ -26,16 +28,17 @@ export interface IEdgeOfTheEmpireDiceSelectorProps {
 export const EdgeOfTheEmpireDiceSelector = ({
 	onRollClicked,
 }: IEdgeOfTheEmpireDiceSelectorProps) => {
-	const [validated, setValidated] = useState<boolean>(false);
-	const boostInput = useRef<HTMLInputElement>(null);
-	const setbackInput = useRef<HTMLInputElement>(null);
-	const abilityInput = useRef<HTMLInputElement>(null);
-	const difficultyInput = useRef<HTMLInputElement>(null);
-	const proficiencyInput = useRef<HTMLInputElement>(null);
-	const challengeInput = useRef<HTMLInputElement>(null);
-	const forceInput = useRef<HTMLInputElement>(null);
+	const [boostInputValue, setBoostInputValue] = useState<string>("0");
+	const [setbackInputValue, setSetbackInputValue] = useState<string>("0");
+	const [abilityInputValue, setAbilityInputValue] = useState<string>("0");
+	const [difficultyInputValue, setDifficultyInputValue] =
+		useState<string>("0");
+	const [proficiencyInputValue, setProficiencyInputValue] =
+		useState<string>("0");
+	const [challengeInputValue, setChallengeInputValue] = useState<string>("0");
+	const [forceInputValue, setForceInputValue] = useState<string>("0");
 
-	const rollAllDice = (): void => {
+	const rollAllDice = useCallback((): void => {
 		const dice: EdgeOfTheEmpireDiceCollection = {
 			boost: [],
 			setback: [],
@@ -46,176 +49,221 @@ export const EdgeOfTheEmpireDiceSelector = ({
 			force: [],
 		};
 
-		const boost = boostInput.current?.valueAsNumber ?? 0;
+		const boost = parseInt(boostInputValue);
 		for (let rolls = 0; rolls < boost; rolls++) {
 			dice.boost.push(new BoostDie());
 		}
-		const setback = setbackInput.current?.valueAsNumber ?? 0;
+		const setback = parseInt(setbackInputValue);
 		for (let rolls = 0; rolls < setback; rolls++) {
 			dice.setback.push(new SetbackDie());
 		}
-		const ability = abilityInput.current?.valueAsNumber ?? 0;
+		const ability = parseInt(abilityInputValue);
 		for (let rolls = 0; rolls < ability; rolls++) {
 			dice.ability.push(new AbilityDie());
 		}
-		const difficulty = difficultyInput.current?.valueAsNumber ?? 0;
+		const difficulty = parseInt(difficultyInputValue);
 		for (let rolls = 0; rolls < difficulty; rolls++) {
 			dice.difficulty.push(new DifficultyDie());
 		}
-		const proficiency = proficiencyInput.current?.valueAsNumber ?? 0;
+		const proficiency = parseInt(proficiencyInputValue);
 		for (let rolls = 0; rolls < proficiency; rolls++) {
 			dice.proficiency.push(new ProficiencyDie());
 		}
-		const challenge = challengeInput.current?.valueAsNumber ?? 0;
+		const challenge = parseInt(challengeInputValue);
 		for (let rolls = 0; rolls < challenge; rolls++) {
 			dice.challenge.push(new ChallengeDie());
 		}
-		const force = forceInput.current?.valueAsNumber ?? 0;
+		const force = parseInt(forceInputValue);
 		for (let rolls = 0; rolls < force; rolls++) {
 			dice.force.push(new ForceDie());
 		}
 
 		onRollClicked(dice);
-	};
-
-	const onSubmit = useCallback(
-		(e: React.FormEvent<HTMLFormElement>): void => {
-			const form = e?.currentTarget;
-
-			setValidated(false);
-			e.preventDefault();
-			e.stopPropagation();
-
-			if (form.checkValidity() === false) {
-				setValidated(true);
-			}
-
-			rollAllDice();
-		},
-		[],
-	);
-
-	const handleClearSelection = useCallback(() => {
-		if (boostInput?.current) boostInput.current.value = "0";
-		if (setbackInput?.current) setbackInput.current.value = "0";
-		if (abilityInput?.current) abilityInput.current.value = "0";
-		if (difficultyInput?.current) difficultyInput.current.value = "0";
-		if (proficiencyInput?.current) proficiencyInput.current.value = "0";
-		if (challengeInput?.current) challengeInput.current.value = "0";
-		if (forceInput?.current) forceInput.current.value = "0";
 	}, [
-		boostInput,
-		setbackInput,
-		abilityInput,
-		difficultyInput,
-		proficiencyInput,
-		challengeInput,
-		forceInput,
+		boostInputValue,
+		setbackInputValue,
+		abilityInputValue,
+		difficultyInputValue,
+		proficiencyInputValue,
+		challengeInputValue,
+		forceInputValue,
 	]);
 
+	const handleClearSelection = useCallback(() => {
+		setBoostInputValue("0");
+		setSetbackInputValue("0");
+		setAbilityInputValue("0");
+		setDifficultyInputValue("0");
+		setProficiencyInputValue("0");
+		setChallengeInputValue("0");
+		setForceInputValue("0");
+	}, [
+		boostInputValue,
+		setbackInputValue,
+		abilityInputValue,
+		difficultyInputValue,
+		proficiencyInputValue,
+		challengeInputValue,
+		forceInputValue,
+	]);
+
+	const handleIncrease = (
+		currentValue: string,
+		updateFunction: React.Dispatch<React.SetStateAction<string>>,
+	) => updateFunction((parseInt(currentValue) + 1).toString());
+
+	const handleDecrease = (
+		currentValue: string,
+		updateFunction: React.Dispatch<React.SetStateAction<string>>,
+	) => updateFunction(Math.max(parseInt(currentValue) - 1, 0).toString());
+
+	const handleBoostIncreaseClick = useCallback(
+		() => handleIncrease(boostInputValue, setBoostInputValue),
+		[boostInputValue],
+	);
+
+	const handleBoostDecreaseClick = useCallback(
+		() => handleDecrease(boostInputValue, setBoostInputValue),
+		[boostInputValue],
+	);
+
+	const handleSetbackIncreaseClick = useCallback(
+		() => handleIncrease(setbackInputValue, setSetbackInputValue),
+		[setbackInputValue],
+	);
+
+	const handleSetbackDecreaseClick = useCallback(
+		() => handleDecrease(setbackInputValue, setSetbackInputValue),
+		[setbackInputValue],
+	);
+
+	const handleAbilityIncreaseClick = useCallback(
+		() => handleIncrease(abilityInputValue, setAbilityInputValue),
+		[abilityInputValue],
+	);
+
+	const handleAbilityDecreaseClick = useCallback(
+		() => handleDecrease(abilityInputValue, setAbilityInputValue),
+		[abilityInputValue],
+	);
+
+	const handleDifficultyIncreaseClick = useCallback(
+		() => handleIncrease(difficultyInputValue, setDifficultyInputValue),
+		[difficultyInputValue],
+	);
+
+	const handleDifficultyDecreaseClick = useCallback(
+		() => handleDecrease(difficultyInputValue, setDifficultyInputValue),
+		[difficultyInputValue],
+	);
+
+	const handleProficiencyIncreaseClick = useCallback(
+		() => handleIncrease(proficiencyInputValue, setProficiencyInputValue),
+		[proficiencyInputValue],
+	);
+
+	const handleProficiencyDecreaseClick = useCallback(
+		() => handleDecrease(proficiencyInputValue, setProficiencyInputValue),
+		[proficiencyInputValue],
+	);
+
+	const handleChallengeIncreaseClick = useCallback(
+		() => handleIncrease(challengeInputValue, setChallengeInputValue),
+		[challengeInputValue],
+	);
+
+	const handleChallengeDecreaseClick = useCallback(
+		() => handleDecrease(challengeInputValue, setChallengeInputValue),
+		[challengeInputValue],
+	);
+
+	const handleForceIncreaseClick = useCallback(
+		() => handleIncrease(forceInputValue, setForceInputValue),
+		[forceInputValue],
+	);
+
+	const handleForceDecreaseClick = useCallback(
+		() => handleDecrease(forceInputValue, setForceInputValue),
+		[forceInputValue],
+	);
+
 	return (
-		<Form
-			noValidate
-			validated={validated}
-			onSubmit={onSubmit}
-			className="edge-of-the-empire-dice-selector"
-		>
+		<Form noValidate className="edge-of-the-empire-dice-selector">
 			<div className="dice-options-container">
 				<div className="dice-pair">
 					<Form.Group className="dice-option">
 						<Form.Label>🟦 Boost</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={boostInput}
+						<DiceNumberInput
+							value={boostInputValue}
+							updateValue={setBoostInputValue}
+							handleIncreaseClick={handleBoostIncreaseClick}
+							handleDecreaseClick={handleBoostDecreaseClick}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 					<Form.Group className="dice-option">
 						<Form.Label>⬛️ Setback</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={setbackInput}
+						<DiceNumberInput
+							value={setbackInputValue}
+							updateValue={setSetbackInputValue}
+							handleIncreaseClick={handleSetbackIncreaseClick}
+							handleDecreaseClick={handleSetbackDecreaseClick}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 				</div>
 				<div className="dice-pair">
 					<Form.Group className="dice-option">
 						<Form.Label>🟩 Ability</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={abilityInput}
+						<DiceNumberInput
+							value={abilityInputValue}
+							updateValue={setAbilityInputValue}
+							handleIncreaseClick={handleAbilityIncreaseClick}
+							handleDecreaseClick={handleAbilityDecreaseClick}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 					<Form.Group className="dice-option">
 						<Form.Label>🟪 Difficulty</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={difficultyInput}
+						<DiceNumberInput
+							value={difficultyInputValue}
+							updateValue={setDifficultyInputValue}
+							handleIncreaseClick={handleDifficultyIncreaseClick}
+							handleDecreaseClick={handleDifficultyDecreaseClick}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 				</div>
 				<div className="dice-pair">
 					<Form.Group className="dice-option">
 						<Form.Label>🟨 Proficiency</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={proficiencyInput}
+						<DiceNumberInput
+							value={proficiencyInputValue}
+							updateValue={setProficiencyInputValue}
+							handleIncreaseClick={handleProficiencyIncreaseClick}
+							handleDecreaseClick={handleProficiencyDecreaseClick}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 					<Form.Group className="dice-option">
 						<Form.Label>🟥 Challenge</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={challengeInput}
+						<DiceNumberInput
+							value={challengeInputValue}
+							updateValue={setChallengeInputValue}
+							handleIncreaseClick={handleChallengeIncreaseClick}
+							handleDecreaseClick={handleChallengeDecreaseClick}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 				</div>
 				<div className="dice-pair force-dice">
 					<Form.Group className="dice-option">
 						<Form.Label>⬜️ Force</Form.Label>
-						<Form.Control
-							type="number"
-							min={0}
-							defaultValue={0}
-							ref={forceInput}
+						<DiceNumberInput
+							value={forceInputValue}
+							updateValue={setForceInputValue}
+							handleIncreaseClick={handleForceIncreaseClick}
+							handleDecreaseClick={handleForceDecreaseClick}
 						/>
-						<Form.Control.Feedback type="invalid">
-							Please enter a non-negative number
-						</Form.Control.Feedback>
 					</Form.Group>
 				</div>
 			</div>
 			<div className="button-container">
-				<Button type="submit">Roll</Button>
+				<Button onClick={rollAllDice}>Roll</Button>
 				<Button variant="outline-danger" onClick={handleClearSelection}>
 					Clear
 				</Button>

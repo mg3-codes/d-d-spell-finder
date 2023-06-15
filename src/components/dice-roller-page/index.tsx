@@ -12,7 +12,7 @@ const Heading = React.lazy(() => import("../heading"));
 const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
 const Footer = React.lazy(() => import("../footer"));
 
-import { DndDiceSelector } from "../dnd-dice-selector";
+import { NumberedDiceSelector } from "../numbered-dice-selector";
 import { NumberDiceResults } from "../number-dice-results";
 
 import NumberDie from "../../classes/number-die";
@@ -94,7 +94,7 @@ export const DiceRollerPage = () => {
 					<div className="dice-container">
 						{diceType === DiceType.Numbered && (
 							<>
-								<DndDiceSelector
+								<NumberedDiceSelector
 									onRollClicked={setNumberDiceRollResults}
 								/>
 								<NumberDiceResults
