@@ -2,6 +2,11 @@
 
 # Changelog
 
+## 0.4.4
+
+-   Update spell with lowercase name
+-   Update to ag grid v30
+
 ## 0.4.3
 
 -   Add +/- buttons to dice inputs
