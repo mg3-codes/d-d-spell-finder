@@ -117,7 +117,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<Form.Label>🟦 Boost</Form.Label>
 						<DiceNumberInput
 							value={boostInputValue}
-							updateValue={(x) => setBoostInputValue(x)}
+							updateValue={setBoostInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									boostInputValue,
@@ -136,7 +136,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<Form.Label>⬛️ Setback</Form.Label>
 						<DiceNumberInput
 							value={setbackInputValue}
-							updateValue={(x) => setSetbackInputValue(x)}
+							updateValue={setSetbackInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									setbackInputValue,
@@ -157,7 +157,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<Form.Label>🟩 Ability</Form.Label>
 						<DiceNumberInput
 							value={abilityInputValue}
-							updateValue={(x) => setAbilityInputValue(x)}
+							updateValue={setAbilityInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									abilityInputValue,
@@ -176,7 +176,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<Form.Label>🟪 Difficulty</Form.Label>
 						<DiceNumberInput
 							value={difficultyInputValue}
-							updateValue={(x) => setDifficultyInputValue(x)}
+							updateValue={setDifficultyInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									difficultyInputValue,
@@ -197,7 +197,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<Form.Label>🟨 Proficiency</Form.Label>
 						<DiceNumberInput
 							value={proficiencyInputValue}
-							updateValue={(x) => setProficiencyInputValue(x)}
+							updateValue={setProficiencyInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									proficiencyInputValue,
@@ -216,7 +216,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<Form.Label>🟥 Challenge</Form.Label>
 						<DiceNumberInput
 							value={challengeInputValue}
-							updateValue={(x) => setChallengeInputValue(x)}
+							updateValue={setChallengeInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									challengeInputValue,
@@ -237,7 +237,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 						<Form.Label>⬜️ Force</Form.Label>
 						<DiceNumberInput
 							value={forceInputValue}
-							updateValue={(x) => setForceInputValue(x)}
+							updateValue={setForceInputValue}
 							handleIncreaseClick={() =>
 								handleIncrease(
 									forceInputValue,
