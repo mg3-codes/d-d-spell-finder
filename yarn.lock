@@ -5,19 +5,26 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@ag-grid-community/client-side-row-model@npm:^30.0.0":
-  version: 30.0.0
-  resolution: "@ag-grid-community/client-side-row-model@npm:30.0.0"
+"@ag-grid-community/client-side-row-model@npm:^30.0.2":
+  version: 30.0.2
+  resolution: "@ag-grid-community/client-side-row-model@npm:30.0.2"
   dependencies:
-    "@ag-grid-community/core": ~30.0.0
-  checksum: fe1d22706dedfb8d7fdc96a8e1fdae70c1590d0271f216fd36da61e8915f5b3c758c762b6cd80a3f59a8d8ab9eedbe555ac7d3dee52c1ed65fb0327b1c279021
+    "@ag-grid-community/core": ~30.0.2
+  checksum: 104f844bfb546540f28b015535b5bf220da485e00ed0af26d0d50e238907dfc6b804546de8e2242c467b6942b9a27da6a151b919a20c98d406acb2a0bddebe5d
   languageName: node
   linkType: hard
 
-"@ag-grid-community/core@npm:^30.0.0, @ag-grid-community/core@npm:~30.0.0":
+"@ag-grid-community/core@npm:^30.0.0":
   version: 30.0.0
   resolution: "@ag-grid-community/core@npm:30.0.0"
   checksum: 87312af21aca82ebc81165fad921bac8fc9a234f2e4f2024ee195ce55eb26e09b4cc589eca0270e9900abea315f7f48a4184975bae5b67cb83ba644ffa63d5a5
+  languageName: node
+  linkType: hard
+
+"@ag-grid-community/core@npm:~30.0.2":
+  version: 30.0.2
+  resolution: "@ag-grid-community/core@npm:30.0.2"
+  checksum: b1ec1957acdc5bc5c3dc4125ce5e2dca2f450b58b0c286d26f6a41713c4cf009ac53fb575876dea8b8131c1e42b58459e8e14bf53811a4064eebedc1932f5925
   languageName: node
   linkType: hard
 
@@ -1934,7 +1941,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dnd-spell-organizer@workspace:."
   dependencies:
-    "@ag-grid-community/client-side-row-model": ^30.0.0
+    "@ag-grid-community/client-side-row-model": ^30.0.2
     "@ag-grid-community/core": ^30.0.0
     "@ag-grid-community/react": ^30.0.0
     "@popperjs/core": ^2.11.8
