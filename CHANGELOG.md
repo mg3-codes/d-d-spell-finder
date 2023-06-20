@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.4.5
+
+-   Upgrade AG Grid to v30.0.2
+
 ## 0.4.4
 
 -   Update spell with lowercase name
