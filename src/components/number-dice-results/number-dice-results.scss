@@ -7,7 +7,7 @@
 @use "../../styles/bootstrap.scss" as bootstrap;
 
 @mixin column1 {
-	min-width: 16%;
+	min-width: 33%;
 }
 
 @mixin column2 {
@@ -15,7 +15,7 @@
 }
 
 @mixin column3 {
-	min-width: 16%;
+	min-width: 33%;
 }
 
 .number-dice-results {
@@ -77,7 +77,7 @@
 			}
 
 			.sum {
-				min-width: 16%;
+				min-width: 33%;
 			}
 		}
 	}

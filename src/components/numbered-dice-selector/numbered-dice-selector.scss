@@ -4,6 +4,8 @@
  * @format
  */
 
+@use "../../styles/bootstrap";
+
 .dnd-dice-selector {
 	width: 40%;
 	min-height: 370px;
@@ -13,6 +15,10 @@
 
 	.dice-options-container {
 		display: flex;
+
+		@include bootstrap.media-breakpoint-down(sm) {
+			flex-direction: column;
+		}
 
 		.dice-option-column {
 			padding: 0 4px;
@@ -27,6 +33,10 @@
 	.button-container {
 		button {
 			margin-right: 4px;
+
+			@include bootstrap.media-breakpoint-down(sm) {
+				margin-bottom: 4px;
+			}
 		}
 	}
 }

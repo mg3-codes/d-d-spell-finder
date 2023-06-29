@@ -4,10 +4,14 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
+@use "../../styles/bootstrap.scss";
 
 @mixin column1 {
 	min-width: 25%;
+
+	@include bootstrap.media-breakpoint-down(sm) {
+		min-width: 33%;
+	}
 }
 
 @mixin column2 {
@@ -60,6 +64,21 @@
 				@include column1;
 			}
 
+			.short-type {
+				display: none;
+			}
+
+			@include bootstrap.media-breakpoint-down(sm) {
+				.type {
+					display: none;
+				}
+
+				.short-type {
+					display: unset;
+					@include column1;
+				}
+			}
+
 			.eote-results {
 				overflow: scroll;
 				flex-grow: 1;
@@ -106,15 +125,26 @@
 
 				.label {
 					@include column1;
+					@include bootstrap.media-breakpoint-down(sm) {
+						min-width: 50%;
+					}
 				}
 
 				.result {
 					min-width: 50px;
+
+					@include bootstrap.media-breakpoint-down(sm) {
+						min-width: 50%;
+					}
 				}
 
 				.empty {
 					border-bottom: none;
 					flex-grow: 1;
+
+					@include bootstrap.media-breakpoint-down(sm) {
+						display: none;
+					}
 				}
 			}
 		}
