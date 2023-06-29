@@ -4,13 +4,32 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
+@use "../../styles/bootstrap.scss";
 
 .footer {
 	margin-top: 12px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	font-size: smaller;
+
+	.version {
+		@include bootstrap.media-breakpoint-down(sm) {
+			font-size: smaller;
+		}
+	}
+
+	.links {
+		@include bootstrap.media-breakpoint-down(sm) {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			button {
+				font-size: small;
+			}
+		}
+	}
 
 	.github-button {
 		background-color: transparent;
@@ -18,6 +37,7 @@
 
 		i {
 			font-size: xx-large;
+			color: bootstrap.$black;
 		}
 	}
 }
