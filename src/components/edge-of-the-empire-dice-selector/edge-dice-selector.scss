@@ -4,6 +4,8 @@
  * @format
  */
 
+@use "../../styles/bootstrap";
+
 .edge-of-the-empire-dice-selector {
 	width: 40%;
 	min-height: 370px;
@@ -19,6 +21,10 @@
 			display: flex;
 			justify-content: space-between;
 
+			@include bootstrap.media-breakpoint-down(sm) {
+				flex-direction: column;
+			}
+
 			.dice-option {
 				padding: 0 4px;
 				margin-bottom: 10px;
@@ -27,12 +33,20 @@
 
 		.force-dice {
 			max-width: 50%;
+
+			@include bootstrap.media-breakpoint-down(sm) {
+				max-width: unset;
+			}
 		}
 	}
 
 	.button-container {
 		button {
 			margin-right: 4px;
+
+			@include bootstrap.media-breakpoint-down(sm) {
+				margin-bottom: 4px;
+			}
 		}
 	}
 }
