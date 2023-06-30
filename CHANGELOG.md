@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.4.6
+
+-   Update styles for mobile devices
+
 ## 0.4.5
 
 -   Upgrade AG Grid to v30.0.2

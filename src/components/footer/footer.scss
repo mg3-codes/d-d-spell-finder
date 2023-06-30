@@ -14,13 +14,13 @@
 	font-size: smaller;
 
 	.version {
-		@include bootstrap.media-breakpoint-down(sm) {
+		@include bootstrap.media-breakpoint-down(md) {
 			font-size: smaller;
 		}
 	}
 
 	.links {
-		@include bootstrap.media-breakpoint-down(sm) {
+		@include bootstrap.media-breakpoint-down(md) {
 			display: flex;
 			justify-content: center;
 			align-items: center;

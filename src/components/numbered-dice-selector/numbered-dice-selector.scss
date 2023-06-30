@@ -16,7 +16,7 @@
 	.dice-options-container {
 		display: flex;
 
-		@include bootstrap.media-breakpoint-down(sm) {
+		@include bootstrap.media-breakpoint-down(md) {
 			flex-direction: column;
 		}
 
@@ -34,7 +34,7 @@
 		button {
 			margin-right: 4px;
 
-			@include bootstrap.media-breakpoint-down(sm) {
+			@include bootstrap.media-breakpoint-down(md) {
 				margin-bottom: 4px;
 			}
 		}
