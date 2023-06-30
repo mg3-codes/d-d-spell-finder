@@ -21,7 +21,7 @@
 			display: flex;
 			justify-content: space-between;
 
-			@include bootstrap.media-breakpoint-down(sm) {
+			@include bootstrap.media-breakpoint-down(md) {
 				flex-direction: column;
 			}
 
@@ -34,7 +34,7 @@
 		.force-dice {
 			max-width: 50%;
 
-			@include bootstrap.media-breakpoint-down(sm) {
+			@include bootstrap.media-breakpoint-down(md) {
 				max-width: unset;
 			}
 		}
@@ -44,7 +44,7 @@
 		button {
 			margin-right: 4px;
 
-			@include bootstrap.media-breakpoint-down(sm) {
+			@include bootstrap.media-breakpoint-down(md) {
 				margin-bottom: 4px;
 			}
 		}

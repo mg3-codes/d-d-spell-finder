@@ -9,7 +9,7 @@
 @mixin column1 {
 	min-width: 25%;
 
-	@include bootstrap.media-breakpoint-down(sm) {
+	@include bootstrap.media-breakpoint-down(md) {
 		min-width: 33%;
 	}
 }
@@ -68,7 +68,7 @@
 				display: none;
 			}
 
-			@include bootstrap.media-breakpoint-down(sm) {
+			@include bootstrap.media-breakpoint-down(md) {
 				.type {
 					display: none;
 				}
@@ -125,7 +125,7 @@
 
 				.label {
 					@include column1;
-					@include bootstrap.media-breakpoint-down(sm) {
+					@include bootstrap.media-breakpoint-down(md) {
 						min-width: 50%;
 					}
 				}
@@ -133,7 +133,7 @@
 				.result {
 					min-width: 50px;
 
-					@include bootstrap.media-breakpoint-down(sm) {
+					@include bootstrap.media-breakpoint-down(md) {
 						min-width: 50%;
 					}
 				}
@@ -142,7 +142,7 @@
 					border-bottom: none;
 					flex-grow: 1;
 
-					@include bootstrap.media-breakpoint-down(sm) {
+					@include bootstrap.media-breakpoint-down(md) {
 						display: none;
 					}
 				}
