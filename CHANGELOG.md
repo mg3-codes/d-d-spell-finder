@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.4.7
+
+-   Update dependencies
+
 ## 0.4.6
 
 -   Update styles for mobile devices
