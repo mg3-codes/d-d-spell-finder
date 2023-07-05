@@ -50,7 +50,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 	const handleSetTheme = useCallback(
 		(e: React.BaseSyntheticEvent) =>
 			updateTheme(parseInt(e.target.getAttribute("data-theme"))),
-		[currentTheme],
+		[currentTheme, selectedThemeOption],
 	);
 
 	return (
