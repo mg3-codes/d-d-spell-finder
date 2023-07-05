@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { createContext, useContext, useState } from "react";
+import React, { createContext, useCallback, useContext, useState } from "react";
 
 import { Theme } from "../../enums/theme";
 import { AppSettingsContext } from "../app-settings-provider";
@@ -12,12 +12,14 @@ import { getCookie, setCookie } from "../../utility/cookies";
 
 export type ThemeContext = {
 	currentTheme: Theme;
+	selectedThemeOption: Theme;
 	toggleCurrentTheme: () => void;
 	updateTheme: (theme: Theme) => void;
 };
 
 export const ThemeContext = createContext<ThemeContext>({
 	currentTheme: Theme.Light,
+	selectedThemeOption: Theme.Auto,
 	/* eslint-disable @typescript-eslint/no-empty-function */
 	// skipqc: JS-0321
 	toggleCurrentTheme: () => {},
@@ -35,15 +37,29 @@ const cookieName = "userSelectedTheme";
 export const ThemeContextProvider = ({
 	children,
 }: IThemeContextProviderProps) => {
+	const detectColorScheme = useCallback(
+		() =>
+			window?.matchMedia("(prefers-color-scheme: dark)")?.matches
+				? Theme.Dark
+				: Theme.Light,
+		[],
+	);
 	const [currentTheme, setCurrentTheme] = useState<Theme>(() => {
 		const cookie = getCookie(cookieName);
 
 		if (cookie) return parseInt(cookie);
 
-		return window?.matchMedia("(prefers-color-scheme: dark)")?.matches
-			? Theme.Dark
-			: Theme.Light;
+		return detectColorScheme();
 	});
+	const [selectedThemeOption, setSelectedThemeOption] = useState<Theme>(
+		() => {
+			const cookie = getCookie(cookieName);
+
+			if (cookie) return parseInt(cookie);
+
+			return Theme.Auto;
+		},
+	);
 	const { useCookies } = useContext(AppSettingsContext);
 
 	const updateTheme = (theme: Theme): void => {
@@ -55,12 +71,16 @@ export const ThemeContextProvider = ({
 		switch (currentTheme) {
 			case Theme.Light:
 				setCurrentTheme(Theme.Dark);
+				setSelectedThemeOption(Theme.Dark);
 				break;
 			case Theme.Dark:
 				setCurrentTheme(Theme.Light);
+				setSelectedThemeOption(Theme.Light);
 				break;
+			case Theme.Auto:
 			default:
-				setCurrentTheme(Theme.Light);
+				setCurrentTheme(detectColorScheme());
+				setSelectedThemeOption(Theme.Auto);
 				break;
 		}
 	};
@@ -69,6 +89,7 @@ export const ThemeContextProvider = ({
 		<ThemeContext.Provider
 			value={{
 				currentTheme,
+				selectedThemeOption,
 				toggleCurrentTheme,
 				updateTheme,
 			}}

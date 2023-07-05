@@ -23,7 +23,8 @@ import { deleteAllCookies } from "../../utility/cookies";
 const SettingsOffcanvas = (): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);
 	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
-	const { currentTheme, updateTheme } = useContext(ThemeContext);
+	const { currentTheme, updateTheme, selectedThemeOption } =
+		useContext(ThemeContext);
 	const { selectedColumns, handleColumnChange } = useContext(ColumnContext);
 
 	const handleOpen = useCallback(() => setShow(true), []);
@@ -91,8 +92,20 @@ const SettingsOffcanvas = (): JSX.Element => {
 									<Button
 										variant="primary"
 										onClick={handleSetTheme}
+										data-theme={Theme.Auto}
+										disabled={
+											selectedThemeOption === Theme.Auto
+										}
+									>
+										Auto
+									</Button>
+									<Button
+										variant="primary"
+										onClick={handleSetTheme}
 										data-theme={Theme.Light}
-										disabled={currentTheme === Theme.Light}
+										disabled={
+											selectedThemeOption === Theme.Light
+										}
 									>
 										Light
 									</Button>
@@ -100,7 +113,9 @@ const SettingsOffcanvas = (): JSX.Element => {
 										variant="primary"
 										onClick={handleSetTheme}
 										data-theme={Theme.Dark}
-										disabled={currentTheme === Theme.Dark}
+										disabled={
+											selectedThemeOption === Theme.Dark
+										}
 									>
 										Dark
 									</Button>
