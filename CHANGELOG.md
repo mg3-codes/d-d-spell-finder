@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.4.9
+
+-   Fix bug with incorrectly disabled theme buttons
+
 ## 0.4.8
 
 -   Add auto dark and light theme
