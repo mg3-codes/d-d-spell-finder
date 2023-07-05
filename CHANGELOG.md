@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.4.8
+
+-   Add auto dark and light theme
+
 ## 0.4.7
 
 -   Update dependencies
