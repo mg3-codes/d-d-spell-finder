@@ -13,7 +13,6 @@ import { getCookie, setCookie } from "../../utility/cookies";
 export type ThemeContext = {
 	currentTheme: Theme;
 	selectedThemeOption: Theme;
-	toggleCurrentTheme: () => void;
 	updateTheme: (theme: Theme) => void;
 };
 
@@ -21,8 +20,6 @@ export const ThemeContext = createContext<ThemeContext>({
 	currentTheme: Theme.Light,
 	selectedThemeOption: Theme.Auto,
 	/* eslint-disable @typescript-eslint/no-empty-function */
-	// skipqc: JS-0321
-	toggleCurrentTheme: () => {},
 	// skipqc: JS-0321
 	updateTheme: () => {},
 	/* eslint-enable @typescript-eslint/no-empty-function */
@@ -63,19 +60,14 @@ export const ThemeContextProvider = ({
 	const { useCookies } = useContext(AppSettingsContext);
 
 	const updateTheme = (theme: Theme): void => {
-		setCurrentTheme(theme);
-		if (useCookies) setCookie(cookieName, theme.toString(), false);
-	};
-
-	const toggleCurrentTheme = (): void => {
-		switch (currentTheme) {
+		switch (theme) {
 			case Theme.Light:
-				setCurrentTheme(Theme.Dark);
-				setSelectedThemeOption(Theme.Dark);
-				break;
-			case Theme.Dark:
 				setCurrentTheme(Theme.Light);
 				setSelectedThemeOption(Theme.Light);
+				break;
+			case Theme.Dark:
+				setCurrentTheme(Theme.Dark);
+				setSelectedThemeOption(Theme.Dark);
 				break;
 			case Theme.Auto:
 			default:
@@ -83,6 +75,8 @@ export const ThemeContextProvider = ({
 				setSelectedThemeOption(Theme.Auto);
 				break;
 		}
+
+		if (useCookies) setCookie(cookieName, theme.toString(), false);
 	};
 
 	return (
@@ -90,7 +84,6 @@ export const ThemeContextProvider = ({
 			value={{
 				currentTheme,
 				selectedThemeOption,
-				toggleCurrentTheme,
 				updateTheme,
 			}}
 		>
