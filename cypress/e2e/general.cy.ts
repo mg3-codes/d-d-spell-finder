@@ -26,7 +26,7 @@ describe("general tests", () => {
 		cy.get("@theme-button-group")
 			.eq(1)
 			.within(() => {
-				cy.get(".btn.btn-primary").first().click();
+				cy.get(".btn.btn-primary").eq(1).click();
 			});
 		cy.get("html").invoke("attr", "data-bs-theme").should("eq", "");
 	});
