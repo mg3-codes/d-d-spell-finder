@@ -61,7 +61,7 @@ export const DiceNumberInput = ({
 			<Button
 				variant="outline-primary"
 				onClick={handleDecreaseClick}
-				disabled={decreaseButtonIsDisabled()}
+				disabled={showError || decreaseIsDisabled}
 			>
 				-
 			</Button>
