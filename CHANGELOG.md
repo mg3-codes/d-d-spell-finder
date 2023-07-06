@@ -2,6 +2,11 @@
 
 # Changelog
 
+## 0.4.10
+
+-   Enable number input on mobile devices
+-   Fix [#146](https://github.com/mg3-codes/d-d-spell-finder/issues/146)
+
 ## 0.4.9
 
 -   Fix bug with incorrectly disabled theme buttons
