@@ -25,6 +25,7 @@ export const DiceNumberInput = ({
 	handleDecreaseClick,
 }: IDiceNumberInputProps) => {
 	const [showError, setShowError] = useState<boolean>(false);
+	const [decreaseIsDisabled, setDecreaseIsDisabled] = useState<boolean>(true);
 
 	const inputIsValid = (): boolean => {
 		const valueAsNumber = parseInt(value);
@@ -35,22 +36,19 @@ export const DiceNumberInput = ({
 	useEffect(() => {
 		if (!inputIsValid()) setShowError(true);
 		else setShowError(false);
+
+		const valueAsNumber = parseInt(value);
+		setDecreaseIsDisabled(
+			Number.isNaN(valueAsNumber) || valueAsNumber <= 0,
+		);
 	}, [value]);
 
 	const handleUpdateValue = useCallback(
 		(e: React.ChangeEvent<HTMLInputElement>): void => {
 			updateValue(e.target.value);
 		},
-		[],
+		[value],
 	);
-
-	const decreaseButtonIsDisabled = useCallback((): boolean => {
-		if (showError) return true;
-
-		const valueAsNumber = parseInt(value);
-
-		return Number.isNaN(valueAsNumber) || valueAsNumber <= 0;
-	}, [value]);
 
 	const handleBlur = useCallback(() => {
 		if (value === "") updateValue("0");
@@ -61,7 +59,7 @@ export const DiceNumberInput = ({
 			<Button
 				variant="outline-primary"
 				onClick={handleDecreaseClick}
-				disabled={decreaseButtonIsDisabled()}
+				disabled={showError || decreaseIsDisabled}
 			>
 				-
 			</Button>
@@ -70,6 +68,7 @@ export const DiceNumberInput = ({
 				onChange={handleUpdateValue}
 				onBlur={handleBlur}
 				isInvalid={showError}
+				inputMode="numeric"
 			/>
 			<Button
 				variant="outline-primary"
