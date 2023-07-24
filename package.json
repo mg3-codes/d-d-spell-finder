@@ -53,7 +53,7 @@
 		"sass": "^1.63.6",
 		"stylelint": "^15.10.1",
 		"typescript": "^5.1.6",
-		"vite": "4.3.9"
+		"vite": "4.4.6"
 	},
 	"packageManager": "yarn@3.5.1"
 }
