@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.4.11
+
+-   Package upgrades
+
 ## 0.4.10
 
 -   Enable number input on mobile devices
