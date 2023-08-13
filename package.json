@@ -44,7 +44,7 @@
 		"@vitejs/plugin-react-swc": "^3.3.2",
 		"cypress": "^12.17.3",
 		"eslint": "^8.47.0",
-		"eslint-config-prettier": "^8.10.0",
+		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-prettier": "^5.0.0",
 		"eslint-plugin-react": "^7.33.1",
 		"postcss": "^8.4.27",
