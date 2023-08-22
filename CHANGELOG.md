@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.4.12
+
+-   Package upgrades
+
 ## 0.4.11
 
 -   Package upgrades
