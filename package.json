@@ -1,7 +1,7 @@
 {
 	"name": "dnd-spell-organizer",
 	"license": "MIT",
-	"version": "0.4.11",
+	"version": "0.4.12",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
@@ -50,7 +50,7 @@
 		"postcss": "^8.4.27",
 		"postcss-scss": "^4.0.7",
 		"prettier": "^3.0.2",
-		"sass": "^1.65.1",
+		"sass": "^1.66.1",
 		"stylelint": "^15.10.3",
 		"typescript": "^5.1.6",
 		"vite": "4.4.9"
