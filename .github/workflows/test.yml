@@ -14,9 +14,8 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Cypress run
-              uses: cypress-io/github-action@v5.8.4
+              uses: cypress-io/github-action@v6.5.0
               with:
                   build: yarn build-test
                   start: yarn preview
                   browser: chrome
-                  video: false
