@@ -22,11 +22,6 @@
 	min-width: 16%;
 }
 
-@font-face {
-	font-family: "eote-symbols";
-	src: url("../../assets/EotE_Symbol-Regular_v1.otf") format("opentype");
-}
-
 .number-dice-results {
 	display: flex;
 	flex-direction: column;
@@ -80,22 +75,20 @@
 			}
 
 			.eote-results {
+				display: flex;
+				justify-content: center;
 				overflow: scroll;
 				flex-grow: 1;
-				text-align: center;
 
-				span {
-					font-family: "eote-symbols";
+				.dice-result {
+					display: flex;
+					margin: 0 6px;
 				}
 			}
 
 			.force-results {
 				background-color: bootstrap.$white;
 				color: bootstrap.$black;
-
-				.force-result {
-					font-family: "eote-symbols";
-				}
 			}
 
 			.sum {
@@ -136,6 +129,19 @@
 					@include bootstrap.media-breakpoint-down(md) {
 						min-width: 50%;
 					}
+				}
+
+				.triumph-indicator,
+				.despair-indicator {
+					font-family: "eote-symbols";
+				}
+
+				.triumph-indicator {
+					color: bootstrap.$yellow;
+				}
+
+				.despair-indicator {
+					color: bootstrap.$red;
 				}
 
 				.empty {

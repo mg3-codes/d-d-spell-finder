@@ -10,10 +10,15 @@ import Table from "react-bootstrap/Table";
 
 import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 
-import "./edge-of-the-empire-dice-results.scss";
-import { mapSymbolToCharacter } from "../../enums/edge-of-the-empire-dice-symbol";
+import {
+	EdgeOfTheEmpireDiceSymbol,
+	mapSymbolToCharacter,
+} from "../../enums/edge-of-the-empire-dice-symbol";
 import EdgeOfTheEmpireDiceResult from "../../types/edge-of-the-empire-dice-result";
 import { getOutcomeFromSymbols } from "../../utility/edge-of-the-empire-dice";
+import { EdgeOfTheEmpireDiceSymbolContainer } from "../edge-of-the-empire-dice-symbol-container";
+
+import "./edge-of-the-empire-dice-results.scss";
 
 export interface IEdgeOfTheEmpireDiceResults {
 	results: EdgeOfTheEmpireDiceCollection | null;
@@ -107,12 +112,22 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">🟦</td>
 							<td className="eote-results">
 								{results?.boost.map((x, index) => (
-									<span key={`boost-${index}`}>
+									<div
+										className="dice-result"
+										key={`boost-${index}`}
+									>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
-											.map(mapSymbolToCharacter)}
-									</span>
+											.map((x, symbolIndex) => (
+												<EdgeOfTheEmpireDiceSymbolContainer
+													key={`boost-${index}-symbol-${symbolIndex}`}
+													symbol={mapSymbolToCharacter(
+														x,
+													)}
+												/>
+											))}
+									</div>
 								))}
 							</td>
 						</tr>
@@ -123,12 +138,22 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">⬛️</td>
 							<td className="eote-results">
 								{results?.setback.map((x, index) => (
-									<span key={`setback-${index}`}>
+									<div
+										className="dice-result"
+										key={`setback-${index}`}
+									>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
-											.map(mapSymbolToCharacter)}
-									</span>
+											.map((x, symbolIndex) => (
+												<EdgeOfTheEmpireDiceSymbolContainer
+													key={`setback-${index}-symbol-${symbolIndex}`}
+													symbol={mapSymbolToCharacter(
+														x,
+													)}
+												/>
+											))}
+									</div>
 								))}
 							</td>
 						</tr>
@@ -139,12 +164,22 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">🟩</td>
 							<td className="eote-results">
 								{results?.ability.map((x, index) => (
-									<span key={`ability-${index}`}>
+									<div
+										className="dice-result"
+										key={`ability-${index}`}
+									>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
-											.map(mapSymbolToCharacter)}
-									</span>
+											.map((x, symbolIndex) => (
+												<EdgeOfTheEmpireDiceSymbolContainer
+													key={`ability-${index}-symbol-${symbolIndex}`}
+													symbol={mapSymbolToCharacter(
+														x,
+													)}
+												/>
+											))}
+									</div>
 								))}
 							</td>
 						</tr>
@@ -155,12 +190,22 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">🟪</td>
 							<td className="eote-results">
 								{results?.difficulty.map((x, index) => (
-									<span key={`difficulty-${index}`}>
+									<div
+										className="dice-result"
+										key={`difficulty-${index}`}
+									>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
-											.map(mapSymbolToCharacter)}
-									</span>
+											.map((x, symbolIndex) => (
+												<EdgeOfTheEmpireDiceSymbolContainer
+													key={`difficulty-${index}-symbol-${symbolIndex}`}
+													symbol={mapSymbolToCharacter(
+														x,
+													)}
+												/>
+											))}
+									</div>
 								))}
 							</td>
 						</tr>
@@ -171,12 +216,22 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">🟨</td>
 							<td className="eote-results">
 								{results?.proficiency.map((x, index) => (
-									<span key={`proficiency-${index}`}>
+									<div
+										className="dice-result"
+										key={`proficiency-${index}`}
+									>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
-											.map(mapSymbolToCharacter)}
-									</span>
+											.map((x, symbolIndex) => (
+												<EdgeOfTheEmpireDiceSymbolContainer
+													key={`proficiency-${index}-symbol-${symbolIndex}`}
+													symbol={mapSymbolToCharacter(
+														x,
+													)}
+												/>
+											))}
+									</div>
 								))}
 							</td>
 						</tr>
@@ -187,12 +242,22 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">🟥</td>
 							<td className="eote-results">
 								{results?.challenge.map((x, index) => (
-									<span key={`challenge-${index}`}>
+									<div
+										className="dice-result"
+										key={`challenge-${index}`}
+									>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
-											.map(mapSymbolToCharacter)}
-									</span>
+											.map((x, symbolIndex) => (
+												<EdgeOfTheEmpireDiceSymbolContainer
+													key={`challenge-${index}-symbol-${symbolIndex}`}
+													symbol={mapSymbolToCharacter(
+														x,
+													)}
+												/>
+											))}
+									</div>
 								))}
 							</td>
 						</tr>
@@ -201,17 +266,24 @@ export const EdgeOfTheEmpireDiceResults = ({
 						<tr className="results-section">
 							<td className="type">⬜️ Force</td>
 							<td className="short-type">⬜️</td>
-							<td className="results force-results">
+							<td className="eote-results force-results">
 								{results?.force.map((x, index) => (
-									<span
-										className="force-result"
+									<div
+										className="dice-result"
 										key={`force-${index}`}
 									>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
-											.map(mapSymbolToCharacter)}
-									</span>
+											.map((x, symbolIndex) => (
+												<EdgeOfTheEmpireDiceSymbolContainer
+													key={`force-${index}-symbol-${symbolIndex}`}
+													symbol={mapSymbolToCharacter(
+														x,
+													)}
+												/>
+											))}
+									</div>
 								))}
 							</td>
 						</tr>
@@ -247,7 +319,20 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="result">
 								{calculatedResults.rollSuccess ? "✅" : "❌"}
 							</td>
-							<td className="empty" />
+							{calculatedResults.triumphs > 0 && (
+								<td className="triumph-indicator">
+									{mapSymbolToCharacter(
+										EdgeOfTheEmpireDiceSymbol.Triumph,
+									)}
+								</td>
+							)}
+							{calculatedResults.despairs > 0 && (
+								<td className="despair-indicator">
+									{mapSymbolToCharacter(
+										EdgeOfTheEmpireDiceSymbol.Despair,
+									)}
+								</td>
+							)}
 						</tr>
 					</tfoot>
 				)}

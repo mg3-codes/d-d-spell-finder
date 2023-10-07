@@ -27,7 +27,7 @@ export const HelpModal = ({
 			<Modal.Body>
 				<Accordion>
 					<Accordion.Item eventKey="0">
-						<Accordion.Header>Color theme</Accordion.Header>
+						<Accordion.Header>Color Theme</Accordion.Header>
 						<Accordion.Body>
 							<p>
 								The website will try to determine your preferred
