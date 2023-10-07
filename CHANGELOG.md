@@ -2,6 +2,12 @@
 
 # Changelog
 
+## 0.4.15
+
+-   Package upgrades
+-   Added tooltip over Edge of the empire symbols
+-   Added indicator when despair or triumph are in dice results
+
 ## 0.4.14
 
 -   Package upgrades
