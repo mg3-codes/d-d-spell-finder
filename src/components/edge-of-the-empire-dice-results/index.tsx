@@ -11,7 +11,10 @@ import Table from "react-bootstrap/Table";
 import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 
 import "./edge-of-the-empire-dice-results.scss";
-import { mapSymbolToCharacter } from "../../enums/edge-of-the-empire-dice-symbol";
+import {
+	EdgeOfTheEmpireDiceSymbol,
+	mapSymbolToCharacter,
+} from "../../enums/edge-of-the-empire-dice-symbol";
 import EdgeOfTheEmpireDiceResult from "../../types/edge-of-the-empire-dice-result";
 import { getOutcomeFromSymbols } from "../../utility/edge-of-the-empire-dice";
 
@@ -247,7 +250,20 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="result">
 								{calculatedResults.rollSuccess ? "✅" : "❌"}
 							</td>
-							<td className="empty" />
+							{calculatedResults.triumphs > 0 && (
+								<td className="triumph-indicator">
+									{mapSymbolToCharacter(
+										EdgeOfTheEmpireDiceSymbol.Triumph,
+									)}
+								</td>
+							)}
+							{calculatedResults.despairs > 0 && (
+								<td className="despair-indicator">
+									{mapSymbolToCharacter(
+										EdgeOfTheEmpireDiceSymbol.Despair,
+									)}
+								</td>
+							)}
 						</tr>
 					</tfoot>
 				)}

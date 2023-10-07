@@ -138,6 +138,19 @@
 					}
 				}
 
+				.triumph-indicator,
+				.despair-indicator {
+					font-family: "eote-symbols";
+				}
+
+				.triumph-indicator {
+					color: bootstrap.$yellow;
+				}
+
+				.despair-indicator {
+					color: bootstrap.$red;
+				}
+
 				.empty {
 					border-bottom: none;
 					flex-grow: 1;
