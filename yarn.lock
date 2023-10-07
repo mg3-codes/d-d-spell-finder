@@ -543,9 +543,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-darwin-arm64@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core-darwin-arm64@npm:1.3.92"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
 "@swc/core-darwin-x64@npm:1.3.90":
   version: 1.3.90
   resolution: "@swc/core-darwin-x64@npm:1.3.90"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-x64@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core-darwin-x64@npm:1.3.92"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
@@ -557,9 +571,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-linux-arm-gnueabihf@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.92"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-arm64-gnu@npm:1.3.90":
   version: 1.3.90
   resolution: "@swc/core-linux-arm64-gnu@npm:1.3.90"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-gnu@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.92"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
@@ -571,9 +599,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-linux-arm64-musl@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core-linux-arm64-musl@npm:1.3.92"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
 "@swc/core-linux-x64-gnu@npm:1.3.90":
   version: 1.3.90
   resolution: "@swc/core-linux-x64-gnu@npm:1.3.90"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-gnu@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core-linux-x64-gnu@npm:1.3.92"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
@@ -585,9 +627,23 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-linux-x64-musl@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core-linux-x64-musl@npm:1.3.92"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
 "@swc/core-win32-arm64-msvc@npm:1.3.90":
   version: 1.3.90
   resolution: "@swc/core-win32-arm64-msvc@npm:1.3.90"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-arm64-msvc@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.92"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
@@ -599,6 +655,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-win32-ia32-msvc@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.92"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
 "@swc/core-win32-x64-msvc@npm:1.3.90":
   version: 1.3.90
   resolution: "@swc/core-win32-x64-msvc@npm:1.3.90"
@@ -606,7 +669,60 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core@npm:1.3.90, @swc/core@npm:^1.3.85":
+"@swc/core-win32-x64-msvc@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core-win32-x64-msvc@npm:1.3.92"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:1.3.92":
+  version: 1.3.92
+  resolution: "@swc/core@npm:1.3.92"
+  dependencies:
+    "@swc/core-darwin-arm64": 1.3.92
+    "@swc/core-darwin-x64": 1.3.92
+    "@swc/core-linux-arm-gnueabihf": 1.3.92
+    "@swc/core-linux-arm64-gnu": 1.3.92
+    "@swc/core-linux-arm64-musl": 1.3.92
+    "@swc/core-linux-x64-gnu": 1.3.92
+    "@swc/core-linux-x64-musl": 1.3.92
+    "@swc/core-win32-arm64-msvc": 1.3.92
+    "@swc/core-win32-ia32-msvc": 1.3.92
+    "@swc/core-win32-x64-msvc": 1.3.92
+    "@swc/counter": ^0.1.1
+    "@swc/types": ^0.1.5
+  peerDependencies:
+    "@swc/helpers": ^0.5.0
+  dependenciesMeta:
+    "@swc/core-darwin-arm64":
+      optional: true
+    "@swc/core-darwin-x64":
+      optional: true
+    "@swc/core-linux-arm-gnueabihf":
+      optional: true
+    "@swc/core-linux-arm64-gnu":
+      optional: true
+    "@swc/core-linux-arm64-musl":
+      optional: true
+    "@swc/core-linux-x64-gnu":
+      optional: true
+    "@swc/core-linux-x64-musl":
+      optional: true
+    "@swc/core-win32-arm64-msvc":
+      optional: true
+    "@swc/core-win32-ia32-msvc":
+      optional: true
+    "@swc/core-win32-x64-msvc":
+      optional: true
+  peerDependenciesMeta:
+    "@swc/helpers":
+      optional: true
+  checksum: 88c0c62ff790e896180862c341be8bae98baf0a5c5e87f2f04f49e14b8c4fba460d6b352618b4dda066c8ae6bf152cd843eab25837f38128175208b8c0635721
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:^1.3.85":
   version: 1.3.90
   resolution: "@swc/core@npm:1.3.90"
   dependencies:
@@ -1958,7 +2074,7 @@ __metadata:
     "@ag-grid-community/react": ^30.2.0
     "@popperjs/core": ^2.11.8
     "@rollbar/react": ^0.11.2
-    "@swc/core": 1.3.90
+    "@swc/core": 1.3.92
     "@swc/helpers": ^0.5.2
     "@types/mocha": ^10.0.2
     "@types/node": ^18.18.0
@@ -1986,7 +2102,7 @@ __metadata:
     sass: ^1.68.0
     stylelint: ^15.10.3
     typescript: ^5.2.2
-    vite: 4.4.9
+    vite: 4.4.11
   languageName: unknown
   linkType: soft
 
@@ -6131,9 +6247,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:4.4.9":
-  version: 4.4.9
-  resolution: "vite@npm:4.4.9"
+"vite@npm:4.4.11":
+  version: 4.4.11
+  resolution: "vite@npm:4.4.11"
   dependencies:
     esbuild: ^0.18.10
     fsevents: ~2.3.2
@@ -6167,7 +6283,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: c511024ceae39c68c7dbf2ac4381ee655cd7bb62cf43867a14798bc835d3320b8fa7867a336143c30825c191c1fb4e9aa3348fce831ab617e96203080d3d2908
+  checksum: c22145c8385343a629cd546054b9da6eee60327540102bdfd1ad897fd2e78e0763ce6a18a9d84fdefde9da8fd2427d3bec9eb2697b47cf4068c7b4b52f7e3e6a
   languageName: node
   linkType: hard
 
