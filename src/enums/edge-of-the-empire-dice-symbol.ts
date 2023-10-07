@@ -42,3 +42,55 @@ export const mapSymbolToCharacter = (
 			return "";
 	}
 };
+
+export const mapSymbolToDisplayName = (
+	symbol: EdgeOfTheEmpireDiceSymbol,
+): string => {
+	switch (symbol) {
+		case EdgeOfTheEmpireDiceSymbol.Advantage:
+			return "Advantage";
+		case EdgeOfTheEmpireDiceSymbol.Blank:
+			return "Blank";
+		case EdgeOfTheEmpireDiceSymbol.DarkSide:
+			return "Dark Side";
+		case EdgeOfTheEmpireDiceSymbol.Despair:
+			return "Despair";
+		case EdgeOfTheEmpireDiceSymbol.Failure:
+			return "Failure";
+		case EdgeOfTheEmpireDiceSymbol.LightSide:
+			return "Light Side";
+		case EdgeOfTheEmpireDiceSymbol.Success:
+			return "Success";
+		case EdgeOfTheEmpireDiceSymbol.Threat:
+			return "Threat";
+		case EdgeOfTheEmpireDiceSymbol.Triumph:
+			return "Triumph";
+		default:
+			return "";
+	}
+};
+
+export const mapCharacterToDisplayName = (character: string): string => {
+	switch (character) {
+		case "a":
+			return mapSymbolToDisplayName(EdgeOfTheEmpireDiceSymbol.Advantage);
+		case "☐":
+			return mapSymbolToDisplayName(EdgeOfTheEmpireDiceSymbol.Blank);
+		case "z":
+			return mapSymbolToDisplayName(EdgeOfTheEmpireDiceSymbol.DarkSide);
+		case "y":
+			return mapSymbolToDisplayName(EdgeOfTheEmpireDiceSymbol.Despair);
+		case "f":
+			return mapSymbolToDisplayName(EdgeOfTheEmpireDiceSymbol.Failure);
+		case "Z":
+			return mapSymbolToDisplayName(EdgeOfTheEmpireDiceSymbol.LightSide);
+		case "s":
+			return mapSymbolToDisplayName(EdgeOfTheEmpireDiceSymbol.Success);
+		case "t":
+			return mapSymbolToDisplayName(EdgeOfTheEmpireDiceSymbol.Threat);
+		case "x":
+			return mapSymbolToDisplayName(EdgeOfTheEmpireDiceSymbol.Triumph);
+		default:
+			return "";
+	}
+};
