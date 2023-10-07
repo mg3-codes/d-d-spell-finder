@@ -47,10 +47,10 @@
 		"eslint-config-prettier": "^9.0.0",
 		"eslint-plugin-prettier": "^5.0.0",
 		"eslint-plugin-react": "^7.33.2",
-		"postcss": "^8.4.30",
-		"postcss-scss": "^4.0.8",
+		"postcss": "^8.4.31",
+		"postcss-scss": "^4.0.9",
 		"prettier": "^3.0.3",
-		"sass": "^1.68.0",
+		"sass": "^1.69.0",
 		"stylelint": "^15.10.3",
 		"typescript": "^5.2.2",
 		"vite": "4.4.11"
