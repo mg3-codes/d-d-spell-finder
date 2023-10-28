@@ -8,8 +8,7 @@ import { EdgeOfTheEmpireDiceSymbol } from "../enums/edge-of-the-empire-dice-symb
 import EdgeOfTheEmpireDiceResult from "../types/edge-of-the-empire-dice-result";
 
 const determineRollSuccess = (result: EdgeOfTheEmpireDiceResult): boolean => {
-	if (result.successAndFailure > 0) return true;
-	else return false;
+	return result.successAndFailure > 0;
 };
 
 export const getOutcomeFromSymbols = (
