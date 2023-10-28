@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -33,6 +33,7 @@ export const NumberedDiceSelector = ({
 		useState<string>("0");
 	const [oneHundredSidedInputValue, setOneHundredSidedInputValue] =
 		useState<string>("0");
+	const [rollIsDisabled, setRollIsDisabled] = useState<boolean>(false);
 
 	const rollAllDice = useCallback((): void => {
 		const dice: NumberDie[] = [];
@@ -91,6 +92,34 @@ export const NumberedDiceSelector = ({
 		setTwelveSidedInputValue("0");
 		setTwentySidedInputValue("0");
 		setOneHundredSidedInputValue("0");
+	}, [
+		twoSidedInputValue,
+		fourSidedInputValue,
+		sixSidedInputValue,
+		eightSidedInputValue,
+		tenSidedInputValue,
+		twelveSidedInputValue,
+		twentySidedInputValue,
+		oneHundredSidedInputValue,
+	]);
+
+	useEffect(() => {
+		if (Number.parseInt(twoSidedInputValue) > 0) setRollIsDisabled(false);
+		else if (Number.parseInt(fourSidedInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(sixSidedInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(eightSidedInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(tenSidedInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(twelveSidedInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(twentySidedInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(oneHundredSidedInputValue) > 0)
+			setRollIsDisabled(false);
+		else setRollIsDisabled(true);
 	}, [
 		twoSidedInputValue,
 		fourSidedInputValue,
@@ -285,7 +314,9 @@ export const NumberedDiceSelector = ({
 				</div>
 			</div>
 			<div className="button-container">
-				<Button onClick={rollAllDice}>Roll</Button>
+				<Button onClick={rollAllDice} disabled={rollIsDisabled}>
+					Roll
+				</Button>
 				<Button variant="outline-danger" onClick={handleClearSelection}>
 					Clear
 				</Button>
