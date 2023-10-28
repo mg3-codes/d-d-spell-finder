@@ -80,8 +80,6 @@ export const NumberDiceResults = ({
 	}, [results]);
 
 	useEffect(() => {
-		if (!sumResults) return;
-
 		setSumMap(
 			sumMap.set(2, calculateSum(results?.filter((x) => x.sides === 2))),
 		);

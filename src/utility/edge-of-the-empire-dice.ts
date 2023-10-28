@@ -8,8 +8,7 @@ import { EdgeOfTheEmpireDiceSymbol } from "../enums/edge-of-the-empire-dice-symb
 import EdgeOfTheEmpireDiceResult from "../types/edge-of-the-empire-dice-result";
 
 const determineRollSuccess = (result: EdgeOfTheEmpireDiceResult): boolean => {
-	if (result.successAndFailure > 0) return true;
-	else return false;
+	return result.successAndFailure > 0;
 };
 
 export const getOutcomeFromSymbols = (
@@ -24,6 +23,8 @@ export const getOutcomeFromSymbols = (
 		despairs: 0,
 		successAndFailure: 0,
 		advantageAndThreat: 0,
+		lightSide: 0,
+		darkSide: 0,
 		rollSuccess: false,
 	};
 
@@ -48,6 +49,12 @@ export const getOutcomeFromSymbols = (
 				break;
 			case EdgeOfTheEmpireDiceSymbol.Despair:
 				diceResult.despairs++;
+				break;
+			case EdgeOfTheEmpireDiceSymbol.LightSide:
+				diceResult.lightSide++;
+				break;
+			case EdgeOfTheEmpireDiceSymbol.DarkSide:
+				diceResult.darkSide++;
 				break;
 			case EdgeOfTheEmpireDiceSymbol.Blank:
 			default:

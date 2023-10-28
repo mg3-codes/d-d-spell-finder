@@ -97,7 +97,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 	}, [results, resultsHaveDice]);
 
 	return (
-		<div className="number-dice-results">
+		<div className="edge-dice-results">
 			<Table className="results-table" striped bordered hover>
 				<thead>
 					<tr className="header">
@@ -294,46 +294,84 @@ export const EdgeOfTheEmpireDiceResults = ({
 						<tr>
 							<td className="totals-header">Totals</td>
 						</tr>
-						<tr>
-							<td className="results-success-and-failure">
-								{calculatedResults?.successAndFailure > -1
-									? "Success"
-									: "Failure"}
-							</td>
-							<td className="results-advantage-and-threat">
-								{calculatedResults?.advantageAndThreat > -1
-									? "Advantage"
-									: "Threat"}
-							</td>
-						</tr>
-						<tr>
-							<td className="results-success-and-failure">
-								{Math.abs(calculatedResults.successAndFailure)}
-							</td>
-							<td className="results-advantage-and-threat">
-								{Math.abs(calculatedResults.advantageAndThreat)}
-							</td>
-						</tr>
-						<tr className="roll-success">
-							<td className="label">Success:</td>
-							<td className="result">
-								{calculatedResults.rollSuccess ? "✅" : "❌"}
-							</td>
-							{calculatedResults.triumphs > 0 && (
-								<td className="triumph-indicator">
-									{mapSymbolToCharacter(
-										EdgeOfTheEmpireDiceSymbol.Triumph,
+						{(hasBoostResults ||
+							hasSetbackResults ||
+							hasAbilityResults ||
+							hasDifficultyResults ||
+							hasProficiencyResults ||
+							hasChallengeResults) && (
+							<>
+								<tr>
+									<td className="results-success-and-failure">
+										{calculatedResults?.successAndFailure >
+										-1
+											? "Success"
+											: "Failure"}
+									</td>
+									<td className="results-advantage-and-threat">
+										{calculatedResults?.advantageAndThreat >
+										-1
+											? "Advantage"
+											: "Threat"}
+									</td>
+								</tr>
+								<tr>
+									<td className="results-success-and-failure">
+										{Math.abs(
+											calculatedResults.successAndFailure,
+										)}
+									</td>
+									<td className="results-advantage-and-threat">
+										{Math.abs(
+											calculatedResults.advantageAndThreat,
+										)}
+									</td>
+								</tr>
+								<tr className="roll-success">
+									<td className="label">Success:</td>
+									<td className="result">
+										{calculatedResults.rollSuccess
+											? "✅"
+											: "❌"}
+									</td>
+									{calculatedResults.triumphs > 0 && (
+										<td className="triumph-indicator">
+											{mapSymbolToCharacter(
+												EdgeOfTheEmpireDiceSymbol.Triumph,
+											)}
+										</td>
 									)}
-								</td>
-							)}
-							{calculatedResults.despairs > 0 && (
-								<td className="despair-indicator">
-									{mapSymbolToCharacter(
-										EdgeOfTheEmpireDiceSymbol.Despair,
+									{calculatedResults.despairs > 0 && (
+										<td className="despair-indicator">
+											{mapSymbolToCharacter(
+												EdgeOfTheEmpireDiceSymbol.Despair,
+											)}
+										</td>
 									)}
-								</td>
-							)}
-						</tr>
+									<td className="filler" />
+								</tr>
+							</>
+						)}
+						{hasForceResults && (
+							<>
+								<tr>
+									<td className="results-light-side">
+										Light Side
+									</td>
+									<td className="results-dark-side">
+										Dark Side
+									</td>
+								</tr>
+								<tr>
+									<td className="results-light-side">
+										{calculatedResults.lightSide}
+									</td>
+									<td className="results-dark-side">
+										{calculatedResults.darkSide}
+									</td>
+								</tr>
+							</>
+						)}
 					</tfoot>
 				)}
 			</Table>

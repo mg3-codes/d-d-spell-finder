@@ -2,6 +2,14 @@
 
 # Changelog
 
+## 0.4.16
+
+-   Add totals for force dice results
+-   Fix bug for sum results in numbered dice
+-   Do not allow negative numbers in dice inputs
+-   Disable roll buttons when no dice are selected
+-   Package upgrades
+
 ## 0.4.15
 
 -   Package upgrades

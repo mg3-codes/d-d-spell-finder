@@ -30,7 +30,9 @@ export const DiceNumberInput = ({
 	const inputIsValid = (): boolean => {
 		const valueAsNumber = parseInt(value);
 
-		return !Number.isNaN(valueAsNumber) || valueAsNumber < 0;
+		if (valueAsNumber < 0) return false;
+
+		return !Number.isNaN(valueAsNumber);
 	};
 
 	useEffect(() => {
@@ -69,6 +71,7 @@ export const DiceNumberInput = ({
 				onBlur={handleBlur}
 				isInvalid={showError}
 				inputMode="numeric"
+				min={0}
 			/>
 			<Button
 				variant="outline-primary"

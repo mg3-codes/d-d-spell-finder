@@ -22,7 +22,7 @@
 	min-width: 16%;
 }
 
-.number-dice-results {
+.edge-dice-results {
 	display: flex;
 	flex-direction: column;
 	width: 60%;
@@ -113,6 +113,14 @@
 				width: 50%;
 			}
 
+			.results-light-side {
+				width: 50%;
+			}
+
+			.results-dark-side {
+				width: 50%;
+			}
+
 			.roll-success {
 				display: flex;
 
@@ -142,6 +150,10 @@
 
 				.despair-indicator {
 					color: bootstrap.$red;
+				}
+
+				.filler {
+					flex-grow: 1;
 				}
 
 				.empty {
