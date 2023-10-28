@@ -97,7 +97,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 	}, [results, resultsHaveDice]);
 
 	return (
-		<div className="number-dice-results">
+		<div className="edge-dice-results">
 			<Table className="results-table" striped bordered hover>
 				<thead>
 					<tr className="header">
