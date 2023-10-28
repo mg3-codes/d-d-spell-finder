@@ -348,6 +348,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											)}
 										</td>
 									)}
+									<td className="filler" />
 								</tr>
 							</>
 						)}

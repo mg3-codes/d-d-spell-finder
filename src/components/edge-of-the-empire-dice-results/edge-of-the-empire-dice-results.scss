@@ -152,6 +152,10 @@
 					color: bootstrap.$red;
 				}
 
+				.filler {
+					flex-grow: 1;
+				}
+
 				.empty {
 					border-bottom: none;
 					flex-grow: 1;
