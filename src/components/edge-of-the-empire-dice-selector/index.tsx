@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -37,6 +37,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 		useState<string>("0");
 	const [challengeInputValue, setChallengeInputValue] = useState<string>("0");
 	const [forceInputValue, setForceInputValue] = useState<string>("0");
+	const [rollIsDisabled, setRollIsDisabled] = useState<boolean>(false);
 
 	const rollAllDice = useCallback((): void => {
 		const dice: EdgeOfTheEmpireDiceCollection = {
@@ -97,6 +98,30 @@ export const EdgeOfTheEmpireDiceSelector = ({
 		setProficiencyInputValue("0");
 		setChallengeInputValue("0");
 		setForceInputValue("0");
+	}, [
+		boostInputValue,
+		setbackInputValue,
+		abilityInputValue,
+		difficultyInputValue,
+		proficiencyInputValue,
+		challengeInputValue,
+		forceInputValue,
+	]);
+
+	useEffect(() => {
+		if (Number.parseInt(boostInputValue) > 0) setRollIsDisabled(false);
+		else if (Number.parseInt(setbackInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(abilityInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(difficultyInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(proficiencyInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(challengeInputValue) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(forceInputValue) > 0) setRollIsDisabled(false);
+		else setRollIsDisabled(true);
 	}, [
 		boostInputValue,
 		setbackInputValue,
@@ -263,7 +288,9 @@ export const EdgeOfTheEmpireDiceSelector = ({
 				</div>
 			</div>
 			<div className="button-container">
-				<Button onClick={rollAllDice}>Roll</Button>
+				<Button onClick={rollAllDice} disabled={rollIsDisabled}>
+					Roll
+				</Button>
 				<Button variant="outline-danger" onClick={handleClearSelection}>
 					Clear
 				</Button>
