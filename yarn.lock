@@ -12,19 +12,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ag-grid-community/client-side-row-model@npm:^30.2.0":
-  version: 30.2.0
-  resolution: "@ag-grid-community/client-side-row-model@npm:30.2.0"
+"@ag-grid-community/client-side-row-model@npm:^30.2.1":
+  version: 30.2.1
+  resolution: "@ag-grid-community/client-side-row-model@npm:30.2.1"
   dependencies:
-    "@ag-grid-community/core": ~30.2.0
-  checksum: 9ced4d0f930a56c82e2605120f4e40c72a4fed7c2c2eff185da2f3529393b99c713cfe455a306407b02473d154b859679bd799969b3782f9f4aa386db420bf02
+    "@ag-grid-community/core": ~30.2.1
+  checksum: 5be6aec0e77282c2b248e26054f88093f060888a48ecfe9e74dffc566841d66ff2ad5e45c195628a44005a318f69545c0766c07fe2c18691288002ce3e5f415e
   languageName: node
   linkType: hard
 
-"@ag-grid-community/core@npm:^30.2.0, @ag-grid-community/core@npm:~30.2.0":
+"@ag-grid-community/core@npm:^30.2.0":
   version: 30.2.0
   resolution: "@ag-grid-community/core@npm:30.2.0"
   checksum: d0470b09c6efa50f4a76ca969450c80765bc55c2be5b7ac8e2879b453473fd48871a2522192f987b4f108f6b7f4253380a8a31c30c5aeb216b0c89476ecc1a90
+  languageName: node
+  linkType: hard
+
+"@ag-grid-community/core@npm:~30.2.1":
+  version: 30.2.1
+  resolution: "@ag-grid-community/core@npm:30.2.1"
+  checksum: 757844386df1024c0055894c90fce895cabee6ed56df5e425cadd570b49350f828c44448439f1adf11ea15f816a931f7b6b0c9e4a23ec718ec019e3eb4904c47
   languageName: node
   linkType: hard
 
@@ -2014,7 +2021,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dnd-spell-organizer@workspace:."
   dependencies:
-    "@ag-grid-community/client-side-row-model": ^30.2.0
+    "@ag-grid-community/client-side-row-model": ^30.2.1
     "@ag-grid-community/core": ^30.2.0
     "@ag-grid-community/react": ^30.2.0
     "@popperjs/core": ^2.11.8
@@ -2931,7 +2938,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -5247,7 +5254,7 @@ __metadata:
 
 "resolve@patch:resolve@^2.0.0-next.4#~builtin<compat/resolve>":
   version: 2.0.0-next.4
-  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=07638b"
   dependencies:
     is-core-module: ^2.9.0
     path-parse: ^1.0.7
@@ -6089,7 +6096,7 @@ __metadata:
 
 "typescript@patch:typescript@^5.2.2#~builtin<compat/typescript>":
   version: 5.2.2
-  resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=77c9e2"
+  resolution: "typescript@patch:typescript@npm%3A5.2.2#~builtin<compat/typescript>::version=5.2.2&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver

@@ -18,7 +18,7 @@
 		"outdated": "yarn upgrade-interactive"
 	},
 	"dependencies": {
-		"@ag-grid-community/client-side-row-model": "^30.2.0",
+		"@ag-grid-community/client-side-row-model": "^30.2.1",
 		"@ag-grid-community/core": "^30.2.0",
 		"@ag-grid-community/react": "^30.2.0",
 		"@popperjs/core": "^2.11.8",
