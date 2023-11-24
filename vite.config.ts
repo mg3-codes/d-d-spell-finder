@@ -4,13 +4,13 @@
  * @format
  */
 
-import { defineConfig, splitVendorChunkPlugin } from "vite";
+import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [react(), splitVendorChunkPlugin()],
+	plugins: [react()],
 	server: {
 		port: 3000,
 		strictPort: true,
@@ -25,6 +25,7 @@ export default defineConfig({
 		},
 	},
 	build: {
+		sourcemap: true,
 		rollupOptions: {
 			output: {
 				manualChunks: {
@@ -34,7 +35,6 @@ export default defineConfig({
 						"@ag-grid-community/client-side-row-model",
 					],
 				},
-				sourcemap: true,
 				assetFileNames: "[hash].g.[ext]",
 				chunkFileNames: "[hash].g.js",
 				banner: "/*! Copyright © 2023 Michael Gamlem III | github.com/mg3-codes | github.com/mgamlem3 | MIT License applies to code | CC-BY-4.0 applies to D&D content **/",
