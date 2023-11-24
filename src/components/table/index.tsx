@@ -62,9 +62,8 @@ const Table = (): JSX.Element => {
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 	const [modalTitle, setModalTitle] = useState<string>("");
 	const [modalText, setModalText] = useState<string>("");
-	const [showCookieToast, setShowCookieToast] = useState<boolean>(
-		!useCookies,
-	);
+	const [showCookieToast, setShowCookieToast] =
+		useState<boolean>(!useCookies);
 	const gridRef = useRef<AgGridReact>(null);
 
 	const showModalWithMessage = (message: string): void => {
