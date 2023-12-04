@@ -21,7 +21,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ag-grid-community/core@npm:^30.2.1, @ag-grid-community/core@npm:~30.2.1":
+"@ag-grid-community/core@npm:^31.0.0":
+  version: 31.0.0
+  resolution: "@ag-grid-community/core@npm:31.0.0"
+  checksum: e28ab63676ced58e57b20cf25aca56c18ebe02b84f12ddeadb6bba8c56e8345188dffea8a2d819fb1f77c43b3c35a12ac34bff7701a97328c7a15d9f6fc90f71
+  languageName: node
+  linkType: hard
+
+"@ag-grid-community/core@npm:~30.2.1":
   version: 30.2.1
   resolution: "@ag-grid-community/core@npm:30.2.1"
   checksum: 757844386df1024c0055894c90fce895cabee6ed56df5e425cadd570b49350f828c44448439f1adf11ea15f816a931f7b6b0c9e4a23ec718ec019e3eb4904c47
@@ -2044,7 +2051,7 @@ __metadata:
   resolution: "dnd-spell-organizer@workspace:."
   dependencies:
     "@ag-grid-community/client-side-row-model": ^30.2.1
-    "@ag-grid-community/core": ^30.2.1
+    "@ag-grid-community/core": ^31.0.0
     "@ag-grid-community/react": ^30.2.1
     "@popperjs/core": ^2.11.8
     "@rollbar/react": ^0.11.2
