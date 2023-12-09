@@ -36,10 +36,7 @@
 
 		td {
 			min-width: 65px;
-		}
-
-		.symbol {
-			font-family: variables.$edge-symbols;
+			@include variables.centerHorizontally;
 		}
 
 		.force {
