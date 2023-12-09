@@ -10,6 +10,8 @@ import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
+import { EdgeSymbolKey } from "../edge-symbol-key";
+
 export interface IHelpModalProps {
 	modalIsOpen: boolean;
 	toggleModalState: () => void;
@@ -147,6 +149,14 @@ export const HelpModal = ({
 								GitHub Issues&nbsp;
 								<i className="bi bi-box-arrow-up-right" />
 							</a>
+						</Accordion.Body>
+					</Accordion.Item>
+					<Accordion.Item eventKey="5">
+						<Accordion.Header>
+							Edge of the Empire Dice Symbols
+						</Accordion.Header>
+						<Accordion.Body>
+							<EdgeSymbolKey />
 						</Accordion.Body>
 					</Accordion.Item>
 				</Accordion>
