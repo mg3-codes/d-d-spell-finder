@@ -34,37 +34,37 @@ export const EdgeDiceKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td>1</td>
-					<td id="boost">
+					<td className="boost">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
 						/>
 					</td>
-					<td id="setback">
+					<td className="setback">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
 						/>
 					</td>
-					<td id="ability">
+					<td className="ability">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
 						/>
 					</td>
-					<td id="difficulty">
+					<td className="difficulty">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
 						/>
 					</td>
-					<td id="proficiency">
+					<td className="proficiency">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
 						/>
 					</td>
-					<td id="challenge">
+					<td className="challenge">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
 						/>
 					</td>
-					<td>
+					<td className="force">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
 						/>
@@ -72,37 +72,37 @@ export const EdgeDiceKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td>2</td>
-					<td id="boost">
+					<td className="boost">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
 						/>
 					</td>
-					<td id="setback">
+					<td className="setback">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
 						/>
 					</td>
-					<td id="ability">
+					<td className="ability">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Success}
 						/>
 					</td>
-					<td id="difficulty">
+					<td className="difficulty">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
 						/>
 					</td>
-					<td id="proficiency">
+					<td className="proficiency">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Success}
 						/>
 					</td>
-					<td id="challenge">
+					<td className="challenge">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
 						/>
 					</td>
-					<td id="force">
+					<td className="force">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
 						/>
@@ -110,40 +110,42 @@ export const EdgeDiceKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td>3</td>
-					<td id="boost">
+					<td className="boost">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Success}
 						/>
 					</td>
-					<td id="setback">
+					<td className="setback">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
 						/>
 					</td>
-					<td id="ability">
+					<td className="ability">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Success}
 						/>
 					</td>
-					<td id="difficulty">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
+					<td className="difficulty">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
+							/>
+						</div>
 					</td>
-					<td id="proficiency">
+					<td className="proficiency">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Success}
 						/>
 					</td>
-					<td id="challenge">
+					<td className="challenge">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
 						/>
 					</td>
-					<td id="force">
+					<td className="force">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
 						/>
@@ -151,49 +153,57 @@ export const EdgeDiceKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td>4</td>
-					<td id="boost">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+					<td className="boost">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+						</div>
 					</td>
-					<td id="setback">
+					<td className="setback">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
 						/>
 					</td>
-					<td id="ability">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
+					<td className="ability">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+						</div>
 					</td>
-					<td id="difficulty">
+					<td className="difficulty">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
 						/>
 					</td>
-					<td id="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
+					<td className="proficiency">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+						</div>
 					</td>
-					<td id="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
+					<td className="challenge">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
+							/>
+						</div>
 					</td>
-					<td id="force">
+					<td className="force">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
 						/>
@@ -201,46 +211,52 @@ export const EdgeDiceKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td>5</td>
-					<td id="boost">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+					<td className="boost">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+						</div>
 					</td>
-					<td id="setback">
+					<td className="setback">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
 						/>
 					</td>
-					<td id="ability">
+					<td className="ability">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
 						/>
 					</td>
-					<td id="difficulty">
+					<td className="difficulty">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
 						/>
 					</td>
-					<td id="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
+					<td className="proficiency">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+						</div>
 					</td>
-					<td id="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
+					<td className="challenge">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
+							/>
+						</div>
 					</td>
-					<td id="force">
+					<td className="force">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
 						/>
@@ -248,37 +264,37 @@ export const EdgeDiceKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td>6</td>
-					<td id="boost">
+					<td className="boost">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
 						/>
 					</td>
-					<td id="setback">
+					<td className="setback">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
 						/>
 					</td>
-					<td id="ability">
+					<td className="ability">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
 						/>
 					</td>
-					<td id="difficulty">
+					<td className="difficulty">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
 						/>
 					</td>
-					<td id="proficiency">
+					<td className="proficiency">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
 						/>
 					</td>
-					<td id="challenge">
+					<td className="challenge">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
 						/>
 					</td>
-					<td id="force">
+					<td className="force">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
 						/>
@@ -286,83 +302,99 @@ export const EdgeDiceKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td>7</td>
-					<td id="boost" />
-					<td id="setback" />
-					<td id="ability">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+					<td className="boost" />
+					<td className="setback" />
+					<td className="ability">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+						</div>
 					</td>
-					<td id="difficulty">
+					<td className="difficulty">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
+							/>
+						</div>
+					</td>
+					<td className="proficiency">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+						</div>
+					</td>
+					<td className="challenge">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
 						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
 					</td>
-					<td id="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
-					</td>
-					<td id="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
-					</td>
-					<td id="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-						/>
+					<td className="force">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
+							/>
+						</div>
 					</td>
 				</tr>
 				<tr className="symbols">
 					<td>8</td>
-					<td id="boost" />
-					<td id="setback" />
-					<td id="ability">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+					<td className="boost" />
+					<td className="setback" />
+					<td className="ability">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+						</div>
 					</td>
-					<td id="difficulty">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+					<td className="difficulty">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
+							/>
+						</div>
 					</td>
-					<td id="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+					<td className="proficiency">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+						</div>
 					</td>
-					<td id="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+					<td className="challenge">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
+							/>
+						</div>
 					</td>
-					<td id="force">
+					<td className="force">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
 						/>
@@ -370,117 +402,137 @@ export const EdgeDiceKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td>9</td>
-					<td id="boost" />
-					<td id="setback" />
-					<td id="ability" />
-					<td id="difficulty" />
-					<td id="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+					<td className="boost" />
+					<td className="setback" />
+					<td className="ability" />
+					<td className="difficulty" />
+					<td className="proficiency">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Success}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+						</div>
 					</td>
-					<td id="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+					<td className="challenge">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
+							/>
+						</div>
 					</td>
-					<td id="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-						/>
+					<td className="force">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
+							/>
+						</div>
 					</td>
 				</tr>
 				<tr className="symbols">
 					<td>10</td>
-					<td id="boost" />
-					<td id="setback" />
-					<td id="ability" />
-					<td id="difficulty" />
-					<td id="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+					<td className="boost" />
+					<td className="setback" />
+					<td className="ability" />
+					<td className="difficulty" />
+					<td className="proficiency">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+						</div>
 					</td>
-					<td id="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+					<td className="challenge">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
+							/>
+						</div>
 					</td>
-					<td id="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-						/>
+					<td className="force">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
+							/>
+						</div>
 					</td>
 				</tr>
 				<tr className="symbols">
 					<td>11</td>
-					<td id="boost" />
-					<td id="setback" />
-					<td id="ability" />
-					<td id="difficulty" />
-					<td id="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+					<td className="boost" />
+					<td className="setback" />
+					<td className="ability" />
+					<td className="difficulty" />
+					<td className="proficiency">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
+							/>
+						</div>
 					</td>
-					<td id="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+					<td className="challenge">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
+							/>
+						</div>
 					</td>
-					<td id="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-						/>
+					<td className="force">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
+							/>
+						</div>
 					</td>
 				</tr>
 				<tr className="symbols">
 					<td>12</td>
-					<td id="boost" />
-					<td id="setback" />
-					<td id="ability" />
-					<td id="difficulty" />
-					<td id="proficiency">
+					<td className="boost" />
+					<td className="setback" />
+					<td className="ability" />
+					<td className="difficulty" />
+					<td className="proficiency">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Triumph}
 						/>
 					</td>
-					<td id="challenge">
+					<td className="challenge">
 						<EdgeDiceSymbol
 							symbol={EdgeOfTheEmpireDiceSymbol.Despair}
 						/>
 					</td>
-					<td id="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-						/>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-						/>
+					<td className="force">
+						<div className="multiple">
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
+							/>
+							<EdgeDiceSymbol
+								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
+							/>
+						</div>
 					</td>
 				</tr>
 			</tbody>

@@ -36,7 +36,10 @@
 
 		td {
 			min-width: 65px;
-			@include variables.centerHorizontally;
+
+			.multiple {
+				@include variables.centerBothDirections;
+			}
 		}
 
 		.force {
