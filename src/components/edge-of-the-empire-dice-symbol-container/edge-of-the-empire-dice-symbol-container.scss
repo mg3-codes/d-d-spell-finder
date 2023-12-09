@@ -4,6 +4,8 @@
  * @format
  */
 
+@use "../../styles/variables" as variables;
+
 .symbol {
-	font-family: "eote-symbols";
+	font-family: variables.$edge-symbols;
 }

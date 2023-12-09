@@ -5,6 +5,7 @@
  */
 
 @use "../../styles/bootstrap.scss" as bootstrap;
+@use "../../styles/variables" as bootstrap;
 
 .dice-table {
 	thead {
@@ -38,7 +39,7 @@
 		}
 
 		.symbol {
-			font-family: "eote-symbols";
+			font-family: variables.$edge-symbols;
 		}
 
 		.force {

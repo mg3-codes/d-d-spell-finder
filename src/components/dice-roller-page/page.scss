@@ -5,9 +5,10 @@
  */
 
 @use "../../styles/bootstrap.scss" as bootstrap;
+@use "../../styles/variables" as variables;
 
 @font-face {
-	font-family: "eote-symbols";
+	font-family: variables.$edge-symbols;
 	src: url("../../assets/EotE_Symbol-Regular_v1.otf") format("opentype");
 }
 

@@ -5,9 +5,10 @@
  */
 
 @use "../../styles/bootstrap.scss" as bootstrap;
+@use "../../styles/variables" as variables;
 
 @mixin symbols {
-	font-family: "eote-symbols";
+	font-family: variables.$edge-symbols;
 
 	.success,
 	.advantage {

@@ -5,6 +5,7 @@
  */
 
 @use "../../styles/bootstrap.scss";
+@use "../../styles/variables" as variables;
 
 @mixin column1 {
 	min-width: 25%;
@@ -141,7 +142,7 @@
 
 				.triumph-indicator,
 				.despair-indicator {
-					font-family: "eote-symbols";
+					font-family: variables.$edge-symbols;
 				}
 
 				.triumph-indicator {
