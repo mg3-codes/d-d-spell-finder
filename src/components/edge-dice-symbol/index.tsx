@@ -9,15 +9,13 @@ import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 import { mapCharacterToDisplayName } from "../../enums/edge-of-the-empire-dice-symbol";
 
-import "./edge-of-the-empire-dice-symbol-container.scss";
+import "./edge-dice-symbol.scss";
 
-export interface IEdgeOfTheEmpireDiceSymbolContainer {
+export interface IEdgeDiceSymbol {
 	symbol: string;
 }
 
-export const EdgeOfTheEmpireDiceSymbolContainer = ({
-	symbol,
-}: IEdgeOfTheEmpireDiceSymbolContainer) => {
+export const EdgeDiceSymbol = ({ symbol }: IEdgeDiceSymbol) => {
 	return (
 		<div className="symbol-container">
 			<OverlayTrigger

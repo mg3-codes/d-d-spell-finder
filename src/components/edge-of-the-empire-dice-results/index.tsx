@@ -16,7 +16,7 @@ import {
 } from "../../enums/edge-of-the-empire-dice-symbol";
 import EdgeOfTheEmpireDiceResult from "../../types/edge-of-the-empire-dice-result";
 import { getOutcomeFromSymbols } from "../../utility/edge-of-the-empire-dice";
-import { EdgeOfTheEmpireDiceSymbolContainer } from "../edge-of-the-empire-dice-symbol-container";
+import { EdgeDiceSymbol } from "../edge-dice-symbol";
 
 import "./edge-of-the-empire-dice-results.scss";
 
@@ -120,7 +120,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.mapValueToResults()
 											?.filter((x) => x !== null)
 											.map((x, symbolIndex) => (
-												<EdgeOfTheEmpireDiceSymbolContainer
+												<EdgeDiceSymbol
 													key={`boost-${index}-symbol-${symbolIndex}`}
 													symbol={mapSymbolToCharacter(
 														x,
@@ -146,7 +146,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.mapValueToResults()
 											?.filter((x) => x !== null)
 											.map((x, symbolIndex) => (
-												<EdgeOfTheEmpireDiceSymbolContainer
+												<EdgeDiceSymbol
 													key={`setback-${index}-symbol-${symbolIndex}`}
 													symbol={mapSymbolToCharacter(
 														x,
@@ -172,7 +172,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.mapValueToResults()
 											?.filter((x) => x !== null)
 											.map((x, symbolIndex) => (
-												<EdgeOfTheEmpireDiceSymbolContainer
+												<EdgeDiceSymbol
 													key={`ability-${index}-symbol-${symbolIndex}`}
 													symbol={mapSymbolToCharacter(
 														x,
@@ -198,7 +198,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.mapValueToResults()
 											?.filter((x) => x !== null)
 											.map((x, symbolIndex) => (
-												<EdgeOfTheEmpireDiceSymbolContainer
+												<EdgeDiceSymbol
 													key={`difficulty-${index}-symbol-${symbolIndex}`}
 													symbol={mapSymbolToCharacter(
 														x,
@@ -224,7 +224,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.mapValueToResults()
 											?.filter((x) => x !== null)
 											.map((x, symbolIndex) => (
-												<EdgeOfTheEmpireDiceSymbolContainer
+												<EdgeDiceSymbol
 													key={`proficiency-${index}-symbol-${symbolIndex}`}
 													symbol={mapSymbolToCharacter(
 														x,
@@ -250,7 +250,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.mapValueToResults()
 											?.filter((x) => x !== null)
 											.map((x, symbolIndex) => (
-												<EdgeOfTheEmpireDiceSymbolContainer
+												<EdgeDiceSymbol
 													key={`challenge-${index}-symbol-${symbolIndex}`}
 													symbol={mapSymbolToCharacter(
 														x,
@@ -276,7 +276,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.mapValueToResults()
 											?.filter((x) => x !== null)
 											.map((x, symbolIndex) => (
-												<EdgeOfTheEmpireDiceSymbolContainer
+												<EdgeDiceSymbol
 													key={`force-${index}-symbol-${symbolIndex}`}
 													symbol={mapSymbolToCharacter(
 														x,
