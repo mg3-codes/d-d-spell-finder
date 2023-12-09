@@ -11,6 +11,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
 import { EdgeSymbolKey } from "../edge-symbol-key";
+import { EdgeDiceKey } from "../edge-dice-key";
 
 export interface IHelpModalProps {
 	modalIsOpen: boolean;
@@ -152,6 +153,14 @@ export const HelpModal = ({
 						</Accordion.Body>
 					</Accordion.Item>
 					<Accordion.Item eventKey="5">
+						<Accordion.Header>
+							Edge of the Empire Dice
+						</Accordion.Header>
+						<Accordion.Body>
+							<EdgeDiceKey />
+						</Accordion.Body>
+					</Accordion.Item>
+					<Accordion.Item eventKey="6">
 						<Accordion.Header>
 							Edge of the Empire Dice Symbols
 						</Accordion.Header>
