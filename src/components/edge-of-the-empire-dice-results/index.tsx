@@ -122,9 +122,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.map((x, symbolIndex) => (
 												<EdgeDiceSymbol
 													key={`boost-${index}-symbol-${symbolIndex}`}
-													symbol={mapSymbolToCharacter(
-														x,
-													)}
+													symbol={x}
 												/>
 											))}
 									</div>
@@ -148,9 +146,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.map((x, symbolIndex) => (
 												<EdgeDiceSymbol
 													key={`setback-${index}-symbol-${symbolIndex}`}
-													symbol={mapSymbolToCharacter(
-														x,
-													)}
+													symbol={x}
 												/>
 											))}
 									</div>
@@ -174,9 +170,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.map((x, symbolIndex) => (
 												<EdgeDiceSymbol
 													key={`ability-${index}-symbol-${symbolIndex}`}
-													symbol={mapSymbolToCharacter(
-														x,
-													)}
+													symbol={x}
 												/>
 											))}
 									</div>
@@ -200,9 +194,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.map((x, symbolIndex) => (
 												<EdgeDiceSymbol
 													key={`difficulty-${index}-symbol-${symbolIndex}`}
-													symbol={mapSymbolToCharacter(
-														x,
-													)}
+													symbol={x}
 												/>
 											))}
 									</div>
@@ -226,9 +218,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.map((x, symbolIndex) => (
 												<EdgeDiceSymbol
 													key={`proficiency-${index}-symbol-${symbolIndex}`}
-													symbol={mapSymbolToCharacter(
-														x,
-													)}
+													symbol={x}
 												/>
 											))}
 									</div>
@@ -252,9 +242,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.map((x, symbolIndex) => (
 												<EdgeDiceSymbol
 													key={`challenge-${index}-symbol-${symbolIndex}`}
-													symbol={mapSymbolToCharacter(
-														x,
-													)}
+													symbol={x}
 												/>
 											))}
 									</div>
@@ -278,9 +266,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 											.map((x, symbolIndex) => (
 												<EdgeDiceSymbol
 													key={`force-${index}-symbol-${symbolIndex}`}
-													symbol={mapSymbolToCharacter(
-														x,
-													)}
+													symbol={x}
 												/>
 											))}
 									</div>

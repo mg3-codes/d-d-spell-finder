@@ -7,21 +7,25 @@
 import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
-import { mapCharacterToDisplayName } from "../../enums/edge-of-the-empire-dice-symbol";
+import {
+	EdgeOfTheEmpireDiceSymbol,
+	mapSymbolToCharacter,
+	mapSymbolToDisplayName,
+} from "../../enums/edge-of-the-empire-dice-symbol";
 
 import "./edge-dice-symbol.scss";
 
 export interface IEdgeDiceSymbol {
-	symbol: string;
+	symbol: EdgeOfTheEmpireDiceSymbol;
 }
 
 export const EdgeDiceSymbol = ({ symbol }: IEdgeDiceSymbol) => {
 	return (
 		<div className="symbol-container">
 			<OverlayTrigger
-				overlay={<Tooltip>{mapCharacterToDisplayName(symbol)}</Tooltip>}
+				overlay={<Tooltip>{mapSymbolToDisplayName(symbol)}</Tooltip>}
 			>
-				<span className="symbol">{symbol}</span>
+				<span className="symbol">{mapSymbolToCharacter(symbol)}</span>
 			</OverlayTrigger>
 		</div>
 	);
