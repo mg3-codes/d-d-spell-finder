@@ -17,15 +17,22 @@ import "./edge-dice-symbol.scss";
 
 export interface IEdgeDiceSymbol {
 	symbol: EdgeOfTheEmpireDiceSymbol;
+	color?: boolean;
 }
 
-export const EdgeDiceSymbol = ({ symbol }: IEdgeDiceSymbol) => {
+export const EdgeDiceSymbol = ({ symbol, color }: IEdgeDiceSymbol) => {
 	return (
 		<div className="symbol-container">
 			<OverlayTrigger
 				overlay={<Tooltip>{mapSymbolToDisplayName(symbol)}</Tooltip>}
 			>
-				<span className="symbol">{mapSymbolToCharacter(symbol)}</span>
+				<span
+					className={`symbol ${
+						color && mapSymbolToDisplayName(symbol).toLowerCase()
+					}`}
+				>
+					{mapSymbolToCharacter(symbol)}
+				</span>
 			</OverlayTrigger>
 		</div>
 	);

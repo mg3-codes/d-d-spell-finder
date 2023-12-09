@@ -4,8 +4,27 @@
  * @format
  */
 
+@use "../../styles/bootstrap.scss" as bootstrap;
 @use "../../styles/variables" as variables;
 
 .symbol {
 	font-family: variables.$edge-symbols;
+}
+
+.success,
+.advantage {
+	color: bootstrap.$success;
+}
+
+.failure,
+.threat {
+	color: bootstrap.$purple;
+}
+
+.triumph {
+	color: bootstrap.$yellow;
+}
+
+.despair {
+	color: bootstrap.$danger;
 }
