@@ -2,6 +2,11 @@
 
 # Changelog
 
+## 0.4.17
+
+-   Add help sections to explain dice symbols and what each dice face contains
+-   Package upgrades
+
 ## 0.4.16
 
 -   Add totals for force dice results
