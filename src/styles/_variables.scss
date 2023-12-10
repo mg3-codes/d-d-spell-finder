@@ -1,0 +1,28 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+$margin-sm: 6px;
+$margin-md: 10px;
+$margin-lg: 14px;
+
+$large-icon-size: 24px;
+
+$edge-symbols: "eote-symbols";
+
+@mixin centerVertically {
+	display: flex;
+	align-items: center;
+}
+
+@mixin centerHorizontally {
+	display: flex;
+	justify-content: center;
+}
+
+@mixin centerBothDirections {
+	@include centerVertically();
+	@include centerHorizontally();
+}

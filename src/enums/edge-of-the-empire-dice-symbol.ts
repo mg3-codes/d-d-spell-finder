@@ -4,6 +4,8 @@
  * @format
  */
 
+import { EdgeOfTheEmpireDiceColor } from "./edge-of-the-empire-dice-color";
+
 export enum EdgeOfTheEmpireDiceSymbol {
 	Advantage,
 	Blank,
@@ -92,5 +94,24 @@ export const mapCharacterToDisplayName = (character: string): string => {
 			return mapSymbolToDisplayName(EdgeOfTheEmpireDiceSymbol.Triumph);
 		default:
 			return "";
+	}
+};
+
+export const mapSymbolToColor = (
+	symbol: EdgeOfTheEmpireDiceSymbol,
+): EdgeOfTheEmpireDiceColor | null => {
+	switch (symbol) {
+		case EdgeOfTheEmpireDiceSymbol.Success:
+		case EdgeOfTheEmpireDiceSymbol.Advantage:
+			return EdgeOfTheEmpireDiceColor.Green;
+		case EdgeOfTheEmpireDiceSymbol.Failure:
+		case EdgeOfTheEmpireDiceSymbol.Threat:
+			return EdgeOfTheEmpireDiceColor.Purple;
+		case EdgeOfTheEmpireDiceSymbol.Triumph:
+			return EdgeOfTheEmpireDiceColor.Yellow;
+		case EdgeOfTheEmpireDiceSymbol.Despair:
+			return EdgeOfTheEmpireDiceColor.Red;
+		default:
+			return null;
 	}
 };
