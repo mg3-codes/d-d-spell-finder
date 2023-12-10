@@ -99,7 +99,7 @@ export const mapCharacterToDisplayName = (character: string): string => {
 
 export const mapSymbolToColor = (
 	symbol: EdgeOfTheEmpireDiceSymbol,
-): EdgeOfTheEmpireDiceColor | undefined => {
+): EdgeOfTheEmpireDiceColor | null => {
 	switch (symbol) {
 		case EdgeOfTheEmpireDiceSymbol.Success:
 		case EdgeOfTheEmpireDiceSymbol.Advantage:
@@ -111,5 +111,7 @@ export const mapSymbolToColor = (
 			return EdgeOfTheEmpireDiceColor.Yellow;
 		case EdgeOfTheEmpireDiceSymbol.Despair:
 			return EdgeOfTheEmpireDiceColor.Red;
+		default:
+			return null;
 	}
 };
