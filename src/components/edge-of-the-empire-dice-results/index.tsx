@@ -22,12 +22,14 @@ import "./edge-of-the-empire-dice-results.scss";
 
 export interface IEdgeOfTheEmpireDiceResults {
 	results: EdgeOfTheEmpireDiceCollection | null;
-	onClearClicked: () => void;
+	onClearClicked?: () => void;
+	hideClear?: boolean;
 }
 
 export const EdgeOfTheEmpireDiceResults = ({
 	results,
 	onClearClicked,
+	hideClear,
 }: IEdgeOfTheEmpireDiceResults) => {
 	const [hasBoostResults, setHasBoostResults] = useState<boolean>(false);
 	const [hasSetbackResults, setHasSetbackResults] = useState<boolean>(false);
@@ -361,15 +363,17 @@ export const EdgeOfTheEmpireDiceResults = ({
 					</tfoot>
 				)}
 			</Table>
-			<div>
-				<Button
-					variant="outline-danger"
-					disabled={!resultsHaveDice}
-					onClick={onClearClicked}
-				>
-					Clear
-				</Button>
-			</div>
+			{!hideClear && (
+				<div>
+					<Button
+						variant="outline-danger"
+						disabled={!resultsHaveDice}
+						onClick={onClearClicked}
+					>
+						Clear
+					</Button>
+				</div>
+			)}
 		</div>
 	);
 };

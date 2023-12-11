@@ -4,7 +4,13 @@
  * @format
  */
 
-import React, { Suspense, useCallback, useContext, useState } from "react";
+import React, {
+	Suspense,
+	useCallback,
+	useContext,
+	useState,
+	useEffect,
+} from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 
@@ -27,6 +33,9 @@ import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-c
 import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
 import { getCookie, setCookie } from "../../utility/cookies";
 
+import { Button } from "react-bootstrap";
+import { RollHistoryModal } from "../roll-history-modal";
+
 import "./page.scss";
 
 const cookieName = "diceRollerType";
@@ -47,11 +56,46 @@ export const DiceRollerPage = () => {
 
 		return DiceType.Numbered;
 	});
+	const [historyModalIsOpen, setHistoryModalIsOpen] =
+		useState<boolean>(false);
+	const [numberedDiceRollHistory, setNumberedDiceRollHistory] = useState<
+		NumberDie[][]
+	>([]);
+	const [edgeRollHistory, setEdgeRollHistory] = useState<
+		EdgeOfTheEmpireDiceCollection[]
+	>([]);
+
+	useEffect(() => {
+		if (!numberDiceRollResults) return;
+
+		setNumberedDiceRollHistory([
+			...numberedDiceRollHistory,
+			numberDiceRollResults,
+		]);
+	}, [numberDiceRollResults]);
+
+	useEffect(() => {
+		if (!edgeOfTheEmpireDiceRollResult) return;
+
+		setEdgeRollHistory([...edgeRollHistory, edgeOfTheEmpireDiceRollResult]);
+	}, [edgeOfTheEmpireDiceRollResult]);
 
 	const handleResultsClear = useCallback(() => {
 		setNumberDiceRollResults(null);
 		setEdgeOfTheEmpireDiceRollResult(null);
 	}, []);
+
+	const handleHistoryClear = useCallback(() => {
+		setNumberedDiceRollHistory([]);
+		setEdgeRollHistory([]);
+	}, []);
+
+	const openHistoryModal = useCallback(() => setHistoryModalIsOpen(true), []);
+
+	const closeHistoryModal = useCallback(
+		() => setHistoryModalIsOpen(false),
+		[],
+	);
 
 	const handleDiceTypeChange = (type: DiceType): void => {
 		if (useCookies) setCookie(cookieName, type.toString(), false);
@@ -75,22 +119,32 @@ export const DiceRollerPage = () => {
 				<Suspense fallback={<LoadingSpinner />}>
 					<Heading />
 					<h2>Dice Roller</h2>
-					<DropdownButton title="Dice Type">
-						<Dropdown.Item
-							eventKey={DiceType.Numbered}
-							onClick={handleNumberedDiceTypeClick}
+					<div className="buttons">
+						<DropdownButton className="dropdown" title="Dice Type">
+							<Dropdown.Item
+								eventKey={DiceType.Numbered}
+								onClick={handleNumberedDiceTypeClick}
+							>
+								{mapNumberToDiceTypeDisplayName(
+									DiceType.Numbered,
+								)}
+							</Dropdown.Item>
+							<Dropdown.Item
+								eventKey={DiceType.EdgeOfTheEmpire}
+								onClick={handleEdgeOfTheEmpireDiceTypeClick}
+							>
+								{mapNumberToDiceTypeDisplayName(
+									DiceType.EdgeOfTheEmpire,
+								)}
+							</Dropdown.Item>
+						</DropdownButton>
+						<Button
+							variant="outline-primary"
+							onClick={openHistoryModal}
 						>
-							{mapNumberToDiceTypeDisplayName(DiceType.Numbered)}
-						</Dropdown.Item>
-						<Dropdown.Item
-							eventKey={DiceType.EdgeOfTheEmpire}
-							onClick={handleEdgeOfTheEmpireDiceTypeClick}
-						>
-							{mapNumberToDiceTypeDisplayName(
-								DiceType.EdgeOfTheEmpire,
-							)}
-						</Dropdown.Item>
-					</DropdownButton>
+							Roll History
+						</Button>
+					</div>
 					<div className="dice-container">
 						{diceType === DiceType.Numbered && (
 							<>
@@ -117,6 +171,14 @@ export const DiceRollerPage = () => {
 							</>
 						)}
 					</div>
+					<RollHistoryModal
+						show={historyModalIsOpen}
+						onClose={closeHistoryModal}
+						onClear={handleHistoryClear}
+						selectedType={diceType}
+						numberedDiceHistory={numberedDiceRollHistory}
+						edgeDiceHistory={edgeRollHistory}
+					/>
 					<Footer />
 				</Suspense>
 			</div>
