@@ -45,7 +45,7 @@ jobs:
                   path: "./dist/"
             - name: Deploy to GitHub Pages
               id: deployment
-              uses: actions/deploy-pages@v2
+              uses: actions/deploy-pages@v3
             - name: Notify deploy to Rollbar
               uses: rollbar/github-deploy-action@2.1.2
               id: rollbar_deploy
