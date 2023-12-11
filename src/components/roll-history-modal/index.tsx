@@ -98,7 +98,7 @@ export const RollHistoryModal = ({
 					{selectedType === DiceType.Numbered ? (
 						<NumberDiceResults
 							results={numberedDiceHistory[currentRoll]}
-							onClearClicked={() => alert("clear")}
+							hideClear
 						/>
 					) : (
 						<EdgeOfTheEmpireDiceResults

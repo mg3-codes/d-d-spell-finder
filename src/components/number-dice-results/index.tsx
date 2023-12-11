@@ -15,12 +15,14 @@ import "./number-dice-results.scss";
 
 export interface INumberDiceResults {
 	results: NumberDie[] | null;
-	onClearClicked: () => void;
+	onClearClicked?: () => void;
+	hideClear?: boolean;
 }
 
 export const NumberDiceResults = ({
 	results,
 	onClearClicked,
+	hideClear,
 }: INumberDiceResults) => {
 	const [sumMap, setSumMap] = useState<Map<number, number>>(
 		new Map<number, number>(),
@@ -283,15 +285,17 @@ export const NumberDiceResults = ({
 					)}
 				</tbody>
 			</Table>
-			<div>
-				<Button
-					variant="outline-danger"
-					disabled={!results?.length}
-					onClick={onClearClicked}
-				>
-					Clear
-				</Button>
-			</div>
+			{!hideClear && (
+				<div>
+					<Button
+						variant="outline-danger"
+						disabled={!results?.length}
+						onClick={onClearClicked}
+					>
+						Clear
+					</Button>
+				</div>
+			)}
 		</div>
 	);
 };
