@@ -4,9 +4,15 @@
  * @format
  */
 
+@use "../../../styles/variables" as variables;
+
 .range-filter {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	margin: 10px;
+
+	.all-button {
+		margin-bottom: variables.$margin-sm;
+	}
 }

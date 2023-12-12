@@ -170,6 +170,7 @@ const SavingThrowFilter = forwardRef(
 					data-throw={SavingThrow.Wisdom}
 				/>
 				<Button
+					className="all-button"
 					variant="outline-primary"
 					onClick={selectAllSavingThrows}
 				>

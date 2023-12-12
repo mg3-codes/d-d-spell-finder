@@ -216,7 +216,11 @@ const DurationFilter = forwardRef(
 					checked={isChecked(Duration.UntilDispelledOrTriggered)}
 					data-duration={Duration.UntilDispelledOrTriggered}
 				/>
-				<Button variant="outline-primary" onClick={selectAllDurations}>
+				<Button
+					className="all-button"
+					variant="outline-primary"
+					onClick={selectAllDurations}
+				>
 					All
 				</Button>
 				<Button variant="outline-primary" onClick={selectNoDurations}>

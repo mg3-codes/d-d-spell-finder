@@ -155,7 +155,11 @@ const SchoolFilter = forwardRef(
 					checked={isChecked(School.Transmutation)}
 					data-school={School.Transmutation}
 				/>
-				<Button variant="outline-primary" onClick={selectAllSchools}>
+				<Button
+					className="all-button"
+					variant="outline-primary"
+					onClick={selectAllSchools}
+				>
 					All
 				</Button>
 				<Button variant="outline-primary" onClick={selectNoSchools}>
