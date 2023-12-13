@@ -20,6 +20,14 @@
 	color: var(--bs-body-color);
 	background-color: var(--bs-body-bg);
 
+	.buttons {
+		display: flex;
+
+		.dropdown {
+			margin-right: variables.$margin-sm;
+		}
+	}
+
 	.dice-container {
 		display: flex;
 		margin-top: 12px;
