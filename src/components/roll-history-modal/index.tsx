@@ -48,10 +48,13 @@ export const RollHistoryModal = ({
 		else setCurrentHistory(edgeDiceHistory);
 	}, [numberedDiceHistory, edgeDiceHistory]);
 
-	const handlePaginationClick = (e: React.MouseEvent) =>
-		setCurrentRoll(
-			parseInt(e.currentTarget.getAttribute("data-roll") ?? "0"),
-		);
+	const handlePaginationClick = useCallback(
+		(e: React.MouseEvent) =>
+			setCurrentRoll(
+				parseInt(e.currentTarget.getAttribute("data-roll") ?? "0"),
+			),
+		[],
+	);
 
 	const getPages = (): JSX.Element[] => {
 		const pages = [];
