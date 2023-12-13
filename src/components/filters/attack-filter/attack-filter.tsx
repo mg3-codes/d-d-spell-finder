@@ -123,7 +123,11 @@ const AttackFilter = forwardRef(
 					checked={isChecked(Attack.Ranged)}
 					data-attack={Attack.Ranged}
 				/>
-				<Button variant="outline-primary" onClick={selectAllAttacks}>
+				<Button
+					className="all-button"
+					variant="outline-primary"
+					onClick={selectAllAttacks}
+				>
 					All
 				</Button>
 				<Button variant="outline-primary" onClick={selectNoAttacks}>

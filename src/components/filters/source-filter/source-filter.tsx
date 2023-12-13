@@ -174,7 +174,11 @@ const SourceFilter = forwardRef(
 					checked={isChecked(Source.XanatharsGuideToEverything)}
 					data-source={Source.XanatharsGuideToEverything}
 				/>
-				<Button variant="outline-primary" onClick={selectAllSources}>
+				<Button
+					className="all-button"
+					variant="outline-primary"
+					onClick={selectAllSources}
+				>
 					All
 				</Button>
 				<Button variant="outline-primary" onClick={selectNoSources}>

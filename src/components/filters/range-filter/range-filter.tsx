@@ -278,7 +278,11 @@ const RangeFilter = forwardRef(
 					checked={isChecked(Range.Unlimited)}
 					data-range={Range.Unlimited}
 				/>
-				<Button variant="outline-primary" onClick={selectAllRanges}>
+				<Button
+					className="all-button"
+					variant="outline-primary"
+					onClick={selectAllRanges}
+				>
 					All
 				</Button>
 				<Button variant="outline-primary" onClick={selectNoRanges}>

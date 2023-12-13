@@ -42,9 +42,11 @@ import { ColumnContext } from "../column-context-provider";
 import { SelectedRowContext } from "../selected-row-context-provider";
 import spellJson from "../../assets/5e-spells.json";
 
-import "./table.scss";
 import { AppSettingsContext } from "../app-settings-provider";
 import { getCookie, setCookie } from "../../utility/cookies";
+
+import "../../styles/ag-grid.scss";
+import "./table.scss";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
@@ -195,7 +197,7 @@ const Table = (): JSX.Element => {
 				</Modal.Footer>
 			</Modal>
 			<div
-				className={`grid-container ag-theme-alpine${
+				className={`grid-container ag-theme-quartz${
 					selectedTheme === Theme.Dark ? "-dark" : ""
 				}`}
 			>

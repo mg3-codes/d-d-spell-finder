@@ -168,7 +168,11 @@ const LevelFilter = forwardRef(
 					checked={isChecked(9)}
 					data-level={9}
 				/>
-				<Button variant="outline-primary" onClick={selectAllLevels}>
+				<Button
+					className="all-button"
+					variant="outline-primary"
+					onClick={selectAllLevels}
+				>
 					All
 				</Button>
 				<Button variant="outline-primary" onClick={selectNoLevels}>

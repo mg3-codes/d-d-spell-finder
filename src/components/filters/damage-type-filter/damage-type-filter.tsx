@@ -212,6 +212,7 @@ const DamageTypeFilter = forwardRef(
 					data-damage={DamageType.Thunder}
 				/>
 				<Button
+					className="all-button"
 					variant="outline-primary"
 					onClick={selectAllDamageTypes}
 				>

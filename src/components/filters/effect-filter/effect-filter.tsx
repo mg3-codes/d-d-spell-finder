@@ -366,7 +366,11 @@ const EffectFilter = forwardRef(
 					checked={isChecked(Effect.Warding)}
 					data-effect={Effect.Warding}
 				/>
-				<Button variant="outline-primary" onClick={selectAllEffects}>
+				<Button
+					className="all-button"
+					variant="outline-primary"
+					onClick={selectAllEffects}
+				>
 					All
 				</Button>
 				<Button variant="outline-primary" onClick={selectNoEffects}>

@@ -364,7 +364,11 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 					checked={isShapeChecked(Shape.Line)}
 					data-shape={Shape.Line}
 				/>
-				<Button variant="outline-primary" onClick={selectAllShapes}>
+				<Button
+					className="all-button"
+					variant="outline-primary"
+					onClick={selectAllShapes}
+				>
 					All
 				</Button>
 				<Button variant="outline-primary" onClick={selectNoShapes}>

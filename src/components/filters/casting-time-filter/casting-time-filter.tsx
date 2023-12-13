@@ -192,6 +192,7 @@ const CastingTimeFilter = forwardRef(
 					data-casting-time={CastingTime.Special}
 				/>
 				<Button
+					className="all-button"
 					variant="outline-primary"
 					onClick={selectAllCastingTimes}
 				>

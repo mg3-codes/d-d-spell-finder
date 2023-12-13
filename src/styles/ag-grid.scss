@@ -1,0 +1,55 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+$toast-background-color: var(--bs-body-bg);
+
+@use "~ag-grid-community/styles" as ag;
+@use "./bootstrap.scss" as bootstrap;
+@use "sass:color";
+
+@include ag.grid-styles(
+	(
+		themes: (
+			quartz: (
+				active-color: bootstrap.$primary,
+				selected-row-background-color: bootstrap.$primary-bg-subtle,
+				row-hover-color: bootstrap.$primary-bg-subtle,
+				column-hover-color: bootstrap.$primary-bg-subtle,
+				input-focus-border-color: bootstrap.$primary-border-subtle,
+				header-foreground-color: bootstrap.$black,
+				range-selection-border-color: bootstrap.$black,
+				background-color: bootstrap.$body-bg,
+				foreground-color: bootstrap.$dark-text-emphasis,
+				border-color: bootstrap.$border-color,
+				header-background-color: bootstrap.$gray-100,
+				odd-row-background-color: bootstrap.$gray-100,
+				invalid-color: bootstrap.$danger,
+				font-family: bootstrap.$font-family-base,
+				data-color: bootstrap.$dark-text-emphasis,
+			),
+			quartz-dark: (
+				active-color: bootstrap.$primary,
+				selected-row-background-color:
+					lighten(bootstrap.$primary-bg-subtle-dark, 5%),
+				row-hover-color: bootstrap.$primary-bg-subtle-dark,
+				column-hover-color: bootstrap.$primary-bg-subtle-dark,
+				input-focus-border-color: bootstrap.$primary-border-subtle-dark,
+				header-foreground-color: bootstrap.$white,
+				range-selection-border-color: bootstrap.$black,
+				background-color: bootstrap.$gray-900,
+				foreground-color: bootstrap.$white,
+				border-color: bootstrap.$gray-600,
+				header-background-color: bootstrap.$gray-800,
+				odd-row-background-color: bootstrap.$gray-800,
+				invalid-color: bootstrap.$danger,
+				font-family: bootstrap.$font-family-base,
+				data-color: bootstrap.$white,
+			),
+		),
+		range-selection-border-color: transparent,
+		input-focus-box-shadow: bootstrap.$box-shadow,
+	)
+);
