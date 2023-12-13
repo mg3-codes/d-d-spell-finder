@@ -2,6 +2,12 @@
 
 # Changelog
 
+## 0.5.0
+
+-   Add roll history modal
+-   Upgrade AG-grid to v31
+-   Package upgrades
+
 ## 0.4.17
 
 -   Add help sections to explain dice symbols and what each dice face contains
