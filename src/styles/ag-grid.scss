@@ -32,7 +32,8 @@ $toast-background-color: var(--bs-body-bg);
 			),
 			quartz-dark: (
 				active-color: bootstrap.$primary,
-				selected-row-background-color: lighten(bootstrap.$primary-bg-subtle-dark, 5%),
+				selected-row-background-color:
+					lighten(bootstrap.$primary-bg-subtle-dark, 5%),
 				row-hover-color: bootstrap.$primary-bg-subtle-dark,
 				column-hover-color: bootstrap.$primary-bg-subtle-dark,
 				input-focus-border-color: bootstrap.$primary-border-subtle-dark,
