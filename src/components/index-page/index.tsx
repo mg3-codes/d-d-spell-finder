@@ -11,6 +11,7 @@ const Heading = React.lazy(() => import("../heading"));
 const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
 const Table = React.lazy(() => import("../table"));
 const Footer = React.lazy(() => import("../footer"));
+import { SearchBar } from "../search-bar";
 
 import "./page.scss";
 
@@ -27,6 +28,7 @@ export const IndexPage = () => {
 			<div className="page">
 				<Suspense fallback={<LoadingSpinner />}>
 					<Heading />
+					<SearchBar />
 					<Table />
 					<Footer />
 				</Suspense>
