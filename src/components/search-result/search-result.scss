@@ -1,0 +1,40 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+@use "../../styles/bootstrap.scss" as bootstrap;
+@use "../../styles/variables" as variables;
+
+.search-result {
+	margin-bottom: variables.$margin-xl;
+
+	.bold {
+		font-weight: bootstrap.$font-weight-bold;
+	}
+
+	.italic {
+		font-style: italic;
+	}
+
+	.line-2 {
+		display: flex;
+		margin-bottom: variables.$margin-md;
+
+		.badges {
+			margin-left: variables.$margin-md;
+
+			span.badge {
+				margin-left: variables.$margin-sm;
+			}
+		}
+	}
+
+	.details {
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 80vw;
+	}
+}

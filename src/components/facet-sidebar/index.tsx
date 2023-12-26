@@ -4,11 +4,13 @@
  * @format
  */
 
-@use "../../styles/variables" as variables;
+import React from "react";
 
-.search-bar-container {
-	@include variables.centerBothDirections();
-	
-	margin-top: variables.$margin-lg;
-	margin-bottom: variables.$margin-md;
-}
+export const FacetSidebar = () => {
+	return (
+		<div>
+			<span>3&nbsp;</span>
+			<span>Facet</span>
+		</div>
+	);
+};

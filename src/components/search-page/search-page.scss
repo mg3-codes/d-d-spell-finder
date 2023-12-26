@@ -6,9 +6,19 @@
 
 @use "../../styles/variables" as variables;
 
-.search-bar-container {
-	@include variables.centerBothDirections();
-	
-	margin-top: variables.$margin-lg;
-	margin-bottom: variables.$margin-md;
+.gutter-container {
+	@include variables.gutterContainer();
+}
+
+.page {
+	@include variables.page();
+
+	.content {
+		display: flex;
+
+		.search-result-container {
+			display: flex;
+			flex-direction: column;
+		}
+	}
 }

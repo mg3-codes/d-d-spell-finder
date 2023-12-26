@@ -4,9 +4,12 @@
  * @format
  */
 
+@use "../styles/bootstrap.scss" as bootstrap;
+
 $margin-sm: 6px;
 $margin-md: 10px;
 $margin-lg: 14px;
+$margin-xl: 20px;
 
 $large-icon-size: 24px;
 
@@ -25,4 +28,13 @@ $edge-symbols: "eote-symbols";
 @mixin centerBothDirections {
 	@include centerVertically();
 	@include centerHorizontally();
+}
+
+@mixin gutterContainer {
+	margin: 20px 30px;
+}
+
+@mixin page {
+	color: var(--bs-body-color);
+	background-color: var(--bs-body-bg);
 }

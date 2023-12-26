@@ -4,11 +4,10 @@
  * @format
  */
 
-@use "../../styles/variables" as variables;
+export const searchSpells = async (q: string) => {
+	const result = await fetch(`http://localhost:5226/search/spells?q=${q}`, {
+		method: "POST",
+	});
 
-.search-bar-container {
-	@include variables.centerBothDirections();
-	
-	margin-top: variables.$margin-lg;
-	margin-bottom: variables.$margin-md;
-}
+	return result.json();
+};

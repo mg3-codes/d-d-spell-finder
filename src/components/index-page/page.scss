@@ -4,13 +4,12 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
+@use "../../styles/variables" as variables;
 
 .gutter-container {
-	margin: 20px 30px;
+	@include variables.gutterContainer();
 }
 
 .page {
-	color: var(--bs-body-color);
-	background-color: var(--bs-body-bg);
+	@include variables.page();
 }
