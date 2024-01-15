@@ -5,6 +5,11 @@
  */
 import Spell from "./spell";
 
+export type Facet = {
+	field: string;
+	value: string;
+};
+
 export type Bucket = {
 	key: string;
 	count: number;
