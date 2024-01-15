@@ -7,24 +7,21 @@
 import React, { useCallback } from "react";
 import Badge from "react-bootstrap/Badge";
 
-import Spell from "../../types/spell";
-import { mapNumberToSchoolDisplayName } from "../../enums/schools";
+import ElasticSpell from "../../types/elastic-spell";
+import { formatSearchText } from "../../utility/search";
 
 import "./search-result.scss";
-import { mapNumberToSourceDisplayName } from "../../enums/sources";
 
 export interface ISearchResultProps {
-	spell: Spell;
+	spell: ElasticSpell;
 }
 
 export const SearchResult = ({ spell }: ISearchResultProps) => {
 	const getLevelSubtitle = useCallback(() => {
 		if (!spell) return "";
 		else if (spell.level > 0)
-			return `Level ${spell.level} ${mapNumberToSchoolDisplayName(
-				spell.school,
-			)} Spell`;
-		else return `${mapNumberToSchoolDisplayName(spell.school)} Cantrip`;
+			return `Level ${spell.level} ${spell.school} Spell`;
+		else return `${spell.school} Cantrip`;
 	}, [spell]);
 
 	return (
@@ -35,7 +32,7 @@ export const SearchResult = ({ spell }: ISearchResultProps) => {
 					<span className="bold italic">{getLevelSubtitle()}</span>
 					<span>&nbsp;from&nbsp;</span>
 					<span className="source bold italic">
-						{mapNumberToSourceDisplayName(spell?.source)}
+						{formatSearchText(spell?.source)}
 					</span>
 				</div>
 				<div className="badges">
