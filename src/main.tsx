@@ -18,7 +18,6 @@ import LoadingSpinner from "./components/loading-spinner";
 import { ThemeContextProvider } from "./components/theme-context-provider";
 import { SelectedRowContextProvider } from "./components/selected-row-context-provider";
 import { AppSettingsContextProvider } from "./components/app-settings-provider";
-import { searchLoader } from "./components/search-page";
 
 const Index = React.lazy(() => import("./components/routes"));
 const DiceRoller = React.lazy(() => import("./components/routes/dice-roller"));
@@ -50,7 +49,6 @@ const router = createBrowserRouter([
 	{
 		path: "/search",
 		element: <Search />,
-		loader: searchLoader,
 	},
 	{
 		path: "/dice",
