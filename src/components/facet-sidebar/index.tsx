@@ -6,6 +6,7 @@
 
 import React, { useEffect, useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
+import CloseButton from "react-bootstrap/CloseButton";
 import Form from "react-bootstrap/Form";
 
 import { Aggregation, Facet } from "../../types/search";
@@ -56,9 +57,26 @@ export const FacetSidebar = ({ facets, onFacetClick }: IFacetSidebarProps) => {
 		});
 	};
 
+	const handleFacetClear = (facet: Facet) => {
+		const facets = activeFacets;
+
+		setActiveFacets(facets.filter((x) => x.field !== facet.field));
+	};
+
 	return (
 		<div className="facet-sidebar">
 			<h5>Filters</h5>
+			<div className="active-facets">
+				{activeFacets.map((x) => (
+					<div key={x.value.toString()} className="active-facet">
+						<span className="text">{`${x.field}: ${x.value}`}</span>
+						<CloseButton
+							className="close-button"
+							onClick={() => handleFacetClear(x)}
+						/>
+					</div>
+				))}
+			</div>
 			<Accordion>
 				{facets.map((x, index) => {
 					return (

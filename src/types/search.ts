@@ -3,11 +3,11 @@
  * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
  * @format
  */
-import Spell from "./spell";
+import ElasticSpell from "./elastic-spell";
 
 export type Facet = {
 	field: string;
-	value: string;
+	value: string | boolean;
 };
 
 export type Bucket = {
@@ -22,7 +22,7 @@ export type Aggregation = {
 
 export type SearchResponse = {
 	aggregations: Aggregation[];
-	hits: Spell[];
+	hits: ElasticSpell[];
 	terminatedEarly: boolean;
 	timedOut: boolean;
 	took: number;

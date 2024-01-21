@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { Suspense, useCallback, useEffect, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 
 const Heading = React.lazy(() => import("../heading"));
@@ -20,31 +20,7 @@ import { Facet, SearchResponse } from "../../types/search";
 
 import "./search-page.scss";
 
-// export type SearchLoaderParams = {
-// 	request: Request;
-// };
-
-// type SearchLoaderResponse = {
-// 	results: SearchResponse;
-// };
-
-// export const searchLoader = async ({ request }: SearchLoaderParams) => {
-// 	const q = new URL(request.url).searchParams.get("q");
-
-// 	if (q !== null) {
-// 		const results = await searchSpells(q);
-
-// 		return defer({ results });
-// 	}
-// };
-
 export const SearchPage = () => {
-	// const { results } = useLoaderData() as SearchLoaderResponse;
-	// const revalidator = useRevalidator();
-
-	// const onFacetClick = (facets: Facet[]) => {
-	// 	revalidator.revalidate();
-	// }
 	const [results, setResults] = useState<SearchResponse>();
 	const [queryParams] = useSearchParams();
 
