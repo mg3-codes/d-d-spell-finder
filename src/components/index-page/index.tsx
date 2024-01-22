@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { Suspense, useEffect } from "react";
+import React, { Suspense, useCallback, useEffect } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Heading = React.lazy(() => import("../heading"));
@@ -14,6 +14,7 @@ const Footer = React.lazy(() => import("../footer"));
 import { SearchBar } from "../search-bar";
 
 import "./page.scss";
+import { on } from "events";
 
 export const IndexPage = () => {
 	const [searchParams] = useSearchParams();
@@ -23,12 +24,19 @@ export const IndexPage = () => {
 		if (redirectParam) navigate(redirectParam);
 	}, []);
 
+	const onSearchRequested = useCallback(
+		(q: string) => {
+			navigate(`/search?q=${q}`);
+		},
+		[searchParams],
+	);
+
 	return (
 		<div className="gutter-container">
 			<div className="page">
 				<Suspense fallback={<LoadingSpinner />}>
 					<Heading />
-					<SearchBar />
+					<SearchBar onSearchRequested={onSearchRequested} />
 					<Table />
 					<Footer />
 				</Suspense>
