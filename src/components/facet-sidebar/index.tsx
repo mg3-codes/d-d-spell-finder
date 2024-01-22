@@ -102,6 +102,7 @@ export const FacetSidebar = ({ facets, onFacetClick }: IFacetSidebarProps) => {
 											data-value={i.key}
 											checked={isChecked(x.name, i.key)}
 											onClick={handleFacetClick}
+											readOnly
 										/>
 									);
 								})}
