@@ -5,7 +5,7 @@
  */
 
 import React, { Suspense, useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Heading = React.lazy(() => import("../heading"));
 const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
@@ -23,9 +23,10 @@ import "./search-page.scss";
 export const SearchPage = () => {
 	const [results, setResults] = useState<SearchResponse>();
 	const [queryParams] = useSearchParams();
+	const navigate = useNavigate();
 
-	const getSearchResults = async (facets?: Facet[]) => {
-		const q = queryParams.get("q");
+	const getSearchResults = async (queryText?: string, facets?: Facet[]) => {
+		const q = queryText ?? queryParams.get("q");
 
 		if (q !== null) {
 			const response = await searchSpells(q, facets);
@@ -34,20 +35,28 @@ export const SearchPage = () => {
 		}
 	};
 
+	const onSearchRequested = (q: string): void => {
+		const formatted = encodeURIComponent(q);
+		navigate(`/search?q=${formatted}`);
+		getSearchResults(q);
+	};
+
 	useEffect(() => {
 		const fetchData = async () => await getSearchResults();
 
 		fetchData();
 	}, []);
 
-	const onFacetClick = (facets?: Facet[]) => getSearchResults(facets);
+	const onFacetClick = (facets?: Facet[]) => getSearchResults("", facets);
 
 	return (
 		<div className="gutter-container">
 			<div className="page">
 				<Suspense fallback={<LoadingSpinner />}>
 					<Heading />
-					<SearchBar />
+					<SearchBar
+						onSearchRequested={(q) => onSearchRequested(q)}
+					/>
 					<div className="content">
 						{results && (
 							<>

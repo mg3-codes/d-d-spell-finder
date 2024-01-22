@@ -5,14 +5,22 @@
  */
 
 import React, { useCallback, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
 import "./search-bar.scss";
 
-export const SearchBar = () => {
-	const [value, updateValue] = useState<string>("");
+export interface ISearchBarProps {
+	onSearchRequested: (q: string) => void;
+}
+
+export const SearchBar = ({ onSearchRequested }: ISearchBarProps) => {
+	const [queryParams] = useSearchParams();
+	const [value, updateValue] = useState<string>(
+		decodeURIComponent(queryParams.get("q") ?? ""),
+	);
 
 	const handleUpdateValue = useCallback(
 		(e: React.ChangeEvent<HTMLInputElement>): void => {
@@ -28,6 +36,13 @@ export const SearchBar = () => {
 		return placeholder[x];
 	}, []);
 
+	const handleKeyDown = useCallback(
+		(e: React.KeyboardEvent<HTMLInputElement>): void => {
+			if (e.key == "Enter") onSearchRequested(value);
+		},
+		[value],
+	);
+
 	return (
 		<div>
 			<InputGroup className="search-bar-container">
@@ -36,15 +51,11 @@ export const SearchBar = () => {
 					value={value}
 					onChange={handleUpdateValue}
 					placeholder={getSearchPlaceholder()}
+					onKeyDown={handleKeyDown}
 				/>
 				<Button
 					variant="outline-primary"
-					onClick={() =>
-						fetch(
-							`http://localhost:5226/search/spells?q=${value}`,
-							{ method: "POST" },
-						)
-					}
+					onClick={() => onSearchRequested(value)}
 				>
 					<i className="bi bi-search" />
 				</Button>
