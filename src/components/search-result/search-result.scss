@@ -8,10 +8,19 @@
 @use "../../styles/variables" as variables;
 
 .search-result {
-	margin-bottom: variables.$margin-xl;
+	padding: variables.$margin-md;
+	border-radius: bootstrap.$border-radius;
+
+	&:hover {
+		background-color: bootstrap.$blue-100;
+	}
 
 	.bold {
 		font-weight: bootstrap.$font-weight-bold;
+	}
+
+	.light {
+		font-weight: bootstrap.$font-weight-light;
 	}
 
 	.italic {
@@ -20,7 +29,13 @@
 
 	.line-2 {
 		display: flex;
+		justify-content: space-between;
 		margin-bottom: variables.$margin-md;
+
+		.details-container {
+			display: flex;
+			flex-direction: column;
+		}
 
 		.badges {
 			margin-left: variables.$margin-md;
@@ -35,6 +50,6 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-		width: 80vw;
+		width: 100%;
 	}
 }

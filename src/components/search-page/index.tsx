@@ -58,7 +58,7 @@ export const SearchPage = () => {
 						onSearchRequested={(q) => onSearchRequested(q)}
 					/>
 					<div className="content">
-						{results && (
+						{results ? (
 							<>
 								<FacetSidebar
 									facets={results.aggregations}
@@ -73,6 +73,8 @@ export const SearchPage = () => {
 									))}
 								</div>
 							</>
+						) : (
+							<LoadingSpinner />
 						)}
 					</div>
 					<Footer />

@@ -7,7 +7,7 @@
 @use "../../styles/variables" as variables;
 
 .facet-sidebar {
-	min-width: 200px;
+	width: 25%;
 	margin-right: variables.$margin-xl;
 
 	.active-facets {

@@ -28,12 +28,11 @@ export const SearchResult = ({ spell }: ISearchResultProps) => {
 		<div className="search-result">
 			<h5>{spell?.name}</h5>
 			<div className="line-2">
-				<div>
-					<span className="bold italic">{getLevelSubtitle()}</span>
-					<span>&nbsp;from&nbsp;</span>
-					<span className="source bold italic">
+				<div className="details-container">
+					<span className="source light italic">
 						{formatSearchText(spell?.source)}
 					</span>
+					<span className="bold italic">{getLevelSubtitle()}</span>
 				</div>
 				<div className="badges">
 					{spell?.ritual && (
