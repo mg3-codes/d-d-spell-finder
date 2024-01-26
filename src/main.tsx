@@ -22,6 +22,7 @@ import { AppSettingsContextProvider } from "./components/app-settings-provider";
 const Index = React.lazy(() => import("./components/routes"));
 const DiceRoller = React.lazy(() => import("./components/routes/dice-roller"));
 const Search = React.lazy(() => import("./components/routes/search"));
+const Spell = React.lazy(() => import("./components/routes/spell"));
 const Export = React.lazy(() => import("./components/routes/export"));
 const NotFound = React.lazy(() => import("./components/routes/not-found"));
 
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
 	{
 		path: "/search",
 		element: <Search />,
+	},
+	{
+		path: "/spell/:spellId",
+		element: <Spell />,
 	},
 	{
 		path: "/dice",
@@ -81,7 +86,10 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 						<ThemeContextProvider>
 							<ColumnContextProvider>
 								<SelectedRowContextProvider>
-									<RouterProvider router={router} />
+									<RouterProvider
+										router={router}
+										future={{ v7_startTransition: true }}
+									/>
 								</SelectedRowContextProvider>
 							</ColumnContextProvider>
 						</ThemeContextProvider>

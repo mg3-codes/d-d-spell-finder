@@ -1,0 +1,29 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+@use "../../styles/variables" as variables;
+
+.gutter-container {
+	@include variables.gutterContainer();
+	
+	.page {
+		@include variables.page();
+
+		.loaded-spell {
+			margin-top: variables.$margin-xl;
+
+			.header {
+				width: 100%;
+				text-align: center;
+			}
+
+			.content {
+				@include variables.centerHorizontally();
+				margin-top: variables.$margin-xl;
+			}
+		}
+	}
+}
