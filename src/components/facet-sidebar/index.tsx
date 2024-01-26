@@ -11,7 +11,7 @@ import Form from "react-bootstrap/Form";
 
 import { Aggregation, Facet } from "../../types/search";
 
-import { formatSearchText } from "../../utility/search";
+import { formatSearchFacetText } from "../../utility/search";
 
 import "./facet-sidebar.scss";
 
@@ -94,7 +94,7 @@ export const FacetSidebar = ({ facets, onFacetClick }: IFacetSidebarProps) => {
 											key={i.key}
 											type="checkbox"
 											id={i.key}
-											label={`${formatSearchText(
+											label={`${formatSearchFacetText(
 												i.key,
 												x,
 											)} (${i.count})`}

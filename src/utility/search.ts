@@ -20,13 +20,7 @@ export const searchSpells = async (q: string, facets?: Facet[]) => {
 	return result.json();
 };
 
-export const formatSearchText = (s: string, a: Aggregation): string => {
-	const levelAggregation = "level";
-	if (!s || s === "") return "";
-	else if (s === "0" && a.name !== levelAggregation) return "False";
-	else if (s === "1" && a.name !== levelAggregation) return "True";
-	else if (s.length == 1) return s.toUpperCase();
-
+const splitOnCapitals = (s: string): string => {
 	const regex = /[A-Z][a-z]+/gm;
 	const words = s.match(regex);
 
@@ -34,3 +28,16 @@ export const formatSearchText = (s: string, a: Aggregation): string => {
 
 	return words?.join(" ") ?? "";
 };
+
+export const formatSearchFacetText = (s: string, a: Aggregation): string => {
+	const levelAggregation = "level";
+	if (!s || s === "") return "";
+	else if (s === "0" && a.name !== levelAggregation) return "False";
+	else if (s === "1" && a.name !== levelAggregation) return "True";
+	else if (s.length == 1) return s.toUpperCase();
+
+	return splitOnCapitals(s);
+};
+
+export const formatSourceAndLevelText = (s: string): string =>
+	splitOnCapitals(s);

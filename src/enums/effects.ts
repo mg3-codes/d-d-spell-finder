@@ -204,3 +204,11 @@ export const mapEffectToDisplayName = (x: Effect): string => {
 			return "";
 	}
 };
+
+export const mapNumberToEffectDisplayName = (x: number): string => {
+	const effect = mapNumberToEffect(x);
+
+	if (effect === null) return "";
+
+	return mapEffectToDisplayName(effect);
+};

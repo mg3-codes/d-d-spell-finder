@@ -8,9 +8,10 @@ import React, { useCallback } from "react";
 import Badge from "react-bootstrap/Badge";
 
 import ElasticSpell from "../../types/elastic-spell";
-import { formatSearchText } from "../../utility/search";
+import { formatSourceAndLevelText } from "../../utility/search";
 
 import "./search-result.scss";
+import { SpellRequirementsBadges } from "../spell-requirements-badges";
 
 export interface ISearchResultProps {
 	spell: ElasticSpell;
@@ -30,31 +31,12 @@ export const SearchResult = ({ spell }: ISearchResultProps) => {
 			<div className="line-2">
 				<div className="details-container">
 					<span className="source light italic">
-						{formatSearchText(spell?.source)}
+						{formatSourceAndLevelText(spell?.source)}
 					</span>
 					<span className="bold italic">{getLevelSubtitle()}</span>
 				</div>
 				<div className="badges">
-					{spell?.ritual && (
-						<Badge pill bg="primary">
-							Ritual
-						</Badge>
-					)}
-					{spell?.concentration && (
-						<Badge pill bg="primary">
-							Concentration
-						</Badge>
-					)}
-					{spell?.verbal && (
-						<Badge pill bg="primary">
-							Verbal
-						</Badge>
-					)}
-					{spell?.somatic && (
-						<Badge pill bg="primary">
-							Somatic
-						</Badge>
-					)}
+					<SpellRequirementsBadges spell={spell} />
 				</div>
 			</div>
 			<div className="details">{spell?.details}</div>
