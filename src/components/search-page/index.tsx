@@ -47,7 +47,8 @@ export const SearchPage = () => {
 		fetchData();
 	}, []);
 
-	const onFacetClick = (facets?: Facet[]) => getSearchResults("", facets);
+	const onFacetClick = (facets?: Facet[]) =>
+		getSearchResults(queryParams.get("q") ?? "", facets);
 
 	return (
 		<div className="gutter-container">
