@@ -5,12 +5,12 @@
  */
 
 import React from "react";
+import Badge from "react-bootstrap/Badge";
 import Table from "react-bootstrap/Table";
 
 import { SpellRequirementsBadges } from "../spell-requirements-badges";
 
 import Spell from "../../types/spell";
-
 import { mapNumberToCastingTimeDisplayName } from "../../enums/casting-times";
 import { mapNumberToDurationDisplayName } from "../../enums/durations";
 import { mapNumberToRangeDisplayName } from "../../enums/ranges";
@@ -34,6 +34,15 @@ export const SpellPageTable = ({ spell }: ISpellPageTableProps) => {
 				<tr>
 					<td colSpan={2}>Details</td>
 				</tr>
+				{spell.ritual && (
+					<tr>
+						<td colSpan={2}>
+							<Badge pill bg="success">
+								Ritual
+							</Badge>
+						</td>
+					</tr>
+				)}
 				<tr>
 					<td colSpan={2}>
 						<SpellRequirementsBadges spell={spell} />
@@ -55,26 +64,36 @@ export const SpellPageTable = ({ spell }: ISpellPageTableProps) => {
 					<td>Range</td>
 					<td>{mapNumberToRangeDisplayName(spell.range)}</td>
 				</tr>
-				<tr>
-					<td>Area</td>
-					<td>{`${mapNumberToDistanceDisplayName(
-						spell.area,
-					)} ${mapNumberToShapeDisplayName(spell.areaShape)}`}</td>
-				</tr>
+				{spell.area >= 0 && (
+					<tr>
+						<td>Area</td>
+						<td>{`${mapNumberToDistanceDisplayName(
+							spell.area,
+						)} ${mapNumberToShapeDisplayName(
+							spell.areaShape,
+						)}`}</td>
+					</tr>
+				)}
 				{spell.attack !== Attack.None && (
 					<tr>
 						<td>Attack</td>
 						<td>{mapNumberToAttackDisplayName(spell.attack)}</td>
 					</tr>
 				)}
-				<tr>
-					<td>Saving Throw</td>
-					<td>{mapNumberToSavingThrowDisplayName(spell.save)}</td>
-				</tr>
-				<tr>
-					<td>Damage</td>
-					<td>{mapNumberToDamageTypeDisplayName(spell.damage)}</td>
-				</tr>
+				{spell.save > 0 && (
+					<tr>
+						<td>Saving Throw</td>
+						<td>{mapNumberToSavingThrowDisplayName(spell.save)}</td>
+					</tr>
+				)}
+				{spell.damage && (
+					<tr>
+						<td>Damage</td>
+						<td>
+							{mapNumberToDamageTypeDisplayName(spell.damage)}
+						</td>
+					</tr>
+				)}
 				{spell.effect && (
 					<tr>
 						<td>Effects</td>
@@ -85,10 +104,6 @@ export const SpellPageTable = ({ spell }: ISpellPageTableProps) => {
 						</td>
 					</tr>
 				)}
-				<tr>
-					<td>Ritual</td>
-					<td>{`${spell.ritual ? "✅" : "❌"}`}</td>
-				</tr>
 			</tbody>
 		</Table>
 	);

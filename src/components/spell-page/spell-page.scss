@@ -21,7 +21,7 @@
 			}
 
 			.content {
-				@include variables.centerHorizontally();
+				@include variables.centerBothDirections();
 				margin-top: variables.$margin-xl;
 			}
 		}
