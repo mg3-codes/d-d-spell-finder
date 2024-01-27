@@ -5,13 +5,13 @@
  */
 
 import React, { useCallback } from "react";
-import Badge from "react-bootstrap/Badge";
 
 import ElasticSpell from "../../types/elastic-spell";
 import { formatSourceAndLevelText } from "../../utility/search";
 
 import "./search-result.scss";
 import { SpellRequirementsBadges } from "../spell-requirements-badges";
+import { Link } from "react-router-dom";
 
 export interface ISearchResultProps {
 	spell: ElasticSpell;
@@ -26,7 +26,7 @@ export const SearchResult = ({ spell }: ISearchResultProps) => {
 	}, [spell]);
 
 	return (
-		<div className="search-result">
+		<Link to={`/spell/${spell.link}`} className="search-result">
 			<h5>{spell?.name}</h5>
 			<div className="line-2">
 				<div className="details-container">
@@ -40,6 +40,6 @@ export const SearchResult = ({ spell }: ISearchResultProps) => {
 				</div>
 			</div>
 			<div className="details">{spell?.details}</div>
-		</div>
+		</Link>
 	);
 };

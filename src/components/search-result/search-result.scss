@@ -10,6 +10,8 @@
 .search-result {
 	padding: variables.$margin-md;
 	border-radius: bootstrap.$border-radius;
+	color: bootstrap.$body-color;
+	text-decoration: none;
 
 	&:hover {
 		background-color: bootstrap.$blue-100;

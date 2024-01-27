@@ -24,6 +24,7 @@ type ElasticSpell = {
 	material?: string;
 	source: string;
 	details?: string;
+	link: string;
 };
 
 export default ElasticSpell;
