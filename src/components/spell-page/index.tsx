@@ -11,20 +11,20 @@ import Heading from "../heading";
 import { SpellPageTable } from "../spell-page-table";
 
 import Spell from "../../types/spell";
-import { fetchSpellById, getSpellAndSchoolText } from "../../utility/spell";
+import { fetchSpellByLink, getSpellAndSchoolText } from "../../utility/spell";
 import { mapNumberToSourceDisplayName } from "../../enums/sources";
 
 import "./spell-page.scss";
 
 export const SpellPage = () => {
-	const { spellId } = useParams();
+	const { spellLink } = useParams();
 	const [spell, setSpell] = useState<Spell | undefined>();
 
 	useEffect(() => {
-		if (spellId) {
-			fetchSpellById(spellId).then((x) => setSpell(x));
+		if (spellLink) {
+			fetchSpellByLink(spellLink).then((x) => setSpell(x));
 		}
-	}, [spellId]);
+	}, [spellLink]);
 
 	return (
 		<div className="gutter-container">
