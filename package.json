@@ -30,7 +30,7 @@
 		"react": "^18.2.0",
 		"react-bootstrap": "^2.9.2",
 		"react-dom": "^18.2.0",
-		"react-router-dom": "^6.21.1",
+		"react-router-dom": "^6.21.2",
 		"rollbar": "^2.26.2"
 	},
 	"devDependencies": {
