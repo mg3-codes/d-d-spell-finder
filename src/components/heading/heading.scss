@@ -5,10 +5,17 @@
  */
 
 @use "../../styles/bootstrap.scss" as bootstrap;
+@use "../../styles/variables" as variables;
 
 .header-buttons {
 	display: flex;
 	align-items: center;
+
+	.link-buttons {
+		:not(:last-child) {
+			margin-right: variables.$margin-sm;
+		}
+	}
 
 	.printer-button {
 		&:hover {

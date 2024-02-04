@@ -4,11 +4,12 @@
  * @format
  */
 
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useCallback, useEffect, useState } from "react";
+import { useNavigate, useParams, useSearchParams } from "react-router-dom";
 
 import Heading from "../heading";
 import { SpellPageTable } from "../spell-page-table";
+import { SearchBar } from "../search-bar";
 
 import Spell from "../../types/spell";
 import { fetchSpellByLink, getSpellAndSchoolText } from "../../utility/spell";
@@ -18,6 +19,8 @@ import "./spell-page.scss";
 
 export const SpellPage = () => {
 	const { spellLink } = useParams();
+	const [searchParams] = useSearchParams();
+	const navigate = useNavigate();
 	const [spell, setSpell] = useState<Spell | undefined>();
 
 	useEffect(() => {
@@ -26,10 +29,18 @@ export const SpellPage = () => {
 		}
 	}, [spellLink]);
 
+	const onSearchRequested = useCallback(
+		(q: string) => {
+			navigate(`/search?q=${q}`);
+		},
+		[searchParams],
+	);
+
 	return (
 		<div className="gutter-container">
 			<div className="page">
 				<Heading />
+				<SearchBar onSearchRequested={onSearchRequested} />
 				{spell && (
 					<div className="loaded-spell">
 						<div className="header">
