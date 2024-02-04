@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { Suspense, useCallback, useEffect } from "react";
+import React, { Suspense, useCallback } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Heading = React.lazy(() => import("../heading"));
@@ -18,10 +18,6 @@ import "./page.scss";
 export const IndexPage = () => {
 	const [searchParams] = useSearchParams();
 	const navigate = useNavigate();
-	useEffect(() => {
-		const redirectParam = searchParams.get("redirect");
-		if (redirectParam) navigate(redirectParam);
-	}, []);
 
 	const onSearchRequested = useCallback(
 		(q: string) => {
