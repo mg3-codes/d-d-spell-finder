@@ -25,7 +25,11 @@ export const SpellPage = () => {
 
 	useEffect(() => {
 		if (spellLink) {
-			fetchSpellByLink(spellLink).then((x) => setSpell(x));
+			fetchSpellByLink(spellLink)
+				.then((x) => {
+					setSpell(x);
+				})
+				.catch(() => navigate("/404"));
 		}
 	}, [spellLink]);
 
