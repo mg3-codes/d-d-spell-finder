@@ -14,7 +14,6 @@ const Footer = React.lazy(() => import("../footer"));
 import { SearchBar } from "../search-bar";
 
 import "./page.scss";
-import { on } from "events";
 
 export const IndexPage = () => {
 	const [searchParams] = useSearchParams();
