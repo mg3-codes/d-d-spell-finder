@@ -19,6 +19,11 @@ export const fetchSpellByLink = async (spellLink: string): Promise<Spell> => {
 	return response.json();
 };
 
+export const fetchSpellJson = async (): Promise<Spell[]> => {
+	const response = await fetch("http://localhost:5226/spell/all");
+	return response.json();
+};
+
 export const getSpellAndSchoolText = (
 	level: number,
 	school: number,
