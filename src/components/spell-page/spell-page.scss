@@ -8,7 +8,7 @@
 
 .gutter-container {
 	@include variables.gutterContainer();
-	
+
 	.page {
 		@include variables.page();
 
@@ -21,7 +21,8 @@
 			}
 
 			.content {
-				@include variables.centerBothDirections();
+				@include variables.centerHorizontally();
+				align-items: flex-start;
 				margin-top: variables.$margin-xl;
 			}
 		}
