@@ -4,7 +4,13 @@
  * @format
  */
 
-import React, { Suspense, useEffect, useState } from "react";
+import React, {
+	Suspense,
+	useCallback,
+	useEffect,
+	useRef,
+	useState,
+} from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Heading = React.lazy(() => import("../heading"));
@@ -22,14 +28,60 @@ import "./search-page.scss";
 
 export const SearchPage = () => {
 	const [results, setResults] = useState<SearchResponse>();
+	const [currentFacets, setCurrentFacets] = useState<Facet[] | undefined>(
+		undefined,
+	);
+	const [isFetching, setIsFetching] = useState<boolean>(false);
+	const observerTargetRef = useRef<HTMLDivElement>(null);
 	const [queryParams] = useSearchParams();
 	const navigate = useNavigate();
 
-	const getSearchResults = async (queryText?: string, facets?: Facet[]) => {
+	const fetchMoreResults = useCallback(async () => {
+		if (!results) return;
+		if (results.hits.length === results.total) return;
+
+		setIsFetching(true);
+
+		const q = queryParams.get("q") ?? "";
+
+		const response = await searchSpells(q, currentFacets, results?.next);
+
+		response.hits = results.hits.concat(response.hits);
+
+		setResults(response);
+		setIsFetching(false);
+	}, [results?.next]);
+
+	useEffect(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				if (entries[0].isIntersecting) {
+					fetchMoreResults();
+				}
+			},
+			{ threshold: 0 },
+		);
+
+		if (observerTargetRef.current) {
+			observer.observe(observerTargetRef.current);
+		}
+
+		return () => {
+			if (observerTargetRef.current) {
+				observer.unobserve(observerTargetRef.current);
+			}
+		};
+	}, [observerTargetRef.current, fetchMoreResults]);
+
+	const getSearchResults = async (
+		queryText?: string,
+		facets?: Facet[],
+		next?: string,
+	) => {
 		const q = queryText ?? queryParams.get("q");
 
 		if (q !== null) {
-			const response = await searchSpells(q, facets);
+			const response = await searchSpells(q, facets, next);
 
 			setResults(response);
 		}
@@ -47,8 +99,10 @@ export const SearchPage = () => {
 		fetchData();
 	}, []);
 
-	const onFacetClick = (facets?: Facet[]) =>
+	const onFacetClick = (facets?: Facet[]) => {
+		setCurrentFacets(facets);
 		getSearchResults(queryParams.get("q") ?? "", facets);
+	};
 
 	return (
 		<div className="gutter-container">
@@ -58,7 +112,7 @@ export const SearchPage = () => {
 					<SearchBar
 						onSearchRequested={(q) => onSearchRequested(q)}
 					/>
-					<div className="content">
+					<div className="content" id="content">
 						{results ? (
 							<>
 								<FacetSidebar
@@ -72,6 +126,13 @@ export const SearchPage = () => {
 											spell={x}
 										/>
 									))}
+									{isFetching && <LoadingSpinner />}
+									{results.hits.length === results.total && (
+										<span className="all-results-loaded-message">
+											All {results.total} results loaded
+										</span>
+									)}
+									<div ref={observerTargetRef}></div>
 								</div>
 							</>
 						) : (

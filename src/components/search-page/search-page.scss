@@ -4,6 +4,7 @@
  * @format
  */
 
+@use "../../styles/bootstrap.scss" as bootstrap;
 @use "../../styles/variables" as variables;
 
 .gutter-container {
@@ -20,6 +21,13 @@
 			display: flex;
 			flex-direction: column;
 			width: 75%;
+
+			.all-results-loaded-message {
+				width: 100%;
+				text-align: center;
+				font-style: italic;
+				color: bootstrap.$text-muted;
+			}
 		}
 	}
 }

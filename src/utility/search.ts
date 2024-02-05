@@ -4,18 +4,27 @@
  * @format
  */
 
-import { Aggregation, Facet } from "../types/search";
+import { Aggregation, Facet, SearchResponse } from "../types/search";
 
-export const searchSpells = async (q: string, facets?: Facet[]) => {
-	const result = await fetch(`http://localhost:5226/search/spells?q=${q}`, {
-		method: "POST",
-		headers: {
-			"Content-Type": "application/json",
+export const searchSpells = async (
+	q: string,
+	facets?: Facet[],
+	next?: string,
+): Promise<SearchResponse> => {
+	const result = await fetch(
+		`http://localhost:5226/search/spells?q=${q}${
+			next ? `&next=${next}` : ""
+		}`,
+		{
+			method: "POST",
+			headers: {
+				"Content-Type": "application/json",
+			},
+			body: JSON.stringify({
+				facets,
+			}),
 		},
-		body: JSON.stringify({
-			facets,
-		}),
-	});
+	);
 
 	return result.json();
 };
