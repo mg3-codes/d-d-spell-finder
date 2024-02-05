@@ -24,6 +24,7 @@ type Spell = {
 	material?: string;
 	source: number;
 	details?: string;
+	link: string;
 };
 
 export default Spell;

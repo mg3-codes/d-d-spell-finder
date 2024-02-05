@@ -32,6 +32,7 @@ export type TableRow = {
 	material?: string;
 	source: number;
 	details?: string;
+	link: string;
 };
 
 export const buildRow = (spell: Spell): TableRow => ({
@@ -56,4 +57,5 @@ export const buildRow = (spell: Spell): TableRow => ({
 	material: spell.material,
 	source: spell.source,
 	details: spell.details,
+	link: spell.link,
 });

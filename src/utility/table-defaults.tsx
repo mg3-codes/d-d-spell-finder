@@ -4,12 +4,15 @@
  * @format
  */
 
+import React from "react";
+
 import {
 	CellClassParams,
 	CellClickedEvent,
 	CellStyle,
 	ColDef,
 } from "@ag-grid-community/core";
+import { Link } from "react-router-dom";
 
 import AreaFilter from "../components/filters/area-filter/area-filter";
 import AttackFilter from "../components/filters/attack-filter/attack-filter";
@@ -90,6 +93,10 @@ export const setColumnDefinitionOrder = (
 	return orderedArray;
 };
 
+const CellLink = (props: CellClassParams<TableRow>) => {
+	return <Link to={`/spell/${props?.data?.link}`}>{props?.data?.name}</Link>;
+};
+
 export const getDefaultColumnDefinitions = (
 	onMaterialCellClicked: (event: CellClickedEvent<Spell>) => void,
 	onDetailsCellClicked: (event: CellClickedEvent<Spell>) => void,
@@ -111,6 +118,7 @@ export const getDefaultColumnDefinitions = (
 		field: "name",
 		headerName: mapColumnToDisplayName(Column.Name),
 		hide: defaultColumnIsHidden(Column.Name),
+		cellRenderer: CellLink,
 	},
 	{
 		field: "level",
