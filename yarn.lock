@@ -28,16 +28,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ag-grid-community/react@npm:^31.0.1":
-  version: 31.0.1
-  resolution: "@ag-grid-community/react@npm:31.0.1"
+"@ag-grid-community/react@npm:^31.0.2":
+  version: 31.0.3
+  resolution: "@ag-grid-community/react@npm:31.0.3"
   dependencies:
     prop-types: ^15.8.1
   peerDependencies:
-    "@ag-grid-community/core": ~31.0.1
+    "@ag-grid-community/core": ~31.0.3
     react: ^16.3.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: f64681060ff065e6d9860d24c323591ca019385bbdd2fcb7e201ad65d7aa9f3507e2e7fa2c94ae31f14357ecf16b8a020556fb2e9bb05e4220d5119c67dc09ae
+  checksum: 8b0cfcfc33ceca94fb8b870e51fbe6f220c4eac94d726d4acc8fc1d995ff9cc1033319f74e771fb9288f6754b6ee7e4f7d8049fdeb3139cdde5f92bfa1086b86
   languageName: node
   linkType: hard
 
@@ -2191,7 +2191,7 @@ __metadata:
   dependencies:
     "@ag-grid-community/client-side-row-model": ^31.0.1
     "@ag-grid-community/core": ^31.0.1
-    "@ag-grid-community/react": ^31.0.1
+    "@ag-grid-community/react": ^31.0.2
     "@popperjs/core": ^2.11.8
     "@rollbar/react": ^0.11.2
     "@swc/core": 1.3.105
@@ -3142,7 +3142,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -3151,7 +3151,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.3#~builtin<compat/fsevents>":
   version: 2.3.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -5401,7 +5401,7 @@ __metadata:
 
 "resolve@patch:resolve@^2.0.0-next.4#~builtin<compat/resolve>":
   version: 2.0.0-next.4
-  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=07638b"
   dependencies:
     is-core-module: ^2.9.0
     path-parse: ^1.0.7
@@ -6251,7 +6251,7 @@ __metadata:
 
 "typescript@patch:typescript@^5.3.3#~builtin<compat/typescript>":
   version: 5.3.3
-  resolution: "typescript@patch:typescript@npm%3A5.3.3#~builtin<compat/typescript>::version=5.3.3&hash=77c9e2"
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#~builtin<compat/typescript>::version=5.3.3&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
