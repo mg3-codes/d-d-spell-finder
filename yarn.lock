@@ -2056,7 +2056,7 @@ __metadata:
     prettier: ^3.2.5
     prop-types: ^15.8.1
     react: ^18.2.0
-    react-bootstrap: ^2.9.2
+    react-bootstrap: ^2.10.0
     react-dom: ^18.2.0
     react-router-dom: ^6.21.1
     rollbar: ^2.26.2
@@ -5011,9 +5011,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.9.2":
-  version: 2.9.2
-  resolution: "react-bootstrap@npm:2.9.2"
+"react-bootstrap@npm:^2.10.0":
+  version: 2.10.0
+  resolution: "react-bootstrap@npm:2.10.0"
   dependencies:
     "@babel/runtime": ^7.22.5
     "@restart/hooks": ^0.4.9
@@ -5034,7 +5034,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: ffa8e0d9e4a6414cbcbefb657f0f427302ab0c059ec618a86fffeccfe669dd3b3d9003f9e9803dc4499d4831aba44aaafd29e9c70bf850138ce5a3e4091b8fb3
+  checksum: 73e4505fe3474f6a5a6075bc276a6ff66e862d8ccf28469db81fc53bc0e61f9cf1a03c2e423f8089c4bbfdb634f784fff57a22ab07ca5f9860ff472373f1b004
   languageName: node
   linkType: hard
 
