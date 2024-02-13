@@ -52,7 +52,7 @@ const router = createBrowserRouter([
 		element: <Search />,
 	},
 	{
-		path: "/spell/:spellLink",
+		path: "/spell/5e/:spellLink",
 		element: <Spell />,
 	},
 	{

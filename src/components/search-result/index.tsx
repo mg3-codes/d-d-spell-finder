@@ -26,7 +26,7 @@ export const SearchResult = ({ spell }: ISearchResultProps) => {
 	}, [spell]);
 
 	return (
-		<Link to={`/spell/${spell.link}`} className="search-result">
+		<Link to={`/spell/5e/${spell.link}`} className="search-result">
 			<h5>{spell?.name}</h5>
 			<div className="line-2">
 				<div className="details-container">

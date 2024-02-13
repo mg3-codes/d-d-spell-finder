@@ -94,7 +94,9 @@ export const setColumnDefinitionOrder = (
 };
 
 const CellLink = (props: CellClassParams<TableRow>) => {
-	return <Link to={`/spell/${props?.data?.link}`}>{props?.data?.name}</Link>;
+	return (
+		<Link to={`/spell/5e/${props?.data?.link}`}>{props?.data?.name}</Link>
+	);
 };
 
 export const getDefaultColumnDefinitions = (
