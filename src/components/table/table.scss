@@ -6,7 +6,7 @@
 
 .grid-container {
 	width: 100%;
-	height: 82vh;
+	height: 78vh;
 
 	.ag-ltr .ag-cell-focus:not(.ag-cell-range-selected):focus-within,
 	.ag-ltr .ag-context-menu-open .ag-cell-focus:not(.ag-cell-range-selected),
@@ -25,10 +25,6 @@
 	.ag-cell {
 		border: 1px transparent;
 	}
-
-	// .ag-cell:focus-within {
-	// 	border: none;
-	// }
 }
 
 .ag-theme-alpine,
