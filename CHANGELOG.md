@@ -2,6 +2,11 @@
 
 # Changelog
 
+## 0.5.1
+
+-   Fix minor style issues
+-   Update dependencies
+
 ## 0.5.0
 
 -   Add roll history modal

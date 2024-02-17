@@ -27,7 +27,7 @@ const Heading = () => {
 
 	return (
 		<div className="heading">
-			<h1>D&D Spell Details</h1>
+			<h1>D&D Spell Finder</h1>
 			<div className="header-buttons">
 				{location.pathname !== "/" && (
 					<Link to={"/"}>
