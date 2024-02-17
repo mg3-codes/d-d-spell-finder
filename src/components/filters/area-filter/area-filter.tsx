@@ -314,10 +314,18 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 					checked={isDistanceChecked(Distance.FortyThousand)}
 					data-distance={Distance.FortyThousand}
 				/>
-				<Button variant="outline-primary" onClick={selectAllDistances}>
+				<Button
+					variant="outline-primary"
+					className="all-button"
+					onClick={selectAllDistances}
+				>
 					All
 				</Button>
-				<Button variant="outline-primary" onClick={selectNoDistances}>
+				<Button
+					variant="outline-primary"
+					className="first-none-button"
+					onClick={selectNoDistances}
+				>
 					None
 				</Button>
 			</div>

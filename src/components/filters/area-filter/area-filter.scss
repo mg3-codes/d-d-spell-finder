@@ -12,7 +12,15 @@
 	justify-content: center;
 	margin: 10px;
 
+	button {
+		width: 100%;
+	}
+
 	.all-button {
+		margin-bottom: variables.$margin-sm;
+	}
+
+	.first-none-button {
 		margin-bottom: variables.$margin-sm;
 	}
 }
