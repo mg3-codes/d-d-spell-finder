@@ -5,6 +5,12 @@
  */
 
 @use "../../styles/bootstrap.scss";
+@use "../../styles/variables" as variables;
+
+@font-face {
+	font-family: variables.$edge-symbols;
+	src: url("../../assets/EotE_Symbol-Regular_v1.otf") format("opentype");
+}
 
 body {
 	width: 100vw;
