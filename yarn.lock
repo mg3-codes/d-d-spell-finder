@@ -1206,10 +1206,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ag-grid-community@npm:^31.0.3":
-  version: 31.0.3
-  resolution: "ag-grid-community@npm:31.0.3"
-  checksum: fd2e614b98be4b2f3e7435dc597b03483f5607eaa5553906e8d1c85aa190b75858315a73513735e98e36c0b3167ccad6c02abf6d2f3a5d9904a4646406011736
+"ag-grid-community@npm:^31.1.0":
+  version: 31.1.1
+  resolution: "ag-grid-community@npm:31.1.1"
+  checksum: a3bedb05e9bae71dc1a13d9be157eda39bcdee97109de2ae2188720b455f1db86cde3f4205f165cd672f574b2e5d03e8554830293ab892b0421c3e441d3525a0
   languageName: node
   linkType: hard
 
@@ -2166,7 +2166,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^7.0.1
     "@typescript-eslint/parser": ^7.0.1
     "@vitejs/plugin-react-swc": ^3.6.0
-    ag-grid-community: ^31.0.3
+    ag-grid-community: ^31.1.0
     bootstrap: ^5.3.2
     cypress: ^13.6.4
     eslint: ^8.56.0
@@ -3105,7 +3105,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.2#~builtin<compat/fsevents>":
   version: 2.3.2
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.2#~builtin<compat/fsevents>::version=2.3.2&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -3114,7 +3114,7 @@ __metadata:
 
 "fsevents@patch:fsevents@~2.3.3#~builtin<compat/fsevents>":
   version: 2.3.3
-  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=df0bf1"
+  resolution: "fsevents@patch:fsevents@npm%3A2.3.3#~builtin<compat/fsevents>::version=2.3.3&hash=18f3a7"
   dependencies:
     node-gyp: latest
   conditions: os=darwin
@@ -5364,7 +5364,7 @@ __metadata:
 
 "resolve@patch:resolve@^2.0.0-next.4#~builtin<compat/resolve>":
   version: 2.0.0-next.4
-  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=c3c19d"
+  resolution: "resolve@patch:resolve@npm%3A2.0.0-next.4#~builtin<compat/resolve>::version=2.0.0-next.4&hash=07638b"
   dependencies:
     is-core-module: ^2.9.0
     path-parse: ^1.0.7
@@ -6214,7 +6214,7 @@ __metadata:
 
 "typescript@patch:typescript@^5.3.3#~builtin<compat/typescript>":
   version: 5.3.3
-  resolution: "typescript@patch:typescript@npm%3A5.3.3#~builtin<compat/typescript>::version=5.3.3&hash=77c9e2"
+  resolution: "typescript@patch:typescript@npm%3A5.3.3#~builtin<compat/typescript>::version=5.3.3&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
