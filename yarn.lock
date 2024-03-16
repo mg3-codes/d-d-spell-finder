@@ -1252,10 +1252,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ag-grid-community@npm:^31.0.3":
-  version: 31.0.3
-  resolution: "ag-grid-community@npm:31.0.3"
-  checksum: fd2e614b98be4b2f3e7435dc597b03483f5607eaa5553906e8d1c85aa190b75858315a73513735e98e36c0b3167ccad6c02abf6d2f3a5d9904a4646406011736
+"ag-grid-community@npm:^31.1.1":
+  version: 31.1.1
+  resolution: "ag-grid-community@npm:31.1.1"
+  checksum: a3bedb05e9bae71dc1a13d9be157eda39bcdee97109de2ae2188720b455f1db86cde3f4205f165cd672f574b2e5d03e8554830293ab892b0421c3e441d3525a0
   languageName: node
   linkType: hard
 
@@ -2212,7 +2212,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^7.0.1
     "@typescript-eslint/parser": ^7.1.1
     "@vitejs/plugin-react-swc": ^3.6.0
-    ag-grid-community: ^31.0.3
+    ag-grid-community: ^31.1.1
     bootstrap: ^5.3.2
     cypress: ^13.6.4
     eslint: ^8.56.0
