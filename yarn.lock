@@ -12,16 +12,26 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ag-grid-community/client-side-row-model@npm:^31.0.3":
-  version: 31.0.3
-  resolution: "@ag-grid-community/client-side-row-model@npm:31.0.3"
+"@ag-grid-community/client-side-row-model@npm:^31.2.0":
+  version: 31.2.0
+  resolution: "@ag-grid-community/client-side-row-model@npm:31.2.0"
   dependencies:
-    "@ag-grid-community/core": ~31.0.3
-  checksum: 346fc716b81bed431467c974d04d31f43db0452335042353b64c3e49d1945756b9cd733c756a31da0a5a3d924da7eac8f2026df032a169676b739cbe8a04e250
+    "@ag-grid-community/core": 31.2.0
+    tslib: ^2.3.0
+  checksum: b0d4858ff43e3e7c86944671f1150016c4cb0ade73d6e91c9b0ecb75b959d6afad80eb0e378d6a832147370d62028dda10eb814fbbfa1ecfc897eb9f141fe384
   languageName: node
   linkType: hard
 
-"@ag-grid-community/core@npm:^31.0.3, @ag-grid-community/core@npm:~31.0.3":
+"@ag-grid-community/core@npm:31.2.0":
+  version: 31.2.0
+  resolution: "@ag-grid-community/core@npm:31.2.0"
+  dependencies:
+    tslib: ^2.3.0
+  checksum: 664a65c849ded4ebabb3ae35529f496275ea5fb04cc189b6b993d772a662b55d290b60e527b40cdfa4cbbbc2b422dc5a0085a074caf6d4814796909e3c10f8ad
+  languageName: node
+  linkType: hard
+
+"@ag-grid-community/core@npm:^31.0.3":
   version: 31.0.3
   resolution: "@ag-grid-community/core@npm:31.0.3"
   checksum: 15c3eb29c938fd3fad77c56d85b98f5cef957f24a5ee2237612fa1c4edffbbb6b44ad5159ade24551b0f035ca04b3cce064ca5b8edf0ecd48c3f33c71edb1578
@@ -2198,7 +2208,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dnd-spell-organizer@workspace:."
   dependencies:
-    "@ag-grid-community/client-side-row-model": ^31.0.3
+    "@ag-grid-community/client-side-row-model": ^31.2.0
     "@ag-grid-community/core": ^31.0.3
     "@ag-grid-community/react": ^31.0.3
     "@popperjs/core": ^2.11.8
@@ -6148,17 +6158,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tslib@npm:^2.3.0, tslib@npm:^2.6.2":
+  version: 2.6.2
+  resolution: "tslib@npm:2.6.2"
+  checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
+  languageName: node
+  linkType: hard
+
 "tslib@npm:^2.6.0":
   version: 2.6.1
   resolution: "tslib@npm:2.6.1"
   checksum: b0d176d176487905b66ae4d5856647df50e37beea7571c53b8d10ba9222c074b81f1410fb91da13debaf2cbc970663609068bdebafa844ea9d69b146527c38fe
-  languageName: node
-  linkType: hard
-
-"tslib@npm:^2.6.2":
-  version: 2.6.2
-  resolution: "tslib@npm:2.6.2"
-  checksum: 329ea56123005922f39642318e3d1f0f8265d1e7fcb92c633e0809521da75eeaca28d2cf96d7248229deb40e5c19adf408259f4b9640afd20d13aecc1430f3ad
   languageName: node
   linkType: hard
 
