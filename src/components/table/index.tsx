@@ -49,7 +49,7 @@ import { AppSettingsContext } from "../app-settings-provider";
 import "../../styles/ag-grid.scss";
 import "./table.scss";
 import { LogArgument } from "rollbar";
-import { fetchSpellJson } from "../../utility/spell";
+import { fetchAllSpellsJson } from "../../utility/spell";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
@@ -58,7 +58,7 @@ const cookieName = "columnDefinition";
 const Table = (): JSX.Element => {
 	const [spellRows, setSpellRows] = useState<TableRow[] | null>();
 	useEffect(() => {
-		fetchSpellJson().then((x) => setSpellRows(x.map(buildRow)));
+		fetchAllSpellsJson().then((x) => setSpellRows(x.map(buildRow)));
 	}, []);
 	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
 	const { currentTheme: selectedTheme } = useContext(ThemeContext);
