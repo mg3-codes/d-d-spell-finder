@@ -86,7 +86,7 @@ export const SpellPageTable = ({ spell }: ISpellPageTableProps) => {
 						<td>{mapNumberToSavingThrowDisplayName(spell.save)}</td>
 					</tr>
 				)}
-				{spell.damage && (
+				{spell.damage !== undefined && (
 					<tr>
 						<td>Damage</td>
 						<td>
