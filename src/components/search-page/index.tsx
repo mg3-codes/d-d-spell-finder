@@ -112,7 +112,7 @@ export const SearchPage = () => {
 					<SearchBar
 						onSearchRequested={(q) => onSearchRequested(q)}
 					/>
-					<div className="content" id="content">
+					<div className="search-page-content" id="content">
 						{results ? (
 							<>
 								<FacetSidebar

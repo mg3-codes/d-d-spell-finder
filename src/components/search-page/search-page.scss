@@ -14,7 +14,7 @@
 .page {
 	@include variables.page();
 
-	.content {
+	.search-page-content {
 		display: flex;
 
 		.search-result-container {
