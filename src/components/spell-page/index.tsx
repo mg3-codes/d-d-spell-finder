@@ -59,7 +59,7 @@ export const SpellPage = () => {
 								{mapNumberToSourceDisplayName(spell.source)}
 							</div>
 						</div>
-						<div className="content">
+						<div className="spell-page-content">
 							<div className="details">
 								{spell.details
 									?.split("\n")
