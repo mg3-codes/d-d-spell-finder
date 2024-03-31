@@ -28,7 +28,7 @@ export const getSpellAndSchoolText = (
 	level: number,
 	school: number,
 ): string => {
-	return `Level ${level} ${mapNumberToSchoolDisplayName(school)} ${
-		level === 0 ? "Cantrip" : "Spell"
-	}`;
+	return `${level > 0 ? `Level ${level}` : ""} ${mapNumberToSchoolDisplayName(
+		school,
+	)} ${level === 0 ? "Cantrip" : "Spell"}`;
 };
