@@ -2227,7 +2227,7 @@ __metadata:
     react-bootstrap: ^2.10.1
     react-dom: ^18.2.0
     react-router-dom: ^6.22.1
-    rollbar: ^2.26.3
+    rollbar: ^2.26.4
     sass: ^1.71.1
     stylelint: ^16.2.1
     typescript: ^5.4.3
@@ -5473,9 +5473,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollbar@npm:^2.26.3":
-  version: 2.26.3
-  resolution: "rollbar@npm:2.26.3"
+"rollbar@npm:^2.26.4":
+  version: 2.26.4
+  resolution: "rollbar@npm:2.26.4"
   dependencies:
     async: ~3.2.3
     console-polyfill: 0.3.0
@@ -5488,7 +5488,7 @@ __metadata:
   dependenciesMeta:
     decache:
       optional: true
-  checksum: c9a89a1bb2aa740d284476a21d6a26bed4adb64491b1151358e74c3bdb9f0f7f12803861f6092a2707eb57ffe1a8383adc1941642d054caab69c76d995dcc782
+  checksum: ea0b24264a101112c720e786b7c8903e9f8d2cdf8ebab77ced64e4bb3899a0a1ed5f52c6ba0aa10a01faa85e354fb5142e6d0c4f3a282ad2e038175f3bba6ff0
   languageName: node
   linkType: hard
 
