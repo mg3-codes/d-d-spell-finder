@@ -19,7 +19,7 @@
 	},
 	"dependencies": {
 		"@ag-grid-community/client-side-row-model": "^31.0.3",
-		"@ag-grid-community/core": "^31.0.3",
+		"@ag-grid-community/core": "^32.0.0",
 		"@ag-grid-community/react": "^31.0.3",
 		"@popperjs/core": "^2.11.8",
 		"@rollbar/react": "^0.11.2",
