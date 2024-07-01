@@ -1251,10 +1251,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ag-grid-community@npm:^31.1.1":
-  version: 31.1.1
-  resolution: "ag-grid-community@npm:31.1.1"
-  checksum: a3bedb05e9bae71dc1a13d9be157eda39bcdee97109de2ae2188720b455f1db86cde3f4205f165cd672f574b2e5d03e8554830293ab892b0421c3e441d3525a0
+"ag-charts-types@npm:10.0.0":
+  version: 10.0.0
+  resolution: "ag-charts-types@npm:10.0.0"
+  checksum: e8af9c59e3506f27bb9147346710aaf3978272c0bf0619e8a23a882d2ac3238991b3c378e43e602023472126d3f7e765927311e02defd4ca8cbe7b376aa65401
+  languageName: node
+  linkType: hard
+
+"ag-grid-community@npm:^32.0.0":
+  version: 32.0.0
+  resolution: "ag-grid-community@npm:32.0.0"
+  dependencies:
+    ag-charts-types: 10.0.0
+  checksum: a2fe3b0b6d53ff28fb2ac45a30687f92db173a169cf2dbd6aca128dbca91971b495b6598d41f0b1f9a585c713461fdee795fa597c88e955ea689a85edeab174f
   languageName: node
   linkType: hard
 
@@ -2331,7 +2340,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^7.7.0
     "@typescript-eslint/parser": ^7.7.1
     "@vitejs/plugin-react-swc": ^3.6.0
-    ag-grid-community: ^31.1.1
+    ag-grid-community: ^32.0.0
     bootstrap: ^5.3.2
     cypress: ^13.6.4
     eslint: ^8.56.0
