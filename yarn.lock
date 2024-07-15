@@ -21,7 +21,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ag-grid-community/core@npm:^31.0.3, @ag-grid-community/core@npm:~31.0.3":
+"@ag-grid-community/core@npm:^32.0.2":
+  version: 32.0.2
+  resolution: "@ag-grid-community/core@npm:32.0.2"
+  dependencies:
+    ag-charts-types: 10.0.2
+    tslib: ^2.3.0
+  checksum: 1b2fb93da193ea5e2daa0d309d2efe5e0cfb5e489a8fe607347dc3f145d62ff76b7a138684d96df03598817a907358a9aa688f6ef7242a632158660b7246ae7f
+  languageName: node
+  linkType: hard
+
+"@ag-grid-community/core@npm:~31.0.3":
   version: 31.0.3
   resolution: "@ag-grid-community/core@npm:31.0.3"
   checksum: 15c3eb29c938fd3fad77c56d85b98f5cef957f24a5ee2237612fa1c4edffbbb6b44ad5159ade24551b0f035ca04b3cce064ca5b8edf0ecd48c3f33c71edb1578
@@ -1251,6 +1261,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ag-charts-types@npm:10.0.2":
+  version: 10.0.2
+  resolution: "ag-charts-types@npm:10.0.2"
+  checksum: f00a635bcc6eb1a08c0f6fece2145185259a755decc25a1762b66f8e65a0ddb31e5711fca95f32379663c9e816ff25dedf8876016026e59d1a26a00d68765348
+  languageName: node
+  linkType: hard
+
 "ag-grid-community@npm:^31.1.1":
   version: 31.1.1
   resolution: "ag-grid-community@npm:31.1.1"
@@ -2318,7 +2335,7 @@ __metadata:
   resolution: "dnd-spell-organizer@workspace:."
   dependencies:
     "@ag-grid-community/client-side-row-model": ^31.0.3
-    "@ag-grid-community/core": ^31.0.3
+    "@ag-grid-community/core": ^32.0.2
     "@ag-grid-community/react": ^31.0.3
     "@popperjs/core": ^2.11.8
     "@rollbar/react": ^0.11.2
@@ -6592,6 +6609,13 @@ __metadata:
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.3.0":
+  version: 2.6.3
+  resolution: "tslib@npm:2.6.3"
+  checksum: 74fce0e100f1ebd95b8995fbbd0e6c91bdd8f4c35c00d4da62e285a3363aaa534de40a80db30ecfd388ed7c313c42d930ee0eaf108e8114214b180eec3dbe6f5
   languageName: node
   linkType: hard
 
