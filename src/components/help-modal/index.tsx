@@ -100,7 +100,7 @@ export const HelpModal = ({
 							<p>
 								Simply select all the spells you wish to print
 								by using the checkbox on the left side of the
-								row.Then, click the print button at the top of
+								row. Then, click the print button at the top of
 								the page. This will open a preview window where
 								you can see what the card will look like. You
 								can also select how many cards per row you would
