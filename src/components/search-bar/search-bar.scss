@@ -8,7 +8,7 @@
 
 .search-bar-container {
 	@include variables.centerBothDirections();
-	
+
 	margin-top: variables.$margin-lg;
 	margin-bottom: variables.$margin-md;
 }

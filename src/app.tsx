@@ -5,12 +5,16 @@
  */
 
 import React, { Suspense } from "react";
-import ReactDOM from "react-dom/client";
 import {
 	createBrowserRouter,
 	Navigate,
 	RouterProvider,
 } from "react-router-dom";
+import {
+	createStaticHandler,
+	createStaticRouter,
+	StaticRouterProvider,
+} from "react-router-dom/server";
 import { Provider as RollbarProvider, ErrorBoundary } from "@rollbar/react";
 
 import { ColumnContextProvider } from "./components/column-context-provider";
@@ -38,7 +42,7 @@ const rollbarConfig = {
 	/* eslint-enable camelcase */
 };
 
-const router = createBrowserRouter([
+const routes = [
 	{
 		path: "/",
 		element: <Index />,
@@ -75,10 +79,19 @@ const router = createBrowserRouter([
 		path: "*",
 		element: <Navigate to="/404" replace />,
 	},
-]);
+];
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
-	<React.StrictMode>
+const App = (req: Request) => {
+	const { query } = createStaticHandler(routes);
+
+	let context;
+	query(req).then(() => context);
+	if (context instanceof Response) throw context;
+
+	const browserRouter = createBrowserRouter(routes);
+	const staticRouter = createStaticRouter(routes, context);
+
+	return (
 		<RollbarProvider config={rollbarConfig}>
 			<ErrorBoundary>
 				<Suspense fallback={<LoadingSpinner />}>
@@ -86,10 +99,19 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 						<ThemeContextProvider>
 							<ColumnContextProvider>
 								<SelectedRowContextProvider>
-									<RouterProvider
-										router={router}
-										future={{ v7_startTransition: true }}
-									/>
+									{document ? (
+										<RouterProvider
+											router={browserRouter}
+											future={{
+												v7_startTransition: true,
+											}}
+										/>
+									) : (
+										<StaticRouterProvider
+											router={staticRouter}
+											context={context}
+										/>
+									)}
 								</SelectedRowContextProvider>
 							</ColumnContextProvider>
 						</ThemeContextProvider>
@@ -97,5 +119,7 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 				</Suspense>
 			</ErrorBoundary>
 		</RollbarProvider>
-	</React.StrictMode>,
-);
+	);
+};
+
+export default App;
