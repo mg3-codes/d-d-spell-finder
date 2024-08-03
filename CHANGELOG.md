@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.5.3
+
+-   Fix typos
+
 ## 0.5.2
 
 -   Fix dice font issue
