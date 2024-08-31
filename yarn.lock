@@ -12,32 +12,35 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@ag-grid-community/client-side-row-model@npm:^31.0.3":
-  version: 31.0.3
-  resolution: "@ag-grid-community/client-side-row-model@npm:31.0.3"
+"@ag-grid-community/client-side-row-model@npm:^31.3.4":
+  version: 31.3.4
+  resolution: "@ag-grid-community/client-side-row-model@npm:31.3.4"
   dependencies:
-    "@ag-grid-community/core": ~31.0.3
-  checksum: 346fc716b81bed431467c974d04d31f43db0452335042353b64c3e49d1945756b9cd733c756a31da0a5a3d924da7eac8f2026df032a169676b739cbe8a04e250
+    "@ag-grid-community/core": 31.3.4
+    tslib: ^2.3.0
+  checksum: 8041e2e70690425884221c9206990276493932fd9de330d487f1e2fe852c48c3baaf36ff572d0edca47bcbb7816b48940419eb40a9a38d9e7b75639765cbafb9
   languageName: node
   linkType: hard
 
-"@ag-grid-community/core@npm:^31.0.3, @ag-grid-community/core@npm:~31.0.3":
-  version: 31.0.3
-  resolution: "@ag-grid-community/core@npm:31.0.3"
-  checksum: 15c3eb29c938fd3fad77c56d85b98f5cef957f24a5ee2237612fa1c4edffbbb6b44ad5159ade24551b0f035ca04b3cce064ca5b8edf0ecd48c3f33c71edb1578
+"@ag-grid-community/core@npm:31.3.4, @ag-grid-community/core@npm:^31.3.4":
+  version: 31.3.4
+  resolution: "@ag-grid-community/core@npm:31.3.4"
+  dependencies:
+    tslib: ^2.3.0
+  checksum: 34b38ed17f5c778cb5bbb62ec3ace664dc07555511a09dc5b96f7b66f984b0666fbe415605bb050da65b1f8013e4e587febcbca6a9a9e1c16892a98e29af6995
   languageName: node
   linkType: hard
 
-"@ag-grid-community/react@npm:^31.0.3":
-  version: 31.0.3
-  resolution: "@ag-grid-community/react@npm:31.0.3"
+"@ag-grid-community/react@npm:^31.3.4":
+  version: 31.3.4
+  resolution: "@ag-grid-community/react@npm:31.3.4"
   dependencies:
     prop-types: ^15.8.1
   peerDependencies:
-    "@ag-grid-community/core": ~31.0.3
+    "@ag-grid-community/core": 31.3.4
     react: ^16.3.0 || ^17.0.0 || ^18.0.0
     react-dom: ^16.3.0 || ^17.0.0 || ^18.0.0
-  checksum: 8b0cfcfc33ceca94fb8b870e51fbe6f220c4eac94d726d4acc8fc1d995ff9cc1033319f74e771fb9288f6754b6ee7e4f7d8049fdeb3139cdde5f92bfa1086b86
+  checksum: 2f17848831022c84b82bb35ba7c08cd96db633675f9e5e729dbbc22f8a3bb10f4b114d38e9b70bb348a354f16c3d58b44c8e4f63797680c778228d9b3ff75165
   languageName: node
   linkType: hard
 
@@ -1086,10 +1089,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ag-grid-community@npm:^31.1.1":
-  version: 31.1.1
-  resolution: "ag-grid-community@npm:31.1.1"
-  checksum: a3bedb05e9bae71dc1a13d9be157eda39bcdee97109de2ae2188720b455f1db86cde3f4205f165cd672f574b2e5d03e8554830293ab892b0421c3e441d3525a0
+"ag-grid-community@npm:^31.3.4":
+  version: 31.3.4
+  resolution: "ag-grid-community@npm:31.3.4"
+  checksum: 725532245ad8ab5fe602177f8bbc671ea05ae2f9225c5a910675d2bc6af52e1ffd282fb9a0437e04ea993a4896ab427d6ba7d64fdf2db206def5dc89bbba660a
   languageName: node
   linkType: hard
 
@@ -2091,9 +2094,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "dnd-spell-organizer@workspace:."
   dependencies:
-    "@ag-grid-community/client-side-row-model": ^31.0.3
-    "@ag-grid-community/core": ^31.0.3
-    "@ag-grid-community/react": ^31.0.3
+    "@ag-grid-community/client-side-row-model": ^31.3.4
+    "@ag-grid-community/core": ^31.3.4
+    "@ag-grid-community/react": ^31.3.4
     "@popperjs/core": ^2.11.8
     "@rollbar/react": ^0.12.0-beta
     "@swc/core": 1.7.22
@@ -2105,7 +2108,7 @@ __metadata:
     "@typescript-eslint/eslint-plugin": ^7.18.0
     "@typescript-eslint/parser": ^7.18.0
     "@vitejs/plugin-react-swc": ^3.7.0
-    ag-grid-community: ^31.1.1
+    ag-grid-community: ^31.3.4
     bootstrap: ^5.3.3
     cypress: ^13.14.1
     eslint: ^8.57.0
@@ -6111,6 +6114,13 @@ __metadata:
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.3.0":
+  version: 2.7.0
+  resolution: "tslib@npm:2.7.0"
+  checksum: 1606d5c89f88d466889def78653f3aab0f88692e80bb2066d090ca6112ae250ec1cfa9dbfaab0d17b60da15a4186e8ec4d893801c67896b277c17374e36e1d28
   languageName: node
   linkType: hard
 
