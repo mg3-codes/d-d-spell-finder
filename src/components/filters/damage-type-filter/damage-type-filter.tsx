@@ -4,7 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
 	ReactElement,
 	useCallback,
@@ -16,8 +18,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import {
-	mapNumberToDamageTypeDisplayName,
 	DamageType,
+	mapNumberToDamageTypeDisplayName,
 } from "../../../enums/damage-types";
 import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
@@ -39,6 +41,7 @@ const DamageTypeFilter = forwardRef(
 		const [selectedDamageTypes, setSelectedDamageTypes] = useState<
 			number[]
 		>(damageTypeFilterDisabledArray);
+		const rollbar = useRollbar();
 
 		useEffect(() => {
 			props.filterChangedCallback();
@@ -86,9 +89,17 @@ const DamageTypeFilter = forwardRef(
 			[],
 		);
 
-		const handleCheck = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
+		const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
 				const damage = e.target.getAttribute("data-damage");
+
+				if (!damage) {
+					rollbar.warning("damage was null", e);
+					return;
+				}
+
 				numberBasedFilterHandleCheck(
 					selectedDamageTypes,
 					setSelectedDamageTypes,

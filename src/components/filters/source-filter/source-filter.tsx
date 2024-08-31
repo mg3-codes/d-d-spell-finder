@@ -4,7 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
 	ReactElement,
 	useCallback,
@@ -35,6 +37,8 @@ const SourceFilter = forwardRef(
 	(props: AgGridFilterProps, ref): ReactElement => {
 		const [selectedSources, setSelectedSources] =
 			useState<number[]>(filterDisabledArray);
+
+		const rollbar = useRollbar();
 
 		useEffect(() => {
 			props.filterChangedCallback();
@@ -82,9 +86,17 @@ const SourceFilter = forwardRef(
 
 		const selectNoSources = useCallback(() => setSelectedSources([]), []);
 
-		const handleCheck = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
+		const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
 				const source = e.target.getAttribute("data-source");
+
+				if (!source) {
+					rollbar.warning("source was null", e);
+					return;
+				}
+
 				numberBasedFilterHandleCheck(
 					selectedSources,
 					setSelectedSources,

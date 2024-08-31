@@ -4,10 +4,11 @@
  * @format
  */
 
+import { Distance } from "../enums/distances";
 import Spell from "./spell";
 
 export type RowArea = {
-	distance: number;
+	distance: Distance;
 	shape?: number;
 };
 

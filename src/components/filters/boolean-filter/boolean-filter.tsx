@@ -4,16 +4,18 @@
  * @format
  */
 
+import { IFilterParams, RowNode } from "@ag-grid-community/core";
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
-	useState,
-	useEffect,
-	useCallback,
-	useImperativeHandle,
 	ReactElement,
+	useCallback,
+	useEffect,
+	useImperativeHandle,
+	useState,
 } from "react";
 import Form from "react-bootstrap/Form";
-import { IFilterParams, RowNode } from "@ag-grid-community/core";
 
 import { TableRow } from "../../../types/table-row";
 
@@ -28,20 +30,21 @@ type BooleanBasedFilterProps = {
 	node: RowNode;
 };
 
-type BooleanBasedFilterSetModel = {
-	value?: BooleanBasedFilterState;
-};
-
 enum BooleanBasedFilterState {
 	All,
 	True,
 	False,
 }
 
+type BooleanBasedFilterSetModel = {
+	value?: BooleanBasedFilterState;
+};
+
 const BooleanFilter = forwardRef(
 	(filterProps: IBooleanFilterProps, ref): ReactElement => {
 		const [selectedState, setSelectedState] =
 			useState<BooleanBasedFilterState>(BooleanBasedFilterState.All);
+		const rollbar = useRollbar();
 
 		useEffect(() => {
 			filterProps.filterChangedCallback();
@@ -91,9 +94,17 @@ const BooleanFilter = forwardRef(
 			};
 		});
 
-		const handleClick = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
+		const handleClick: ChangeEventHandler<HTMLInputElement> = useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
 				const state = e.target.getAttribute("data-boolean");
+
+				if (!state) {
+					rollbar.warning("stat was null", e);
+					return;
+				}
+
 				setSelectedState(parseInt(state) as BooleanBasedFilterState);
 			},
 			[selectedState],

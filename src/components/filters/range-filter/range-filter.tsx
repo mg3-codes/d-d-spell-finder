@@ -4,7 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
 	ReactElement,
 	useCallback,
@@ -35,6 +37,7 @@ const RangeFilter = forwardRef(
 	(props: AgGridFilterProps, ref): ReactElement => {
 		const [selectedRanges, setSelectedRanges] =
 			useState<number[]>(filterDisabledArray);
+		const rollbar = useRollbar();
 
 		useEffect(() => {
 			props.filterChangedCallback();
@@ -82,9 +85,17 @@ const RangeFilter = forwardRef(
 
 		const selectNoRanges = useCallback(() => setSelectedRanges([]), []);
 
-		const handleCheck = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
+		const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
 				const range = e.target.getAttribute("data-range");
+
+				if (!range) {
+					rollbar.warning("range was null", e);
+					return;
+				}
+
 				numberBasedFilterHandleCheck(
 					selectedRanges,
 					setSelectedRanges,

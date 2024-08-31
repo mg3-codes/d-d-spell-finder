@@ -4,7 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
 	ReactElement,
 	useCallback,
@@ -15,7 +17,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapNumberToAttackDisplayName, Attack } from "../../../enums/attacks";
+import { Attack, mapNumberToAttackDisplayName } from "../../../enums/attacks";
 import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
@@ -36,6 +38,7 @@ const AttackFilter = forwardRef(
 		const [selectedAttacks, setSelectedAttacks] = useState<number[]>(
 			attackFilterDisabledArray,
 		);
+		const rollbar = useRollbar();
 
 		useEffect(() => {
 			props.filterChangedCallback();
@@ -85,9 +88,17 @@ const AttackFilter = forwardRef(
 
 		const selectNoAttacks = useCallback(() => setSelectedAttacks([]), []);
 
-		const handleCheck = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
+		const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
 				const attack = e.target.getAttribute("data-attack");
+
+				if (!attack) {
+					rollbar.warning("distance was null", e);
+					return;
+				}
+
 				numberBasedFilterHandleCheck(
 					selectedAttacks,
 					setSelectedAttacks,

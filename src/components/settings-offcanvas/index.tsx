@@ -4,21 +4,28 @@
  * @format
  */
 
-import React, { useCallback, useContext, useState } from "react";
+import { useRollbar } from "@rollbar/react";
+import React, {
+	ChangeEventHandler,
+	MouseEventHandler,
+	useCallback,
+	useContext,
+	useState,
+} from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Form from "react-bootstrap/Form";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { Column, mapColumnToDisplayName } from "../../enums/columns";
 
+import { Column, mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
 import { AppSettingsContext } from "../app-settings-provider";
 import { ColumnContext } from "../column-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
-import "./settings-offcanvas.scss";
 import { deleteAllCookies } from "../../utility/cookies";
+import "./settings-offcanvas.scss";
 
 const SettingsOffcanvas = (): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);
@@ -26,6 +33,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 	const { currentTheme, updateTheme, selectedThemeOption } =
 		useContext(ThemeContext);
 	const { selectedColumns, handleColumnChange } = useContext(ColumnContext);
+	const rollbar = useRollbar();
 
 	const handleOpen = useCallback(() => setShow(true), []);
 
@@ -38,18 +46,39 @@ const SettingsOffcanvas = (): JSX.Element => {
 		deleteAllCookies();
 	}, []);
 
-	const handleColumnCheckboxChange = useCallback(
-		(e: React.BaseSyntheticEvent): void =>
-			handleColumnChange(parseInt(e.target.getAttribute("data-column"))),
-		[selectedColumns],
-	);
+	const handleColumnCheckboxChange: ChangeEventHandler<HTMLInputElement> =
+		useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
+				const numberAsString = e.target.getAttribute("data-column");
+
+				if (!numberAsString) {
+					rollbar.warning("column number was null", e);
+					return;
+				}
+
+				handleColumnChange(parseInt(numberAsString));
+			},
+			[selectedColumns],
+		);
 
 	const isCheckboxChecked = (column: Column): boolean =>
 		selectedColumns.find((value) => value === column) !== undefined;
 
-	const handleSetTheme = useCallback(
-		(e: React.BaseSyntheticEvent) =>
-			updateTheme(parseInt(e.target.getAttribute("data-theme"))),
+	const handleSetTheme: MouseEventHandler<HTMLButtonElement> = useCallback(
+		(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+			const numberAsString = (e.target as HTMLButtonElement).getAttribute(
+				"data-theme",
+			);
+
+			if (!numberAsString) {
+				rollbar.warning("value was null", e);
+				return;
+			}
+
+			updateTheme(parseInt(numberAsString));
+		},
 		[currentTheme, selectedThemeOption],
 	);
 

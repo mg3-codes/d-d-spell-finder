@@ -4,7 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
 	ReactElement,
 	useCallback,
@@ -15,6 +17,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
@@ -24,7 +27,6 @@ import {
 	NumberBasedFilterProps,
 	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
-import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 
 import "./level-filter.scss";
 
@@ -34,6 +36,7 @@ const LevelFilter = forwardRef(
 	(props: AgGridFilterProps, ref): ReactElement => {
 		const [selectedLevels, setSelectedLevels] =
 			useState<number[]>(filterDisabledArray);
+		const rollbar = useRollbar();
 
 		useEffect(() => {
 			props.filterChangedCallback();
@@ -81,9 +84,18 @@ const LevelFilter = forwardRef(
 
 		const selectNoLevels = useCallback(() => setSelectedLevels([]), []);
 
-		const handleCheck = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
-				const level = parseInt(e.target.getAttribute("data-level"));
+		const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
+				const numberAsString = e.target.getAttribute("data-level");
+
+				if (!numberAsString) {
+					rollbar.warning("level was null", e);
+					return;
+				}
+
+				const level = parseInt(numberAsString);
 				numberBasedFilterHandleCheck(
 					selectedLevels,
 					setSelectedLevels,

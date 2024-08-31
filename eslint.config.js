@@ -30,6 +30,7 @@ export default [
 			"cypress/videos",
 			"cypress/screenshots",
 			"*.*js*",
+			"cypress.config.ts"
 		],
 	},
 	eslint.configs.recommended,

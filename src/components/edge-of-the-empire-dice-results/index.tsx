@@ -55,13 +55,13 @@ export const EdgeOfTheEmpireDiceResults = ({
 			setHasChallengeResults(false);
 			setHasForceResults(false);
 		} else {
-			setHasBoostResults(results?.boost?.length > 0 ?? false);
-			setHasSetbackResults(results?.setback?.length > 0 ?? false);
-			setHasAbilityResults(results?.ability?.length > 0 ?? false);
-			setHasDifficultyResults(results?.difficulty?.length > 0 ?? false);
-			setHasProficiencyResults(results?.proficiency?.length > 0 ?? false);
-			setHasChallengeResults(results?.challenge?.length > 0 ?? false);
-			setHasForceResults(results?.force?.length > 0 ?? false);
+			setHasBoostResults(results?.boost?.length > 0);
+			setHasSetbackResults(results?.setback?.length > 0);
+			setHasAbilityResults(results?.ability?.length > 0);
+			setHasDifficultyResults(results?.difficulty?.length > 0);
+			setHasProficiencyResults(results?.proficiency?.length > 0);
+			setHasChallengeResults(results?.challenge?.length > 0);
+			setHasForceResults(results?.force?.length > 0);
 		}
 	}, [results]);
 

@@ -4,7 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
 	ReactElement,
 	useCallback,
@@ -15,6 +17,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
@@ -24,13 +27,12 @@ import {
 	NumberBasedFilterProps,
 	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
-import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 
-import "./duration-filter.scss";
 import {
 	Duration,
 	mapNumberToDurationDisplayName,
 } from "../../../enums/durations";
+import "./duration-filter.scss";
 
 const filterDisabledArray = createDisabledFilterArray(15);
 
@@ -38,6 +40,7 @@ const DurationFilter = forwardRef(
 	(props: AgGridFilterProps, ref): ReactElement => {
 		const [selectedDurations, setSelectedDurations] =
 			useState<number[]>(filterDisabledArray);
+		const rollbar = useRollbar();
 
 		useEffect(() => {
 			props.filterChangedCallback();
@@ -78,9 +81,17 @@ const DurationFilter = forwardRef(
 			};
 		});
 
-		const handleCheck = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
+		const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
 				const duration = e.target.getAttribute("data-duration");
+
+				if (!duration) {
+					rollbar.warning("duration is null", e);
+					return;
+				}
+
 				numberBasedFilterHandleCheck(
 					selectedDurations,
 					setSelectedDurations,

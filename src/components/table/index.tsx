@@ -4,15 +4,7 @@
  * @format
  */
 
-import React, {
-	useEffect,
-	useMemo,
-	useState,
-	useRef,
-	useContext,
-	useCallback,
-} from "react";
-import { AgGridReact } from "@ag-grid-community/react";
+import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
 import {
 	CellClickedEvent,
 	ColDef,
@@ -20,11 +12,20 @@ import {
 	GetRowIdParams,
 	ModuleRegistry,
 } from "@ag-grid-community/core";
-import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
+import { AgGridReact } from "@ag-grid-community/react";
+import { useRollbar } from "@rollbar/react";
+import {
+	useCallback,
+	useContext,
+	useEffect,
+	useMemo,
+	useRef,
+	useState,
+} from "react";
 import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
-import Modal from "react-bootstrap/Modal";
 
 import { buildRow, TableRow } from "../../types/table-row";
 
@@ -34,19 +35,20 @@ import {
 	setColumnDefinitionOrder,
 } from "../../utility/table-defaults";
 
-import Spell from "../../types/spell";
+import spellJson from "../../assets/5e-spells.json";
 import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
-import { ThemeContext } from "../theme-context-provider";
+import Spell from "../../types/spell";
 import { ColumnContext } from "../column-context-provider";
 import { SelectedRowContext } from "../selected-row-context-provider";
-import spellJson from "../../assets/5e-spells.json";
+import { ThemeContext } from "../theme-context-provider";
 
-import { AppSettingsContext } from "../app-settings-provider";
 import { getCookie, setCookie } from "../../utility/cookies";
+import { AppSettingsContext } from "../app-settings-provider";
 
 import "../../styles/ag-grid.scss";
 import "./table.scss";
+import { LogArgument } from "rollbar";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
@@ -67,6 +69,7 @@ const Table = (): JSX.Element => {
 	const [showCookieToast, setShowCookieToast] =
 		useState<boolean>(!useCookies);
 	const gridRef = useRef<AgGridReact>(null);
+	const rollbar = useRollbar();
 
 	const showModalWithMessage = (message: string): void => {
 		setModalText(message);
@@ -94,8 +97,8 @@ const Table = (): JSX.Element => {
 			const rows = gridRef.current?.api.getSelectedRows() as TableRow[];
 
 			setSelectedRows(rows);
-		} catch (e) {
-			console.error("error updating selected rows", e);
+		} catch (e: unknown) {
+			rollbar.warning("error updating selected rows", e as LogArgument);
 		}
 	}, [selectedRows]);
 
@@ -168,8 +171,8 @@ const Table = (): JSX.Element => {
 		}
 	}, []);
 
-	const getRowId = useMemo(() => {
-		return (params: GetRowIdParams): string => params.data.name;
+	const getRowId = useMemo((): ((params: GetRowIdParams) => string) => {
+		return (params: GetRowIdParams<Spell>): string => params.data.name;
 	}, []);
 
 	const acceptCookies = useCallback((): void => {

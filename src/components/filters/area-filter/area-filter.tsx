@@ -4,7 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
 	ReactElement,
 	useCallback,
@@ -18,8 +20,8 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 
 import {
-	mapNumberToDistanceDisplayName,
 	Distance,
+	mapNumberToDistanceDisplayName,
 } from "../../../enums/distances";
 import { mapNumberToShapeDisplayName, Shape } from "../../../enums/shapes";
 import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
@@ -54,22 +56,32 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 		shapeFilterDisabledArray,
 	);
 	const [showOverlay, setShowOverlay] = useState<boolean>(false);
+	const rollbar = useRollbar();
 
 	useEffect(() => {
 		props.filterChangedCallback();
 	}, [selectedDistances, selectedShapes]);
 
-	const handleDistanceCheck = useCallback(
-		(e: React.BaseSyntheticEvent): void => {
-			const distance = e.target.getAttribute("data-distance");
-			numberBasedFilterHandleCheck(
-				selectedDistances,
-				setSelectedDistances,
-				distance,
-			);
-		},
-		[selectedDistances],
-	);
+	const handleDistanceCheck: ChangeEventHandler<HTMLInputElement> =
+		useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
+				const distance = e.target.getAttribute("data-distance");
+
+				if (!distance) {
+					rollbar.warning("distance was null", e);
+					return;
+				}
+
+				numberBasedFilterHandleCheck(
+					selectedDistances,
+					setSelectedDistances,
+					distance,
+				);
+			},
+			[selectedDistances],
+		);
 
 	const selectAllDistances = useCallback(
 		() => setSelectedDistances(distanceFilterDisabledArray),
@@ -78,9 +90,17 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 
 	const selectNoDistances = useCallback(() => setSelectedDistances([]), []);
 
-	const handleShapeCheck = useCallback(
-		(e: React.BaseSyntheticEvent): void => {
+	const handleShapeCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+		(
+			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+		): void => {
 			const shape = e.target.getAttribute("data-shape");
+
+			if (!shape) {
+				rollbar.warning("shape was null", e);
+				return;
+			}
+
 			numberBasedFilterHandleCheck(
 				selectedShapes,
 				setSelectedShapes,

@@ -128,77 +128,77 @@ export const mapNumberToEffect = (x: number): Effect | null => {
 // skipcq: JS-0044
 export const mapEffectToDisplayName = (x: Effect): string => {
 	switch (x) {
-		case 0:
+		case Effect.None:
 			return "None";
-		case 1:
+		case Effect.Additional:
 			return "Additional";
-		case 2:
+		case Effect.Banishment:
 			return "Banishment";
-		case 3:
+		case Effect.Blinded:
 			return "Blinded";
-		case 4:
+		case Effect.Buff:
 			return "Buff";
-		case 5:
+		case Effect.Charmed:
 			return "Charmed";
-		case 6:
+		case Effect.Combat:
 			return "Combat";
-		case 7:
+		case Effect.Communication:
 			return "Communication";
-		case 8:
+		case Effect.Control:
 			return "Control";
-		case 9:
+		case Effect.Creation:
 			return "Creation";
-		case 10:
+		case Effect.Deafened:
 			return "Deafened";
-		case 11:
+		case Effect.Debuff:
 			return "Debuff";
-		case 12:
+		case Effect.Deception:
 			return "Deception";
-		case 13:
+		case Effect.Detection:
 			return "Detection";
-		case 14:
+		case Effect.Dunamancy:
 			return "Dunamancy";
-		case 15:
+		case Effect.Environment:
 			return "Environment";
-		case 16:
+		case Effect.Foreknowledge:
 			return "Foreknowledge";
-		case 17:
+		case Effect.Frightened:
 			return "Frightened";
-		case 18:
+		case Effect.Healing:
 			return "Healing";
-		case 19:
+		case Effect.Invisible:
 			return "Invisible";
-		case 20:
+		case Effect.Movement:
 			return "Movement";
-		case 21:
+		case Effect.Negation:
 			return "Negation";
-		case 22:
+		case Effect.Paralyzed:
 			return "Paralyzed";
-		case 23:
+		case Effect.Petrified:
 			return "Petrified";
-		case 24:
+		case Effect.Prone:
 			return "Prone";
-		case 25:
+		case Effect.Restrained:
 			return "Restrained";
-		case 26:
+		case Effect.Shapechanging:
 			return "Shapechanging";
-		case 27:
+		case Effect.Social:
 			return "Social";
-		case 28:
+		case Effect.Stunned:
 			return "Stunned";
-		case 29:
+		case Effect.Teleportation:
 			return "Teleportation";
-		case 30:
+		case Effect.Unconscious:
 			return "Unconscious";
-		case 31:
+		case Effect.Utility:
 			return "Utility";
-		case 32:
+		case Effect.Warding:
 			return "Warding";
-		case 33:
+		case Effect.Exploration:
 			return "Exploration";
-		case 34:
+		case Effect.Summoning:
 			return "Summoning";
-		case 35:
+		case Effect.Distracted:
 			return "Distracted";
 		default:
 			return "";

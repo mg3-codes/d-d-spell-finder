@@ -4,7 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
 	ReactElement,
 	useCallback,
@@ -12,7 +14,6 @@ import React, {
 	useImperativeHandle,
 	useState,
 } from "react";
-
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -20,6 +21,7 @@ import {
 	CastingTime,
 	mapNumberToCastingTimeDisplayName,
 } from "../../../enums/casting-times";
+import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
@@ -29,7 +31,6 @@ import {
 	NumberBasedFilterProps,
 	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
-import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 
 import "./casting-time-filter.scss";
 
@@ -39,6 +40,7 @@ const CastingTimeFilter = forwardRef(
 	(props: AgGridFilterProps, ref): ReactElement => {
 		const [selectedCastingTimes, setSelectedCastingTimes] =
 			useState<number[]>(filterDisabledArray);
+		const rollbar = useRollbar();
 
 		useEffect(() => {
 			props.filterChangedCallback();
@@ -84,9 +86,17 @@ const CastingTimeFilter = forwardRef(
 			[],
 		);
 
-		const handleCheck = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
+		const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
 				const castingTime = e.target.getAttribute("data-casting-time");
+
+				if (!castingTime) {
+					rollbar.warning("casting time was null", e);
+					return;
+				}
+
 				numberBasedFilterHandleCheck(
 					selectedCastingTimes,
 					setSelectedCastingTimes,

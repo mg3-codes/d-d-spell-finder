@@ -4,7 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
 	ReactElement,
 	useCallback,
@@ -39,6 +41,7 @@ const SavingThrowFilter = forwardRef(
 		const [selectedSavingThrows, setSelectedSavingThrows] = useState<
 			number[]
 		>(savingThrowFilterDisabledArray);
+		const rollbar = useRollbar();
 
 		useEffect(() => {
 			props.filterChangedCallback();
@@ -91,9 +94,17 @@ const SavingThrowFilter = forwardRef(
 			[],
 		);
 
-		const handleCheck = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
+		const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
 				const savingThrow = e.target.getAttribute("data-throw");
+
+				if (!savingThrow) {
+					rollbar.warning("saving throw was null", e);
+					return;
+				}
+
 				numberBasedFilterHandleCheck(
 					selectedSavingThrows,
 					setSelectedSavingThrows,

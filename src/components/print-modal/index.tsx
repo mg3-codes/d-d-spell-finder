@@ -4,14 +4,20 @@
  * @format
  */
 
-import React, { useCallback, useContext, useState } from "react";
-import { Link } from "react-router-dom";
+import { useRollbar } from "@rollbar/react";
+import React, {
+	MouseEventHandler,
+	useCallback,
+	useContext,
+	useState,
+} from "react";
 import Alert from "react-bootstrap/Alert";
 import Badge from "react-bootstrap/Badge";
-import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
+import Carousel from "react-bootstrap/Carousel";
 import Dropdown from "react-bootstrap/Dropdown";
 import Modal from "react-bootstrap/Modal";
+import { Link } from "react-router-dom";
 
 import { PrintCard } from "../print-card";
 import { ThemeContext } from "../theme-context-provider";
@@ -31,13 +37,22 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 	const [selectedNumberPerRow, setSelectedNumberPerRow] = useState<number>(3);
 	const [printError, setPrintError] = useState<boolean>(false);
 	const { currentTheme } = useContext(ThemeContext);
+	const rollbar = useRollbar();
 
 	const clearPrintError = useCallback(() => setPrintError(false), []);
 
-	const handleNumberPerRowClick = useCallback(
-		(e: React.BaseSyntheticEvent): void => {
-			const selection = e.target.getAttribute("data-cards");
-			setSelectedNumberPerRow(selection);
+	const handleNumberPerRowClick: MouseEventHandler<HTMLElement> = useCallback(
+		(e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
+			const selection = (e.target as HTMLElement).getAttribute(
+				"data-cards",
+			);
+
+			if (!selection) {
+				rollbar.warning("selection was null", e);
+				return;
+			}
+
+			setSelectedNumberPerRow(parseInt(selection));
 		},
 		[],
 	);

@@ -30,8 +30,10 @@ const rollbarConfig = {
 	enabled: import.meta.env.MODE === "production",
 	captureUncaught: true,
 	captureUnhandledRejections: true,
+	/* eslint-disable camelcase */
 	code_version: "0.5.3",
 	source_map_enabled: true,
+	/* eslint-enable camelcase */
 };
 
 const router = createBrowserRouter([

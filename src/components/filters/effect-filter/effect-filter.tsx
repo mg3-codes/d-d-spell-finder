@@ -4,7 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import React, {
+	ChangeEventHandler,
 	forwardRef,
 	ReactElement,
 	useCallback,
@@ -15,7 +17,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapEffectToDisplayName, Effect } from "../../../enums/effects";
+import { Effect, mapEffectToDisplayName } from "../../../enums/effects";
 import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
@@ -36,6 +38,7 @@ const EffectFilter = forwardRef(
 		const [selectedEffectTypes, setSelectedEffectTypes] = useState<
 			number[]
 		>(effectFilterDisabledArray);
+		const rollbar = useRollbar();
 
 		useEffect(() => {
 			props.filterChangedCallback();
@@ -97,9 +100,17 @@ const EffectFilter = forwardRef(
 			[],
 		);
 
-		const handleCheck = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
+		const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+			(
+				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+			): void => {
 				const effect = e.target.getAttribute("data-effect");
+
+				if (!effect) {
+					rollbar.warning("effect was null", e);
+					return;
+				}
+
 				numberBasedFilterHandleCheck(
 					selectedEffectTypes,
 					setSelectedEffectTypes,
