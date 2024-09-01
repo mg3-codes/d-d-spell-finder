@@ -105,7 +105,7 @@ const Table = (): JSX.Element => {
 	const onColumnMoved = useCallback(
 		(event: ColumnMovedEvent<unknown>): void => {
 			if (event.finished) {
-				const orderedColIds = gridRef.current?.columnApi
+				const orderedColIds = gridRef.current?.api
 					.getColumns()
 					?.filter((x) => x.isVisible())
 					?.sort((a, b) => {
