@@ -4,182 +4,152 @@
  * @format
  */
 
+import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
 import React, {
 	ChangeEventHandler,
-	forwardRef,
 	ReactElement,
 	useCallback,
 	useEffect,
-	useImperativeHandle,
 	useState,
 } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import { mapNumberToSchoolDisplayName, School } from "../../../enums/schools";
-import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
-	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
 
 import "./school-filter.scss";
 
 const filterDisabledArray = createDisabledFilterArray(8);
 
-const SchoolFilter = forwardRef(
-	(props: AgGridFilterProps, ref): ReactElement => {
-		const [selectedSchools, setSelectedSchools] =
-			useState<number[]>(filterDisabledArray);
-		const rollbar = useRollbar();
+const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
+	const [selectedSchools, setSelectedSchools] =
+		useState<number[]>(filterDisabledArray);
+	const rollbar = useRollbar();
 
-		useEffect(() => {
-			props.filterChangedCallback();
-		}, [selectedSchools]);
+	useEffect(() => {
+		if (selectedSchools.length === filterDisabledArray.length)
+			onModelChange(null);
+		else onModelChange(selectedSchools);
+	}, [selectedSchools]);
 
-		useImperativeHandle(ref, () => {
-			const doesFilterPass = (props: NumberBasedFilterProps) => {
-				return numberBasedFilterDoesFilterPass(
-					props?.data?.school,
-					selectedSchools,
-				);
-			};
-
-			const isFilterActive = () => {
-				return numberBasedFilterIsFilterActive(
-					selectedSchools.length,
-					filterDisabledArray.length,
-				);
-			};
-
-			const getModel = () => {
-				if (!isFilterActive()) {
-					return null;
-				}
-
-				return { value: selectedSchools };
-			};
-
-			const setModel = (model: NumberBasedFilterSetModel) => {
-				setSelectedSchools(model?.value ?? []);
-			};
-
-			return {
-				doesFilterPass,
-				isFilterActive,
-				getModel,
-				setModel,
-			};
-		});
-
-		const selectAllSchools = useCallback(
-			() => setSelectedSchools(filterDisabledArray),
-			[],
+	const doesFilterPass = (props: NumberBasedFilterProps) => {
+		return numberBasedFilterDoesFilterPass(
+			props?.data?.school,
+			selectedSchools,
 		);
+	};
 
-		const selectNoSchools = useCallback(() => setSelectedSchools([]), []);
+	useGridFilter({ doesFilterPass });
 
-		const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-			(
-				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-			): void => {
-				const school = e.target.getAttribute("data-school");
+	const selectAllSchools = useCallback(
+		() => setSelectedSchools(filterDisabledArray),
+		[],
+	);
 
-				if (!school) {
-					rollbar.warning("school was null", e);
-					return;
-				}
+	const selectNoSchools = useCallback(() => setSelectedSchools([]), []);
 
-				numberBasedFilterHandleCheck(
-					selectedSchools,
-					setSelectedSchools,
-					school,
-				);
-			},
-			[selectedSchools],
-		);
+	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+		(
+			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+		): void => {
+			const school = e.target.getAttribute("data-school");
 
-		const isChecked = (x: number): boolean | undefined =>
-			numberBasedFilterIsChecked(selectedSchools, x);
+			if (!school) {
+				rollbar.warning("school was null", e);
+				return;
+			}
 
-		return (
-			<div className="school-filter">
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToSchoolDisplayName(School.Abjuration)}
-					checked={isChecked(School.Abjuration)}
-					data-school={School.Abjuration}
-				/>
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToSchoolDisplayName(School.Conjuration)}
-					checked={isChecked(School.Conjuration)}
-					data-school={School.Conjuration}
-				/>
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToSchoolDisplayName(School.Divination)}
-					checked={isChecked(School.Divination)}
-					data-school={School.Divination}
-				/>
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToSchoolDisplayName(School.Enchantment)}
-					checked={isChecked(School.Enchantment)}
-					data-school={School.Enchantment}
-				/>
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToSchoolDisplayName(School.Evocation)}
-					checked={isChecked(School.Evocation)}
-					data-school={School.Evocation}
-				/>
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToSchoolDisplayName(School.Illusion)}
-					checked={isChecked(School.Illusion)}
-					data-school={School.Illusion}
-				/>
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToSchoolDisplayName(School.Necromancy)}
-					checked={isChecked(School.Necromancy)}
-					data-school={School.Necromancy}
-				/>
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToSchoolDisplayName(School.Transmutation)}
-					checked={isChecked(School.Transmutation)}
-					data-school={School.Transmutation}
-				/>
-				<Button
-					className="all-button"
-					variant="outline-primary"
-					onClick={selectAllSchools}
-				>
-					All
-				</Button>
-				<Button variant="outline-primary" onClick={selectNoSchools}>
-					None
-				</Button>
-			</div>
-		);
-	},
-);
+			numberBasedFilterHandleCheck(
+				selectedSchools,
+				setSelectedSchools,
+				school,
+			);
+		},
+		[selectedSchools],
+	);
+
+	const isChecked = (x: number): boolean | undefined =>
+		numberBasedFilterIsChecked(selectedSchools, x);
+
+	return (
+		<div className="school-filter">
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToSchoolDisplayName(School.Abjuration)}
+				checked={isChecked(School.Abjuration)}
+				data-school={School.Abjuration}
+			/>
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToSchoolDisplayName(School.Conjuration)}
+				checked={isChecked(School.Conjuration)}
+				data-school={School.Conjuration}
+			/>
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToSchoolDisplayName(School.Divination)}
+				checked={isChecked(School.Divination)}
+				data-school={School.Divination}
+			/>
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToSchoolDisplayName(School.Enchantment)}
+				checked={isChecked(School.Enchantment)}
+				data-school={School.Enchantment}
+			/>
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToSchoolDisplayName(School.Evocation)}
+				checked={isChecked(School.Evocation)}
+				data-school={School.Evocation}
+			/>
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToSchoolDisplayName(School.Illusion)}
+				checked={isChecked(School.Illusion)}
+				data-school={School.Illusion}
+			/>
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToSchoolDisplayName(School.Necromancy)}
+				checked={isChecked(School.Necromancy)}
+				data-school={School.Necromancy}
+			/>
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToSchoolDisplayName(School.Transmutation)}
+				checked={isChecked(School.Transmutation)}
+				data-school={School.Transmutation}
+			/>
+			<Button
+				className="all-button"
+				variant="outline-primary"
+				onClick={selectAllSchools}
+			>
+				All
+			</Button>
+			<Button variant="outline-primary" onClick={selectNoSchools}>
+				None
+			</Button>
+		</div>
+	);
+};
 
 SchoolFilter.displayName = "SchoolFilter";
 

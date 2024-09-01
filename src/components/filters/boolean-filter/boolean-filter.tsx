@@ -4,15 +4,14 @@
  * @format
  */
 
-import { IFilterParams, RowNode } from "@ag-grid-community/core";
+import { RowNode } from "@ag-grid-community/core";
+import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
 import React, {
 	ChangeEventHandler,
-	forwardRef,
 	ReactElement,
 	useCallback,
 	useEffect,
-	useImperativeHandle,
 	useState,
 } from "react";
 import Form from "react-bootstrap/Form";
@@ -20,10 +19,6 @@ import Form from "react-bootstrap/Form";
 import { TableRow } from "../../../types/table-row";
 
 import "./boolean-filter.scss";
-
-interface IBooleanFilterProps extends IFilterParams {
-	spellPropertyName: string;
-}
 
 type BooleanBasedFilterProps = {
 	data: TableRow;
@@ -36,110 +31,82 @@ enum BooleanBasedFilterState {
 	False,
 }
 
-type BooleanBasedFilterSetModel = {
-	value?: BooleanBasedFilterState;
-};
+const BooleanFilter = ({
+	onModelChange,
+	getValue,
+}: CustomFilterProps): ReactElement => {
+	const [selectedState, setSelectedState] = useState<BooleanBasedFilterState>(
+		BooleanBasedFilterState.All,
+	);
+	const rollbar = useRollbar();
 
-const BooleanFilter = forwardRef(
-	(filterProps: IBooleanFilterProps, ref): ReactElement => {
-		const [selectedState, setSelectedState] =
-			useState<BooleanBasedFilterState>(BooleanBasedFilterState.All);
-		const rollbar = useRollbar();
+	useEffect(() => {
+		if (selectedState === BooleanBasedFilterState.All) onModelChange(null);
+		else onModelChange(selectedState);
+	}, [selectedState]);
 
-		useEffect(() => {
-			filterProps.filterChangedCallback();
-		}, [selectedState]);
+	const mapStateToBoolean = (state: BooleanBasedFilterState): boolean => {
+		switch (state) {
+			case BooleanBasedFilterState.All:
+			case BooleanBasedFilterState.True:
+				return true;
+			case BooleanBasedFilterState.False:
+				return false;
+			default:
+				return false;
+		}
+	};
 
-		const mapStateToBoolean = (state: BooleanBasedFilterState): boolean => {
-			switch (state) {
-				case BooleanBasedFilterState.All:
-				case BooleanBasedFilterState.True:
-					return true;
-				case BooleanBasedFilterState.False:
-					return false;
-				default:
-					return false;
+	const doesFilterPass = (props: BooleanBasedFilterProps) =>
+		mapStateToBoolean(selectedState) === getValue(props.node);
+
+	useGridFilter({ doesFilterPass });
+
+	const handleClick: ChangeEventHandler<HTMLInputElement> = useCallback(
+		(
+			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+		): void => {
+			const state = e.target.getAttribute("data-boolean");
+
+			if (!state) {
+				rollbar.warning("stat was null", e);
+				return;
 			}
-		};
 
-		useImperativeHandle(ref, () => {
-			const doesFilterPass = (props: BooleanBasedFilterProps) => {
-				return (
-					mapStateToBoolean(selectedState) ===
-					props?.data[filterProps?.spellPropertyName]
-				);
-			};
+			setSelectedState(parseInt(state) as BooleanBasedFilterState);
+		},
+		[selectedState],
+	);
 
-			const isFilterActive = () => {
-				return selectedState !== BooleanBasedFilterState.All;
-			};
+	const isSelected = (x: BooleanBasedFilterState): boolean =>
+		selectedState === x;
 
-			const getModel = () => {
-				if (!isFilterActive()) {
-					return null;
-				}
-
-				return { value: selectedState };
-			};
-
-			const setModel = (model: BooleanBasedFilterSetModel) => {
-				setSelectedState(model?.value ?? BooleanBasedFilterState.All);
-			};
-
-			return {
-				doesFilterPass,
-				isFilterActive,
-				getModel,
-				setModel,
-			};
-		});
-
-		const handleClick: ChangeEventHandler<HTMLInputElement> = useCallback(
-			(
-				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-			): void => {
-				const state = e.target.getAttribute("data-boolean");
-
-				if (!state) {
-					rollbar.warning("stat was null", e);
-					return;
-				}
-
-				setSelectedState(parseInt(state) as BooleanBasedFilterState);
-			},
-			[selectedState],
-		);
-
-		const isSelected = (x: BooleanBasedFilterState): boolean =>
-			selectedState === x;
-
-		return (
-			<Form className="boolean-filter">
-				<Form.Check
-					type={"radio"}
-					onChange={handleClick}
-					label={"All"}
-					checked={isSelected(BooleanBasedFilterState.All)}
-					data-boolean={BooleanBasedFilterState.All}
-				/>
-				<Form.Check
-					type={"radio"}
-					onChange={handleClick}
-					label={"True"}
-					checked={isSelected(BooleanBasedFilterState.True)}
-					data-boolean={BooleanBasedFilterState.True}
-				/>
-				<Form.Check
-					type={"radio"}
-					onChange={handleClick}
-					label={"False"}
-					checked={isSelected(BooleanBasedFilterState.False)}
-					data-boolean={BooleanBasedFilterState.False}
-				/>
-			</Form>
-		);
-	},
-);
+	return (
+		<Form className="boolean-filter">
+			<Form.Check
+				type={"radio"}
+				onChange={handleClick}
+				label={"All"}
+				checked={isSelected(BooleanBasedFilterState.All)}
+				data-boolean={BooleanBasedFilterState.All}
+			/>
+			<Form.Check
+				type={"radio"}
+				onChange={handleClick}
+				label={"True"}
+				checked={isSelected(BooleanBasedFilterState.True)}
+				data-boolean={BooleanBasedFilterState.True}
+			/>
+			<Form.Check
+				type={"radio"}
+				onChange={handleClick}
+				label={"False"}
+				checked={isSelected(BooleanBasedFilterState.False)}
+				data-boolean={BooleanBasedFilterState.False}
+			/>
+		</Form>
+	);
+};
 
 BooleanFilter.displayName = "BooleanFilter";
 

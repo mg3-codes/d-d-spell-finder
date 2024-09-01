@@ -4,14 +4,13 @@
  * @format
  */
 
+import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
 import React, {
 	ChangeEventHandler,
-	forwardRef,
 	ReactElement,
 	useCallback,
 	useEffect,
-	useImperativeHandle,
 	useState,
 } from "react";
 import Button from "react-bootstrap/Button";
@@ -24,31 +23,22 @@ import {
 	mapNumberToDistanceDisplayName,
 } from "../../../enums/distances";
 import { mapNumberToShapeDisplayName, Shape } from "../../../enums/shapes";
-import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./area-filter.scss";
-
-type AreaFilterSetModel = {
-	value?: {
-		selectedDistances: number[];
-		selectedShapes: number[];
-	};
-};
 
 const distanceFilterDisabledArray = [
 	-1, 1, 5, 10, 15, 20, 30, 40, 50, 60, 100, 200, 2500, 5280, 26400, 40000,
 ];
 const shapeFilterDisabledArray = createDisabledFilterArray(6);
 
-const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
+const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const [selectedDistances, setSelectedDistances] = useState<number[]>(
 		distanceFilterDisabledArray,
 	);
@@ -59,7 +49,12 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 	const rollbar = useRollbar();
 
 	useEffect(() => {
-		props.filterChangedCallback();
+		if (
+			selectedDistances.length === distanceFilterDisabledArray.length &&
+			selectedShapes.length === shapeFilterDisabledArray.length
+		)
+			onModelChange(null);
+		else onModelChange({ selectedDistances, selectedShapes });
 	}, [selectedDistances, selectedShapes]);
 
 	const handleDistanceCheck: ChangeEventHandler<HTMLInputElement> =
@@ -142,60 +137,27 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 		} else setShowOverlay(false);
 	}, []);
 
-	useImperativeHandle(ref, () => {
-		const doesFilterPass = (props: NumberBasedFilterProps) => {
-			if (
-				props?.data?.area?.distance === Distance.Unknown &&
-				isDistanceChecked(Distance.Unknown) &&
-				selectedShapes.length === shapeFilterDisabledArray.length
-			)
-				return true;
+	const doesFilterPass = (props: NumberBasedFilterProps) => {
+		if (
+			props?.data?.area?.distance === Distance.Unknown &&
+			isDistanceChecked(Distance.Unknown) &&
+			selectedShapes.length === shapeFilterDisabledArray.length
+		)
+			return true;
 
-			const distanceResult = numberBasedFilterDoesFilterPass(
-				props?.data?.area?.distance,
-				selectedDistances,
-			);
-			const shapeResult = numberBasedFilterDoesFilterPass(
-				props?.data?.area?.shape,
-				selectedShapes,
-			);
+		const distanceResult = numberBasedFilterDoesFilterPass(
+			props?.data?.area?.distance,
+			selectedDistances,
+		);
+		const shapeResult = numberBasedFilterDoesFilterPass(
+			props?.data?.area?.shape,
+			selectedShapes,
+		);
 
-			return distanceResult && shapeResult;
-		};
+		return distanceResult && shapeResult;
+	};
 
-		const isFilterActive = () => {
-			return (
-				numberBasedFilterIsFilterActive(
-					selectedDistances.length,
-					distanceFilterDisabledArray.length,
-				) ||
-				numberBasedFilterIsFilterActive(
-					selectedShapes.length,
-					shapeFilterDisabledArray.length,
-				)
-			);
-		};
-
-		const getModel = () => {
-			if (!isFilterActive()) {
-				return null;
-			}
-
-			return { value: { selectedDistances, selectedShapes } };
-		};
-
-		const setModel = (model: AreaFilterSetModel) => {
-			setSelectedDistances(model?.value?.selectedDistances ?? []);
-			setSelectedShapes(model?.value?.selectedShapes ?? []);
-		};
-
-		return {
-			doesFilterPass,
-			isFilterActive,
-			getModel,
-			setModel,
-		};
-	});
+	useGridFilter({ doesFilterPass });
 
 	return (
 		<div className="area-filter">
@@ -405,7 +367,7 @@ const AreaFilter = forwardRef((props: AgGridFilterProps, ref): ReactElement => {
 			</div>
 		</div>
 	);
-});
+};
 
 AreaFilter.displayName = "AreaFilter";
 
