@@ -30,7 +30,7 @@ export default [
 			"cypress/videos",
 			"cypress/screenshots",
 			"*.*js*",
-			"cypress.config.ts"
+			"cypress.config.ts",
 		],
 	},
 	eslint.configs.recommended,
@@ -51,7 +51,7 @@ export default [
 				tsconfigRootDir: __dirname,
 				ecmaFeatures: {
 					jsx: true,
-				}
+				},
 			},
 		},
 		linterOptions: {
