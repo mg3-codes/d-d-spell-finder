@@ -101,7 +101,11 @@ export const getDefaultColumnDefinitions = (
 		checkboxSelection: true,
 		lockVisible: true,
 		lockPosition: true,
-		flex: 1,
+		suppressMovable: true,
+		pinned: "left",
+		resizable: false,
+		initialWidth: 50,
+		filter: false,
 	},
 	{
 		field: "name",
