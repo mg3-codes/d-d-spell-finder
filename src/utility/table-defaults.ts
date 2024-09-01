@@ -128,7 +128,7 @@ export const getDefaultColumnDefinitions = (
 		headerName: mapColumnToDisplayName(Column.CastingTime),
 		filter: CastingTimeFilter,
 		valueFormatter: castingTimeValueFormatter,
-		initialWidth: 110,
+		initialWidth: 140,
 		hide: defaultColumnIsHidden(Column.CastingTime),
 	},
 	{
@@ -207,7 +207,7 @@ export const getDefaultColumnDefinitions = (
 			spellPropertyName: "concentration",
 		},
 		valueFormatter: booleanValueFormatter,
-		initialWidth: 100,
+		initialWidth: 150,
 		hide: defaultColumnIsHidden(Column.Concentration),
 	},
 	{
@@ -229,7 +229,7 @@ export const getDefaultColumnDefinitions = (
 		},
 		filter: BooleanFilter,
 		valueFormatter: booleanValueFormatter,
-		initialWidth: 100,
+		initialWidth: 110,
 		hide: defaultColumnIsHidden(Column.Somatic),
 	},
 	{
