@@ -2202,7 +2202,7 @@ __metadata:
     eslint-plugin-prettier: ^5.2.1
     eslint-plugin-react: ^7.35.0
     path: ^0.12.7
-    postcss: ^8.4.42
+    postcss: ^8.4.43
     postcss-scss: ^4.0.9
     prettier: ^3.3.3
     prop-types: ^15.8.1
@@ -3059,7 +3059,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flatted@npm:^3.2.9, flatted@npm:^3.3.1":
+"flatted@npm:^3.3.1":
   version: 3.3.1
   resolution: "flatted@npm:3.3.1"
   checksum: 85ae7181650bb728c221e7644cbc9f4bf28bc556f2fc89bb21266962bdf0ce1029cc7acc44bb646cd469d9baac7c317f64e841c4c4c00516afa97320cdac7f94
@@ -5092,14 +5092,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.42":
-  version: 8.4.42
-  resolution: "postcss@npm:8.4.42"
+"postcss@npm:^8.4.43":
+  version: 8.4.43
+  resolution: "postcss@npm:8.4.43"
   dependencies:
     nanoid: ^3.3.7
     picocolors: ^1.0.1
     source-map-js: ^1.2.0
-  checksum: 78a6ea96611b3c7affbd2e1a9a736ba24084f1f5b6f4fc688621e60ca407612472232af008d478b9e5992329f2dfa00eea4425a727fd46fa1eeabe682545d9dd
+  checksum: d88f413e22f03c469547222993b41fa5d05678c6c50d1f8f4fa2e9fcf00c4f00ac54c51c08ea896ff24a9d0d78519e9f1d906708e062064f35c70b16a160ebde
   languageName: node
   linkType: hard
 
