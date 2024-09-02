@@ -17,7 +17,12 @@ describe("filter tests", () => {
 	});
 
 	it("can filter levels", () => {
-		cy.get(".ag-center-cols-container").children().eq(2).children().eq(1).should("have.text", "0");
+		cy.get(".ag-center-cols-container")
+			.children()
+			.eq(2)
+			.children()
+			.eq(1)
+			.should("have.text", "0");
 		cy.get(".ag-header-cell").eq(2).type("{ctrl}{enter}");
 		cy.get(".level-filter")
 			.children()
@@ -53,7 +58,12 @@ describe("filter tests", () => {
 			})
 			.wait(1000);
 		cy.get(".ag-center-cols-container").each((row) => {
-			cy.wrap(row).children().eq(3).children().eq(1).should("not.have.text", "Action");
+			cy.wrap(row)
+				.children()
+				.eq(3)
+				.children()
+				.eq(1)
+				.should("not.have.text", "Action");
 		});
 	});
 
@@ -74,7 +84,9 @@ describe("filter tests", () => {
 		cy.get(".ag-center-cols-container").each((row) => {
 			cy.wrap(row)
 				.children()
-				.eq(4).children().eq(1)
+				.eq(4)
+				.children()
+				.eq(1)
 				.should("not.have.text", "Instantaneous");
 		});
 	});
@@ -94,7 +106,12 @@ describe("filter tests", () => {
 			})
 			.wait(1000);
 		cy.get(".ag-center-cols-container").each((row) => {
-			cy.wrap(row).children().eq(5).children().eq(1).should("not.have.text", "Self");
+			cy.wrap(row)
+				.children()
+				.eq(5)
+				.children()
+				.eq(1)
+				.should("not.have.text", "Self");
 		});
 	});
 
@@ -113,7 +130,12 @@ describe("filter tests", () => {
 			})
 			.wait(1000);
 		cy.get(".ag-center-cols-container").each((row) => {
-			cy.wrap(row).children().eq(6).children().eq(1).should("not.be.empty");
+			cy.wrap(row)
+				.children()
+				.eq(6)
+				.children()
+				.eq(1)
+				.should("not.be.empty");
 		});
 	});
 
@@ -132,7 +154,12 @@ describe("filter tests", () => {
 			})
 			.wait(1000);
 		cy.get(".ag-center-cols-container").each((row) => {
-			cy.wrap(row).children().eq(7).children().eq(1).should("not.be.empty");
+			cy.wrap(row)
+				.children()
+				.eq(7)
+				.children()
+				.eq(1)
+				.should("not.be.empty");
 		});
 	});
 
@@ -175,7 +202,12 @@ describe("filter tests", () => {
 			})
 			.wait(1000);
 		cy.get(".ag-center-cols-container").each((row) => {
-			cy.wrap(row).children().eq(9).children().eq(1).should("not.be.empty");
+			cy.wrap(row)
+				.children()
+				.eq(9)
+				.children()
+				.eq(1)
+				.should("not.be.empty");
 		});
 	});
 });
