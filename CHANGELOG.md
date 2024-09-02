@@ -2,6 +2,15 @@
 
 # Changelog
 
+## 0.5.4
+
+-   Upgrade to AG Grid 32
+-   Package upgrades
+
+### Development updates
+
+-   Update to eslint 9
+
 ## 0.5.3
 
 -   Fix typos
