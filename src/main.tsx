@@ -31,7 +31,7 @@ const rollbarConfig = {
 	captureUncaught: true,
 	captureUnhandledRejections: true,
 	/* eslint-disable camelcase */
-	code_version: "0.5.3",
+	code_version: "0.5.4",
 	source_map_enabled: true,
 	/* eslint-enable camelcase */
 };
