@@ -44,7 +44,9 @@ const ExportPage = () => {
 			switch (number) {
 				case 2:
 					return "two-columns";
+				/* eslint-disable default-case-last */
 				default:
+				/* eslint-enable default-case-last */
 				case 3:
 					return "three-columns";
 				case 4:

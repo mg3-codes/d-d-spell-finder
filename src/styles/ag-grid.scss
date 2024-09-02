@@ -51,5 +51,14 @@ $toast-background-color: var(--bs-body-bg);
 		),
 		range-selection-border-color: transparent,
 		input-focus-box-shadow: bootstrap.$box-shadow,
+		checkbox-unchecked-color: bootstrap.$primary,
 	)
 );
+
+.ag-checkbox-input-wrapper.ag-disabled {
+	opacity: unset;
+}
+
+.ag-checkbox-cell {
+	justify-content: center;
+}

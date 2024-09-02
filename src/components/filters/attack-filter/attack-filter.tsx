@@ -4,139 +4,118 @@
  * @format
  */
 
+import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import { useRollbar } from "@rollbar/react";
 import React, {
-	forwardRef,
+	ChangeEventHandler,
 	ReactElement,
 	useCallback,
 	useEffect,
-	useImperativeHandle,
 	useState,
 } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapNumberToAttackDisplayName, Attack } from "../../../enums/attacks";
-import { AgGridFilterProps } from "../../../types/ag-grid-filter-props";
+import { Attack, mapNumberToAttackDisplayName } from "../../../enums/attacks";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	numberBasedFilterIsFilterActive,
 	NumberBasedFilterProps,
-	NumberBasedFilterSetModel,
 } from "../../../utility/filters/number-based-filter";
 
 import "./attack-filter.scss";
 
 const attackFilterDisabledArray = createDisabledFilterArray(3);
 
-const AttackFilter = forwardRef(
-	(props: AgGridFilterProps, ref): ReactElement => {
-		const [selectedAttacks, setSelectedAttacks] = useState<number[]>(
-			attackFilterDisabledArray,
+const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
+	const [selectedAttacks, setSelectedAttacks] = useState<number[]>(
+		attackFilterDisabledArray,
+	);
+	const rollbar = useRollbar();
+
+	useEffect(() => {
+		if (selectedAttacks.length === attackFilterDisabledArray.length)
+			onModelChange(null);
+		else onModelChange(selectedAttacks);
+	}, [selectedAttacks]);
+
+	const doesFilterPass = (props: NumberBasedFilterProps) => {
+		return numberBasedFilterDoesFilterPass(
+			props?.data?.attack,
+			selectedAttacks,
 		);
+	};
 
-		useEffect(() => {
-			props.filterChangedCallback();
-		}, [selectedAttacks]);
+	useGridFilter({ doesFilterPass });
 
-		useImperativeHandle(ref, () => {
-			const doesFilterPass = (props: NumberBasedFilterProps) => {
-				return numberBasedFilterDoesFilterPass(
-					props?.data?.attack,
-					selectedAttacks,
-				);
-			};
+	const selectAllAttacks = useCallback(
+		() => setSelectedAttacks(attackFilterDisabledArray),
+		[],
+	);
 
-			const isFilterActive = () => {
-				return numberBasedFilterIsFilterActive(
-					selectedAttacks.length,
-					attackFilterDisabledArray.length,
-				);
-			};
+	const selectNoAttacks = useCallback(() => setSelectedAttacks([]), []);
 
-			const getModel = () => {
-				if (!isFilterActive()) {
-					return null;
-				}
+	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+		(
+			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+		): void => {
+			const attack = e.target.getAttribute("data-attack");
 
-				return {
-					value: selectedAttacks,
-				};
-			};
+			if (!attack) {
+				rollbar.warning("distance was null", e);
+				return;
+			}
 
-			const setModel = (model: NumberBasedFilterSetModel) => {
-				setSelectedAttacks(model?.value ?? []);
-			};
+			numberBasedFilterHandleCheck(
+				selectedAttacks,
+				setSelectedAttacks,
+				attack,
+			);
+		},
+		[selectedAttacks],
+	);
 
-			return {
-				doesFilterPass,
-				isFilterActive,
-				getModel,
-				setModel,
-			};
-		});
+	const isChecked = (x: Attack): boolean | undefined =>
+		numberBasedFilterIsChecked(selectedAttacks, x);
 
-		const selectAllAttacks = useCallback(
-			() => setSelectedAttacks(attackFilterDisabledArray),
-			[],
-		);
-
-		const selectNoAttacks = useCallback(() => setSelectedAttacks([]), []);
-
-		const handleCheck = useCallback(
-			(e: React.BaseSyntheticEvent): void => {
-				const attack = e.target.getAttribute("data-attack");
-				numberBasedFilterHandleCheck(
-					selectedAttacks,
-					setSelectedAttacks,
-					attack,
-				);
-			},
-			[selectedAttacks],
-		);
-
-		const isChecked = (x: Attack): boolean | undefined =>
-			numberBasedFilterIsChecked(selectedAttacks, x);
-
-		return (
-			<div className="attack-filter">
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToAttackDisplayName(Attack.None)}
-					checked={isChecked(Attack.None)}
-					data-attack={Attack.None}
-				/>
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToAttackDisplayName(Attack.Melee)}
-					checked={isChecked(Attack.Melee)}
-					data-attack={Attack.Melee}
-				/>
-				<Form.Check
-					type={"checkbox"}
-					onChange={handleCheck}
-					label={mapNumberToAttackDisplayName(Attack.Ranged)}
-					checked={isChecked(Attack.Ranged)}
-					data-attack={Attack.Ranged}
-				/>
-				<Button
-					className="all-button"
-					variant="outline-primary"
-					onClick={selectAllAttacks}
-				>
-					All
-				</Button>
-				<Button variant="outline-primary" onClick={selectNoAttacks}>
-					None
-				</Button>
-			</div>
-		);
-	},
-);
+	return (
+		<div className="attack-filter">
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToAttackDisplayName(Attack.None)}
+				checked={isChecked(Attack.None)}
+				data-attack={Attack.None}
+			/>
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToAttackDisplayName(Attack.Melee)}
+				checked={isChecked(Attack.Melee)}
+				data-attack={Attack.Melee}
+			/>
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToAttackDisplayName(Attack.Ranged)}
+				checked={isChecked(Attack.Ranged)}
+				data-attack={Attack.Ranged}
+			/>
+			<Button
+				className="all-button"
+				variant="outline-primary"
+				onClick={selectAllAttacks}
+			>
+				All
+			</Button>
+			<Button variant="outline-primary" onClick={selectNoAttacks}>
+				None
+			</Button>
+		</div>
+	);
+};
 
 AttackFilter.displayName = "AttackFilter";
 

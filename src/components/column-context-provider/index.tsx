@@ -19,10 +19,12 @@ export type ColumnContext = {
 export const ColumnContext = createContext<ColumnContext>({
 	selectedColumns: defaultSelectedColumns,
 	/* eslint-disable @typescript-eslint/no-empty-function */
+	/* eslint-disable no-empty-function */
 	// skipqc: JS-0321
 	setSelectedColumns: () => {},
 	// skipqc: JS-0321
 	handleColumnChange: () => {},
+	/* eslint-enable no-empty-function */
 	/* eslint-enable @typescript-eslint/no-empty-function */
 });
 

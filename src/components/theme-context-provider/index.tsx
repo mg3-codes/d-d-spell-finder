@@ -20,8 +20,10 @@ export const ThemeContext = createContext<ThemeContext>({
 	currentTheme: Theme.Light,
 	selectedThemeOption: Theme.Auto,
 	/* eslint-disable @typescript-eslint/no-empty-function */
+	/* eslint-disable no-empty-function */
 	// skipqc: JS-0321
 	updateTheme: () => {},
+	/* eslint-enable no-empty-function */
 	/* eslint-enable @typescript-eslint/no-empty-function */
 });
 

@@ -27,41 +27,41 @@ export enum Column {
 
 export const mapColumnToDisplayName = (column: Column): string => {
 	switch (column) {
-		case 0:
+		case Column.Name:
 			return "Name";
-		case 1:
+		case Column.School:
 			return "School";
-		case 2:
+		case Column.Level:
 			return "Level";
-		case 3:
+		case Column.CastingTime:
 			return "Casting Time";
-		case 4:
+		case Column.Duration:
 			return "Duration";
-		case 5:
+		case Column.Range:
 			return "Range";
-		case 6:
+		case Column.Area:
 			return "Area";
-		case 7:
+		case Column.Attack:
 			return "Attack";
-		case 8:
+		case Column.Save:
 			return "Save";
-		case 9:
+		case Column.Damage:
 			return "Damage";
-		case 10:
+		case Column.Effect:
 			return "Effect";
-		case 11:
+		case Column.Ritual:
 			return "Ritual";
-		case 12:
+		case Column.Concentration:
 			return "Concentration";
-		case 13:
+		case Column.Verbal:
 			return "Verbal";
-		case 14:
+		case Column.Somatic:
 			return "Somatic";
-		case 15:
+		case Column.Material:
 			return "Material";
-		case 16:
+		case Column.Source:
 			return "Source";
-		case 17:
+		case Column.Details:
 			return "Details";
 		default:
 			return "";

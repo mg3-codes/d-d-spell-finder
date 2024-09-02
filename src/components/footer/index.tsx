@@ -4,18 +4,21 @@
  * @format
  */
 
-import React, { useCallback, useState } from "react";
+import { useRollbar } from "@rollbar/react";
+import React, { MouseEventHandler, useCallback, useState } from "react";
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
+import { HelpModal } from "../help-modal";
 import { AttributionBody, AttributionHeader } from "./attribution-content";
 import { PrivacyBody, PrivacyHeader } from "./privacy-content";
-import { HelpModal } from "../help-modal";
 
 import "./footer.scss";
 
 const Footer = () => {
+	const rollbar = useRollbar();
+
 	enum Content {
 		Attribution = 0,
 		Privacy = 1,
@@ -25,9 +28,17 @@ const Footer = () => {
 	const [helpModalIsOpen, setHelpModalIsOpen] = useState<boolean>(false);
 	const [selectedContent, setSelectedContent] = useState<Content>(0);
 
-	const handleButtonClick = useCallback(
-		(e: React.BaseSyntheticEvent): void => {
-			setSelectedContent(parseInt(e.target.getAttribute("data-type")));
+	const handleButtonClick: MouseEventHandler<HTMLButtonElement> = useCallback(
+		(e: React.MouseEvent<HTMLButtonElement, MouseEvent>): void => {
+			const numberAsString = (e.target as HTMLButtonElement).getAttribute(
+				"data-type",
+			);
+			if (!numberAsString) {
+				rollbar.warning("value was null", e);
+				return;
+			}
+
+			setSelectedContent(parseInt(numberAsString));
 			setModalIsOpen(true);
 		},
 		[],
