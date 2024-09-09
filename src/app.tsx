@@ -4,24 +4,15 @@
  * @format
  */
 
+import { ErrorBoundary, Provider as RollbarProvider } from "@rollbar/react";
 import React, { Suspense } from "react";
-import {
-	createBrowserRouter,
-	Navigate,
-	RouterProvider,
-} from "react-router-dom";
-import {
-	createStaticHandler,
-	createStaticRouter,
-	StaticRouterProvider,
-} from "react-router-dom/server";
-import { Provider as RollbarProvider, ErrorBoundary } from "@rollbar/react";
+import { Navigate, Route, Routes } from "react-router-dom";
 
+import { AppSettingsContextProvider } from "./components/app-settings-provider";
 import { ColumnContextProvider } from "./components/column-context-provider";
 import LoadingSpinner from "./components/loading-spinner";
-import { ThemeContextProvider } from "./components/theme-context-provider";
 import { SelectedRowContextProvider } from "./components/selected-row-context-provider";
-import { AppSettingsContextProvider } from "./components/app-settings-provider";
+import { ThemeContextProvider } from "./components/theme-context-provider";
 
 const Index = React.lazy(() => import("./components/routes"));
 const DiceRoller = React.lazy(() => import("./components/routes/dice-roller"));
@@ -42,55 +33,7 @@ const rollbarConfig = {
 	/* eslint-enable camelcase */
 };
 
-const routes = [
-	{
-		path: "/",
-		element: <Index />,
-	},
-	{
-		path: "/dice-roller",
-		element: <DiceRoller />,
-	},
-	{
-		path: "/search",
-		element: <Search />,
-	},
-	{
-		path: "/spell/5e/:spellLink",
-		element: <Spell />,
-	},
-	{
-		path: "/dice",
-		element: <Navigate to="/dice-roller" replace />,
-	},
-	{
-		path: "/roller",
-		element: <Navigate to="/dice-roller" replace />,
-	},
-	{
-		path: "/export",
-		element: <Export />,
-	},
-	{
-		path: "/404",
-		element: <NotFound />,
-	},
-	{
-		path: "*",
-		element: <Navigate to="/404" replace />,
-	},
-];
-
-const App = (req: Request) => {
-	const { query } = createStaticHandler(routes);
-
-	let context;
-	query(req).then(() => context);
-	if (context instanceof Response) throw context;
-
-	const browserRouter = createBrowserRouter(routes);
-	const staticRouter = createStaticRouter(routes, context);
-
+const App = () => {
 	return (
 		<RollbarProvider config={rollbarConfig}>
 			<ErrorBoundary>
@@ -99,19 +42,53 @@ const App = (req: Request) => {
 						<ThemeContextProvider>
 							<ColumnContextProvider>
 								<SelectedRowContextProvider>
-									{document ? (
-										<RouterProvider
-											router={browserRouter}
-											future={{
-												v7_startTransition: true,
-											}}
+									<Routes>
+										<Route index element={<Index />} />
+										<Route
+											path="/dice-roller"
+											element={<DiceRoller />}
 										/>
-									) : (
-										<StaticRouterProvider
-											router={staticRouter}
-											context={context}
+										<Route
+											path="/search"
+											element={<Search />}
 										/>
-									)}
+										<Route
+											path="/spell/5e/:spellLink"
+											element={<Spell />}
+										/>
+										<Route
+											path="/dice"
+											element={
+												<Navigate
+													to="/dice-roller"
+													replace
+												/>
+											}
+										/>
+										<Route
+											path="/roller"
+											element={
+												<Navigate
+													to="/dice-roller"
+													replace
+												/>
+											}
+										/>
+										<Route
+											path="/export"
+											element={<Export />}
+										/>
+										<Route
+											path="/404"
+											element={<NotFound />}
+										/>
+										<Route
+											path="*"
+											element={
+												<Navigate to="/404" replace />
+											}
+										/>
+									</Routes>
 								</SelectedRowContextProvider>
 							</ColumnContextProvider>
 						</ThemeContextProvider>
