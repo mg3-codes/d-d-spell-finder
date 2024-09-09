@@ -5,6 +5,7 @@
  */
 
 import React, { createContext, useState } from "react";
+import { useDocument } from "../../utility/hooks/document";
 
 export type AppSettingsContext = {
 	useCookies: boolean;
@@ -28,9 +29,11 @@ export interface IAppSettingsContextProviderProps {
 export const AppSettingsContextProvider = ({
 	children,
 }: IAppSettingsContextProviderProps) => {
-	const [useCookies, setUseCookies] = useState<boolean>(
-		document.cookie !== "" && document.cookie !== null,
-	);
+	const doc = useDocument();
+	const [useCookies, setUseCookies] = useState<boolean>(() => {
+		if (!doc) return false;
+		else return doc?.cookie !== "" && doc?.cookie !== null;
+	});
 
 	return (
 		<AppSettingsContext.Provider value={{ useCookies, setUseCookies }}>

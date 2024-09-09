@@ -7,8 +7,9 @@
 import React, { createContext, useCallback, useContext, useState } from "react";
 
 import { Theme } from "../../enums/theme";
-import { AppSettingsContext } from "../app-settings-provider";
 import { getCookie, setCookie } from "../../utility/cookies";
+import { useDocument } from "../../utility/hooks/document";
+import { AppSettingsContext } from "../app-settings-provider";
 
 export type ThemeContext = {
 	currentTheme: Theme;
@@ -36,6 +37,7 @@ const cookieName = "userSelectedTheme";
 export const ThemeContextProvider = ({
 	children,
 }: IThemeContextProviderProps) => {
+	const doc = useDocument();
 	const detectColorScheme = useCallback(
 		() =>
 			window?.matchMedia("(prefers-color-scheme: dark)")?.matches
@@ -44,6 +46,8 @@ export const ThemeContextProvider = ({
 		[],
 	);
 	const [currentTheme, setCurrentTheme] = useState<Theme>(() => {
+		if (!doc) return Theme.Auto;
+
 		const cookie = getCookie(cookieName);
 
 		if (cookie) return parseInt(cookie);
@@ -52,6 +56,8 @@ export const ThemeContextProvider = ({
 	});
 	const [selectedThemeOption, setSelectedThemeOption] = useState<Theme>(
 		() => {
+			if (!doc) return Theme.Auto;
+
 			const cookie = getCookie(cookieName);
 
 			if (cookie) return parseInt(cookie);

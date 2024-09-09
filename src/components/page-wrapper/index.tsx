@@ -21,7 +21,7 @@ const PageWrapper = ({ children }: IPageWrapperProps): JSX.Element => {
 
 	useLayoutEffect(() => {
 		const elements: HTMLCollectionOf<HTMLElement> =
-			document.getElementsByTagName("html");
+			document?.getElementsByTagName("html");
 
 		if (elements.length === 0) return;
 

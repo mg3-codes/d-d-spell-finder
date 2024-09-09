@@ -6,8 +6,9 @@
 
 import React, { createContext, useContext, useEffect, useState } from "react";
 import { Column } from "../../enums/columns";
-import { defaultSelectedColumns } from "../../utility/table-defaults";
 import { getCookie, setCookie } from "../../utility/cookies";
+import { useDocument } from "../../utility/hooks/document";
+import { defaultSelectedColumns } from "../../utility/table-defaults";
 import { AppSettingsContext } from "../app-settings-provider";
 
 export type ColumnContext = {
@@ -37,8 +38,11 @@ const cookieName = "selectedColumns";
 export const ColumnContextProvider = ({
 	children,
 }: IColumnContextProviderProps) => {
+	const doc = useDocument();
 	const { useCookies } = useContext(AppSettingsContext);
 	const [selectedColumns, setSelectedColumns] = useState<Column[]>(() => {
+		if (!doc) return defaultSelectedColumns;
+
 		const cookie = getCookie(cookieName);
 
 		if (cookie && useCookies)
