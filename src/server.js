@@ -1,71 +1,86 @@
-/**
- * @author Michael Gamlem III
- * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
- * @format
- */
+/** @format */
 
 import fs from "node:fs/promises";
+import path from "path";
 import express from "express";
+import { createServer as createViteServer } from "vite";
 
 const isProduction = process.env.NODE_ENV === "production";
-const port = process.env.PORT || 3000;
-const base = process.env.BASE || "/";
+const Port = process.env.PORT || 3000;
+const Base = process.env.BASE || "/";
 
-// Cached production assets
 const templateHtml = isProduction
 	? await fs.readFile("./dist/client/index.html", "utf-8")
 	: "";
+
 const ssrManifest = isProduction
 	? await fs.readFile("./dist/client/.vite/ssr-manifest.json", "utf-8")
 	: undefined;
 
 const app = express();
-
 let vite;
+
+// ? Add vite or respective production middlewares
 if (!isProduction) {
-	const { createServer } = await import("vite");
-	vite = await createServer({
+	vite = await createViteServer({
 		server: { middlewareMode: true },
 		appType: "custom",
-		base,
 	});
+
 	app.use(vite.middlewares);
 } else {
+	const sirv = (await import("sirv")).default;
 	const compression = (await import("compression")).default;
-	// const sirv = (await import("sirv")).default;
 	app.use(compression());
-	// app.use(base, sirv("./dist/client", { extensions: [] }));
+	app.use(
+		Base,
+		sirv("./dist/client", {
+			extensions: [],
+			gzip: true,
+		}),
+	);
 }
 
-app.use("*", async (req, res) => {
-	try {
-		const url = req.originalUrl.replace(base, "");
+// ? Add Your Custom Routers & Middlewares heare
+app.use(express.static("public"));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.get("/api", (req, res) => {
+	res.json({ message: "Hello World" });
+});
 
-		let template;
-		let render;
+// ? SSR Render - Rendering Middleware
+app.use("*", async (req, res, next) => {
+	// ! Favicon Fix
+	if (req.originalUrl === "/favicon.ico") {
+		return res.sendFile(path.resolve("./public/vite.svg"));
+	}
+
+	// ! SSR Render - Do not Edit if you don't know what's going on
+	let template, render;
+
+	try {
 		if (!isProduction) {
 			template = await fs.readFile("./index.html", "utf-8");
-			template = await vite.transformIndexHtml(url, template);
+			template = await vite.transformIndexHtml(req.originalUrl, template);
 			render = (await vite.ssrLoadModule("/src/entry-server.tsx")).render;
 		} else {
 			template = templateHtml;
-			render = (await import("./dist/server/entry-server.tsx")).render;
+			render = (await import("./dist/server/entry-server.js")).render;
 		}
 
-		const rendered = await render(url, ssrManifest);
+		const rendered = await render({ path: req.originalUrl }, ssrManifest);
+		const html = template.replace(`<!--app-html-->`, rendered ?? "");
 
-		const html = template
-			// .replace(`<!--app-head-->`, rendered.head ?? "")
-			.replace(`<div id="root"></div>`, rendered.html ?? "");
-
-		res.status(200).set({ "Content-Type": "text/html" }).send(html);
-	} catch (e) {
-		vite?.ssrFixStacktrace(e);
-		console.log(e.stack);
-		res.status(500).end(e.stack);
+		res.status(200).setHeader("Content-Type", "text/html").end(html);
+	} catch (error) {
+		// ? You can Add Something Went Wrong Page
+		vite.ssrFixStacktrace(error);
+		next(error);
 	}
 });
 
-app.listen(port, () => {
-	console.log(`Server started at http://localhost:${port}`);
+// ? Start http server
+app.listen(Port, () => {
+	console.log(`Server running on http://localhost:${Port}`);
 });
