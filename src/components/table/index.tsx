@@ -26,6 +26,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
+import { LogArgument } from "rollbar";
 
 import { buildRow, TableRow } from "../../types/table-row";
 
@@ -35,7 +36,6 @@ import {
 	setColumnDefinitionOrder,
 } from "../../utility/table-defaults";
 
-import spellJson from "../../assets/5e-spells.json";
 import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
 import Spell from "../../types/spell";
@@ -44,12 +44,11 @@ import { SelectedRowContext } from "../selected-row-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
 import { getCookie, setCookie } from "../../utility/cookies";
+import { fetchAllSpellsJson } from "../../utility/spell";
 import { AppSettingsContext } from "../app-settings-provider";
 
 import "../../styles/ag-grid.scss";
 import "./table.scss";
-import { LogArgument } from "rollbar";
-import { fetchAllSpellsJson } from "../../utility/spell";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
