@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useContext, useLayoutEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
 import { ThemeContext } from "../theme-context-provider";
 
@@ -19,7 +19,7 @@ export interface IPageWrapperProps {
 const PageWrapper = ({ children }: IPageWrapperProps): JSX.Element => {
 	const { currentTheme } = useContext(ThemeContext);
 
-	useLayoutEffect(() => {
+	useEffect(() => {
 		const elements: HTMLCollectionOf<HTMLElement> =
 			document?.getElementsByTagName("html");
 
