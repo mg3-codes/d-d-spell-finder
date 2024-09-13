@@ -29,13 +29,13 @@
 		"@rollbar/react": "^0.12.0-beta",
 		"ag-grid-community": "^32.1.0",
 		"bootstrap": "^5.3.3",
-		"express": "^4.19.2",
+		"express": "^4.21.0",
 		"path": "^0.12.7",
 		"prop-types": "^15.8.1",
 		"react": "^18.3.1",
 		"react-bootstrap": "^2.10.4",
 		"react-dom": "^18.3.1",
-		"react-router-dom": "^6.26.1",
+		"react-router-dom": "^6.26.2",
 		"rollbar": "^2.26.4"
 	},
 	"devDependencies": {
