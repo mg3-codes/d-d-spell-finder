@@ -10,11 +10,15 @@
 .search-result {
 	padding: variables.$margin-md;
 	border-radius: bootstrap.$border-radius;
-	color: bootstrap.$body-color;
+	color: bootstrap.$btn-color;
 	text-decoration: none;
 
 	&:hover {
 		background-color: bootstrap.$blue-100;
+	}
+
+	[data-bs-theme="dark"] &:hover {
+		background-color: bootstrap.$blue-800;
 	}
 
 	.bold {
@@ -33,6 +37,7 @@
 		display: flex;
 		justify-content: space-between;
 		margin-bottom: variables.$margin-md;
+		// color: bootstrap.$body-color;
 
 		.details-container {
 			display: flex;
