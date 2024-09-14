@@ -29,7 +29,7 @@ export default [
 			"vite.config.ts",
 			"cypress/videos",
 			"cypress/screenshots",
-			"*.*js*",
+			"**/*.*js*",
 			"cypress.config.ts",
 		],
 	},
