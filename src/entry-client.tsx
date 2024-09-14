@@ -4,15 +4,99 @@
  * @format
  */
 
-import React from "react";
+import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import {
+	createBrowserRouter,
+	Navigate,
+	RouterProvider,
+} from "react-router-dom";
+import { Provider as RollbarProvider, ErrorBoundary } from "@rollbar/react";
 
-import App from "./app";
+import { ColumnContextProvider } from "./components/column-context-provider";
+import LoadingSpinner from "./components/loading-spinner";
+import { ThemeContextProvider } from "./components/theme-context-provider";
+import { SelectedRowContextProvider } from "./components/selected-row-context-provider";
+import { AppSettingsContextProvider } from "./components/app-settings-provider";
 
-ReactDOM.hydrateRoot(
-	document?.getElementById("app") as HTMLElement,
-	<BrowserRouter>
-		<App />
-	</BrowserRouter>,
+const Index = React.lazy(() => import("./components/routes"));
+const DiceRoller = React.lazy(() => import("./components/routes/dice-roller"));
+const Search = React.lazy(() => import("./components/routes/search"));
+const Spell = React.lazy(() => import("./components/routes/spell"));
+const Export = React.lazy(() => import("./components/routes/export"));
+const NotFound = React.lazy(() => import("./components/routes/not-found"));
+
+const rollbarConfig = {
+	accessToken: "9da11dd53b1c4323a3fb09861e6dd841",
+	environment: import.meta.env.MODE,
+	enabled: import.meta.env.MODE === "production",
+	captureUncaught: true,
+	captureUnhandledRejections: true,
+	/* eslint-disable camelcase */
+	code_version: "0.5.4",
+	source_map_enabled: true,
+	/* eslint-enable camelcase */
+};
+
+const router = createBrowserRouter([
+	{
+		path: "/",
+		element: <Index />,
+	},
+	{
+		path: "/dice-roller",
+		element: <DiceRoller />,
+	},
+	{
+		path: "/search",
+		element: <Search />,
+	},
+	{
+		path: "/spell/5e/:spellLink",
+		element: <Spell />,
+	},
+	{
+		path: "/dice",
+		element: <Navigate to="/dice-roller" replace />,
+	},
+	{
+		path: "/roller",
+		element: <Navigate to="/dice-roller" replace />,
+	},
+	{
+		path: "/export",
+		element: <Export />,
+	},
+	{
+		path: "/404",
+		element: <NotFound />,
+	},
+	{
+		path: "*",
+		element: <Navigate to="/404" replace />,
+	},
+]);
+
+ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+	<React.StrictMode>
+		<RollbarProvider config={rollbarConfig}>
+			<ErrorBoundary>
+				<Suspense fallback={<LoadingSpinner />}>
+					<AppSettingsContextProvider>
+						<ThemeContextProvider>
+							<ColumnContextProvider>
+								<SelectedRowContextProvider>
+									<RouterProvider
+										router={router}
+										// eslint-disable-next-line camelcase
+										future={{ v7_startTransition: true }}
+									/>
+								</SelectedRowContextProvider>
+							</ColumnContextProvider>
+						</ThemeContextProvider>
+					</AppSettingsContextProvider>
+				</Suspense>
+			</ErrorBoundary>
+		</RollbarProvider>
+	</React.StrictMode>,
 );
