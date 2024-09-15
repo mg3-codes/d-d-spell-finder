@@ -8,9 +8,10 @@ import React, {
 	Suspense,
 	useCallback,
 	useContext,
-	useState,
 	useEffect,
+	useState,
 } from "react";
+import { Button } from "react-bootstrap";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
 
@@ -18,22 +19,19 @@ const Heading = React.lazy(() => import("../heading"));
 const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
 const Footer = React.lazy(() => import("../footer"));
 
-import { NumberedDiceSelector } from "../numbered-dice-selector";
-import { NumberDiceResults } from "../number-dice-results";
-
 import NumberDie from "../../classes/number-die";
+import { BootstrapOutlineButton } from "../../enums/bootstrap";
 import {
 	DiceType,
 	mapNumberToDiceTypeDisplayName,
 } from "../../enums/dice-type";
-
-import { AppSettingsContext } from "../app-settings-provider";
-import { EdgeOfTheEmpireDiceSelector } from "../edge-of-the-empire-dice-selector";
 import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
-import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
 import { getCookie, setCookie } from "../../utility/cookies";
-
-import { Button } from "react-bootstrap";
+import { AppSettingsContext } from "../app-settings-provider";
+import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
+import { EdgeOfTheEmpireDiceSelector } from "../edge-of-the-empire-dice-selector";
+import { NumberDiceResults } from "../number-dice-results";
+import { NumberedDiceSelector } from "../numbered-dice-selector";
 import { RollHistoryModal } from "../roll-history-modal";
 
 import "./page.scss";
@@ -139,7 +137,7 @@ export const DiceRollerPage = () => {
 							</Dropdown.Item>
 						</DropdownButton>
 						<Button
-							variant="outline-primary"
+							variant={BootstrapOutlineButton.Primary}
 							onClick={openHistoryModal}
 						>
 							Roll History

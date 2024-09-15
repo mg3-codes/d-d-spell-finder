@@ -16,6 +16,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { BootstrapOutlineButton } from "../../../enums/bootstrap";
 import {
 	mapNumberToSavingThrowDisplayName,
 	SavingThrow,
@@ -148,12 +149,15 @@ const SavingThrowFilter = ({
 			/>
 			<Button
 				className="all-button"
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={selectAllSavingThrows}
 			>
 				All
 			</Button>
-			<Button variant="outline-primary" onClick={selectNoSavingThrows}>
+			<Button
+				variant={BootstrapOutlineButton.Primary}
+				onClick={selectNoSavingThrows}
+			>
 				None
 			</Button>
 		</div>

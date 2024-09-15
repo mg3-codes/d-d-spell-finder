@@ -28,24 +28,22 @@ import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
 import { LogArgument } from "rollbar";
 
+import { BootstrapColor, BootstrapOutlineButton } from "../../enums/bootstrap";
+import { mapColumnToDisplayName } from "../../enums/columns";
+import { Theme } from "../../enums/theme";
+import Spell from "../../types/spell";
 import { buildRow, TableRow } from "../../types/table-row";
-
+import { getCookie, setCookie } from "../../utility/cookies";
+import { fetchAllSpellsJson } from "../../utility/spell";
 import {
 	defaultColDef,
 	getDefaultColumnDefinitions,
 	setColumnDefinitionOrder,
 } from "../../utility/table-defaults";
-
-import { mapColumnToDisplayName } from "../../enums/columns";
-import { Theme } from "../../enums/theme";
-import Spell from "../../types/spell";
+import { AppSettingsContext } from "../app-settings-provider";
 import { ColumnContext } from "../column-context-provider";
 import { SelectedRowContext } from "../selected-row-context-provider";
 import { ThemeContext } from "../theme-context-provider";
-
-import { getCookie, setCookie } from "../../utility/cookies";
-import { fetchAllSpellsJson } from "../../utility/spell";
-import { AppSettingsContext } from "../app-settings-provider";
 
 import "../../styles/ag-grid.scss";
 import "./table.scss";
@@ -56,8 +54,11 @@ const cookieName = "columnDefinition";
 
 const Table = (): JSX.Element => {
 	const [spellRows, setSpellRows] = useState<TableRow[] | null>();
+	const rollbar = useRollbar();
 	useEffect(() => {
-		fetchAllSpellsJson().then((x) => setSpellRows(x.map(buildRow)));
+		fetchAllSpellsJson()
+			.then((x) => setSpellRows(x.map(buildRow)))
+			.catch((e) => rollbar.critical(e as LogArgument));
 	}, []);
 	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
 	const { currentTheme: selectedTheme } = useContext(ThemeContext);
@@ -69,7 +70,6 @@ const Table = (): JSX.Element => {
 	const [showCookieToast, setShowCookieToast] =
 		useState<boolean>(!useCookies);
 	const gridRef = useRef<AgGridReact>(null);
-	const rollbar = useRollbar();
 
 	const showModalWithMessage = (message: string): void => {
 		setModalText(message);
@@ -194,7 +194,10 @@ const Table = (): JSX.Element => {
 					{modalText}
 				</Modal.Body>
 				<Modal.Footer>
-					<Button variant="secondary" onClick={handleModalClose}>
+					<Button
+						variant={BootstrapColor.Secondary}
+						onClick={handleModalClose}
+					>
 						Close
 					</Button>
 				</Modal.Footer>
@@ -254,13 +257,13 @@ const Table = (): JSX.Element => {
 								</p>
 								<div>
 									<Button
-										variant="success"
+										variant={BootstrapColor.Success}
 										onClick={acceptCookies}
 									>
 										Accept
 									</Button>
 									<Button
-										variant="outline-danger"
+										variant={BootstrapOutlineButton.Danger}
 										onClick={rejectCookies}
 									>
 										Reject

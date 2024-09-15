@@ -16,6 +16,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { BootstrapOutlineButton } from "../../../enums/bootstrap";
 import {
 	CastingTime,
 	mapNumberToCastingTimeDisplayName,
@@ -171,12 +172,15 @@ const CastingTimeFilter = ({
 			/>
 			<Button
 				className="all-button"
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={selectAllCastingTimes}
 			>
 				All
 			</Button>
-			<Button variant="outline-primary" onClick={selectNoCastingTimes}>
+			<Button
+				variant={BootstrapOutlineButton.Primary}
+				onClick={selectNoCastingTimes}
+			>
 				None
 			</Button>
 		</div>

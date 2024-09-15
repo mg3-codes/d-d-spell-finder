@@ -18,6 +18,7 @@ import Form from "react-bootstrap/Form";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 
+import { BootstrapOutlineButton } from "../../../enums/bootstrap";
 import {
 	Distance,
 	mapNumberToDistanceDisplayName,
@@ -297,14 +298,14 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 					data-distance={Distance.FortyThousand}
 				/>
 				<Button
-					variant="outline-primary"
+					variant={BootstrapOutlineButton.Primary}
 					className="all-button"
 					onClick={selectAllDistances}
 				>
 					All
 				</Button>
 				<Button
-					variant="outline-primary"
+					variant={BootstrapOutlineButton.Primary}
 					className="first-none-button"
 					onClick={selectNoDistances}
 				>
@@ -356,12 +357,15 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				/>
 				<Button
 					className="all-button"
-					variant="outline-primary"
+					variant={BootstrapOutlineButton.Primary}
 					onClick={selectAllShapes}
 				>
 					All
 				</Button>
-				<Button variant="outline-primary" onClick={selectNoShapes}>
+				<Button
+					variant={BootstrapOutlineButton.Primary}
+					onClick={selectNoShapes}
+				>
 					None
 				</Button>
 			</div>

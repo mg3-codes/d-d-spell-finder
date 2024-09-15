@@ -4,17 +4,17 @@
  * @format
  */
 
-import React, { useCallback, useContext, useEffect, useMemo } from "react";
+import { useCallback, useContext, useEffect, useMemo } from "react";
 import Alert from "react-bootstrap/Alert";
 import { useSearchParams } from "react-router-dom";
 
-import { SelectedRowContext } from "../selected-row-context-provider";
-import { PrintCard } from "../print-card";
-
+import { BootstrapColor } from "../../enums/bootstrap";
 import { Theme } from "../../enums/theme";
+import { PrintCard } from "../print-card";
+import { SelectedRowContext } from "../selected-row-context-provider";
+import { ThemeContext } from "../theme-context-provider";
 
 import "./export-page.scss";
-import { ThemeContext } from "../theme-context-provider";
 
 export interface IExportPageQueryParams {
 	numPerRow?: number;
@@ -100,7 +100,7 @@ const ExportPage = () => {
 			{selectedRows.length > 0 ? (
 				<div className="export-page">{generatedCards}</div>
 			) : (
-				<Alert variant="danger">
+				<Alert variant={BootstrapColor.Danger}>
 					<i className="bi bi-exclamation-triangle" />
 					&nbsp; No selected spells.
 				</Alert>

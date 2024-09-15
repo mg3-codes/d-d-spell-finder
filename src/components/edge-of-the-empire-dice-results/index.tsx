@@ -4,16 +4,16 @@
  * @format
  */
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
-
+import { BootstrapOutlineButton } from "../../enums/bootstrap";
 import {
 	EdgeOfTheEmpireDiceSymbol,
 	mapSymbolToCharacter,
 } from "../../enums/edge-of-the-empire-dice-symbol";
+import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import EdgeOfTheEmpireDiceResult from "../../types/edge-of-the-empire-dice-result";
 import { getOutcomeFromSymbols } from "../../utility/edge-of-the-empire-dice";
 import { EdgeDiceSymbol } from "../edge-dice-symbol";
@@ -366,7 +366,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 			{!hideClear && (
 				<div>
 					<Button
-						variant="outline-danger"
+						variant={BootstrapOutlineButton.Danger}
 						disabled={!resultsHaveDice}
 						onClick={onClearClicked}
 					>

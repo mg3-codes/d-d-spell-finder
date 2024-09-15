@@ -16,6 +16,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { BootstrapOutlineButton } from "../../../enums/bootstrap";
 import { mapNumberToSchoolDisplayName, School } from "../../../enums/schools";
 import {
 	createDisabledFilterArray,
@@ -139,12 +140,15 @@ const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			/>
 			<Button
 				className="all-button"
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={selectAllSchools}
 			>
 				All
 			</Button>
-			<Button variant="outline-primary" onClick={selectNoSchools}>
+			<Button
+				variant={BootstrapOutlineButton.Primary}
+				onClick={selectNoSchools}
+			>
 				None
 			</Button>
 		</div>

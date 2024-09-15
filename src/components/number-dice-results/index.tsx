@@ -4,12 +4,13 @@
  * @format
  */
 
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
 
 import NumberDie from "../../classes/number-die";
+import { BootstrapOutlineButton } from "../../enums/bootstrap";
 
 import "./number-dice-results.scss";
 
@@ -288,7 +289,7 @@ export const NumberDiceResults = ({
 			{!hideClear && (
 				<div>
 					<Button
-						variant="outline-danger"
+						variant={BootstrapOutlineButton.Danger}
 						disabled={!results?.length}
 						onClick={onClearClicked}
 					>

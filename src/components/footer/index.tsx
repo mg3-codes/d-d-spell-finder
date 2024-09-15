@@ -6,10 +6,10 @@
 
 import { useRollbar } from "@rollbar/react";
 import React, { MouseEventHandler, useCallback, useState } from "react";
-
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
+import { BootstrapColor, BootstrapOutlineButton } from "../../enums/bootstrap";
 import { HelpModal } from "../help-modal";
 import { AttributionBody, AttributionHeader } from "./attribution-content";
 import { PrivacyBody, PrivacyHeader } from "./privacy-content";
@@ -65,18 +65,18 @@ const Footer = () => {
 		<div className="footer">
 			<span className="version">Version: 0.5.4</span>
 			<div className="links">
-				<Button variant="link" onClick={openHelpModal}>
+				<Button variant={BootstrapColor.Link} onClick={openHelpModal}>
 					Help
 				</Button>
 				<Button
-					variant="link"
+					variant={BootstrapColor.Link}
 					onClick={handleButtonClick}
 					data-type={Content.Attribution}
 				>
 					Attribution
 				</Button>
 				<Button
-					variant="link"
+					variant={BootstrapColor.Link}
 					onClick={handleButtonClick}
 					data-type={Content.Privacy}
 				>
@@ -104,7 +104,10 @@ const Footer = () => {
 					)}
 				</Modal.Body>
 				<Modal.Footer>
-					<Button variant="outline-secondary" onClick={closeModal}>
+					<Button
+						variant={BootstrapOutlineButton.Secondary}
+						onClick={closeModal}
+					>
 						Close
 					</Button>
 				</Modal.Footer>

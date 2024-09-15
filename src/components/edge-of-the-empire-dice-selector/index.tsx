@@ -8,8 +8,6 @@ import React, { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { DiceNumberInput } from "../dice-number-input";
-
 import AbilityDie from "../../classes/edge-of-the-empire-dice/ability-die";
 import BoostDie from "../../classes/edge-of-the-empire-dice/boost-die";
 import ChallengeDie from "../../classes/edge-of-the-empire-dice/challenge-die";
@@ -17,7 +15,9 @@ import DifficultyDie from "../../classes/edge-of-the-empire-dice/difficulty-die"
 import ForceDie from "../../classes/edge-of-the-empire-dice/force-die";
 import ProficiencyDie from "../../classes/edge-of-the-empire-dice/proficiency-die";
 import SetbackDie from "../../classes/edge-of-the-empire-dice/setback-die";
+import { BootstrapOutlineButton } from "../../enums/bootstrap";
 import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
+import { DiceNumberInput } from "../dice-number-input";
 
 import "./edge-dice-selector.scss";
 
@@ -311,7 +311,10 @@ export const EdgeOfTheEmpireDiceSelector = ({
 				<Button onClick={rollAllDice} disabled={rollIsDisabled}>
 					Roll
 				</Button>
-				<Button variant="outline-danger" onClick={handleClearSelection}>
+				<Button
+					variant={BootstrapOutlineButton.Danger}
+					onClick={handleClearSelection}
+				>
 					Clear
 				</Button>
 			</div>

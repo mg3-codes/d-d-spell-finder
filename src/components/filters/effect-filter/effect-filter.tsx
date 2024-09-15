@@ -16,6 +16,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { BootstrapOutlineButton } from "../../../enums/bootstrap";
 import { Effect, mapEffectToDisplayName } from "../../../enums/effects";
 import {
 	createDisabledFilterArray,
@@ -345,12 +346,15 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			/>
 			<Button
 				className="all-button"
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={selectAllEffects}
 			>
 				All
 			</Button>
-			<Button variant="outline-primary" onClick={selectNoEffects}>
+			<Button
+				variant={BootstrapOutlineButton.Primary}
+				onClick={selectNoEffects}
+			>
 				None
 			</Button>
 		</div>

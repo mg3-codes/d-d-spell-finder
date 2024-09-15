@@ -18,13 +18,14 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Form from "react-bootstrap/Form";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
+import { BootstrapColor } from "../../enums/bootstrap";
 import { Column, mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
+import { deleteAllCookies } from "../../utility/cookies";
 import { AppSettingsContext } from "../app-settings-provider";
 import { ColumnContext } from "../column-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
-import { deleteAllCookies } from "../../utility/cookies";
 import "./settings-offcanvas.scss";
 
 const SettingsOffcanvas = (): JSX.Element => {
@@ -84,7 +85,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 
 	return (
 		<div className="settings-offcanvas">
-			<Button variant="link" onClick={handleOpen}>
+			<Button variant={BootstrapColor.Link} onClick={handleOpen}>
 				<i className="bi bi-gear" style={{ fontSize: "1.5rem" }} />
 			</Button>
 			<Offcanvas show={show} onHide={handleClose} placement="end">
@@ -98,14 +99,14 @@ const SettingsOffcanvas = (): JSX.Element => {
 							<Accordion.Body>
 								<ButtonGroup>
 									<Button
-										variant="primary"
+										variant={BootstrapColor.Success}
 										onClick={enableCookies}
 										disabled={useCookies}
 									>
 										Enable
 									</Button>
 									<Button
-										variant="primary"
+										variant={BootstrapColor.Danger}
 										onClick={disableCookies}
 										disabled={!useCookies}
 									>
@@ -119,7 +120,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 							<Accordion.Body>
 								<ButtonGroup>
 									<Button
-										variant="primary"
+										variant={BootstrapColor.Primary}
 										onClick={handleSetTheme}
 										data-theme={Theme.Auto}
 										disabled={
@@ -129,7 +130,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 										Auto
 									</Button>
 									<Button
-										variant="primary"
+										variant={BootstrapColor.Primary}
 										onClick={handleSetTheme}
 										data-theme={Theme.Light}
 										disabled={
@@ -139,7 +140,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 										Light
 									</Button>
 									<Button
-										variant="primary"
+										variant={BootstrapColor.Primary}
 										onClick={handleSetTheme}
 										data-theme={Theme.Dark}
 										disabled={

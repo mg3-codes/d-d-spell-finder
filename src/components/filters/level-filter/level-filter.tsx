@@ -16,6 +16,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { BootstrapOutlineButton } from "../../../enums/bootstrap";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
@@ -153,12 +154,15 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			/>
 			<Button
 				className="all-button"
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={selectAllLevels}
 			>
 				All
 			</Button>
-			<Button variant="outline-primary" onClick={selectNoLevels}>
+			<Button
+				variant={BootstrapOutlineButton.Primary}
+				onClick={selectNoLevels}
+			>
 				None
 			</Button>
 		</div>

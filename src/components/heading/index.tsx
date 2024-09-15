@@ -4,10 +4,11 @@
  * @format
  */
 
-import React, { useState, useContext, useCallback } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import { Link, useLocation } from "react-router-dom";
 
+import { BootstrapOutlineButton } from "../../enums/bootstrap";
 import { SelectedRowContext } from "../selected-row-context-provider";
 
 const PrintModal = React.lazy(() => import("../print-modal"));
@@ -32,7 +33,7 @@ const Heading = () => {
 				<div className="link-buttons">
 					{location.pathname !== "/" && (
 						<Link to={"/"}>
-							<Button variant="outline-primary">
+							<Button variant={BootstrapOutlineButton.Primary}>
 								<i className="bi bi-magic" />
 								&nbsp; Spells
 							</Button>
@@ -40,7 +41,7 @@ const Heading = () => {
 					)}
 					{location.pathname !== "/dice-roller" && (
 						<Link to={"/dice-roller"} style={{ marginRight: 6 }}>
-							<Button variant="outline-primary">
+							<Button variant={BootstrapOutlineButton.Primary}>
 								<i className="bi bi-dice-6" />
 								&nbsp; Dice Roller
 							</Button>
@@ -49,7 +50,7 @@ const Heading = () => {
 					{location.pathname === "/" && (
 						<>
 							<Button
-								variant="outline-primary"
+								variant={BootstrapOutlineButton.Primary}
 								className="printer-button"
 								onClick={togglePrintModalIsOpen}
 							>

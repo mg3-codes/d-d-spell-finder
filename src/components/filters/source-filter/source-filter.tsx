@@ -16,6 +16,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { BootstrapOutlineButton } from "../../../enums/bootstrap";
 import { mapNumberToSourceDisplayName, Source } from "../../../enums/sources";
 import {
 	createDisabledFilterArray,
@@ -159,12 +160,15 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			/>
 			<Button
 				className="all-button"
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={selectAllSources}
 			>
 				All
 			</Button>
-			<Button variant="outline-primary" onClick={selectNoSources}>
+			<Button
+				variant={BootstrapOutlineButton.Primary}
+				onClick={selectNoSources}
+			>
 				None
 			</Button>
 		</div>

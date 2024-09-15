@@ -11,6 +11,7 @@ import Form from "react-bootstrap/Form";
 import { DiceNumberInput } from "../dice-number-input";
 
 import NumberDie from "../../classes/number-die";
+import { BootstrapOutlineButton } from "../../enums/bootstrap";
 
 import "./numbered-dice-selector.scss";
 
@@ -317,7 +318,10 @@ export const NumberedDiceSelector = ({
 				<Button onClick={rollAllDice} disabled={rollIsDisabled}>
 					Roll
 				</Button>
-				<Button variant="outline-danger" onClick={handleClearSelection}>
+				<Button
+					variant={BootstrapOutlineButton.Danger}
+					onClick={handleClearSelection}
+				>
 					Clear
 				</Button>
 			</div>

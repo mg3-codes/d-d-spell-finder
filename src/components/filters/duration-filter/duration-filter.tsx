@@ -16,6 +16,11 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { BootstrapOutlineButton } from "../../../enums/bootstrap";
+import {
+	Duration,
+	mapNumberToDurationDisplayName,
+} from "../../../enums/durations";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
@@ -23,11 +28,6 @@ import {
 	numberBasedFilterIsChecked,
 	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
-
-import {
-	Duration,
-	mapNumberToDurationDisplayName,
-} from "../../../enums/durations";
 
 import "./duration-filter.scss";
 
@@ -194,12 +194,15 @@ const DurationFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			/>
 			<Button
 				className="all-button"
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={selectAllDurations}
 			>
 				All
 			</Button>
-			<Button variant="outline-primary" onClick={selectNoDurations}>
+			<Button
+				variant={BootstrapOutlineButton.Primary}
+				onClick={selectNoDurations}
+			>
 				None
 			</Button>
 		</div>

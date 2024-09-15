@@ -9,6 +9,8 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
+import { BootstrapOutlineButton } from "../../enums/bootstrap";
+
 import "./dice-number-input.scss";
 
 export interface IDiceNumberInputProps {
@@ -59,7 +61,7 @@ export const DiceNumberInput = ({
 	return (
 		<InputGroup className="dice-number-input">
 			<Button
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={handleDecreaseClick}
 				disabled={showError || decreaseIsDisabled}
 			>
@@ -74,7 +76,7 @@ export const DiceNumberInput = ({
 				min={0}
 			/>
 			<Button
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={handleIncreaseClick}
 				disabled={showError}
 			>

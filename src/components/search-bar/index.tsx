@@ -5,10 +5,12 @@
  */
 
 import React, { useCallback, useState } from "react";
-import { useSearchParams } from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
+import { useSearchParams } from "react-router-dom";
+
+import { BootstrapOutlineButton } from "../../enums/bootstrap";
 
 import "./search-bar.scss";
 
@@ -38,7 +40,7 @@ export const SearchBar = ({ onSearchRequested }: ISearchBarProps) => {
 
 	const handleKeyDown = useCallback(
 		(e: React.KeyboardEvent<HTMLInputElement>): void => {
-			if (e.key == "Enter") onSearchRequested(value);
+			if (e.key === "Enter") onSearchRequested(value);
 		},
 		[value],
 	);
@@ -54,7 +56,7 @@ export const SearchBar = ({ onSearchRequested }: ISearchBarProps) => {
 					onKeyDown={handleKeyDown}
 				/>
 				<Button
-					variant="outline-primary"
+					variant={BootstrapOutlineButton.Primary}
 					onClick={() => onSearchRequested(value)}
 				>
 					<i className="bi bi-search" />

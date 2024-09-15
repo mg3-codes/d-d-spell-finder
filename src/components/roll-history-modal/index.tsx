@@ -10,10 +10,11 @@ import Modal from "react-bootstrap/Modal";
 import Pagination from "react-bootstrap/Pagination";
 
 import NumberDie from "../../classes/number-die";
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
+import { BootstrapOutlineButton } from "../../enums/bootstrap";
 import { DiceType } from "../../enums/dice-type";
-import { NumberDiceResults } from "../number-dice-results";
+import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
+import { NumberDiceResults } from "../number-dice-results";
 
 import "./roll-history-modal.scss";
 
@@ -145,10 +146,16 @@ export const RollHistoryModal = ({
 				</div>
 			</Modal.Body>
 			<Modal.Footer>
-				<Button variant="outline-danger" onClick={onClear}>
+				<Button
+					variant={BootstrapOutlineButton.Danger}
+					onClick={onClear}
+				>
 					Clear
 				</Button>
-				<Button variant="outline-secondary" onClick={onClose}>
+				<Button
+					variant={BootstrapOutlineButton.Secondary}
+					onClick={onClose}
+				>
 					Close
 				</Button>
 			</Modal.Footer>

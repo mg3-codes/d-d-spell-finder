@@ -4,6 +4,7 @@
  * @format
  */
 
+import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
 import React, {
 	ChangeEventHandler,
@@ -15,6 +16,7 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
+import { BootstrapOutlineButton } from "../../../enums/bootstrap";
 import {
 	DamageType,
 	mapNumberToDamageTypeDisplayName,
@@ -27,7 +29,6 @@ import {
 	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import "./damage-type-filter.scss";
 
 const damageTypeFilterDisabledArray = createDisabledFilterArray(14);
@@ -190,12 +191,15 @@ const DamageTypeFilter = ({
 			/>
 			<Button
 				className="all-button"
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={selectAllDamageTypes}
 			>
 				All
 			</Button>
-			<Button variant="outline-primary" onClick={selectNoDamageTypes}>
+			<Button
+				variant={BootstrapOutlineButton.Primary}
+				onClick={selectNoDamageTypes}
+			>
 				None
 			</Button>
 		</div>

@@ -4,9 +4,11 @@
  * @format
  */
 
-import React, { useCallback } from "react";
+import { useCallback } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+
+import { BootstrapColor } from "../../../enums/bootstrap";
 
 export const PrivacyHeader = () => <Modal.Title>Privacy</Modal.Title>;
 
@@ -36,7 +38,7 @@ export const PrivacyBody = () => {
 				Michael Gamlem III operates the dnd-spells.mg3.codes website,
 				which provides information from the System Reference Document
 				5.1 (“SRD 5.1”) by Wizards of the Coast LLC and available at
-				<Button variant="link" onClick={openSRD}>
+				<Button variant={BootstrapColor.Link} onClick={openSRD}>
 					https://dnd.wizards.com/resources/systems-reference-document.&nbsp;
 					<i className="bi bi-box-arrow-up-right" />
 				</Button>{" "}
@@ -45,7 +47,10 @@ export const PrivacyBody = () => {
 			<p>
 				The SRD 5.1 is licensed under the Creative Commons Attribution
 				4.0 International License available at
-				<Button variant="link" onClick={openCreativeCommons}>
+				<Button
+					variant={BootstrapColor.Link}
+					onClick={openCreativeCommons}
+				>
 					https://creativecommons.org/licenses/by/4.0/legalcode.&nbsp;
 					<i className="bi bi-box-arrow-up-right" />
 				</Button>{" "}

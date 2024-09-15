@@ -17,6 +17,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import { Attack, mapNumberToAttackDisplayName } from "../../../enums/attacks";
+import { BootstrapOutlineButton } from "../../../enums/bootstrap";
 import {
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
@@ -105,12 +106,15 @@ const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			/>
 			<Button
 				className="all-button"
-				variant="outline-primary"
+				variant={BootstrapOutlineButton.Primary}
 				onClick={selectAllAttacks}
 			>
 				All
 			</Button>
-			<Button variant="outline-primary" onClick={selectNoAttacks}>
+			<Button
+				variant={BootstrapOutlineButton.Primary}
+				onClick={selectNoAttacks}
+			>
 				None
 			</Button>
 		</div>

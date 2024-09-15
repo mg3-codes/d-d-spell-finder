@@ -4,14 +4,13 @@
  * @format
  */
 
-import React from "react";
-
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-import { EdgeSymbolKey } from "../edge-symbol-key";
+import { BootstrapOutlineButton } from "../../enums/bootstrap";
 import { EdgeDiceKey } from "../edge-dice-key";
+import { EdgeSymbolKey } from "../edge-symbol-key";
 
 export interface IHelpModalProps {
 	modalIsOpen: boolean;
@@ -171,7 +170,10 @@ export const HelpModal = ({
 				</Accordion>
 			</Modal.Body>
 			<Modal.Footer>
-				<Button variant="outline-secondary" onClick={toggleModalState}>
+				<Button
+					variant={BootstrapOutlineButton.Primary}
+					onClick={toggleModalState}
+				>
 					Close
 				</Button>
 			</Modal.Footer>

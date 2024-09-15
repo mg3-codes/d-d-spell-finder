@@ -19,11 +19,11 @@ import Dropdown from "react-bootstrap/Dropdown";
 import Modal from "react-bootstrap/Modal";
 import { Link } from "react-router-dom";
 
-import { PrintCard } from "../print-card";
-import { ThemeContext } from "../theme-context-provider";
-
+import { BootstrapColor, BootstrapOutlineButton } from "../../enums/bootstrap";
 import { Theme } from "../../enums/theme";
 import { TableRow } from "../../types/table-row";
+import { PrintCard } from "../print-card";
+import { ThemeContext } from "../theme-context-provider";
 
 import "./print-modal.scss";
 
@@ -64,14 +64,14 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 			</Modal.Header>
 			<Modal.Body>
 				{!rows?.length && (
-					<Alert variant="warning">
+					<Alert variant={BootstrapColor.Warning}>
 						<i className="bi bi-exclamation-circle" />
 						&nbsp; You didn&apos;t select any spells
 					</Alert>
 				)}
 				{printError && (
 					<Alert
-						variant="danger"
+						variant={BootstrapColor.Danger}
 						dismissible
 						onClose={clearPrintError}
 					>
@@ -145,11 +145,14 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 				) : null}
 			</Modal.Body>
 			<Modal.Footer>
-				<Button variant="outline-secondary" onClick={toggleIsOpen}>
+				<Button
+					variant={BootstrapOutlineButton.Secondary}
+					onClick={toggleIsOpen}
+				>
 					Close
 				</Button>
 				<Link to={`/export?numPerRow=${selectedNumberPerRow}`}>
-					<Button variant="success">Print</Button>
+					<Button variant={BootstrapColor.Success}>Print</Button>
 				</Link>
 			</Modal.Footer>
 		</Modal>
