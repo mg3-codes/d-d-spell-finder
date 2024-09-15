@@ -33,13 +33,12 @@
 		.subtitle {
 			font-size: small;
 			text-align: center;
-			margin-bottom: 8px;
+			margin-bottom: 0 0 8px 0;
 			font-style: italic;
-			margin: 0;
 		}
 
 		hr {
-			margin: 8px 8px 14px 8px;
+			margin: 8px 8px 14px;
 		}
 
 		.table-info {
@@ -93,10 +92,13 @@
 
 			p.max-lines-5 {
 				@include max-lines();
+				
+				margin-bottom: 0;
 			}
 
 			p.max-lines-8 {
 				@include max-lines();
+
 				max-lines: 8;
 				-webkit-line-clamp: 8;
 			}

@@ -21,19 +21,6 @@
 	}
 }
 
-// Override Bootstrap CSS
-[data-bs-theme="dark"] .carousel,
-.carousel {
-	.carousel-indicators {
-		display: none;
-	}
-
-	.carousel-control-next-icon,
-	.carousel-control-prev-icon {
-		filter: none;
-	}
-}
-
 .carousel {
 	.carousel-indicators {
 		display: none;
@@ -42,6 +29,18 @@
 	.carousel-control-next-icon,
 	.carousel-control-prev-icon {
 		filter: invert(1) grayscale(100);
+	}
+}
+
+// Override Bootstrap CSS
+[data-bs-theme="dark"] .carousel {
+	.carousel-indicators {
+		display: none;
+	}
+
+	.carousel-control-next-icon,
+	.carousel-control-prev-icon {
+		filter: none;
 	}
 }
 

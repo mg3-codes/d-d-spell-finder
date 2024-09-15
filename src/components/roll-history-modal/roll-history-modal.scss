@@ -11,6 +11,7 @@
 	outline: none;
 
 	@include variables.centerBothDirections;
+
 	flex-direction: column;
 
 	.edge-dice-results {

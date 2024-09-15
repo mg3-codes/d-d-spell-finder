@@ -8,29 +8,6 @@
 @use "../../styles/variables" as variables;
 
 .dice-table {
-	thead {
-		.title {
-			text-align: center;
-		}
-	}
-
-	tbody {
-		tr {
-			td:nth-child(1) {
-				position: sticky;
-				position: -webkit-sticky;
-				left: 0;
-			}
-
-			text-align: center;
-			vertical-align: middle;
-		}
-	}
-
-	.dice {
-		text-align: center;
-	}
-
 	.symbols {
 		text-align: center;
 
@@ -46,5 +23,27 @@
 			background-color: bootstrap.$white;
 			color: bootstrap.$black;
 		}
+	}
+
+	thead {
+		.title {
+			text-align: center;
+		}
+	}
+
+	tbody {
+		tr {
+			td:nth-child(1) {
+				position: sticky;
+				left: 0;
+			}
+
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+
+	.dice {
+		text-align: center;
 	}
 }

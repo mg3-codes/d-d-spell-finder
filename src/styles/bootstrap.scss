@@ -6,7 +6,12 @@
 
 $toast-background-color: var(--bs-body-bg);
 
+/* stylelint-disable import-notation */
+// required way to import bootstrap files
+
 @import "~bootstrap/scss/bootstrap";
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/mixins";
 @import "~bootstrap/scss/variables";
+
+/* stylelint-enable import-notation */
