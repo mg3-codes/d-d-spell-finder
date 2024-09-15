@@ -10,14 +10,14 @@ import Form from "react-bootstrap/Form";
 
 import { DiceNumberInput } from "../dice-number-input";
 
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
-import BoostDie from "../../classes/edge-of-the-empire-dice/boost-die";
-import SetbackDie from "../../classes/edge-of-the-empire-dice/setback-die";
 import AbilityDie from "../../classes/edge-of-the-empire-dice/ability-die";
-import DifficultyDie from "../../classes/edge-of-the-empire-dice/difficulty-die";
-import ProficiencyDie from "../../classes/edge-of-the-empire-dice/proficiency-die";
+import BoostDie from "../../classes/edge-of-the-empire-dice/boost-die";
 import ChallengeDie from "../../classes/edge-of-the-empire-dice/challenge-die";
+import DifficultyDie from "../../classes/edge-of-the-empire-dice/difficulty-die";
 import ForceDie from "../../classes/edge-of-the-empire-dice/force-die";
+import ProficiencyDie from "../../classes/edge-of-the-empire-dice/proficiency-die";
+import SetbackDie from "../../classes/edge-of-the-empire-dice/setback-die";
+import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 
 import "./edge-dice-selector.scss";
 
