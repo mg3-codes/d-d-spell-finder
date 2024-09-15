@@ -109,19 +109,39 @@ export const EdgeOfTheEmpireDiceSelector = ({
 	]);
 
 	useEffect(() => {
-		if (Number.parseInt(boostInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(setbackInputValue) > 0)
-			setRollIsDisabled(false);
-		else if (Number.parseInt(abilityInputValue) > 0)
-			setRollIsDisabled(false);
-		else if (Number.parseInt(difficultyInputValue) > 0)
-			setRollIsDisabled(false);
-		else if (Number.parseInt(proficiencyInputValue) > 0)
-			setRollIsDisabled(false);
-		else if (Number.parseInt(challengeInputValue) > 0)
-			setRollIsDisabled(false);
-		else if (Number.parseInt(forceInputValue) > 0) setRollIsDisabled(false);
-		else setRollIsDisabled(true);
+		if (
+			boostInputValue === "0" &&
+			setbackInputValue === "0" &&
+			abilityInputValue === "0" &&
+			difficultyInputValue === "0" &&
+			proficiencyInputValue === "0" &&
+			challengeInputValue === "0" &&
+			forceInputValue === "0"
+		) {
+			setRollIsDisabled(true);
+			return;
+		} else if (Number.parseInt(boostInputValue) < 0) {
+			setRollIsDisabled(true);
+			return;
+		} else if (Number.parseInt(setbackInputValue) < 0) {
+			setRollIsDisabled(true);
+			return;
+		} else if (Number.parseInt(abilityInputValue) < 0) {
+			setRollIsDisabled(true);
+			return;
+		} else if (Number.parseInt(difficultyInputValue) < 0) {
+			setRollIsDisabled(true);
+			return;
+		} else if (Number.parseInt(proficiencyInputValue) < 0) {
+			setRollIsDisabled(true);
+			return;
+		} else if (Number.parseInt(challengeInputValue) < 0) {
+			setRollIsDisabled(true);
+			return;
+		} else if (Number.parseInt(forceInputValue) < 0) {
+			setRollIsDisabled(true);
+			return;
+		} else setRollIsDisabled(false);
 	}, [
 		boostInputValue,
 		setbackInputValue,
