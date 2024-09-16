@@ -43,7 +43,7 @@ export const formatSearchFacetText = (s: string, a: Aggregation): string => {
 	if (!s || s === "") return "";
 	else if (s === "0" && a.name !== levelAggregation) return "False";
 	else if (s === "1" && a.name !== levelAggregation) return "True";
-	else if (s.length == 1) return s.toUpperCase();
+	else if (s.length === 1) return s.toUpperCase();
 
 	return splitOnCapitals(s);
 };
