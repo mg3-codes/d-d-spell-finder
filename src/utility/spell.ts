@@ -9,19 +9,19 @@ import Spell from "../types/spell";
 
 export const fetchSpellById = async (spellId: string): Promise<Spell> => {
 	const response = await fetch(`http://localhost:5226/spell/${spellId}`);
-	return response.json();
+	return response.json() as Promise<Spell>;
 };
 
 export const fetchSpellByLink = async (spellLink: string): Promise<Spell> => {
 	const response = await fetch(
 		`http://localhost:5226/spell/link/${spellLink}`,
 	);
-	return response.json();
+	return response.json() as Promise<Spell>;
 };
 
 export const fetchAllSpellsJson = async (): Promise<Spell[]> => {
 	const response = await fetch("http://localhost:5226/spell/all");
-	return response.json();
+	return response.json() as Promise<Spell[]>;
 };
 
 export const getSpellAndSchoolText = (
