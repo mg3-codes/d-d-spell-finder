@@ -12,15 +12,15 @@ import React, {
 	useState,
 } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { FacetSidebar } from "../facet-sidebar";
+import { SearchBar } from "../search-bar";
+import { SearchResult } from "../search-result";
 
 const Heading = React.lazy(() => import("../heading"));
 const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
 const Footer = React.lazy(() => import("../footer"));
-import { SearchBar } from "../search-bar";
-import { FacetSidebar } from "../facet-sidebar";
-import { SearchResult } from "../search-result";
 
-import { searchSpells } from "../../utility/search";
+import { searchSpellsAsync } from "../../utility/search";
 
 import { Facet, SearchResponse } from "../../types/search";
 
@@ -36,7 +36,7 @@ export const SearchPage = () => {
 	const [queryParams] = useSearchParams();
 	const navigate = useNavigate();
 
-	const fetchMoreResults = useCallback(async () => {
+	const fetchMoreResultsAsync = useCallback(async () => {
 		if (!results) return;
 		if (results.hits.length === results.total) return;
 
@@ -44,7 +44,11 @@ export const SearchPage = () => {
 
 		const q = queryParams.get("q") ?? "";
 
-		const response = await searchSpells(q, currentFacets, results?.next);
+		const response = await searchSpellsAsync(
+			q,
+			currentFacets,
+			results?.next,
+		);
 
 		response.hits = results.hits.concat(response.hits);
 
@@ -56,7 +60,7 @@ export const SearchPage = () => {
 		const observer = new IntersectionObserver(
 			(entries) => {
 				if (entries[0].isIntersecting) {
-					fetchMoreResults();
+					void fetchMoreResultsAsync();
 				}
 			},
 			{ threshold: 0 },
@@ -71,9 +75,9 @@ export const SearchPage = () => {
 				observer.unobserve(observerTargetRef.current);
 			}
 		};
-	}, [observerTargetRef.current, fetchMoreResults]);
+	}, [observerTargetRef.current, fetchMoreResultsAsync]);
 
-	const getSearchResults = async (
+	const getSearchResultsAsync = async (
 		queryText?: string,
 		facets?: Facet[],
 		next?: string,
@@ -81,27 +85,27 @@ export const SearchPage = () => {
 		const q = queryText ?? queryParams.get("q");
 
 		if (q !== null) {
-			const response = await searchSpells(q, facets, next);
+			const response = await searchSpellsAsync(q, facets, next);
 
 			setResults(response);
 		}
 	};
 
-	const onSearchRequested = (q: string): void => {
+	const onSearchRequestedAsync = async (q: string): Promise<void> => {
 		const formatted = encodeURIComponent(q);
 		navigate(`/search?q=${formatted}`);
-		getSearchResults(q);
+		await getSearchResultsAsync(q);
 	};
 
 	useEffect(() => {
-		const fetchData = async () => await getSearchResults();
+		const fetchData = async () => await getSearchResultsAsync();
 
-		fetchData();
+		void fetchData();
 	}, []);
 
-	const onFacetClick = (facets?: Facet[]) => {
+	const onFacetClickAsync = async (facets?: Facet[]) => {
 		setCurrentFacets(facets);
-		getSearchResults(queryParams.get("q") ?? "", facets);
+		await getSearchResultsAsync(queryParams.get("q") ?? "", facets);
 	};
 
 	return (
@@ -110,14 +114,16 @@ export const SearchPage = () => {
 				<Suspense fallback={<LoadingSpinner />}>
 					<Heading />
 					<SearchBar
-						onSearchRequested={(q) => onSearchRequested(q)}
+						onSearchRequested={(q) =>
+							void onSearchRequestedAsync(q)
+						}
 					/>
 					<div className="search-page-content" id="content">
 						{results ? (
 							<>
 								<FacetSidebar
 									facets={results.aggregations}
-									onFacetClick={onFacetClick}
+									onFacetClickAsync={onFacetClickAsync}
 								/>
 								<div className="search-result-container">
 									{results.hits.map((x) => (

@@ -17,14 +17,21 @@ import "./facet-sidebar.scss";
 
 interface IFacetSidebarProps {
 	facets: Aggregation[];
-	onFacetClick: (facets: Facet[]) => void;
+	onFacetClickAsync: (facets: Facet[]) => Promise<void>;
 }
 
-export const FacetSidebar = ({ facets, onFacetClick }: IFacetSidebarProps) => {
+export const FacetSidebar = ({
+	facets,
+	onFacetClickAsync,
+}: IFacetSidebarProps) => {
 	const [activeFacets, setActiveFacets] = useState<Facet[]>([]);
 
 	useEffect(() => {
-		onFacetClick(activeFacets);
+		const fetchAsync = async () => {
+			await onFacetClickAsync(activeFacets);
+		};
+
+		void fetchAsync();
 	}, [activeFacets]);
 
 	const isChecked = (field: string, value: string): boolean => {
@@ -35,12 +42,14 @@ export const FacetSidebar = ({ facets, onFacetClick }: IFacetSidebarProps) => {
 		return false;
 	};
 
-	const handleFacetClick = (e: React.BaseSyntheticEvent): void => {
+	const handleFacetClick = (
+		e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
+	): void => {
 		const field = e.target.getAttribute("data-field");
 		const value = e.target.getAttribute("data-value");
 
-		setActiveFacets((prevState) => {
-			const newFacets = [];
+		setActiveFacets((prevState): Facet[] => {
+			const newFacets: Facet[] = [];
 			let foundFacet = false;
 			for (const facet of prevState) {
 				if (facet.field === field && facet.value === value) {
@@ -51,7 +60,7 @@ export const FacetSidebar = ({ facets, onFacetClick }: IFacetSidebarProps) => {
 				newFacets.push(facet);
 			}
 
-			if (!foundFacet) newFacets.push({ field, value });
+			if (!foundFacet && field && value) newFacets.push({ field, value });
 
 			return newFacets;
 		});
@@ -101,7 +110,7 @@ export const FacetSidebar = ({ facets, onFacetClick }: IFacetSidebarProps) => {
 											data-field={x.name}
 											data-value={i.key}
 											checked={isChecked(x.name, i.key)}
-											onClick={handleFacetClick}
+											onChange={handleFacetClick}
 											readOnly
 										/>
 									);

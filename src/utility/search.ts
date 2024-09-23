@@ -6,7 +6,7 @@
 
 import { Aggregation, Facet, SearchResponse } from "../types/search";
 
-export const searchSpells = async (
+export const searchSpellsAsync = async (
 	q: string,
 	facets?: Facet[],
 	next?: string,
@@ -26,14 +26,14 @@ export const searchSpells = async (
 		},
 	);
 
-	return result.json();
+	return result.json() as Promise<SearchResponse>;
 };
 
 const splitOnCapitals = (s: string): string => {
 	const regex = /[A-Z][a-z]+/gm;
 	const words = s.match(regex);
 
-	if (words?.length == 0) return `${s[0].toUpperCase()}${s.substring(1)}`;
+	if (words?.length === 0) return `${s[0].toUpperCase()}${s.substring(1)}`;
 
 	return words?.join(" ") ?? "";
 };
