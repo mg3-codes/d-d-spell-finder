@@ -74,7 +74,7 @@ export const SpellPageTable = ({ spell }: ISpellPageTableProps) => {
 						)}`}</td>
 					</tr>
 				)}
-				{spell.attack !== Attack.None && (
+				{spell.attack !== parseInt(Attack.None.toString()) && (
 					<tr>
 						<td>Attack</td>
 						<td>{mapNumberToAttackDisplayName(spell.attack)}</td>
