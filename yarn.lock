@@ -983,12 +983,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^20.16.3":
-  version: 20.16.3
-  resolution: "@types/node@npm:20.16.3"
+"@types/node@npm:^20.17.6":
+  version: 20.17.6
+  resolution: "@types/node@npm:20.17.6"
   dependencies:
     undici-types: ~6.19.2
-  checksum: 14c1be053fe8b5993614ef4f493f359b1035cca1c821c66df88d361ca4045c7fb278ef692d8c7dc82331d1e9f8c21b5afc0b863c3e10b12754b6be41e16f6f6e
+  checksum: d51dbb9881c94d0310b32b5fd8013e3261595c61bc888fa27258469c93c3dc0b3c4d20a9f28f3f5f79562f6737e28e7f3dd04940dc8b4d966d34aaf318f7f69b
   languageName: node
   linkType: hard
 
@@ -2459,7 +2459,7 @@ __metadata:
     "@swc/core": 1.7.40
     "@swc/helpers": ^0.5.12
     "@types/mocha": ^10.0.7
-    "@types/node": ^20.16.3
+    "@types/node": ^20.17.6
     "@types/react": 18.3.5
     "@types/react-dom": ^18.3.0
     "@typescript-eslint/eslint-plugin": ^8.11.0
