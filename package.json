@@ -8,13 +8,10 @@
 		"build": "tsc && vite build",
 		"build-test": "tsc && vite build --mode staging",
 		"preview": "vite preview",
-		"prettier": "prettier --config ./.prettierrc --ignore-path  ./.prettierignore --write \"**/*.ts*\" \"**/*.scss\" \"*.json\" \"*.md\"",
-		"prettier-check": "prettier --list-different --config ./.prettierrc --ignore-path  ./.prettierignore \"**/*.ts*\" \"**/*.scss\" \"*.json\" \"*.md\"",
-		"lint-check": "yarn prettier-check && yarn eslint && yarn stylelint-check",
-		"lint": "yarn prettier; yarn eslint; yarn stylelint",
-		"eslint": "eslint",
-		"stylelint": "stylelint --config ./.stylelintrc --fix \"src/**/*.scss\" --color --cache",
-		"stylelint-check": "stylelint --config ./.stylelintrc \"src/**/*.scss\" --color --cache",
+		"format": "biome format --fix",
+		"format-check": "biome format",
+		"lint": "yarn format && biome lint --fix",
+		"lint-check": "biome lint",
 		"outdated": "yarn upgrade-interactive"
 	},
 	"dependencies": {
@@ -34,6 +31,7 @@
 		"rollbar": "^2.26.4"
 	},
 	"devDependencies": {
+		"@biomejs/biome": "1.9.4",
 		"@swc/core": "1.9.3",
 		"@swc/helpers": "^0.5.15",
 		"@types/mocha": "^10.0.10",
