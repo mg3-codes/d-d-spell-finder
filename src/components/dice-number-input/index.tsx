@@ -4,7 +4,8 @@
  * @format
  */
 
-import React, { useCallback, useEffect, useState } from "react";
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
@@ -28,7 +29,7 @@ export const DiceNumberInput = ({
 	const [decreaseIsDisabled, setDecreaseIsDisabled] = useState<boolean>(true);
 
 	const inputIsValid = (): boolean => {
-		const valueAsNumber = parseInt(value);
+		const valueAsNumber = Number.parseInt(value);
 
 		if (valueAsNumber < 0) return false;
 
@@ -39,10 +40,8 @@ export const DiceNumberInput = ({
 		if (!inputIsValid()) setShowError(true);
 		else setShowError(false);
 
-		const valueAsNumber = parseInt(value);
-		setDecreaseIsDisabled(
-			Number.isNaN(valueAsNumber) || valueAsNumber <= 0,
-		);
+		const valueAsNumber = Number.parseInt(value);
+		setDecreaseIsDisabled(Number.isNaN(valueAsNumber) || valueAsNumber <= 0);
 	}, [value]);
 
 	const handleUpdateValue = useCallback(

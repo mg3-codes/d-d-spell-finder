@@ -6,10 +6,10 @@
 
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
 import {
-	CellClickedEvent,
-	ColDef,
-	ColumnMovedEvent,
-	GetRowIdParams,
+	type CellClickedEvent,
+	type ColDef,
+	type ColumnMovedEvent,
+	type GetRowIdParams,
 	ModuleRegistry,
 } from "@ag-grid-community/core";
 import { AgGridReact } from "@ag-grid-community/react";
@@ -27,7 +27,7 @@ import Modal from "react-bootstrap/Modal";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
 
-import { buildRow, TableRow } from "../../types/table-row";
+import { buildRow, type TableRow } from "../../types/table-row";
 
 import {
 	defaultColDef,
@@ -38,7 +38,7 @@ import {
 import spellJson from "../../assets/5e-spells.json";
 import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
-import Spell from "../../types/spell";
+import type Spell from "../../types/spell";
 import { ColumnContext } from "../column-context-provider";
 import { SelectedRowContext } from "../selected-row-context-provider";
 import { ThemeContext } from "../theme-context-provider";
@@ -48,7 +48,7 @@ import { AppSettingsContext } from "../app-settings-provider";
 
 import "../../styles/ag-grid.scss";
 import "./table.scss";
-import { LogArgument } from "rollbar";
+import type { LogArgument } from "rollbar";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
@@ -66,8 +66,7 @@ const Table = (): JSX.Element => {
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 	const [modalTitle, setModalTitle] = useState<string>("");
 	const [modalText, setModalText] = useState<string>("");
-	const [showCookieToast, setShowCookieToast] =
-		useState<boolean>(!useCookies);
+	const [showCookieToast, setShowCookieToast] = useState<boolean>(!useCookies);
 	const gridRef = useRef<AgGridReact>(null);
 	const rollbar = useRollbar();
 
@@ -148,17 +147,14 @@ const Table = (): JSX.Element => {
 			if (
 				selectedColumns.find(
 					(value) =>
-						columnDefinition.headerName ===
-						mapColumnToDisplayName(value),
+						columnDefinition.headerName === mapColumnToDisplayName(value),
 				) === undefined
 			)
 				columnDefinition.hide = true;
 			else columnDefinition.hide = false;
 
 			setColumnDefinitions([
-				...columnDefinitions.filter(
-					(x) => x.field !== columnDefinition.field,
-				),
+				...columnDefinitions.filter((x) => x.field !== columnDefinition.field),
 				columnDefinition,
 			]);
 		}
@@ -190,9 +186,7 @@ const Table = (): JSX.Element => {
 				<Modal.Header closeButton>
 					<Modal.Title>{modalTitle}</Modal.Title>
 				</Modal.Header>
-				<Modal.Body style={{ whiteSpace: "pre-line" }}>
-					{modalText}
-				</Modal.Body>
+				<Modal.Body style={{ whiteSpace: "pre-line" }}>{modalText}</Modal.Body>
 				<Modal.Footer>
 					<Button variant="secondary" onClick={handleModalClose}>
 						Close
@@ -236,10 +230,9 @@ const Table = (): JSX.Element => {
 						<Toast.Body>
 							<div className="cookie-toast-content">
 								<p>
-									Allowing these cookies doesn&apos;t allow us
-									to track you. It only allows us to save some
-									preferences so we can load your settings and
-									table layout when you return.
+									Allowing these cookies doesn&apos;t allow us to track you. It
+									only allows us to save some preferences so we can load your
+									settings and table layout when you return.
 								</p>
 								<p>
 									See exactly what we do with cookies{" "}
@@ -253,16 +246,10 @@ const Table = (): JSX.Element => {
 									</a>
 								</p>
 								<div>
-									<Button
-										variant="success"
-										onClick={acceptCookies}
-									>
+									<Button variant="success" onClick={acceptCookies}>
 										Accept
 									</Button>
-									<Button
-										variant="outline-danger"
-										onClick={rejectCookies}
-									>
+									<Button variant="outline-danger" onClick={rejectCookies}>
 										Reject
 									</Button>
 								</div>

@@ -4,13 +4,14 @@
  * @format
  */
 
-import React, { useCallback, useEffect, useState } from "react";
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import { DiceNumberInput } from "../dice-number-input";
 
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
+import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import BoostDie from "../../classes/edge-of-the-empire-dice/boost-die";
 import SetbackDie from "../../classes/edge-of-the-empire-dice/setback-die";
 import AbilityDie from "../../classes/edge-of-the-empire-dice/ability-die";
@@ -31,8 +32,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 	const [boostInputValue, setBoostInputValue] = useState<string>("0");
 	const [setbackInputValue, setSetbackInputValue] = useState<string>("0");
 	const [abilityInputValue, setAbilityInputValue] = useState<string>("0");
-	const [difficultyInputValue, setDifficultyInputValue] =
-		useState<string>("0");
+	const [difficultyInputValue, setDifficultyInputValue] = useState<string>("0");
 	const [proficiencyInputValue, setProficiencyInputValue] =
 		useState<string>("0");
 	const [challengeInputValue, setChallengeInputValue] = useState<string>("0");
@@ -50,31 +50,31 @@ export const EdgeOfTheEmpireDiceSelector = ({
 			force: [],
 		};
 
-		const boost = parseInt(boostInputValue);
+		const boost = Number.parseInt(boostInputValue);
 		for (let rolls = 0; rolls < boost; rolls++) {
 			dice.boost.push(new BoostDie());
 		}
-		const setback = parseInt(setbackInputValue);
+		const setback = Number.parseInt(setbackInputValue);
 		for (let rolls = 0; rolls < setback; rolls++) {
 			dice.setback.push(new SetbackDie());
 		}
-		const ability = parseInt(abilityInputValue);
+		const ability = Number.parseInt(abilityInputValue);
 		for (let rolls = 0; rolls < ability; rolls++) {
 			dice.ability.push(new AbilityDie());
 		}
-		const difficulty = parseInt(difficultyInputValue);
+		const difficulty = Number.parseInt(difficultyInputValue);
 		for (let rolls = 0; rolls < difficulty; rolls++) {
 			dice.difficulty.push(new DifficultyDie());
 		}
-		const proficiency = parseInt(proficiencyInputValue);
+		const proficiency = Number.parseInt(proficiencyInputValue);
 		for (let rolls = 0; rolls < proficiency; rolls++) {
 			dice.proficiency.push(new ProficiencyDie());
 		}
-		const challenge = parseInt(challengeInputValue);
+		const challenge = Number.parseInt(challengeInputValue);
 		for (let rolls = 0; rolls < challenge; rolls++) {
 			dice.challenge.push(new ChallengeDie());
 		}
-		const force = parseInt(forceInputValue);
+		const force = Number.parseInt(forceInputValue);
 		for (let rolls = 0; rolls < force; rolls++) {
 			dice.force.push(new ForceDie());
 		}
@@ -110,16 +110,13 @@ export const EdgeOfTheEmpireDiceSelector = ({
 
 	useEffect(() => {
 		if (Number.parseInt(boostInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(setbackInputValue) > 0)
-			setRollIsDisabled(false);
-		else if (Number.parseInt(abilityInputValue) > 0)
-			setRollIsDisabled(false);
+		else if (Number.parseInt(setbackInputValue) > 0) setRollIsDisabled(false);
+		else if (Number.parseInt(abilityInputValue) > 0) setRollIsDisabled(false);
 		else if (Number.parseInt(difficultyInputValue) > 0)
 			setRollIsDisabled(false);
 		else if (Number.parseInt(proficiencyInputValue) > 0)
 			setRollIsDisabled(false);
-		else if (Number.parseInt(challengeInputValue) > 0)
-			setRollIsDisabled(false);
+		else if (Number.parseInt(challengeInputValue) > 0) setRollIsDisabled(false);
 		else if (Number.parseInt(forceInputValue) > 0) setRollIsDisabled(false);
 		else setRollIsDisabled(true);
 	}, [
@@ -135,12 +132,12 @@ export const EdgeOfTheEmpireDiceSelector = ({
 	const handleIncrease = (
 		currentValue: string,
 		updateFunction: React.Dispatch<React.SetStateAction<string>>,
-	) => updateFunction((parseInt(currentValue) + 1).toString());
+	) => updateFunction((Number.parseInt(currentValue) + 1).toString());
 
 	const handleDecrease = (
 		currentValue: string,
 		updateFunction: React.Dispatch<React.SetStateAction<string>>,
-	) => updateFunction(Math.max(parseInt(currentValue) - 1, 0).toString());
+	) => updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString());
 
 	const handleBoostIncreaseClick = useCallback(
 		() => handleIncrease(boostInputValue, setBoostInputValue),

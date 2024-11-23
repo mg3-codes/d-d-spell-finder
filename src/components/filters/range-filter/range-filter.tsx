@@ -4,15 +4,16 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import { type CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
+import type React from "react";
+import {type 
+	ChangeEventHandler,type 
 	ReactElement,
 	useCallback,
 	useEffect,
 	useState,
-} from "react";
+} from "react"
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -22,7 +23,7 @@ import {
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./range-filter.scss";
@@ -41,10 +42,7 @@ const RangeFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	}, [selectedRanges]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
-		return numberBasedFilterDoesFilterPass(
-			props?.data?.range,
-			selectedRanges,
-		);
+		return numberBasedFilterDoesFilterPass(props?.data?.range, selectedRanges);
 	};
 
 	useGridFilter({ doesFilterPass });
@@ -57,9 +55,7 @@ const RangeFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoRanges = useCallback(() => setSelectedRanges([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const range = e.target.getAttribute("data-range");
 
 			if (!range) {
@@ -67,11 +63,7 @@ const RangeFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				return;
 			}
 
-			numberBasedFilterHandleCheck(
-				selectedRanges,
-				setSelectedRanges,
-				range,
-			);
+			numberBasedFilterHandleCheck(selectedRanges, setSelectedRanges, range);
 		},
 		[selectedRanges],
 	);
@@ -189,9 +181,7 @@ const RangeFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToRangeDisplayName(
-					Range.OneHundredTwentyByTwenty,
-				)}
+				label={mapNumberToRangeDisplayName(Range.OneHundredTwentyByTwenty)}
 				checked={isChecked(Range.OneHundredTwentyByTwenty)}
 				data-range={Range.OneHundredTwentyByTwenty}
 			/>
@@ -205,9 +195,7 @@ const RangeFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToRangeDisplayName(
-					Range.OneHundredFiftyBySixty,
-				)}
+				label={mapNumberToRangeDisplayName(Range.OneHundredFiftyBySixty)}
 				checked={isChecked(Range.OneHundredFiftyBySixty)}
 				data-range={Range.OneHundredFiftyBySixty}
 			/>

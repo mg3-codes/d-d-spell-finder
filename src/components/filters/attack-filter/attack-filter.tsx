@@ -4,15 +4,16 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import { type CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
+import type React from "react";
+import {type 
+	ChangeEventHandler,type 
 	ReactElement,
 	useCallback,
 	useEffect,
 	useState,
-} from "react";
+} from "react"
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -22,7 +23,7 @@ import {
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./attack-filter.scss";
@@ -58,9 +59,7 @@ const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoAttacks = useCallback(() => setSelectedAttacks([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const attack = e.target.getAttribute("data-attack");
 
 			if (!attack) {
@@ -68,11 +67,7 @@ const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				return;
 			}
 
-			numberBasedFilterHandleCheck(
-				selectedAttacks,
-				setSelectedAttacks,
-				attack,
-			);
+			numberBasedFilterHandleCheck(selectedAttacks, setSelectedAttacks, attack);
 		},
 		[selectedAttacks],
 	);

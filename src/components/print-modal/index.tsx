@@ -5,12 +5,13 @@
  */
 
 import { useRollbar } from "@rollbar/react";
-import React, {
+import type React from "react";
+import {type 
 	MouseEventHandler,
 	useCallback,
 	useContext,
 	useState,
-} from "react";
+} from "react"
 import Alert from "react-bootstrap/Alert";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";
@@ -23,7 +24,7 @@ import { PrintCard } from "../print-card";
 import { ThemeContext } from "../theme-context-provider";
 
 import { Theme } from "../../enums/theme";
-import { TableRow } from "../../types/table-row";
+import type { TableRow } from "../../types/table-row";
 
 import "./print-modal.scss";
 
@@ -43,16 +44,14 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 
 	const handleNumberPerRowClick: MouseEventHandler<HTMLElement> = useCallback(
 		(e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
-			const selection = (e.target as HTMLElement).getAttribute(
-				"data-cards",
-			);
+			const selection = (e.target as HTMLElement).getAttribute("data-cards");
 
 			if (!selection) {
 				rollbar.warning("selection was null", e);
 				return;
 			}
 
-			setSelectedNumberPerRow(parseInt(selection));
+			setSelectedNumberPerRow(Number.parseInt(selection));
 		},
 		[],
 	);
@@ -70,11 +69,7 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 					</Alert>
 				)}
 				{printError && (
-					<Alert
-						variant="danger"
-						dismissible
-						onClose={clearPrintError}
-					>
+					<Alert variant="danger" dismissible onClose={clearPrintError}>
 						<i className="bi bi-exclamation-triangle" />
 						&nbsp; There was an error printing.
 					</Alert>
@@ -84,9 +79,7 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 						<Dropdown>
 							<Dropdown.Toggle>
 								Cards per Row&nbsp;
-								<Badge bg="secondary">
-									{selectedNumberPerRow}
-								</Badge>
+								<Badge bg="secondary">{selectedNumberPerRow}</Badge>
 							</Dropdown.Toggle>
 							<Dropdown.Menu>
 								<Dropdown.Item
@@ -127,16 +120,11 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 							<Carousel.Item key={`${row.name}-carousel-item`}>
 								<div
 									className={`preview-container ${
-										currentTheme === Theme.Dark
-											? "dark"
-											: ""
+										currentTheme === Theme.Dark ? "dark" : ""
 									}`}
 								>
 									<div className="preview">
-										<PrintCard
-											key={`${row.name}-print-card`}
-											row={row}
-										/>
+										<PrintCard key={`${row.name}-print-card`} row={row} />
 									</div>
 								</div>
 							</Carousel.Item>

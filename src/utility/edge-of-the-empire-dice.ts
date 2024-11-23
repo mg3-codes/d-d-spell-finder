@@ -5,7 +5,7 @@
  */
 
 import { EdgeOfTheEmpireDiceSymbol } from "../enums/edge-of-the-empire-dice-symbol";
-import EdgeOfTheEmpireDiceResult from "../types/edge-of-the-empire-dice-result";
+import type EdgeOfTheEmpireDiceResult from "../types/edge-of-the-empire-dice-result";
 
 const determineRollSuccess = (result: EdgeOfTheEmpireDiceResult): boolean => {
 	return result.successAndFailure > 0;

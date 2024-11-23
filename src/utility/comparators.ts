@@ -4,7 +4,7 @@
  * @format
  */
 
-import { RowArea } from "../types/table-row";
+import type { RowArea } from "../types/table-row";
 
 export const areaValueComparator = (
 	valueA: RowArea,

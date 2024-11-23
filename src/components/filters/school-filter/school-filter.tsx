@@ -4,15 +4,16 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import { type CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
+import type React from "react";
+import {type 
+	ChangeEventHandler,type 
 	ReactElement,
 	useCallback,
 	useEffect,
 	useState,
-} from "react";
+} from "react"
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -22,7 +23,7 @@ import {
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./school-filter.scss";
@@ -57,9 +58,7 @@ const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoSchools = useCallback(() => setSelectedSchools([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const school = e.target.getAttribute("data-school");
 
 			if (!school) {
@@ -67,11 +66,7 @@ const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				return;
 			}
 
-			numberBasedFilterHandleCheck(
-				selectedSchools,
-				setSelectedSchools,
-				school,
-			);
+			numberBasedFilterHandleCheck(selectedSchools, setSelectedSchools, school);
 		},
 		[selectedSchools],
 	);

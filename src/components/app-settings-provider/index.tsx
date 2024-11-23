@@ -4,7 +4,8 @@
  * @format
  */
 
-import React, { createContext, useState } from "react";
+import type React from "react";
+import { createContext, useState } from "react";
 
 export type AppSettingsContext = {
 	useCookies: boolean;

@@ -27,16 +27,10 @@ export const EdgeSymbolKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							color
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} color />
 					</td>
 					<td>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-							color
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} color />
 					</td>
 				</tr>
 				<tr>
@@ -51,10 +45,7 @@ export const EdgeSymbolKey = () => {
 						/>
 					</td>
 					<td>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-							color
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} color />
 					</td>
 				</tr>
 				<tr>
@@ -63,16 +54,10 @@ export const EdgeSymbolKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Triumph}
-							color
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Triumph} color />
 					</td>
 					<td>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Despair}
-							color
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Despair} color />
 					</td>
 				</tr>
 				<tr>
@@ -81,14 +66,10 @@ export const EdgeSymbolKey = () => {
 				</tr>
 				<tr className="symbols">
 					<td className="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.LightSide} />
 					</td>
 					<td className="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.DarkSide} />
 					</td>
 				</tr>
 				<tr>
@@ -97,9 +78,7 @@ export const EdgeSymbolKey = () => {
 				</tr>
 				<tr>
 					<td>
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Blank} />
 					</td>
 				</tr>
 			</tbody>

@@ -5,7 +5,8 @@
  */
 
 import { useRollbar } from "@rollbar/react";
-import React, { MouseEventHandler, useCallback, useState } from "react";
+import type React from "react";
+import { type MouseEventHandler, useCallback, useState } from "react"
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -38,7 +39,7 @@ const Footer = () => {
 				return;
 			}
 
-			setSelectedContent(parseInt(numberAsString));
+			setSelectedContent(Number.parseInt(numberAsString));
 			setModalIsOpen(true);
 		},
 		[],
@@ -46,10 +47,7 @@ const Footer = () => {
 
 	const openGithub = useCallback(
 		() =>
-			window.open(
-				"https://github.com/mg3-codes/d-d-spell-finder",
-				"_blank",
-			),
+			window.open("https://github.com/mg3-codes/d-d-spell-finder", "_blank"),
 		[],
 	);
 

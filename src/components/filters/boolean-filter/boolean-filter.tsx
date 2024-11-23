@@ -4,19 +4,20 @@
  * @format
  */
 
-import { RowNode } from "@ag-grid-community/core";
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import type { RowNode } from "@ag-grid-community/core";
+import { type CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
+import type React from "react";
+import {type 
+	ChangeEventHandler,type 
 	ReactElement,
 	useCallback,
 	useEffect,
 	useState,
-} from "react";
+} from "react"
 import Form from "react-bootstrap/Form";
 
-import { TableRow } from "../../../types/table-row";
+import type { TableRow } from "../../../types/table-row";
 
 import "./boolean-filter.scss";
 
@@ -26,9 +27,9 @@ type BooleanBasedFilterProps = {
 };
 
 enum BooleanBasedFilterState {
-	All,
-	True,
-	False,
+	All = 0,
+	True = 1,
+	False = 2,
 }
 
 const BooleanFilter = ({
@@ -63,9 +64,7 @@ const BooleanFilter = ({
 	useGridFilter({ doesFilterPass });
 
 	const handleClick: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const state = e.target.getAttribute("data-boolean");
 
 			if (!state) {
@@ -73,7 +72,7 @@ const BooleanFilter = ({
 				return;
 			}
 
-			setSelectedState(parseInt(state) as BooleanBasedFilterState);
+			setSelectedState(Number.parseInt(state) as BooleanBasedFilterState);
 		},
 		[selectedState],
 	);

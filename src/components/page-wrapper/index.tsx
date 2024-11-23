@@ -4,7 +4,8 @@
  * @format
  */
 
-import React, { useContext, useLayoutEffect } from "react";
+import type React from "react";
+import { useContext, useLayoutEffect } from "react";
 
 import { ThemeContext } from "../theme-context-provider";
 

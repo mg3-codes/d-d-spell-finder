@@ -4,11 +4,11 @@
  * @format
  */
 
-import { ITooltipParams } from "@ag-grid-community/core";
+import type { ITooltipParams } from "@ag-grid-community/core";
 import { mapNumberToRangeDisplayName } from "../enums/ranges";
 
 import { mapNumberToSourceDisplayName } from "../enums/sources";
-import Spell from "../types/spell";
+import type Spell from "../types/spell";
 
 export const rangeTooltipValueGetter = (
 	params: ITooltipParams<Spell>,

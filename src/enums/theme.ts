@@ -5,7 +5,7 @@
  */
 
 export enum Theme {
-	Light,
-	Dark,
-	Auto,
+	Light = 0,
+	Dark = 1,
+	Auto = 2,
 }

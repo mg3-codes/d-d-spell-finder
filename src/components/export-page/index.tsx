@@ -58,7 +58,7 @@ const ExportPage = () => {
 
 	const generatedCards = useMemo(() => {
 		const elements: JSX.Element[] = [];
-		const numColumns = parseInt(queryParams.get("numPerRow") ?? "3");
+		const numColumns = Number.parseInt(queryParams.get("numPerRow") ?? "3");
 		const rowsPerPage = 2;
 		let counter = 0;
 		while (counter <= selectedRows.length) {

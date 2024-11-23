@@ -4,13 +4,14 @@
  * @format
  */
 
-import React, { useCallback, useEffect, useState } from "react";
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Pagination from "react-bootstrap/Pagination";
 
-import NumberDie from "../../classes/number-die";
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
+import type NumberDie from "../../classes/number-die";
+import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import { DiceType } from "../../enums/dice-type";
 import { NumberDiceResults } from "../number-dice-results";
 import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
@@ -51,7 +52,7 @@ export const RollHistoryModal = ({
 	const handlePaginationClick = useCallback(
 		(e: React.MouseEvent) =>
 			setCurrentRoll(
-				parseInt(e.currentTarget.getAttribute("data-roll") ?? "0"),
+				Number.parseInt(e.currentTarget.getAttribute("data-roll") ?? "0"),
 			),
 		[],
 	);
@@ -115,15 +116,11 @@ export const RollHistoryModal = ({
 					)}
 					<Pagination>
 						<Pagination.First
-							disabled={
-								currentHistory.length === 0 || currentRoll === 0
-							}
+							disabled={currentHistory.length === 0 || currentRoll === 0}
 							onClick={onFirstClick}
 						/>
 						<Pagination.Prev
-							disabled={
-								currentHistory.length === 0 || currentRoll === 0
-							}
+							disabled={currentHistory.length === 0 || currentRoll === 0}
 							onClick={onPrevClick}
 						/>
 						{getPages()}

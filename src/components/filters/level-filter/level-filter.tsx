@@ -4,15 +4,16 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import { type CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
+import type React from "react";
+import {type 
+	ChangeEventHandler,type 
 	ReactElement,
 	useCallback,
 	useEffect,
 	useState,
-} from "react";
+} from "react"
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -21,7 +22,7 @@ import {
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./level-filter.scss";
@@ -40,10 +41,7 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	}, [selectedLevels]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
-		return numberBasedFilterDoesFilterPass(
-			props?.data?.level,
-			selectedLevels,
-		);
+		return numberBasedFilterDoesFilterPass(props?.data?.level, selectedLevels);
 	};
 
 	useGridFilter({ doesFilterPass });
@@ -56,9 +54,7 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoLevels = useCallback(() => setSelectedLevels([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const numberAsString = e.target.getAttribute("data-level");
 
 			if (!numberAsString) {
@@ -66,7 +62,7 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				return;
 			}
 
-			const level = parseInt(numberAsString);
+			const level = Number.parseInt(numberAsString);
 			numberBasedFilterHandleCheck(
 				selectedLevels,
 				setSelectedLevels,

@@ -9,7 +9,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
 
-import NumberDie from "../../classes/number-die";
+import type NumberDie from "../../classes/number-die";
 
 import "./number-dice-results.scss";
 
@@ -27,16 +27,13 @@ export const NumberDiceResults = ({
 	const [sumMap, setSumMap] = useState<Map<number, number>>(
 		new Map<number, number>(),
 	);
-	const [hasTwoSidedResults, setHasTwoSidedResults] =
-		useState<boolean>(false);
+	const [hasTwoSidedResults, setHasTwoSidedResults] = useState<boolean>(false);
 	const [hasFourSidedResults, setHasFourSidedResults] =
 		useState<boolean>(false);
-	const [hasSixSidedResults, setHasSixSidedResults] =
-		useState<boolean>(false);
+	const [hasSixSidedResults, setHasSixSidedResults] = useState<boolean>(false);
 	const [hasEightSidedResults, setHasEightSidedResults] =
 		useState<boolean>(false);
-	const [hasTenSidedResults, setHasTenSidedResults] =
-		useState<boolean>(false);
+	const [hasTenSidedResults, setHasTenSidedResults] = useState<boolean>(false);
 	const [hasTwelveSidedResults, setHasTwelveSidedResults] =
 		useState<boolean>(false);
 	const [hasTwentySidedResults, setHasTwentySidedResults] =
@@ -95,28 +92,16 @@ export const NumberDiceResults = ({
 			sumMap.set(8, calculateSum(results?.filter((x) => x.sides === 8))),
 		);
 		setSumMap(
-			sumMap.set(
-				10,
-				calculateSum(results?.filter((x) => x.sides === 10)),
-			),
+			sumMap.set(10, calculateSum(results?.filter((x) => x.sides === 10))),
 		);
 		setSumMap(
-			sumMap.set(
-				12,
-				calculateSum(results?.filter((x) => x.sides === 12)),
-			),
+			sumMap.set(12, calculateSum(results?.filter((x) => x.sides === 12))),
 		);
 		setSumMap(
-			sumMap.set(
-				20,
-				calculateSum(results?.filter((x) => x.sides === 20)),
-			),
+			sumMap.set(20, calculateSum(results?.filter((x) => x.sides === 20))),
 		);
 		setSumMap(
-			sumMap.set(
-				100,
-				calculateSum(results?.filter((x) => x.sides === 100)),
-			),
+			sumMap.set(100, calculateSum(results?.filter((x) => x.sides === 100))),
 		);
 	}, [sumResults, results]);
 
@@ -152,14 +137,10 @@ export const NumberDiceResults = ({
 								{results
 									?.filter((x) => x.sides === 2)
 									.map((x, index) => (
-										<span key={`two-sided-${index}`}>
-											{x.value}&nbsp;
-										</span>
+										<span key={`two-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && (
-								<td className="sum">{sumMap.get(2)}</td>
-							)}
+							{sumResults && <td className="sum">{sumMap.get(2)}</td>}
 						</tr>
 					)}
 					{hasFourSidedResults && (
@@ -169,14 +150,10 @@ export const NumberDiceResults = ({
 								{results
 									?.filter((x) => x.sides === 4)
 									.map((x, index) => (
-										<span key={`four-sided-${index}`}>
-											{x.value}&nbsp;
-										</span>
+										<span key={`four-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && (
-								<td className="sum">{sumMap.get(4)}</td>
-							)}
+							{sumResults && <td className="sum">{sumMap.get(4)}</td>}
 						</tr>
 					)}
 					{hasSixSidedResults && (
@@ -186,14 +163,10 @@ export const NumberDiceResults = ({
 								{results
 									?.filter((x) => x.sides === 6)
 									.map((x, index) => (
-										<span key={`six-sided-${index}`}>
-											{x.value}&nbsp;
-										</span>
+										<span key={`six-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && (
-								<td className="sum">{sumMap.get(6)}</td>
-							)}
+							{sumResults && <td className="sum">{sumMap.get(6)}</td>}
 						</tr>
 					)}
 					{hasEightSidedResults && (
@@ -203,14 +176,10 @@ export const NumberDiceResults = ({
 								{results
 									?.filter((x) => x.sides === 8)
 									.map((x, index) => (
-										<span key={`eight-sided-${index}`}>
-											{x.value}&nbsp;
-										</span>
+										<span key={`eight-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && (
-								<td className="sum">{sumMap.get(8)}</td>
-							)}
+							{sumResults && <td className="sum">{sumMap.get(8)}</td>}
 						</tr>
 					)}
 					{hasTenSidedResults && (
@@ -220,14 +189,10 @@ export const NumberDiceResults = ({
 								{results
 									?.filter((x) => x.sides === 10)
 									.map((x, index) => (
-										<span key={`ten-sided-${index}`}>
-											{x.value}&nbsp;
-										</span>
+										<span key={`ten-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && (
-								<td className="sum">{sumMap.get(10)}</td>
-							)}
+							{sumResults && <td className="sum">{sumMap.get(10)}</td>}
 						</tr>
 					)}
 					{hasTwelveSidedResults && (
@@ -237,14 +202,10 @@ export const NumberDiceResults = ({
 								{results
 									?.filter((x) => x.sides === 12)
 									.map((x, index) => (
-										<span key={`twelve-sided-${index}`}>
-											{x.value}&nbsp;
-										</span>
+										<span key={`twelve-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && (
-								<td className="sum">{sumMap.get(12)}</td>
-							)}
+							{sumResults && <td className="sum">{sumMap.get(12)}</td>}
 						</tr>
 					)}
 					{hasTwentySidedResults && (
@@ -254,14 +215,10 @@ export const NumberDiceResults = ({
 								{results
 									?.filter((x) => x.sides === 20)
 									.map((x, index) => (
-										<span key={`twenty-sided-${index}`}>
-											{x.value}&nbsp;
-										</span>
+										<span key={`twenty-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && (
-								<td className="sum">{sumMap.get(20)}</td>
-							)}
+							{sumResults && <td className="sum">{sumMap.get(20)}</td>}
 						</tr>
 					)}
 					{hasOneHundredSidedResults && (
@@ -271,16 +228,12 @@ export const NumberDiceResults = ({
 								{results
 									?.filter((x) => x.sides === 100)
 									.map((x, index) => (
-										<span
-											key={`one-hundred-sided-${index}`}
-										>
+										<span key={`one-hundred-sided-${index}`}>
 											{x.value}&nbsp;
 										</span>
 									))}
 							</td>
-							{sumResults && (
-								<td className="sum">{sumMap.get(100)}</td>
-							)}
+							{sumResults && <td className="sum">{sumMap.get(100)}</td>}
 						</tr>
 					)}
 				</tbody>

@@ -8,7 +8,7 @@ import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 import {
-	EdgeOfTheEmpireDiceSymbol,
+	type EdgeOfTheEmpireDiceSymbol,
 	mapSymbolToCharacter,
 	mapSymbolToDisplayName,
 } from "../../enums/edge-of-the-empire-dice-symbol";

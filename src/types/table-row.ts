@@ -4,8 +4,8 @@
  * @format
  */
 
-import { Distance } from "../enums/distances";
-import Spell from "./spell";
+import type { Distance } from "../enums/distances";
+import type Spell from "./spell";
 
 export type RowArea = {
 	distance: Distance;

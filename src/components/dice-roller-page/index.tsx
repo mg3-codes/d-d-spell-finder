@@ -21,7 +21,7 @@ const Footer = React.lazy(() => import("../footer"));
 import { NumberedDiceSelector } from "../numbered-dice-selector";
 import { NumberDiceResults } from "../number-dice-results";
 
-import NumberDie from "../../classes/number-die";
+import type NumberDie from "../../classes/number-die";
 import {
 	DiceType,
 	mapNumberToDiceTypeDisplayName,
@@ -29,7 +29,7 @@ import {
 
 import { AppSettingsContext } from "../app-settings-provider";
 import { EdgeOfTheEmpireDiceSelector } from "../edge-of-the-empire-dice-selector";
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
+import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
 import { getCookie, setCookie } from "../../utility/cookies";
 
@@ -51,13 +51,12 @@ export const DiceRollerPage = () => {
 		if (useCookies) {
 			const cookie = getCookie(cookieName);
 
-			if (cookie) return parseInt(cookie);
+			if (cookie) return Number.parseInt(cookie);
 		}
 
 		return DiceType.Numbered;
 	});
-	const [historyModalIsOpen, setHistoryModalIsOpen] =
-		useState<boolean>(false);
+	const [historyModalIsOpen, setHistoryModalIsOpen] = useState<boolean>(false);
 	const [numberedDiceRollHistory, setNumberedDiceRollHistory] = useState<
 		NumberDie[][]
 	>([]);
@@ -92,10 +91,7 @@ export const DiceRollerPage = () => {
 
 	const openHistoryModal = useCallback(() => setHistoryModalIsOpen(true), []);
 
-	const closeHistoryModal = useCallback(
-		() => setHistoryModalIsOpen(false),
-		[],
-	);
+	const closeHistoryModal = useCallback(() => setHistoryModalIsOpen(false), []);
 
 	const handleDiceTypeChange = (type: DiceType): void => {
 		if (useCookies) setCookie(cookieName, type.toString(), false);
@@ -125,23 +121,16 @@ export const DiceRollerPage = () => {
 								eventKey={DiceType.Numbered}
 								onClick={handleNumberedDiceTypeClick}
 							>
-								{mapNumberToDiceTypeDisplayName(
-									DiceType.Numbered,
-								)}
+								{mapNumberToDiceTypeDisplayName(DiceType.Numbered)}
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey={DiceType.EdgeOfTheEmpire}
 								onClick={handleEdgeOfTheEmpireDiceTypeClick}
 							>
-								{mapNumberToDiceTypeDisplayName(
-									DiceType.EdgeOfTheEmpire,
-								)}
+								{mapNumberToDiceTypeDisplayName(DiceType.EdgeOfTheEmpire)}
 							</Dropdown.Item>
 						</DropdownButton>
-						<Button
-							variant="outline-primary"
-							onClick={openHistoryModal}
-						>
+						<Button variant="outline-primary" onClick={openHistoryModal}>
 							Roll History
 						</Button>
 					</div>
@@ -160,9 +149,7 @@ export const DiceRollerPage = () => {
 						{diceType === DiceType.EdgeOfTheEmpire && (
 							<>
 								<EdgeOfTheEmpireDiceSelector
-									onRollClicked={
-										setEdgeOfTheEmpireDiceRollResult
-									}
+									onRollClicked={setEdgeOfTheEmpireDiceRollResult}
 								/>
 								<EdgeOfTheEmpireDiceResults
 									results={edgeOfTheEmpireDiceRollResult}

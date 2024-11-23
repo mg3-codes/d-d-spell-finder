@@ -8,13 +8,13 @@ import React, { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
+import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 
 import {
 	EdgeOfTheEmpireDiceSymbol,
 	mapSymbolToCharacter,
 } from "../../enums/edge-of-the-empire-dice-symbol";
-import EdgeOfTheEmpireDiceResult from "../../types/edge-of-the-empire-dice-result";
+import type EdgeOfTheEmpireDiceResult from "../../types/edge-of-the-empire-dice-result";
 import { getOutcomeFromSymbols } from "../../utility/edge-of-the-empire-dice";
 import { EdgeDiceSymbol } from "../edge-dice-symbol";
 
@@ -88,9 +88,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					...results.setback.flatMap((x) => x.mapValueToResults()),
 					...results.ability.flatMap((x) => x.mapValueToResults()),
 					...results.difficulty.flatMap((x) => x.mapValueToResults()),
-					...results.proficiency.flatMap((x) =>
-						x.mapValueToResults(),
-					),
+					...results.proficiency.flatMap((x) => x.mapValueToResults()),
 					...results.challenge.flatMap((x) => x.mapValueToResults()),
 					...results.force.flatMap((x) => x.mapValueToResults()),
 				]),
@@ -114,10 +112,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">🟦</td>
 							<td className="eote-results">
 								{results?.boost.map((x, index) => (
-									<div
-										className="dice-result"
-										key={`boost-${index}`}
-									>
+									<div className="dice-result" key={`boost-${index}`}>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
@@ -138,10 +133,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">⬛️</td>
 							<td className="eote-results">
 								{results?.setback.map((x, index) => (
-									<div
-										className="dice-result"
-										key={`setback-${index}`}
-									>
+									<div className="dice-result" key={`setback-${index}`}>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
@@ -162,10 +154,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">🟩</td>
 							<td className="eote-results">
 								{results?.ability.map((x, index) => (
-									<div
-										className="dice-result"
-										key={`ability-${index}`}
-									>
+									<div className="dice-result" key={`ability-${index}`}>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
@@ -186,10 +175,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">🟪</td>
 							<td className="eote-results">
 								{results?.difficulty.map((x, index) => (
-									<div
-										className="dice-result"
-										key={`difficulty-${index}`}
-									>
+									<div className="dice-result" key={`difficulty-${index}`}>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
@@ -210,10 +196,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">🟨</td>
 							<td className="eote-results">
 								{results?.proficiency.map((x, index) => (
-									<div
-										className="dice-result"
-										key={`proficiency-${index}`}
-									>
+									<div className="dice-result" key={`proficiency-${index}`}>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
@@ -234,10 +217,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">🟥</td>
 							<td className="eote-results">
 								{results?.challenge.map((x, index) => (
-									<div
-										className="dice-result"
-										key={`challenge-${index}`}
-									>
+									<div className="dice-result" key={`challenge-${index}`}>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
@@ -258,10 +238,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<td className="short-type">⬜️</td>
 							<td className="eote-results force-results">
 								{results?.force.map((x, index) => (
-									<div
-										className="dice-result"
-										key={`force-${index}`}
-									>
+									<div className="dice-result" key={`force-${index}`}>
 										{x
 											.mapValueToResults()
 											?.filter((x) => x !== null)
@@ -291,49 +268,37 @@ export const EdgeOfTheEmpireDiceResults = ({
 							<>
 								<tr>
 									<td className="results-success-and-failure">
-										{calculatedResults?.successAndFailure >
-										-1
+										{calculatedResults?.successAndFailure > -1
 											? "Success"
 											: "Failure"}
 									</td>
 									<td className="results-advantage-and-threat">
-										{calculatedResults?.advantageAndThreat >
-										-1
+										{calculatedResults?.advantageAndThreat > -1
 											? "Advantage"
 											: "Threat"}
 									</td>
 								</tr>
 								<tr>
 									<td className="results-success-and-failure">
-										{Math.abs(
-											calculatedResults.successAndFailure,
-										)}
+										{Math.abs(calculatedResults.successAndFailure)}
 									</td>
 									<td className="results-advantage-and-threat">
-										{Math.abs(
-											calculatedResults.advantageAndThreat,
-										)}
+										{Math.abs(calculatedResults.advantageAndThreat)}
 									</td>
 								</tr>
 								<tr className="roll-success">
 									<td className="label">Success:</td>
 									<td className="result">
-										{calculatedResults.rollSuccess
-											? "✅"
-											: "❌"}
+										{calculatedResults.rollSuccess ? "✅" : "❌"}
 									</td>
 									{calculatedResults.triumphs > 0 && (
 										<td className="triumph-indicator">
-											{mapSymbolToCharacter(
-												EdgeOfTheEmpireDiceSymbol.Triumph,
-											)}
+											{mapSymbolToCharacter(EdgeOfTheEmpireDiceSymbol.Triumph)}
 										</td>
 									)}
 									{calculatedResults.despairs > 0 && (
 										<td className="despair-indicator">
-											{mapSymbolToCharacter(
-												EdgeOfTheEmpireDiceSymbol.Despair,
-											)}
+											{mapSymbolToCharacter(EdgeOfTheEmpireDiceSymbol.Despair)}
 										</td>
 									)}
 									<td className="filler" />
@@ -343,12 +308,8 @@ export const EdgeOfTheEmpireDiceResults = ({
 						{hasForceResults && (
 							<>
 								<tr>
-									<td className="results-light-side">
-										Light Side
-									</td>
-									<td className="results-dark-side">
-										Dark Side
-									</td>
+									<td className="results-light-side">Light Side</td>
+									<td className="results-dark-side">Dark Side</td>
 								</tr>
 								<tr>
 									<td className="results-light-side">

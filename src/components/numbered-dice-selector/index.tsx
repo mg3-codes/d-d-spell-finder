@@ -4,7 +4,8 @@
  * @format
  */
 
-import React, { useCallback, useEffect, useState } from "react";
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -24,8 +25,7 @@ export const NumberedDiceSelector = ({
 	const [twoSidedInputValue, setTwoSidedInputValue] = useState<string>("0");
 	const [fourSidedInputValue, setFourSidedInputValue] = useState<string>("0");
 	const [sixSidedInputValue, setSixSidedInputValue] = useState<string>("0");
-	const [eightSidedInputValue, setEightSidedInputValue] =
-		useState<string>("0");
+	const [eightSidedInputValue, setEightSidedInputValue] = useState<string>("0");
 	const [tenSidedInputValue, setTenSidedInputValue] = useState<string>("0");
 	const [twelveSidedInputValue, setTwelveSidedInputValue] =
 		useState<string>("0");
@@ -38,35 +38,35 @@ export const NumberedDiceSelector = ({
 	const rollAllDice = useCallback((): void => {
 		const dice: NumberDie[] = [];
 
-		const twoSided = parseInt(twoSidedInputValue);
+		const twoSided = Number.parseInt(twoSidedInputValue);
 		for (let rolls = 0; rolls < twoSided; rolls++) {
 			dice.push(new NumberDie(2));
 		}
-		const fourSided = parseInt(fourSidedInputValue);
+		const fourSided = Number.parseInt(fourSidedInputValue);
 		for (let rolls = 0; rolls < fourSided; rolls++) {
 			dice.push(new NumberDie(4));
 		}
-		const sixSided = parseInt(sixSidedInputValue);
+		const sixSided = Number.parseInt(sixSidedInputValue);
 		for (let rolls = 0; rolls < sixSided; rolls++) {
 			dice.push(new NumberDie(6));
 		}
-		const eightSided = parseInt(eightSidedInputValue);
+		const eightSided = Number.parseInt(eightSidedInputValue);
 		for (let rolls = 0; rolls < eightSided; rolls++) {
 			dice.push(new NumberDie(8));
 		}
-		const tenSided = parseInt(tenSidedInputValue);
+		const tenSided = Number.parseInt(tenSidedInputValue);
 		for (let rolls = 0; rolls < tenSided; rolls++) {
 			dice.push(new NumberDie(10));
 		}
-		const twelveSided = parseInt(twelveSidedInputValue);
+		const twelveSided = Number.parseInt(twelveSidedInputValue);
 		for (let rolls = 0; rolls < twelveSided; rolls++) {
 			dice.push(new NumberDie(12));
 		}
-		const twentySided = parseInt(twentySidedInputValue);
+		const twentySided = Number.parseInt(twentySidedInputValue);
 		for (let rolls = 0; rolls < twentySided; rolls++) {
 			dice.push(new NumberDie(20));
 		}
-		const oneHundredSided = parseInt(oneHundredSidedInputValue);
+		const oneHundredSided = Number.parseInt(oneHundredSidedInputValue);
 		for (let rolls = 0; rolls < oneHundredSided; rolls++) {
 			dice.push(new NumberDie(100));
 		}
@@ -105,14 +105,11 @@ export const NumberedDiceSelector = ({
 
 	useEffect(() => {
 		if (Number.parseInt(twoSidedInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(fourSidedInputValue) > 0)
-			setRollIsDisabled(false);
-		else if (Number.parseInt(sixSidedInputValue) > 0)
-			setRollIsDisabled(false);
+		else if (Number.parseInt(fourSidedInputValue) > 0) setRollIsDisabled(false);
+		else if (Number.parseInt(sixSidedInputValue) > 0) setRollIsDisabled(false);
 		else if (Number.parseInt(eightSidedInputValue) > 0)
 			setRollIsDisabled(false);
-		else if (Number.parseInt(tenSidedInputValue) > 0)
-			setRollIsDisabled(false);
+		else if (Number.parseInt(tenSidedInputValue) > 0) setRollIsDisabled(false);
 		else if (Number.parseInt(twelveSidedInputValue) > 0)
 			setRollIsDisabled(false);
 		else if (Number.parseInt(twentySidedInputValue) > 0)
@@ -134,12 +131,12 @@ export const NumberedDiceSelector = ({
 	const handleIncrease = (
 		currentValue: string,
 		updateFunction: React.Dispatch<React.SetStateAction<string>>,
-	) => updateFunction((parseInt(currentValue) + 1).toString());
+	) => updateFunction((Number.parseInt(currentValue) + 1).toString());
 
 	const handleDecrease = (
 		currentValue: string,
 		updateFunction: React.Dispatch<React.SetStateAction<string>>,
-	) => updateFunction(Math.max(parseInt(currentValue) - 1, 0).toString());
+	) => updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString());
 
 	const handleTwoSidedIncreaseClick = useCallback(
 		() => handleIncrease(twoSidedInputValue, setTwoSidedInputValue),
@@ -213,19 +210,13 @@ export const NumberedDiceSelector = ({
 
 	const handleOneHundredSidedIncreaseClick = useCallback(
 		() =>
-			handleIncrease(
-				oneHundredSidedInputValue,
-				setOneHundredSidedInputValue,
-			),
+			handleIncrease(oneHundredSidedInputValue, setOneHundredSidedInputValue),
 		[oneHundredSidedInputValue],
 	);
 
 	const handleOneHundredSidedDecreaseClick = useCallback(
 		() =>
-			handleDecrease(
-				oneHundredSidedInputValue,
-				setOneHundredSidedInputValue,
-			),
+			handleDecrease(oneHundredSidedInputValue, setOneHundredSidedInputValue),
 		[oneHundredSidedInputValue],
 	);
 
@@ -303,12 +294,8 @@ export const NumberedDiceSelector = ({
 						<DiceNumberInput
 							value={oneHundredSidedInputValue}
 							updateValue={setOneHundredSidedInputValue}
-							handleIncreaseClick={
-								handleOneHundredSidedIncreaseClick
-							}
-							handleDecreaseClick={
-								handleOneHundredSidedDecreaseClick
-							}
+							handleIncreaseClick={handleOneHundredSidedIncreaseClick}
+							handleDecreaseClick={handleOneHundredSidedDecreaseClick}
 						/>
 					</Form.Group>
 				</div>

@@ -4,15 +4,16 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import { type CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
+import type React from "react";
+import {type 
+	ChangeEventHandler,type 
 	ReactElement,
 	useCallback,
 	useEffect,
 	useState,
-} from "react";
+} from "react"
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
@@ -22,7 +23,7 @@ import {
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./effect-filter.scss";
@@ -42,8 +43,7 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	}, [selectedEffectTypes]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
-		if (!props?.data?.effect || props?.data?.effect?.length === 0)
-			return false;
+		if (!props?.data?.effect || props?.data?.effect?.length === 0) return false;
 
 		for (const value of props.data.effect) {
 			const passes = numberBasedFilterDoesFilterPass(
@@ -67,9 +67,7 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoEffects = useCallback(() => setSelectedEffectTypes([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const effect = e.target.getAttribute("data-effect");
 
 			if (!effect) {
