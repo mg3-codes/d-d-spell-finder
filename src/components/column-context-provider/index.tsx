@@ -42,7 +42,8 @@ export const ColumnContextProvider = ({
 	const [selectedColumns, setSelectedColumns] = useState<Column[]>(() => {
 		const cookie = getCookie(cookieName);
 
-		if (cookie && useCookies) return cookie.split(",").map((x) => Number.parseInt(x));
+		if (cookie && useCookies)
+			return cookie.split(",").map((x) => Number.parseInt(x));
 
 		return defaultSelectedColumns;
 	});

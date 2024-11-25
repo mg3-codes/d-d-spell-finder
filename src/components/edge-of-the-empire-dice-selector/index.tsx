@@ -137,7 +137,8 @@ export const EdgeOfTheEmpireDiceSelector = ({
 	const handleDecrease = (
 		currentValue: string,
 		updateFunction: React.Dispatch<React.SetStateAction<string>>,
-	) => updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString());
+	) =>
+		updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString());
 
 	const handleBoostIncreaseClick = useCallback(
 		() => handleIncrease(boostInputValue, setBoostInputValue),

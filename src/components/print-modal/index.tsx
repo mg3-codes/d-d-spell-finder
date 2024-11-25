@@ -6,12 +6,12 @@
 
 import { useRollbar } from "@rollbar/react";
 import type React from "react";
-import {type 
-	MouseEventHandler,
+import {
+	type MouseEventHandler,
 	useCallback,
 	useContext,
 	useState,
-} from "react"
+} from "react";
 import Alert from "react-bootstrap/Alert";
 import Badge from "react-bootstrap/Badge";
 import Button from "react-bootstrap/Button";

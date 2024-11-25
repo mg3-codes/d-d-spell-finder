@@ -13,7 +13,10 @@ import {
 	mapNumberToDamageTypeDisplayName,
 } from "../enums/damage-types";
 import { Distance, mapNumberToDistanceDisplayName } from "../enums/distances";
-import { type Duration, mapNumberToDurationDisplayName } from "../enums/durations";
+import {
+	type Duration,
+	mapNumberToDurationDisplayName,
+} from "../enums/durations";
 import { Effect, mapEffectToDisplayName } from "../enums/effects";
 import { mapNumberToRangeDisplayName, type Range } from "../enums/ranges";
 import {

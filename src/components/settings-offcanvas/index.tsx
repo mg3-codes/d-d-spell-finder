@@ -6,13 +6,13 @@
 
 import { useRollbar } from "@rollbar/react";
 import type React from "react";
-import {type 
-	ChangeEventHandler,type 
-	MouseEventHandler,
+import {
+	type ChangeEventHandler,
+	type MouseEventHandler,
 	useCallback,
 	useContext,
 	useState,
-} from "react"
+} from "react";
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import ButtonGroup from "react-bootstrap/ButtonGroup";

@@ -136,7 +136,8 @@ export const NumberedDiceSelector = ({
 	const handleDecrease = (
 		currentValue: string,
 		updateFunction: React.Dispatch<React.SetStateAction<string>>,
-	) => updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString());
+	) =>
+		updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString());
 
 	const handleTwoSidedIncreaseClick = useCallback(
 		() => handleIncrease(twoSidedInputValue, setTwoSidedInputValue),

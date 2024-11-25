@@ -6,7 +6,7 @@
 
 import { useRollbar } from "@rollbar/react";
 import type React from "react";
-import { type MouseEventHandler, useCallback, useState } from "react"
+import { type MouseEventHandler, useCallback, useState } from "react";
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
