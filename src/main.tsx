@@ -32,7 +32,7 @@ const rollbarConfig = {
 	enabled: import.meta.env.MODE === "production",
 	captureUncaught: true,
 	captureUnhandledRejections: true,
-	code_version: "0.5.4",
+	code_version: "0.5.5",
 	source_map_enabled: true,
 };
 
