@@ -66,6 +66,7 @@ export const RollHistoryModal = ({
 					active={currentRoll === i}
 					data-roll={i}
 					onClick={handlePaginationClick}
+					key={i}
 				>
 					{i + 1}
 				</Pagination.Item>,
