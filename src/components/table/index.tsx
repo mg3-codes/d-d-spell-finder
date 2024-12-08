@@ -139,7 +139,9 @@ const Table = (): JSX.Element => {
 	const [columnDefinitions, setColumnDefinitions] = useState(
 		startingColumnDefinition,
 	);
-
+	
+	// biome-ignore lint/correctness/useExhaustiveDependencies(columnDefinitions): including this will cause re-render loop
+	// biome-ignore lint/correctness/useExhaustiveDependencies(columnDefinitions.filter): including this will cause re-render loop
 	useEffect(() => {
 		for (const columnDefinition of columnDefinitions) {
 			if (columnDefinition.checkboxSelection === true) continue;
@@ -157,7 +159,7 @@ const Table = (): JSX.Element => {
 				columnDefinition,
 			]);
 		}
-	}, [selectedColumns, columnDefinitions]);
+	}, [selectedColumns]);
 
 	// biome-ignore lint/correctness/useExhaustiveDependencies: this only needs to execute on first render
 	const setSelectionIfNeeded = useCallback((): void => {
