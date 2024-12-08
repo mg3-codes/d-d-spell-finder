@@ -28,7 +28,7 @@ export default defineConfig({
 		},
 	},
 	css: {
-		transformer: "lightningcss"
+		transformer: "lightningcss",
 	},
 	build: {
 		cssMinify: "lightningcss",
