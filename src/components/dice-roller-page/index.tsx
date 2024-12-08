@@ -104,6 +104,16 @@ export const DiceRollerPage = () => {
 		[useCookies],
 	);
 
+	const selectNumberedDiceType = useCallback(
+		() => handleDiceTypeChange(DiceType.Numbered),
+		[handleDiceTypeChange],
+	);
+
+	const selectEdgeDiceType = useCallback(
+		() => handleDiceTypeChange(DiceType.EdgeOfTheEmpire),
+		[handleDiceTypeChange],
+	);
+
 	return (
 		<div className="gutter-container">
 			<div className="page">
@@ -114,13 +124,13 @@ export const DiceRollerPage = () => {
 						<DropdownButton className="dropdown" title="Dice Type">
 							<Dropdown.Item
 								eventKey={DiceType.Numbered}
-								onClick={() => handleDiceTypeChange(DiceType.Numbered)}
+								onClick={selectNumberedDiceType}
 							>
 								{mapNumberToDiceTypeDisplayName(DiceType.Numbered)}
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey={DiceType.EdgeOfTheEmpire}
-								onClick={() => handleDiceTypeChange(DiceType.EdgeOfTheEmpire)}
+								onClick={selectEdgeDiceType}
 							>
 								{mapNumberToDiceTypeDisplayName(DiceType.EdgeOfTheEmpire)}
 							</Dropdown.Item>
