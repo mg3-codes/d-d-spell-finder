@@ -101,14 +101,14 @@ export const EdgeOfTheEmpireDiceResults = ({
 			<Table className="results-table" striped bordered hover>
 				<thead>
 					<tr className="header">
-						<td className="type">Type</td>
-						<td className="results">Results</td>
+						<td className="column1">Type</td>
+						<td className="column2">Results</td>
 					</tr>
 				</thead>
 				<tbody>
 					{hasBoostResults && (
 						<tr className="results-section">
-							<td className="type">🟦 Boost</td>
+							<td className="column1">🟦 Boost</td>
 							<td className="short-type">🟦</td>
 							<td className="eote-results">
 								{results?.boost.map((x, index) => (
@@ -129,7 +129,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					)}
 					{hasSetbackResults && (
 						<tr className="results-section">
-							<td className="type">⬛️ Setback</td>
+							<td className="column1">⬛️ Setback</td>
 							<td className="short-type">⬛️</td>
 							<td className="eote-results">
 								{results?.setback.map((x, index) => (
@@ -150,7 +150,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					)}
 					{hasAbilityResults && (
 						<tr className="results-section">
-							<td className="type">🟩 Ability</td>
+							<td className="column1">🟩 Ability</td>
 							<td className="short-type">🟩</td>
 							<td className="eote-results">
 								{results?.ability.map((x, index) => (
@@ -171,7 +171,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					)}
 					{hasDifficultyResults && (
 						<tr className="results-section">
-							<td className="type">🟪 Difficulty</td>
+							<td className="column1">🟪 Difficulty</td>
 							<td className="short-type">🟪</td>
 							<td className="eote-results">
 								{results?.difficulty.map((x, index) => (
@@ -192,7 +192,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					)}
 					{hasProficiencyResults && (
 						<tr className="results-section">
-							<td className="type">🟨 Proficiency</td>
+							<td className="column1">🟨 Proficiency</td>
 							<td className="short-type">🟨</td>
 							<td className="eote-results">
 								{results?.proficiency.map((x, index) => (
@@ -213,7 +213,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					)}
 					{hasChallengeResults && (
 						<tr className="results-section">
-							<td className="type">🟥 Challenge</td>
+							<td className="column1">🟥 Challenge</td>
 							<td className="short-type">🟥</td>
 							<td className="eote-results">
 								{results?.challenge.map((x, index) => (
@@ -234,7 +234,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 					)}
 					{hasForceResults && (
 						<tr className="results-section">
-							<td className="type">⬜️ Force</td>
+							<td className="column1">⬜️ Force</td>
 							<td className="short-type">⬜️</td>
 							<td className="eote-results force-results">
 								{results?.force.map((x, index) => (
@@ -287,7 +287,7 @@ export const EdgeOfTheEmpireDiceResults = ({
 									</td>
 								</tr>
 								<tr className="roll-success">
-									<td className="label">Success:</td>
+									<td className="label column1">Success:</td>
 									<td className="result">
 										{calculatedResults.rollSuccess ? "✅" : "❌"}
 									</td>

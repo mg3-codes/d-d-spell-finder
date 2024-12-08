@@ -124,107 +124,107 @@ export const NumberDiceResults = ({
 						</td>
 					</tr>
 					<tr className="header">
-						<td className="sides">Sides</td>
-						<td className="results">Results</td>
-						{sumResults && <td className="sum">Sum</td>}
+						<td className="column1">Sides</td>
+						<td className="column2">Results</td>
+						{sumResults && <td className="column3">Sum</td>}
 					</tr>
 				</thead>
 				<tbody>
 					{hasTwoSidedResults && (
 						<tr className="results-section">
-							<td className="sides">2</td>
-							<td className="results">
+							<td className="column1">2</td>
+							<td className="column2">
 								{results
 									?.filter((x) => x.sides === 2)
 									.map((x, index) => (
 										<span key={`two-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && <td className="sum">{sumMap.get(2)}</td>}
+							{sumResults && <td className="column3">{sumMap.get(2)}</td>}
 						</tr>
 					)}
 					{hasFourSidedResults && (
 						<tr className="results-section">
-							<td className="sides">4</td>
-							<td className="results">
+							<td className="column1">4</td>
+							<td className="column2">
 								{results
 									?.filter((x) => x.sides === 4)
 									.map((x, index) => (
 										<span key={`four-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && <td className="sum">{sumMap.get(4)}</td>}
+							{sumResults && <td className="column3">{sumMap.get(4)}</td>}
 						</tr>
 					)}
 					{hasSixSidedResults && (
 						<tr className="results-section">
-							<td className="sides">6</td>
-							<td className="results">
+							<td className="column1">6</td>
+							<td className="column2">
 								{results
 									?.filter((x) => x.sides === 6)
 									.map((x, index) => (
 										<span key={`six-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && <td className="sum">{sumMap.get(6)}</td>}
+							{sumResults && <td className="column3">{sumMap.get(6)}</td>}
 						</tr>
 					)}
 					{hasEightSidedResults && (
 						<tr className="results-section">
-							<td className="sides">8</td>
-							<td className="results">
+							<td className="column1">8</td>
+							<td className="column2">
 								{results
 									?.filter((x) => x.sides === 8)
 									.map((x, index) => (
 										<span key={`eight-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && <td className="sum">{sumMap.get(8)}</td>}
+							{sumResults && <td className="column3">{sumMap.get(8)}</td>}
 						</tr>
 					)}
 					{hasTenSidedResults && (
 						<tr className="results-section">
-							<td className="sides">10</td>
-							<td className="results">
+							<td className="column1">10</td>
+							<td className="column2">
 								{results
 									?.filter((x) => x.sides === 10)
 									.map((x, index) => (
 										<span key={`ten-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && <td className="sum">{sumMap.get(10)}</td>}
+							{sumResults && <td className="column3">{sumMap.get(10)}</td>}
 						</tr>
 					)}
 					{hasTwelveSidedResults && (
 						<tr className="results-section">
-							<td className="sides">12</td>
-							<td className="results">
+							<td className="column1">12</td>
+							<td className="column2">
 								{results
 									?.filter((x) => x.sides === 12)
 									.map((x, index) => (
 										<span key={`twelve-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && <td className="sum">{sumMap.get(12)}</td>}
+							{sumResults && <td className="column3">{sumMap.get(12)}</td>}
 						</tr>
 					)}
 					{hasTwentySidedResults && (
 						<tr className="results-section">
-							<td className="sides">20</td>
-							<td className="results">
+							<td className="column1">20</td>
+							<td className="column2">
 								{results
 									?.filter((x) => x.sides === 20)
 									.map((x, index) => (
 										<span key={`twenty-sided-${index}`}>{x.value}&nbsp;</span>
 									))}
 							</td>
-							{sumResults && <td className="sum">{sumMap.get(20)}</td>}
+							{sumResults && <td className="column3">{sumMap.get(20)}</td>}
 						</tr>
 					)}
 					{hasOneHundredSidedResults && (
 						<tr className="results-section">
-							<td className="sides">100</td>
-							<td className="results">
+							<td className="column1">100</td>
+							<td className="column2">
 								{results
 									?.filter((x) => x.sides === 100)
 									.map((x, index) => (
@@ -233,7 +233,7 @@ export const NumberDiceResults = ({
 										</span>
 									))}
 							</td>
-							{sumResults && <td className="sum">{sumMap.get(100)}</td>}
+							{sumResults && <td className="column3">{sumMap.get(100)}</td>}
 						</tr>
 					)}
 				</tbody>

@@ -4,16 +4,22 @@
  * @format
  */
 
-@mixin column1 {
+.column1 {
 	min-width: 33%;
 }
 
-@mixin column2 {
+.column2 {
 	flex-grow: 1;
 }
 
-@mixin column3 {
+.column3 {
 	min-width: 33%;
+}
+
+.modal-body {
+	.number-dice-results {
+		width: 100%;
+	}
 }
 
 .number-dice-results {
@@ -41,18 +47,6 @@
 
 		.header {
 			display: flex;
-
-			.sides {
-				@include column1;
-			}
-
-			.results {
-				@include column2;
-			}
-
-			.sum {
-				@include column3;
-			}
 		}
 
 		.results-section {
@@ -61,7 +55,6 @@
 
 			.sides {
 				text-align: start;
-				@include column1;
 			}
 
 			.results {

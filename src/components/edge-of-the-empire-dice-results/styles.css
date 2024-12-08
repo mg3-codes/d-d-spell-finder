@@ -4,20 +4,26 @@
  * @format
  */
 
-@mixin column1 {
-	min-width: 25%;
+.column1 {
+	min-width: 26%;
 
 	@include bootstrap.media-breakpoint-down(md) {
 		min-width: 33%;
 	}
 }
 
-@mixin column2 {
+.column2 {
 	flex-grow: 1;
 }
 
-@mixin column3 {
+.column3 {
 	min-width: 16%;
+}
+
+.modal-body {
+	.edge-dice-results {
+		width: 100%;
+	}
 }
 
 .edge-dice-results {
@@ -34,18 +40,6 @@
 
 		.header {
 			display: flex;
-
-			.type {
-				@include column1;
-			}
-
-			.results {
-				@include column2;
-			}
-
-			.sum {
-				@include column3;
-			}
 		}
 
 		.results-section {
@@ -54,7 +48,6 @@
 
 			.type {
 				text-align: start;
-				@include column1;
 			}
 
 			.short-type {
@@ -123,7 +116,6 @@
 				display: flex;
 
 				.label {
-					@include column1;
 					@include bootstrap.media-breakpoint-down(md) {
 						min-width: 50%;
 					}

@@ -102,7 +102,7 @@ export const RollHistoryModal = ({
 				<Modal.Title>Roll History</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<div className="d-flex justify-content-center align-items-center">
+				<div className="d-flex flex-column justify-content-center align-items-center w-100">
 					{selectedType === DiceType.Numbered ? (
 						<NumberDiceResults
 							results={numberedDiceHistory[currentRoll]}
