@@ -4,9 +4,6 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
-@use "../../styles/variables" as variables;
-
 .gutter-container {
 	margin: 20px 30px;
 }
@@ -19,7 +16,7 @@
 		display: flex;
 
 		.dropdown {
-			margin-right: variables.$margin-sm;
+			margin-right: var(--margin-sm);
 		}
 	}
 

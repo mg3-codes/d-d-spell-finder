@@ -4,17 +4,15 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
-
 .header-buttons {
 	display: flex;
 	align-items: center;
 
 	.printer-button {
 		&:hover {
-			color: bootstrap.$white;
+			color: var(--bs-white);
 			i {
-				color: bootstrap.$white;
+				color: var(--bs-white);
 			}
 		}
 	}

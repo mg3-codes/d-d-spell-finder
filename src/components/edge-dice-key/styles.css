@@ -4,9 +4,6 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
-@use "../../styles/variables" as variables;
-
 .dice-table {
 	thead {
 		.title {
@@ -36,15 +33,11 @@
 
 		td {
 			min-width: 65px;
-
-			.multiple {
-				@include variables.centerBothDirections;
-			}
 		}
 
 		.force {
-			background-color: bootstrap.$white;
-			color: bootstrap.$black;
+			background-color: var(--bs-white);
+			color: var(--bs-black);
 		}
 	}
 }

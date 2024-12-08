@@ -4,8 +4,6 @@
  * @format
  */
 
-@use "../../styles/bootstrap";
-
 .edge-of-the-empire-dice-selector {
 	width: 40%;
 	min-height: 370px;

@@ -4,8 +4,6 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
-
 .not-found {
 	display: flex;
 	flex-direction: column;

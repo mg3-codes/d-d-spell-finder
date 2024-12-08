@@ -4,8 +4,6 @@
  * @format
  */
 
-@use "../../../styles/variables" as variables;
-
 .casting-time-filter {
 	display: flex;
 	flex-direction: column;
@@ -13,6 +11,6 @@
 	margin: 10px;
 
 	.all-button {
-		margin-bottom: variables.$margin-sm;
+		margin-bottom: var(--margin-sm);
 	}
 }

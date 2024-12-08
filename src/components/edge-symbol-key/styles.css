@@ -4,41 +4,34 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
-@use "../../styles/variables" as variables;
-
-@mixin symbols {
-	font-family: variables.$edge-symbols;
-
-	.success,
-	.advantage {
-		color: bootstrap.$success;
-	}
-
-	.failure,
-	.threat {
-		color: bootstrap.$purple;
-	}
-
-	.triumph {
-		color: bootstrap.$yellow;
-	}
-
-	.despair {
-		color: bootstrap.$danger;
-	}
-
-	.force {
-		background-color: bootstrap.$white;
-		color: bootstrap.$black;
-	}
-}
-
 .symbols-table {
 	text-align: center;
 	width: 100%;
 
 	.symbols {
-		@include symbols;
+		font-family: var(--edge-symbols);
+
+		.success,
+		.advantage {
+			color: var(--bs-success);
+		}
+
+		.failure,
+		.threat {
+			color: var(--bs-purple);
+		}
+
+		.triumph {
+			color: var(--bs-yellow);
+		}
+
+		.despair {
+			color: var(--bs-danger);
+		}
+
+		.force {
+			background-color: var(--bs-white);
+			color: var(--bs-black);
+		}
 	}
 }

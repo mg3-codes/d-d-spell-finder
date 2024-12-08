@@ -4,8 +4,6 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
-
 .options {
 	display: flex;
 	justify-content: flex-start;
@@ -21,7 +19,6 @@
 	}
 }
 
-// Override Bootstrap CSS
 [data-bs-theme="dark"] .carousel,
 .carousel {
 	.carousel-indicators {
@@ -50,15 +47,15 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: bootstrap.$gray-400;
+	background-color: var(--bs-gray-400);
 	position: relative;
 
 	&.dark {
-		background-color: bootstrap.$body-bg-dark;
+		background-color: var(--bs-body-bg-dark);
 	}
 
 	.preview {
-		background-color: bootstrap.$white;
+		background-color: var(--bs-white);
 		aspect-ratio: 3 / 5;
 
 		&.landscape {

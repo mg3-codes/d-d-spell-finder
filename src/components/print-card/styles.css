@@ -4,11 +4,9 @@
  * @format
  */
 
-@use "../../styles//bootstrap.scss" as bootstrap;
-
 .print-card {
 	height: 100%;
-	color: bootstrap.$black;
+	color: var(--bs-black);
 	display: flex;
 	flex-direction: column;
 	aspect-ratio: 3 / 5;
@@ -55,7 +53,7 @@
 			td {
 				table-layout: fixed;
 				width: 50%;
-				outline: 1px bootstrap.$border-style bootstrap.$border-color;
+				outline: 1px var(--bs-border-style) var(--bs-border-color);
 				text-align: center;
 			}
 

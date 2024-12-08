@@ -4,8 +4,6 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss";
-
 .footer {
 	margin-top: 12px;
 	display: flex;
@@ -37,11 +35,11 @@
 
 		i {
 			font-size: xx-large;
-			color: bootstrap.$black;
+			color: var(--bs-black);
 		}
 	}
 }
 
 [data-bs-theme="dark"] i.github-icon {
-	color: bootstrap.$white;
+	color: var(--bs-white);
 }

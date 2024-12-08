@@ -4,8 +4,6 @@
  * @format
  */
 
-@use "../../styles/bootstrap";
-
 .dnd-dice-selector {
 	width: 40%;
 	min-height: 370px;

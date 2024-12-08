@@ -4,8 +4,6 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
-
 .check-container {
 	display: flex;
 }
@@ -16,6 +14,6 @@
 
 .settings-offcanvas {
 	i {
-		color: bootstrap.$primary;
+		color: var(--bs-primary);
 	}
 }

@@ -4,8 +4,6 @@
  * @format
  */
 
-@use "../../../styles/variables" as variables;
-
 .area-filter {
 	display: flex;
 	flex-direction: column;
@@ -17,10 +15,10 @@
 	}
 
 	.all-button {
-		margin-bottom: variables.$margin-sm;
+		margin-bottom: var(--margin-sm);
 	}
 
 	.first-none-button {
-		margin-bottom: variables.$margin-sm;
+		margin-bottom: var(--margin-sm);
 	}
 }

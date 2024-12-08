@@ -4,56 +4,44 @@
  * @format
  */
 
-$toast-background-color: var(--bs-body-bg);
-
-@use "~ag-grid-community/styles" as ag;
-@use "./bootstrap.scss" as bootstrap;
-@use "sass:color";
-
-@include ag.grid-styles(
-	(
-		themes: (
-			quartz: (
-				active-color: bootstrap.$primary,
-				selected-row-background-color: bootstrap.$primary-bg-subtle,
-				row-hover-color: bootstrap.$primary-bg-subtle,
-				column-hover-color: bootstrap.$primary-bg-subtle,
-				input-focus-border-color: bootstrap.$primary-border-subtle,
-				header-foreground-color: bootstrap.$black,
-				range-selection-border-color: bootstrap.$black,
-				background-color: bootstrap.$body-bg,
-				foreground-color: bootstrap.$dark-text-emphasis,
-				border-color: bootstrap.$border-color,
-				header-background-color: bootstrap.$gray-100,
-				odd-row-background-color: bootstrap.$gray-100,
-				invalid-color: bootstrap.$danger,
-				font-family: bootstrap.$font-family-base,
-				data-color: bootstrap.$dark-text-emphasis,
-			),
-			quartz-dark: (
-				active-color: bootstrap.$primary,
-				selected-row-background-color:
-					lighten(bootstrap.$primary-bg-subtle-dark, 5%),
-				row-hover-color: bootstrap.$primary-bg-subtle-dark,
-				column-hover-color: bootstrap.$primary-bg-subtle-dark,
-				input-focus-border-color: bootstrap.$primary-border-subtle-dark,
-				header-foreground-color: bootstrap.$white,
-				range-selection-border-color: bootstrap.$black,
-				background-color: bootstrap.$gray-900,
-				foreground-color: bootstrap.$white,
-				border-color: bootstrap.$gray-600,
-				header-background-color: bootstrap.$gray-800,
-				odd-row-background-color: bootstrap.$gray-800,
-				invalid-color: bootstrap.$danger,
-				font-family: bootstrap.$font-family-base,
-				data-color: bootstrap.$white,
-			),
-		),
-		range-selection-border-color: transparent,
-		input-focus-box-shadow: bootstrap.$box-shadow,
-		checkbox-unchecked-color: bootstrap.$primary,
-	)
-);
+.ag-theme-quartz {
+	--active-color: var(--bs-primary);
+	--selected-row-background-color: var(--primary-bg-subtle);
+	--row-hover-color: var(--primary-bg-subtle);
+	--column-hover-color: var(--primary-bg-subtle);
+	--input-focus-border-color: var(--primary-border-subtle);
+	--header-foreground-color: var(--black);
+	--range-selection-border-color: var(--black);
+	--background-color: var(--body-bg);
+	--foreground-color: var(--dark-text-emphasis);
+	--border-color: var(--border-color);
+	--header-background-color: var(--gray-100);
+	--odd-row-background-color: var(--gray-100);
+	--invalid-color: var(--danger);
+	--font-family: var(--font-family-base);
+	--data-color: var(--dark-text-emphasis);
+}
+.ag-theme-quartz-dark {
+	--active-color: var(--bs-primary);
+	--row-hover-color: var(--bs-primary-bg-subtle-dark);
+	--column-hover-color: var(--bs-primary-bg-subtle-dark);
+	--input-focus-border-color: var(--bs-primary-border-subtle-dark);
+	--header-foreground-color: var(--bs-white);
+	--range-selection-border-color: var(--bs-black);
+	--background-color: var(--bs-gray-900);
+	--foreground-color: var(--bs-white);
+	--border-color: var(--bs-gray-600);
+	--header-background-color: var(--bs-gray-800);
+	--odd-row-background-color: var(--bs-gray-800);
+	--invalid-color: var(--bs-danger);
+	--font-family: var(--bs-font-family-base);
+	--data-color: var(--bs-white);
+}
+.ag-theme {
+	--range-selection-border-color: transparent;
+	--input-focus-box-shadow: var(--bs-box-shadow);
+	--checkbox-unchecked-color: var(--bs-primary);
+}
 
 .ag-checkbox-input-wrapper.ag-disabled {
 	opacity: unset;

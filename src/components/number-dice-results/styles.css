@@ -4,8 +4,6 @@
  * @format
  */
 
-@use "../../styles/bootstrap.scss" as bootstrap;
-
 @mixin column1 {
 	min-width: 33%;
 }
@@ -72,7 +70,7 @@
 				text-align: center;
 
 				span {
-					font-family: bootstrap.$font-family-base;
+					font-family: var(--bs-font-family-base);
 					margin: 0 2px;
 				}
 			}

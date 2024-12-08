@@ -4,8 +4,6 @@
  * @format
  */
 
-@use "../../styles/variables" as variables;
-
 .content {
 	border: none;
 	outline: none;
