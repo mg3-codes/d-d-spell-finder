@@ -7,9 +7,9 @@
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 import {
-    type EdgeOfTheEmpireDiceSymbol,
-    mapSymbolToCharacter,
-    mapSymbolToDisplayName,
+	type EdgeOfTheEmpireDiceSymbol,
+	mapSymbolToCharacter,
+	mapSymbolToDisplayName,
 } from "../../enums/edge-of-the-empire-dice-symbol";
 
 import "./edge-dice-symbol.css";

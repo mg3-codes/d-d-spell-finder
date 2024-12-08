@@ -11,8 +11,8 @@ import Table from "react-bootstrap/Table";
 import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 
 import {
-    EdgeOfTheEmpireDiceSymbol,
-    mapSymbolToCharacter,
+	EdgeOfTheEmpireDiceSymbol,
+	mapSymbolToCharacter,
 } from "../../enums/edge-of-the-empire-dice-symbol";
 import type EdgeOfTheEmpireDiceResult from "../../types/edge-of-the-empire-dice-result";
 import { getOutcomeFromSymbols } from "../../utility/edge-of-the-empire-dice";
