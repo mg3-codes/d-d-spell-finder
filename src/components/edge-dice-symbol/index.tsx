@@ -12,7 +12,7 @@ import {
 	mapSymbolToDisplayName,
 } from "../../enums/edge-of-the-empire-dice-symbol";
 
-import "./edge-dice-symbol.css";
+import "./styles.css";
 
 export interface IEdgeDiceSymbol {
 	symbol: EdgeOfTheEmpireDiceSymbol;

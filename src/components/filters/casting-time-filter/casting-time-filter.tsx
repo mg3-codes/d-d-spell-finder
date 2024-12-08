@@ -32,7 +32,7 @@ import {
 	numberBasedFilterIsChecked,
 } from "../../../utility/filters/number-based-filter";
 
-import "./casting-time-filter.css";
+import "./styles.css";
 
 const filterDisabledArray = createDisabledFilterArray(10);
 

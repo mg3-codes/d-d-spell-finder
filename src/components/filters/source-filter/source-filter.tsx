@@ -29,7 +29,7 @@ import {
 	numberBasedFilterIsChecked,
 } from "../../../utility/filters/number-based-filter";
 
-import "./source-filter.css";
+import "./styles.css";
 
 const filterDisabledArray = createDisabledFilterArray(9);
 

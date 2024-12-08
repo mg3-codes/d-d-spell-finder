@@ -16,7 +16,7 @@ import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-d
 import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
 import { NumberDiceResults } from "../number-dice-results";
 
-import "./roll-history-modal.css";
+import "./styles.css";
 
 export interface IRollHistoryModal {
 	show: boolean;

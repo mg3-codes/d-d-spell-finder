@@ -18,7 +18,7 @@ import type EdgeOfTheEmpireDiceResult from "../../types/edge-of-the-empire-dice-
 import { getOutcomeFromSymbols } from "../../utility/edge-of-the-empire-dice";
 import { EdgeDiceSymbol } from "../edge-dice-symbol";
 
-import "./edge-of-the-empire-dice-results.css";
+import "./styles.css";
 
 export interface IEdgeOfTheEmpireDiceResults {
 	results: EdgeOfTheEmpireDiceCollection | null;

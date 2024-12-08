@@ -8,7 +8,8 @@ import Table from "react-bootstrap/Table";
 
 import { EdgeOfTheEmpireDiceSymbol } from "../../enums/edge-of-the-empire-dice-symbol";
 import { EdgeDiceSymbol } from "../edge-dice-symbol";
-import "./edge-dice-key.css";
+
+import "./styles.css";
 
 export const EdgeDiceKey = () => {
 	return (

@@ -36,7 +36,7 @@ import { EdgeOfTheEmpireDiceSelector } from "../edge-of-the-empire-dice-selector
 import { Button } from "react-bootstrap";
 import { RollHistoryModal } from "../roll-history-modal";
 
-import "./page.css";
+import "./styles.css";
 
 const cookieName = "diceRollerType";
 

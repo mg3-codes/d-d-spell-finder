@@ -26,29 +26,27 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
+import type { LogArgument } from "rollbar";
 
 import { type TableRow, buildRow } from "../../types/table-row";
-
-import {
-	defaultColDef,
-	getDefaultColumnDefinitions,
-	setColumnDefinitionOrder,
-} from "../../utility/table-defaults";
 
 import spellJson from "../../assets/5e-spells.json";
 import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
 import type Spell from "../../types/spell";
+import { getCookie, setCookie } from "../../utility/cookies";
+import {
+	defaultColDef,
+	getDefaultColumnDefinitions,
+	setColumnDefinitionOrder,
+} from "../../utility/table-defaults";
+import { AppSettingsContext } from "../app-settings-provider";
 import { ColumnContext } from "../column-context-provider";
 import { SelectedRowContext } from "../selected-row-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
-import { getCookie, setCookie } from "../../utility/cookies";
-import { AppSettingsContext } from "../app-settings-provider";
-
-import type { LogArgument } from "rollbar";
 import "../../styles/ag-grid.css";
-import "./table.css";
+import "./styles.css";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 

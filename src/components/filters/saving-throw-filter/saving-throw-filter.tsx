@@ -32,7 +32,7 @@ import {
 	numberBasedFilterIsChecked,
 } from "../../../utility/filters/number-based-filter";
 
-import "./saving-throw-filter.css";
+import "./styles.css";
 
 const savingThrowFilterDisabledArray = createDisabledFilterArray(7);
 

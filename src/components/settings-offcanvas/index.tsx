@@ -21,12 +21,12 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 
 import { Column, mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
+import { deleteAllCookies } from "../../utility/cookies";
 import { AppSettingsContext } from "../app-settings-provider";
 import { ColumnContext } from "../column-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
-import { deleteAllCookies } from "../../utility/cookies";
-import "./settings-offcanvas.css";
+import "./styles.css";
 
 const SettingsOffcanvas = (): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);

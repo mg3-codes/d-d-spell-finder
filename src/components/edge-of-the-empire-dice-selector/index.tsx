@@ -20,7 +20,7 @@ import ProficiencyDie from "../../classes/edge-of-the-empire-dice/proficiency-di
 import SetbackDie from "../../classes/edge-of-the-empire-dice/setback-die";
 import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 
-import "./edge-dice-selector.css";
+import "./styles.css";
 
 export interface IEdgeOfTheEmpireDiceSelectorProps {
 	onRollClicked: (dice: EdgeOfTheEmpireDiceCollection) => void;

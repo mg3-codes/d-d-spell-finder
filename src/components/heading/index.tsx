@@ -13,7 +13,7 @@ import { SelectedRowContext } from "../selected-row-context-provider";
 const PrintModal = React.lazy(() => import("../print-modal"));
 const SettingsOffcanvas = React.lazy(() => import("../settings-offcanvas"));
 
-import "./heading.css";
+import "./styles.css";
 
 const Heading = () => {
 	const { selectedRows } = useContext(SelectedRowContext);

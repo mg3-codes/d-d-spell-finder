@@ -26,7 +26,7 @@ import { ThemeContext } from "../theme-context-provider";
 import { Theme } from "../../enums/theme";
 import type { TableRow } from "../../types/table-row";
 
-import "./print-modal.css";
+import "./styles.css";
 
 export interface IPrintModalProps {
 	isOpen: boolean;

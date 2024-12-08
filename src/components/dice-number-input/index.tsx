@@ -10,7 +10,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
-import "./dice-number-input.css";
+import "./styles.css";
 
 export interface IDiceNumberInputProps {
 	value: string;

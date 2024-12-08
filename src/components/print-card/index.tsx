@@ -17,7 +17,7 @@ import { mapNumberToSourceDisplayName } from "../../enums/sources";
 
 import type { TableRow } from "../../types/table-row";
 
-import "./print-card.css";
+import "./styles.css";
 
 export type IPrintCard = {
 	row: TableRow;

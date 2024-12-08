@@ -11,7 +11,7 @@ import Table from "react-bootstrap/Table";
 
 import type NumberDie from "../../classes/number-die";
 
-import "./number-dice-results.css";
+import "./styles.css";
 
 export interface INumberDiceResults {
 	results: NumberDie[] | null;

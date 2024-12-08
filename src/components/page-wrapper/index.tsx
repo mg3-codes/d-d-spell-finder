@@ -11,7 +11,7 @@ import { ThemeContext } from "../theme-context-provider";
 
 import { Theme } from "../../enums/theme";
 
-import "./page-wrapper.css";
+import "./styles.css";
 
 export interface IPageWrapperProps {
 	children: React.ReactNode;

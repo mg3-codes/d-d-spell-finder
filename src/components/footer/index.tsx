@@ -15,7 +15,7 @@ import { HelpModal } from "../help-modal";
 import { AttributionBody, AttributionHeader } from "./attribution-content";
 import { PrivacyBody, PrivacyHeader } from "./privacy-content";
 
-import "./footer.css";
+import "./styles.css";
 
 const Footer = () => {
 	const rollbar = useRollbar();

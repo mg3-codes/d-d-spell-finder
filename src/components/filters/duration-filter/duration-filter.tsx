@@ -27,13 +27,12 @@ import {
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
 } from "../../../utility/filters/number-based-filter";
-
 import {
 	Duration,
 	mapNumberToDurationDisplayName,
 } from "../../../enums/durations";
 
-import "./duration-filter.css";
+import "./styles.css";
 
 const filterDisabledArray = createDisabledFilterArray(15);
 

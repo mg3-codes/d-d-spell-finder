@@ -22,7 +22,7 @@ import Form from "react-bootstrap/Form";
 
 import type { TableRow } from "../../../types/table-row";
 
-import "./boolean-filter.css";
+import "./styles.css";
 
 type BooleanBasedFilterProps = {
 	data: TableRow;
