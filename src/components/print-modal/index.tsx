@@ -53,7 +53,7 @@ const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
 
 			setSelectedNumberPerRow(Number.parseInt(selection));
 		},
-		[],
+		[rollbar],
 	);
 
 	return (

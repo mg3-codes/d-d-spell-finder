@@ -42,7 +42,7 @@ const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedSchools.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedSchools);
-	}, [selectedSchools]);
+	}, [selectedSchools, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -71,7 +71,7 @@ const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 
 			numberBasedFilterHandleCheck(selectedSchools, setSelectedSchools, school);
 		},
-		[selectedSchools],
+		[selectedSchools, rollbar],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

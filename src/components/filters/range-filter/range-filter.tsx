@@ -42,7 +42,7 @@ const RangeFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedRanges.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedRanges);
-	}, [selectedRanges]);
+	}, [selectedRanges, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(props?.data?.range, selectedRanges);
@@ -68,7 +68,7 @@ const RangeFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 
 			numberBasedFilterHandleCheck(selectedRanges, setSelectedRanges, range);
 		},
-		[selectedRanges],
+		[selectedRanges, rollbar],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

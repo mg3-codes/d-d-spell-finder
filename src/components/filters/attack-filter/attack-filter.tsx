@@ -43,7 +43,7 @@ const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedAttacks.length === attackFilterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedAttacks);
-	}, [selectedAttacks]);
+	}, [selectedAttacks, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -72,7 +72,7 @@ const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 
 			numberBasedFilterHandleCheck(selectedAttacks, setSelectedAttacks, attack);
 		},
-		[selectedAttacks],
+		[selectedAttacks, rollbar],
 	);
 
 	const isChecked = (x: Attack): boolean | undefined =>

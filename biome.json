@@ -19,7 +19,15 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"complexity": {
+				"noUselessSwitchCase": "off"
+			},
+			"suspicious": {
+				"noShorthandPropertyOverrides": "off",
+				"noArrayIndexKey": "off",
+				"useDefaultSwitchClauseLast": "off"
+			}
 		}
 	},
 	"javascript": {

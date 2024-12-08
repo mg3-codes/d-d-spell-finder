@@ -97,7 +97,7 @@ const Table = (): JSX.Element => {
 		} catch (e: unknown) {
 			rollbar.warning("error updating selected rows", e as LogArgument);
 		}
-	}, [selectedRows]);
+	}, [rollbar, setSelectedRows]);
 
 	const onColumnMoved = useCallback(
 		(event: ColumnMovedEvent<unknown>): void => {
@@ -120,6 +120,7 @@ const Table = (): JSX.Element => {
 		[],
 	);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: this only needs to execute on first render
 	const startingColumnDefinition = useMemo<ColDef[]>(() => {
 		const def = getDefaultColumnDefinitions(
 			onMaterialCellClicked,
@@ -156,8 +157,9 @@ const Table = (): JSX.Element => {
 				columnDefinition,
 			]);
 		}
-	}, [selectedColumns]);
+	}, [selectedColumns, columnDefinitions]);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: this only needs to execute on first render
 	const setSelectionIfNeeded = useCallback((): void => {
 		for (const row of selectedRows) {
 			const gridRow = gridRef?.current?.api?.getRowNode(row.name);
@@ -172,7 +174,7 @@ const Table = (): JSX.Element => {
 	const acceptCookies = useCallback((): void => {
 		setShowCookieToast(false);
 		setUseCookies(true);
-	}, []);
+	}, [setUseCookies]);
 
 	const rejectCookies = useCallback((): void => {
 		setShowCookieToast(false);

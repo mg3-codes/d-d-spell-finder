@@ -48,7 +48,7 @@ const SavingThrowFilter = ({
 		if (selectedSavingThrows.length === savingThrowFilterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedSavingThrows);
-	}, [selectedSavingThrows]);
+	}, [selectedSavingThrows, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -84,7 +84,7 @@ const SavingThrowFilter = ({
 				savingThrow,
 			);
 		},
-		[selectedSavingThrows],
+		[selectedSavingThrows, rollbar],
 	);
 
 	const isChecked = (x: SavingThrow): boolean | undefined =>

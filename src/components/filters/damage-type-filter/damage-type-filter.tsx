@@ -48,7 +48,7 @@ const DamageTypeFilter = ({
 		if (selectedDamageTypes.length === damageTypeFilterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedDamageTypes);
-	}, [selectedDamageTypes]);
+	}, [selectedDamageTypes, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -81,7 +81,7 @@ const DamageTypeFilter = ({
 				damage,
 			);
 		},
-		[selectedDamageTypes],
+		[selectedDamageTypes, rollbar],
 	);
 
 	const isChecked = (x: DamageType): boolean | undefined =>

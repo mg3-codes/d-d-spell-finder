@@ -24,6 +24,9 @@ const ExportPage = () => {
 	const { selectedRows } = useContext(SelectedRowContext);
 	const [queryParams] = useSearchParams();
 	const { currentTheme, updateTheme } = useContext(ThemeContext);
+
+	// biome-ignore lint/correctness/useExhaustiveDependencies(currentTheme): this only needs to execute on page load
+	// biome-ignore lint/correctness/useExhaustiveDependencies(updateTheme): this only needs to execute on page load
 	useEffect(() => {
 		const userSelectedTheme = currentTheme;
 		let themeOverridden = false;
@@ -38,14 +41,13 @@ const ExportPage = () => {
 		};
 	}, []);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(queryParams): change should occur when query params change
 	const getColumnClassName = useCallback(
 		(number: number) => {
 			switch (number) {
 				case 2:
 					return "two-columns";
-				/* eslint-disable default-case-last */
 				default:
-				/* eslint-enable default-case-last */
 				case 3:
 					return "three-columns";
 				case 4:
@@ -55,13 +57,15 @@ const ExportPage = () => {
 		[queryParams],
 	);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(getColumnClassName): this should only execute on page load
+	// biome-ignore lint/correctness/useExhaustiveDependencies(queryParams.get): this should only execute on page load
 	const generatedCards = useMemo(() => {
 		const elements: JSX.Element[] = [];
 		const numColumns = Number.parseInt(queryParams.get("numPerRow") ?? "3");
 		const rowsPerPage = 2;
 		let counter = 0;
 		while (counter <= selectedRows.length) {
-			const pageElements: JSX.Element[] = [];
+			const pageElements: JSX.Element[][] = [];
 			for (let i = 0; i < rowsPerPage; i++) {
 				const rowSlice = selectedRows.slice(
 					i * numColumns + counter,
@@ -69,11 +73,7 @@ const ExportPage = () => {
 				);
 
 				pageElements.push(
-					<>
-						{rowSlice.map((row) => (
-							<PrintCard key={row.name} row={row} />
-						))}
-					</>,
+					rowSlice.map((row) => <PrintCard key={row.name} row={row} />),
 				);
 			}
 
@@ -92,7 +92,7 @@ const ExportPage = () => {
 		}
 
 		return elements;
-	}, selectedRows);
+	}, [selectedRows]);
 
 	return (
 		<div>

@@ -64,6 +64,7 @@ export const DiceRollerPage = () => {
 		EdgeOfTheEmpireDiceCollection[]
 	>([]);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(numberedDiceRollHistory): update should not occur on dice roll history change to avoid loop
 	useEffect(() => {
 		if (!numberDiceRollResults) return;
 
@@ -73,6 +74,7 @@ export const DiceRollerPage = () => {
 		]);
 	}, [numberDiceRollResults]);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(edgeRollHistory): update should not occur on dice roll history change to avoid loop
 	useEffect(() => {
 		if (!edgeOfTheEmpireDiceRollResult) return;
 
@@ -93,20 +95,13 @@ export const DiceRollerPage = () => {
 
 	const closeHistoryModal = useCallback(() => setHistoryModalIsOpen(false), []);
 
-	const handleDiceTypeChange = (type: DiceType): void => {
-		if (useCookies) setCookie(cookieName, type.toString(), false);
+	const handleDiceTypeChange = useCallback(
+		(type: DiceType): void => {
+			if (useCookies) setCookie(cookieName, type.toString(), false);
 
-		setDiceType(type);
-	};
-
-	const handleNumberedDiceTypeClick = useCallback(
-		() => handleDiceTypeChange(DiceType.Numbered),
-		[],
-	);
-
-	const handleEdgeOfTheEmpireDiceTypeClick = useCallback(
-		() => handleDiceTypeChange(DiceType.EdgeOfTheEmpire),
-		[],
+			setDiceType(type);
+		},
+		[useCookies],
 	);
 
 	return (
@@ -119,13 +114,13 @@ export const DiceRollerPage = () => {
 						<DropdownButton className="dropdown" title="Dice Type">
 							<Dropdown.Item
 								eventKey={DiceType.Numbered}
-								onClick={handleNumberedDiceTypeClick}
+								onClick={() => handleDiceTypeChange(DiceType.Numbered)}
 							>
 								{mapNumberToDiceTypeDisplayName(DiceType.Numbered)}
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey={DiceType.EdgeOfTheEmpire}
-								onClick={handleEdgeOfTheEmpireDiceTypeClick}
+								onClick={() => handleDiceTypeChange(DiceType.EdgeOfTheEmpire)}
 							>
 								{mapNumberToDiceTypeDisplayName(DiceType.EdgeOfTheEmpire)}
 							</Dropdown.Item>

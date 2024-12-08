@@ -43,7 +43,7 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedSources.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedSources);
-	}, [selectedSources]);
+	}, [selectedSources, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -72,7 +72,7 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 
 			numberBasedFilterHandleCheck(selectedSources, setSelectedSources, source);
 		},
-		[selectedSources],
+		[selectedSources, rollbar],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

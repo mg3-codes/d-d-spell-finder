@@ -28,13 +28,13 @@ export const DiceNumberInput = ({
 	const [showError, setShowError] = useState<boolean>(false);
 	const [decreaseIsDisabled, setDecreaseIsDisabled] = useState<boolean>(true);
 
-	const inputIsValid = (): boolean => {
+	const inputIsValid = useCallback((): boolean => {
 		const valueAsNumber = Number.parseInt(value);
 
 		if (valueAsNumber < 0) return false;
 
 		return !Number.isNaN(valueAsNumber);
-	};
+	}, [value]);
 
 	useEffect(() => {
 		if (!inputIsValid()) setShowError(true);
@@ -42,18 +42,19 @@ export const DiceNumberInput = ({
 
 		const valueAsNumber = Number.parseInt(value);
 		setDecreaseIsDisabled(Number.isNaN(valueAsNumber) || valueAsNumber <= 0);
-	}, [value]);
+	}, [value, inputIsValid]);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(value): function needs to update on value change
 	const handleUpdateValue = useCallback(
 		(e: React.ChangeEvent<HTMLInputElement>): void => {
 			updateValue(e.target.value);
 		},
-		[value],
+		[value, updateValue],
 	);
 
 	const handleBlur = useCallback(() => {
 		if (value === "") updateValue("0");
-	}, [value]);
+	}, [value, updateValue]);
 
 	return (
 		<InputGroup className="dice-number-input">

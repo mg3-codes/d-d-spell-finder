@@ -47,7 +47,7 @@ export const RollHistoryModal = ({
 		if (selectedType === DiceType.Numbered)
 			setCurrentHistory(numberedDiceHistory);
 		else setCurrentHistory(edgeDiceHistory);
-	}, [numberedDiceHistory, edgeDiceHistory]);
+	}, [numberedDiceHistory, edgeDiceHistory, selectedType]);
 
 	const handlePaginationClick = useCallback(
 		(e: React.MouseEvent) =>
@@ -73,7 +73,7 @@ export const RollHistoryModal = ({
 		}
 
 		if (currentRoll === 0) return pages.slice(0, 3);
-		else if (currentRoll === currentHistory.length - 1)
+		if (currentRoll === currentHistory.length - 1)
 			return pages.slice(currentRoll - 2, currentRoll + 1);
 
 		return pages.slice(Math.max(0, currentRoll - 1), currentRoll + 2);

@@ -47,7 +47,7 @@ const BooleanFilter = ({
 	useEffect(() => {
 		if (selectedState === BooleanBasedFilterState.All) onModelChange(null);
 		else onModelChange(selectedState);
-	}, [selectedState]);
+	}, [selectedState, onModelChange]);
 
 	const mapStateToBoolean = (state: BooleanBasedFilterState): boolean => {
 		switch (state) {
@@ -66,6 +66,7 @@ const BooleanFilter = ({
 
 	useGridFilter({ doesFilterPass });
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(selectedState): change needs to happen on selectedState change
 	const handleClick: ChangeEventHandler<HTMLInputElement> = useCallback(
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const state = e.target.getAttribute("data-boolean");
@@ -77,7 +78,7 @@ const BooleanFilter = ({
 
 			setSelectedState(Number.parseInt(state) as BooleanBasedFilterState);
 		},
-		[selectedState],
+		[selectedState, rollbar],
 	);
 
 	const isSelected = (x: BooleanBasedFilterState): boolean =>

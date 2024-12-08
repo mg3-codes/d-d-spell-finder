@@ -42,7 +42,7 @@ const Footer = () => {
 			setSelectedContent(Number.parseInt(numberAsString));
 			setModalIsOpen(true);
 		},
-		[],
+		[rollbar],
 	);
 
 	const openGithub = useCallback(
@@ -81,7 +81,7 @@ const Footer = () => {
 					Privacy
 				</Button>
 			</div>
-			<button className="github-button" onClick={openGithub}>
+			<button className="github-button" onClick={openGithub} type="button">
 				<i className="bi bi-github github-icon" />
 			</button>
 			<Modal show={modalIsOpen} onHide={closeModal}>

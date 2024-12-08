@@ -50,7 +50,7 @@ export const ColumnContextProvider = ({
 
 	useEffect(() => {
 		if (useCookies) setCookie(cookieName, selectedColumns.toString(), false);
-	}, [selectedColumns]);
+	}, [selectedColumns, useCookies]);
 
 	const handleColumnChange = (column: Column): void => {
 		if (selectedColumns.find((value) => column === value) === undefined)

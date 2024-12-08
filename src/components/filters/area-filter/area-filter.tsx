@@ -59,7 +59,7 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		)
 			onModelChange(null);
 		else onModelChange({ selectedDistances, selectedShapes });
-	}, [selectedDistances, selectedShapes]);
+	}, [selectedDistances, selectedShapes, onModelChange]);
 
 	const handleDistanceCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
@@ -76,7 +76,7 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				distance,
 			);
 		},
-		[selectedDistances],
+		[selectedDistances, rollbar],
 	);
 
 	const selectAllDistances = useCallback(
@@ -97,7 +97,7 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 
 			numberBasedFilterHandleCheck(selectedShapes, setSelectedShapes, shape);
 		},
-		[selectedShapes],
+		[selectedShapes, rollbar],
 	);
 
 	const selectAllShapes = useCallback(
@@ -126,6 +126,7 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		return false;
 	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: FIXME
 	const onOverlayToggle = useCallback((nextShow: boolean): void => {
 		if (isUnknownDisabled() && nextShow) {
 			setShowOverlay(true);

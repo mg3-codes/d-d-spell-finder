@@ -40,14 +40,15 @@ const SettingsOffcanvas = (): JSX.Element => {
 
 	const handleClose = useCallback(() => setShow(false), []);
 
-	const enableCookies = useCallback(() => setUseCookies(true), []);
+	const enableCookies = useCallback(() => setUseCookies(true), [setUseCookies]);
 
 	const disableCookies = useCallback(() => {
 		setUseCookies(false);
 		deleteAllCookies();
-	}, []);
+	}, [setUseCookies]);
 
 	const handleColumnCheckboxChange: ChangeEventHandler<HTMLInputElement> =
+		// biome-ignore lint/correctness/useExhaustiveDependencies(selectedColumns): results change on selected column change
 		useCallback(
 			(
 				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
@@ -61,7 +62,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 
 				handleColumnChange(Number.parseInt(numberAsString));
 			},
-			[selectedColumns],
+			[selectedColumns, handleColumnChange, rollbar, selectedColumns],
 		);
 
 	const isCheckboxChecked = (column: Column): boolean =>
@@ -80,7 +81,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 
 			updateTheme(Number.parseInt(numberAsString));
 		},
-		[currentTheme, selectedThemeOption],
+		[rollbar, updateTheme],
 	);
 
 	return (

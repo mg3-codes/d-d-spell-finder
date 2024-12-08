@@ -43,7 +43,7 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedEffectTypes.length === effectFilterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedEffectTypes);
-	}, [selectedEffectTypes]);
+	}, [selectedEffectTypes, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		if (!props?.data?.effect || props?.data?.effect?.length === 0) return false;
@@ -84,7 +84,7 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				effect,
 			);
 		},
-		[selectedEffectTypes],
+		[selectedEffectTypes, rollbar],
 	);
 
 	const isChecked = (x: Effect): boolean | undefined =>

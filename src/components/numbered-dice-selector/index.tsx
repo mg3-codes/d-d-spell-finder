@@ -81,6 +81,7 @@ export const NumberedDiceSelector = ({
 		twelveSidedInputValue,
 		twentySidedInputValue,
 		oneHundredSidedInputValue,
+		onRollClicked,
 	]);
 
 	const handleClearSelection = useCallback(() => {
@@ -92,16 +93,7 @@ export const NumberedDiceSelector = ({
 		setTwelveSidedInputValue("0");
 		setTwentySidedInputValue("0");
 		setOneHundredSidedInputValue("0");
-	}, [
-		twoSidedInputValue,
-		fourSidedInputValue,
-		sixSidedInputValue,
-		eightSidedInputValue,
-		tenSidedInputValue,
-		twelveSidedInputValue,
-		twentySidedInputValue,
-		oneHundredSidedInputValue,
-	]);
+	}, []);
 
 	useEffect(() => {
 		if (Number.parseInt(twoSidedInputValue) > 0) setRollIsDisabled(false);
@@ -128,97 +120,103 @@ export const NumberedDiceSelector = ({
 		oneHundredSidedInputValue,
 	]);
 
-	const handleIncrease = (
-		currentValue: string,
-		updateFunction: React.Dispatch<React.SetStateAction<string>>,
-	) => updateFunction((Number.parseInt(currentValue) + 1).toString());
+	const handleIncrease = useCallback(
+		(
+			currentValue: string,
+			updateFunction: React.Dispatch<React.SetStateAction<string>>,
+		) => updateFunction((Number.parseInt(currentValue) + 1).toString()),
+		[],
+	);
 
-	const handleDecrease = (
-		currentValue: string,
-		updateFunction: React.Dispatch<React.SetStateAction<string>>,
-	) =>
-		updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString());
+	const handleDecrease = useCallback(
+		(
+			currentValue: string,
+			updateFunction: React.Dispatch<React.SetStateAction<string>>,
+		) =>
+			updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString()),
+		[],
+	);
 
 	const handleTwoSidedIncreaseClick = useCallback(
 		() => handleIncrease(twoSidedInputValue, setTwoSidedInputValue),
-		[twoSidedInputValue],
+		[twoSidedInputValue, handleIncrease],
 	);
 
 	const handleTwoSidedDecreaseClick = useCallback(
 		() => handleDecrease(twoSidedInputValue, setTwoSidedInputValue),
-		[twoSidedInputValue],
+		[twoSidedInputValue, handleDecrease],
 	);
 
 	const handleFourSidedIncreaseClick = useCallback(
 		() => handleIncrease(fourSidedInputValue, setFourSidedInputValue),
-		[fourSidedInputValue],
+		[fourSidedInputValue, handleIncrease],
 	);
 
 	const handleFourSidedDecreaseClick = useCallback(
 		() => handleDecrease(fourSidedInputValue, setFourSidedInputValue),
-		[fourSidedInputValue],
+		[fourSidedInputValue, handleDecrease],
 	);
 
 	const handleSixSidedIncreaseClick = useCallback(
 		() => handleIncrease(sixSidedInputValue, setSixSidedInputValue),
-		[sixSidedInputValue],
+		[sixSidedInputValue, handleIncrease],
 	);
 
 	const handleSixSidedDecreaseClick = useCallback(
 		() => handleDecrease(sixSidedInputValue, setSixSidedInputValue),
-		[sixSidedInputValue],
+		[sixSidedInputValue, handleDecrease],
 	);
 
 	const handleEightSidedIncreaseClick = useCallback(
 		() => handleIncrease(eightSidedInputValue, setEightSidedInputValue),
-		[eightSidedInputValue],
+		[eightSidedInputValue, handleIncrease],
 	);
 
 	const handleEightSidedDecreaseClick = useCallback(
 		() => handleDecrease(eightSidedInputValue, setEightSidedInputValue),
-		[eightSidedInputValue],
+		[eightSidedInputValue, handleDecrease],
 	);
 
 	const handleTenSidedIncreaseClick = useCallback(
 		() => handleIncrease(tenSidedInputValue, setTenSidedInputValue),
-		[tenSidedInputValue],
+		[tenSidedInputValue, handleIncrease],
 	);
 
 	const handleTenSidedDecreaseClick = useCallback(
 		() => handleDecrease(tenSidedInputValue, setTenSidedInputValue),
-		[tenSidedInputValue],
+		[tenSidedInputValue, handleDecrease],
 	);
 
 	const handleTwelveSidedIncreaseClick = useCallback(
 		() => handleIncrease(twelveSidedInputValue, setTwelveSidedInputValue),
-		[twelveSidedInputValue],
+		[twelveSidedInputValue, handleIncrease],
 	);
 
 	const handleTwelveSidedDecreaseClick = useCallback(
 		() => handleDecrease(twelveSidedInputValue, setTwelveSidedInputValue),
-		[twelveSidedInputValue],
+		[twelveSidedInputValue, handleDecrease],
 	);
 
 	const handleTwentySidedIncreaseClick = useCallback(
 		() => handleIncrease(twentySidedInputValue, setTwentySidedInputValue),
-		[twentySidedInputValue],
+		[twentySidedInputValue, handleIncrease],
 	);
 
 	const handleTwentySidedDecreaseClick = useCallback(
 		() => handleDecrease(twentySidedInputValue, setTwentySidedInputValue),
-		[twentySidedInputValue],
+		[twentySidedInputValue, handleDecrease],
 	);
 
 	const handleOneHundredSidedIncreaseClick = useCallback(
 		() =>
 			handleIncrease(oneHundredSidedInputValue, setOneHundredSidedInputValue),
-		[oneHundredSidedInputValue],
+		[oneHundredSidedInputValue, handleIncrease],
 	);
 
 	const handleOneHundredSidedDecreaseClick = useCallback(
 		() =>
 			handleDecrease(oneHundredSidedInputValue, setOneHundredSidedInputValue),
-		[oneHundredSidedInputValue],
+		[oneHundredSidedInputValue, handleDecrease],
 	);
 
 	return (

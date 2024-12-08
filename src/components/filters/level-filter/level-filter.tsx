@@ -41,7 +41,7 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedLevels.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedLevels);
-	}, [selectedLevels]);
+	}, [selectedLevels, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(props?.data?.level, selectedLevels);
@@ -72,7 +72,7 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				level.toString(),
 			);
 		},
-		[selectedLevels],
+		[selectedLevels, rollbar],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

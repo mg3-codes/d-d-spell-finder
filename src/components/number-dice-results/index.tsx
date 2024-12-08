@@ -42,42 +42,31 @@ export const NumberDiceResults = ({
 		useState<boolean>(false);
 	const [sumResults, setSumResults] = useState<boolean>(false);
 
-	const calculateSum = (dice: NumberDie[] | undefined): number => {
+	const calculateSum = useCallback((dice: NumberDie[] | undefined): number => {
 		if (!dice) return 0;
 
 		let sum = 0;
-		dice.forEach((x) => (sum += x?.value ?? 0));
+		for (const x of dice) {
+			sum += x?.value ?? 0;
+		}
 
 		return sum;
-	};
+	}, []);
 
 	useEffect(() => {
-		setHasTwoSidedResults(
-			results?.filter((x) => x.sides === 2).length ? true : false,
-		);
-		setHasFourSidedResults(
-			results?.filter((x) => x.sides === 4).length ? true : false,
-		);
-		setHasSixSidedResults(
-			results?.filter((x) => x.sides === 6).length ? true : false,
-		);
-		setHasEightSidedResults(
-			results?.filter((x) => x.sides === 8).length ? true : false,
-		);
-		setHasTenSidedResults(
-			results?.filter((x) => x.sides === 10).length ? true : false,
-		);
-		setHasTwelveSidedResults(
-			results?.filter((x) => x.sides === 12).length ? true : false,
-		);
-		setHasTwentySidedResults(
-			results?.filter((x) => x.sides === 20).length ? true : false,
-		);
+		setHasTwoSidedResults(!!results?.filter((x) => x.sides === 2).length);
+		setHasFourSidedResults(!!results?.filter((x) => x.sides === 4).length);
+		setHasSixSidedResults(!!results?.filter((x) => x.sides === 6).length);
+		setHasEightSidedResults(!!results?.filter((x) => x.sides === 8).length);
+		setHasTenSidedResults(!!results?.filter((x) => x.sides === 10).length);
+		setHasTwelveSidedResults(!!results?.filter((x) => x.sides === 12).length);
+		setHasTwentySidedResults(!!results?.filter((x) => x.sides === 20).length);
 		setHasOneHundredSidedResults(
-			results?.filter((x) => x.sides === 100).length ? true : false,
+			!!results?.filter((x) => x.sides === 100).length,
 		);
 	}, [results]);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(sumResults): update needs to occur on sumResults change
 	useEffect(() => {
 		setSumMap(
 			sumMap.set(2, calculateSum(results?.filter((x) => x.sides === 2))),
@@ -103,7 +92,7 @@ export const NumberDiceResults = ({
 		setSumMap(
 			sumMap.set(100, calculateSum(results?.filter((x) => x.sides === 100))),
 		);
-	}, [sumResults, results]);
+	}, [sumResults, results, calculateSum, sumMap]);
 
 	const handleSumResultsCheck = useCallback(() => {
 		setSumResults(!sumResults);

@@ -47,7 +47,7 @@ const CastingTimeFilter = ({
 		if (selectedCastingTimes.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedCastingTimes);
-	}, [selectedCastingTimes]);
+	}, [selectedCastingTimes, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -83,7 +83,7 @@ const CastingTimeFilter = ({
 				castingTime,
 			);
 		},
-		[selectedCastingTimes],
+		[selectedCastingTimes, rollbar],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

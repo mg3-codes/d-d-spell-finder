@@ -17,6 +17,8 @@ import "./styles.css";
 export const IndexPage = () => {
 	const [searchParams] = useSearchParams();
 	const navigate = useNavigate();
+
+	// biome-ignore lint/correctness/useExhaustiveDependencies: this should only ever execute once to avoid loop
 	useEffect(() => {
 		const redirectParam = searchParams.get("redirect");
 		if (redirectParam) navigate(redirectParam);

@@ -45,7 +45,7 @@ const DurationFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedDurations.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedDurations);
-	}, [selectedDurations]);
+	}, [selectedDurations, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -71,7 +71,7 @@ const DurationFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				duration,
 			);
 		},
-		[selectedDurations],
+		[selectedDurations, rollbar],
 	);
 
 	const selectAllDurations = useCallback(
