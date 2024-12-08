@@ -20,16 +20,16 @@ import {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapNumberToSchoolDisplayName, School } from "../../../enums/schools";
+import { School, mapNumberToSchoolDisplayName } from "../../../enums/schools";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./school-filter.scss";
+import "./school-filter.css";
 
 const filterDisabledArray = createDisabledFilterArray(8);
 

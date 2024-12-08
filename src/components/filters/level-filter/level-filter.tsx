@@ -21,14 +21,14 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./level-filter.scss";
+import "./level-filter.css";
 
 const filterDisabledArray = createDisabledFilterArray(10);
 

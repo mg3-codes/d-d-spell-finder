@@ -22,14 +22,14 @@ import Form from "react-bootstrap/Form";
 
 import { Effect, mapEffectToDisplayName } from "../../../enums/effects";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./effect-filter.scss";
+import "./effect-filter.css";
 
 const effectFilterDisabledArray = createDisabledFilterArray(36);
 

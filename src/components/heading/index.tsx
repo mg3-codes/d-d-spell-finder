@@ -4,7 +4,7 @@
  * @format
  */
 
-import React, { useState, useContext, useCallback } from "react";
+import React, { useCallback, useContext, useState } from "react";
 import Button from "react-bootstrap/Button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -13,7 +13,7 @@ import { SelectedRowContext } from "../selected-row-context-provider";
 const PrintModal = React.lazy(() => import("../print-modal"));
 const SettingsOffcanvas = React.lazy(() => import("../settings-offcanvas"));
 
-import "./heading.scss";
+import "./heading.css";
 
 const Heading = () => {
 	const { selectedRows } = useContext(SelectedRowContext);

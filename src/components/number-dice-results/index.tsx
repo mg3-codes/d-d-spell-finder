@@ -4,14 +4,14 @@
  * @format
  */
 
-import React, { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Table from "react-bootstrap/Table";
 
 import type NumberDie from "../../classes/number-die";
 
-import "./number-dice-results.scss";
+import "./number-dice-results.css";
 
 export interface INumberDiceResults {
 	results: NumberDie[] | null;

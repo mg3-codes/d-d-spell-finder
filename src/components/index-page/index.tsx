@@ -12,7 +12,7 @@ const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
 const Table = React.lazy(() => import("../table"));
 const Footer = React.lazy(() => import("../footer"));
 
-import "./page.scss";
+import "./page.css";
 
 export const IndexPage = () => {
 	const [searchParams] = useSearchParams();

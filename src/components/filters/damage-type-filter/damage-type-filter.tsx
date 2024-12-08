@@ -21,18 +21,18 @@ import {
 	mapNumberToDamageTypeDisplayName,
 } from "../../../enums/damage-types";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import {
 	type CustomFilterProps,
 	useGridFilter,
 } from "@ag-grid-community/react";
-import "./damage-type-filter.scss";
+import "./damage-type-filter.css";
 
 const damageTypeFilterDisabledArray = createDisabledFilterArray(14);
 

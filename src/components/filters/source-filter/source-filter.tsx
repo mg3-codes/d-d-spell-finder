@@ -20,16 +20,16 @@ import {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapNumberToSourceDisplayName, Source } from "../../../enums/sources";
+import { Source, mapNumberToSourceDisplayName } from "../../../enums/sources";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./source-filter.scss";
+import "./source-filter.css";
 
 const filterDisabledArray = createDisabledFilterArray(9);
 

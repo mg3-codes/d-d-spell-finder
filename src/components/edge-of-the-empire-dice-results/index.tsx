@@ -4,21 +4,21 @@
  * @format
  */
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
 
 import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 
 import {
-	EdgeOfTheEmpireDiceSymbol,
-	mapSymbolToCharacter,
+    EdgeOfTheEmpireDiceSymbol,
+    mapSymbolToCharacter,
 } from "../../enums/edge-of-the-empire-dice-symbol";
 import type EdgeOfTheEmpireDiceResult from "../../types/edge-of-the-empire-dice-result";
 import { getOutcomeFromSymbols } from "../../utility/edge-of-the-empire-dice";
 import { EdgeDiceSymbol } from "../edge-dice-symbol";
 
-import "./edge-of-the-empire-dice-results.scss";
+import "./edge-of-the-empire-dice-results.css";
 
 export interface IEdgeOfTheEmpireDiceResults {
 	results: EdgeOfTheEmpireDiceCollection | null;

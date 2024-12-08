@@ -4,13 +4,12 @@
  * @format
  */
 
-import React from "react";
 import Table from "react-bootstrap/Table";
 
-import { EdgeDiceSymbol } from "../edge-dice-symbol";
 import { EdgeOfTheEmpireDiceSymbol } from "../../enums/edge-of-the-empire-dice-symbol";
+import { EdgeDiceSymbol } from "../edge-dice-symbol";
 
-import "./edge-symbol-key.scss";
+import "./edge-symbol-key.css";
 
 export const EdgeSymbolKey = () => {
 	return (

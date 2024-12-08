@@ -21,11 +21,11 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import {
@@ -33,7 +33,7 @@ import {
 	mapNumberToDurationDisplayName,
 } from "../../../enums/durations";
 
-import "./duration-filter.scss";
+import "./duration-filter.css";
 
 const filterDisabledArray = createDisabledFilterArray(15);
 

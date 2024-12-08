@@ -4,10 +4,9 @@
  * @format
  */
 
-import React from "react";
 import { Link } from "react-router-dom";
 
-import "./not-found.scss";
+import "./not-found.css";
 
 const NotFoundPage = () => {
 	return (

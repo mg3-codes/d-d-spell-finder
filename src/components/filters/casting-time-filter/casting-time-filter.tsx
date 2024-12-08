@@ -25,14 +25,14 @@ import {
 	mapNumberToCastingTimeDisplayName,
 } from "../../../enums/casting-times";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./casting-time-filter.scss";
+import "./casting-time-filter.css";
 
 const filterDisabledArray = createDisabledFilterArray(10);
 

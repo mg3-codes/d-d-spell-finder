@@ -11,12 +11,12 @@ import Modal from "react-bootstrap/Modal";
 import Pagination from "react-bootstrap/Pagination";
 
 import type NumberDie from "../../classes/number-die";
-import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import { DiceType } from "../../enums/dice-type";
-import { NumberDiceResults } from "../number-dice-results";
+import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
+import { NumberDiceResults } from "../number-dice-results";
 
-import "./roll-history-modal.scss";
+import "./roll-history-modal.css";
 
 export interface IRollHistoryModal {
 	show: boolean;

@@ -27,7 +27,7 @@ import Modal from "react-bootstrap/Modal";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
 
-import { buildRow, type TableRow } from "../../types/table-row";
+import { type TableRow, buildRow } from "../../types/table-row";
 
 import {
 	defaultColDef,
@@ -46,9 +46,9 @@ import { ThemeContext } from "../theme-context-provider";
 import { getCookie, setCookie } from "../../utility/cookies";
 import { AppSettingsContext } from "../app-settings-provider";
 
-import "../../styles/ag-grid.scss";
-import "./table.scss";
 import type { LogArgument } from "rollbar";
+import "../../styles/ag-grid.css";
+import "./table.css";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 

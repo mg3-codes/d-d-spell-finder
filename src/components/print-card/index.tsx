@@ -4,7 +4,6 @@
  * @format
  */
 
-import React from "react";
 import { mapNumberToAttackDisplayName } from "../../enums/attacks";
 import { mapNumberToCastingTimeDisplayName } from "../../enums/casting-times";
 import { mapNumberToDamageTypeDisplayName } from "../../enums/damage-types";
@@ -18,7 +17,7 @@ import { mapNumberToSourceDisplayName } from "../../enums/sources";
 
 import type { TableRow } from "../../types/table-row";
 
-import "./print-card.scss";
+import "./print-card.css";
 
 export type IPrintCard = {
 	row: TableRow;

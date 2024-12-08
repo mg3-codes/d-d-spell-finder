@@ -26,16 +26,16 @@ import {
 	Distance,
 	mapNumberToDistanceDisplayName,
 } from "../../../enums/distances";
-import { mapNumberToShapeDisplayName, Shape } from "../../../enums/shapes";
+import { Shape, mapNumberToShapeDisplayName } from "../../../enums/shapes";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./area-filter.scss";
+import "./area-filter.css";
 
 const distanceFilterDisabledArray = [
 	-1, 1, 5, 10, 15, 20, 30, 40, 50, 60, 100, 200, 2500, 5280, 26400, 40000,

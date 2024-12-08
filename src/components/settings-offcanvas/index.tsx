@@ -26,7 +26,7 @@ import { ColumnContext } from "../column-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
 import { deleteAllCookies } from "../../utility/cookies";
-import "./settings-offcanvas.scss";
+import "./settings-offcanvas.css";
 
 const SettingsOffcanvas = (): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);

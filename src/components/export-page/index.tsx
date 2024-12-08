@@ -4,17 +4,17 @@
  * @format
  */
 
-import React, { useCallback, useContext, useEffect, useMemo } from "react";
+import { useCallback, useContext, useEffect, useMemo } from "react";
 import Alert from "react-bootstrap/Alert";
 import { useSearchParams } from "react-router-dom";
 
-import { SelectedRowContext } from "../selected-row-context-provider";
 import { PrintCard } from "../print-card";
+import { SelectedRowContext } from "../selected-row-context-provider";
 
 import { Theme } from "../../enums/theme";
 
-import "./export-page.scss";
 import { ThemeContext } from "../theme-context-provider";
+import "./export-page.css";
 
 export interface IExportPageQueryParams {
 	numPerRow?: number;

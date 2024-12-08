@@ -13,7 +13,7 @@ import { DiceNumberInput } from "../dice-number-input";
 
 import NumberDie from "../../classes/number-die";
 
-import "./numbered-dice-selector.scss";
+import "./numbered-dice-selector.css";
 
 export interface INumberedDiceSelectorProps {
 	onRollClicked: (dice: NumberDie[]) => void;

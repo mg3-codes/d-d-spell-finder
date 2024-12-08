@@ -21,18 +21,18 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import {
-	mapNumberToSavingThrowDisplayName,
 	SavingThrow,
+	mapNumberToSavingThrowDisplayName,
 } from "../../../enums/saving-throws";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./saving-throw-filter.scss";
+import "./saving-throw-filter.css";
 
 const savingThrowFilterDisabledArray = createDisabledFilterArray(7);
 

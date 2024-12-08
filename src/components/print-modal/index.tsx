@@ -7,10 +7,10 @@
 import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
-	type MouseEventHandler,
-	useCallback,
-	useContext,
-	useState,
+    type MouseEventHandler,
+    useCallback,
+    useContext,
+    useState,
 } from "react";
 import Alert from "react-bootstrap/Alert";
 import Badge from "react-bootstrap/Badge";
@@ -26,7 +26,7 @@ import { ThemeContext } from "../theme-context-provider";
 import { Theme } from "../../enums/theme";
 import type { TableRow } from "../../types/table-row";
 
-import "./print-modal.scss";
+import "./print-modal.css";
 
 export interface IPrintModalProps {
 	isOpen: boolean;

@@ -20,16 +20,16 @@ import {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapNumberToRangeDisplayName, Range } from "../../../enums/ranges";
+import { Range, mapNumberToRangeDisplayName } from "../../../enums/ranges";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./range-filter.scss";
+import "./range-filter.css";
 
 const filterDisabledArray = createDisabledFilterArray(25);
 

@@ -22,14 +22,14 @@ import Form from "react-bootstrap/Form";
 
 import { Attack, mapNumberToAttackDisplayName } from "../../../enums/attacks";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./attack-filter.scss";
+import "./attack-filter.css";
 
 const attackFilterDisabledArray = createDisabledFilterArray(3);
 
