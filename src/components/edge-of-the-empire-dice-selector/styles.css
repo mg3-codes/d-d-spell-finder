@@ -18,9 +18,10 @@
 		.dice-pair {
 			display: flex;
 			justify-content: space-between;
+			flex-direction: column;
 
-			@include bootstrap.media-breakpoint-down(md) {
-				flex-direction: column;
+			@media (min-width: 768px) {
+				flex-direction: row;
 			}
 
 			.dice-option {
@@ -30,10 +31,10 @@
 		}
 
 		.force-dice {
-			max-width: 50%;
+			max-width: unset;
 
-			@include bootstrap.media-breakpoint-down(md) {
-				max-width: unset;
+			@media (min-width: 768px) {
+				max-width: 50%;
 			}
 		}
 	}
@@ -41,9 +42,10 @@
 	.button-container {
 		button {
 			margin-right: 4px;
+			margin-bottom: 4px;
 
-			@include bootstrap.media-breakpoint-down(md) {
-				margin-bottom: 4px;
+			@media (min-width: 768px) {
+				margin-bottom: unset;
 			}
 		}
 	}

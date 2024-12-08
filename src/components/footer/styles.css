@@ -12,19 +12,27 @@
 	font-size: smaller;
 
 	.version {
-		@include bootstrap.media-breakpoint-down(md) {
-			font-size: smaller;
+		font-size: smaller;
+
+		@media (min-width: 768px) {
+			font-size: unset;
 		}
 	}
 
 	.links {
-		@include bootstrap.media-breakpoint-down(md) {
-			display: flex;
-			justify-content: center;
-			align-items: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		button {
+			font-size: small;
+		}
+
+		@media (min-width: 768px) {
+			display: unset;
 
 			button {
-				font-size: small;
+				font-size: unset;
 			}
 		}
 	}

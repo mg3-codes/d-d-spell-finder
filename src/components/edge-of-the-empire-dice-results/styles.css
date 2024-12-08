@@ -5,10 +5,10 @@
  */
 
 .column1 {
-	min-width: 26%;
+	min-width: 33%;
 
-	@include bootstrap.media-breakpoint-down(md) {
-		min-width: 33%;
+	@media (min-width: 768px) {
+		min-width: 26%;
 	}
 }
 
@@ -47,21 +47,20 @@
 			justify-content: space-between;
 
 			.type {
-				text-align: start;
-			}
-
-			.short-type {
 				display: none;
 			}
 
-			@include bootstrap.media-breakpoint-down(md) {
+			.short-type {
+				display: unset;
+			}
+
+			@media (min-width: 768px) {
 				.type {
-					display: none;
+					text-align: start;
 				}
 
 				.short-type {
-					display: unset;
-					@include column1;
+					display: none;
 				}
 			}
 
@@ -116,16 +115,17 @@
 				display: flex;
 
 				.label {
-					@include bootstrap.media-breakpoint-down(md) {
-						min-width: 50%;
+					min-width: 50%;
+					@media (min-width: 768px) {
+						min-width: unset;
 					}
 				}
 
 				.result {
-					min-width: 50px;
+					min-width: 50%;
 
-					@include bootstrap.media-breakpoint-down(md) {
-						min-width: 50%;
+					@media (min-width: 768px) {
+						min-width: 50px;
 					}
 				}
 
@@ -147,11 +147,11 @@
 				}
 
 				.empty {
-					border-bottom: none;
-					flex-grow: 1;
+					display: none;
 
-					@include bootstrap.media-breakpoint-down(md) {
-						display: none;
+					@media (min-width: 768px) {
+						border-bottom: none;
+						flex-grow: 1;
 					}
 				}
 			}
