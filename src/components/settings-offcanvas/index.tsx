@@ -31,8 +31,7 @@ import "./styles.css";
 const SettingsOffcanvas = (): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);
 	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
-	const { currentTheme, updateTheme, selectedThemeOption } =
-		useContext(ThemeContext);
+	const { updateTheme, selectedThemeOption } = useContext(ThemeContext);
 	const { selectedColumns, handleColumnChange } = useContext(ColumnContext);
 	const rollbar = useRollbar();
 
