@@ -139,7 +139,7 @@ const Table = (): JSX.Element => {
 	const [columnDefinitions, setColumnDefinitions] = useState(
 		startingColumnDefinition,
 	);
-	
+
 	// biome-ignore lint/correctness/useExhaustiveDependencies(columnDefinitions): including this will cause re-render loop
 	// biome-ignore lint/correctness/useExhaustiveDependencies(columnDefinitions.filter): including this will cause re-render loop
 	useEffect(() => {
