@@ -6,20 +6,20 @@
 
 .ag-theme-quartz {
 	--ag-active-color: var(--bs-primary);
-	--ag-selected-row-background-color: var(--primary-bg-subtle);
-	--ag-row-hover-color: var(--primary-bg-subtle);
-	--ag-column-hover-color: var(--primary-bg-subtle);
-	--ag-input-focus-border-color: var(--primary-border-subtle);
-	--ag-header-foreground-color: var(--black);
-	--ag-range-selection-border-color: var(--black);
-	--ag-background-color: var(--body-bg);
-	--ag-foreground-color: var(--dark-text-emphasis);
-	--ag-border-color: var(--border-color);
-	--ag-header-background-color: var(--gray-100);
-	--ag-odd-row-background-color: var(--gray-100);
-	--ag-invalid-color: var(--danger);
-	--ag-font-family: var(--font-family-base);
-	--ag-data-color: var(--dark-text-emphasis);
+	--ag-selected-row-background-color: var(--bs-primary-bg-subtle);
+	--ag-row-hover-color: var(--bs-primary-bg-subtle);
+	--ag-column-hover-color: var(--bs-primary-bg-subtle);
+	--ag-input-focus-border-color: var(--bs-primary-border-subtle);
+	--ag-header-foreground-color: var(--bs-black);
+	--ag-range-selection-border-color: var(--bs-black);
+	--ag-background-color: var(--bs-body-bg);
+	--ag-foreground-color: var(--bs-dark-text-emphasis);
+	--ag-border-color: var(--bs-border-color);
+	--ag-header-background-color: var(--bs-gray-100);
+	--ag-odd-row-background-color: var(--bs-gray-100);
+	--ag-invalid-color: var(--bs-danger);
+	--ag-font-family: var(--bs-font-family-base);
+	--ag-data-color: var(--bs-dark-text-emphasis);
 }
 .ag-theme-quartz-dark {
 	--ag-active-color: var(--bs-primary);
