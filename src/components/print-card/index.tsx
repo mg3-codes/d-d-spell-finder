@@ -52,7 +52,7 @@ export const PrintCard = ({ row }: IPrintCard) => {
 	return (
 		<div className="print-card">
 			<div className="container">
-				<div className="header-container">
+				<div className="text-center">
 					<span className="header">{row.name}</span>
 				</div>
 				<div className="subtitle">
