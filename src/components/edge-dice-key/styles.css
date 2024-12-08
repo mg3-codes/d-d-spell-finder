@@ -1,0 +1,43 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+.dice-table {
+	thead {
+		.title {
+			text-align: center;
+		}
+	}
+
+	tbody {
+		tr {
+			td:nth-child(1) {
+				position: sticky;
+				position: -webkit-sticky;
+				left: 0;
+			}
+
+			text-align: center;
+			vertical-align: middle;
+		}
+	}
+
+	.dice {
+		text-align: center;
+	}
+
+	.symbols {
+		text-align: center;
+
+		td {
+			min-width: 65px;
+		}
+
+		.force {
+			background-color: var(--bs-white);
+			color: var(--bs-black);
+		}
+	}
+}

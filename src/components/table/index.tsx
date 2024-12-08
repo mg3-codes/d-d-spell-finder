@@ -6,10 +6,10 @@
 
 import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
 import {
-	CellClickedEvent,
-	ColDef,
-	ColumnMovedEvent,
-	GetRowIdParams,
+	type CellClickedEvent,
+	type ColDef,
+	type ColumnMovedEvent,
+	type GetRowIdParams,
 	ModuleRegistry,
 } from "@ag-grid-community/core";
 import { AgGridReact } from "@ag-grid-community/react";
@@ -26,29 +26,27 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
+import type { LogArgument } from "rollbar";
 
-import { buildRow, TableRow } from "../../types/table-row";
+import { type TableRow, buildRow } from "../../types/table-row";
 
+import spellJson from "../../assets/5e-spells.json";
+import { mapColumnToDisplayName } from "../../enums/columns";
+import { Theme } from "../../enums/theme";
+import type Spell from "../../types/spell";
+import { getCookie, setCookie } from "../../utility/cookies";
 import {
 	defaultColDef,
 	getDefaultColumnDefinitions,
 	setColumnDefinitionOrder,
 } from "../../utility/table-defaults";
-
-import spellJson from "../../assets/5e-spells.json";
-import { mapColumnToDisplayName } from "../../enums/columns";
-import { Theme } from "../../enums/theme";
-import Spell from "../../types/spell";
+import { AppSettingsContext } from "../app-settings-provider";
 import { ColumnContext } from "../column-context-provider";
 import { SelectedRowContext } from "../selected-row-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
-import { getCookie, setCookie } from "../../utility/cookies";
-import { AppSettingsContext } from "../app-settings-provider";
-
-import "../../styles/ag-grid.scss";
-import "./table.scss";
-import { LogArgument } from "rollbar";
+import "../../styles/ag-grid.css";
+import "./styles.css";
 
 ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
@@ -66,8 +64,7 @@ const Table = (): JSX.Element => {
 	const [modalIsOpen, setModalIsOpen] = useState<boolean>(false);
 	const [modalTitle, setModalTitle] = useState<string>("");
 	const [modalText, setModalText] = useState<string>("");
-	const [showCookieToast, setShowCookieToast] =
-		useState<boolean>(!useCookies);
+	const [showCookieToast, setShowCookieToast] = useState<boolean>(!useCookies);
 	const gridRef = useRef<AgGridReact>(null);
 	const rollbar = useRollbar();
 
@@ -100,7 +97,7 @@ const Table = (): JSX.Element => {
 		} catch (e: unknown) {
 			rollbar.warning("error updating selected rows", e as LogArgument);
 		}
-	}, [selectedRows]);
+	}, [rollbar, setSelectedRows]);
 
 	const onColumnMoved = useCallback(
 		(event: ColumnMovedEvent<unknown>): void => {
@@ -123,6 +120,7 @@ const Table = (): JSX.Element => {
 		[],
 	);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: this only needs to execute on first render
 	const startingColumnDefinition = useMemo<ColDef[]>(() => {
 		const def = getDefaultColumnDefinitions(
 			onMaterialCellClicked,
@@ -142,28 +140,28 @@ const Table = (): JSX.Element => {
 		startingColumnDefinition,
 	);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(columnDefinitions): including this will cause re-render loop
+	// biome-ignore lint/correctness/useExhaustiveDependencies(columnDefinitions.filter): including this will cause re-render loop
 	useEffect(() => {
 		for (const columnDefinition of columnDefinitions) {
 			if (columnDefinition.checkboxSelection === true) continue;
 			if (
 				selectedColumns.find(
 					(value) =>
-						columnDefinition.headerName ===
-						mapColumnToDisplayName(value),
+						columnDefinition.headerName === mapColumnToDisplayName(value),
 				) === undefined
 			)
 				columnDefinition.hide = true;
 			else columnDefinition.hide = false;
 
 			setColumnDefinitions([
-				...columnDefinitions.filter(
-					(x) => x.field !== columnDefinition.field,
-				),
+				...columnDefinitions.filter((x) => x.field !== columnDefinition.field),
 				columnDefinition,
 			]);
 		}
 	}, [selectedColumns]);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: this only needs to execute on first render
 	const setSelectionIfNeeded = useCallback((): void => {
 		for (const row of selectedRows) {
 			const gridRow = gridRef?.current?.api?.getRowNode(row.name);
@@ -178,7 +176,7 @@ const Table = (): JSX.Element => {
 	const acceptCookies = useCallback((): void => {
 		setShowCookieToast(false);
 		setUseCookies(true);
-	}, []);
+	}, [setUseCookies]);
 
 	const rejectCookies = useCallback((): void => {
 		setShowCookieToast(false);
@@ -190,9 +188,7 @@ const Table = (): JSX.Element => {
 				<Modal.Header closeButton>
 					<Modal.Title>{modalTitle}</Modal.Title>
 				</Modal.Header>
-				<Modal.Body style={{ whiteSpace: "pre-line" }}>
-					{modalText}
-				</Modal.Body>
+				<Modal.Body style={{ whiteSpace: "pre-line" }}>{modalText}</Modal.Body>
 				<Modal.Footer>
 					<Button variant="secondary" onClick={handleModalClose}>
 						Close
@@ -236,10 +232,9 @@ const Table = (): JSX.Element => {
 						<Toast.Body>
 							<div className="cookie-toast-content">
 								<p>
-									Allowing these cookies doesn&apos;t allow us
-									to track you. It only allows us to save some
-									preferences so we can load your settings and
-									table layout when you return.
+									Allowing these cookies doesn&apos;t allow us to track you. It
+									only allows us to save some preferences so we can load your
+									settings and table layout when you return.
 								</p>
 								<p>
 									See exactly what we do with cookies{" "}
@@ -253,16 +248,10 @@ const Table = (): JSX.Element => {
 									</a>
 								</p>
 								<div>
-									<Button
-										variant="success"
-										onClick={acceptCookies}
-									>
+									<Button variant="success" onClick={acceptCookies}>
 										Accept
 									</Button>
-									<Button
-										variant="outline-danger"
-										onClick={rejectCookies}
-									>
+									<Button variant="outline-danger" onClick={rejectCookies}>
 										Reject
 									</Button>
 								</div>

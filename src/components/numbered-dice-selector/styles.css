@@ -1,0 +1,42 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+.dnd-dice-selector {
+	width: 40%;
+	min-height: 370px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.dice-options-container {
+		display: flex;
+		flex-direction: column;
+
+		@media (min-width: 768px) {
+			flex-direction: row;
+		}
+
+		.dice-option-column {
+			padding: 0 4px;
+			max-width: 150px;
+
+			.dice-option {
+				margin-bottom: 10px;
+			}
+		}
+	}
+
+	.button-container {
+		button {
+			margin-right: 4px;
+			margin-bottom: 4px;
+
+			@media (min-width: 768px) {
+				margin-bottom: unset;
+			}
+		}
+	}
+}

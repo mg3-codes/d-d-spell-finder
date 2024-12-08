@@ -4,12 +4,12 @@
  * @format
  */
 
-import React from "react";
 import Table from "react-bootstrap/Table";
 
-import "./edge-dice-key.scss";
-import { EdgeDiceSymbol } from "../edge-dice-symbol";
 import { EdgeOfTheEmpireDiceSymbol } from "../../enums/edge-of-the-empire-dice-symbol";
+import { EdgeDiceSymbol } from "../edge-dice-symbol";
+
+import "./styles.css";
 
 export const EdgeDiceKey = () => {
 	return (
@@ -35,269 +35,169 @@ export const EdgeDiceKey = () => {
 				<tr className="symbols">
 					<td>1</td>
 					<td className="boost">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Blank} />
 					</td>
 					<td className="setback">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Blank} />
 					</td>
 					<td className="ability">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Blank} />
 					</td>
 					<td className="difficulty">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Blank} />
 					</td>
 					<td className="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Blank} />
 					</td>
 					<td className="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Blank} />
 					</td>
 					<td className="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.DarkSide} />
 					</td>
 				</tr>
 				<tr className="symbols">
 					<td>2</td>
 					<td className="boost">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Blank} />
 					</td>
 					<td className="setback">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Blank}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Blank} />
 					</td>
 					<td className="ability">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
 					</td>
 					<td className="difficulty">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
 					</td>
 					<td className="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
 					</td>
 					<td className="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
 					</td>
 					<td className="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.DarkSide} />
 					</td>
 				</tr>
 				<tr className="symbols">
 					<td>3</td>
 					<td className="boost">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
 					</td>
 					<td className="setback">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
 					</td>
 					<td className="ability">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
 					</td>
 					<td className="difficulty">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
 						</div>
 					</td>
 					<td className="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Success}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
 					</td>
 					<td className="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
 					</td>
 					<td className="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.DarkSide} />
 					</td>
 				</tr>
 				<tr className="symbols">
 					<td>4</td>
 					<td className="boost">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 						</div>
 					</td>
 					<td className="setback">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
 					</td>
 					<td className="ability">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
 						</div>
 					</td>
 					<td className="difficulty">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 					</td>
 					<td className="proficiency">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
 						</div>
 					</td>
 					<td className="challenge">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
 						</div>
 					</td>
 					<td className="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.DarkSide} />
 					</td>
 				</tr>
 				<tr className="symbols">
 					<td>5</td>
 					<td className="boost">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 						</div>
 					</td>
 					<td className="setback">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 					</td>
 					<td className="ability">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 					</td>
 					<td className="difficulty">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 					</td>
 					<td className="proficiency">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
 						</div>
 					</td>
 					<td className="challenge">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
 						</div>
 					</td>
 					<td className="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.DarkSide} />
 					</td>
 				</tr>
 				<tr className="symbols">
 					<td>6</td>
 					<td className="boost">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 					</td>
 					<td className="setback">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 					</td>
 					<td className="ability">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 					</td>
 					<td className="difficulty">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 					</td>
 					<td className="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 					</td>
 					<td className="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 					</td>
 					<td className="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.DarkSide} />
 					</td>
 				</tr>
 				<tr className="symbols">
@@ -305,48 +205,30 @@ export const EdgeDiceKey = () => {
 					<td className="boost" />
 					<td className="setback" />
 					<td className="ability">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 						</div>
 					</td>
 					<td className="difficulty">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 						</div>
 					</td>
 					<td className="proficiency">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 						</div>
 					</td>
 					<td className="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 					</td>
 					<td className="force">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.DarkSide}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.DarkSide} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.DarkSide} />
 						</div>
 					</td>
 				</tr>
@@ -355,49 +237,31 @@ export const EdgeDiceKey = () => {
 					<td className="boost" />
 					<td className="setback" />
 					<td className="ability">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 						</div>
 					</td>
 					<td className="difficulty">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 						</div>
 					</td>
 					<td className="proficiency">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 						</div>
 					</td>
 					<td className="challenge">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 						</div>
 					</td>
 					<td className="force">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.LightSide} />
 					</td>
 				</tr>
 				<tr className="symbols">
@@ -407,30 +271,20 @@ export const EdgeDiceKey = () => {
 					<td className="ability" />
 					<td className="difficulty" />
 					<td className="proficiency">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Success}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Success} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 						</div>
 					</td>
 					<td className="challenge">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Failure}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Failure} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 						</div>
 					</td>
 					<td className="force">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.LightSide} />
 						</div>
 					</td>
 				</tr>
@@ -441,33 +295,21 @@ export const EdgeDiceKey = () => {
 					<td className="ability" />
 					<td className="difficulty" />
 					<td className="proficiency">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 						</div>
 					</td>
 					<td className="challenge">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 						</div>
 					</td>
 					<td className="force">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.LightSide} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.LightSide} />
 						</div>
 					</td>
 				</tr>
@@ -478,33 +320,21 @@ export const EdgeDiceKey = () => {
 					<td className="ability" />
 					<td className="difficulty" />
 					<td className="proficiency">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Advantage}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Advantage} />
 						</div>
 					</td>
 					<td className="challenge">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.Threat}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Threat} />
 						</div>
 					</td>
 					<td className="force">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.LightSide} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.LightSide} />
 						</div>
 					</td>
 				</tr>
@@ -515,23 +345,15 @@ export const EdgeDiceKey = () => {
 					<td className="ability" />
 					<td className="difficulty" />
 					<td className="proficiency">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Triumph}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Triumph} />
 					</td>
 					<td className="challenge">
-						<EdgeDiceSymbol
-							symbol={EdgeOfTheEmpireDiceSymbol.Despair}
-						/>
+						<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.Despair} />
 					</td>
 					<td className="force">
-						<div className="multiple">
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-							/>
-							<EdgeDiceSymbol
-								symbol={EdgeOfTheEmpireDiceSymbol.LightSide}
-							/>
+						<div className="d-flex justify-content-center align-items-center">
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.LightSide} />
+							<EdgeDiceSymbol symbol={EdgeOfTheEmpireDiceSymbol.LightSide} />
 						</div>
 					</td>
 				</tr>

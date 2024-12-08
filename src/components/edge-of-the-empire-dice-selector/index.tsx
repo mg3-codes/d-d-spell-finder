@@ -4,22 +4,23 @@
  * @format
  */
 
-import React, { useCallback, useEffect, useState } from "react";
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import { DiceNumberInput } from "../dice-number-input";
 
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
-import BoostDie from "../../classes/edge-of-the-empire-dice/boost-die";
-import SetbackDie from "../../classes/edge-of-the-empire-dice/setback-die";
 import AbilityDie from "../../classes/edge-of-the-empire-dice/ability-die";
-import DifficultyDie from "../../classes/edge-of-the-empire-dice/difficulty-die";
-import ProficiencyDie from "../../classes/edge-of-the-empire-dice/proficiency-die";
+import BoostDie from "../../classes/edge-of-the-empire-dice/boost-die";
 import ChallengeDie from "../../classes/edge-of-the-empire-dice/challenge-die";
+import DifficultyDie from "../../classes/edge-of-the-empire-dice/difficulty-die";
 import ForceDie from "../../classes/edge-of-the-empire-dice/force-die";
+import ProficiencyDie from "../../classes/edge-of-the-empire-dice/proficiency-die";
+import SetbackDie from "../../classes/edge-of-the-empire-dice/setback-die";
+import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 
-import "./edge-dice-selector.scss";
+import "./styles.css";
 
 export interface IEdgeOfTheEmpireDiceSelectorProps {
 	onRollClicked: (dice: EdgeOfTheEmpireDiceCollection) => void;
@@ -31,8 +32,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 	const [boostInputValue, setBoostInputValue] = useState<string>("0");
 	const [setbackInputValue, setSetbackInputValue] = useState<string>("0");
 	const [abilityInputValue, setAbilityInputValue] = useState<string>("0");
-	const [difficultyInputValue, setDifficultyInputValue] =
-		useState<string>("0");
+	const [difficultyInputValue, setDifficultyInputValue] = useState<string>("0");
 	const [proficiencyInputValue, setProficiencyInputValue] =
 		useState<string>("0");
 	const [challengeInputValue, setChallengeInputValue] = useState<string>("0");
@@ -50,31 +50,31 @@ export const EdgeOfTheEmpireDiceSelector = ({
 			force: [],
 		};
 
-		const boost = parseInt(boostInputValue);
+		const boost = Number.parseInt(boostInputValue);
 		for (let rolls = 0; rolls < boost; rolls++) {
 			dice.boost.push(new BoostDie());
 		}
-		const setback = parseInt(setbackInputValue);
+		const setback = Number.parseInt(setbackInputValue);
 		for (let rolls = 0; rolls < setback; rolls++) {
 			dice.setback.push(new SetbackDie());
 		}
-		const ability = parseInt(abilityInputValue);
+		const ability = Number.parseInt(abilityInputValue);
 		for (let rolls = 0; rolls < ability; rolls++) {
 			dice.ability.push(new AbilityDie());
 		}
-		const difficulty = parseInt(difficultyInputValue);
+		const difficulty = Number.parseInt(difficultyInputValue);
 		for (let rolls = 0; rolls < difficulty; rolls++) {
 			dice.difficulty.push(new DifficultyDie());
 		}
-		const proficiency = parseInt(proficiencyInputValue);
+		const proficiency = Number.parseInt(proficiencyInputValue);
 		for (let rolls = 0; rolls < proficiency; rolls++) {
 			dice.proficiency.push(new ProficiencyDie());
 		}
-		const challenge = parseInt(challengeInputValue);
+		const challenge = Number.parseInt(challengeInputValue);
 		for (let rolls = 0; rolls < challenge; rolls++) {
 			dice.challenge.push(new ChallengeDie());
 		}
-		const force = parseInt(forceInputValue);
+		const force = Number.parseInt(forceInputValue);
 		for (let rolls = 0; rolls < force; rolls++) {
 			dice.force.push(new ForceDie());
 		}
@@ -88,6 +88,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 		proficiencyInputValue,
 		challengeInputValue,
 		forceInputValue,
+		onRollClicked,
 	]);
 
 	const handleClearSelection = useCallback(() => {
@@ -98,28 +99,17 @@ export const EdgeOfTheEmpireDiceSelector = ({
 		setProficiencyInputValue("0");
 		setChallengeInputValue("0");
 		setForceInputValue("0");
-	}, [
-		boostInputValue,
-		setbackInputValue,
-		abilityInputValue,
-		difficultyInputValue,
-		proficiencyInputValue,
-		challengeInputValue,
-		forceInputValue,
-	]);
+	}, []);
 
 	useEffect(() => {
 		if (Number.parseInt(boostInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(setbackInputValue) > 0)
-			setRollIsDisabled(false);
-		else if (Number.parseInt(abilityInputValue) > 0)
-			setRollIsDisabled(false);
+		else if (Number.parseInt(setbackInputValue) > 0) setRollIsDisabled(false);
+		else if (Number.parseInt(abilityInputValue) > 0) setRollIsDisabled(false);
 		else if (Number.parseInt(difficultyInputValue) > 0)
 			setRollIsDisabled(false);
 		else if (Number.parseInt(proficiencyInputValue) > 0)
 			setRollIsDisabled(false);
-		else if (Number.parseInt(challengeInputValue) > 0)
-			setRollIsDisabled(false);
+		else if (Number.parseInt(challengeInputValue) > 0) setRollIsDisabled(false);
 		else if (Number.parseInt(forceInputValue) > 0) setRollIsDisabled(false);
 		else setRollIsDisabled(true);
 	}, [
@@ -132,84 +122,91 @@ export const EdgeOfTheEmpireDiceSelector = ({
 		forceInputValue,
 	]);
 
-	const handleIncrease = (
-		currentValue: string,
-		updateFunction: React.Dispatch<React.SetStateAction<string>>,
-	) => updateFunction((parseInt(currentValue) + 1).toString());
+	const handleIncrease = useCallback(
+		(
+			currentValue: string,
+			updateFunction: React.Dispatch<React.SetStateAction<string>>,
+		) => updateFunction((Number.parseInt(currentValue) + 1).toString()),
+		[],
+	);
 
-	const handleDecrease = (
-		currentValue: string,
-		updateFunction: React.Dispatch<React.SetStateAction<string>>,
-	) => updateFunction(Math.max(parseInt(currentValue) - 1, 0).toString());
+	const handleDecrease = useCallback(
+		(
+			currentValue: string,
+			updateFunction: React.Dispatch<React.SetStateAction<string>>,
+		) =>
+			updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString()),
+		[],
+	);
 
 	const handleBoostIncreaseClick = useCallback(
 		() => handleIncrease(boostInputValue, setBoostInputValue),
-		[boostInputValue],
+		[boostInputValue, handleIncrease],
 	);
 
 	const handleBoostDecreaseClick = useCallback(
 		() => handleDecrease(boostInputValue, setBoostInputValue),
-		[boostInputValue],
+		[boostInputValue, handleDecrease],
 	);
 
 	const handleSetbackIncreaseClick = useCallback(
 		() => handleIncrease(setbackInputValue, setSetbackInputValue),
-		[setbackInputValue],
+		[setbackInputValue, handleIncrease],
 	);
 
 	const handleSetbackDecreaseClick = useCallback(
 		() => handleDecrease(setbackInputValue, setSetbackInputValue),
-		[setbackInputValue],
+		[setbackInputValue, handleDecrease],
 	);
 
 	const handleAbilityIncreaseClick = useCallback(
 		() => handleIncrease(abilityInputValue, setAbilityInputValue),
-		[abilityInputValue],
+		[abilityInputValue, handleIncrease],
 	);
 
 	const handleAbilityDecreaseClick = useCallback(
 		() => handleDecrease(abilityInputValue, setAbilityInputValue),
-		[abilityInputValue],
+		[abilityInputValue, handleDecrease],
 	);
 
 	const handleDifficultyIncreaseClick = useCallback(
 		() => handleIncrease(difficultyInputValue, setDifficultyInputValue),
-		[difficultyInputValue],
+		[difficultyInputValue, handleIncrease],
 	);
 
 	const handleDifficultyDecreaseClick = useCallback(
 		() => handleDecrease(difficultyInputValue, setDifficultyInputValue),
-		[difficultyInputValue],
+		[difficultyInputValue, handleDecrease],
 	);
 
 	const handleProficiencyIncreaseClick = useCallback(
 		() => handleIncrease(proficiencyInputValue, setProficiencyInputValue),
-		[proficiencyInputValue],
+		[proficiencyInputValue, handleIncrease],
 	);
 
 	const handleProficiencyDecreaseClick = useCallback(
 		() => handleDecrease(proficiencyInputValue, setProficiencyInputValue),
-		[proficiencyInputValue],
+		[proficiencyInputValue, handleDecrease],
 	);
 
 	const handleChallengeIncreaseClick = useCallback(
 		() => handleIncrease(challengeInputValue, setChallengeInputValue),
-		[challengeInputValue],
+		[challengeInputValue, handleIncrease],
 	);
 
 	const handleChallengeDecreaseClick = useCallback(
 		() => handleDecrease(challengeInputValue, setChallengeInputValue),
-		[challengeInputValue],
+		[challengeInputValue, handleDecrease],
 	);
 
 	const handleForceIncreaseClick = useCallback(
 		() => handleIncrease(forceInputValue, setForceInputValue),
-		[forceInputValue],
+		[forceInputValue, handleIncrease],
 	);
 
 	const handleForceDecreaseClick = useCallback(
 		() => handleDecrease(forceInputValue, setForceInputValue),
-		[forceInputValue],
+		[forceInputValue, handleDecrease],
 	);
 
 	return (

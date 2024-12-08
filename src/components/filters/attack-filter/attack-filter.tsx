@@ -4,11 +4,15 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import {
+	type CustomFilterProps,
+	useGridFilter,
+} from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	ReactElement,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type ReactElement,
 	useCallback,
 	useEffect,
 	useState,
@@ -18,14 +22,14 @@ import Form from "react-bootstrap/Form";
 
 import { Attack, mapNumberToAttackDisplayName } from "../../../enums/attacks";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./attack-filter.scss";
+import "./styles.css";
 
 const attackFilterDisabledArray = createDisabledFilterArray(3);
 
@@ -39,7 +43,7 @@ const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedAttacks.length === attackFilterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedAttacks);
-	}, [selectedAttacks]);
+	}, [selectedAttacks, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -58,9 +62,7 @@ const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoAttacks = useCallback(() => setSelectedAttacks([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const attack = e.target.getAttribute("data-attack");
 
 			if (!attack) {
@@ -68,13 +70,9 @@ const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				return;
 			}
 
-			numberBasedFilterHandleCheck(
-				selectedAttacks,
-				setSelectedAttacks,
-				attack,
-			);
+			numberBasedFilterHandleCheck(selectedAttacks, setSelectedAttacks, attack);
 		},
-		[selectedAttacks],
+		[selectedAttacks, rollbar],
 	);
 
 	const isChecked = (x: Attack): boolean | undefined =>

@@ -5,11 +5,11 @@
  */
 
 export enum EdgeOfTheEmpireDiceColor {
-	Black,
-	Blue,
-	Green,
-	Purple,
-	Red,
-	White,
-	Yellow,
+	Black = 0,
+	Blue = 1,
+	Green = 2,
+	Purple = 3,
+	Red = 4,
+	White = 5,
+	Yellow = 6,
 }

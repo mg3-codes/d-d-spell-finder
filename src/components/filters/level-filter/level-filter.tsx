@@ -4,11 +4,15 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import {
+	type CustomFilterProps,
+	useGridFilter,
+} from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	ReactElement,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type ReactElement,
 	useCallback,
 	useEffect,
 	useState,
@@ -17,14 +21,14 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./level-filter.scss";
+import "./styles.css";
 
 const filterDisabledArray = createDisabledFilterArray(10);
 
@@ -37,13 +41,10 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedLevels.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedLevels);
-	}, [selectedLevels]);
+	}, [selectedLevels, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
-		return numberBasedFilterDoesFilterPass(
-			props?.data?.level,
-			selectedLevels,
-		);
+		return numberBasedFilterDoesFilterPass(props?.data?.level, selectedLevels);
 	};
 
 	useGridFilter({ doesFilterPass });
@@ -56,9 +57,7 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoLevels = useCallback(() => setSelectedLevels([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const numberAsString = e.target.getAttribute("data-level");
 
 			if (!numberAsString) {
@@ -66,14 +65,14 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				return;
 			}
 
-			const level = parseInt(numberAsString);
+			const level = Number.parseInt(numberAsString);
 			numberBasedFilterHandleCheck(
 				selectedLevels,
 				setSelectedLevels,
 				level.toString(),
 			);
 		},
-		[selectedLevels],
+		[selectedLevels, rollbar],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

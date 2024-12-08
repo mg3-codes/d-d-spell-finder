@@ -1,0 +1,15 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+.not-found {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	color: var(--bs-body-color);
+	background-color: var(--bs-body-bg);
+	margin-top: 5vh;
+}

@@ -4,11 +4,15 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import {
+	type CustomFilterProps,
+	useGridFilter,
+} from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	ReactElement,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type ReactElement,
 	useCallback,
 	useEffect,
 	useState,
@@ -17,19 +21,18 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
-
 import {
 	Duration,
 	mapNumberToDurationDisplayName,
 } from "../../../enums/durations";
 
-import "./duration-filter.scss";
+import "./styles.css";
 
 const filterDisabledArray = createDisabledFilterArray(15);
 
@@ -42,7 +45,7 @@ const DurationFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedDurations.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedDurations);
-	}, [selectedDurations]);
+	}, [selectedDurations, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -54,9 +57,7 @@ const DurationFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	useGridFilter({ doesFilterPass });
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const duration = e.target.getAttribute("data-duration");
 
 			if (!duration) {
@@ -70,7 +71,7 @@ const DurationFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				duration,
 			);
 		},
-		[selectedDurations],
+		[selectedDurations, rollbar],
 	);
 
 	const selectAllDurations = useCallback(

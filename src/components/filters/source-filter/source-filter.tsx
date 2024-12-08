@@ -4,11 +4,15 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import {
+	type CustomFilterProps,
+	useGridFilter,
+} from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	ReactElement,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type ReactElement,
 	useCallback,
 	useEffect,
 	useState,
@@ -16,16 +20,16 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapNumberToSourceDisplayName, Source } from "../../../enums/sources";
+import { Source, mapNumberToSourceDisplayName } from "../../../enums/sources";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./source-filter.scss";
+import "./styles.css";
 
 const filterDisabledArray = createDisabledFilterArray(9);
 
@@ -39,7 +43,7 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedSources.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedSources);
-	}, [selectedSources]);
+	}, [selectedSources, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -58,9 +62,7 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoSources = useCallback(() => setSelectedSources([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const source = e.target.getAttribute("data-source");
 
 			if (!source) {
@@ -68,13 +70,9 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				return;
 			}
 
-			numberBasedFilterHandleCheck(
-				selectedSources,
-				setSelectedSources,
-				source,
-			);
+			numberBasedFilterHandleCheck(selectedSources, setSelectedSources, source);
 		},
-		[selectedSources],
+		[selectedSources, rollbar],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>
@@ -85,9 +83,7 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToSourceDisplayName(
-					Source.AcquisitionsIncorporated,
-				)}
+				label={mapNumberToSourceDisplayName(Source.AcquisitionsIncorporated)}
 				checked={isChecked(Source.AcquisitionsIncorporated)}
 				data-source={Source.AcquisitionsIncorporated}
 			/>
@@ -108,27 +104,21 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToSourceDisplayName(
-					Source.ExplorersGuideToWildemount,
-				)}
+				label={mapNumberToSourceDisplayName(Source.ExplorersGuideToWildemount)}
 				checked={isChecked(Source.ExplorersGuideToWildemount)}
 				data-source={Source.ExplorersGuideToWildemount}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToSourceDisplayName(
-					Source.GuildmastersGuideToRavnica,
-				)}
+				label={mapNumberToSourceDisplayName(Source.GuildmastersGuideToRavnica)}
 				checked={isChecked(Source.GuildmastersGuideToRavnica)}
 				data-source={Source.GuildmastersGuideToRavnica}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToSourceDisplayName(
-					Source.LostLaboratoryOfKwalish,
-				)}
+				label={mapNumberToSourceDisplayName(Source.LostLaboratoryOfKwalish)}
 				checked={isChecked(Source.LostLaboratoryOfKwalish)}
 				data-source={Source.LostLaboratoryOfKwalish}
 			/>
@@ -142,18 +132,14 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToSourceDisplayName(
-					Source.TashasCauldronOfEverything,
-				)}
+				label={mapNumberToSourceDisplayName(Source.TashasCauldronOfEverything)}
 				checked={isChecked(Source.TashasCauldronOfEverything)}
 				data-source={Source.TashasCauldronOfEverything}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToSourceDisplayName(
-					Source.XanatharsGuideToEverything,
-				)}
+				label={mapNumberToSourceDisplayName(Source.XanatharsGuideToEverything)}
 				checked={isChecked(Source.XanatharsGuideToEverything)}
 				data-source={Source.XanatharsGuideToEverything}
 			/>

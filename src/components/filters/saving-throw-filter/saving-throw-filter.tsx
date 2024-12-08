@@ -4,11 +4,15 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import {
+	type CustomFilterProps,
+	useGridFilter,
+} from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	ReactElement,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type ReactElement,
 	useCallback,
 	useEffect,
 	useState,
@@ -17,18 +21,18 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import {
-	mapNumberToSavingThrowDisplayName,
 	SavingThrow,
+	mapNumberToSavingThrowDisplayName,
 } from "../../../enums/saving-throws";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./saving-throw-filter.scss";
+import "./styles.css";
 
 const savingThrowFilterDisabledArray = createDisabledFilterArray(7);
 
@@ -41,13 +45,10 @@ const SavingThrowFilter = ({
 	const rollbar = useRollbar();
 
 	useEffect(() => {
-		if (
-			selectedSavingThrows.length ===
-			savingThrowFilterDisabledArray.length
-		)
+		if (selectedSavingThrows.length === savingThrowFilterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedSavingThrows);
-	}, [selectedSavingThrows]);
+	}, [selectedSavingThrows, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -69,9 +70,7 @@ const SavingThrowFilter = ({
 	);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const savingThrow = e.target.getAttribute("data-throw");
 
 			if (!savingThrow) {
@@ -85,7 +84,7 @@ const SavingThrowFilter = ({
 				savingThrow,
 			);
 		},
-		[selectedSavingThrows],
+		[selectedSavingThrows, rollbar],
 	);
 
 	const isChecked = (x: SavingThrow): boolean | undefined =>
@@ -110,9 +109,7 @@ const SavingThrowFilter = ({
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToSavingThrowDisplayName(
-					SavingThrow.Constitution,
-				)}
+				label={mapNumberToSavingThrowDisplayName(SavingThrow.Constitution)}
 				checked={isChecked(SavingThrow.Constitution)}
 				data-throw={SavingThrow.Constitution}
 			/>
@@ -126,9 +123,7 @@ const SavingThrowFilter = ({
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToSavingThrowDisplayName(
-					SavingThrow.Intelligence,
-				)}
+				label={mapNumberToSavingThrowDisplayName(SavingThrow.Intelligence)}
 				checked={isChecked(SavingThrow.Intelligence)}
 				data-throw={SavingThrow.Intelligence}
 			/>

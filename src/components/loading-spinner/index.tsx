@@ -4,10 +4,9 @@
  * @format
  */
 
-import React from "react";
 import Spinner from "react-bootstrap/Spinner";
 
-import "./spinner.scss";
+import "./styles.css";
 
 const LoadingSpinner = () => {
 	return (

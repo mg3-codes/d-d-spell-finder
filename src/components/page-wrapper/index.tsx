@@ -4,13 +4,14 @@
  * @format
  */
 
-import React, { useContext, useLayoutEffect } from "react";
+import type React from "react";
+import { useContext, useLayoutEffect } from "react";
 
 import { ThemeContext } from "../theme-context-provider";
 
 import { Theme } from "../../enums/theme";
 
-import "./page-wrapper.scss";
+import "./styles.css";
 
 export interface IPageWrapperProps {
 	children: React.ReactNode;

@@ -4,7 +4,7 @@
  * @format
  */
 
-import {
+import type {
 	CellClassParams,
 	CellClickedEvent,
 	CellStyle,
@@ -24,8 +24,8 @@ import SavingThrowFilter from "../components/filters/saving-throw-filter/saving-
 import SchoolFilter from "../components/filters/school-filter/school-filter";
 import SourceFilter from "../components/filters/source-filter/source-filter";
 import { Column, mapColumnToDisplayName } from "../enums/columns";
-import Spell from "../types/spell";
-import { TableRow } from "../types/table-row";
+import type Spell from "../types/spell";
+import type { TableRow } from "../types/table-row";
 
 import { areaValueComparator } from "./comparators";
 import {

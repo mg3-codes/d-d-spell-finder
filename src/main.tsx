@@ -4,20 +4,22 @@
  * @format
  */
 
+import { ErrorBoundary, Provider as RollbarProvider } from "@rollbar/react";
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import {
-	createBrowserRouter,
 	Navigate,
 	RouterProvider,
+	createBrowserRouter,
 } from "react-router-dom";
-import { Provider as RollbarProvider, ErrorBoundary } from "@rollbar/react";
 
+import { AppSettingsContextProvider } from "./components/app-settings-provider";
 import { ColumnContextProvider } from "./components/column-context-provider";
 import LoadingSpinner from "./components/loading-spinner";
-import { ThemeContextProvider } from "./components/theme-context-provider";
 import { SelectedRowContextProvider } from "./components/selected-row-context-provider";
-import { AppSettingsContextProvider } from "./components/app-settings-provider";
+import { ThemeContextProvider } from "./components/theme-context-provider";
+
+import "./styles/main.css";
 
 const Index = React.lazy(() => import("./components/routes"));
 const DiceRoller = React.lazy(() => import("./components/routes/dice-roller"));
@@ -30,10 +32,8 @@ const rollbarConfig = {
 	enabled: import.meta.env.MODE === "production",
 	captureUncaught: true,
 	captureUnhandledRejections: true,
-	/* eslint-disable camelcase */
-	code_version: "0.5.4",
+	code_version: "0.5.5",
 	source_map_enabled: true,
-	/* eslint-enable camelcase */
 };
 
 const router = createBrowserRouter([

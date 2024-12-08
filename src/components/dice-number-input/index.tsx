@@ -4,12 +4,13 @@
  * @format
  */
 
-import React, { useCallback, useEffect, useState } from "react";
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import InputGroup from "react-bootstrap/InputGroup";
 
-import "./dice-number-input.scss";
+import "./styles.css";
 
 export interface IDiceNumberInputProps {
 	value: string;
@@ -27,34 +28,33 @@ export const DiceNumberInput = ({
 	const [showError, setShowError] = useState<boolean>(false);
 	const [decreaseIsDisabled, setDecreaseIsDisabled] = useState<boolean>(true);
 
-	const inputIsValid = (): boolean => {
-		const valueAsNumber = parseInt(value);
+	const inputIsValid = useCallback((): boolean => {
+		const valueAsNumber = Number.parseInt(value);
 
 		if (valueAsNumber < 0) return false;
 
 		return !Number.isNaN(valueAsNumber);
-	};
+	}, [value]);
 
 	useEffect(() => {
 		if (!inputIsValid()) setShowError(true);
 		else setShowError(false);
 
-		const valueAsNumber = parseInt(value);
-		setDecreaseIsDisabled(
-			Number.isNaN(valueAsNumber) || valueAsNumber <= 0,
-		);
-	}, [value]);
+		const valueAsNumber = Number.parseInt(value);
+		setDecreaseIsDisabled(Number.isNaN(valueAsNumber) || valueAsNumber <= 0);
+	}, [value, inputIsValid]);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(value): function needs to update on value change
 	const handleUpdateValue = useCallback(
 		(e: React.ChangeEvent<HTMLInputElement>): void => {
 			updateValue(e.target.value);
 		},
-		[value],
+		[value, updateValue],
 	);
 
 	const handleBlur = useCallback(() => {
 		if (value === "") updateValue("0");
-	}, [value]);
+	}, [value, updateValue]);
 
 	return (
 		<InputGroup className="dice-number-input">

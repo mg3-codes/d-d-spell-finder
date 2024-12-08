@@ -8,8 +8,8 @@ import React, {
 	Suspense,
 	useCallback,
 	useContext,
-	useState,
 	useEffect,
+	useState,
 } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -18,25 +18,25 @@ const Heading = React.lazy(() => import("../heading"));
 const LoadingSpinner = React.lazy(() => import("../loading-spinner"));
 const Footer = React.lazy(() => import("../footer"));
 
-import { NumberedDiceSelector } from "../numbered-dice-selector";
 import { NumberDiceResults } from "../number-dice-results";
+import { NumberedDiceSelector } from "../numbered-dice-selector";
 
-import NumberDie from "../../classes/number-die";
+import type NumberDie from "../../classes/number-die";
 import {
 	DiceType,
 	mapNumberToDiceTypeDisplayName,
 } from "../../enums/dice-type";
 
-import { AppSettingsContext } from "../app-settings-provider";
-import { EdgeOfTheEmpireDiceSelector } from "../edge-of-the-empire-dice-selector";
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
-import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
+import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import { getCookie, setCookie } from "../../utility/cookies";
+import { AppSettingsContext } from "../app-settings-provider";
+import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
+import { EdgeOfTheEmpireDiceSelector } from "../edge-of-the-empire-dice-selector";
 
 import { Button } from "react-bootstrap";
 import { RollHistoryModal } from "../roll-history-modal";
 
-import "./page.scss";
+import "./styles.css";
 
 const cookieName = "diceRollerType";
 
@@ -51,13 +51,12 @@ export const DiceRollerPage = () => {
 		if (useCookies) {
 			const cookie = getCookie(cookieName);
 
-			if (cookie) return parseInt(cookie);
+			if (cookie) return Number.parseInt(cookie);
 		}
 
 		return DiceType.Numbered;
 	});
-	const [historyModalIsOpen, setHistoryModalIsOpen] =
-		useState<boolean>(false);
+	const [historyModalIsOpen, setHistoryModalIsOpen] = useState<boolean>(false);
 	const [numberedDiceRollHistory, setNumberedDiceRollHistory] = useState<
 		NumberDie[][]
 	>([]);
@@ -65,6 +64,7 @@ export const DiceRollerPage = () => {
 		EdgeOfTheEmpireDiceCollection[]
 	>([]);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(numberedDiceRollHistory): update should not occur on dice roll history change to avoid loop
 	useEffect(() => {
 		if (!numberDiceRollResults) return;
 
@@ -74,6 +74,7 @@ export const DiceRollerPage = () => {
 		]);
 	}, [numberDiceRollResults]);
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies(edgeRollHistory): update should not occur on dice roll history change to avoid loop
 	useEffect(() => {
 		if (!edgeOfTheEmpireDiceRollResult) return;
 
@@ -92,25 +93,25 @@ export const DiceRollerPage = () => {
 
 	const openHistoryModal = useCallback(() => setHistoryModalIsOpen(true), []);
 
-	const closeHistoryModal = useCallback(
-		() => setHistoryModalIsOpen(false),
-		[],
+	const closeHistoryModal = useCallback(() => setHistoryModalIsOpen(false), []);
+
+	const handleDiceTypeChange = useCallback(
+		(type: DiceType): void => {
+			if (useCookies) setCookie(cookieName, type.toString(), false);
+
+			setDiceType(type);
+		},
+		[useCookies],
 	);
 
-	const handleDiceTypeChange = (type: DiceType): void => {
-		if (useCookies) setCookie(cookieName, type.toString(), false);
-
-		setDiceType(type);
-	};
-
-	const handleNumberedDiceTypeClick = useCallback(
+	const selectNumberedDiceType = useCallback(
 		() => handleDiceTypeChange(DiceType.Numbered),
-		[],
+		[handleDiceTypeChange],
 	);
 
-	const handleEdgeOfTheEmpireDiceTypeClick = useCallback(
+	const selectEdgeDiceType = useCallback(
 		() => handleDiceTypeChange(DiceType.EdgeOfTheEmpire),
-		[],
+		[handleDiceTypeChange],
 	);
 
 	return (
@@ -123,25 +124,18 @@ export const DiceRollerPage = () => {
 						<DropdownButton className="dropdown" title="Dice Type">
 							<Dropdown.Item
 								eventKey={DiceType.Numbered}
-								onClick={handleNumberedDiceTypeClick}
+								onClick={selectNumberedDiceType}
 							>
-								{mapNumberToDiceTypeDisplayName(
-									DiceType.Numbered,
-								)}
+								{mapNumberToDiceTypeDisplayName(DiceType.Numbered)}
 							</Dropdown.Item>
 							<Dropdown.Item
 								eventKey={DiceType.EdgeOfTheEmpire}
-								onClick={handleEdgeOfTheEmpireDiceTypeClick}
+								onClick={selectEdgeDiceType}
 							>
-								{mapNumberToDiceTypeDisplayName(
-									DiceType.EdgeOfTheEmpire,
-								)}
+								{mapNumberToDiceTypeDisplayName(DiceType.EdgeOfTheEmpire)}
 							</Dropdown.Item>
 						</DropdownButton>
-						<Button
-							variant="outline-primary"
-							onClick={openHistoryModal}
-						>
+						<Button variant="outline-primary" onClick={openHistoryModal}>
 							Roll History
 						</Button>
 					</div>
@@ -160,9 +154,7 @@ export const DiceRollerPage = () => {
 						{diceType === DiceType.EdgeOfTheEmpire && (
 							<>
 								<EdgeOfTheEmpireDiceSelector
-									onRollClicked={
-										setEdgeOfTheEmpireDiceRollResult
-									}
+									onRollClicked={setEdgeOfTheEmpireDiceRollResult}
 								/>
 								<EdgeOfTheEmpireDiceResults
 									results={edgeOfTheEmpireDiceRollResult}

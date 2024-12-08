@@ -1,0 +1,27 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+.gutter-container {
+	margin: 20px 30px;
+}
+
+.page {
+	color: var(--bs-body-color);
+	background-color: var(--bs-body-bg);
+
+	.buttons {
+		display: flex;
+
+		.dropdown {
+			margin-right: var(--margin-sm);
+		}
+	}
+
+	.dice-container {
+		display: flex;
+		margin-top: 12px;
+	}
+}

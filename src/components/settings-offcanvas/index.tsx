@@ -5,9 +5,10 @@
  */
 
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	MouseEventHandler,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type MouseEventHandler,
 	useCallback,
 	useContext,
 	useState,
@@ -20,18 +21,17 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 
 import { Column, mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
+import { deleteAllCookies } from "../../utility/cookies";
 import { AppSettingsContext } from "../app-settings-provider";
 import { ColumnContext } from "../column-context-provider";
 import { ThemeContext } from "../theme-context-provider";
 
-import { deleteAllCookies } from "../../utility/cookies";
-import "./settings-offcanvas.scss";
+import "./styles.css";
 
 const SettingsOffcanvas = (): JSX.Element => {
 	const [show, setShow] = useState<boolean>(false);
 	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
-	const { currentTheme, updateTheme, selectedThemeOption } =
-		useContext(ThemeContext);
+	const { updateTheme, selectedThemeOption } = useContext(ThemeContext);
 	const { selectedColumns, handleColumnChange } = useContext(ColumnContext);
 	const rollbar = useRollbar();
 
@@ -39,14 +39,15 @@ const SettingsOffcanvas = (): JSX.Element => {
 
 	const handleClose = useCallback(() => setShow(false), []);
 
-	const enableCookies = useCallback(() => setUseCookies(true), []);
+	const enableCookies = useCallback(() => setUseCookies(true), [setUseCookies]);
 
 	const disableCookies = useCallback(() => {
 		setUseCookies(false);
 		deleteAllCookies();
-	}, []);
+	}, [setUseCookies]);
 
 	const handleColumnCheckboxChange: ChangeEventHandler<HTMLInputElement> =
+		// biome-ignore lint/correctness/useExhaustiveDependencies(selectedColumns): results change on selected column change
 		useCallback(
 			(
 				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
@@ -58,9 +59,9 @@ const SettingsOffcanvas = (): JSX.Element => {
 					return;
 				}
 
-				handleColumnChange(parseInt(numberAsString));
+				handleColumnChange(Number.parseInt(numberAsString));
 			},
-			[selectedColumns],
+			[selectedColumns, handleColumnChange, rollbar, selectedColumns],
 		);
 
 	const isCheckboxChecked = (column: Column): boolean =>
@@ -77,9 +78,9 @@ const SettingsOffcanvas = (): JSX.Element => {
 				return;
 			}
 
-			updateTheme(parseInt(numberAsString));
+			updateTheme(Number.parseInt(numberAsString));
 		},
-		[currentTheme, selectedThemeOption],
+		[rollbar, updateTheme],
 	);
 
 	return (
@@ -122,9 +123,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 										variant="primary"
 										onClick={handleSetTheme}
 										data-theme={Theme.Auto}
-										disabled={
-											selectedThemeOption === Theme.Auto
-										}
+										disabled={selectedThemeOption === Theme.Auto}
 									>
 										Auto
 									</Button>
@@ -132,9 +131,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 										variant="primary"
 										onClick={handleSetTheme}
 										data-theme={Theme.Light}
-										disabled={
-											selectedThemeOption === Theme.Light
-										}
+										disabled={selectedThemeOption === Theme.Light}
 									>
 										Light
 									</Button>
@@ -142,9 +139,7 @@ const SettingsOffcanvas = (): JSX.Element => {
 										variant="primary"
 										onClick={handleSetTheme}
 										data-theme={Theme.Dark}
-										disabled={
-											selectedThemeOption === Theme.Dark
-										}
+										disabled={selectedThemeOption === Theme.Dark}
 									>
 										Dark
 									</Button>
@@ -158,238 +153,130 @@ const SettingsOffcanvas = (): JSX.Element => {
 									<div className="check-column">
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Name,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Name,
-											)}
+											label={mapColumnToDisplayName(Column.Name)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Name)}
 											data-column={Column.Name}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Level,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Level,
-											)}
+											label={mapColumnToDisplayName(Column.Level)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Level)}
 											data-column={Column.Level}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.School,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.School,
-											)}
+											label={mapColumnToDisplayName(Column.School)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.School)}
 											data-column={Column.School}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.CastingTime,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.CastingTime,
-											)}
+											label={mapColumnToDisplayName(Column.CastingTime)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.CastingTime)}
 											data-column={Column.CastingTime}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Duration,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Duration,
-											)}
+											label={mapColumnToDisplayName(Column.Duration)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Duration)}
 											data-column={Column.Duration}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Range,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Range,
-											)}
+											label={mapColumnToDisplayName(Column.Range)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Range)}
 											data-column={Column.Range}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Area,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Area,
-											)}
+											label={mapColumnToDisplayName(Column.Area)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Area)}
 											data-column={Column.Area}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Attack,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Attack,
-											)}
+											label={mapColumnToDisplayName(Column.Attack)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Attack)}
 											data-column={Column.Attack}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Save,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Save,
-											)}
+											label={mapColumnToDisplayName(Column.Save)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Save)}
 											data-column={Column.Save}
 										/>
 									</div>
 									<div className="check-column">
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Damage,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Damage,
-											)}
+											label={mapColumnToDisplayName(Column.Damage)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Damage)}
 											data-column={Column.Damage}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Effect,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Effect,
-											)}
+											label={mapColumnToDisplayName(Column.Effect)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Effect)}
 											data-column={Column.Effect}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Ritual,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Ritual,
-											)}
+											label={mapColumnToDisplayName(Column.Ritual)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Ritual)}
 											data-column={Column.Ritual}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Concentration,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Concentration,
-											)}
+											label={mapColumnToDisplayName(Column.Concentration)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Concentration)}
 											data-column={Column.Concentration}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Verbal,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Verbal,
-											)}
+											label={mapColumnToDisplayName(Column.Verbal)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Verbal)}
 											data-column={Column.Verbal}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Somatic,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Somatic,
-											)}
+											label={mapColumnToDisplayName(Column.Somatic)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Somatic)}
 											data-column={Column.Somatic}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Material,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Material,
-											)}
+											label={mapColumnToDisplayName(Column.Material)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Material)}
 											data-column={Column.Material}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Source,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Source,
-											)}
+											label={mapColumnToDisplayName(Column.Source)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Source)}
 											data-column={Column.Source}
 										/>
 										<Form.Check
 											type="checkbox"
-											label={mapColumnToDisplayName(
-												Column.Details,
-											)}
-											onChange={
-												handleColumnCheckboxChange
-											}
-											checked={isCheckboxChecked(
-												Column.Details,
-											)}
+											label={mapColumnToDisplayName(Column.Details)}
+											onChange={handleColumnCheckboxChange}
+											checked={isCheckboxChecked(Column.Details)}
 											data-column={Column.Details}
 										/>
 									</div>

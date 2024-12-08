@@ -4,10 +4,15 @@
  * @format
  */
 
+import {
+	type CustomFilterProps,
+	useGridFilter,
+} from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	ReactElement,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type ReactElement,
 	useCallback,
 	useEffect,
 	useState,
@@ -20,15 +25,14 @@ import {
 	mapNumberToDamageTypeDisplayName,
 } from "../../../enums/damage-types";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
-import "./damage-type-filter.scss";
+import "./styles.css";
 
 const damageTypeFilterDisabledArray = createDisabledFilterArray(14);
 
@@ -44,7 +48,7 @@ const DamageTypeFilter = ({
 		if (selectedDamageTypes.length === damageTypeFilterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedDamageTypes);
-	}, [selectedDamageTypes]);
+	}, [selectedDamageTypes, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -60,15 +64,10 @@ const DamageTypeFilter = ({
 		[],
 	);
 
-	const selectNoDamageTypes = useCallback(
-		() => setSelectedDamageTypes([]),
-		[],
-	);
+	const selectNoDamageTypes = useCallback(() => setSelectedDamageTypes([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const damage = e.target.getAttribute("data-damage");
 
 			if (!damage) {
@@ -82,7 +81,7 @@ const DamageTypeFilter = ({
 				damage,
 			);
 		},
-		[selectedDamageTypes],
+		[selectedDamageTypes, rollbar],
 	);
 
 	const isChecked = (x: DamageType): boolean | undefined =>

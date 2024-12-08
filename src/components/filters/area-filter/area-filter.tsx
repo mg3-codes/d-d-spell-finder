@@ -4,11 +4,15 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import {
+	type CustomFilterProps,
+	useGridFilter,
+} from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	ReactElement,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type ReactElement,
 	useCallback,
 	useEffect,
 	useState,
@@ -22,16 +26,16 @@ import {
 	Distance,
 	mapNumberToDistanceDisplayName,
 } from "../../../enums/distances";
-import { mapNumberToShapeDisplayName, Shape } from "../../../enums/shapes";
+import { Shape, mapNumberToShapeDisplayName } from "../../../enums/shapes";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./area-filter.scss";
+import "./styles.css";
 
 const distanceFilterDisabledArray = [
 	-1, 1, 5, 10, 15, 20, 30, 40, 50, 60, 100, 200, 2500, 5280, 26400, 40000,
@@ -55,28 +59,25 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		)
 			onModelChange(null);
 		else onModelChange({ selectedDistances, selectedShapes });
-	}, [selectedDistances, selectedShapes]);
+	}, [selectedDistances, selectedShapes, onModelChange]);
 
-	const handleDistanceCheck: ChangeEventHandler<HTMLInputElement> =
-		useCallback(
-			(
-				e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-			): void => {
-				const distance = e.target.getAttribute("data-distance");
+	const handleDistanceCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
+			const distance = e.target.getAttribute("data-distance");
 
-				if (!distance) {
-					rollbar.warning("distance was null", e);
-					return;
-				}
+			if (!distance) {
+				rollbar.warning("distance was null", e);
+				return;
+			}
 
-				numberBasedFilterHandleCheck(
-					selectedDistances,
-					setSelectedDistances,
-					distance,
-				);
-			},
-			[selectedDistances],
-		);
+			numberBasedFilterHandleCheck(
+				selectedDistances,
+				setSelectedDistances,
+				distance,
+			);
+		},
+		[selectedDistances, rollbar],
+	);
 
 	const selectAllDistances = useCallback(
 		() => setSelectedDistances(distanceFilterDisabledArray),
@@ -86,9 +87,7 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoDistances = useCallback(() => setSelectedDistances([]), []);
 
 	const handleShapeCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const shape = e.target.getAttribute("data-shape");
 
 			if (!shape) {
@@ -96,13 +95,9 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				return;
 			}
 
-			numberBasedFilterHandleCheck(
-				selectedShapes,
-				setSelectedShapes,
-				shape,
-			);
+			numberBasedFilterHandleCheck(selectedShapes, setSelectedShapes, shape);
 		},
-		[selectedShapes],
+		[selectedShapes, rollbar],
 	);
 
 	const selectAllShapes = useCallback(
@@ -131,6 +126,7 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		return false;
 	};
 
+	// biome-ignore lint/correctness/useExhaustiveDependencies: FIXME
 	const onOverlayToggle = useCallback((nextShow: boolean): void => {
 		if (isUnknownDisabled() && nextShow) {
 			setShowOverlay(true);
@@ -178,9 +174,7 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 						<Form.Check
 							type={"checkbox"}
 							onChange={handleDistanceCheck}
-							label={mapNumberToDistanceDisplayName(
-								Distance.Unknown,
-							)}
+							label={mapNumberToDistanceDisplayName(Distance.Unknown)}
 							checked={isDistanceChecked(Distance.Unknown)}
 							disabled={isUnknownDisabled()}
 							data-distance={Distance.Unknown}
@@ -290,9 +284,7 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				<Form.Check
 					type={"checkbox"}
 					onChange={handleDistanceCheck}
-					label={mapNumberToDistanceDisplayName(
-						Distance.FortyThousand,
-					)}
+					label={mapNumberToDistanceDisplayName(Distance.FortyThousand)}
 					checked={isDistanceChecked(Distance.FortyThousand)}
 					data-distance={Distance.FortyThousand}
 				/>

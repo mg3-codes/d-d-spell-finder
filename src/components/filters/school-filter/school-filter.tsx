@@ -4,11 +4,15 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import {
+	type CustomFilterProps,
+	useGridFilter,
+} from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	ReactElement,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type ReactElement,
 	useCallback,
 	useEffect,
 	useState,
@@ -16,16 +20,16 @@ import React, {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { mapNumberToSchoolDisplayName, School } from "../../../enums/schools";
+import { School, mapNumberToSchoolDisplayName } from "../../../enums/schools";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./school-filter.scss";
+import "./styles.css";
 
 const filterDisabledArray = createDisabledFilterArray(8);
 
@@ -38,7 +42,7 @@ const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedSchools.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedSchools);
-	}, [selectedSchools]);
+	}, [selectedSchools, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -57,9 +61,7 @@ const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoSchools = useCallback(() => setSelectedSchools([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const school = e.target.getAttribute("data-school");
 
 			if (!school) {
@@ -67,13 +69,9 @@ const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				return;
 			}
 
-			numberBasedFilterHandleCheck(
-				selectedSchools,
-				setSelectedSchools,
-				school,
-			);
+			numberBasedFilterHandleCheck(selectedSchools, setSelectedSchools, school);
 		},
-		[selectedSchools],
+		[selectedSchools, rollbar],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

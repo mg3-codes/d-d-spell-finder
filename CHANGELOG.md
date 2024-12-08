@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.5.5
+-   Upgrade packages
+-   Switch to css & lightningcss
+
 ## 0.5.4
 
 -   Upgrade to AG Grid 32

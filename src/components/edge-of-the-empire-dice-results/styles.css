@@ -1,0 +1,160 @@
+/**
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
+
+.column1 {
+	min-width: 33%;
+
+	@media (min-width: 768px) {
+		min-width: 26%;
+	}
+}
+
+.column2 {
+	flex-grow: 1;
+}
+
+.column3 {
+	min-width: 16%;
+}
+
+.modal-body {
+	.edge-dice-results {
+		width: 100%;
+	}
+}
+
+.edge-dice-results {
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	margin-left: var(--margin-lg);
+
+	.results-table {
+		min-height: 370px;
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+
+		.header {
+			display: flex;
+		}
+
+		.results-section {
+			display: flex;
+			justify-content: space-between;
+
+			.type {
+				display: none;
+			}
+
+			.short-type {
+				display: unset;
+			}
+
+			@media (min-width: 768px) {
+				.type {
+					text-align: start;
+				}
+
+				.short-type {
+					display: none;
+				}
+			}
+
+			.eote-results {
+				display: flex;
+				justify-content: center;
+				overflow: scroll;
+				flex-grow: 1;
+
+				.dice-result {
+					display: flex;
+					margin: 0 6px;
+				}
+			}
+
+			.force-results {
+				background-color: var(--bs-white);
+				color: var(--bs-black);
+			}
+
+			.sum {
+				min-width: 16%;
+			}
+		}
+
+		tfoot {
+			tr {
+				display: flex;
+			}
+
+			.totals-header {
+				flex-grow: 1;
+			}
+
+			.results-success-and-failure {
+				width: 50%;
+			}
+
+			.results-advantage-and-threat {
+				width: 50%;
+			}
+
+			.results-light-side {
+				width: 50%;
+			}
+
+			.results-dark-side {
+				width: 50%;
+			}
+
+			.roll-success {
+				display: flex;
+
+				.label {
+					min-width: 50%;
+					@media (min-width: 768px) {
+						min-width: unset;
+					}
+				}
+
+				.result {
+					min-width: 50%;
+
+					@media (min-width: 768px) {
+						min-width: 50px;
+					}
+				}
+
+				.triumph-indicator,
+				.despair-indicator {
+					font-family: var(--edge-symbols);
+				}
+
+				.triumph-indicator {
+					color: var(--bs-yellow);
+				}
+
+				.despair-indicator {
+					color: var(--bs-red);
+				}
+
+				.filler {
+					flex-grow: 1;
+				}
+
+				.empty {
+					display: none;
+
+					@media (min-width: 768px) {
+						border-bottom: none;
+						flex-grow: 1;
+					}
+				}
+			}
+		}
+	}
+}

@@ -4,11 +4,15 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import {
+	type CustomFilterProps,
+	useGridFilter,
+} from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	ReactElement,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type ReactElement,
 	useCallback,
 	useEffect,
 	useState,
@@ -21,14 +25,14 @@ import {
 	mapNumberToCastingTimeDisplayName,
 } from "../../../enums/casting-times";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./casting-time-filter.scss";
+import "./styles.css";
 
 const filterDisabledArray = createDisabledFilterArray(10);
 
@@ -43,7 +47,7 @@ const CastingTimeFilter = ({
 		if (selectedCastingTimes.length === filterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedCastingTimes);
-	}, [selectedCastingTimes]);
+	}, [selectedCastingTimes, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
 		return numberBasedFilterDoesFilterPass(
@@ -65,9 +69,7 @@ const CastingTimeFilter = ({
 	);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const castingTime = e.target.getAttribute("data-casting-time");
 
 			if (!castingTime) {
@@ -81,7 +83,7 @@ const CastingTimeFilter = ({
 				castingTime,
 			);
 		},
-		[selectedCastingTimes],
+		[selectedCastingTimes, rollbar],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>
@@ -99,9 +101,7 @@ const CastingTimeFilter = ({
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToCastingTimeDisplayName(
-					CastingTime.BonusAction,
-				)}
+				label={mapNumberToCastingTimeDisplayName(CastingTime.BonusAction)}
 				checked={isChecked(CastingTime.BonusAction)}
 				data-casting-time={CastingTime.BonusAction}
 			/>
@@ -122,9 +122,7 @@ const CastingTimeFilter = ({
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToCastingTimeDisplayName(
-					CastingTime.TenMinutes,
-				)}
+				label={mapNumberToCastingTimeDisplayName(CastingTime.TenMinutes)}
 				checked={isChecked(CastingTime.TenMinutes)}
 				data-casting-time={CastingTime.TenMinutes}
 			/>
@@ -138,27 +136,21 @@ const CastingTimeFilter = ({
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToCastingTimeDisplayName(
-					CastingTime.EightHours,
-				)}
+				label={mapNumberToCastingTimeDisplayName(CastingTime.EightHours)}
 				checked={isChecked(CastingTime.EightHours)}
 				data-casting-time={CastingTime.EightHours}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToCastingTimeDisplayName(
-					CastingTime.TwelveHours,
-				)}
+				label={mapNumberToCastingTimeDisplayName(CastingTime.TwelveHours)}
 				checked={isChecked(CastingTime.TwelveHours)}
 				data-casting-time={CastingTime.TwelveHours}
 			/>
 			<Form.Check
 				type={"checkbox"}
 				onChange={handleCheck}
-				label={mapNumberToCastingTimeDisplayName(
-					CastingTime.TwentyFourHours,
-				)}
+				label={mapNumberToCastingTimeDisplayName(CastingTime.TwentyFourHours)}
 				checked={isChecked(CastingTime.TwentyFourHours)}
 				data-casting-time={CastingTime.TwentyFourHours}
 			/>

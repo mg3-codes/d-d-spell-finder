@@ -25,14 +25,11 @@ jobs:
             - name: Install Dependencies
               run: yarn install --immutable --check-cache
 
-            - name: Prettier Check
-              run: yarn prettier-check
+            - name: Format Check
+              run: yarn format-check
 
-            - name: ESlint
-              run: yarn eslint
-
-            - name: Stylelint
-              run: yarn stylelint-check
+            - name: Lint Check
+              run: yarn lint-check
 
             - name: Build
               run: yarn build

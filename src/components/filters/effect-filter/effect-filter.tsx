@@ -4,11 +4,15 @@
  * @format
  */
 
-import { CustomFilterProps, useGridFilter } from "@ag-grid-community/react";
+import {
+	type CustomFilterProps,
+	useGridFilter,
+} from "@ag-grid-community/react";
 import { useRollbar } from "@rollbar/react";
-import React, {
-	ChangeEventHandler,
-	ReactElement,
+import type React from "react";
+import {
+	type ChangeEventHandler,
+	type ReactElement,
 	useCallback,
 	useEffect,
 	useState,
@@ -18,14 +22,14 @@ import Form from "react-bootstrap/Form";
 
 import { Effect, mapEffectToDisplayName } from "../../../enums/effects";
 import {
+	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
-	NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
-import "./effect-filter.scss";
+import "./styles.css";
 
 const effectFilterDisabledArray = createDisabledFilterArray(36);
 
@@ -39,11 +43,10 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		if (selectedEffectTypes.length === effectFilterDisabledArray.length)
 			onModelChange(null);
 		else onModelChange(selectedEffectTypes);
-	}, [selectedEffectTypes]);
+	}, [selectedEffectTypes, onModelChange]);
 
 	const doesFilterPass = (props: NumberBasedFilterProps) => {
-		if (!props?.data?.effect || props?.data?.effect?.length === 0)
-			return false;
+		if (!props?.data?.effect || props?.data?.effect?.length === 0) return false;
 
 		for (const value of props.data.effect) {
 			const passes = numberBasedFilterDoesFilterPass(
@@ -67,9 +70,7 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const selectNoEffects = useCallback(() => setSelectedEffectTypes([]), []);
 
 	const handleCheck: ChangeEventHandler<HTMLInputElement> = useCallback(
-		(
-			e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>,
-		): void => {
+		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const effect = e.target.getAttribute("data-effect");
 
 			if (!effect) {
@@ -83,7 +84,7 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				effect,
 			);
 		},
-		[selectedEffectTypes],
+		[selectedEffectTypes, rollbar],
 	);
 
 	const isChecked = (x: Effect): boolean | undefined =>

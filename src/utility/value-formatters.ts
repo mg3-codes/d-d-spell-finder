@@ -4,7 +4,7 @@
  * @format
  */
 
-import { ValueFormatterParams } from "@ag-grid-community/core";
+import type { ValueFormatterParams } from "@ag-grid-community/core";
 
 import { mapNumberToAttackDisplayName } from "../enums/attacks";
 import { mapNumberToCastingTimeDisplayName } from "../enums/casting-times";
@@ -13,18 +13,21 @@ import {
 	mapNumberToDamageTypeDisplayName,
 } from "../enums/damage-types";
 import { Distance, mapNumberToDistanceDisplayName } from "../enums/distances";
-import { Duration, mapNumberToDurationDisplayName } from "../enums/durations";
+import {
+	type Duration,
+	mapNumberToDurationDisplayName,
+} from "../enums/durations";
 import { Effect, mapEffectToDisplayName } from "../enums/effects";
-import { mapNumberToRangeDisplayName, Range } from "../enums/ranges";
+import { mapNumberToRangeDisplayName, type Range } from "../enums/ranges";
 import {
 	mapNumberToSavingThrowDisplayName,
-	SavingThrow,
+	type SavingThrow,
 } from "../enums/saving-throws";
-import { mapNumberToSchoolDisplayName, School } from "../enums/schools";
+import { mapNumberToSchoolDisplayName, type School } from "../enums/schools";
 import { mapNumberToShapeDisplayName } from "../enums/shapes";
-import { mapNumberToSourceDisplayName, Source } from "../enums/sources";
-import Spell from "../types/spell";
-import { RowArea } from "../types/table-row";
+import { mapNumberToSourceDisplayName, type Source } from "../enums/sources";
+import type Spell from "../types/spell";
+import type { RowArea } from "../types/table-row";
 
 export const areaValueFormatter = (
 	params: ValueFormatterParams<unknown, RowArea>,

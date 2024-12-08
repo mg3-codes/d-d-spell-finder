@@ -5,7 +5,8 @@
  */
 
 import { useRollbar } from "@rollbar/react";
-import React, { MouseEventHandler, useCallback, useState } from "react";
+import type React from "react";
+import { type MouseEventHandler, useCallback, useState } from "react";
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -14,7 +15,7 @@ import { HelpModal } from "../help-modal";
 import { AttributionBody, AttributionHeader } from "./attribution-content";
 import { PrivacyBody, PrivacyHeader } from "./privacy-content";
 
-import "./footer.scss";
+import "./styles.css";
 
 const Footer = () => {
 	const rollbar = useRollbar();
@@ -38,18 +39,15 @@ const Footer = () => {
 				return;
 			}
 
-			setSelectedContent(parseInt(numberAsString));
+			setSelectedContent(Number.parseInt(numberAsString));
 			setModalIsOpen(true);
 		},
-		[],
+		[rollbar],
 	);
 
 	const openGithub = useCallback(
 		() =>
-			window.open(
-				"https://github.com/mg3-codes/d-d-spell-finder",
-				"_blank",
-			),
+			window.open("https://github.com/mg3-codes/d-d-spell-finder", "_blank"),
 		[],
 	);
 
@@ -63,7 +61,7 @@ const Footer = () => {
 
 	return (
 		<div className="footer">
-			<span className="version">Version: 0.5.4</span>
+			<span className="version">Version: 0.5.5</span>
 			<div className="links">
 				<Button variant="link" onClick={openHelpModal}>
 					Help
@@ -83,7 +81,7 @@ const Footer = () => {
 					Privacy
 				</Button>
 			</div>
-			<button className="github-button" onClick={openGithub}>
+			<button className="github-button" onClick={openGithub} type="button">
 				<i className="bi bi-github github-icon" />
 			</button>
 			<Modal show={modalIsOpen} onHide={closeModal}>

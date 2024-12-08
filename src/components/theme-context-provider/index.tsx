@@ -4,7 +4,8 @@
  * @format
  */
 
-import React, { createContext, useCallback, useContext, useState } from "react";
+import type React from "react";
+import { createContext, useCallback, useContext, useState } from "react";
 
 import { Theme } from "../../enums/theme";
 import { AppSettingsContext } from "../app-settings-provider";
@@ -46,19 +47,17 @@ export const ThemeContextProvider = ({
 	const [currentTheme, setCurrentTheme] = useState<Theme>(() => {
 		const cookie = getCookie(cookieName);
 
-		if (cookie) return parseInt(cookie);
+		if (cookie) return Number.parseInt(cookie);
 
 		return detectColorScheme();
 	});
-	const [selectedThemeOption, setSelectedThemeOption] = useState<Theme>(
-		() => {
-			const cookie = getCookie(cookieName);
+	const [selectedThemeOption, setSelectedThemeOption] = useState<Theme>(() => {
+		const cookie = getCookie(cookieName);
 
-			if (cookie) return parseInt(cookie);
+		if (cookie) return Number.parseInt(cookie);
 
-			return Theme.Auto;
-		},
-	);
+		return Theme.Auto;
+	});
 	const { useCookies } = useContext(AppSettingsContext);
 
 	const updateTheme = (theme: Theme): void => {

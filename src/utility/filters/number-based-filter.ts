@@ -4,9 +4,9 @@
  * @format
  */
 
-import { RowNode } from "@ag-grid-community/core";
+import type { RowNode } from "@ag-grid-community/core";
 
-import { TableRow } from "../../types/table-row";
+import type { TableRow } from "../../types/table-row";
 
 export type NumberBasedFilterProps = {
 	data: TableRow;
@@ -39,13 +39,11 @@ export const numberBasedFilterHandleCheck = (
 	setSelectedFilters: (value: React.SetStateAction<number[]>) => void,
 	submittedValue: string,
 ): void => {
-	const numValue = parseInt(submittedValue);
+	const numValue = Number.parseInt(submittedValue);
 	if (!selectedFilters.includes(numValue))
 		setSelectedFilters([...selectedFilters, numValue]);
 	else
-		setSelectedFilters(
-			selectedFilters.filter((value) => value !== numValue),
-		);
+		setSelectedFilters(selectedFilters.filter((value) => value !== numValue));
 };
 
 export const numberBasedFilterIsChecked = (

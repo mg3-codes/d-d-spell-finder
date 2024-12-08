@@ -4,7 +4,8 @@
  * @format
  */
 
-import React, { createContext, useState } from "react";
+import type React from "react";
+import { createContext, useState } from "react";
 
 export type AppSettingsContext = {
 	useCookies: boolean;
@@ -13,12 +14,8 @@ export type AppSettingsContext = {
 
 export const AppSettingsContext = createContext<AppSettingsContext>({
 	useCookies: false,
-	/* eslint-disable @typescript-eslint/no-empty-function */
-	/* eslint-disable no-empty-function */
 	// skipqc: JS-0321
 	setUseCookies: () => {},
-	/* eslint-enable no-empty-function */
-	/* eslint-enable @typescript-eslint/no-empty-function */
 });
 
 export interface IAppSettingsContextProviderProps {

@@ -4,16 +4,15 @@
  * @format
  */
 
-import React from "react";
 import { OverlayTrigger, Tooltip } from "react-bootstrap";
 
 import {
-	EdgeOfTheEmpireDiceSymbol,
+	type EdgeOfTheEmpireDiceSymbol,
 	mapSymbolToCharacter,
 	mapSymbolToDisplayName,
 } from "../../enums/edge-of-the-empire-dice-symbol";
 
-import "./edge-dice-symbol.scss";
+import "./styles.css";
 
 export interface IEdgeDiceSymbol {
 	symbol: EdgeOfTheEmpireDiceSymbol;

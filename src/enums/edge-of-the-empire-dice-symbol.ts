@@ -7,15 +7,15 @@
 import { EdgeOfTheEmpireDiceColor } from "./edge-of-the-empire-dice-color";
 
 export enum EdgeOfTheEmpireDiceSymbol {
-	Advantage,
-	Blank,
-	DarkSide,
-	Despair,
-	Failure,
-	LightSide,
-	Success,
-	Threat,
-	Triumph,
+	Advantage = 0,
+	Blank = 1,
+	DarkSide = 2,
+	Despair = 3,
+	Failure = 4,
+	LightSide = 5,
+	Success = 6,
+	Threat = 7,
+	Triumph = 8,
 }
 
 export const mapSymbolToCharacter = (

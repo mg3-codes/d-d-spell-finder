@@ -4,18 +4,19 @@
  * @format
  */
 
-import React, { useCallback, useEffect, useState } from "react";
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Pagination from "react-bootstrap/Pagination";
 
-import NumberDie from "../../classes/number-die";
-import EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
+import type NumberDie from "../../classes/number-die";
 import { DiceType } from "../../enums/dice-type";
-import { NumberDiceResults } from "../number-dice-results";
+import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import { EdgeOfTheEmpireDiceResults } from "../edge-of-the-empire-dice-results";
+import { NumberDiceResults } from "../number-dice-results";
 
-import "./roll-history-modal.scss";
+import "./styles.css";
 
 export interface IRollHistoryModal {
 	show: boolean;
@@ -46,12 +47,12 @@ export const RollHistoryModal = ({
 		if (selectedType === DiceType.Numbered)
 			setCurrentHistory(numberedDiceHistory);
 		else setCurrentHistory(edgeDiceHistory);
-	}, [numberedDiceHistory, edgeDiceHistory]);
+	}, [numberedDiceHistory, edgeDiceHistory, selectedType]);
 
 	const handlePaginationClick = useCallback(
 		(e: React.MouseEvent) =>
 			setCurrentRoll(
-				parseInt(e.currentTarget.getAttribute("data-roll") ?? "0"),
+				Number.parseInt(e.currentTarget.getAttribute("data-roll") ?? "0"),
 			),
 		[],
 	);
@@ -65,6 +66,7 @@ export const RollHistoryModal = ({
 					active={currentRoll === i}
 					data-roll={i}
 					onClick={handlePaginationClick}
+					key={i}
 				>
 					{i + 1}
 				</Pagination.Item>,
@@ -72,7 +74,7 @@ export const RollHistoryModal = ({
 		}
 
 		if (currentRoll === 0) return pages.slice(0, 3);
-		else if (currentRoll === currentHistory.length - 1)
+		if (currentRoll === currentHistory.length - 1)
 			return pages.slice(currentRoll - 2, currentRoll + 1);
 
 		return pages.slice(Math.max(0, currentRoll - 1), currentRoll + 2);
@@ -101,7 +103,7 @@ export const RollHistoryModal = ({
 				<Modal.Title>Roll History</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<div className="content">
+				<div className="d-flex flex-column justify-content-center align-items-center w-100">
 					{selectedType === DiceType.Numbered ? (
 						<NumberDiceResults
 							results={numberedDiceHistory[currentRoll]}
@@ -115,15 +117,11 @@ export const RollHistoryModal = ({
 					)}
 					<Pagination>
 						<Pagination.First
-							disabled={
-								currentHistory.length === 0 || currentRoll === 0
-							}
+							disabled={currentHistory.length === 0 || currentRoll === 0}
 							onClick={onFirstClick}
 						/>
 						<Pagination.Prev
-							disabled={
-								currentHistory.length === 0 || currentRoll === 0
-							}
+							disabled={currentHistory.length === 0 || currentRoll === 0}
 							onClick={onPrevClick}
 						/>
 						{getPages()}

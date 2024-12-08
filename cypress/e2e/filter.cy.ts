@@ -130,12 +130,7 @@ describe("filter tests", () => {
 			})
 			.wait(1000);
 		cy.get(".ag-center-cols-container").each((row) => {
-			cy.wrap(row)
-				.children()
-				.eq(6)
-				.children()
-				.eq(1)
-				.should("not.be.empty");
+			cy.wrap(row).children().eq(6).children().eq(1).should("not.be.empty");
 		});
 	});
 
@@ -154,12 +149,7 @@ describe("filter tests", () => {
 			})
 			.wait(1000);
 		cy.get(".ag-center-cols-container").each((row) => {
-			cy.wrap(row)
-				.children()
-				.eq(7)
-				.children()
-				.eq(1)
-				.should("not.be.empty");
+			cy.wrap(row).children().eq(7).children().eq(1).should("not.be.empty");
 		});
 	});
 
@@ -178,12 +168,7 @@ describe("filter tests", () => {
 			})
 			.wait(1000);
 		cy.get(".ag-center-cols-container").each((row) => {
-			cy.wrap(row)
-				.children()
-				.eq(8)
-				.children()
-				.eq(1)
-				.should("not.be.empty");
+			cy.wrap(row).children().eq(8).children().eq(1).should("not.be.empty");
 		});
 	});
 
@@ -202,12 +187,7 @@ describe("filter tests", () => {
 			})
 			.wait(1000);
 		cy.get(".ag-center-cols-container").each((row) => {
-			cy.wrap(row)
-				.children()
-				.eq(9)
-				.children()
-				.eq(1)
-				.should("not.be.empty");
+			cy.wrap(row).children().eq(9).children().eq(1).should("not.be.empty");
 		});
 	});
 });

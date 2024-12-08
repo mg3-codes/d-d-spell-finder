@@ -4,9 +4,10 @@
  * @format
  */
 
-import React, { useState, createContext } from "react";
+import type React from "react";
+import { useState, createContext } from "react";
 
-import { TableRow } from "../../types/table-row";
+import type { TableRow } from "../../types/table-row";
 
 export type SelectedRowContext = {
 	selectedRows: TableRow[];

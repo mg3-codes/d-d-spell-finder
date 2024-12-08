@@ -4,7 +4,6 @@
  * @format
  */
 
-import React from "react";
 import { mapNumberToAttackDisplayName } from "../../enums/attacks";
 import { mapNumberToCastingTimeDisplayName } from "../../enums/casting-times";
 import { mapNumberToDamageTypeDisplayName } from "../../enums/damage-types";
@@ -16,9 +15,9 @@ import { mapNumberToSchoolDisplayName } from "../../enums/schools";
 import { mapNumberToShapeDisplayName } from "../../enums/shapes";
 import { mapNumberToSourceDisplayName } from "../../enums/sources";
 
-import { TableRow } from "../../types/table-row";
+import type { TableRow } from "../../types/table-row";
 
-import "./print-card.scss";
+import "./styles.css";
 
 export type IPrintCard = {
 	row: TableRow;
@@ -53,17 +52,13 @@ export const PrintCard = ({ row }: IPrintCard) => {
 	return (
 		<div className="print-card">
 			<div className="container">
-				<div className="header-container">
+				<div className="text-center">
 					<span className="header">{row.name}</span>
 				</div>
 				<div className="subtitle">
-					<span>{`${
-						row.level === 0 ? "Basic" : row.level
-					}${getNumberSuffix(
+					<span>{`${row.level === 0 ? "Basic" : row.level}${getNumberSuffix(
 						row.level,
-					)} level ${mapNumberToSchoolDisplayName(
-						row.school,
-					)}`}</span>
+					)} level ${mapNumberToSchoolDisplayName(row.school)}`}</span>
 				</div>
 				<hr />
 				<div className="table-info">
@@ -74,14 +69,8 @@ export const PrintCard = ({ row }: IPrintCard) => {
 								<th>Range</th>
 							</tr>
 							<tr>
-								<td>
-									{mapNumberToCastingTimeDisplayName(
-										row.castingTime,
-									)}
-								</td>
-								<td>
-									{mapNumberToRangeDisplayName(row.range)}
-								</td>
+								<td>{mapNumberToCastingTimeDisplayName(row.castingTime)}</td>
+								<td>{mapNumberToRangeDisplayName(row.range)}</td>
 							</tr>
 							<tr>
 								<th>Components</th>
@@ -89,41 +78,25 @@ export const PrintCard = ({ row }: IPrintCard) => {
 							</tr>
 							<tr>
 								<td>{getSpellComponents()}</td>
-								<td>
-									{mapNumberToDurationDisplayName(
-										row.duration,
-									)}
-								</td>
+								<td>{mapNumberToDurationDisplayName(row.duration)}</td>
 							</tr>
 							<tr>
 								<th>Attack</th>
 								<th>Area</th>
 							</tr>
 							<tr>
-								<td>
-									{mapNumberToAttackDisplayName(row.attack)}
-								</td>
+								<td>{mapNumberToAttackDisplayName(row.attack)}</td>
 								<td>{`${mapNumberToDistanceDisplayName(
 									row.area.distance,
-								)} ${mapNumberToShapeDisplayName(
-									row.area.shape,
-								)}`}</td>
+								)} ${mapNumberToShapeDisplayName(row.area.shape)}`}</td>
 							</tr>
 							<tr>
 								<th>Saving Throw</th>
 								<th>Damage Type</th>
 							</tr>
 							<tr>
-								<td>
-									{mapNumberToSavingThrowDisplayName(
-										row.save,
-									)}
-								</td>
-								<td>
-									{mapNumberToDamageTypeDisplayName(
-										row.damage,
-									)}
-								</td>
+								<td>{mapNumberToSavingThrowDisplayName(row.save)}</td>
+								<td>{mapNumberToDamageTypeDisplayName(row.damage)}</td>
 							</tr>
 						</tbody>
 					</table>
@@ -132,11 +105,7 @@ export const PrintCard = ({ row }: IPrintCard) => {
 					<div>
 						{row.material !== "" && <p>Material: {row.material}</p>}
 						{row.details !== "" && (
-							<p
-								className={`max-lines-${
-									row.material ? "5" : "8"
-								}`}
-							>
+							<p className={`max-lines-${row.material ? "5" : "8"}`}>
 								Details: {row.details}
 							</p>
 						)}
