@@ -108,5 +108,8 @@
 	"cSpell.caseSensitive": false,
 	"cSpell.autoFormatConfigFile": true,
 	"cSpell.diagnosticLevel": "Warning",
-	"cSpell.checkLimit": 1000
+	"cSpell.checkLimit": 1000,
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true
 }
