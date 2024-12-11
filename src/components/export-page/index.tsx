@@ -60,12 +60,12 @@ const ExportPage = () => {
 	// biome-ignore lint/correctness/useExhaustiveDependencies(getColumnClassName): this should only execute on page load
 	// biome-ignore lint/correctness/useExhaustiveDependencies(queryParams.get): this should only execute on page load
 	const generatedCards = useMemo(() => {
-		const elements: JSX.Element[] = [];
+		const elements: React.ReactNode[] = [];
 		const numColumns = Number.parseInt(queryParams.get("numPerRow") ?? "3");
 		const rowsPerPage = 2;
 		let counter = 0;
 		while (counter <= selectedRows.length) {
-			const pageElements: JSX.Element[][] = [];
+			const pageElements: React.ReactNode[] = [];
 			for (let i = 0; i < rowsPerPage; i++) {
 				const rowSlice = selectedRows.slice(
 					i * numColumns + counter,

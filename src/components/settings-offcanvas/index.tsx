@@ -28,7 +28,7 @@ import { ThemeContext } from "../theme-context-provider";
 
 import "./styles.css";
 
-const SettingsOffcanvas = (): JSX.Element => {
+const SettingsOffcanvas = (): React.ReactElement => {
 	const [show, setShow] = useState<boolean>(false);
 	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
 	const { updateTheme, selectedThemeOption } = useContext(ThemeContext);
