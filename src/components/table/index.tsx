@@ -52,7 +52,7 @@ ModuleRegistry.registerModules([ClientSideRowModelModule]);
 
 const cookieName = "columnDefinition";
 
-const Table = (): JSX.Element => {
+const Table = (): React.ReactElement => {
 	const [spellRows, setSpellRows] = useState<TableRow[] | null>();
 	useEffect(() => {
 		setSpellRows(spellJson.spells.map(buildRow));
