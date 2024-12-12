@@ -34,7 +34,11 @@ export interface IPrintModalProps {
 	rows?: TableRow[];
 }
 
-const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps): React.ReactElement => {
+const PrintModal = ({
+	isOpen,
+	toggleIsOpen,
+	rows,
+}: IPrintModalProps): React.ReactElement => {
 	const [selectedNumberPerRow, setSelectedNumberPerRow] = useState<number>(3);
 	const [printError, setPrintError] = useState<boolean>(false);
 	const { currentTheme } = useContext(ThemeContext);
