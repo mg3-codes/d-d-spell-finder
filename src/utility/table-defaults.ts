@@ -95,19 +95,6 @@ export const getDefaultColumnDefinitions = (
 	onDetailsCellClicked: (event: CellClickedEvent<Spell>) => void,
 ): ColDef[] => [
 	{
-		field: "check",
-		headerName: "",
-		headerCheckboxSelection: true,
-		checkboxSelection: true,
-		lockVisible: true,
-		lockPosition: true,
-		suppressMovable: true,
-		pinned: "left",
-		resizable: false,
-		initialWidth: 50,
-		filter: false,
-	},
-	{
 		field: "name",
 		headerName: mapColumnToDisplayName(Column.Name),
 		hide: defaultColumnIsHidden(Column.Name),
@@ -271,3 +258,15 @@ export const getDefaultColumnDefinitions = (
 		},
 	},
 ];
+
+export const getDefaultSelectionColumnDefinition = (): ColDef => ({
+	field: "check",
+	headerName: "",
+	lockVisible: true,
+	lockPosition: true,
+	suppressMovable: true,
+	pinned: "left",
+	resizable: false,
+	initialWidth: 50,
+	filter: false,
+});
