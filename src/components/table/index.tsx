@@ -4,15 +4,15 @@
  * @format
  */
 
-import { ClientSideRowModelModule } from "@ag-grid-community/client-side-row-model";
+import { AllCommunityModule, ClientSideRowModelModule } from "ag-grid-community";
 import {
 	type CellClickedEvent,
 	type ColDef,
 	type ColumnMovedEvent,
 	type GetRowIdParams,
 	ModuleRegistry,
-} from "@ag-grid-community/core";
-import { AgGridReact } from "@ag-grid-community/react";
+} from "ag-grid-community";
+import { AgGridReact } from "ag-grid-react";
 import { useRollbar } from "@rollbar/react";
 import {
 	useCallback,
@@ -48,7 +48,7 @@ import { ThemeContext } from "../theme-context-provider";
 import "../../styles/ag-grid.css";
 import "./styles.css";
 
-ModuleRegistry.registerModules([ClientSideRowModelModule]);
+ModuleRegistry.registerModules([AllCommunityModule, ClientSideRowModelModule]);
 
 const cookieName = "columnDefinition";
 

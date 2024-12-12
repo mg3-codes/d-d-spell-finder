@@ -4,7 +4,7 @@
  * @format
  */
 
-import type { RowNode } from "@ag-grid-community/core";
+import type { RowNode } from "ag-grid-community";
 
 import type { TableRow } from "../../types/table-row";
 

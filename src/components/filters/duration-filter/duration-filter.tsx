@@ -7,7 +7,7 @@
 import {
 	type CustomFilterProps,
 	useGridFilter,
-} from "@ag-grid-community/react";
+} from "ag-grid-react";
 import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {

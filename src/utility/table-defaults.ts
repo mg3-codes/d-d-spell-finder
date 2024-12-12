@@ -9,7 +9,7 @@ import type {
 	CellClickedEvent,
 	CellStyle,
 	ColDef,
-} from "@ag-grid-community/core";
+} from "ag-grid-community";
 
 import AreaFilter from "../components/filters/area-filter/area-filter";
 import AttackFilter from "../components/filters/attack-filter/attack-filter";
