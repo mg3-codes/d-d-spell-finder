@@ -23,7 +23,7 @@
 		"react": "^19.0.0",
 		"react-bootstrap": "^2.10.6",
 		"react-dom": "^19.0.0",
-		"react-router-dom": "^6.28.0",
+		"react-router": "^7.0.2",
 		"rollbar": "^2.26.4"
 	},
 	"devDependencies": {
@@ -34,6 +34,7 @@
 		"@types/node": "^22.10.2",
 		"@types/react": "19.0.1",
 		"@types/react-dom": "^19.0.2",
+		"@types/react-router": "^5.1.20",
 		"@vitejs/plugin-react-swc": "^3.7.2",
 		"cypress": "^13.16.1",
 		"lightningcss": "^1.28.2",
