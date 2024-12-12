@@ -1,39 +1,39 @@
 /**
-		 * @author Michael Gamlem III
-		 * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
-		 * @format
-		 */
+ * @author Michael Gamlem III
+ * @copyright This file is subject to the terms and conditions defined in file 'LICENSE', which is part of the source code for this project.
+ * @format
+ */
 
-		body {
-		--ag-active-color: var(--bs-primary);
-		--ag-selected-row-background-color: var(--bs-primary-bg-subtle);
-		--ag-row-hover-color: var(--bs-primary-bg-subtle);
-		--ag-column-hover-color: var(--bs-primary-bg-subtle);
-		--ag-input-focus-border-color: var(--bs-primary-border-subtle);
-		--ag-header-foreground-color: var(--bs-black);
-		--ag-range-selection-border-color: var(--bs-black);
-		--ag-background-color: var(--bs-body-bg);
-		--ag-foreground-color: var(--bs-dark-text-emphasis);
-		--ag-border-color: var(--bs-border-color);
-		--ag-header-background-color: var(--bs-gray-100);
-		--ag-odd-row-background-color: var(--bs-gray-100);
-		--ag-invalid-color: var(--bs-danger);
-		--ag-font-family: var(--bs-font-family-base);
-		--ag-data-color: var(--bs-dark-text-emphasis);
-		--ag-input-focus-box-shadow: var(--bs-box-shadow);
-		--ag-checkbox-unchecked-color: var(--bs-primary);
-		--ag-checkbox-border-width: var(--bs-border-width);
-		--ag-checkbox-border-radius: var(--bs-border-radius-sm);
-		--ag-checkbox-checked-background-color: var(--bs-primary);
-		--ag-checkbox-checked-border-color: var(--bs-border-color);
-		--ag-checkbox-checked-shape-color: var(--bs-white);
-		--ag-checkbox-indeterminate-background-color: var(--bs-primary);
-		--ag-checkbox-indeterminate-border-color: var(--bs-border-color);
-		--ag-checkbox-indeterminate-shape-color: var(--bs-white);
-		--ag-checkbox-unchecked-background-color: var(--bs-body-bg);
-		--ag-checkbox-unchecked-border-color: var(--bs-border-color);
-		--ag-checkbox-unchecked-shape-color: var(--bs-white);
-	}
+body {
+	--ag-active-color: var(--bs-primary);
+	--ag-selected-row-background-color: var(--bs-primary-bg-subtle);
+	--ag-row-hover-color: var(--bs-primary-bg-subtle);
+	--ag-column-hover-color: var(--bs-primary-bg-subtle);
+	--ag-input-focus-border-color: var(--bs-primary-border-subtle);
+	--ag-header-foreground-color: var(--bs-black);
+	--ag-range-selection-border-color: var(--bs-black);
+	--ag-background-color: var(--bs-body-bg);
+	--ag-foreground-color: var(--bs-dark-text-emphasis);
+	--ag-border-color: var(--bs-border-color);
+	--ag-header-background-color: var(--bs-gray-100);
+	--ag-odd-row-background-color: var(--bs-gray-100);
+	--ag-invalid-color: var(--bs-danger);
+	--ag-font-family: var(--bs-font-family-base);
+	--ag-data-color: var(--bs-dark-text-emphasis);
+	--ag-input-focus-box-shadow: var(--bs-box-shadow);
+	--ag-checkbox-unchecked-color: var(--bs-primary);
+	--ag-checkbox-border-width: var(--bs-border-width);
+	--ag-checkbox-border-radius: var(--bs-border-radius-sm);
+	--ag-checkbox-checked-background-color: var(--bs-primary);
+	--ag-checkbox-checked-border-color: var(--bs-border-color);
+	--ag-checkbox-checked-shape-color: var(--bs-white);
+	--ag-checkbox-indeterminate-background-color: var(--bs-primary);
+	--ag-checkbox-indeterminate-border-color: var(--bs-border-color);
+	--ag-checkbox-indeterminate-shape-color: var(--bs-white);
+	--ag-checkbox-unchecked-background-color: var(--bs-body-bg);
+	--ag-checkbox-unchecked-border-color: var(--bs-border-color);
+	--ag-checkbox-unchecked-shape-color: var(--bs-white);
+}
 html[data-bs-theme="dark"] body {
 	--ag-active-color: var(--bs-primary);
 	--ag-row-hover-color: var(--bs-primary-bg-subtle-dark);
