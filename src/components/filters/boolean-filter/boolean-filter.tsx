@@ -4,11 +4,11 @@
  * @format
  */
 
-import type { RowNode } from "@ag-grid-community/core";
+import type { RowNode } from "ag-grid-community";
 import {
 	type CustomFilterProps,
 	useGridFilter,
-} from "@ag-grid-community/react";
+} from "ag-grid-react";
 import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
