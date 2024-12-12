@@ -4,16 +4,25 @@
  * @format
  */
 
-import { AllCommunityModule, ClientSideRowModelModule } from "ag-grid-community";
+import { useRollbar } from "@rollbar/react";
 import {
 	type CellClickedEvent,
+	CellStyleModule,
+	ClientSideRowModelModule,
 	type ColDef,
 	type ColumnMovedEvent,
+	CustomFilterModule,
 	type GetRowIdParams,
 	ModuleRegistry,
+	RowApiModule,
+	RowSelectionModule,
+	TextFilterModule,
+	TooltipModule,
+	ValidationModule,
+	colorSchemeDark,
+	themeQuartz,
 } from "ag-grid-community";
 import { AgGridReact } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import {
 	useCallback,
 	useContext,
@@ -28,16 +37,16 @@ import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
 import type { LogArgument } from "rollbar";
 
-import { type TableRow, buildRow } from "../../types/table-row";
-
 import spellJson from "../../assets/5e-spells.json";
 import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
 import type Spell from "../../types/spell";
+import { type TableRow, buildRow } from "../../types/table-row";
 import { getCookie, setCookie } from "../../utility/cookies";
 import {
 	defaultColDef,
 	getDefaultColumnDefinitions,
+	getDefaultSelectionColumnDefinition,
 	setColumnDefinitionOrder,
 } from "../../utility/table-defaults";
 import { AppSettingsContext } from "../app-settings-provider";
@@ -48,7 +57,16 @@ import { ThemeContext } from "../theme-context-provider";
 import "../../styles/ag-grid.css";
 import "./styles.css";
 
-ModuleRegistry.registerModules([AllCommunityModule, ClientSideRowModelModule]);
+ModuleRegistry.registerModules([
+	CellStyleModule,
+	ClientSideRowModelModule,
+	CustomFilterModule,
+	RowApiModule,
+	RowSelectionModule,
+	TextFilterModule,
+	TooltipModule,
+	ValidationModule,
+]);
 
 const cookieName = "columnDefinition";
 
@@ -136,6 +154,11 @@ const Table = (): React.ReactElement => {
 		return setColumnDefinitionOrder(def, cookie?.split(","));
 	}, []);
 
+	const selectionColumnDefinition = useMemo<ColDef>(
+		getDefaultSelectionColumnDefinition,
+		[],
+	);
+
 	const [columnDefinitions, setColumnDefinitions] = useState(
 		startingColumnDefinition,
 	);
@@ -195,21 +218,27 @@ const Table = (): React.ReactElement => {
 					</Button>
 				</Modal.Footer>
 			</Modal>
-			<div
-				className={`grid-container ag-theme-quartz${
-					selectedTheme === Theme.Dark ? "-dark" : ""
-				}`}
-			>
+			<div className={"grid-container"}>
 				<AgGridReact
 					ref={gridRef}
+					theme={
+						selectedTheme === Theme.Dark
+							? themeQuartz.withPart(colorSchemeDark)
+							: themeQuartz
+					}
 					columnDefs={columnDefinitions}
 					onFirstDataRendered={setSelectionIfNeeded}
 					rowData={spellRows}
 					getRowId={getRowId}
 					defaultColDef={useMemo<ColDef>(() => defaultColDef, [])}
 					animateRows
-					rowSelection="multiple"
-					suppressRowClickSelection
+					selectionColumnDef={selectionColumnDefinition}
+					rowSelection={{
+						mode: "multiRow",
+						checkboxes: true,
+						headerCheckbox: true,
+						enableClickSelection: false,
+					}}
 					onSelectionChanged={onRowSelectionChanged}
 					onColumnMoved={onColumnMoved}
 				/>
