@@ -18,7 +18,7 @@ import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
 import Dropdown from "react-bootstrap/Dropdown";
 import Modal from "react-bootstrap/Modal";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 import { PrintCard } from "../print-card";
 import { ThemeContext } from "../theme-context-provider";

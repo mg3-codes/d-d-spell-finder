@@ -6,7 +6,7 @@
 
 import { useCallback, useContext, useEffect, useMemo } from "react";
 import Alert from "react-bootstrap/Alert";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router";
 
 import { Theme } from "../../enums/theme";
 import { PrintCard } from "../print-card";
