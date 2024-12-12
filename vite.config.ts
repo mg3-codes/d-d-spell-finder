@@ -35,13 +35,6 @@ export default defineConfig({
 		sourcemap: true,
 		rollupOptions: {
 			output: {
-				manualChunks: {
-					"ag-grid-community-core": ["@ag-grid-community/core"],
-					"ag-grid-community-react": ["@ag-grid-community/react"],
-					"ag-grid-community-client-side-row-model": [
-						"@ag-grid-community/client-side-row-model",
-					],
-				},
 				assetFileNames: "[hash].g.[ext]",
 				chunkFileNames: "[hash].g.js",
 				banner:
