@@ -2,6 +2,9 @@
 
 # Changelog
 
+## 0.5.8
+-   Add website link to footer
+
 ## 0.5.7
 -   Fix boolean value rendering
 
