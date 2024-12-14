@@ -9,7 +9,7 @@ import type {
 	CellClickedEvent,
 	CellStyle,
 	ColDef,
-} from "@ag-grid-community/core";
+} from "ag-grid-community";
 
 import AreaFilter from "../components/filters/area-filter/area-filter";
 import AttackFilter from "../components/filters/attack-filter/attack-filter";
@@ -94,19 +94,6 @@ export const getDefaultColumnDefinitions = (
 	onMaterialCellClicked: (event: CellClickedEvent<Spell>) => void,
 	onDetailsCellClicked: (event: CellClickedEvent<Spell>) => void,
 ): ColDef[] => [
-	{
-		field: "check",
-		headerName: "",
-		headerCheckboxSelection: true,
-		checkboxSelection: true,
-		lockVisible: true,
-		lockPosition: true,
-		suppressMovable: true,
-		pinned: "left",
-		resizable: false,
-		initialWidth: 50,
-		filter: false,
-	},
 	{
 		field: "name",
 		headerName: mapColumnToDisplayName(Column.Name),
@@ -271,3 +258,15 @@ export const getDefaultColumnDefinitions = (
 		},
 	},
 ];
+
+export const getDefaultSelectionColumnDefinition = (): ColDef => ({
+	field: "check",
+	headerName: "",
+	lockVisible: true,
+	lockPosition: true,
+	suppressMovable: true,
+	pinned: "left",
+	resizable: false,
+	initialWidth: 50,
+	filter: false,
+});

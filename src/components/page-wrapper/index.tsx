@@ -17,7 +17,7 @@ export interface IPageWrapperProps {
 	children: React.ReactNode;
 }
 
-const PageWrapper = ({ children }: IPageWrapperProps): JSX.Element => {
+const PageWrapper = ({ children }: IPageWrapperProps): React.ReactElement => {
 	const { currentTheme } = useContext(ThemeContext);
 
 	useLayoutEffect(() => {

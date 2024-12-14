@@ -21,7 +21,7 @@ export interface INumberedDiceSelectorProps {
 
 export const NumberedDiceSelector = ({
 	onRollClicked,
-}: INumberedDiceSelectorProps): JSX.Element => {
+}: INumberedDiceSelectorProps): React.ReactElement => {
 	const [twoSidedInputValue, setTwoSidedInputValue] = useState<string>("0");
 	const [fourSidedInputValue, setFourSidedInputValue] = useState<string>("0");
 	const [sixSidedInputValue, setSixSidedInputValue] = useState<string>("0");

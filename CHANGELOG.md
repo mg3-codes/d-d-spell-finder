@@ -2,6 +2,11 @@
 
 # Changelog
 
+## 0.5.6
+-   Upgrade to React 19
+-   Upgrade to AG Grid 33
+-   Upgrade to Vite 6
+
 ## 0.5.5
 -   Upgrade packages
 -   Switch to css & lightningcss

@@ -7,11 +7,8 @@
 import { ErrorBoundary, Provider as RollbarProvider } from "@rollbar/react";
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
-import {
-	Navigate,
-	RouterProvider,
-	createBrowserRouter,
-} from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router";
+import { RouterProvider } from "react-router/dom";
 
 import { AppSettingsContextProvider } from "./components/app-settings-provider";
 import { ColumnContextProvider } from "./components/column-context-provider";
@@ -32,7 +29,7 @@ const rollbarConfig = {
 	enabled: import.meta.env.MODE === "production",
 	captureUncaught: true,
 	captureUnhandledRejections: true,
-	code_version: "0.5.5",
+	code_version: "0.5.6",
 	source_map_enabled: true,
 };
 

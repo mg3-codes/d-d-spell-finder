@@ -4,7 +4,7 @@
  * @format
  */
 
-.ag-theme-quartz {
+body {
 	--ag-active-color: var(--bs-primary);
 	--ag-selected-row-background-color: var(--bs-primary-bg-subtle);
 	--ag-row-hover-color: var(--bs-primary-bg-subtle);
@@ -20,8 +20,21 @@
 	--ag-invalid-color: var(--bs-danger);
 	--ag-font-family: var(--bs-font-family-base);
 	--ag-data-color: var(--bs-dark-text-emphasis);
+	--ag-input-focus-box-shadow: var(--bs-box-shadow);
+	--ag-checkbox-unchecked-color: var(--bs-primary);
+	--ag-checkbox-border-width: var(--bs-border-width);
+	--ag-checkbox-border-radius: var(--bs-border-radius-sm);
+	--ag-checkbox-checked-background-color: var(--bs-primary);
+	--ag-checkbox-checked-border-color: var(--bs-border-color);
+	--ag-checkbox-checked-shape-color: var(--bs-white);
+	--ag-checkbox-indeterminate-background-color: var(--bs-primary);
+	--ag-checkbox-indeterminate-border-color: var(--bs-border-color);
+	--ag-checkbox-indeterminate-shape-color: var(--bs-white);
+	--ag-checkbox-unchecked-background-color: var(--bs-body-bg);
+	--ag-checkbox-unchecked-border-color: var(--bs-border-color);
+	--ag-checkbox-unchecked-shape-color: var(--bs-white);
 }
-.ag-theme-quartz-dark {
+html[data-bs-theme="dark"] body {
 	--ag-active-color: var(--bs-primary);
 	--ag-row-hover-color: var(--bs-primary-bg-subtle-dark);
 	--ag-column-hover-color: var(--bs-primary-bg-subtle-dark);
@@ -36,11 +49,6 @@
 	--ag-invalid-color: var(--bs-danger);
 	--ag-font-family: var(--bs-font-family-base);
 	--ag-data-color: var(--bs-white);
-}
-.ag-theme {
-	--ag-range-selection-border-color: transparent;
-	--ag-input-focus-box-shadow: var(--bs-box-shadow);
-	--ag-checkbox-unchecked-color: var(--bs-primary);
 }
 
 .ag-checkbox-input-wrapper.ag-disabled {

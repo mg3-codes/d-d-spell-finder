@@ -1,7 +1,7 @@
 {
 	"name": "dnd-spell-organizer",
 	"license": "MIT",
-	"version": "0.5.5",
+	"version": "0.5.6",
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
@@ -15,32 +15,31 @@
 		"outdated": "yarn upgrade-interactive"
 	},
 	"dependencies": {
-		"@ag-grid-community/client-side-row-model": "^32.3.3",
-		"@ag-grid-community/core": "^32.3.3",
-		"@ag-grid-community/react": "^32.3.3",
 		"@popperjs/core": "^2.11.8",
 		"@rollbar/react": "^0.12.0-beta",
-		"ag-grid-community": "^32.3.3",
+		"ag-grid-community": "^33.0.1",
+		"ag-grid-react": "^33.0.1",
 		"path": "^0.12.7",
-		"react": "^18.3.1",
+		"react": "^19.0.0",
 		"react-bootstrap": "^2.10.6",
-		"react-dom": "^18.3.1",
-		"react-router-dom": "^6.28.0",
+		"react-dom": "^19.0.0",
+		"react-router": "^7.0.2",
 		"rollbar": "^2.26.4"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@swc/core": "1.10.0",
+		"@swc/core": "1.10.1",
 		"@swc/helpers": "^0.5.15",
 		"@types/mocha": "^10.0.10",
-		"@types/node": "^22.10.1",
-		"@types/react": "18.3.14",
-		"@types/react-dom": "^18.3.2",
+		"@types/node": "^22.10.2",
+		"@types/react": "19.0.1",
+		"@types/react-dom": "^19.0.2",
+		"@types/react-router": "^5.1.20",
 		"@vitejs/plugin-react-swc": "^3.7.2",
 		"cypress": "^13.16.1",
 		"lightningcss": "^1.28.2",
 		"typescript": "^5.7.2",
-		"vite": "5.4.11"
+		"vite": "6.0.3"
 	},
 	"packageManager": "yarn@3.5.1"
 }

@@ -57,7 +57,7 @@ export const RollHistoryModal = ({
 		[],
 	);
 
-	const getPages = (): JSX.Element[] => {
+	const getPages = (): React.ReactElement[] => {
 		const pages = [];
 
 		for (let i = 0; i < currentHistory.length; i++) {

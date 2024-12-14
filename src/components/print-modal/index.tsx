@@ -18,7 +18,7 @@ import Button from "react-bootstrap/Button";
 import Carousel from "react-bootstrap/Carousel";
 import Dropdown from "react-bootstrap/Dropdown";
 import Modal from "react-bootstrap/Modal";
-import { Link } from "react-router-dom";
+import { Link } from "react-router";
 
 import { PrintCard } from "../print-card";
 import { ThemeContext } from "../theme-context-provider";
@@ -34,7 +34,11 @@ export interface IPrintModalProps {
 	rows?: TableRow[];
 }
 
-const PrintModal = ({ isOpen, toggleIsOpen, rows }: IPrintModalProps) => {
+const PrintModal = ({
+	isOpen,
+	toggleIsOpen,
+	rows,
+}: IPrintModalProps): React.ReactElement => {
 	const [selectedNumberPerRow, setSelectedNumberPerRow] = useState<number>(3);
 	const [printError, setPrintError] = useState<boolean>(false);
 	const { currentTheme } = useContext(ThemeContext);
