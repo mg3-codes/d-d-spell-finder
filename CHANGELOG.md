@@ -2,6 +2,9 @@
 
 # Changelog
 
+## 0.5.7
+-   Fix boolean value rendering
+
 ## 0.5.6
 -   Upgrade to React 19
 -   Upgrade to AG Grid 33
