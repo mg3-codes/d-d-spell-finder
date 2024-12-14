@@ -26,7 +26,7 @@ import SourceFilter from "../components/filters/source-filter/source-filter";
 import { Column, mapColumnToDisplayName } from "../enums/columns";
 import type Spell from "../types/spell";
 import type { TableRow } from "../types/table-row";
-
+import { booleanCellRenderer } from "./cell-renderers";
 import { areaValueComparator } from "./comparators";
 import {
 	rangeTooltipValueGetter,
@@ -35,7 +35,6 @@ import {
 import {
 	areaValueFormatter,
 	attackValueFormatter,
-	booleanValueFormatter,
 	castingTimeValueFormatter,
 	damageTypeValueFormatter,
 	durationValueFormatter,
@@ -186,7 +185,7 @@ export const getDefaultColumnDefinitions = (
 		filterParams: {
 			spellPropertyName: "ritual",
 		},
-		valueFormatter: booleanValueFormatter,
+		cellRenderer: booleanCellRenderer,
 		initialWidth: 100,
 		hide: defaultColumnIsHidden(Column.Ritual),
 	},
@@ -197,7 +196,7 @@ export const getDefaultColumnDefinitions = (
 		filterParams: {
 			spellPropertyName: "concentration",
 		},
-		valueFormatter: booleanValueFormatter,
+		cellRenderer: booleanCellRenderer,
 		initialWidth: 150,
 		hide: defaultColumnIsHidden(Column.Concentration),
 	},
@@ -208,7 +207,7 @@ export const getDefaultColumnDefinitions = (
 		filterParams: {
 			spellPropertyName: "verbal",
 		},
-		valueFormatter: booleanValueFormatter,
+		cellRenderer: booleanCellRenderer,
 		initialWidth: 100,
 		hide: defaultColumnIsHidden(Column.Verbal),
 	},
@@ -219,7 +218,7 @@ export const getDefaultColumnDefinitions = (
 			spellPropertyName: "somatic",
 		},
 		filter: BooleanFilter,
-		valueFormatter: booleanValueFormatter,
+		cellRenderer: booleanCellRenderer,
 		initialWidth: 110,
 		hide: defaultColumnIsHidden(Column.Somatic),
 	},

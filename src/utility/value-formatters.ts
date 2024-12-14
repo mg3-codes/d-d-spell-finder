@@ -46,10 +46,6 @@ export const attackValueFormatter = (
 	return params.value === 0 ? "" : mapNumberToAttackDisplayName(params.value);
 };
 
-export const booleanValueFormatter = (
-	params: ValueFormatterParams<boolean>,
-): string => (params.value === true ? "✅" : "❌");
-
 export const castingTimeValueFormatter = (
 	params: ValueFormatterParams<Spell, number>,
 ): string => {
