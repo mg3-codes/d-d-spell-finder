@@ -15,6 +15,7 @@ import { HelpModal } from "../help-modal";
 import { AttributionBody, AttributionHeader } from "./attribution-content";
 import { PrivacyBody, PrivacyHeader } from "./privacy-content";
 
+import { LogoComputer } from "../logo-computer";
 import "./styles.css";
 
 const Footer = () => {
@@ -51,6 +52,11 @@ const Footer = () => {
 		[],
 	);
 
+	const openWebsite = useCallback(
+		() => window.open("https://www.mg3.codes", "_blank"),
+		[],
+	);
+
 	const closeModal = useCallback(() => setModalIsOpen(false), []);
 
 	const openHelpModal = useCallback(() => setHelpModalIsOpen(true), []);
@@ -81,9 +87,18 @@ const Footer = () => {
 					Privacy
 				</Button>
 			</div>
-			<button className="github-button" onClick={openGithub} type="button">
-				<i className="bi bi-github github-icon" />
-			</button>
+			<div className="d-flex justify-content-center align-items-center right-buttons">
+				<button
+					type="button"
+					onClick={openWebsite}
+					title="open Michael's website"
+				>
+					<LogoComputer maxHeight={35} maxWidth={25} />
+				</button>
+				<button className="github-button" onClick={openGithub} type="button">
+					<i className="bi bi-github github-icon" />
+				</button>
+			</div>
 			<Modal show={modalIsOpen} onHide={closeModal}>
 				<Modal.Header closeButton>
 					<Modal.Title>

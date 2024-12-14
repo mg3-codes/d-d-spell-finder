@@ -37,13 +37,24 @@
 		}
 	}
 
-	.github-button {
-		background-color: transparent;
-		border: none;
+	.right-buttons {
+		:first-child {
+			margin-right: 8px;
+		}
 
-		i {
-			font-size: xx-large;
-			color: var(--bs-black);
+		button {
+			background-color: unset;
+			border: unset;
+		}
+
+		.github-button {
+			background-color: transparent;
+			border: none;
+
+			i {
+				font-size: xx-large;
+				color: var(--bs-body-color);
+			}
 		}
 	}
 }
