@@ -401,9 +401,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@restart/ui@npm:^1.9.0":
-  version: 1.9.1
-  resolution: "@restart/ui@npm:1.9.1"
+"@restart/ui@npm:^1.9.2":
+  version: 1.9.2
+  resolution: "@restart/ui@npm:1.9.2"
   dependencies:
     "@babel/runtime": ^7.26.0
     "@popperjs/core": ^2.11.8
@@ -417,7 +417,7 @@ __metadata:
   peerDependencies:
     react: ">=16.14.0"
     react-dom: ">=16.14.0"
-  checksum: 61c6c85da97135e0e2017d06596c00dcf2b972614f0a2d26b401407ca3becedbf9f2293e5399c3566a9138a9b3fef7105aa5ef7267ef51dfab7453686f74a0ea
+  checksum: f58bbaa96466f96105407aa76693040d822256222d4ff9b80bfb9a3e049370429f08ccd3c5ec41fcb83e1c28118deacbe139e6fd438e2499e614bc79c8c82679
   languageName: node
   linkType: hard
 
@@ -888,6 +888,13 @@ __metadata:
   version: 15.7.5
   resolution: "@types/prop-types@npm:15.7.5"
   checksum: 5b43b8b15415e1f298243165f1d44390403bb2bd42e662bca3b5b5633fdd39c938e91b7fce3a9483699db0f7a715d08cef220c121f723a634972fdf596aec980
+  languageName: node
+  linkType: hard
+
+"@types/prop-types@npm:^15.7.12":
+  version: 15.7.14
+  resolution: "@types/prop-types@npm:15.7.14"
+  checksum: d0c5407b9ccc3dd5fae0ccf9b1007e7622ba5e6f1c18399b4f24dff33619d469da4b9fa918a374f19dc0d9fe6a013362aab0b844b606cfc10676efba3f5f736d
   languageName: node
   linkType: hard
 
@@ -1646,7 +1653,7 @@ __metadata:
     lightningcss: ^1.28.2
     path: ^0.12.7
     react: ^19.0.0
-    react-bootstrap: ^2.10.6
+    react-bootstrap: ^2.10.7
     react-dom: ^19.0.0
     react-router: ^7.0.2
     rollbar: ^2.26.4
@@ -3112,13 +3119,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.10.6":
-  version: 2.10.6
-  resolution: "react-bootstrap@npm:2.10.6"
+"react-bootstrap@npm:^2.10.7":
+  version: 2.10.7
+  resolution: "react-bootstrap@npm:2.10.7"
   dependencies:
     "@babel/runtime": ^7.24.7
     "@restart/hooks": ^0.4.9
-    "@restart/ui": ^1.9.0
+    "@restart/ui": ^1.9.2
+    "@types/prop-types": ^15.7.12
     "@types/react-transition-group": ^4.4.6
     classnames: ^2.3.2
     dom-helpers: ^5.2.1
@@ -3135,7 +3143,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 60b421dd306fdee64f2a4c58288b3d946e09b7775b662e07769e9bccf2f5b332e41fe8290ef1ac6f7b1111967931667b7374f8ece3ddcde71dedd438ab3ba335
+  checksum: 1ce8242d1d3de21ddec15ce952a4848ce08dc2a583a69e1f3dfc84123aa176b486446318bb82585a382432e3af7386aaea24baefb072583d61c0a5d0328ccda0
   languageName: node
   linkType: hard
 
