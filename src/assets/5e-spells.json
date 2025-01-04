@@ -28,7 +28,7 @@
 		"area": -1,
 		"attack": 0,
 		"save": 0,
-		"spellspellEffect": [6],
+		"spellEffect": [6],
 		"ritual": false,
 		"concentration": false,
 		"verbal": true,
