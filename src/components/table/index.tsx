@@ -73,7 +73,7 @@ const cookieName = "columnDefinition";
 const Table = (): React.ReactElement => {
 	const [spellRows, setSpellRows] = useState<TableRow[] | null>();
 	useEffect(() => {
-		setSpellRows(spellJson.spells.map(buildRow));
+		setSpellRows(spellJson.map(buildRow));
 	}, []);
 	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
 	const { currentTheme: selectedTheme } = useContext(ThemeContext);
