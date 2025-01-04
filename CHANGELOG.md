@@ -2,6 +2,10 @@
 
 # Changelog
 
+# 0.5.9
+-   Minor spell updated
+-   Package updates
+
 ## 0.5.8
 -   Add website link to footer
 
