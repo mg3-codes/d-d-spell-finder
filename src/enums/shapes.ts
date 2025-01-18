@@ -13,6 +13,12 @@ export enum Shape {
 	Line = 5,
 }
 
+/**
+ * Maps a given number to its corresponding `Shape` enum value.
+ *
+ * @param x - The number to map to a `Shape`.
+ * @returns The corresponding `Shape` enum value, or `null` if the number does not map to any `Shape`.
+ */
 export const mapNumberToShape = (x: number): number | null => {
 	switch (x) {
 		case 0:
@@ -32,6 +38,12 @@ export const mapNumberToShape = (x: number): number | null => {
 	}
 };
 
+/**
+ * Maps a given number to its corresponding shape display name.
+ *
+ * @param x - The number to map to a shape display name.
+ * @returns The display name corresponding to the provided number.
+ */
 export const mapNumberToShapeDisplayName = (x: number | undefined): string => {
 	switch (x) {
 		case 0:

@@ -17,6 +17,18 @@ export default class ForceDie extends NumberDie {
 		super(12, value);
 	}
 
+	/**
+	 * Maps the value of the force die to the corresponding results.
+	 *
+	 * The mapping is as follows:
+	 * - Values 1 to 6: Returns an array with a single `EdgeOfTheEmpireDiceSymbol.DarkSide`.
+	 * - Value 7: Returns an array with two `EdgeOfTheEmpireDiceSymbol.DarkSide`.
+	 * - Values 8 and 9: Returns an array with a single `EdgeOfTheEmpireDiceSymbol.LightSide`.
+	 * - Values 10 to 12: Returns an array with two `EdgeOfTheEmpireDiceSymbol.LightSide`.
+	 * - Any other value: Returns an empty array.
+	 *
+	 * @returns {EdgeOfTheEmpireDiceSymbol[]} An array of `EdgeOfTheEmpireDiceSymbol` based on the die value.
+	 */
 	mapValueToResults = (): EdgeOfTheEmpireDiceSymbol[] => {
 		switch (this.value) {
 			case 1:

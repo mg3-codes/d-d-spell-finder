@@ -6,6 +6,13 @@
 
 import type { CustomCellRendererProps } from "ag-grid-react";
 
+/**
+ * Renders a boolean value as a checkmark or cross icon.
+ *
+ * @param props - The properties for the custom cell renderer.
+ * @param props.value - The boolean value to render.
+ * @returns A React element containing a checkmark if the value is true, or a cross if the value is false.
+ */
 export const booleanCellRenderer = (
 	props: CustomCellRendererProps<boolean>,
 ): React.ReactElement => (

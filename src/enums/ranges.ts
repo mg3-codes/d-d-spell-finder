@@ -32,8 +32,12 @@ export enum Range {
 	Unlimited = 24,
 }
 
-// function requires complexity to map all values
-// skipcq: JS-0044
+/**
+ * Maps a given number to its corresponding `Range` enum value.
+ *
+ * @param x - The number to map to a `Range`.
+ * @returns The corresponding `Range` enum value, or `null` if the number does not map to any `Range`.
+ */
 export const mapNumberToRange = (x: number): number | null => {
 	switch (x) {
 		case 0:
@@ -91,8 +95,12 @@ export const mapNumberToRange = (x: number): number | null => {
 	}
 };
 
-// function requires complexity to map all values
-// skipcq: JS-0044
+/**
+ * Maps a given number to its corresponding range display name.
+ *
+ * @param x - The number to map to a range display name.
+ * @returns The display name corresponding to the provided number.
+ */
 export const mapNumberToRangeDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:

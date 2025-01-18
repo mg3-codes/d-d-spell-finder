@@ -4,6 +4,11 @@
  * @format
  */
 
+/**
+ * Get the cookie expiration date string.
+ * @param deleteCookie - Whether the cookie should be deleted.
+ * @returns The expiration date string for the cookie.
+ */
 const getCookieExpiration = (deleteCookie: boolean): string => {
 	const date = new Date();
 
@@ -13,6 +18,12 @@ const getCookieExpiration = (deleteCookie: boolean): string => {
 	return `expires=${date.toUTCString()};`;
 };
 
+/**
+ * Set a cookie with the given name, value, and expiration.
+ * @param name - The name of the cookie.
+ * @param value - The value of the cookie.
+ * @param expire - Whether the cookie should expire in 7 days.
+ */
 export const setCookie = (
 	name: string,
 	value: string,
@@ -23,6 +34,11 @@ export const setCookie = (
 	}SameSite=strict;path=/`;
 };
 
+/**
+ * Get the value of a cookie by name.
+ * @param name - The name of the cookie.
+ * @returns The value of the cookie, or null if not found.
+ */
 export const getCookie = (name: string): string | null => {
 	const value = `; ${document.cookie}`;
 	const parts = value.split(`; ${name}=`);
@@ -32,12 +48,19 @@ export const getCookie = (name: string): string | null => {
 	return null;
 };
 
+/**
+ * Delete a cookie by name.
+ * @param name - The name of the cookie.
+ */
 export const deleteCookie = (name: string): void => {
 	document.cookie = `${name}="";${getCookieExpiration(
 		true,
 	)}SameSite=strict;path=/`;
 };
 
+/**
+ * Delete all cookies.
+ */
 export const deleteAllCookies = (): void => {
 	const cookies = document.cookie.split(";");
 	for (const cookie of cookies) {

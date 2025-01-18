@@ -25,6 +25,11 @@ export enum Column {
 	Details = 17,
 }
 
+/**
+ * Map a Column enum value to its display name.
+ * @param column - The Column enum value to map.
+ * @returns The corresponding display name.
+ */
 export const mapColumnToDisplayName = (column: Column): string => {
 	switch (column) {
 		case Column.Name:

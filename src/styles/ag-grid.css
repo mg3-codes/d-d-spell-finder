@@ -4,6 +4,9 @@
  * @format
  */
 
+/*
+ * This contains custom styles that override the default values provided by ag-Grid.
+ */
 body {
 	--ag-active-color: var(--bs-primary);
 	--ag-selected-row-background-color: var(--bs-primary-bg-subtle);
@@ -34,6 +37,10 @@ body {
 	--ag-checkbox-unchecked-border-color: var(--bs-border-color);
 	--ag-checkbox-unchecked-shape-color: var(--bs-white);
 }
+
+/*
+ * This contains custom styles that override the dark default values provided by ag-Grid.
+ */
 html[data-bs-theme="dark"] body {
 	--ag-active-color: var(--bs-primary);
 	--ag-row-hover-color: var(--bs-primary-bg-subtle-dark);

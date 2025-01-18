@@ -16,6 +16,12 @@ export enum Source {
 	XanatharsGuideToEverything = 8,
 }
 
+/**
+ * Maps a given number to its corresponding `Source` enum value.
+ *
+ * @param x - The number to map to a `Source`.
+ * @returns The corresponding `Source` enum value, or `null` if the number does not map to any `Source`.
+ */
 export const mapNumberToSource = (x: number): number | null => {
 	switch (x) {
 		case 0:
@@ -41,6 +47,12 @@ export const mapNumberToSource = (x: number): number | null => {
 	}
 };
 
+/**
+ * Maps a given number to its corresponding source display name.
+ *
+ * @param x - The number to map to a source display name.
+ * @returns The display name corresponding to the provided number.
+ */
 export const mapNumberToSourceDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:

@@ -29,6 +29,11 @@ import { mapNumberToSourceDisplayName, type Source } from "../enums/sources";
 import type Spell from "../types/spell";
 import type { RowArea } from "../types/table-row";
 
+/**
+ * Format the area value for display.
+ * @param params - The value formatter parameters.
+ * @returns The formatted area value.
+ */
 export const areaValueFormatter = (
 	params: ValueFormatterParams<unknown, RowArea>,
 ): string => {
@@ -38,6 +43,11 @@ export const areaValueFormatter = (
 	)} ${mapNumberToShapeDisplayName(params.value.shape)}`;
 };
 
+/**
+ * Format the attack value for display.
+ * @param params - The value formatter parameters.
+ * @returns The formatted attack value.
+ */
 export const attackValueFormatter = (
 	params: ValueFormatterParams<Spell, number>,
 ): string => {
@@ -46,6 +56,11 @@ export const attackValueFormatter = (
 	return params.value === 0 ? "" : mapNumberToAttackDisplayName(params.value);
 };
 
+/**
+ * Format the casting time value for display.
+ * @param params - The value formatter parameters.
+ * @returns The formatted casting time value.
+ */
 export const castingTimeValueFormatter = (
 	params: ValueFormatterParams<Spell, number>,
 ): string => {
@@ -54,6 +69,11 @@ export const castingTimeValueFormatter = (
 	return mapNumberToCastingTimeDisplayName(params.value);
 };
 
+/**
+ * Format the damage type value for display.
+ * @param params - The value formatter parameters.
+ * @returns The formatted damage type value.
+ */
 export const damageTypeValueFormatter = (
 	params: ValueFormatterParams<Spell, DamageType>,
 ): string => {
@@ -62,6 +82,11 @@ export const damageTypeValueFormatter = (
 	return mapNumberToDamageTypeDisplayName(params.value);
 };
 
+/**
+ * Format the duration value for display.
+ * @param params - The value formatter parameters.
+ * @returns The formatted duration value.
+ */
 export const durationValueFormatter = (
 	params: ValueFormatterParams<Spell, Duration>,
 ): string => {
@@ -70,6 +95,11 @@ export const durationValueFormatter = (
 	return mapNumberToDurationDisplayName(params.value);
 };
 
+/**
+ * Format the effect value for display.
+ * @param params - The value formatter parameters.
+ * @returns The formatted effect value.
+ */
 export const effectValueFormatter = (
 	params: ValueFormatterParams<Spell, Effect[]>,
 ): string => {
@@ -85,6 +115,11 @@ export const effectValueFormatter = (
 	return names?.join(", ") ?? "";
 };
 
+/**
+ * Format the range value for display.
+ * @param params - The value formatter parameters.
+ * @returns The formatted range value.
+ */
 export const rangeValueFormatter = (
 	params: ValueFormatterParams<Spell, Range>,
 ): string => {
@@ -93,6 +128,11 @@ export const rangeValueFormatter = (
 	return mapNumberToRangeDisplayName(params.value);
 };
 
+/**
+ * Format the saving throw value for display.
+ * @param params - The value formatter parameters.
+ * @returns The formatted saving throw value.
+ */
 export const savingThrowValueFormatter = (
 	params: ValueFormatterParams<Spell, SavingThrow>,
 ): string => {
@@ -101,6 +141,11 @@ export const savingThrowValueFormatter = (
 	return mapNumberToSavingThrowDisplayName(params.value);
 };
 
+/**
+ * Format the school value for display.
+ * @param params - The value formatter parameters.
+ * @returns The formatted school value.
+ */
 export const schoolValueFormatter = (
 	params: ValueFormatterParams<Spell, School>,
 ): string => {
@@ -109,6 +154,11 @@ export const schoolValueFormatter = (
 	return mapNumberToSchoolDisplayName(params.value);
 };
 
+/**
+ * Format the source value for display.
+ * @param params - The value formatter parameters.
+ * @returns The formatted source value.
+ */
 export const sourceValueFormatter = (
 	params: ValueFormatterParams<Spell, Source>,
 ): string => {

@@ -17,6 +17,11 @@ export default class DifficultyDie extends NumberDie {
 		super(8, value);
 	}
 
+	/**
+	 * Maps the numeric value of the difficulty die to an array of `EdgeOfTheEmpireDiceSymbol` results.
+	 *
+	 * @returns {EdgeOfTheEmpireDiceSymbol[]} An array of `EdgeOfTheEmpireDiceSymbol` corresponding to the die value.
+	 */
 	mapValueToResults = (): EdgeOfTheEmpireDiceSymbol[] => {
 		switch (this.value) {
 			case 1:

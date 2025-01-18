@@ -17,6 +17,11 @@ export enum CastingTime {
 	Special = 9,
 }
 
+/**
+ * Map a number to a CastingTime enum value.
+ * @param x - The number to map.
+ * @returns The corresponding CastingTime enum value, or null if invalid.
+ */
 export const mapNumberToCastingTime = (x: number): number | null => {
 	switch (x) {
 		case 0:
@@ -44,6 +49,11 @@ export const mapNumberToCastingTime = (x: number): number | null => {
 	}
 };
 
+/**
+ * Map a number to a casting time display name.
+ * @param x - The number to map.
+ * @returns The corresponding casting time display name.
+ */
 export const mapNumberToCastingTimeDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:

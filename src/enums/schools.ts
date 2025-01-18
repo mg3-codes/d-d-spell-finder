@@ -15,6 +15,12 @@ export enum School {
 	Transmutation = 7,
 }
 
+/**
+ * Maps a given number to its corresponding `School` enum value.
+ *
+ * @param x - The number to map to a `School`.
+ * @returns The corresponding `School` enum value, or `null` if the number does not map to any `School`.
+ */
 export const mapNumberToSchool = (x: number): number | null => {
 	switch (x) {
 		case 0:
@@ -38,6 +44,12 @@ export const mapNumberToSchool = (x: number): number | null => {
 	}
 };
 
+/**
+ * Maps a given number to its corresponding school display name.
+ *
+ * @param x - The number to map to a school display name.
+ * @returns The display name corresponding to the provided number.
+ */
 export const mapNumberToSchoolDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:

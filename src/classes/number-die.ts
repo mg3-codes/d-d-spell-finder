@@ -15,6 +15,11 @@ export default class NumberDie {
 		this.roll();
 	}
 
+	/**
+	 * Rolls the die and sets the value to a random number between 1 and the number of sides on the die.
+	 *
+	 * @returns {void}
+	 */
 	roll = (): void => {
 		const min = 1;
 		const roll = Math.floor(Math.random() * (this.sides - min + 1) + min);

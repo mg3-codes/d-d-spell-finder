@@ -22,6 +22,11 @@ export enum Duration {
 	UntilDispelledOrTriggered = 14,
 }
 
+/**
+ * Map a number to a Duration enum value.
+ * @param x - The number to map.
+ * @returns The corresponding Duration enum value, or null if invalid.
+ */
 export const mapNumberToDuration = (x: number): number | null => {
 	switch (x) {
 		case 0:
@@ -59,6 +64,11 @@ export const mapNumberToDuration = (x: number): number | null => {
 	}
 };
 
+/**
+ * Map a number to a duration display name.
+ * @param x - The number to map.
+ * @returns The corresponding duration display name.
+ */
 export const mapNumberToDurationDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:

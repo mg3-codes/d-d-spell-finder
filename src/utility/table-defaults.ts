@@ -68,9 +68,20 @@ export const defaultSelectedColumns: Column[] = [
 	Column.Details,
 ];
 
+/**
+ * Check if a column is hidden by default.
+ * @param column - The column to check.
+ * @returns True if the column is hidden, otherwise false.
+ */
 const defaultColumnIsHidden = (column: Column): boolean =>
 	defaultSelectedColumns.find((value) => value === column) === undefined;
 
+/**
+ * Set the order of column definitions based on the desired order.
+ * @param columnDefinitions - The array of column definitions.
+ * @param desiredOrder - The desired order of columns.
+ * @returns The ordered array of column definitions.
+ */
 export const setColumnDefinitionOrder = (
 	columnDefinitions: ColDef[],
 	desiredOrder: string[] | undefined,
@@ -89,6 +100,12 @@ export const setColumnDefinitionOrder = (
 	return orderedArray;
 };
 
+/**
+ * Get the default column definitions for the table.
+ * @param onMaterialCellClicked - Callback for when the material cell is clicked.
+ * @param onDetailsCellClicked - Callback for when the details cell is clicked.
+ * @returns The array of default column definitions.
+ */
 export const getDefaultColumnDefinitions = (
 	onMaterialCellClicked: (event: CellClickedEvent<Spell>) => void,
 	onDetailsCellClicked: (event: CellClickedEvent<Spell>) => void,
@@ -258,6 +275,10 @@ export const getDefaultColumnDefinitions = (
 	},
 ];
 
+/**
+ * Get the default selection column definition.
+ * @returns The default selection column definition.
+ */
 export const getDefaultSelectionColumnDefinition = (): ColDef => ({
 	field: "check",
 	headerName: "",

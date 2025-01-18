@@ -21,6 +21,11 @@ export enum DamageType {
 	None = 13,
 }
 
+/**
+ * Map a number to a DamageType enum value.
+ * @param x - The number to map.
+ * @returns The corresponding DamageType enum value, or null if invalid.
+ */
 export const mapNumberToDamageType = (x: number): DamageType | null => {
 	switch (x) {
 		case 0:
@@ -56,6 +61,11 @@ export const mapNumberToDamageType = (x: number): DamageType | null => {
 	}
 };
 
+/**
+ * Map a number to a damage type display name.
+ * @param x - The number to map.
+ * @returns The corresponding damage type display name.
+ */
 export const mapNumberToDamageTypeDisplayName = (
 	x: number | undefined,
 ): string => {

@@ -18,6 +18,11 @@ export enum EdgeOfTheEmpireDiceSymbol {
 	Triumph = 8,
 }
 
+/**
+ * Map a dice symbol to its corresponding character.
+ * @param symbol - The dice symbol to map.
+ * @returns The corresponding character.
+ */
 export const mapSymbolToCharacter = (
 	symbol: EdgeOfTheEmpireDiceSymbol,
 ): string => {
@@ -45,6 +50,11 @@ export const mapSymbolToCharacter = (
 	}
 };
 
+/**
+ * Map a dice symbol to its display name.
+ * @param symbol - The dice symbol to map.
+ * @returns The corresponding display name.
+ */
 export const mapSymbolToDisplayName = (
 	symbol: EdgeOfTheEmpireDiceSymbol,
 ): string => {
@@ -72,6 +82,11 @@ export const mapSymbolToDisplayName = (
 	}
 };
 
+/**
+ * Map a character to its corresponding display name.
+ * @param character - The character to map.
+ * @returns The corresponding display name.
+ */
 export const mapCharacterToDisplayName = (character: string): string => {
 	switch (character) {
 		case "a":
@@ -97,6 +112,11 @@ export const mapCharacterToDisplayName = (character: string): string => {
 	}
 };
 
+/**
+ * Map a dice symbol to its corresponding color.
+ * @param symbol - The dice symbol to map.
+ * @returns The corresponding color, or null if invalid.
+ */
 export const mapSymbolToColor = (
 	symbol: EdgeOfTheEmpireDiceSymbol,
 ): EdgeOfTheEmpireDiceColor | null => {

@@ -17,6 +17,11 @@ export default class ChallengeDie extends NumberDie {
 		super(12, value);
 	}
 
+	/**
+	 * Maps the current die value to its corresponding `EdgeOfTheEmpireDiceSymbol` results.
+	 *
+	 * @returns An array of `EdgeOfTheEmpireDiceSymbol` corresponding to the current die value.
+	 */
 	mapValueToResults = (): EdgeOfTheEmpireDiceSymbol[] => {
 		switch (this.value) {
 			case 1:
