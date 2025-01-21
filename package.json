@@ -39,7 +39,7 @@
 		"cypress": "^13.17.0",
 		"lightningcss": "^1.28.2",
 		"typescript": "^5.7.2",
-		"vite": "6.0.7"
+		"vite": "6.0.9"
 	},
 	"packageManager": "yarn@3.5.1"
 }
