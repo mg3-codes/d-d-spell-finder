@@ -43,8 +43,12 @@ export enum Effect {
 	Warding = 32,
 }
 
-// function requires complexity to map all values
-// skipcq: JS-0044
+/**
+ * Maps a given number to its corresponding `Effect` enum value.
+ *
+ * @param x - The number to map to an `Effect`.
+ * @returns The corresponding `Effect` enum value, or `null` if the number does not map to any `Effect`.
+ */
 export const mapNumberToEffect = (x: number): Effect | null => {
 	switch (x) {
 		case 0:
@@ -124,8 +128,12 @@ export const mapNumberToEffect = (x: number): Effect | null => {
 	}
 };
 
-// function requires complexity to map all values
-// skipcq: JS-0044
+/**
+ * Maps an `Effect` enum value to its corresponding display name.
+ *
+ * @param x - The `Effect` enum value to be mapped.
+ * @returns The display name corresponding to the provided `Effect` enum value.
+ */
 export const mapEffectToDisplayName = (x: Effect): string => {
 	switch (x) {
 		case Effect.None:

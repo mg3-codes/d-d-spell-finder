@@ -17,6 +17,17 @@ export default class SetbackDie extends NumberDie {
 		super(6, value);
 	}
 
+	/**
+	 * Maps the current value of the setback die to an array of `EdgeOfTheEmpireDiceSymbol` results.
+	 *
+	 * The mapping is as follows:
+	 * - Values 1 and 2 map to `EdgeOfTheEmpireDiceSymbol.Blank`.
+	 * - Values 3 and 4 map to `EdgeOfTheEmpireDiceSymbol.Failure`.
+	 * - Values 5 and 6 map to `EdgeOfTheEmpireDiceSymbol.Threat`.
+	 * - Any other value maps to an empty array.
+	 *
+	 * @returns {EdgeOfTheEmpireDiceSymbol[]} An array of `EdgeOfTheEmpireDiceSymbol` results based on the die value.
+	 */
 	mapValueToResults = (): EdgeOfTheEmpireDiceSymbol[] => {
 		switch (this.value) {
 			case 1:

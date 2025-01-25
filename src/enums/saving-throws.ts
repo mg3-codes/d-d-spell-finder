@@ -14,6 +14,12 @@ export enum SavingThrow {
 	Wisdom = 6,
 }
 
+/**
+ * Maps a given number to its corresponding `SavingThrow` enum value.
+ *
+ * @param x - The number to map to a `SavingThrow`.
+ * @returns The corresponding `SavingThrow` enum value, or `null` if the number does not map to any `SavingThrow`.
+ */
 export const mapNumberToSavingThrow = (x: number): SavingThrow | null => {
 	switch (x) {
 		case 0:
@@ -35,6 +41,12 @@ export const mapNumberToSavingThrow = (x: number): SavingThrow | null => {
 	}
 };
 
+/**
+ * Maps a given number to its corresponding saving throw display name.
+ *
+ * @param x - The number to map to a saving throw display name.
+ * @returns The display name corresponding to the provided number.
+ */
 export const mapNumberToSavingThrowDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:

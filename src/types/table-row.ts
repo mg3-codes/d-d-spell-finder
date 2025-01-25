@@ -34,6 +34,11 @@ export type TableRow = {
 	details?: string;
 };
 
+/**
+ * Build a table row from a spell object.
+ * @param spell - The spell object.
+ * @returns The table row object.
+ */
 export const buildRow = (spell: Spell): TableRow => ({
 	name: spell.name,
 	level: spell.level,

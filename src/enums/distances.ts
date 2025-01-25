@@ -23,6 +23,11 @@ enum Distance {
 	FortyThousand = 40000,
 }
 
+/**
+ * Map a number to a Distance enum value.
+ * @param x - The number to map.
+ * @returns The corresponding Distance enum value.
+ */
 const mapNumberToDistance = (x: number): number => {
 	switch (x) {
 		case 1:
@@ -61,6 +66,11 @@ const mapNumberToDistance = (x: number): number => {
 	}
 };
 
+/**
+ * Map a number to a distance display name.
+ * @param x - The number to map.
+ * @returns The corresponding distance display name.
+ */
 const mapNumberToDistanceDisplayName = (x: number): string => {
 	switch (x) {
 		case 1:

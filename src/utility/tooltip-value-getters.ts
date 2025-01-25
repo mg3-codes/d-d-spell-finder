@@ -10,6 +10,11 @@ import { mapNumberToRangeDisplayName } from "../enums/ranges";
 import { mapNumberToSourceDisplayName } from "../enums/sources";
 import type Spell from "../types/spell";
 
+/**
+ * Get the tooltip value for the range field.
+ * @param params - The tooltip parameters.
+ * @returns The display name for the range value.
+ */
 export const rangeTooltipValueGetter = (
 	params: ITooltipParams<Spell>,
 ): string => {
@@ -17,6 +22,11 @@ export const rangeTooltipValueGetter = (
 	return mapNumberToRangeDisplayName(params?.data?.range);
 };
 
+/**
+ * Get the tooltip value for the source field.
+ * @param params - The tooltip parameters.
+ * @returns The display name for the source value.
+ */
 export const sourceTooltipValueGetter = (
 	params: ITooltipParams<Spell>,
 ): string => {

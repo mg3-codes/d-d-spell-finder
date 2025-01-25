@@ -10,6 +10,11 @@ export enum Attack {
 	Ranged = 2,
 }
 
+/**
+ * Map a number to an Attack enum value.
+ * @param x - The number to map.
+ * @returns The corresponding Attack enum value, or null if invalid.
+ */
 export const mapNumberToAttack = (x: number): Attack | null => {
 	switch (x) {
 		case 0:
@@ -23,6 +28,11 @@ export const mapNumberToAttack = (x: number): Attack | null => {
 	}
 };
 
+/**
+ * Map a number to an attack display name.
+ * @param x - The number to map.
+ * @returns The corresponding attack display name.
+ */
 export const mapNumberToAttackDisplayName = (x: number): string => {
 	switch (x) {
 		case 0:
