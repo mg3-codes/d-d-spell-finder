@@ -2,7 +2,11 @@
 
 # Changelog
 
-# 0.5.9
+## 0.5.10
+-  Update spell details
+-  Update packages
+
+## 0.5.9
 -   Minor spell updated
 -   Package updates
 
