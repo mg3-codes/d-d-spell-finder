@@ -6,7 +6,7 @@
 
 @font-face {
 	font-family: "MyCustomFont";
-	src: url('/path/to/font.otf') format('opentype');
+	src: url("/path/to/font.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
