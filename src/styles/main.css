@@ -5,8 +5,8 @@
  */
 
 @font-face {
-	font-family: "MyCustomFont";
-	src: url("/path/to/font.otf") format("opentype");
+	font-family: "eote-symbols";
+	src: url("../assets/EotE_Symbol-Regular_v1.otf") format("opentype");
 	font-weight: normal;
 	font-style: normal;
 }
