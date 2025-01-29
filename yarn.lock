@@ -408,9 +408,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@restart/ui@npm:^1.9.2":
-  version: 1.9.2
-  resolution: "@restart/ui@npm:1.9.2"
+"@restart/ui@npm:^1.9.3":
+  version: 1.9.3
+  resolution: "@restart/ui@npm:1.9.3"
   dependencies:
     "@babel/runtime": ^7.26.0
     "@popperjs/core": ^2.11.8
@@ -424,7 +424,7 @@ __metadata:
   peerDependencies:
     react: ">=16.14.0"
     react-dom: ">=16.14.0"
-  checksum: f58bbaa96466f96105407aa76693040d822256222d4ff9b80bfb9a3e049370429f08ccd3c5ec41fcb83e1c28118deacbe139e6fd438e2499e614bc79c8c82679
+  checksum: 3b6a026076941fa69ec704e7690145f1adb10506e180eb0bb92b825f517a4a125bac67dd288f90f43dc592054ee575de95030091cd87e7e1001f80120243ab8d
   languageName: node
   linkType: hard
 
@@ -1660,7 +1660,7 @@ __metadata:
     lightningcss: ^1.29.1
     path: ^0.12.7
     react: ^19.0.0
-    react-bootstrap: ^2.10.7
+    react-bootstrap: ^2.10.8
     react-dom: ^19.0.0
     react-router: ^7.1.1
     rollbar: ^2.26.4
@@ -3129,13 +3129,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:^2.10.7":
-  version: 2.10.7
-  resolution: "react-bootstrap@npm:2.10.7"
+"react-bootstrap@npm:^2.10.8":
+  version: 2.10.8
+  resolution: "react-bootstrap@npm:2.10.8"
   dependencies:
     "@babel/runtime": ^7.24.7
     "@restart/hooks": ^0.4.9
-    "@restart/ui": ^1.9.2
+    "@restart/ui": ^1.9.3
     "@types/prop-types": ^15.7.12
     "@types/react-transition-group": ^4.4.6
     classnames: ^2.3.2
@@ -3153,7 +3153,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 1ce8242d1d3de21ddec15ce952a4848ce08dc2a583a69e1f3dfc84123aa176b486446318bb82585a382432e3af7386aaea24baefb072583d61c0a5d0328ccda0
+  checksum: 9f94f4e36aef0a748032cc19e58662f80a8954871cc456023435dc4a13ff2d41f974d472581595f57d49754f1b6d58eb7bb1f44c87ab6379cc3daa81dbb721d0
   languageName: node
   linkType: hard
 
