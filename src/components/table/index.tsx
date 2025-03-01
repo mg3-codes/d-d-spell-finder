@@ -261,7 +261,7 @@ const Table = (): React.ReactElement => {
 						<Toast.Body>
 							<div className="cookie-toast-content">
 								<p>
-									We don't use these cookies to track you. It allows us to save
+									We don&apos;t use these cookies to track you. It allows us to save
 									some preferences so we can load your settings and table layout
 									when you return.
 								</p>
