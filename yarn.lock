@@ -1017,32 +1017,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ag-charts-types@npm:11.0.4":
-  version: 11.0.4
-  resolution: "ag-charts-types@npm:11.0.4"
-  checksum: af064050cbdbf444431f5f7d448e8646de3656f246a157e51b3587271c9964a0922cdc1836b8209a0979e581f2d39e5c72705a9b965503a92d1c8e56e18a92bb
+"ag-charts-types@npm:11.1.1":
+  version: 11.1.1
+  resolution: "ag-charts-types@npm:11.1.1"
+  checksum: 3418ce9698eb1725eae2f1424217fd6c134c590fbb9a440ce67b5ba288914f808090f0b0d83ff6c05220907ff241ffab65a62cf8f7d1f036489099cc207cd475
   languageName: node
   linkType: hard
 
-"ag-grid-community@npm:33.0.4, ag-grid-community@npm:^33.0.4":
-  version: 33.0.4
-  resolution: "ag-grid-community@npm:33.0.4"
+"ag-grid-community@npm:33.1.1, ag-grid-community@npm:^33.1.1":
+  version: 33.1.1
+  resolution: "ag-grid-community@npm:33.1.1"
   dependencies:
-    ag-charts-types: 11.0.4
-  checksum: 15e6a886d9c5c7f4bed6f98b7b03421159d77cf512b211e6d1d6fcca44cb29d77e02b55a981ce0bb428bc61135f611f555c90dc885c25c0a0d94f33259b43b66
+    ag-charts-types: 11.1.1
+  checksum: 33813c1f3556d8cb4bdbb257bc737097a29f32e962ecae6b0d6f9042549214dc81cf33d8f65ea6dcc1115cada731f5a8807119322079cf8e29369660d7e18c4a
   languageName: node
   linkType: hard
 
-"ag-grid-react@npm:^33.0.4":
-  version: 33.0.4
-  resolution: "ag-grid-react@npm:33.0.4"
+"ag-grid-react@npm:^33.1.1":
+  version: 33.1.1
+  resolution: "ag-grid-react@npm:33.1.1"
   dependencies:
-    ag-grid-community: 33.0.4
+    ag-grid-community: 33.1.1
     prop-types: ^15.8.1
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: cf18bfa09a0d62625657787677316d3be8ef215625f0e3e69b20484ca6abdada38e3d2aeaf13d06be155fe57ecf44b0a30b9d99c291a888d2c00268a92a50fa2
+  checksum: 0687dee78bb9b009a183d39e24b73bee0c7ae9610a5adc9a427f894fc6985166e16f1dcb01dad65bfcb9a9eaa56a9752ee55679d8cb91db6f6b0701000aeff5e
   languageName: node
   linkType: hard
 
@@ -1663,8 +1663,8 @@ __metadata:
     "@types/react-dom": ^19.0.4
     "@types/react-router": ^5.1.20
     "@vitejs/plugin-react-swc": ^3.8.0
-    ag-grid-community: ^33.0.4
-    ag-grid-react: ^33.0.4
+    ag-grid-community: ^33.1.1
+    ag-grid-react: ^33.1.1
     cypress: ^14.1.0
     lightningcss: ^1.29.1
     path: ^0.12.7

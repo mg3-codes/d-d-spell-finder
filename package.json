@@ -17,8 +17,8 @@
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
 		"@rollbar/react": "^0.12.1",
-		"ag-grid-community": "^33.0.4",
-		"ag-grid-react": "^33.0.4",
+		"ag-grid-community": "^33.1.1",
+		"ag-grid-react": "^33.1.1",
 		"path": "^0.12.7",
 		"react": "^19.0.0",
 		"react-bootstrap": "^2.10.9",
