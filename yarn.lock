@@ -1671,7 +1671,7 @@ __metadata:
     react: ^19.0.0
     react-bootstrap: ^2.10.9
     react-dom: ^19.0.0
-    react-router: ^7.2.0
+    react-router: ^7.4.0
     rollbar: ^2.26.4
     typescript: ^5.8.2
     vite: 6.2.3
@@ -3191,9 +3191,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:^7.2.0":
-  version: 7.2.0
-  resolution: "react-router@npm:7.2.0"
+"react-router@npm:^7.4.0":
+  version: 7.4.0
+  resolution: "react-router@npm:7.4.0"
   dependencies:
     "@types/cookie": ^0.6.0
     cookie: ^1.0.1
@@ -3205,7 +3205,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: a7b35dbc33e0af662494959de4b12e82d83f4cb26c22b31dee8e6742fb337d8e86b52e38ed6b6aaa358684d435e05494709270abb41dd79ca7df649b928d9724
+  checksum: 80a7d6fb798b51051250aabdce12de275e91659df2338b9043c80237eeeadadb96a1ebad0faac3fc228d193ef0fb263cd3b303840e89cdde239ac7aeaaae17ae
   languageName: node
   linkType: hard
 
