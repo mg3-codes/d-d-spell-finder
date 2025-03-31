@@ -935,12 +935,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.0.10":
-  version: 19.0.10
-  resolution: "@types/react@npm:19.0.10"
+"@types/react@npm:19.0.12":
+  version: 19.0.12
+  resolution: "@types/react@npm:19.0.12"
   dependencies:
     csstype: ^3.0.2
-  checksum: e257e87bc3464825014523aecc700540a9da41c3c23136c03da9b2b7999251ac70ef9e594febdefeea6abe51da2475b42e5d96af6559d76f8d54bffc0b0ddacd
+  checksum: 795f27287e44ef5f81ef9e8439ede54c16d692eb7aadcfc314a2e2de6160033e32d3ee9ce7027e05417e9d80f57a4eb22a6a9cbc40a0a12346c71a1fce939956
   languageName: node
   linkType: hard
 
@@ -1635,7 +1635,7 @@ __metadata:
     "@swc/helpers": ^0.5.15
     "@types/mocha": ^10.0.10
     "@types/node": ^22.13.7
-    "@types/react": 19.0.10
+    "@types/react": 19.0.12
     "@types/react-dom": ^19.0.4
     "@types/react-router": ^5.1.20
     "@vitejs/plugin-react-swc": ^3.8.0
@@ -1644,7 +1644,7 @@ __metadata:
     cypress: ^14.2.1
     lightningcss: ^1.29.3
     path: ^0.12.7
-    react: ^19.0.0
+    react: ^19.1.0
     react-bootstrap: ^2.10.9
     react-dom: ^19.0.0
     react-router: ^7.4.0
@@ -3195,10 +3195,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.0.0":
-  version: 19.0.0
-  resolution: "react@npm:19.0.0"
-  checksum: 86de15d85b2465feb40297a90319c325cb07cf27191a361d47bcfe8c6126c973d660125aa67b8f4cbbe39f15a2f32efd0c814e98196d8e5b68c567ba40a399c6
+"react@npm:^19.1.0":
+  version: 19.1.0
+  resolution: "react@npm:19.1.0"
+  checksum: c0905f8cfb878b0543a5522727e5ed79c67c8111dc16ceee135b7fe19dce77b2c1c19293513061a8934e721292bfc1517e0487e262d1906f306bdf95fa54d02f
   languageName: node
   linkType: hard
 
