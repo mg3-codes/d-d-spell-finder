@@ -764,7 +764,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:^15.7.12":
+"@types/prop-types@npm:^15, @types/prop-types@npm:^15.7.12":
   version: 15.7.14
   resolution: "@types/prop-types@npm:15.7.14"
   checksum: 10/d0c5407b9ccc3dd5fae0ccf9b1007e7622ba5e6f1c18399b4f24dff33619d469da4b9fa918a374f19dc0d9fe6a013362aab0b844b606cfc10676efba3f5f736d
@@ -1510,6 +1510,7 @@ __metadata:
     "@swc/helpers": "npm:^0.5.15"
     "@types/mocha": "npm:^10.0.10"
     "@types/node": "npm:^22.14.0"
+    "@types/prop-types": "npm:^15"
     "@types/react": "npm:19.1.0"
     "@types/react-dom": "npm:^19.1.1"
     "@types/react-router": "npm:^5.1.20"
@@ -1519,6 +1520,7 @@ __metadata:
     cypress: "npm:^14.2.1"
     lightningcss: "npm:^1.29.3"
     path: "npm:^0.12.7"
+    prop-types: "npm:^15.8.1"
     react: "npm:^19.1.0"
     react-bootstrap: "npm:^2.10.9"
     react-dom: "npm:^19.1.0"

@@ -34,6 +34,7 @@ const RAW_RUNTIME_STATE =
           ["@swc/helpers", "npm:0.5.15"],\
           ["@types/mocha", "npm:10.0.10"],\
           ["@types/node", "npm:22.14.0"],\
+          ["@types/prop-types", "npm:15.7.14"],\
           ["@types/react", "npm:19.1.0"],\
           ["@types/react-dom", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:19.1.1"],\
           ["@types/react-router", "npm:5.1.20"],\
@@ -44,6 +45,7 @@ const RAW_RUNTIME_STATE =
           ["dnd-spell-organizer", "workspace:."],\
           ["lightningcss", "npm:1.29.3"],\
           ["path", "npm:0.12.7"],\
+          ["prop-types", "npm:15.8.1"],\
           ["react", "npm:19.1.0"],\
           ["react-bootstrap", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:2.10.9"],\
           ["react-dom", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:19.1.0"],\
@@ -580,10 +582,10 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/__virtual__/@rollbar-react-virtual-2a0d0d3455/0/cache/@rollbar-react-npm-0.12.1-d9750ce679-af04e3c0c3.zip/node_modules/@rollbar/react/",\
         "packageDependencies": [\
           ["@rollbar/react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:0.12.1"],\
-          ["@types/prop-types", null],\
+          ["@types/prop-types", "npm:15.7.14"],\
           ["@types/react", "npm:19.1.0"],\
           ["@types/rollbar", null],\
-          ["prop-types", null],\
+          ["prop-types", "npm:15.8.1"],\
           ["react", "npm:19.1.0"],\
           ["rollbar", "npm:2.26.4"],\
           ["tiny-invariant", "npm:1.3.1"]\
@@ -1959,6 +1961,7 @@ const RAW_RUNTIME_STATE =
           ["@swc/helpers", "npm:0.5.15"],\
           ["@types/mocha", "npm:10.0.10"],\
           ["@types/node", "npm:22.14.0"],\
+          ["@types/prop-types", "npm:15.7.14"],\
           ["@types/react", "npm:19.1.0"],\
           ["@types/react-dom", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:19.1.1"],\
           ["@types/react-router", "npm:5.1.20"],\
@@ -1969,6 +1972,7 @@ const RAW_RUNTIME_STATE =
           ["dnd-spell-organizer", "workspace:."],\
           ["lightningcss", "npm:1.29.3"],\
           ["path", "npm:0.12.7"],\
+          ["prop-types", "npm:15.8.1"],\
           ["react", "npm:19.1.0"],\
           ["react-bootstrap", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:2.10.9"],\
           ["react-dom", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:19.1.0"],\
