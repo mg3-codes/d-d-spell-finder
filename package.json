@@ -20,9 +20,9 @@
 		"ag-grid-community": "^33.2.1",
 		"ag-grid-react": "^33.2.1",
 		"path": "^0.12.7",
-		"react": "^19.0.0",
+		"react": "^19.1.0",
 		"react-bootstrap": "^2.10.9",
-		"react-dom": "^19.0.0",
+		"react-dom": "^19.1.0",
 		"react-router": "^7.4.0",
 		"rollbar": "^2.26.4"
 	},
