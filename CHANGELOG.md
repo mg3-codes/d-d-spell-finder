@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.5.12
+- Spelling update
+- Update packages
+
 ## 0.5.11
 -  Fix font bug
 -  Update packages
