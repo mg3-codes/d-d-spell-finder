@@ -28,18 +28,18 @@
 	},
 	"devDependencies": {
 		"@biomejs/biome": "1.9.4",
-		"@swc/core": "1.11.13",
+		"@swc/core": "1.11.16",
 		"@swc/helpers": "^0.5.15",
 		"@types/mocha": "^10.0.10",
-		"@types/node": "^22.13.7",
-		"@types/react": "19.0.10",
-		"@types/react-dom": "^19.0.4",
+		"@types/node": "^22.14.0",
+		"@types/react": "19.1.0",
+		"@types/react-dom": "^19.1.1",
 		"@types/react-router": "^5.1.20",
-		"@vitejs/plugin-react-swc": "^3.8.0",
+		"@vitejs/plugin-react-swc": "^3.8.1",
 		"cypress": "^14.2.1",
 		"lightningcss": "^1.29.3",
 		"typescript": "^5.8.2",
-		"vite": "6.2.3"
+		"vite": "6.2.5"
 	},
 	"packageManager": "yarn@4.8.0"
 }
