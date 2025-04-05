@@ -6,7 +6,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "tsc && vite build",
-		"build-test": "tsc && vite build --mode staging",
+		"build-test": "yarn && tsc && vite build --mode staging",
 		"preview": "vite preview",
 		"format": "biome format --fix",
 		"format-check": "biome format",
