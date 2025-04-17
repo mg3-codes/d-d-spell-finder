@@ -12,10 +12,14 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@v4
-
-            - name: Cypress run
-              uses: cypress-io/github-action@v6.7.16
+            - run: corepack enable # (experimental and optional)
+            - name: Set up Yarn cache
+              uses: actions/setup-node@v4
               with:
-                  build: yarn build-test && yarn dlx cypress install
-                  start: yarn preview
-                  browser: chrome
+                node-version: 22
+                cache: yarn
+                cache-dependency-path: yarn.lock
+            - name: Cypress run
+              uses: cypress-io/github-action@v6
+              with:
+                install-command: yarn install
