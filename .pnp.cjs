@@ -41,7 +41,7 @@ const RAW_RUNTIME_STATE =
           ["@vitejs/plugin-react-swc", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:3.8.1"],\
           ["ag-grid-community", "npm:33.2.1"],\
           ["ag-grid-react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.2.1"],\
-          ["cypress", "npm:14.2.1"],\
+          ["cypress", "npm:14.3.0"],\
           ["dnd-spell-organizer", "workspace:."],\
           ["lightningcss", "npm:1.29.3"],\
           ["path", "npm:0.12.7"],\
@@ -1767,8 +1767,8 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["cypress", [\
-      ["npm:14.2.1", {\
-        "packageLocation": "./.yarn/unplugged/cypress-npm-14.2.1-8bd4b65fc9/node_modules/cypress/",\
+      ["npm:14.3.0", {\
+        "packageLocation": "./.yarn/unplugged/cypress-npm-14.3.0-7be418aeec/node_modules/cypress/",\
         "packageDependencies": [\
           ["@cypress/request", "npm:3.0.8"],\
           ["@cypress/xvfb", "npm:1.2.4"],\
@@ -1786,9 +1786,9 @@ const RAW_RUNTIME_STATE =
           ["cli-table3", "npm:0.6.5"],\
           ["commander", "npm:6.2.1"],\
           ["common-tags", "npm:1.8.2"],\
-          ["cypress", "npm:14.2.1"],\
+          ["cypress", "npm:14.3.0"],\
           ["dayjs", "npm:1.11.7"],\
-          ["debug", "virtual:8bd4b65fc9340f8408ec12f3ecdbb8d01a5b289fb9f3e09fb36ded471c4ac526d9d2c6f6fee5476399fbb81e6e6ce7514c7d1298ac5720aff5139f9c7e89995e#npm:4.3.4"],\
+          ["debug", "virtual:7be418aeec481d841da7810ccf5425f3536aa6d95f61c600a568eedfc1f9038ee315e3128746d0c51d68593d989cb17f0dea05d77ab33e99bf0f9aa5bf14005f#npm:4.3.4"],\
           ["enquirer", "npm:2.3.6"],\
           ["eventemitter2", "npm:6.4.7"],\
           ["execa", "npm:4.1.0"],\
@@ -1799,7 +1799,7 @@ const RAW_RUNTIME_STATE =
           ["getos", "npm:3.2.1"],\
           ["is-installed-globally", "npm:0.4.0"],\
           ["lazy-ass", "npm:1.6.0"],\
-          ["listr2", "virtual:8bd4b65fc9340f8408ec12f3ecdbb8d01a5b289fb9f3e09fb36ded471c4ac526d9d2c6f6fee5476399fbb81e6e6ce7514c7d1298ac5720aff5139f9c7e89995e#npm:3.14.0"],\
+          ["listr2", "virtual:7be418aeec481d841da7810ccf5425f3536aa6d95f61c600a568eedfc1f9038ee315e3128746d0c51d68593d989cb17f0dea05d77ab33e99bf0f9aa5bf14005f#npm:3.14.0"],\
           ["lodash", "npm:4.17.21"],\
           ["log-symbols", "npm:4.1.0"],\
           ["minimist", "npm:1.2.8"],\
@@ -1866,11 +1866,11 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["virtual:8bd4b65fc9340f8408ec12f3ecdbb8d01a5b289fb9f3e09fb36ded471c4ac526d9d2c6f6fee5476399fbb81e6e6ce7514c7d1298ac5720aff5139f9c7e89995e#npm:4.3.4", {\
-        "packageLocation": "./.yarn/__virtual__/debug-virtual-69711429d1/0/cache/debug-npm-4.3.4-4513954577-0073c3bcbd.zip/node_modules/debug/",\
+      ["virtual:7be418aeec481d841da7810ccf5425f3536aa6d95f61c600a568eedfc1f9038ee315e3128746d0c51d68593d989cb17f0dea05d77ab33e99bf0f9aa5bf14005f#npm:4.3.4", {\
+        "packageLocation": "./.yarn/__virtual__/debug-virtual-1419b05a6c/0/cache/debug-npm-4.3.4-4513954577-0073c3bcbd.zip/node_modules/debug/",\
         "packageDependencies": [\
           ["@types/supports-color", null],\
-          ["debug", "virtual:8bd4b65fc9340f8408ec12f3ecdbb8d01a5b289fb9f3e09fb36ded471c4ac526d9d2c6f6fee5476399fbb81e6e6ce7514c7d1298ac5720aff5139f9c7e89995e#npm:4.3.4"],\
+          ["debug", "virtual:7be418aeec481d841da7810ccf5425f3536aa6d95f61c600a568eedfc1f9038ee315e3128746d0c51d68593d989cb17f0dea05d77ab33e99bf0f9aa5bf14005f#npm:4.3.4"],\
           ["ms", "npm:2.1.2"],\
           ["supports-color", "npm:8.1.1"]\
         ],\
@@ -1968,7 +1968,7 @@ const RAW_RUNTIME_STATE =
           ["@vitejs/plugin-react-swc", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:3.8.1"],\
           ["ag-grid-community", "npm:33.2.1"],\
           ["ag-grid-react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.2.1"],\
-          ["cypress", "npm:14.2.1"],\
+          ["cypress", "npm:14.3.0"],\
           ["dnd-spell-organizer", "workspace:."],\
           ["lightningcss", "npm:1.29.3"],\
           ["path", "npm:0.12.7"],\
@@ -2944,14 +2944,14 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:8bd4b65fc9340f8408ec12f3ecdbb8d01a5b289fb9f3e09fb36ded471c4ac526d9d2c6f6fee5476399fbb81e6e6ce7514c7d1298ac5720aff5139f9c7e89995e#npm:3.14.0", {\
-        "packageLocation": "./.yarn/__virtual__/listr2-virtual-94dc75c0f2/0/cache/listr2-npm-3.14.0-446f504112-cebbd69233.zip/node_modules/listr2/",\
+      ["virtual:7be418aeec481d841da7810ccf5425f3536aa6d95f61c600a568eedfc1f9038ee315e3128746d0c51d68593d989cb17f0dea05d77ab33e99bf0f9aa5bf14005f#npm:3.14.0", {\
+        "packageLocation": "./.yarn/__virtual__/listr2-virtual-843d97a51b/0/cache/listr2-npm-3.14.0-446f504112-cebbd69233.zip/node_modules/listr2/",\
         "packageDependencies": [\
           ["@types/enquirer", null],\
           ["cli-truncate", "npm:2.1.0"],\
           ["colorette", "npm:2.0.19"],\
           ["enquirer", "npm:2.3.6"],\
-          ["listr2", "virtual:8bd4b65fc9340f8408ec12f3ecdbb8d01a5b289fb9f3e09fb36ded471c4ac526d9d2c6f6fee5476399fbb81e6e6ce7514c7d1298ac5720aff5139f9c7e89995e#npm:3.14.0"],\
+          ["listr2", "virtual:7be418aeec481d841da7810ccf5425f3536aa6d95f61c600a568eedfc1f9038ee315e3128746d0c51d68593d989cb17f0dea05d77ab33e99bf0f9aa5bf14005f#npm:3.14.0"],\
           ["log-update", "npm:4.0.0"],\
           ["p-map", "npm:4.0.0"],\
           ["rfdc", "npm:1.3.0"],\
