@@ -52,7 +52,7 @@ const RAW_RUNTIME_STATE =
           ["react-router", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:7.4.1"],\
           ["rollbar", "npm:2.26.4"],\
           ["typescript", "patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=5786d5"],\
-          ["vite", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:6.2.5"]\
+          ["vite", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:6.2.6"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -1157,7 +1157,7 @@ const RAW_RUNTIME_STATE =
           ["@swc/core", "virtual:d26dd70dddb0659806cf819a10c0a8f6ff177bb360ed1475bae3d8bd0423c53a445a923931c952af2031103df62d4468eb04ce61b6d2535c2a3d0c29ef456b42#npm:1.11.16"],\
           ["@types/vite", null],\
           ["@vitejs/plugin-react-swc", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:3.8.1"],\
-          ["vite", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:6.2.5"]\
+          ["vite", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:6.2.6"]\
         ],\
         "packagePeers": [\
           "@types/vite",\
@@ -1979,7 +1979,7 @@ const RAW_RUNTIME_STATE =
           ["react-router", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:7.4.1"],\
           ["rollbar", "npm:2.26.4"],\
           ["typescript", "patch:typescript@npm%3A5.8.2#optional!builtin<compat/typescript>::version=5.8.2&hash=5786d5"],\
-          ["vite", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:6.2.5"]\
+          ["vite", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:6.2.6"]\
         ],\
         "linkType": "SOFT"\
       }]\
@@ -4455,15 +4455,15 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["vite", [\
-      ["npm:6.2.5", {\
-        "packageLocation": "./.yarn/cache/vite-npm-6.2.5-813f4c9986-3540235894.zip/node_modules/vite/",\
+      ["npm:6.2.6", {\
+        "packageLocation": "./.yarn/cache/vite-npm-6.2.6-19e4bde6cc-d8fb01a190.zip/node_modules/vite/",\
         "packageDependencies": [\
-          ["vite", "npm:6.2.5"]\
+          ["vite", "npm:6.2.6"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:6.2.5", {\
-        "packageLocation": "./.yarn/__virtual__/vite-virtual-ff0c3806b4/0/cache/vite-npm-6.2.5-813f4c9986-3540235894.zip/node_modules/vite/",\
+      ["virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:6.2.6", {\
+        "packageLocation": "./.yarn/__virtual__/vite-virtual-78f7789f13/0/cache/vite-npm-6.2.6-19e4bde6cc-d8fb01a190.zip/node_modules/vite/",\
         "packageDependencies": [\
           ["@types/jiti", null],\
           ["@types/less", null],\
@@ -4489,7 +4489,7 @@ const RAW_RUNTIME_STATE =
           ["sugarss", null],\
           ["terser", null],\
           ["tsx", null],\
-          ["vite", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:6.2.5"],\
+          ["vite", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:6.2.6"],\
           ["yaml", null]\
         ],\
         "packagePeers": [\
