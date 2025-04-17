@@ -31,7 +31,7 @@ const RAW_RUNTIME_STATE =
           ["@popperjs/core", "npm:2.11.8"],\
           ["@rollbar/react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:0.12.1"],\
           ["@swc/core", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:1.11.16"],\
-          ["@swc/helpers", "npm:0.5.15"],\
+          ["@swc/helpers", "npm:0.5.17"],\
           ["@types/mocha", "npm:10.0.10"],\
           ["@types/node", "npm:22.14.0"],\
           ["@types/prop-types", "npm:15.7.14"],\
@@ -795,7 +795,7 @@ const RAW_RUNTIME_STATE =
           ["@swc/core-win32-ia32-msvc", "npm:1.11.16"],\
           ["@swc/core-win32-x64-msvc", "npm:1.11.16"],\
           ["@swc/counter", "npm:0.1.3"],\
-          ["@swc/helpers", "npm:0.5.15"],\
+          ["@swc/helpers", "npm:0.5.17"],\
           ["@swc/types", "npm:0.1.21"],\
           ["@types/swc__helpers", null]\
         ],\
@@ -939,10 +939,10 @@ const RAW_RUNTIME_STATE =
         ],\
         "linkType": "HARD"\
       }],\
-      ["npm:0.5.15", {\
-        "packageLocation": "./.yarn/cache/@swc-helpers-npm-0.5.15-a7a06a73bc-e3f32c6dee.zip/node_modules/@swc/helpers/",\
+      ["npm:0.5.17", {\
+        "packageLocation": "./.yarn/cache/@swc-helpers-npm-0.5.17-53974f71e8-1fc8312a78.zip/node_modules/@swc/helpers/",\
         "packageDependencies": [\
-          ["@swc/helpers", "npm:0.5.15"],\
+          ["@swc/helpers", "npm:0.5.17"],\
           ["tslib", "npm:2.8.1"]\
         ],\
         "linkType": "HARD"\
@@ -1958,7 +1958,7 @@ const RAW_RUNTIME_STATE =
           ["@popperjs/core", "npm:2.11.8"],\
           ["@rollbar/react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:0.12.1"],\
           ["@swc/core", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:1.11.16"],\
-          ["@swc/helpers", "npm:0.5.15"],\
+          ["@swc/helpers", "npm:0.5.17"],\
           ["@types/mocha", "npm:10.0.10"],\
           ["@types/node", "npm:22.14.0"],\
           ["@types/prop-types", "npm:15.7.14"],\
