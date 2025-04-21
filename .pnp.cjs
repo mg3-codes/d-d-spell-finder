@@ -39,7 +39,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:19.1.1"],\
           ["@types/react-router", "npm:5.1.20"],\
           ["@vitejs/plugin-react-swc", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:3.8.1"],\
-          ["ag-grid-community", "npm:33.2.1"],\
+          ["ag-grid-community", "npm:33.2.4"],\
           ["ag-grid-react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.2.1"],\
           ["cypress", "npm:14.3.0"],\
           ["dnd-spell-organizer", "workspace:."],\
@@ -1182,6 +1182,13 @@ const RAW_RUNTIME_STATE =
           ["ag-charts-types", "npm:11.2.1"]\
         ],\
         "linkType": "HARD"\
+      }],\
+      ["npm:11.2.4", {\
+        "packageLocation": "./.yarn/cache/ag-charts-types-npm-11.2.4-f22efd8d5e-7fd46dc08d.zip/node_modules/ag-charts-types/",\
+        "packageDependencies": [\
+          ["ag-charts-types", "npm:11.2.4"]\
+        ],\
+        "linkType": "HARD"\
       }]\
     ]],\
     ["ag-grid-community", [\
@@ -1190,6 +1197,14 @@ const RAW_RUNTIME_STATE =
         "packageDependencies": [\
           ["ag-charts-types", "npm:11.2.1"],\
           ["ag-grid-community", "npm:33.2.1"]\
+        ],\
+        "linkType": "HARD"\
+      }],\
+      ["npm:33.2.4", {\
+        "packageLocation": "./.yarn/cache/ag-grid-community-npm-33.2.4-b4e8fd4a6e-20766f67ca.zip/node_modules/ag-grid-community/",\
+        "packageDependencies": [\
+          ["ag-charts-types", "npm:11.2.4"],\
+          ["ag-grid-community", "npm:33.2.4"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -1966,7 +1981,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:19.1.1"],\
           ["@types/react-router", "npm:5.1.20"],\
           ["@vitejs/plugin-react-swc", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:3.8.1"],\
-          ["ag-grid-community", "npm:33.2.1"],\
+          ["ag-grid-community", "npm:33.2.4"],\
           ["ag-grid-react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.2.1"],\
           ["cypress", "npm:14.3.0"],\
           ["dnd-spell-organizer", "workspace:."],\
