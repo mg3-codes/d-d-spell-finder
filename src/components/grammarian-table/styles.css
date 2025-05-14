@@ -1,0 +1,7 @@
+.dropdown-menu {
+	max-height: 200px;
+}
+
+.filter-container {
+	background-color: var(--bs-body-bg);
+}
