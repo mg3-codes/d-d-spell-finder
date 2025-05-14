@@ -16,6 +16,7 @@ import LoadingSpinner from "./components/loading-spinner";
 import { SelectedRowContextProvider } from "./components/selected-row-context-provider";
 import { ThemeContextProvider } from "./components/theme-context-provider";
 
+import Grammarian from "./components/routes/gramarian";
 import "./styles/main.css";
 
 const Index = React.lazy(() => import("./components/routes"));
@@ -41,6 +42,10 @@ const router = createBrowserRouter([
 	{
 		path: "/dice-roller",
 		element: <DiceRoller />,
+	},
+	{
+		path: "/grammarian",
+		element: <Grammarian />,
 	},
 	{
 		path: "/dice",

@@ -30,7 +30,7 @@ const Heading = () => {
 			<h1>D&D Spell Finder</h1>
 			<div className="header-buttons">
 				{location.pathname !== "/" && (
-					<Link to={"/"}>
+					<Link to={"/"} className="px-1">
 						<Button variant="outline-primary">
 							<i className="bi bi-magic" />
 							&nbsp; Spells
@@ -38,15 +38,23 @@ const Heading = () => {
 					</Link>
 				)}
 				{location.pathname !== "/dice-roller" && (
-					<Link to={"/dice-roller"} style={{ marginRight: 6 }}>
+					<Link to={"/dice-roller"} className="px-1">
 						<Button variant="outline-primary">
 							<i className="bi bi-dice-6" />
 							&nbsp; Dice Roller
 						</Button>
 					</Link>
 				)}
+				{location.pathname !== "/grammarian" && (
+					<Link to={"/grammarian"} className="px-1">
+						<Button variant="outline-primary">
+							<i className="bi bi-book" />
+							&nbsp; Grammarian
+						</Button>
+					</Link>
+				)}
 				{location.pathname === "/" && (
-					<>
+					<div className="px-1">
 						<Button
 							variant="outline-primary"
 							className="printer-button"
@@ -60,7 +68,7 @@ const Heading = () => {
 							toggleIsOpen={togglePrintModalIsOpen}
 							rows={selectedRows}
 						/>
-					</>
+					</div>
 				)}
 				<SettingsOffcanvas />
 			</div>
