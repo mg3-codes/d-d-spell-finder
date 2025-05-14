@@ -3,61 +3,61 @@ import enchant
 import os
 import re
 
-dict = enchant.Dict("en_US")
+dictionary = enchant.Dict("en_US")
 
 outPath = "../../src/assets/spell-variations.json"
 
 if os.path.exists(outPath):
 	os.remove(outPath)
 
-def verify_word(word):
-	return dict.check(word)
+def verifyWord(word):
+	return dictionary.check(word)
 
-def create_word_variations(spell):
+def createWordVariations(spell):
 	spell = spell.lower()
 	words = spell.split(" ")
 	for word in words:
-		word_variations = []
+		wordVariations = []
 		for i in range(len(word)):
-			for char_code in range(97, 123):
-				letter = chr(char_code)
+			for charCode in range(97, 123):
+				letter = chr(charCode)
 				if letter != word[i]:
-					new_word = word[:i] + letter + word[i+1:]
-					word_variations.append(new_word)
+					newWord = word[:i] + letter + word[i + 1:]
+					wordVariations.append(newWord)
 
-	return word_variations
+	return wordVariations
 
 data = open("../../src/assets/5e-spells.json", "r")
 data = json.load(data)
 
-spell_names = [spell["name"] for spell in data]
+spellNames = [spell["name"] for spell in data]
 
-print("Number found: ", len(spell_names))
+print("Number found: ", len(spellNames))
 
-for spell in spell_names:
+for spell in spellNames:
 	spell = spell.lower()
 	obj = {"name": spell}
 
 	for word in re.split(r'[^\w\']+', spell):
-		valid_words = []
-		variations = create_word_variations(word)
+		validWords = []
+		variations = createWordVariations(word)
 		for variation in variations:
-			if verify_word(variation):
-				valid_words.append(variation)
-		obj[word] = valid_words
+			if verifyWord(variation):
+				validWords.append(variation)
+		obj[word] = validWords
 
 	if not os.path.exists(outPath):
-		with open(outPath, "w") as outfile:
-			json.dump([], outfile)
+		with open(outPath, "w") as outFile:
+			json.dump([], outFile)
 
-	with open(outPath, "r+") as outfile:
+	with open(outPath, "r+") as outFile:
 		try:
-			existing_data = json.load(outfile)
-			if not isinstance(existing_data, list):
-				existing_data = []
+			existingData = json.load(outFile)
+			if not isinstance(existingData, list):
+				existingData = []
 		except json.JSONDecodeError:
-			existing_data = []
-		existing_data.append(obj)
-		outfile.seek(0)
-		json.dump(existing_data, outfile, indent="\t")
+			existingData = []
+		existingData.append(obj)
+		outFile.seek(0)
+		json.dump(existingData, outFile, indent="\t")
 
