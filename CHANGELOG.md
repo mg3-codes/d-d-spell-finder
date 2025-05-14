@@ -2,6 +2,10 @@
 
 # Changelog
 
+## 0.6.0
+- Add grammarian page
+- Update packages
+
 ## 0.5.12
 - Spelling update
 - Update packages
