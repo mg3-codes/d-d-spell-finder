@@ -1,7 +1,6 @@
 {
 	"recommendations": [
 		"streetsidesoftware.code-spell-checker",
-		"mrmlnc.vscode-scss",
 		"biomejs.biome",
 		"arcanis.vscode-zipfs"
 	]
