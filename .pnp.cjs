@@ -39,8 +39,8 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:19.1.5"],\
           ["@types/react-router", "npm:5.1.20"],\
           ["@vitejs/plugin-react-swc", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:3.9.0"],\
-          ["ag-grid-community", "npm:33.2.1"],\
-          ["ag-grid-react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.2.1"],\
+          ["ag-grid-community", "npm:33.3.0"],\
+          ["ag-grid-react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.3.0"],\
           ["cypress", "npm:14.3.0"],\
           ["dnd-spell-organizer", "workspace:."],\
           ["lightningcss", "npm:1.30.1"],\
@@ -1185,39 +1185,39 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["ag-charts-types", [\
-      ["npm:11.2.1", {\
-        "packageLocation": "./.yarn/cache/ag-charts-types-npm-11.2.1-b45576533e-82e09f0f01.zip/node_modules/ag-charts-types/",\
+      ["npm:11.3.0", {\
+        "packageLocation": "./.yarn/cache/ag-charts-types-npm-11.3.0-f1c923127a-200a3cd3cc.zip/node_modules/ag-charts-types/",\
         "packageDependencies": [\
-          ["ag-charts-types", "npm:11.2.1"]\
+          ["ag-charts-types", "npm:11.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["ag-grid-community", [\
-      ["npm:33.2.1", {\
-        "packageLocation": "./.yarn/cache/ag-grid-community-npm-33.2.1-7cd69e9fd6-56209be5f1.zip/node_modules/ag-grid-community/",\
+      ["npm:33.3.0", {\
+        "packageLocation": "./.yarn/cache/ag-grid-community-npm-33.3.0-0ce7e6eed7-9dd1fa0981.zip/node_modules/ag-grid-community/",\
         "packageDependencies": [\
-          ["ag-charts-types", "npm:11.2.1"],\
-          ["ag-grid-community", "npm:33.2.1"]\
+          ["ag-charts-types", "npm:11.3.0"],\
+          ["ag-grid-community", "npm:33.3.0"]\
         ],\
         "linkType": "HARD"\
       }]\
     ]],\
     ["ag-grid-react", [\
-      ["npm:33.2.1", {\
-        "packageLocation": "./.yarn/cache/ag-grid-react-npm-33.2.1-e8c5b871b5-fecf8ccb90.zip/node_modules/ag-grid-react/",\
+      ["npm:33.3.0", {\
+        "packageLocation": "./.yarn/cache/ag-grid-react-npm-33.3.0-ac380bcc04-e8d7d83a6a.zip/node_modules/ag-grid-react/",\
         "packageDependencies": [\
-          ["ag-grid-react", "npm:33.2.1"]\
+          ["ag-grid-react", "npm:33.3.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.2.1", {\
-        "packageLocation": "./.yarn/__virtual__/ag-grid-react-virtual-0f3673ef5c/0/cache/ag-grid-react-npm-33.2.1-e8c5b871b5-fecf8ccb90.zip/node_modules/ag-grid-react/",\
+      ["virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.3.0", {\
+        "packageLocation": "./.yarn/__virtual__/ag-grid-react-virtual-26c838b2d5/0/cache/ag-grid-react-npm-33.3.0-ac380bcc04-e8d7d83a6a.zip/node_modules/ag-grid-react/",\
         "packageDependencies": [\
           ["@types/react", "npm:19.1.4"],\
           ["@types/react-dom", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:19.1.5"],\
-          ["ag-grid-community", "npm:33.2.1"],\
-          ["ag-grid-react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.2.1"],\
+          ["ag-grid-community", "npm:33.3.0"],\
+          ["ag-grid-react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.3.0"],\
           ["prop-types", "npm:15.8.1"],\
           ["react", "npm:19.1.0"],\
           ["react-dom", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:19.1.0"]\
@@ -1975,8 +1975,8 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:19.1.5"],\
           ["@types/react-router", "npm:5.1.20"],\
           ["@vitejs/plugin-react-swc", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:3.9.0"],\
-          ["ag-grid-community", "npm:33.2.1"],\
-          ["ag-grid-react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.2.1"],\
+          ["ag-grid-community", "npm:33.3.0"],\
+          ["ag-grid-react", "virtual:2502a520d3cba3f0969779f62c73565bfe2c8327b7cc629adf8aaaec58bb8a3ada0b48e02e5b5bfa1a2d4562a7e05fdeb5a87b4bbb393e421f07923c066a3936#npm:33.3.0"],\
           ["cypress", "npm:14.3.0"],\
           ["dnd-spell-organizer", "workspace:."],\
           ["lightningcss", "npm:1.30.1"],\
