@@ -50,9 +50,16 @@ export const GrammarianTable = () => {
 		return rows;
 	}, [spell]);
 
+	const preventDefaultSubmit = useCallback(
+		(event: React.FormEvent<HTMLFormElement>) => {
+			event.preventDefault();
+		},
+		[],
+	);
+
 	return (
 		<div className="gutter-container">
-			<Form noValidate onSubmit={(e) => e.preventDefault()}>
+			<Form noValidate onSubmit={preventDefaultSubmit}>
 				<Form.Group>
 					<Form.Label>Spell</Form.Label>
 					<Dropdown>
