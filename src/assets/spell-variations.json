@@ -1,0 +1,8144 @@
+[
+	{
+		"name": "acid splash",
+		"acid": [
+			"amid",
+			"arid",
+			"avid",
+			"aced"
+		],
+		"splash": [
+			"splosh"
+		]
+	},
+	{
+		"name": "blade ward",
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		],
+		"ward": [
+			"bard",
+			"card",
+			"hard",
+			"lard",
+			"yard",
+			"word",
+			"wand",
+			"ware",
+			"warm",
+			"warn",
+			"warp",
+			"wars",
+			"wart",
+			"wary"
+		]
+	},
+	{
+		"name": "booming blade",
+		"booming": [
+			"dooming",
+			"looming",
+			"rooming",
+			"zooming",
+			"boobing",
+			"booking",
+			"booting",
+			"boozing"
+		],
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		]
+	},
+	{
+		"name": "chill touch",
+		"chill": [
+			"shill",
+			"child",
+			"chili"
+		],
+		"touch": [
+			"couch",
+			"pouch",
+			"vouch",
+			"torch",
+			"tough"
+		]
+	},
+	{
+		"name": "control flames",
+		"control": [],
+		"flames": [
+			"blames",
+			"frames",
+			"flumes",
+			"flakes",
+			"flares",
+			"flamed",
+			"flamer"
+		]
+	},
+	{
+		"name": "create bonfire",
+		"create": [
+			"crease"
+		],
+		"bonfire": []
+	},
+	{
+		"name": "dancing lights",
+		"dancing": [
+			"lancing",
+			"danging"
+		],
+		"lights": [
+			"bights",
+			"eights",
+			"fights",
+			"nights",
+			"rights",
+			"sights",
+			"tights",
+			"wights"
+		]
+	},
+	{
+		"name": "druidcraft",
+		"druidcraft": []
+	},
+	{
+		"name": "eldritch blast",
+		"eldritch": [],
+		"blast": [
+			"beast",
+			"boast",
+			"blase"
+		]
+	},
+	{
+		"name": "encode thoughts",
+		"encode": [
+			"encore"
+		],
+		"thoughts": []
+	},
+	{
+		"name": "fire bolt",
+		"fire": [
+			"dire",
+			"hire",
+			"lire",
+			"mire",
+			"sire",
+			"tire",
+			"wire",
+			"fare",
+			"fore",
+			"fife",
+			"file",
+			"fine",
+			"five",
+			"firm",
+			"firs"
+		],
+		"bolt": [
+			"colt",
+			"dolt",
+			"jolt",
+			"molt",
+			"volt",
+			"belt",
+			"boat",
+			"boot",
+			"bout",
+			"bola",
+			"bold",
+			"bole",
+			"boll"
+		]
+	},
+	{
+		"name": "friends",
+		"friends": []
+	},
+	{
+		"name": "frostbite",
+		"frostbite": []
+	},
+	{
+		"name": "green-flame blade",
+		"green": [
+			"preen",
+			"greed",
+			"greet"
+		],
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		],
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		]
+	},
+	{
+		"name": "guidance",
+		"guidance": []
+	},
+	{
+		"name": "gust",
+		"gust": [
+			"bust",
+			"dust",
+			"just",
+			"lust",
+			"must",
+			"oust",
+			"rust",
+			"gist",
+			"gush"
+		]
+	},
+	{
+		"name": "infestation",
+		"infestation": []
+	},
+	{
+		"name": "light",
+		"light": [
+			"bight",
+			"eight",
+			"fight",
+			"might",
+			"night",
+			"right",
+			"sight",
+			"tight",
+			"wight"
+		]
+	},
+	{
+		"name": "lightning lure",
+		"lightning": [],
+		"lure": [
+			"cure",
+			"pure",
+			"sure",
+			"lire",
+			"lore",
+			"lyre",
+			"lube",
+			"luge",
+			"lute",
+			"lurk"
+		]
+	},
+	{
+		"name": "mage hand",
+		"mage": [
+			"cage",
+			"page",
+			"rage",
+			"sage",
+			"wage",
+			"mtge",
+			"mace",
+			"made",
+			"make",
+			"male",
+			"mane",
+			"mare",
+			"mate",
+			"maze",
+			"magi",
+			"mags"
+		],
+		"hand": [
+			"band",
+			"land",
+			"rand",
+			"sand",
+			"wand",
+			"hind",
+			"hard",
+			"hang",
+			"hank"
+		]
+	},
+	{
+		"name": "magic stone",
+		"magic": [
+			"manic"
+		],
+		"stone": [
+			"atone",
+			"scone",
+			"shone",
+			"stoke",
+			"stole",
+			"store",
+			"stove",
+			"stony"
+		]
+	},
+	{
+		"name": "mending",
+		"mending": [
+			"bending",
+			"fending",
+			"lending",
+			"pending",
+			"rending",
+			"sending",
+			"tending",
+			"vending",
+			"wending",
+			"minding",
+			"melding"
+		]
+	},
+	{
+		"name": "message",
+		"message": [
+			"massage"
+		]
+	},
+	{
+		"name": "mind sliver",
+		"mind": [
+			"bind",
+			"find",
+			"hind",
+			"kind",
+			"rind",
+			"wind",
+			"mend",
+			"mild",
+			"mine",
+			"mini",
+			"mink",
+			"mint",
+			"minx"
+		],
+		"sliver": [
+			"shiver",
+			"skiver",
+			"slaver",
+			"slicer",
+			"slider"
+		]
+	},
+	{
+		"name": "minor illusion",
+		"minor": [
+			"manor",
+			"miner"
+		],
+		"illusion": [
+			"allusion"
+		]
+	},
+	{
+		"name": "mold earth",
+		"mold": [
+			"bold",
+			"cold",
+			"fold",
+			"gold",
+			"hold",
+			"sold",
+			"told",
+			"wold",
+			"meld",
+			"mild",
+			"mood",
+			"mole",
+			"moll",
+			"molt"
+		],
+		"earth": []
+	},
+	{
+		"name": "poison spray",
+		"poison": [
+			"prison"
+		],
+		"spray": [
+			"stray",
+			"splay",
+			"sprat"
+		]
+	},
+	{
+		"name": "prestidigitation",
+		"prestidigitation": []
+	},
+	{
+		"name": "primal savagery",
+		"primal": [],
+		"savagery": [
+			"savagely"
+		]
+	},
+	{
+		"name": "produce flame",
+		"produce": [
+			"product"
+		],
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		]
+	},
+	{
+		"name": "ray of frost",
+		"ray": [
+			"bay",
+			"cay",
+			"day",
+			"fay",
+			"gay",
+			"hay",
+			"jay",
+			"lay",
+			"may",
+			"nay",
+			"pay",
+			"say",
+			"way",
+			"rad",
+			"rag",
+			"rah",
+			"ram",
+			"ran",
+			"rap",
+			"rat",
+			"raw"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"frost": [
+			"front",
+			"frosh"
+		]
+	},
+	{
+		"name": "resistance",
+		"resistance": []
+	},
+	{
+		"name": "sacred flame",
+		"sacred": [
+			"sacked"
+		],
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		]
+	},
+	{
+		"name": "sapping sting",
+		"sapping": [
+			"capping",
+			"lapping",
+			"mapping",
+			"napping",
+			"rapping",
+			"tapping",
+			"yapping",
+			"zapping",
+			"sipping",
+			"sopping",
+			"supping",
+			"sapling"
+		],
+		"sting": [
+			"sling",
+			"suing",
+			"swing",
+			"stung",
+			"stink",
+			"stint"
+		]
+	},
+	{
+		"name": "shape water",
+		"shape": [
+			"shade",
+			"shake",
+			"shale",
+			"shame",
+			"share",
+			"shave"
+		],
+		"water": [
+			"cater",
+			"dater",
+			"eater",
+			"hater",
+			"later",
+			"mater",
+			"rater",
+			"tater",
+			"wader",
+			"wafer",
+			"wager",
+			"waver"
+		]
+	},
+	{
+		"name": "shillelagh",
+		"shillelagh": []
+	},
+	{
+		"name": "shocking grasp",
+		"shocking": [
+			"chocking",
+			"smocking",
+			"stocking",
+			"shacking",
+			"shucking"
+		],
+		"grasp": [
+			"grass"
+		]
+	},
+	{
+		"name": "spare the dying",
+		"spare": [
+			"scare",
+			"share",
+			"snare",
+			"stare",
+			"spire",
+			"spore",
+			"space",
+			"spade",
+			"spake",
+			"spate",
+			"spark",
+			"spars"
+		],
+		"the": [
+			"she",
+			"tee",
+			"tie",
+			"toe",
+			"tho",
+			"thy"
+		],
+		"dying": [
+			"hying",
+			"lying",
+			"tying",
+			"vying",
+			"dding",
+			"doing"
+		]
+	},
+	{
+		"name": "sword burst",
+		"sword": [
+			"sward",
+			"swore",
+			"sworn"
+		],
+		"burst": [
+			"durst",
+			"wurst",
+			"burnt",
+			"bursa"
+		]
+	},
+	{
+		"name": "thaumaturgy",
+		"thaumaturgy": []
+	},
+	{
+		"name": "thorn whip",
+		"thorn": [],
+		"whip": [
+			"chip",
+			"ship",
+			"whop",
+			"whup",
+			"whim",
+			"whir",
+			"whit",
+			"whiz"
+		]
+	},
+	{
+		"name": "thunderclap",
+		"thunderclap": []
+	},
+	{
+		"name": "toll the dead",
+		"toll": [
+			"boll",
+			"coll",
+			"doll",
+			"foll",
+			"loll",
+			"moll",
+			"poll",
+			"roll",
+			"tall",
+			"tell",
+			"till",
+			"toil",
+			"tool",
+			"told",
+			"tole"
+		],
+		"the": [
+			"she",
+			"tee",
+			"tie",
+			"toe",
+			"tho",
+			"thy"
+		],
+		"dead": [
+			"bead",
+			"head",
+			"lead",
+			"mead",
+			"read",
+			"deed",
+			"deaf",
+			"deal",
+			"dean",
+			"dear"
+		]
+	},
+	{
+		"name": "true strike",
+		"true": [
+			"grue",
+			"tree",
+			"trug"
+		],
+		"strike": [
+			"shrike",
+			"stroke",
+			"striae",
+			"stride",
+			"strife",
+			"stripe",
+			"strive"
+		]
+	},
+	{
+		"name": "vicious mockery",
+		"vicious": [],
+		"mockery": [
+			"rockery",
+			"mockers"
+		]
+	},
+	{
+		"name": "word of radiance",
+		"word": [
+			"cord",
+			"ford",
+			"lord",
+			"ward",
+			"woad",
+			"wold",
+			"wood",
+			"wore",
+			"work",
+			"worm",
+			"worn",
+			"wort"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"radiance": []
+	},
+	{
+		"name": "absorb elements",
+		"absorb": [
+			"adsorb"
+		],
+		"elements": []
+	},
+	{
+		"name": "alarm",
+		"alarm": []
+	},
+	{
+		"name": "animal friendship",
+		"animal": [],
+		"friendship": []
+	},
+	{
+		"name": "armor of agathys",
+		"armor": [
+			"arbor",
+			"ardor"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"agathys": []
+	},
+	{
+		"name": "arms of hadar",
+		"arms": [
+			"aims",
+			"alms",
+			"arcs",
+			"ares",
+			"arks",
+			"arts",
+			"army"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"hadar": [
+			"radar"
+		]
+	},
+	{
+		"name": "bane",
+		"bane": [
+			"cane",
+			"lane",
+			"mane",
+			"pane",
+			"sane",
+			"vane",
+			"wane",
+			"bone",
+			"babe",
+			"bade",
+			"bake",
+			"bale",
+			"bare",
+			"base",
+			"bate",
+			"band",
+			"bang",
+			"bani",
+			"bank",
+			"bans"
+		]
+	},
+	{
+		"name": "beast bond",
+		"beast": [
+			"feast",
+			"least",
+			"yeast",
+			"blast",
+			"boast",
+			"beaut"
+		],
+		"bond": [
+			"fond",
+			"pond",
+			"band",
+			"bend",
+			"bind",
+			"bold",
+			"bone",
+			"bong",
+			"bonk",
+			"bony"
+		]
+	},
+	{
+		"name": "bless",
+		"bless": [
+			"bliss"
+		]
+	},
+	{
+		"name": "burning hands",
+		"burning": [
+			"turning",
+			"burping",
+			"burring",
+			"burying"
+		],
+		"hands": [
+			"bands",
+			"lands",
+			"sands",
+			"wands",
+			"hinds",
+			"hangs",
+			"hanks",
+			"handy"
+		]
+	},
+	{
+		"name": "catapult",
+		"catapult": []
+	},
+	{
+		"name": "cause fear",
+		"cause": [
+			"pause",
+			"cruse"
+		],
+		"fear": [
+			"bear",
+			"dear",
+			"gear",
+			"hear",
+			"near",
+			"pear",
+			"rear",
+			"sear",
+			"tear",
+			"wear",
+			"year",
+			"feat"
+		]
+	},
+	{
+		"name": "ceremony",
+		"ceremony": []
+	},
+	{
+		"name": "chaos bolt",
+		"chaos": [
+			"ciaos",
+			"chads",
+			"chaps",
+			"chars",
+			"chats"
+		],
+		"bolt": [
+			"colt",
+			"dolt",
+			"jolt",
+			"molt",
+			"volt",
+			"belt",
+			"boat",
+			"boot",
+			"bout",
+			"bola",
+			"bold",
+			"bole",
+			"boll"
+		]
+	},
+	{
+		"name": "charm person",
+		"charm": [
+			"chasm",
+			"chard",
+			"chars",
+			"chart",
+			"chary"
+		],
+		"person": [
+			"parson"
+		]
+	},
+	{
+		"name": "chromatic orb",
+		"chromatic": [
+			"chromatin"
+		],
+		"orb": [
+			"orc",
+			"ore",
+			"org"
+		]
+	},
+	{
+		"name": "color spray",
+		"color": [
+			"dolor",
+			"colon"
+		],
+		"spray": [
+			"stray",
+			"splay",
+			"sprat"
+		]
+	},
+	{
+		"name": "command",
+		"command": [
+			"commend"
+		]
+	},
+	{
+		"name": "compelled duel",
+		"compelled": [],
+		"duel": [
+			"fuel",
+			"dual",
+			"dull",
+			"dues",
+			"duet"
+		]
+	},
+	{
+		"name": "comprehend languages",
+		"comprehend": [],
+		"languages": []
+	},
+	{
+		"name": "create or destroy water",
+		"create": [
+			"crease"
+		],
+		"or": [
+			"er",
+			"fr",
+			"gr",
+			"hr",
+			"jr",
+			"pr",
+			"qr",
+			"tr",
+			"yr",
+			"ob",
+			"of",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"destroy": [],
+		"water": [
+			"cater",
+			"dater",
+			"eater",
+			"hater",
+			"later",
+			"mater",
+			"rater",
+			"tater",
+			"wader",
+			"wafer",
+			"wager",
+			"waver"
+		]
+	},
+	{
+		"name": "cure wounds",
+		"cure": [
+			"lure",
+			"pure",
+			"sure",
+			"care",
+			"core",
+			"cube",
+			"cute",
+			"curb",
+			"curd",
+			"curl",
+			"curs",
+			"curt"
+		],
+		"wounds": [
+			"bounds",
+			"founds",
+			"hounds",
+			"mounds",
+			"pounds",
+			"rounds",
+			"sounds",
+			"zounds",
+			"woulds"
+		]
+	},
+	{
+		"name": "evil and good",
+		"evil": [],
+		"and": [
+			"end",
+			"ind",
+			"add",
+			"aid",
+			"ans",
+			"ant",
+			"any"
+		],
+		"good": [
+			"food",
+			"hood",
+			"mood",
+			"rood",
+			"wood",
+			"goad",
+			"gold",
+			"goof",
+			"gook",
+			"goon",
+			"goop"
+		]
+	},
+	{
+		"name": "detect magic",
+		"detect": [
+			"defect",
+			"deject",
+			"detest"
+		],
+		"magic": [
+			"manic"
+		]
+	},
+	{
+		"name": "detect poison and disease",
+		"detect": [
+			"defect",
+			"deject",
+			"detest"
+		],
+		"poison": [
+			"prison"
+		],
+		"and": [
+			"end",
+			"ind",
+			"add",
+			"aid",
+			"ans",
+			"ant",
+			"any"
+		],
+		"disease": []
+	},
+	{
+		"name": "disguise self",
+		"disguise": [],
+		"self": [
+			"pelf",
+			"serf",
+			"sell"
+		]
+	},
+	{
+		"name": "dissonant whispers",
+		"dissonant": [],
+		"whispers": [
+			"whimpers",
+			"whippers",
+			"whiskers"
+		]
+	},
+	{
+		"name": "distort value",
+		"distort": [
+			"disport"
+		],
+		"value": [
+			"vague",
+			"valve"
+		]
+	},
+	{
+		"name": "divine favor",
+		"divine": [
+			"divide",
+			"diving"
+		],
+		"favor": [
+			"savor"
+		]
+	},
+	{
+		"name": "earth tremor",
+		"earth": [],
+		"tremor": []
+	},
+	{
+		"name": "ensnaring strike",
+		"ensnaring": [],
+		"strike": [
+			"shrike",
+			"stroke",
+			"striae",
+			"stride",
+			"strife",
+			"stripe",
+			"strive"
+		]
+	},
+	{
+		"name": "entangle",
+		"entangle": [
+			"untangle"
+		]
+	},
+	{
+		"name": "expeditious retreat",
+		"expeditious": [
+			"expeditions"
+		],
+		"retreat": [
+			"retread"
+		]
+	},
+	{
+		"name": "faerie fire",
+		"faerie": [],
+		"fire": [
+			"dire",
+			"hire",
+			"lire",
+			"mire",
+			"sire",
+			"tire",
+			"wire",
+			"fare",
+			"fore",
+			"fife",
+			"file",
+			"fine",
+			"five",
+			"firm",
+			"firs"
+		]
+	},
+	{
+		"name": "false life",
+		"false": [],
+		"life": [
+			"fife",
+			"rife",
+			"wife",
+			"lice",
+			"like",
+			"lime",
+			"line",
+			"lire",
+			"lite",
+			"live",
+			"lift"
+		]
+	},
+	{
+		"name": "feather fall",
+		"feather": [
+			"heather",
+			"leather",
+			"weather"
+		],
+		"fall": [
+			"ball",
+			"call",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"wall",
+			"fell",
+			"fill",
+			"foll",
+			"full",
+			"fail"
+		]
+	},
+	{
+		"name": "find familiar",
+		"find": [
+			"bind",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wind",
+			"fend",
+			"fond",
+			"fund",
+			"fine",
+			"fink",
+			"fins"
+		],
+		"familiar": [
+			"familial"
+		]
+	},
+	{
+		"name": "floating disk",
+		"floating": [
+			"bloating",
+			"gloating",
+			"flouting"
+		],
+		"disk": [
+			"risk",
+			"desk",
+			"dusk",
+			"dick",
+			"dink",
+			"dirk",
+			"disc",
+			"dish",
+			"dist"
+		]
+	},
+	{
+		"name": "fog cloud",
+		"fog": [
+			"bog",
+			"cog",
+			"dog",
+			"hog",
+			"jog",
+			"log",
+			"tog",
+			"wog",
+			"fag",
+			"fig",
+			"fug",
+			"fob",
+			"foe",
+			"fol",
+			"foo",
+			"fop",
+			"for",
+			"fox"
+		],
+		"cloud": [
+			"aloud",
+			"clout"
+		]
+	},
+	{
+		"name": "gift of alacrity",
+		"gift": [
+			"lift",
+			"rift",
+			"sift",
+			"gilt",
+			"girt",
+			"gist"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"alacrity": []
+	},
+	{
+		"name": "goodberry",
+		"goodberry": []
+	},
+	{
+		"name": "grease",
+		"grease": [
+			"crease",
+			"greasy"
+		]
+	},
+	{
+		"name": "guiding bolt",
+		"guiding": [
+			"gliding"
+		],
+		"bolt": [
+			"colt",
+			"dolt",
+			"jolt",
+			"molt",
+			"volt",
+			"belt",
+			"boat",
+			"boot",
+			"bout",
+			"bola",
+			"bold",
+			"bole",
+			"boll"
+		]
+	},
+	{
+		"name": "hail of thorns",
+		"hail": [
+			"bail",
+			"fail",
+			"jail",
+			"mail",
+			"nail",
+			"pail",
+			"rail",
+			"sail",
+			"tail",
+			"wail",
+			"hall",
+			"haul",
+			"hair"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"thorns": [
+			"thorny"
+		]
+	},
+	{
+		"name": "healing word",
+		"healing": [
+			"dealing",
+			"pealing",
+			"sealing",
+			"heeling",
+			"heading",
+			"heaping",
+			"hearing",
+			"heating",
+			"heaving"
+		],
+		"word": [
+			"cord",
+			"ford",
+			"lord",
+			"ward",
+			"woad",
+			"wold",
+			"wood",
+			"wore",
+			"work",
+			"worm",
+			"worn",
+			"wort"
+		]
+	},
+	{
+		"name": "hellish rebuke",
+		"hellish": [],
+		"rebuke": []
+	},
+	{
+		"name": "heroism",
+		"heroism": []
+	},
+	{
+		"name": "hex",
+		"hex": [
+			"sex",
+			"vex",
+			"hem",
+			"hen",
+			"hep",
+			"her",
+			"hes",
+			"hew",
+			"hey"
+		]
+	},
+	{
+		"name": "hideous laughter",
+		"hideous": [
+			"hideout"
+		],
+		"laughter": [
+			"daughter"
+		]
+	},
+	{
+		"name": "hunter's mark",
+		"hunter's": [
+			"punter's",
+			"hinter's",
+			"hunger's"
+		],
+		"mark": [
+			"bark",
+			"dark",
+			"hark",
+			"lark",
+			"nark",
+			"park",
+			"murk",
+			"mask",
+			"mare",
+			"marl",
+			"mars",
+			"mart"
+		]
+	},
+	{
+		"name": "ice knife",
+		"ice": [
+			"ace",
+			"ire",
+			"icy"
+		],
+		"knife": []
+	},
+	{
+		"name": "identify",
+		"identify": [
+			"identity"
+		]
+	},
+	{
+		"name": "illusory script",
+		"illusory": [],
+		"script": [
+			"scrips"
+		]
+	},
+	{
+		"name": "inflict wounds",
+		"inflict": [
+			"inflect"
+		],
+		"wounds": [
+			"bounds",
+			"founds",
+			"hounds",
+			"mounds",
+			"pounds",
+			"rounds",
+			"sounds",
+			"zounds",
+			"woulds"
+		]
+	},
+	{
+		"name": "jim's magic missile",
+		"jim's": [
+			"aim's",
+			"rim's",
+			"sim's",
+			"vim's",
+			"jam's",
+			"jib's",
+			"jig's"
+		],
+		"magic": [
+			"manic"
+		],
+		"missile": [
+			"fissile",
+			"misfile",
+			"missive"
+		]
+	},
+	{
+		"name": "jump",
+		"jump": [
+			"bump",
+			"dump",
+			"hump",
+			"lump",
+			"pump",
+			"rump",
+			"sump"
+		]
+	},
+	{
+		"name": "longstrider",
+		"longstrider": []
+	},
+	{
+		"name": "mage armor",
+		"mage": [
+			"cage",
+			"page",
+			"rage",
+			"sage",
+			"wage",
+			"mtge",
+			"mace",
+			"made",
+			"make",
+			"male",
+			"mane",
+			"mare",
+			"mate",
+			"maze",
+			"magi",
+			"mags"
+		],
+		"armor": [
+			"arbor",
+			"ardor"
+		]
+	},
+	{
+		"name": "magic missile",
+		"magic": [
+			"manic"
+		],
+		"missile": [
+			"fissile",
+			"misfile",
+			"missive"
+		]
+	},
+	{
+		"name": "magnify gravity",
+		"magnify": [],
+		"gravity": []
+	},
+	{
+		"name": "protection from evil and good",
+		"protection": [
+			"projection"
+		],
+		"from": [
+			"prom",
+			"frog"
+		],
+		"evil": [],
+		"and": [
+			"end",
+			"ind",
+			"add",
+			"aid",
+			"ans",
+			"ant",
+			"any"
+		],
+		"good": [
+			"food",
+			"hood",
+			"mood",
+			"rood",
+			"wood",
+			"goad",
+			"gold",
+			"goof",
+			"gook",
+			"goon",
+			"goop"
+		]
+	},
+	{
+		"name": "purify food and drink",
+		"purify": [
+			"purity"
+		],
+		"food": [
+			"good",
+			"hood",
+			"mood",
+			"rood",
+			"wood",
+			"fold",
+			"fond",
+			"ford",
+			"fool",
+			"foot"
+		],
+		"and": [
+			"end",
+			"ind",
+			"add",
+			"aid",
+			"ans",
+			"ant",
+			"any"
+		],
+		"drink": [
+			"brink",
+			"drank",
+			"drunk"
+		]
+	},
+	{
+		"name": "ray of sickness",
+		"ray": [
+			"bay",
+			"cay",
+			"day",
+			"fay",
+			"gay",
+			"hay",
+			"jay",
+			"lay",
+			"may",
+			"nay",
+			"pay",
+			"say",
+			"way",
+			"rad",
+			"rag",
+			"rah",
+			"ram",
+			"ran",
+			"rap",
+			"rat",
+			"raw"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"sickness": []
+	},
+	{
+		"name": "sanctuary",
+		"sanctuary": []
+	},
+	{
+		"name": "searing smite",
+		"searing": [
+			"bearing",
+			"fearing",
+			"gearing",
+			"hearing",
+			"nearing",
+			"rearing",
+			"tearing",
+			"wearing",
+			"scaring",
+			"sharing",
+			"snaring",
+			"soaring",
+			"sparing",
+			"staring",
+			"sealing",
+			"seaming",
+			"seating"
+		],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
+	},
+	{
+		"name": "shield",
+		"shield": []
+	},
+	{
+		"name": "shield of faith",
+		"shield": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"faith": [
+			"saith"
+		]
+	},
+	{
+		"name": "silent image",
+		"silent": [],
+		"image": [
+			"imago"
+		]
+	},
+	{
+		"name": "sleep",
+		"sleep": [
+			"bleep",
+			"sheep",
+			"steep",
+			"sweep",
+			"sleek",
+			"sleet"
+		]
+	},
+	{
+		"name": "snare",
+		"snare": [
+			"scare",
+			"share",
+			"spare",
+			"stare",
+			"snore",
+			"snake",
+			"snarf",
+			"snark",
+			"snarl"
+		]
+	},
+	{
+		"name": "speak with animals",
+		"speak": [
+			"sneak",
+			"steak",
+			"speck",
+			"spear"
+		],
+		"with": [
+			"kith",
+			"pith",
+			"wish",
+			"wits"
+		],
+		"animals": []
+	},
+	{
+		"name": "tasha's caustic brew",
+		"tasha's": [
+			"pasha's"
+		],
+		"caustic": [],
+		"brew": [
+			"crew",
+			"drew",
+			"grew",
+			"blew",
+			"brow",
+			"bred"
+		]
+	},
+	{
+		"name": "tasha's hideous laughter",
+		"tasha's": [
+			"pasha's"
+		],
+		"hideous": [
+			"hideout"
+		],
+		"laughter": [
+			"daughter"
+		]
+	},
+	{
+		"name": "tenser's floating disk",
+		"tenser's": [
+			"censer's",
+			"teaser's",
+			"tender's"
+		],
+		"floating": [
+			"bloating",
+			"gloating",
+			"flouting"
+		],
+		"disk": [
+			"risk",
+			"desk",
+			"dusk",
+			"dick",
+			"dink",
+			"dirk",
+			"disc",
+			"dish",
+			"dist"
+		]
+	},
+	{
+		"name": "thunderous smite",
+		"thunderous": [],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
+	},
+	{
+		"name": "thunderwave",
+		"thunderwave": []
+	},
+	{
+		"name": "unseen servant",
+		"unseen": [],
+		"servant": []
+	},
+	{
+		"name": "witch bolt",
+		"witch": [
+			"aitch",
+			"bitch",
+			"ditch",
+			"hitch",
+			"pitch",
+			"titch",
+			"watch",
+			"winch"
+		],
+		"bolt": [
+			"colt",
+			"dolt",
+			"jolt",
+			"molt",
+			"volt",
+			"belt",
+			"boat",
+			"boot",
+			"bout",
+			"bola",
+			"bold",
+			"bole",
+			"boll"
+		]
+	},
+	{
+		"name": "wrathful smite",
+		"wrathful": [],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
+	},
+	{
+		"name": "zephyr strike",
+		"zephyr": [],
+		"strike": [
+			"shrike",
+			"stroke",
+			"striae",
+			"stride",
+			"strife",
+			"stripe",
+			"strive"
+		]
+	},
+	{
+		"name": "acid arrow",
+		"acid": [
+			"amid",
+			"arid",
+			"avid",
+			"aced"
+		],
+		"arrow": []
+	},
+	{
+		"name": "aganazzar's scorcher",
+		"aganazzar's": [],
+		"scorcher": [
+			"scorched",
+			"scorches"
+		]
+	},
+	{
+		"name": "aid",
+		"aid": [
+			"bid",
+			"did",
+			"hid",
+			"kid",
+			"lid",
+			"mid",
+			"rid",
+			"yid",
+			"add",
+			"and",
+			"ail",
+			"aim",
+			"air"
+		]
+	},
+	{
+		"name": "alter self",
+		"alter": [
+			"after",
+			"apter",
+			"aster",
+			"alder",
+			"altar"
+		],
+		"self": [
+			"pelf",
+			"serf",
+			"sell"
+		]
+	},
+	{
+		"name": "animal messenger",
+		"animal": [],
+		"messenger": []
+	},
+	{
+		"name": "arcane lock",
+		"arcane": [
+			"arcade"
+		],
+		"lock": [
+			"bock",
+			"cock",
+			"dock",
+			"hock",
+			"jock",
+			"mock",
+			"pock",
+			"rock",
+			"sock",
+			"lack",
+			"lick",
+			"luck",
+			"look",
+			"loci",
+			"loco"
+		]
+	},
+	{
+		"name": "arcanist's magic aura",
+		"arcanist's": [],
+		"magic": [
+			"manic"
+		],
+		"aura": []
+	},
+	{
+		"name": "augury",
+		"augury": [
+			"augurs"
+		]
+	},
+	{
+		"name": "barkskin",
+		"barkskin": []
+	},
+	{
+		"name": "beast sense",
+		"beast": [
+			"feast",
+			"least",
+			"yeast",
+			"blast",
+			"boast",
+			"beaut"
+		],
+		"sense": [
+			"dense",
+			"tense"
+		]
+	},
+	{
+		"name": "blindness/deafness",
+		"blindness": [
+			"blandness",
+			"blondness"
+		],
+		"deafness": [
+			"dearness"
+		]
+	},
+	{
+		"name": "blur",
+		"blur": [
+			"slur",
+			"blue"
+		]
+	},
+	{
+		"name": "branding smite",
+		"branding": [
+			"braiding"
+		],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
+	},
+	{
+		"name": "calm emotions",
+		"calm": [
+			"balm",
+			"palm",
+			"calf",
+			"calk",
+			"call"
+		],
+		"emotions": []
+	},
+	{
+		"name": "cloud of daggers",
+		"cloud": [
+			"aloud",
+			"clout"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"daggers": [
+			"naggers",
+			"taggers",
+			"diggers",
+			"dangers"
+		]
+	},
+	{
+		"name": "continual flame",
+		"continual": [],
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		]
+	},
+	{
+		"name": "cordon of arrows",
+		"cordon": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"arrows": []
+	},
+	{
+		"name": "crown of madness",
+		"crown": [
+			"brown",
+			"drown",
+			"frown",
+			"grown",
+			"clown",
+			"croon",
+			"crowd",
+			"crows"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"madness": [
+			"badness",
+			"sadness"
+		]
+	},
+	{
+		"name": "darkness",
+		"darkness": [
+			"dankness"
+		]
+	},
+	{
+		"name": "dark vision",
+		"dark": [
+			"bark",
+			"hark",
+			"lark",
+			"mark",
+			"nark",
+			"park",
+			"dirk",
+			"dork",
+			"dank",
+			"dare",
+			"darn",
+			"dart"
+		],
+		"vision": []
+	},
+	{
+		"name": "detect thoughts",
+		"detect": [
+			"defect",
+			"deject",
+			"detest"
+		],
+		"thoughts": []
+	},
+	{
+		"name": "dragon's breath",
+		"dragon's": [],
+		"breath": [
+			"wreath",
+			"breach"
+		]
+	},
+	{
+		"name": "dust devil",
+		"dust": [
+			"bust",
+			"gust",
+			"just",
+			"lust",
+			"must",
+			"oust",
+			"rust",
+			"dist",
+			"dost",
+			"duct",
+			"duet",
+			"dusk"
+		],
+		"devil": []
+	},
+	{
+		"name": "earthbind",
+		"earthbind": []
+	},
+	{
+		"name": "enhance ability",
+		"enhance": [],
+		"ability": [
+			"agility"
+		]
+	},
+	{
+		"name": "enlarge/reduce",
+		"enlarge": [],
+		"reduce": [
+			"deduce",
+			"seduce"
+		]
+	},
+	{
+		"name": "enthrall",
+		"enthrall": []
+	},
+	{
+		"name": "find steed",
+		"find": [
+			"bind",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wind",
+			"fend",
+			"fond",
+			"fund",
+			"fine",
+			"fink",
+			"fins"
+		],
+		"steed": [
+			"speed",
+			"stead",
+			"steel",
+			"steep",
+			"steer"
+		]
+	},
+	{
+		"name": "find traps",
+		"find": [
+			"bind",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wind",
+			"fend",
+			"fond",
+			"fund",
+			"fine",
+			"fink",
+			"fins"
+		],
+		"traps": [
+			"craps",
+			"wraps",
+			"trips",
+			"trams",
+			"trans",
+			"trays"
+		]
+	},
+	{
+		"name": "flame blade",
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		],
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		]
+	},
+	{
+		"name": "flaming sphere",
+		"flaming": [
+			"blaming",
+			"foaming",
+			"framing",
+			"flaking",
+			"flaring",
+			"flawing",
+			"flaying"
+		],
+		"sphere": []
+	},
+	{
+		"name": "flock of familiars",
+		"flock": [
+			"block",
+			"clock",
+			"frock",
+			"flack",
+			"fleck",
+			"flick"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"familiars": []
+	},
+	{
+		"name": "fortune's favor",
+		"fortune's": [],
+		"favor": [
+			"savor"
+		]
+	},
+	{
+		"name": "gentle repose",
+		"gentle": [
+			"gently"
+		],
+		"repose": [
+			"depose"
+		]
+	},
+	{
+		"name": "gift of gab",
+		"gift": [
+			"lift",
+			"rift",
+			"sift",
+			"gilt",
+			"girt",
+			"gist"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"gab": [
+			"cab",
+			"dab",
+			"fab",
+			"jab",
+			"lab",
+			"nab",
+			"tab",
+			"gob",
+			"gad",
+			"gag",
+			"gal",
+			"gap",
+			"gar",
+			"gas",
+			"gay"
+		]
+	},
+	{
+		"name": "gust of wind",
+		"gust": [
+			"bust",
+			"dust",
+			"just",
+			"lust",
+			"must",
+			"oust",
+			"rust",
+			"gist",
+			"gush"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"wind": [
+			"bind",
+			"find",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wand",
+			"wend",
+			"wild",
+			"wine",
+			"wing",
+			"wink",
+			"wino",
+			"wins",
+			"winy"
+		]
+	},
+	{
+		"name": "healing spirit",
+		"healing": [
+			"dealing",
+			"pealing",
+			"sealing",
+			"heeling",
+			"heading",
+			"heaping",
+			"hearing",
+			"heating",
+			"heaving"
+		],
+		"spirit": []
+	},
+	{
+		"name": "heat metal",
+		"heat": [
+			"beat",
+			"feat",
+			"meat",
+			"neat",
+			"peat",
+			"seat",
+			"teat",
+			"heft",
+			"head",
+			"heal",
+			"heap",
+			"hear"
+		],
+		"metal": [
+			"fetal",
+			"petal",
+			"medal"
+		]
+	},
+	{
+		"name": "hold person",
+		"hold": [
+			"bold",
+			"cold",
+			"fold",
+			"gold",
+			"mold",
+			"sold",
+			"told",
+			"wold",
+			"held",
+			"hoed",
+			"hood",
+			"hole",
+			"hols",
+			"holy"
+		],
+		"person": [
+			"parson"
+		]
+	},
+	{
+		"name": "immovable object",
+		"immovable": [
+			"immovably"
+		],
+		"object": [
+			"abject"
+		]
+	},
+	{
+		"name": "invisibility",
+		"invisibility": []
+	},
+	{
+		"name": "jim's glowing coin",
+		"jim's": [
+			"aim's",
+			"rim's",
+			"sim's",
+			"vim's",
+			"jam's",
+			"jib's",
+			"jig's"
+		],
+		"glowing": [
+			"blowing",
+			"flowing",
+			"plowing",
+			"slowing",
+			"growing",
+			"globing",
+			"gloving"
+		],
+		"coin": [
+			"join",
+			"loin",
+			"chin",
+			"coon",
+			"corn",
+			"coif",
+			"coil",
+			"coir"
+		]
+	},
+	{
+		"name": "knock",
+		"knock": [
+			"knack"
+		]
+	},
+	{
+		"name": "lesser restoration",
+		"lesser": [
+			"leaser",
+			"lessor",
+			"lessee",
+			"lessen"
+		],
+		"restoration": []
+	},
+	{
+		"name": "levitate",
+		"levitate": []
+	},
+	{
+		"name": "locate animals or plants",
+		"locate": [
+			"locale"
+		],
+		"animals": [],
+		"or": [
+			"er",
+			"fr",
+			"gr",
+			"hr",
+			"jr",
+			"pr",
+			"qr",
+			"tr",
+			"yr",
+			"ob",
+			"of",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"plants": [
+			"slants",
+			"plaits",
+			"planes",
+			"planks"
+		]
+	},
+	{
+		"name": "locate object",
+		"locate": [
+			"locale"
+		],
+		"object": [
+			"abject"
+		]
+	},
+	{
+		"name": "magic mouth",
+		"magic": [
+			"manic"
+		],
+		"mouth": [
+			"south",
+			"youth",
+			"month"
+		]
+	},
+	{
+		"name": "magic weapon",
+		"magic": [
+			"manic"
+		],
+		"weapon": []
+	},
+	{
+		"name": "maximilian's earthen grasp",
+		"maximilian's": [],
+		"earthen": [
+			"earthed"
+		],
+		"grasp": [
+			"grass"
+		]
+	},
+	{
+		"name": "melf's acid arrow",
+		"melf's": [
+			"pelf's",
+			"self's",
+			"milf's",
+			"meld's",
+			"melt's"
+		],
+		"acid": [
+			"amid",
+			"arid",
+			"avid",
+			"aced"
+		],
+		"arrow": []
+	},
+	{
+		"name": "mind spike",
+		"mind": [
+			"bind",
+			"find",
+			"hind",
+			"kind",
+			"rind",
+			"wind",
+			"mend",
+			"mild",
+			"mine",
+			"mini",
+			"mink",
+			"mint",
+			"minx"
+		],
+		"spike": [
+			"spake",
+			"spoke",
+			"spice",
+			"spine",
+			"spire",
+			"spite",
+			"spiky"
+		]
+	},
+	{
+		"name": "mirror image",
+		"mirror": [],
+		"image": [
+			"imago"
+		]
+	},
+	{
+		"name": "misty step",
+		"misty": [
+			"musty",
+			"minty",
+			"mists"
+		],
+		"step": [
+			"seep",
+			"stop",
+			"stem",
+			"stet",
+			"stew"
+		]
+	},
+	{
+		"name": "moonbeam",
+		"moonbeam": []
+	},
+	{
+		"name": "nystul's magic aura",
+		"nystul's": [],
+		"magic": [
+			"manic"
+		],
+		"aura": []
+	},
+	{
+		"name": "pass without trace",
+		"pass": [
+			"bass",
+			"lass",
+			"mass",
+			"sass",
+			"piss",
+			"poss",
+			"puss",
+			"pads",
+			"pals",
+			"pans",
+			"paps",
+			"pars",
+			"pats",
+			"paws",
+			"pays",
+			"past"
+		],
+		"without": [],
+		"trace": [
+			"brace",
+			"grace",
+			"trice",
+			"truce",
+			"trade",
+			"track",
+			"tract"
+		]
+	},
+	{
+		"name": "phantasmal force",
+		"phantasmal": [],
+		"force": [
+			"farce",
+			"forge",
+			"forte"
+		]
+	},
+	{
+		"name": "prayer of healing",
+		"prayer": [
+			"grayer",
+			"player",
+			"prater",
+			"prayed"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"healing": [
+			"dealing",
+			"pealing",
+			"sealing",
+			"heeling",
+			"heading",
+			"heaping",
+			"hearing",
+			"heating",
+			"heaving"
+		]
+	},
+	{
+		"name": "protection from poison",
+		"protection": [
+			"projection"
+		],
+		"from": [
+			"prom",
+			"frog"
+		],
+		"poison": [
+			"prison"
+		]
+	},
+	{
+		"name": "pyrotechnics",
+		"pyrotechnics": []
+	},
+	{
+		"name": "ray of enfeeblement",
+		"ray": [
+			"bay",
+			"cay",
+			"day",
+			"fay",
+			"gay",
+			"hay",
+			"jay",
+			"lay",
+			"may",
+			"nay",
+			"pay",
+			"say",
+			"way",
+			"rad",
+			"rag",
+			"rah",
+			"ram",
+			"ran",
+			"rap",
+			"rat",
+			"raw"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"enfeeblement": []
+	},
+	{
+		"name": "rope trick",
+		"rope": [
+			"cope",
+			"dope",
+			"hope",
+			"lope",
+			"mope",
+			"nope",
+			"pope",
+			"rape",
+			"ripe",
+			"robe",
+			"rode",
+			"role",
+			"rose",
+			"rote",
+			"roue",
+			"rove",
+			"ropy"
+		],
+		"trick": [
+			"brick",
+			"crick",
+			"prick",
+			"thick",
+			"track",
+			"truck",
+			"trice"
+		]
+	},
+	{
+		"name": "scorching ray",
+		"scorching": [
+			"scotching"
+		],
+		"ray": [
+			"bay",
+			"cay",
+			"day",
+			"fay",
+			"gay",
+			"hay",
+			"jay",
+			"lay",
+			"may",
+			"nay",
+			"pay",
+			"say",
+			"way",
+			"rad",
+			"rag",
+			"rah",
+			"ram",
+			"ran",
+			"rap",
+			"rat",
+			"raw"
+		]
+	},
+	{
+		"name": "see invisibility",
+		"see": [
+			"bee",
+			"fee",
+			"gee",
+			"lee",
+			"nee",
+			"pee",
+			"tee",
+			"wee",
+			"she",
+			"sue",
+			"sea",
+			"sec",
+			"sen",
+			"seq",
+			"set",
+			"sew",
+			"sex"
+		],
+		"invisibility": []
+	},
+	{
+		"name": "shadow blade",
+		"shadow": [],
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		]
+	},
+	{
+		"name": "shatter",
+		"shatter": [
+			"chatter",
+			"scatter",
+			"spatter",
+			"swatter",
+			"shutter"
+		]
+	},
+	{
+		"name": "silence",
+		"silence": []
+	},
+	{
+		"name": "skywrite",
+		"skywrite": []
+	},
+	{
+		"name": "snilloc's snowball swarm",
+		"snilloc's": [],
+		"snowball": [
+			"snowfall"
+		],
+		"swarm": [
+			"sward"
+		]
+	},
+	{
+		"name": "spider climb",
+		"spider": [
+			"slider",
+			"snider"
+		],
+		"climb": [
+			"clime"
+		]
+	},
+	{
+		"name": "spike growth",
+		"spike": [
+			"spake",
+			"spoke",
+			"spice",
+			"spine",
+			"spire",
+			"spite",
+			"spiky"
+		],
+		"growth": []
+	},
+	{
+		"name": "spiritual weapon",
+		"spiritual": [],
+		"weapon": []
+	},
+	{
+		"name": "suggestion",
+		"suggestion": []
+	},
+	{
+		"name": "summon beast",
+		"summon": [],
+		"beast": [
+			"feast",
+			"least",
+			"yeast",
+			"blast",
+			"boast",
+			"beaut"
+		]
+	},
+	{
+		"name": "tasha's mind whip",
+		"tasha's": [
+			"pasha's"
+		],
+		"mind": [
+			"bind",
+			"find",
+			"hind",
+			"kind",
+			"rind",
+			"wind",
+			"mend",
+			"mild",
+			"mine",
+			"mini",
+			"mink",
+			"mint",
+			"minx"
+		],
+		"whip": [
+			"chip",
+			"ship",
+			"whop",
+			"whup",
+			"whim",
+			"whir",
+			"whit",
+			"whiz"
+		]
+	},
+	{
+		"name": "warding bond",
+		"warding": [
+			"carding",
+			"larding",
+			"wording",
+			"wadding",
+			"warming",
+			"warning",
+			"warping",
+			"warring"
+		],
+		"bond": [
+			"fond",
+			"pond",
+			"band",
+			"bend",
+			"bind",
+			"bold",
+			"bone",
+			"bong",
+			"bonk",
+			"bony"
+		]
+	},
+	{
+		"name": "warding wind",
+		"warding": [
+			"carding",
+			"larding",
+			"wording",
+			"wadding",
+			"warming",
+			"warning",
+			"warping",
+			"warring"
+		],
+		"wind": [
+			"bind",
+			"find",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wand",
+			"wend",
+			"wild",
+			"wine",
+			"wing",
+			"wink",
+			"wino",
+			"wins",
+			"winy"
+		]
+	},
+	{
+		"name": "web",
+		"web": [
+			"deb",
+			"wed",
+			"wee",
+			"wen",
+			"wet"
+		]
+	},
+	{
+		"name": "wristpocket",
+		"wristpocket": []
+	},
+	{
+		"name": "zone of truth",
+		"zone": [
+			"bone",
+			"cone",
+			"done",
+			"gone",
+			"hone",
+			"lone",
+			"none",
+			"pone",
+			"tone",
+			"zine"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"truth": [
+			"troth"
+		]
+	},
+	{
+		"name": "animate dead",
+		"animate": [],
+		"dead": [
+			"bead",
+			"head",
+			"lead",
+			"mead",
+			"read",
+			"deed",
+			"deaf",
+			"deal",
+			"dean",
+			"dear"
+		]
+	},
+	{
+		"name": "aura of vitality",
+		"aura": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"vitality": []
+	},
+	{
+		"name": "beacon of hope",
+		"beacon": [
+			"deacon"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"hope": [
+			"cope",
+			"dope",
+			"lope",
+			"mope",
+			"nope",
+			"pope",
+			"rope",
+			"hype",
+			"hoke",
+			"hole",
+			"home",
+			"hone",
+			"hose",
+			"hove",
+			"hops"
+		]
+	},
+	{
+		"name": "bestow curse",
+		"bestow": [],
+		"curse": [
+			"nurse",
+			"purse",
+			"curie",
+			"curve"
+		]
+	},
+	{
+		"name": "blinding smite",
+		"blinding": [
+			"blending",
+			"blinking"
+		],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
+	},
+	{
+		"name": "blink",
+		"blink": [
+			"clink",
+			"slink",
+			"boink",
+			"brink",
+			"blank",
+			"blind",
+			"bling",
+			"blini"
+		]
+	},
+	{
+		"name": "call lightning",
+		"call": [
+			"ball",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"wall",
+			"cell",
+			"coll",
+			"cull",
+			"calf",
+			"calk",
+			"calm"
+		],
+		"lightning": []
+	},
+	{
+		"name": "catnap",
+		"catnap": [
+			"catnip"
+		]
+	},
+	{
+		"name": "clairvoyance",
+		"clairvoyance": []
+	},
+	{
+		"name": "conjure animals",
+		"conjure": [],
+		"animals": []
+	},
+	{
+		"name": "conjure barrage",
+		"conjure": [],
+		"barrage": []
+	},
+	{
+		"name": "counterspell",
+		"counterspell": []
+	},
+	{
+		"name": "create food and water",
+		"create": [
+			"crease"
+		],
+		"food": [
+			"good",
+			"hood",
+			"mood",
+			"rood",
+			"wood",
+			"fold",
+			"fond",
+			"ford",
+			"fool",
+			"foot"
+		],
+		"and": [
+			"end",
+			"ind",
+			"add",
+			"aid",
+			"ans",
+			"ant",
+			"any"
+		],
+		"water": [
+			"cater",
+			"dater",
+			"eater",
+			"hater",
+			"later",
+			"mater",
+			"rater",
+			"tater",
+			"wader",
+			"wafer",
+			"wager",
+			"waver"
+		]
+	},
+	{
+		"name": "crusader's mantle",
+		"crusader's": [],
+		"mantle": [
+			"mangle"
+		]
+	},
+	{
+		"name": "daylight",
+		"daylight": []
+	},
+	{
+		"name": "dispel magic",
+		"dispel": [],
+		"magic": [
+			"manic"
+		]
+	},
+	{
+		"name": "elemental weapon",
+		"elemental": [],
+		"weapon": []
+	},
+	{
+		"name": "enemies abound",
+		"enemies": [],
+		"abound": [
+			"around"
+		]
+	},
+	{
+		"name": "erupting earth",
+		"erupting": [
+			"eructing"
+		],
+		"earth": []
+	},
+	{
+		"name": "fast friends",
+		"fast": [
+			"bast",
+			"cast",
+			"east",
+			"hast",
+			"last",
+			"mast",
+			"past",
+			"vast",
+			"wast",
+			"fest",
+			"fist",
+			"fact",
+			"fart"
+		],
+		"friends": []
+	},
+	{
+		"name": "fear",
+		"fear": [
+			"bear",
+			"dear",
+			"gear",
+			"hear",
+			"near",
+			"pear",
+			"rear",
+			"sear",
+			"tear",
+			"wear",
+			"year",
+			"feat"
+		]
+	},
+	{
+		"name": "feign death",
+		"feign": [
+			"deign",
+			"reign"
+		],
+		"death": [
+			"heath",
+			"neath",
+			"depth"
+		]
+	},
+	{
+		"name": "fireball",
+		"fireball": [
+			"firewall"
+		]
+	},
+	{
+		"name": "flame arrows",
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		],
+		"arrows": []
+	},
+	{
+		"name": "fly",
+		"fly": [
+			"ply",
+			"sly",
+			"fay",
+			"fey",
+			"fry",
+			"fwy",
+			"flt",
+			"flu"
+		]
+	},
+	{
+		"name": "galder's tower",
+		"galder's": [
+			"gilder's",
+			"gadder's",
+			"gander's"
+		],
+		"tower": [
+			"bower",
+			"cower",
+			"dower",
+			"lower",
+			"mower",
+			"power",
+			"rower",
+			"sower",
+			"toner",
+			"towed",
+			"towel"
+		]
+	},
+	{
+		"name": "gaseous form",
+		"gaseous": [],
+		"form": [
+			"corm",
+			"dorm",
+			"norm",
+			"worm",
+			"farm",
+			"firm",
+			"foam",
+			"fora",
+			"ford",
+			"fore",
+			"fork",
+			"fort"
+		]
+	},
+	{
+		"name": "glyph of warding",
+		"glyph": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"warding": [
+			"carding",
+			"larding",
+			"wording",
+			"wadding",
+			"warming",
+			"warning",
+			"warping",
+			"warring"
+		]
+	},
+	{
+		"name": "haste",
+		"haste": [
+			"baste",
+			"caste",
+			"paste",
+			"taste",
+			"waste",
+			"hasty"
+		]
+	},
+	{
+		"name": "hunger of hadar",
+		"hunger": [
+			"hanger",
+			"hunker",
+			"hunter"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"hadar": [
+			"radar"
+		]
+	},
+	{
+		"name": "hypnotic pattern",
+		"hypnotic": [],
+		"pattern": [
+			"pastern",
+			"patters"
+		]
+	},
+	{
+		"name": "incite greed",
+		"incite": [
+			"indite",
+			"invite",
+			"incise"
+		],
+		"greed": [
+			"breed",
+			"creed",
+			"freed",
+			"treed",
+			"green",
+			"greet"
+		]
+	},
+	{
+		"name": "intellect fortress",
+		"intellect": [],
+		"fortress": []
+	},
+	{
+		"name": "leomund's tiny hut",
+		"leomund's": [],
+		"tiny": [
+			"winy",
+			"tony",
+			"tidy",
+			"tine",
+			"ting",
+			"tins",
+			"tint"
+		],
+		"hut": [
+			"but",
+			"cut",
+			"fut",
+			"gut",
+			"jut",
+			"nut",
+			"out",
+			"put",
+			"rut",
+			"tut",
+			"hat",
+			"hgt",
+			"hit",
+			"hot",
+			"hub",
+			"hue",
+			"hug",
+			"huh",
+			"hum"
+		]
+	},
+	{
+		"name": "life transference",
+		"life": [
+			"fife",
+			"rife",
+			"wife",
+			"lice",
+			"like",
+			"lime",
+			"line",
+			"lire",
+			"lite",
+			"live",
+			"lift"
+		],
+		"transference": []
+	},
+	{
+		"name": "lightning arrow",
+		"lightning": [],
+		"arrow": []
+	},
+	{
+		"name": "lightning bolt",
+		"lightning": [],
+		"bolt": [
+			"colt",
+			"dolt",
+			"jolt",
+			"molt",
+			"volt",
+			"belt",
+			"boat",
+			"boot",
+			"bout",
+			"bola",
+			"bold",
+			"bole",
+			"boll"
+		]
+	},
+	{
+		"name": "magic circle",
+		"magic": [
+			"manic"
+		],
+		"circle": []
+	},
+	{
+		"name": "major image",
+		"major": [
+			"manor",
+			"mayor"
+		],
+		"image": [
+			"imago"
+		]
+	},
+	{
+		"name": "mass healing word",
+		"mass": [
+			"bass",
+			"lass",
+			"pass",
+			"sass",
+			"mess",
+			"miss",
+			"moss",
+			"muss",
+			"macs",
+			"mads",
+			"mags",
+			"mams",
+			"mans",
+			"maps",
+			"mars",
+			"mats",
+			"maws",
+			"masc",
+			"mash",
+			"mask",
+			"mast"
+		],
+		"healing": [
+			"dealing",
+			"pealing",
+			"sealing",
+			"heeling",
+			"heading",
+			"heaping",
+			"hearing",
+			"heating",
+			"heaving"
+		],
+		"word": [
+			"cord",
+			"ford",
+			"lord",
+			"ward",
+			"woad",
+			"wold",
+			"wood",
+			"wore",
+			"work",
+			"worm",
+			"worn",
+			"wort"
+		]
+	},
+	{
+		"name": "meld into stone",
+		"meld": [
+			"geld",
+			"held",
+			"veld",
+			"weld",
+			"mild",
+			"mold",
+			"mead",
+			"meed",
+			"mend",
+			"melt"
+		],
+		"into": [
+			"onto",
+			"unto",
+			"info"
+		],
+		"stone": [
+			"atone",
+			"scone",
+			"shone",
+			"stoke",
+			"stole",
+			"store",
+			"stove",
+			"stony"
+		]
+	},
+	{
+		"name": "melf's minute meteors",
+		"melf's": [
+			"pelf's",
+			"self's",
+			"milf's",
+			"meld's",
+			"melt's"
+		],
+		"minute": [],
+		"meteors": []
+	},
+	{
+		"name": "motivational speech",
+		"motivational": [],
+		"speech": []
+	},
+	{
+		"name": "non-detection",
+		"non": [
+			"con",
+			"don",
+			"eon",
+			"hon",
+			"ion",
+			"son",
+			"ton",
+			"won",
+			"yon",
+			"nun",
+			"nob",
+			"nod",
+			"nor",
+			"nos",
+			"not",
+			"now"
+		],
+		"detection": [
+			"defection",
+			"dejection",
+			"detention"
+		]
+	},
+	{
+		"name": "phantom steed",
+		"phantom": [],
+		"steed": [
+			"speed",
+			"stead",
+			"steel",
+			"steep",
+			"steer"
+		]
+	},
+	{
+		"name": "plant growth",
+		"plant": [
+			"slant",
+			"plait",
+			"plane",
+			"plank",
+			"plans"
+		],
+		"growth": []
+	},
+	{
+		"name": "protection from energy",
+		"protection": [
+			"projection"
+		],
+		"from": [
+			"prom",
+			"frog"
+		],
+		"energy": []
+	},
+	{
+		"name": "pulse wave",
+		"pulse": [
+			"purse"
+		],
+		"wave": [
+			"cave",
+			"eave",
+			"fave",
+			"gave",
+			"have",
+			"lave",
+			"nave",
+			"pave",
+			"rave",
+			"save",
+			"wive",
+			"wove",
+			"wade",
+			"wage",
+			"wake",
+			"wale",
+			"wane",
+			"ware",
+			"wavy"
+		]
+	},
+	{
+		"name": "remove curse",
+		"remove": [
+			"rewove",
+			"remote"
+		],
+		"curse": [
+			"nurse",
+			"purse",
+			"curie",
+			"curve"
+		]
+	},
+	{
+		"name": "revivify",
+		"revivify": []
+	},
+	{
+		"name": "sending",
+		"sending": [
+			"bending",
+			"fending",
+			"lending",
+			"mending",
+			"pending",
+			"rending",
+			"tending",
+			"vending",
+			"wending",
+			"sanding",
+			"seeding",
+			"sensing"
+		]
+	},
+	{
+		"name": "sleet storm",
+		"sleet": [
+			"fleet",
+			"sheet",
+			"skeet",
+			"sweet",
+			"slept",
+			"sleek",
+			"sleep"
+		],
+		"storm": [
+			"store",
+			"stork",
+			"story"
+		]
+	},
+	{
+		"name": "slow",
+		"slow": [
+			"blow",
+			"flow",
+			"glow",
+			"plow",
+			"scow",
+			"show",
+			"snow",
+			"stow",
+			"slaw",
+			"slew",
+			"slob",
+			"sloe",
+			"slog",
+			"slop",
+			"slot"
+		]
+	},
+	{
+		"name": "speak with dead",
+		"speak": [
+			"sneak",
+			"steak",
+			"speck",
+			"spear"
+		],
+		"with": [
+			"kith",
+			"pith",
+			"wish",
+			"wits"
+		],
+		"dead": [
+			"bead",
+			"head",
+			"lead",
+			"mead",
+			"read",
+			"deed",
+			"deaf",
+			"deal",
+			"dean",
+			"dear"
+		]
+	},
+	{
+		"name": "speak with plants",
+		"speak": [
+			"sneak",
+			"steak",
+			"speck",
+			"spear"
+		],
+		"with": [
+			"kith",
+			"pith",
+			"wish",
+			"wits"
+		],
+		"plants": [
+			"slants",
+			"plaits",
+			"planes",
+			"planks"
+		]
+	},
+	{
+		"name": "spirit guardians",
+		"spirit": [],
+		"guardians": []
+	},
+	{
+		"name": "sprit shroud",
+		"sprit": [
+			"split",
+			"sprat",
+			"sprig"
+		],
+		"shroud": []
+	},
+	{
+		"name": "stinking cloud",
+		"stinking": [
+			"slinking",
+			"stonking",
+			"sticking",
+			"stinging",
+			"stinting"
+		],
+		"cloud": [
+			"aloud",
+			"clout"
+		]
+	},
+	{
+		"name": "summon fey",
+		"summon": [],
+		"fey": [
+			"bey",
+			"hey",
+			"key",
+			"fay",
+			"fly",
+			"fry",
+			"fwy",
+			"fed",
+			"fee",
+			"fem",
+			"fen",
+			"fer",
+			"few",
+			"fez"
+		]
+	},
+	{
+		"name": "summon lesser demons",
+		"summon": [],
+		"lesser": [
+			"leaser",
+			"lessor",
+			"lessee",
+			"lessen"
+		],
+		"demons": [
+			"lemons",
+			"demobs"
+		]
+	},
+	{
+		"name": "summon shadowspawn",
+		"summon": [],
+		"shadowspawn": []
+	},
+	{
+		"name": "summon undead",
+		"summon": [],
+		"undead": [
+			"unread"
+		]
+	},
+	{
+		"name": "thunder step",
+		"thunder": [
+			"chunder"
+		],
+		"step": [
+			"seep",
+			"stop",
+			"stem",
+			"stet",
+			"stew"
+		]
+	},
+	{
+		"name": "tidal wave",
+		"tidal": [],
+		"wave": [
+			"cave",
+			"eave",
+			"fave",
+			"gave",
+			"have",
+			"lave",
+			"nave",
+			"pave",
+			"rave",
+			"save",
+			"wive",
+			"wove",
+			"wade",
+			"wage",
+			"wake",
+			"wale",
+			"wane",
+			"ware",
+			"wavy"
+		]
+	},
+	{
+		"name": "tiny hut",
+		"tiny": [
+			"winy",
+			"tony",
+			"tidy",
+			"tine",
+			"ting",
+			"tins",
+			"tint"
+		],
+		"hut": [
+			"but",
+			"cut",
+			"fut",
+			"gut",
+			"jut",
+			"nut",
+			"out",
+			"put",
+			"rut",
+			"tut",
+			"hat",
+			"hgt",
+			"hit",
+			"hot",
+			"hub",
+			"hue",
+			"hug",
+			"huh",
+			"hum"
+		]
+	},
+	{
+		"name": "tiny servant",
+		"tiny": [
+			"winy",
+			"tony",
+			"tidy",
+			"tine",
+			"ting",
+			"tins",
+			"tint"
+		],
+		"servant": []
+	},
+	{
+		"name": "tongues",
+		"tongues": [
+			"tongued"
+		]
+	},
+	{
+		"name": "vampiric touch",
+		"vampiric": [],
+		"touch": [
+			"couch",
+			"pouch",
+			"vouch",
+			"torch",
+			"tough"
+		]
+	},
+	{
+		"name": "wall of sand",
+		"wall": [
+			"ball",
+			"call",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"well",
+			"will",
+			"wail",
+			"wale",
+			"walk"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"sand": [
+			"band",
+			"hand",
+			"land",
+			"rand",
+			"wand",
+			"send",
+			"said",
+			"sane",
+			"sang",
+			"sank",
+			"sans"
+		]
+	},
+	{
+		"name": "wall of water",
+		"wall": [
+			"ball",
+			"call",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"well",
+			"will",
+			"wail",
+			"wale",
+			"walk"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"water": [
+			"cater",
+			"dater",
+			"eater",
+			"hater",
+			"later",
+			"mater",
+			"rater",
+			"tater",
+			"wader",
+			"wafer",
+			"wager",
+			"waver"
+		]
+	},
+	{
+		"name": "water breathing",
+		"water": [
+			"cater",
+			"dater",
+			"eater",
+			"hater",
+			"later",
+			"mater",
+			"rater",
+			"tater",
+			"wader",
+			"wafer",
+			"wager",
+			"waver"
+		],
+		"breathing": [
+			"wreathing",
+			"breaching"
+		]
+	},
+	{
+		"name": "water walk",
+		"water": [
+			"cater",
+			"dater",
+			"eater",
+			"hater",
+			"later",
+			"mater",
+			"rater",
+			"tater",
+			"wader",
+			"wafer",
+			"wager",
+			"waver"
+		],
+		"walk": [
+			"balk",
+			"calk",
+			"talk",
+			"wack",
+			"wank",
+			"wale",
+			"wall"
+		]
+	},
+	{
+		"name": "wind wall",
+		"wind": [
+			"bind",
+			"find",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wand",
+			"wend",
+			"wild",
+			"wine",
+			"wing",
+			"wink",
+			"wino",
+			"wins",
+			"winy"
+		],
+		"wall": [
+			"ball",
+			"call",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"well",
+			"will",
+			"wail",
+			"wale",
+			"walk"
+		]
+	},
+	{
+		"name": "arcane eye",
+		"arcane": [
+			"arcade"
+		],
+		"eye": [
+			"aye",
+			"bye",
+			"dye",
+			"lye",
+			"rye",
+			"eke",
+			"ere",
+			"eve",
+			"ewe"
+		]
+	},
+	{
+		"name": "aura of life",
+		"aura": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"life": [
+			"fife",
+			"rife",
+			"wife",
+			"lice",
+			"like",
+			"lime",
+			"line",
+			"lire",
+			"lite",
+			"live",
+			"lift"
+		]
+	},
+	{
+		"name": "aura of purity",
+		"aura": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"purity": [
+			"parity",
+			"purify"
+		]
+	},
+	{
+		"name": "banishment",
+		"banishment": []
+	},
+	{
+		"name": "black tentacles",
+		"black": [
+			"alack",
+			"clack",
+			"flack",
+			"slack",
+			"block",
+			"blank"
+		],
+		"tentacles": [
+			"pentacles",
+			"tentacled"
+		]
+	},
+	{
+		"name": "blight",
+		"blight": [
+			"alight",
+			"flight",
+			"plight",
+			"slight",
+			"bright"
+		]
+	},
+	{
+		"name": "charm monster",
+		"charm": [
+			"chasm",
+			"chard",
+			"chars",
+			"chart",
+			"chary"
+		],
+		"monster": [
+			"minster",
+			"mobster",
+			"moister"
+		]
+	},
+	{
+		"name": "compulsion",
+		"compulsion": []
+	},
+	{
+		"name": "confusion",
+		"confusion": [
+			"contusion"
+		]
+	},
+	{
+		"name": "conjure minor elementals",
+		"conjure": [],
+		"minor": [
+			"manor",
+			"miner"
+		],
+		"elementals": []
+	},
+	{
+		"name": "conjure woodland beings",
+		"conjure": [],
+		"woodland": [],
+		"beings": [
+			"brings"
+		]
+	},
+	{
+		"name": "control water",
+		"control": [],
+		"water": [
+			"cater",
+			"dater",
+			"eater",
+			"hater",
+			"later",
+			"mater",
+			"rater",
+			"tater",
+			"wader",
+			"wafer",
+			"wager",
+			"waver"
+		]
+	},
+	{
+		"name": "death ward",
+		"death": [
+			"heath",
+			"neath",
+			"depth"
+		],
+		"ward": [
+			"bard",
+			"card",
+			"hard",
+			"lard",
+			"yard",
+			"word",
+			"wand",
+			"ware",
+			"warm",
+			"warn",
+			"warp",
+			"wars",
+			"wart",
+			"wary"
+		]
+	},
+	{
+		"name": "dimension door",
+		"dimension": [],
+		"door": [
+			"boor",
+			"moor",
+			"poor",
+			"doer",
+			"dour",
+			"doom"
+		]
+	},
+	{
+		"name": "divination",
+		"divination": []
+	},
+	{
+		"name": "dominate beast",
+		"dominate": [
+			"nominate"
+		],
+		"beast": [
+			"feast",
+			"least",
+			"yeast",
+			"blast",
+			"boast",
+			"beaut"
+		]
+	},
+	{
+		"name": "elemental bane",
+		"elemental": [],
+		"bane": [
+			"cane",
+			"lane",
+			"mane",
+			"pane",
+			"sane",
+			"vane",
+			"wane",
+			"bone",
+			"babe",
+			"bade",
+			"bake",
+			"bale",
+			"bare",
+			"base",
+			"bate",
+			"band",
+			"bang",
+			"bani",
+			"bank",
+			"bans"
+		]
+	},
+	{
+		"name": "evard's black tentacles",
+		"evard's": [],
+		"black": [
+			"alack",
+			"clack",
+			"flack",
+			"slack",
+			"block",
+			"blank"
+		],
+		"tentacles": [
+			"pentacles",
+			"tentacled"
+		]
+	},
+	{
+		"name": "fabricate",
+		"fabricate": []
+	},
+	{
+		"name": "faithful hound",
+		"faithful": [],
+		"hound": [
+			"bound",
+			"found",
+			"mound",
+			"pound",
+			"round",
+			"sound",
+			"wound"
+		]
+	},
+	{
+		"name": "find greater steed",
+		"find": [
+			"bind",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wind",
+			"fend",
+			"fond",
+			"fund",
+			"fine",
+			"fink",
+			"fins"
+		],
+		"greater": [
+			"greeter",
+			"greaser"
+		],
+		"steed": [
+			"speed",
+			"stead",
+			"steel",
+			"steep",
+			"steer"
+		]
+	},
+	{
+		"name": "fire shield",
+		"fire": [
+			"dire",
+			"hire",
+			"lire",
+			"mire",
+			"sire",
+			"tire",
+			"wire",
+			"fare",
+			"fore",
+			"fife",
+			"file",
+			"fine",
+			"five",
+			"firm",
+			"firs"
+		],
+		"shield": []
+	},
+	{
+		"name": "freedom of movement",
+		"freedom": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"movement": []
+	},
+	{
+		"name": "galder's speedy courier",
+		"galder's": [
+			"gilder's",
+			"gadder's",
+			"gander's"
+		],
+		"speedy": [
+			"speeds"
+		],
+		"courier": [
+			"courser"
+		]
+	},
+	{
+		"name": "giant insect",
+		"giant": [
+			"grant"
+		],
+		"insect": [
+			"infect",
+			"inject",
+			"insert"
+		]
+	},
+	{
+		"name": "grasping vine",
+		"grasping": [
+			"grassing"
+		],
+		"vine": [
+			"cine",
+			"dine",
+			"fine",
+			"kine",
+			"line",
+			"mine",
+			"nine",
+			"pine",
+			"sine",
+			"tine",
+			"wine",
+			"zine",
+			"vane",
+			"vibe",
+			"vice",
+			"vile",
+			"vise",
+			"vino"
+		]
+	},
+	{
+		"name": "gravity sinkhole",
+		"gravity": [],
+		"sinkhole": []
+	},
+	{
+		"name": "greater invisibility",
+		"greater": [
+			"greeter",
+			"greaser"
+		],
+		"invisibility": []
+	},
+	{
+		"name": "guardian of faith",
+		"guardian": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"faith": [
+			"saith"
+		]
+	},
+	{
+		"name": "guardian of nature",
+		"guardian": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"nature": [
+			"mature"
+		]
+	},
+	{
+		"name": "hallucinatory terrain",
+		"hallucinatory": [],
+		"terrain": []
+	},
+	{
+		"name": "ice storm",
+		"ice": [
+			"ace",
+			"ire",
+			"icy"
+		],
+		"storm": [
+			"store",
+			"stork",
+			"story"
+		]
+	},
+	{
+		"name": "leomund's secret chest",
+		"leomund's": [],
+		"secret": [],
+		"chest": [
+			"crest",
+			"cheat",
+			"chert",
+			"chess"
+		]
+	},
+	{
+		"name": "locate creature",
+		"locate": [
+			"locale"
+		],
+		"creature": []
+	},
+	{
+		"name": "mordenkainen's faithful hound",
+		"mordenkainen's": [],
+		"faithful": [],
+		"hound": [
+			"bound",
+			"found",
+			"mound",
+			"pound",
+			"round",
+			"sound",
+			"wound"
+		]
+	},
+	{
+		"name": "mordenkainen's private sanctum",
+		"mordenkainen's": [],
+		"private": [
+			"primate"
+		],
+		"sanctum": []
+	},
+	{
+		"name": "otiluke's resilient sphere",
+		"otiluke's": [],
+		"resilient": [],
+		"sphere": []
+	},
+	{
+		"name": "phantasmal killer",
+		"phantasmal": [],
+		"killer": [
+			"filler",
+			"miller",
+			"tiller",
+			"kilter",
+			"killed"
+		]
+	},
+	{
+		"name": "polymorph",
+		"polymorph": []
+	},
+	{
+		"name": "private sanctum",
+		"private": [
+			"primate"
+		],
+		"sanctum": []
+	},
+	{
+		"name": "resilient sphere",
+		"resilient": [],
+		"sphere": []
+	},
+	{
+		"name": "secret chest",
+		"secret": [],
+		"chest": [
+			"crest",
+			"cheat",
+			"chert",
+			"chess"
+		]
+	},
+	{
+		"name": "shadow of moil",
+		"shadow": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"moil": [
+			"boil",
+			"coil",
+			"foil",
+			"roil",
+			"soil",
+			"toil",
+			"mail",
+			"moll"
+		]
+	},
+	{
+		"name": "sickening radiance",
+		"sickening": [],
+		"radiance": []
+	},
+	{
+		"name": "staggering smite",
+		"staggering": [
+			"swaggering"
+		],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
+	},
+	{
+		"name": "stone shape",
+		"stone": [
+			"atone",
+			"scone",
+			"shone",
+			"stoke",
+			"stole",
+			"store",
+			"stove",
+			"stony"
+		],
+		"shape": [
+			"shade",
+			"shake",
+			"shale",
+			"shame",
+			"share",
+			"shave"
+		]
+	},
+	{
+		"name": "stoneskin",
+		"stoneskin": []
+	},
+	{
+		"name": "storm sphere",
+		"storm": [
+			"store",
+			"stork",
+			"story"
+		],
+		"sphere": []
+	},
+	{
+		"name": "summon aberration",
+		"summon": [],
+		"aberration": []
+	},
+	{
+		"name": "summon construct",
+		"summon": [],
+		"construct": [
+			"constrict"
+		]
+	},
+	{
+		"name": "summon elemental",
+		"summon": [],
+		"elemental": []
+	},
+	{
+		"name": "summon greater demon",
+		"summon": [],
+		"greater": [
+			"greeter",
+			"greaser"
+		],
+		"demon": [
+			"lemon",
+			"demob",
+			"demos"
+		]
+	},
+	{
+		"name": "vitriolic sphere",
+		"vitriolic": [],
+		"sphere": []
+	},
+	{
+		"name": "wall of fire",
+		"wall": [
+			"ball",
+			"call",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"well",
+			"will",
+			"wail",
+			"wale",
+			"walk"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"fire": [
+			"dire",
+			"hire",
+			"lire",
+			"mire",
+			"sire",
+			"tire",
+			"wire",
+			"fare",
+			"fore",
+			"fife",
+			"file",
+			"fine",
+			"five",
+			"firm",
+			"firs"
+		]
+	},
+	{
+		"name": "watery sphere",
+		"watery": [
+			"eatery",
+			"waters"
+		],
+		"sphere": []
+	},
+	{
+		"name": "animate objects",
+		"animate": [],
+		"objects": []
+	},
+	{
+		"name": "anti-life shell",
+		"anti": [
+			"ante",
+			"ants"
+		],
+		"life": [
+			"fife",
+			"rife",
+			"wife",
+			"lice",
+			"like",
+			"lime",
+			"line",
+			"lire",
+			"lite",
+			"live",
+			"lift"
+		],
+		"shell": [
+			"smell",
+			"spell",
+			"swell",
+			"shall",
+			"shill",
+			"shelf"
+		]
+	},
+	{
+		"name": "arcane hand",
+		"arcane": [
+			"arcade"
+		],
+		"hand": [
+			"band",
+			"land",
+			"rand",
+			"sand",
+			"wand",
+			"hind",
+			"hard",
+			"hang",
+			"hank"
+		]
+	},
+	{
+		"name": "awaken",
+		"awaken": [
+			"awoken",
+			"awakes"
+		]
+	},
+	{
+		"name": "banishing smite",
+		"banishing": [
+			"vanishing"
+		],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
+	},
+	{
+		"name": "bigby's hand",
+		"bigby's": [],
+		"hand": [
+			"band",
+			"land",
+			"rand",
+			"sand",
+			"wand",
+			"hind",
+			"hard",
+			"hang",
+			"hank"
+		]
+	},
+	{
+		"name": "circle of power",
+		"circle": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"power": [
+			"bower",
+			"cower",
+			"dower",
+			"lower",
+			"mower",
+			"rower",
+			"sower",
+			"tower",
+			"poker",
+			"poser"
+		]
+	},
+	{
+		"name": "cloudkill",
+		"cloudkill": []
+	},
+	{
+		"name": "commune",
+		"commune": [
+			"commute"
+		]
+	},
+	{
+		"name": "commune with nature",
+		"commune": [
+			"commute"
+		],
+		"with": [
+			"kith",
+			"pith",
+			"wish",
+			"wits"
+		],
+		"nature": [
+			"mature"
+		]
+	},
+	{
+		"name": "cone of cold",
+		"cone": [
+			"bone",
+			"done",
+			"gone",
+			"hone",
+			"lone",
+			"none",
+			"pone",
+			"tone",
+			"zone",
+			"cane",
+			"cine",
+			"code",
+			"coke",
+			"come",
+			"cope",
+			"core",
+			"cote",
+			"cove",
+			"conj",
+			"conk",
+			"cons",
+			"cont",
+			"cony"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"cold": [
+			"bold",
+			"fold",
+			"gold",
+			"hold",
+			"mold",
+			"sold",
+			"told",
+			"wold",
+			"coed",
+			"cord",
+			"cola",
+			"coll",
+			"cols",
+			"colt"
+		]
+	},
+	{
+		"name": "conjure elemental",
+		"conjure": [],
+		"elemental": []
+	},
+	{
+		"name": "conjure volley",
+		"conjure": [],
+		"volley": [
+			"valley"
+		]
+	},
+	{
+		"name": "contact other plane",
+		"contact": [],
+		"other": [
+			"ether",
+			"ocher",
+			"otter"
+		],
+		"plane": [
+			"place",
+			"plate",
+			"plank",
+			"plans",
+			"plant"
+		]
+	},
+	{
+		"name": "contagion",
+		"contagion": []
+	},
+	{
+		"name": "control winds",
+		"control": [],
+		"winds": [
+			"binds",
+			"finds",
+			"hinds",
+			"kinds",
+			"minds",
+			"rinds",
+			"wands",
+			"wends",
+			"wilds",
+			"wines",
+			"wings",
+			"winks",
+			"winos",
+			"windy"
+		]
+	},
+	{
+		"name": "creation",
+		"creation": []
+	},
+	{
+		"name": "danse macabre",
+		"danse": [
+			"manse",
+			"dense",
+			"dance"
+		],
+		"macabre": []
+	},
+	{
+		"name": "dawn",
+		"dawn": [
+			"fawn",
+			"lawn",
+			"pawn",
+			"yawn",
+			"down",
+			"damn",
+			"darn"
+		]
+	},
+	{
+		"name": "destructive wave",
+		"destructive": [],
+		"wave": [
+			"cave",
+			"eave",
+			"fave",
+			"gave",
+			"have",
+			"lave",
+			"nave",
+			"pave",
+			"rave",
+			"save",
+			"wive",
+			"wove",
+			"wade",
+			"wage",
+			"wake",
+			"wale",
+			"wane",
+			"ware",
+			"wavy"
+		]
+	},
+	{
+		"name": "dispel evil and good",
+		"dispel": [],
+		"evil": [],
+		"and": [
+			"end",
+			"ind",
+			"add",
+			"aid",
+			"ans",
+			"ant",
+			"any"
+		],
+		"good": [
+			"food",
+			"hood",
+			"mood",
+			"rood",
+			"wood",
+			"goad",
+			"gold",
+			"goof",
+			"gook",
+			"goon",
+			"goop"
+		]
+	},
+	{
+		"name": "dominate person",
+		"dominate": [
+			"nominate"
+		],
+		"person": [
+			"parson"
+		]
+	},
+	{
+		"name": "dream",
+		"dream": [
+			"bream",
+			"cream",
+			"dread",
+			"drear"
+		]
+	},
+	{
+		"name": "enervation",
+		"enervation": []
+	},
+	{
+		"name": "far step",
+		"far": [
+			"bar",
+			"car",
+			"ear",
+			"gar",
+			"jar",
+			"mar",
+			"oar",
+			"par",
+			"tar",
+			"var",
+			"war",
+			"fer",
+			"fir",
+			"for",
+			"fur",
+			"fab",
+			"fad",
+			"fag",
+			"fan",
+			"fat",
+			"fax",
+			"fay"
+		],
+		"step": [
+			"seep",
+			"stop",
+			"stem",
+			"stet",
+			"stew"
+		]
+	},
+	{
+		"name": "flame strike",
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		],
+		"strike": [
+			"shrike",
+			"stroke",
+			"striae",
+			"stride",
+			"strife",
+			"stripe",
+			"strive"
+		]
+	},
+	{
+		"name": "geas",
+		"geas": [
+			"leas",
+			"meas",
+			"peas",
+			"seas",
+			"teas",
+			"yeas",
+			"gees",
+			"gels",
+			"gems",
+			"gens",
+			"gets",
+			"gear"
+		]
+	},
+	{
+		"name": "greater restoration",
+		"greater": [
+			"greeter",
+			"greaser"
+		],
+		"restoration": []
+	},
+	{
+		"name": "hallow",
+		"hallow": [
+			"callow",
+			"fallow",
+			"mallow",
+			"sallow",
+			"tallow",
+			"wallow",
+			"hollow",
+			"halloo"
+		]
+	},
+	{
+		"name": "hold monster",
+		"hold": [
+			"bold",
+			"cold",
+			"fold",
+			"gold",
+			"mold",
+			"sold",
+			"told",
+			"wold",
+			"held",
+			"hoed",
+			"hood",
+			"hole",
+			"hols",
+			"holy"
+		],
+		"monster": [
+			"minster",
+			"mobster",
+			"moister"
+		]
+	},
+	{
+		"name": "holy weapon",
+		"holy": [
+			"poly",
+			"hold",
+			"hole",
+			"hols"
+		],
+		"weapon": []
+	},
+	{
+		"name": "immolation",
+		"immolation": []
+	},
+	{
+		"name": "infernal calling",
+		"infernal": [
+			"internal"
+		],
+		"calling": [
+			"balling",
+			"falling",
+			"galling",
+			"palling",
+			"walling",
+			"culling",
+			"cabling",
+			"calking",
+			"calming",
+			"calving"
+		]
+	},
+	{
+		"name": "insect plague",
+		"insect": [
+			"infect",
+			"inject",
+			"insert"
+		],
+		"plague": [
+			"plaque"
+		]
+	},
+	{
+		"name": "legend lore",
+		"legend": [],
+		"lore": [
+			"bore",
+			"core",
+			"fore",
+			"gore",
+			"more",
+			"pore",
+			"sore",
+			"tore",
+			"wore",
+			"yore",
+			"lire",
+			"lure",
+			"lyre",
+			"lobe",
+			"lode",
+			"loge",
+			"lone",
+			"lope",
+			"lose",
+			"love",
+			"lord",
+			"lorn"
+		]
+	},
+	{
+		"name": "maelstrom",
+		"maelstrom": []
+	},
+	{
+		"name": "mass cure wounds",
+		"mass": [
+			"bass",
+			"lass",
+			"pass",
+			"sass",
+			"mess",
+			"miss",
+			"moss",
+			"muss",
+			"macs",
+			"mads",
+			"mags",
+			"mams",
+			"mans",
+			"maps",
+			"mars",
+			"mats",
+			"maws",
+			"masc",
+			"mash",
+			"mask",
+			"mast"
+		],
+		"cure": [
+			"lure",
+			"pure",
+			"sure",
+			"care",
+			"core",
+			"cube",
+			"cute",
+			"curb",
+			"curd",
+			"curl",
+			"curs",
+			"curt"
+		],
+		"wounds": [
+			"bounds",
+			"founds",
+			"hounds",
+			"mounds",
+			"pounds",
+			"rounds",
+			"sounds",
+			"zounds",
+			"woulds"
+		]
+	},
+	{
+		"name": "mislead",
+		"mislead": [
+			"misread"
+		]
+	},
+	{
+		"name": "modify memory",
+		"modify": [
+			"codify"
+		],
+		"memory": []
+	},
+	{
+		"name": "negative energy flood",
+		"negative": [],
+		"energy": [],
+		"flood": [
+			"blood",
+			"floor"
+		]
+	},
+	{
+		"name": "passwall",
+		"passwall": []
+	},
+	{
+		"name": "planar binding",
+		"planar": [
+			"planer"
+		],
+		"binding": [
+			"finding",
+			"minding",
+			"winding",
+			"banding",
+			"bending",
+			"bonding",
+			"bidding",
+			"birding",
+			"binning"
+		]
+	},
+	{
+		"name": "raise dead",
+		"raise": [],
+		"dead": [
+			"bead",
+			"head",
+			"lead",
+			"mead",
+			"read",
+			"deed",
+			"deaf",
+			"deal",
+			"dean",
+			"dear"
+		]
+	},
+	{
+		"name": "rary's telepathic bond",
+		"rary's": [],
+		"telepathic": [],
+		"bond": [
+			"fond",
+			"pond",
+			"band",
+			"bend",
+			"bind",
+			"bold",
+			"bone",
+			"bong",
+			"bonk",
+			"bony"
+		]
+	},
+	{
+		"name": "reincarnate",
+		"reincarnate": []
+	},
+	{
+		"name": "scrying",
+		"scrying": []
+	},
+	{
+		"name": "seeming",
+		"seeming": [
+			"deeming",
+			"teeming",
+			"seaming",
+			"seeding",
+			"seeking",
+			"seeping"
+		]
+	},
+	{
+		"name": "skill empowerment",
+		"skill": [
+			"shill",
+			"spill",
+			"still",
+			"swill",
+			"skull"
+		],
+		"empowerment": []
+	},
+	{
+		"name": "steel wind strike",
+		"steel": [
+			"steal",
+			"steed",
+			"steep",
+			"steer"
+		],
+		"wind": [
+			"bind",
+			"find",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wand",
+			"wend",
+			"wild",
+			"wine",
+			"wing",
+			"wink",
+			"wino",
+			"wins",
+			"winy"
+		],
+		"strike": [
+			"shrike",
+			"stroke",
+			"striae",
+			"stride",
+			"strife",
+			"stripe",
+			"strive"
+		]
+	},
+	{
+		"name": "summon celestial",
+		"summon": [],
+		"celestial": []
+	},
+	{
+		"name": "swift quiver",
+		"swift": [
+			"shift"
+		],
+		"quiver": [
+			"quaver"
+		]
+	},
+	{
+		"name": "synaptic static",
+		"synaptic": [
+			"synoptic"
+		],
+		"static": []
+	},
+	{
+		"name": "telekinesis",
+		"telekinesis": []
+	},
+	{
+		"name": "telepathic bond",
+		"telepathic": [],
+		"bond": [
+			"fond",
+			"pond",
+			"band",
+			"bend",
+			"bind",
+			"bold",
+			"bone",
+			"bong",
+			"bonk",
+			"bony"
+		]
+	},
+	{
+		"name": "teleportation circle",
+		"teleportation": [],
+		"circle": []
+	},
+	{
+		"name": "temporal shunt",
+		"temporal": [],
+		"shunt": [
+			"stunt",
+			"shuns"
+		]
+	},
+	{
+		"name": "transmute rock",
+		"transmute": [],
+		"rock": [
+			"bock",
+			"cock",
+			"dock",
+			"hock",
+			"jock",
+			"lock",
+			"mock",
+			"pock",
+			"sock",
+			"rack",
+			"rick",
+			"ruck",
+			"rook"
+		]
+	},
+	{
+		"name": "tree stride",
+		"tree": [
+			"free",
+			"thee",
+			"twee",
+			"true",
+			"trek",
+			"trey"
+		],
+		"stride": [
+			"strode",
+			"striae",
+			"strife",
+			"strike",
+			"stripe",
+			"strive"
+		]
+	},
+	{
+		"name": "wall of force",
+		"wall": [
+			"ball",
+			"call",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"well",
+			"will",
+			"wail",
+			"wale",
+			"walk"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"force": [
+			"farce",
+			"forge",
+			"forte"
+		]
+	},
+	{
+		"name": "wall of light",
+		"wall": [
+			"ball",
+			"call",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"well",
+			"will",
+			"wail",
+			"wale",
+			"walk"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"light": [
+			"bight",
+			"eight",
+			"fight",
+			"might",
+			"night",
+			"right",
+			"sight",
+			"tight",
+			"wight"
+		]
+	},
+	{
+		"name": "wall of stone",
+		"wall": [
+			"ball",
+			"call",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"well",
+			"will",
+			"wail",
+			"wale",
+			"walk"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"stone": [
+			"atone",
+			"scone",
+			"shone",
+			"stoke",
+			"stole",
+			"store",
+			"stove",
+			"stony"
+		]
+	},
+	{
+		"name": "wrath of nature",
+		"wrath": [
+			"wroth"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"nature": [
+			"mature"
+		]
+	},
+	{
+		"name": "arcane gate",
+		"arcane": [
+			"arcade"
+		],
+		"gate": [
+			"bate",
+			"date",
+			"fate",
+			"hate",
+			"late",
+			"mate",
+			"pate",
+			"rate",
+			"sate",
+			"gite",
+			"gale",
+			"game",
+			"gape",
+			"gave",
+			"gaze"
+		]
+	},
+	{
+		"name": "blade barrier",
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		],
+		"barrier": [
+			"carrier",
+			"farrier",
+			"harrier",
+			"tarrier",
+			"barmier"
+		]
+	},
+	{
+		"name": "bones of the earth",
+		"bones": [
+			"cones",
+			"hones",
+			"pones",
+			"tones",
+			"zones",
+			"banes",
+			"bodes",
+			"boles",
+			"bores",
+			"boxes",
+			"bonds",
+			"bongs",
+			"bonks",
+			"bonus",
+			"boned",
+			"boner"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"the": [
+			"she",
+			"tee",
+			"tie",
+			"toe",
+			"tho",
+			"thy"
+		],
+		"earth": []
+	},
+	{
+		"name": "chain lightning",
+		"chain": [
+			"chair"
+		],
+		"lightning": []
+	},
+	{
+		"name": "circle of death",
+		"circle": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"death": [
+			"heath",
+			"neath",
+			"depth"
+		]
+	},
+	{
+		"name": "conjure fey",
+		"conjure": [],
+		"fey": [
+			"bey",
+			"hey",
+			"key",
+			"fay",
+			"fly",
+			"fry",
+			"fwy",
+			"fed",
+			"fee",
+			"fem",
+			"fen",
+			"fer",
+			"few",
+			"fez"
+		]
+	},
+	{
+		"name": "contingency",
+		"contingency": []
+	},
+	{
+		"name": "create homunculus",
+		"create": [
+			"crease"
+		],
+		"homunculus": []
+	},
+	{
+		"name": "create undead",
+		"create": [
+			"crease"
+		],
+		"undead": [
+			"unread"
+		]
+	},
+	{
+		"name": "disintegrate",
+		"disintegrate": []
+	},
+	{
+		"name": "drawmij's instant summons",
+		"drawmij's": [],
+		"instant": [],
+		"summons": []
+	},
+	{
+		"name": "druid grove",
+		"druid": [
+			"droid"
+		],
+		"grove": [
+			"drove",
+			"prove",
+			"trove",
+			"glove",
+			"grave",
+			"grope"
+		]
+	},
+	{
+		"name": "eyebite",
+		"eyebite": []
+	},
+	{
+		"name": "find the path",
+		"find": [
+			"bind",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wind",
+			"fend",
+			"fond",
+			"fund",
+			"fine",
+			"fink",
+			"fins"
+		],
+		"the": [
+			"she",
+			"tee",
+			"tie",
+			"toe",
+			"tho",
+			"thy"
+		],
+		"path": [
+			"bath",
+			"hath",
+			"lath",
+			"math",
+			"oath",
+			"pith",
+			"pate",
+			"pats"
+		]
+	},
+	{
+		"name": "flesh to stone",
+		"flesh": [
+			"fresh",
+			"flash",
+			"flush"
+		],
+		"to": [
+			"co",
+			"do",
+			"go",
+			"ho",
+			"lo",
+			"mo",
+			"no",
+			"so",
+			"yo",
+			"ta",
+			"tb",
+			"ti",
+			"tn",
+			"tr",
+			"ts"
+		],
+		"stone": [
+			"atone",
+			"scone",
+			"shone",
+			"stoke",
+			"stole",
+			"store",
+			"stove",
+			"stony"
+		]
+	},
+	{
+		"name": "forbiddance",
+		"forbiddance": []
+	},
+	{
+		"name": "freezing sphere",
+		"freezing": [
+			"breezing"
+		],
+		"sphere": []
+	},
+	{
+		"name": "globe of invulnerability",
+		"globe": [
+			"glove",
+			"globs"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"invulnerability": []
+	},
+	{
+		"name": "gravity fissure",
+		"gravity": [],
+		"fissure": []
+	},
+	{
+		"name": "guards and wards",
+		"guards": [],
+		"and": [
+			"end",
+			"ind",
+			"add",
+			"aid",
+			"ans",
+			"ant",
+			"any"
+		],
+		"wards": [
+			"bards",
+			"cards",
+			"lards",
+			"yards",
+			"words",
+			"wands",
+			"wares",
+			"warms",
+			"warns",
+			"warps",
+			"warts"
+		]
+	},
+	{
+		"name": "harm",
+		"harm": [
+			"farm",
+			"warm",
+			"hard",
+			"hare",
+			"hark",
+			"harp",
+			"hart"
+		]
+	},
+	{
+		"name": "heal",
+		"heal": [
+			"deal",
+			"meal",
+			"peal",
+			"real",
+			"seal",
+			"teal",
+			"veal",
+			"weal",
+			"zeal",
+			"heel",
+			"hell",
+			"head",
+			"heap",
+			"hear",
+			"heat"
+		]
+	},
+	{
+		"name": "heroes' feast",
+		"heroes'": [],
+		"feast": [
+			"beast",
+			"least",
+			"yeast"
+		]
+	},
+	{
+		"name": "instant summons",
+		"instant": [],
+		"summons": []
+	},
+	{
+		"name": "investiture of flame",
+		"investiture": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		]
+	},
+	{
+		"name": "investiture of ice",
+		"investiture": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"ice": [
+			"ace",
+			"ire",
+			"icy"
+		]
+	},
+	{
+		"name": "investiture of stone",
+		"investiture": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"stone": [
+			"atone",
+			"scone",
+			"shone",
+			"stoke",
+			"stole",
+			"store",
+			"stove",
+			"stony"
+		]
+	},
+	{
+		"name": "investiture of wind",
+		"investiture": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"wind": [
+			"bind",
+			"find",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wand",
+			"wend",
+			"wild",
+			"wine",
+			"wing",
+			"wink",
+			"wino",
+			"wins",
+			"winy"
+		]
+	},
+	{
+		"name": "magic jar",
+		"magic": [
+			"manic"
+		],
+		"jar": [
+			"bar",
+			"car",
+			"ear",
+			"far",
+			"gar",
+			"mar",
+			"oar",
+			"par",
+			"tar",
+			"var",
+			"war",
+			"jab",
+			"jag",
+			"jam",
+			"jaw",
+			"jay"
+		]
+	},
+	{
+		"name": "mass suggestion",
+		"mass": [
+			"bass",
+			"lass",
+			"pass",
+			"sass",
+			"mess",
+			"miss",
+			"moss",
+			"muss",
+			"macs",
+			"mads",
+			"mags",
+			"mams",
+			"mans",
+			"maps",
+			"mars",
+			"mats",
+			"maws",
+			"masc",
+			"mash",
+			"mask",
+			"mast"
+		],
+		"suggestion": []
+	},
+	{
+		"name": "mental prison",
+		"mental": [
+			"dental",
+			"rental",
+			"menial"
+		],
+		"prison": [
+			"orison",
+			"poison"
+		]
+	},
+	{
+		"name": "move earth",
+		"move": [
+			"cove",
+			"dove",
+			"hove",
+			"love",
+			"rove",
+			"wove",
+			"mode",
+			"mole",
+			"mope",
+			"more",
+			"mote",
+			"moue"
+		],
+		"earth": []
+	},
+	{
+		"name": "otiluke's freezing sphere",
+		"otiluke's": [],
+		"freezing": [
+			"breezing"
+		],
+		"sphere": []
+	},
+	{
+		"name": "otto's irresistible dance",
+		"otto's": [],
+		"irresistible": [
+			"irresistibly"
+		],
+		"dance": [
+			"lance",
+			"dunce"
+		]
+	},
+	{
+		"name": "planar ally",
+		"planar": [
+			"planer"
+		],
+		"ally": [
+			"ably"
+		]
+	},
+	{
+		"name": "primordial ward",
+		"primordial": [],
+		"ward": [
+			"bard",
+			"card",
+			"hard",
+			"lard",
+			"yard",
+			"word",
+			"wand",
+			"ware",
+			"warm",
+			"warn",
+			"warp",
+			"wars",
+			"wart",
+			"wary"
+		]
+	},
+	{
+		"name": "programmed illusion",
+		"programmed": [
+			"programmer"
+		],
+		"illusion": [
+			"allusion"
+		]
+	},
+	{
+		"name": "scatter",
+		"scatter": [
+			"shatter",
+			"spatter",
+			"swatter",
+			"scanter",
+			"scatted"
+		]
+	},
+	{
+		"name": "soul cage",
+		"soul": [
+			"foul",
+			"soil",
+			"souk",
+			"soup",
+			"sour",
+			"sous"
+		],
+		"cage": [
+			"mage",
+			"page",
+			"rage",
+			"sage",
+			"wage",
+			"chge",
+			"cafe",
+			"cake",
+			"came",
+			"cane",
+			"cape",
+			"care",
+			"case",
+			"cave"
+		]
+	},
+	{
+		"name": "summon fiend",
+		"summon": [],
+		"fiend": [
+			"field"
+		]
+	},
+	{
+		"name": "sunbeam",
+		"sunbeam": []
+	},
+	{
+		"name": "tasha's other-worldly guise",
+		"tasha's": [
+			"pasha's"
+		],
+		"other": [
+			"ether",
+			"ocher",
+			"otter"
+		],
+		"worldly": [],
+		"guise": [
+			"guide",
+			"guile"
+		]
+	},
+	{
+		"name": "tenser's transformation",
+		"tenser's": [
+			"censer's",
+			"teaser's",
+			"tender's"
+		],
+		"transformation": []
+	},
+	{
+		"name": "transport via plants",
+		"transport": [],
+		"via": [
+			"vie",
+			"vii",
+			"vim",
+			"viz"
+		],
+		"plants": [
+			"slants",
+			"plaits",
+			"planes",
+			"planks"
+		]
+	},
+	{
+		"name": "true seeing",
+		"true": [
+			"grue",
+			"tree",
+			"trug"
+		],
+		"seeing": [
+			"geeing",
+			"peeing",
+			"teeing",
+			"weeing",
+			"sewing",
+			"sexing"
+		]
+	},
+	{
+		"name": "wall of ice",
+		"wall": [
+			"ball",
+			"call",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"well",
+			"will",
+			"wail",
+			"wale",
+			"walk"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"ice": [
+			"ace",
+			"ire",
+			"icy"
+		]
+	},
+	{
+		"name": "wall of thorns",
+		"wall": [
+			"ball",
+			"call",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"well",
+			"will",
+			"wail",
+			"wale",
+			"walk"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"thorns": [
+			"thorny"
+		]
+	},
+	{
+		"name": "wind walk",
+		"wind": [
+			"bind",
+			"find",
+			"hind",
+			"kind",
+			"mind",
+			"rind",
+			"wand",
+			"wend",
+			"wild",
+			"wine",
+			"wing",
+			"wink",
+			"wino",
+			"wins",
+			"winy"
+		],
+		"walk": [
+			"balk",
+			"calk",
+			"talk",
+			"wack",
+			"wank",
+			"wale",
+			"wall"
+		]
+	},
+	{
+		"name": "word of recall",
+		"word": [
+			"cord",
+			"ford",
+			"lord",
+			"ward",
+			"woad",
+			"wold",
+			"wood",
+			"wore",
+			"work",
+			"worm",
+			"worn",
+			"wort"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"recall": []
+	},
+	{
+		"name": "conjure celestial",
+		"conjure": [],
+		"celestial": []
+	},
+	{
+		"name": "crown of stars",
+		"crown": [
+			"brown",
+			"drown",
+			"frown",
+			"grown",
+			"clown",
+			"croon",
+			"crowd",
+			"crows"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"stars": [
+			"scars",
+			"sears",
+			"soars",
+			"spars",
+			"stirs",
+			"stabs",
+			"stags",
+			"stats",
+			"stays",
+			"stare",
+			"stark",
+			"start"
+		]
+	},
+	{
+		"name": "delayed blast fireball",
+		"delayed": [
+			"belayed",
+			"relayed",
+			"decayed",
+			"delayer"
+		],
+		"blast": [
+			"beast",
+			"boast",
+			"blase"
+		],
+		"fireball": [
+			"firewall"
+		]
+	},
+	{
+		"name": "divine word",
+		"divine": [
+			"divide",
+			"diving"
+		],
+		"word": [
+			"cord",
+			"ford",
+			"lord",
+			"ward",
+			"woad",
+			"wold",
+			"wood",
+			"wore",
+			"work",
+			"worm",
+			"worn",
+			"wort"
+		]
+	},
+	{
+		"name": "dream of the blue veil",
+		"dream": [
+			"bream",
+			"cream",
+			"dread",
+			"drear"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"the": [
+			"she",
+			"tee",
+			"tie",
+			"toe",
+			"tho",
+			"thy"
+		],
+		"blue": [
+			"clue",
+			"flue",
+			"glue",
+			"slue",
+			"blur"
+		],
+		"veil": [
+			"veal",
+			"vein"
+		]
+	},
+	{
+		"name": "etherealness",
+		"etherealness": []
+	},
+	{
+		"name": "finger of death",
+		"finger": [
+			"ginger",
+			"linger",
+			"ringer",
+			"singer",
+			"winger",
+			"zinger",
+			"finder"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"death": [
+			"heath",
+			"neath",
+			"depth"
+		]
+	},
+	{
+		"name": "fire storm",
+		"fire": [
+			"dire",
+			"hire",
+			"lire",
+			"mire",
+			"sire",
+			"tire",
+			"wire",
+			"fare",
+			"fore",
+			"fife",
+			"file",
+			"fine",
+			"five",
+			"firm",
+			"firs"
+		],
+		"storm": [
+			"store",
+			"stork",
+			"story"
+		]
+	},
+	{
+		"name": "forcecage",
+		"forcecage": []
+	},
+	{
+		"name": "magnificent mansion",
+		"magnificent": [],
+		"mansion": []
+	},
+	{
+		"name": "mirage arcane",
+		"mirage": [],
+		"arcane": [
+			"arcade"
+		]
+	},
+	{
+		"name": "mordenkainen's magnificent mansion",
+		"mordenkainen's": [],
+		"magnificent": [],
+		"mansion": []
+	},
+	{
+		"name": "mordenkainen's sword",
+		"mordenkainen's": [],
+		"sword": [
+			"sward",
+			"swore",
+			"sworn"
+		]
+	},
+	{
+		"name": "plane shift",
+		"plane": [
+			"place",
+			"plate",
+			"plank",
+			"plans",
+			"plant"
+		],
+		"shift": [
+			"swift",
+			"shaft",
+			"shirt"
+		]
+	},
+	{
+		"name": "power word pain",
+		"power": [
+			"bower",
+			"cower",
+			"dower",
+			"lower",
+			"mower",
+			"rower",
+			"sower",
+			"tower",
+			"poker",
+			"poser"
+		],
+		"word": [
+			"cord",
+			"ford",
+			"lord",
+			"ward",
+			"woad",
+			"wold",
+			"wood",
+			"wore",
+			"work",
+			"worm",
+			"worn",
+			"wort"
+		],
+		"pain": [
+			"fain",
+			"gain",
+			"lain",
+			"main",
+			"rain",
+			"vain",
+			"wain",
+			"pawn",
+			"paid",
+			"pail",
+			"pair"
+		]
+	},
+	{
+		"name": "prismatic spray",
+		"prismatic": [],
+		"spray": [
+			"stray",
+			"splay",
+			"sprat"
+		]
+	},
+	{
+		"name": "project image",
+		"project": [
+			"protect"
+		],
+		"image": [
+			"imago"
+		]
+	},
+	{
+		"name": "regenerate",
+		"regenerate": [
+			"degenerate"
+		]
+	},
+	{
+		"name": "resurrection",
+		"resurrection": []
+	},
+	{
+		"name": "reverse gravity",
+		"reverse": [
+			"reverie"
+		],
+		"gravity": []
+	},
+	{
+		"name": "sequester",
+		"sequester": [
+			"requester"
+		]
+	},
+	{
+		"name": "simulacrum",
+		"simulacrum": []
+	},
+	{
+		"name": "symbol",
+		"symbol": []
+	},
+	{
+		"name": "teleport",
+		"teleport": []
+	},
+	{
+		"name": "temple of the gods",
+		"temple": [],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"the": [
+			"she",
+			"tee",
+			"tie",
+			"toe",
+			"tho",
+			"thy"
+		],
+		"gods": [
+			"bods",
+			"cods",
+			"hods",
+			"mods",
+			"nods",
+			"pods",
+			"rods",
+			"sods",
+			"gads",
+			"gobs",
+			"goes"
+		]
+	},
+	{
+		"name": "tether essence",
+		"tether": [
+			"nether",
+			"tither"
+		],
+		"essence": []
+	},
+	{
+		"name": "whirlwind",
+		"whirlwind": []
+	},
+	{
+		"name": "abi-dalzim's horrid wilting",
+		"abi": [
+			"obi",
+			"abs"
+		],
+		"dalzim's": [],
+		"horrid": [
+			"torrid"
+		],
+		"wilting": [
+			"jilting",
+			"lilting",
+			"milting",
+			"silting",
+			"tilting",
+			"welting",
+			"witting",
+			"willing"
+		]
+	},
+	{
+		"name": "animal shapes",
+		"animal": [],
+		"shapes": [
+			"shades",
+			"shakes",
+			"shames",
+			"shares",
+			"shaves",
+			"shaped"
+		]
+	},
+	{
+		"name": "anti-magic field",
+		"anti": [
+			"ante",
+			"ants"
+		],
+		"magic": [
+			"manic"
+		],
+		"field": [
+			"wield",
+			"yield",
+			"fiend"
+		]
+	},
+	{
+		"name": "antipathy/sympathy",
+		"antipathy": [],
+		"sympathy": []
+	},
+	{
+		"name": "clone",
+		"clone": [
+			"alone",
+			"crone",
+			"close",
+			"clove",
+			"clonk"
+		]
+	},
+	{
+		"name": "control weather",
+		"control": [],
+		"weather": [
+			"feather",
+			"heather",
+			"leather"
+		]
+	},
+	{
+		"name": "dark star",
+		"dark": [
+			"bark",
+			"hark",
+			"lark",
+			"mark",
+			"nark",
+			"park",
+			"dirk",
+			"dork",
+			"dank",
+			"dare",
+			"darn",
+			"dart"
+		],
+		"star": [
+			"scar",
+			"sear",
+			"soar",
+			"spar",
+			"stir",
+			"stab",
+			"stag",
+			"stat",
+			"stay"
+		]
+	},
+	{
+		"name": "demiplane",
+		"demiplane": []
+	},
+	{
+		"name": "dominate monster",
+		"dominate": [
+			"nominate"
+		],
+		"monster": [
+			"minster",
+			"mobster",
+			"moister"
+		]
+	},
+	{
+		"name": "earthquake",
+		"earthquake": []
+	},
+	{
+		"name": "feeblemind",
+		"feeblemind": []
+	},
+	{
+		"name": "glibness",
+		"glibness": []
+	},
+	{
+		"name": "holy aura",
+		"holy": [
+			"poly",
+			"hold",
+			"hole",
+			"hols"
+		],
+		"aura": []
+	},
+	{
+		"name": "illusory dragon",
+		"illusory": [],
+		"dragon": []
+	},
+	{
+		"name": "incendiary cloud",
+		"incendiary": [],
+		"cloud": [
+			"aloud",
+			"clout"
+		]
+	},
+	{
+		"name": "maddening darkness",
+		"maddening": [
+			"saddening"
+		],
+		"darkness": [
+			"dankness"
+		]
+	},
+	{
+		"name": "maze",
+		"maze": [
+			"daze",
+			"faze",
+			"gaze",
+			"haze",
+			"laze",
+			"raze",
+			"mace",
+			"made",
+			"mage",
+			"make",
+			"male",
+			"mane",
+			"mare",
+			"mate"
+		]
+	},
+	{
+		"name": "mighty fortress",
+		"mighty": [
+			"eighty"
+		],
+		"fortress": []
+	},
+	{
+		"name": "mind blank",
+		"mind": [
+			"bind",
+			"find",
+			"hind",
+			"kind",
+			"rind",
+			"wind",
+			"mend",
+			"mild",
+			"mine",
+			"mini",
+			"mink",
+			"mint",
+			"minx"
+		],
+		"blank": [
+			"clank",
+			"flank",
+			"plank",
+			"blink",
+			"black",
+			"bland"
+		]
+	},
+	{
+		"name": "power word stun",
+		"power": [
+			"bower",
+			"cower",
+			"dower",
+			"lower",
+			"mower",
+			"rower",
+			"sower",
+			"tower",
+			"poker",
+			"poser"
+		],
+		"word": [
+			"cord",
+			"ford",
+			"lord",
+			"ward",
+			"woad",
+			"wold",
+			"wood",
+			"wore",
+			"work",
+			"worm",
+			"worn",
+			"wort"
+		],
+		"stun": [
+			"shun",
+			"spun",
+			"stub",
+			"stud"
+		]
+	},
+	{
+		"name": "reality break",
+		"reality": [],
+		"break": [
+			"creak",
+			"freak",
+			"wreak",
+			"bleak",
+			"bread",
+			"bream"
+		]
+	},
+	{
+		"name": "sunburst",
+		"sunburst": []
+	},
+	{
+		"name": "telepathy",
+		"telepathy": []
+	},
+	{
+		"name": "tsunami",
+		"tsunami": []
+	},
+	{
+		"name": "astral projection",
+		"astral": [
+			"astray"
+		],
+		"projection": [
+			"protection"
+		]
+	},
+	{
+		"name": "blade of disaster",
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"disaster": []
+	},
+	{
+		"name": "foresight",
+		"foresight": []
+	},
+	{
+		"name": "gate",
+		"gate": [
+			"bate",
+			"date",
+			"fate",
+			"hate",
+			"late",
+			"mate",
+			"pate",
+			"rate",
+			"sate",
+			"gite",
+			"gale",
+			"game",
+			"gape",
+			"gave",
+			"gaze"
+		]
+	},
+	{
+		"name": "imprisonment",
+		"imprisonment": []
+	},
+	{
+		"name": "invulnerability",
+		"invulnerability": []
+	},
+	{
+		"name": "mass heal",
+		"mass": [
+			"bass",
+			"lass",
+			"pass",
+			"sass",
+			"mess",
+			"miss",
+			"moss",
+			"muss",
+			"macs",
+			"mads",
+			"mags",
+			"mams",
+			"mans",
+			"maps",
+			"mars",
+			"mats",
+			"maws",
+			"masc",
+			"mash",
+			"mask",
+			"mast"
+		],
+		"heal": [
+			"deal",
+			"meal",
+			"peal",
+			"real",
+			"seal",
+			"teal",
+			"veal",
+			"weal",
+			"zeal",
+			"heel",
+			"hell",
+			"head",
+			"heap",
+			"hear",
+			"heat"
+		]
+	},
+	{
+		"name": "mass polymorph",
+		"mass": [
+			"bass",
+			"lass",
+			"pass",
+			"sass",
+			"mess",
+			"miss",
+			"moss",
+			"muss",
+			"macs",
+			"mads",
+			"mags",
+			"mams",
+			"mans",
+			"maps",
+			"mars",
+			"mats",
+			"maws",
+			"masc",
+			"mash",
+			"mask",
+			"mast"
+		],
+		"polymorph": []
+	},
+	{
+		"name": "meteor swarm",
+		"meteor": [],
+		"swarm": [
+			"sward"
+		]
+	},
+	{
+		"name": "power word heal",
+		"power": [
+			"bower",
+			"cower",
+			"dower",
+			"lower",
+			"mower",
+			"rower",
+			"sower",
+			"tower",
+			"poker",
+			"poser"
+		],
+		"word": [
+			"cord",
+			"ford",
+			"lord",
+			"ward",
+			"woad",
+			"wold",
+			"wood",
+			"wore",
+			"work",
+			"worm",
+			"worn",
+			"wort"
+		],
+		"heal": [
+			"deal",
+			"meal",
+			"peal",
+			"real",
+			"seal",
+			"teal",
+			"veal",
+			"weal",
+			"zeal",
+			"heel",
+			"hell",
+			"head",
+			"heap",
+			"hear",
+			"heat"
+		]
+	},
+	{
+		"name": "power word kill",
+		"power": [
+			"bower",
+			"cower",
+			"dower",
+			"lower",
+			"mower",
+			"rower",
+			"sower",
+			"tower",
+			"poker",
+			"poser"
+		],
+		"word": [
+			"cord",
+			"ford",
+			"lord",
+			"ward",
+			"woad",
+			"wold",
+			"wood",
+			"wore",
+			"work",
+			"worm",
+			"worn",
+			"wort"
+		],
+		"kill": [
+			"bill",
+			"dill",
+			"fill",
+			"gill",
+			"hill",
+			"mill",
+			"pill",
+			"rill",
+			"sill",
+			"till",
+			"will",
+			"kiln",
+			"kilo",
+			"kilt"
+		]
+	},
+	{
+		"name": "prismatic wall",
+		"prismatic": [],
+		"wall": [
+			"ball",
+			"call",
+			"fall",
+			"gall",
+			"hall",
+			"mall",
+			"pall",
+			"tall",
+			"well",
+			"will",
+			"wail",
+			"wale",
+			"walk"
+		]
+	},
+	{
+		"name": "psychic scream",
+		"psychic": [],
+		"scream": [
+			"stream"
+		]
+	},
+	{
+		"name": "ravenous void",
+		"ravenous": [],
+		"void": []
+	},
+	{
+		"name": "shapechange",
+		"shapechange": []
+	},
+	{
+		"name": "storm of vengeance",
+		"storm": [
+			"store",
+			"stork",
+			"story"
+		],
+		"of": [
+			"bf",
+			"cf",
+			"ff",
+			"hf",
+			"if",
+			"pf",
+			"sf",
+			"ob",
+			"oh",
+			"oi",
+			"om",
+			"on",
+			"op",
+			"or",
+			"ow",
+			"ox",
+			"oz"
+		],
+		"vengeance": []
+	},
+	{
+		"name": "time ravage",
+		"time": [
+			"dime",
+			"lime",
+			"mime",
+			"rime",
+			"tame",
+			"tome",
+			"tide",
+			"tile",
+			"tine",
+			"tire"
+		],
+		"ravage": [
+			"lavage",
+			"savage"
+		]
+	},
+	{
+		"name": "time stop",
+		"time": [
+			"dime",
+			"lime",
+			"mime",
+			"rime",
+			"tame",
+			"tome",
+			"tide",
+			"tile",
+			"tine",
+			"tire"
+		],
+		"stop": [
+			"atop",
+			"shop",
+			"slop",
+			"step",
+			"stow"
+		]
+	},
+	{
+		"name": "true polymorph",
+		"true": [
+			"grue",
+			"tree",
+			"trug"
+		],
+		"polymorph": []
+	},
+	{
+		"name": "true resurrection",
+		"true": [
+			"grue",
+			"tree",
+			"trug"
+		],
+		"resurrection": []
+	},
+	{
+		"name": "weird",
+		"weird": [
+			"weirs"
+		]
+	},
+	{
+		"name": "wish",
+		"wish": [
+			"dish",
+			"fish",
+			"wash",
+			"with",
+			"wise",
+			"wisp",
+			"wist"
+		]
+	}
+]
