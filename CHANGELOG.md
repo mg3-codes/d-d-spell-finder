@@ -2,13 +2,16 @@
 
 # Changelog
 
+## 0.6.1
+-  Add missing redirect page
+
 ## 0.6.0
-- Add grammarian page
-- Update packages
+-  Add grammarian page
+-  Update packages
 
 ## 0.5.12
-- Spelling update
-- Update packages
+-  Spelling update
+-  Update packages
 
 ## 0.5.11
 -  Fix font bug
