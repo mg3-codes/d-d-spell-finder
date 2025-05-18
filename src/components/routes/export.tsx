@@ -4,14 +4,12 @@
  * @format
  */
 
-import React from "react";
-
 import ExportPage from "../export-page";
 import PageWrapper from "../page-wrapper";
 
 const Export = () => {
 	return (
-		<PageWrapper>
+		<PageWrapper title="Export Spells | D&D Spell Finder | MG3.codes">
 			<ExportPage />
 		</PageWrapper>
 	);

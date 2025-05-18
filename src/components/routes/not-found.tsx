@@ -4,14 +4,12 @@
  * @format
  */
 
-import React from "react";
-
 import NotFoundPage from "../not-found-page";
 import PageWrapper from "../page-wrapper";
 
 const NotFound = () => {
 	return (
-		<PageWrapper>
+		<PageWrapper title="Not Found | D&D SPell Finder | MG3.codes">
 			<NotFoundPage />
 		</PageWrapper>
 	);
