@@ -2,6 +2,12 @@
 
 # Changelog
 
+## 0.6.2
+-  Add OG data
+-  Add page titles and descriptions
+-  Add sitemap.xml
+-  Add robots.txt
+
 ## 0.6.1
 -  Add missing redirect page
 

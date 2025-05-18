@@ -16,13 +16,13 @@ import LoadingSpinner from "./components/loading-spinner";
 import { SelectedRowContextProvider } from "./components/selected-row-context-provider";
 import { ThemeContextProvider } from "./components/theme-context-provider";
 
-import Grammarian from "./components/routes/gramarian";
 import "./styles/main.css";
 
 const Index = React.lazy(() => import("./components/routes"));
 const DiceRoller = React.lazy(() => import("./components/routes/dice-roller"));
 const Export = React.lazy(() => import("./components/routes/export"));
 const NotFound = React.lazy(() => import("./components/routes/not-found"));
+const Grammarian = React.lazy(() => import("./components/routes/grammarian"));
 
 const rollbarConfig = {
 	accessToken: "9da11dd53b1c4323a3fb09861e6dd841",
@@ -30,7 +30,7 @@ const rollbarConfig = {
 	enabled: import.meta.env.MODE === "production",
 	captureUncaught: true,
 	captureUnhandledRejections: true,
-	code_version: "0.6.1",
+	code_version: "0.6.2",
 	source_map_enabled: true,
 };
 

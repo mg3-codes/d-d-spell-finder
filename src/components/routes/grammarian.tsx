@@ -9,7 +9,7 @@ import PageWrapper from "../page-wrapper";
 
 const Grammarian = () => {
 	return (
-		<PageWrapper>
+		<PageWrapper title="Grammarian Word Generator | D&D Spell Finder | MG3.codes">
 			<GrammarianPage />
 		</PageWrapper>
 	);

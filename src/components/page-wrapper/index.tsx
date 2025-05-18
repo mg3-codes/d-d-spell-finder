@@ -5,7 +5,7 @@
  */
 
 import type React from "react";
-import { useContext, useLayoutEffect } from "react";
+import { useContext, useEffect, useLayoutEffect } from "react";
 
 import { ThemeContext } from "../theme-context-provider";
 
@@ -14,10 +14,14 @@ import { Theme } from "../../enums/theme";
 import "./styles.css";
 
 export interface IPageWrapperProps {
+	title: string;
 	children: React.ReactNode;
 }
 
-const PageWrapper = ({ children }: IPageWrapperProps): React.ReactElement => {
+const PageWrapper = ({
+	title,
+	children,
+}: IPageWrapperProps): React.ReactElement => {
 	const { currentTheme } = useContext(ThemeContext);
 
 	useLayoutEffect(() => {
@@ -31,6 +35,10 @@ const PageWrapper = ({ children }: IPageWrapperProps): React.ReactElement => {
 		else if (currentTheme === Theme.Dark)
 			elements[0]?.setAttribute("data-bs-theme", "dark");
 	}, [currentTheme]);
+
+	useEffect(() => {
+		if (document) document.title = title;
+	}, [title]);
 
 	return <div className="app">{children}</div>;
 };

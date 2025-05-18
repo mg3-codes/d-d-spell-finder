@@ -11,7 +11,7 @@ import PageWrapper from "../page-wrapper";
 
 const DiceRoller = () => {
 	return (
-		<PageWrapper>
+		<PageWrapper title="Dice Roller | D&D Spell Finder | MG3.codes">
 			<DiceRollerPage />
 		</PageWrapper>
 	);

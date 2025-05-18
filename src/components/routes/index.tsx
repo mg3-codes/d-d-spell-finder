@@ -11,7 +11,7 @@ import PageWrapper from "../page-wrapper";
 
 const Index = () => {
 	return (
-		<PageWrapper>
+		<PageWrapper title="D&D Spell Finder | MG3.codes">
 			<IndexPage />
 		</PageWrapper>
 	);
