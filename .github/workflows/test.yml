@@ -2,9 +2,12 @@
 
 name: Test
 
+permissions:
+    contents: read
+
 on:
     push:
-        branches: ["**", "!master"]
+       branches: ["**", "!master"]
 
 jobs:
     test:
