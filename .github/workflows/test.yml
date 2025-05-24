@@ -16,6 +16,6 @@ jobs:
             - name: Cypress run
               uses: cypress-io/github-action@v6.9.0
               with:
-                  build: yarn install --immutable && yarn build-test && yarn dlx cypress install
+                  build: yarn install && yarn build-test && yarn dlx cypress install
                   start: yarn preview
                   browser: chrome
