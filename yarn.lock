@@ -1373,9 +1373,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^14.3.3":
-  version: 14.3.3
-  resolution: "cypress@npm:14.3.3"
+"cypress@npm:^14.4.0":
+  version: 14.4.0
+  resolution: "cypress@npm:14.4.0"
   dependencies:
     "@cypress/request": "npm:^3.0.8"
     "@cypress/xvfb": "npm:^1.2.4"
@@ -1422,7 +1422,7 @@ __metadata:
     yauzl: "npm:^2.10.0"
   bin:
     cypress: bin/cypress
-  checksum: 10/00a9575dea18c9c670fd6b8b2091c5a0579c4467119be43044e9605d63b6147998039c92269da5b6bad69094f585bf8327ffe56f12e66b9c24d673b00ef349a6
+  checksum: 10/0fd3197ca611f14e36ad3ae3ae1890b4a2c79719a4125a329f63d2c84dc88284fafad9eb4edc01a9ec2b5a5d558b261734c8c185273495c71aed787c9039ed60
   languageName: node
   linkType: hard
 
@@ -1525,7 +1525,7 @@ __metadata:
     "@vitejs/plugin-react-swc": "npm:^3.10.0"
     ag-grid-community: "npm:^33.3.0"
     ag-grid-react: "npm:^33.3.0"
-    cypress: "npm:^14.3.3"
+    cypress: "npm:^14.4.0"
     lightningcss: "npm:^1.30.1"
     path: "npm:^0.12.7"
     prop-types: "npm:^15.8.1"
