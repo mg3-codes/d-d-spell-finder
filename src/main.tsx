@@ -4,7 +4,7 @@
  * @format
  */
 
-import { ErrorBoundary, Provider as RollbarProvider } from "@rollbar/react";
+import { Provider as RollbarProvider } from "@rollbar/react";
 import React, { Suspense } from "react";
 import ReactDOM from "react-dom/client";
 import { Navigate, createBrowserRouter } from "react-router";
@@ -12,6 +12,7 @@ import { RouterProvider } from "react-router/dom";
 
 import { AppSettingsContextProvider } from "./components/app-settings-provider";
 import { ColumnContextProvider } from "./components/column-context-provider";
+import { ErrorBoundary } from "./components/error-boundary";
 import LoadingSpinner from "./components/loading-spinner";
 import { SelectedRowContextProvider } from "./components/selected-row-context-provider";
 import { ThemeContextProvider } from "./components/theme-context-provider";
@@ -38,53 +39,59 @@ const router = createBrowserRouter([
 	{
 		path: "/",
 		element: <Index />,
+		errorElement: <ErrorBoundary />,
 	},
 	{
 		path: "/dice-roller",
 		element: <DiceRoller />,
+		errorElement: <ErrorBoundary />,
 	},
 	{
 		path: "/grammarian",
 		element: <Grammarian />,
+		errorElement: <ErrorBoundary />,
 	},
 	{
 		path: "/dice",
 		element: <Navigate to="/dice-roller" replace />,
+		errorElement: <ErrorBoundary />,
 	},
 	{
 		path: "/roller",
 		element: <Navigate to="/dice-roller" replace />,
+		errorElement: <ErrorBoundary />,
 	},
 	{
 		path: "/export",
 		element: <Export />,
+		errorElement: <ErrorBoundary />,
 	},
 	{
 		path: "/404",
 		element: <NotFound />,
+		errorElement: <ErrorBoundary />,
 	},
 	{
 		path: "*",
 		element: <Navigate to="/404" replace />,
+		errorElement: <ErrorBoundary />,
 	},
 ]);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<React.StrictMode>
 		<RollbarProvider config={rollbarConfig}>
-			<ErrorBoundary>
-				<Suspense fallback={<LoadingSpinner />}>
-					<AppSettingsContextProvider>
-						<ThemeContextProvider>
-							<ColumnContextProvider>
-								<SelectedRowContextProvider>
-									<RouterProvider router={router} />
-								</SelectedRowContextProvider>
-							</ColumnContextProvider>
-						</ThemeContextProvider>
-					</AppSettingsContextProvider>
-				</Suspense>
-			</ErrorBoundary>
+			<Suspense fallback={<LoadingSpinner />}>
+				<AppSettingsContextProvider>
+					<ThemeContextProvider>
+						<ColumnContextProvider>
+							<SelectedRowContextProvider>
+								<RouterProvider router={router} />
+							</SelectedRowContextProvider>
+						</ColumnContextProvider>
+					</ThemeContextProvider>
+				</AppSettingsContextProvider>
+			</Suspense>
 		</RollbarProvider>
 	</React.StrictMode>,
 );
