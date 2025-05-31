@@ -3,7 +3,7 @@
 # Changelog
 
 ## 0.6.3
--  Fix grammarian filtering bug
+-  Fix grammarian filtering bug where certain filters were not applied correctly due to a mismatch in filter criteria. Updated the filtering logic to ensure accurate application of grammarian filters.
 
 ## 0.6.2
 -  Add OG data
