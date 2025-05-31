@@ -748,12 +748,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^22.15.21":
-  version: 22.15.21
-  resolution: "@types/node@npm:22.15.21"
+"@types/node@npm:^22.15.29":
+  version: 22.15.29
+  resolution: "@types/node@npm:22.15.29"
   dependencies:
     undici-types: "npm:~6.21.0"
-  checksum: 10/cb4189587cca445bfb8166c0ed39f9344d743f37f3da892f2999a99bbabda45dc773237e61ecb7d1dc83dd95718cb1b5715b0be5dd7953565b19019e36a7cf39
+  checksum: 10/3426790c5aa22df445213d7f37e57ea261cf3013030fe9b3025d87c302097799a9db3b848e2a9bdb07cab8ec6c7e9947ac770cf11e12e420148296b63d63e7db
   languageName: node
   linkType: hard
 
@@ -810,12 +810,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.1.5":
-  version: 19.1.5
-  resolution: "@types/react@npm:19.1.5"
+"@types/react@npm:19.1.6":
+  version: 19.1.6
+  resolution: "@types/react@npm:19.1.6"
   dependencies:
     csstype: "npm:^3.0.2"
-  checksum: 10/ea007c6c3a7afc42421d2cc260446de9e949513cb1261e0e5cf856108afe6e8d53ed51dc26c522a364e4927450092deea68b0423c68f3a22c26dae3fac1363a5
+  checksum: 10/722a8efb36dedaf5cfe226287214df0982d612ff33ebf005dbbb646279647e5987da661f2d9fe6b8a4516d3b29dd6cb3a708641265861251abb682e8e90540cf
   languageName: node
   linkType: hard
 
@@ -875,32 +875,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ag-charts-types@npm:11.3.0":
-  version: 11.3.0
-  resolution: "ag-charts-types@npm:11.3.0"
-  checksum: 10/200a3cd3ccaf6575ff6e409ffbcbfdd43a5d6db8ecb9388cc33f38422ce1a22789f1f227c078065ea65e6dc116679cfa57557d271af3f91b03d03419c36392bb
+"ag-charts-types@npm:11.3.1":
+  version: 11.3.1
+  resolution: "ag-charts-types@npm:11.3.1"
+  checksum: 10/1430e967d04d0b2fca03136a342ed967edef992f4a9c018e385d831732816363fab9ac38e93e939c47453f4698c5a43bd19508f1c7e3c64a6e026e942a008ec3
   languageName: node
   linkType: hard
 
-"ag-grid-community@npm:33.3.0, ag-grid-community@npm:^33.3.0":
-  version: 33.3.0
-  resolution: "ag-grid-community@npm:33.3.0"
+"ag-grid-community@npm:33.3.1, ag-grid-community@npm:^33.3.1":
+  version: 33.3.1
+  resolution: "ag-grid-community@npm:33.3.1"
   dependencies:
-    ag-charts-types: "npm:11.3.0"
-  checksum: 10/9dd1fa09814c7c3a11b6880551ab8a963dbeec106194b8331162f12aa8d8ec2a5df83da552fd88e2462c6fc40b49f3f6a530c9bbea1b5ba38a0a39de978d7ddf
+    ag-charts-types: "npm:11.3.1"
+  checksum: 10/f678ead26e348761d62d3ee465cd908d2dde28c9f2950f4da7af354f4ad418988100d00f14c009ff4c3ff959edfb64c873088e38fe927460caf02971902a0f0d
   languageName: node
   linkType: hard
 
-"ag-grid-react@npm:^33.3.0":
-  version: 33.3.0
-  resolution: "ag-grid-react@npm:33.3.0"
+"ag-grid-react@npm:^33.3.1":
+  version: 33.3.1
+  resolution: "ag-grid-react@npm:33.3.1"
   dependencies:
-    ag-grid-community: "npm:33.3.0"
+    ag-grid-community: "npm:33.3.1"
     prop-types: "npm:^15.8.1"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10/e8d7d83a6ac672b10e7f0980d5196e6bad15ecbc862415e0bd60844dd08bfca23f6c812ca3a7f6ed9a698dd1fba059ce6954ab5538d0b52e1d3b1c6ff179a03c
+  checksum: 10/2bbe2f2d9b44674a78a4d3426a0902f057a7a733a8c2a98bf2444a8c579653b4eaa91800b699a6ac020d9baf20fefa99436d8702c8d4928d8bd24ef5a6ce1492
   languageName: node
   linkType: hard
 
@@ -1517,14 +1517,14 @@ __metadata:
     "@swc/core": "npm:1.11.29"
     "@swc/helpers": "npm:^0.5.17"
     "@types/mocha": "npm:^10.0.10"
-    "@types/node": "npm:^22.15.21"
+    "@types/node": "npm:^22.15.29"
     "@types/prop-types": "npm:^15.7.14"
-    "@types/react": "npm:19.1.5"
+    "@types/react": "npm:19.1.6"
     "@types/react-dom": "npm:^19.1.5"
     "@types/react-router": "npm:^5.1.20"
     "@vitejs/plugin-react-swc": "npm:^3.10.0"
-    ag-grid-community: "npm:^33.3.0"
-    ag-grid-react: "npm:^33.3.0"
+    ag-grid-community: "npm:^33.3.1"
+    ag-grid-react: "npm:^33.3.1"
     cypress: "npm:^14.4.0"
     lightningcss: "npm:^1.30.1"
     path: "npm:^0.12.7"
@@ -1532,7 +1532,7 @@ __metadata:
     react: "npm:^19.1.0"
     react-bootstrap: "npm:^2.10.10"
     react-dom: "npm:^19.1.0"
-    react-router: "npm:^7.6.0"
+    react-router: "npm:^7.6.1"
     rollbar: "npm:^2.26.4"
     typescript: "npm:^5.8.3"
     vite: "npm:6.3.5"
@@ -3066,9 +3066,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:^7.6.0":
-  version: 7.6.0
-  resolution: "react-router@npm:7.6.0"
+"react-router@npm:^7.6.1":
+  version: 7.6.1
+  resolution: "react-router@npm:7.6.1"
   dependencies:
     cookie: "npm:^1.0.1"
     set-cookie-parser: "npm:^2.6.0"
@@ -3078,7 +3078,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10/093ace0b706522ea551d279d18fa320ae904ea47e6b7f80532f0d4badee518d3cd454481b3cb89c3e68222571620c5bccdd52be770c2783c575308a4395d9015
+  checksum: 10/90d3038db6d9c0d48bc932b8698c287a80759629ecef65f1ead32fadd78ef17895c7402832d3c94b47c45f10f8478b79551a647360415887f2f3a8fae10aca30
   languageName: node
   linkType: hard
 

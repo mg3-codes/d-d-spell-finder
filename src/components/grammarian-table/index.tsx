@@ -76,7 +76,11 @@ export const GrammarianTable = () => {
 								/>
 							</Dropdown.Header>
 							{spellVariations
-								.filter((x) => x.name.includes(filter))
+								.filter((x) => {
+									const lowerCaseFilter = filter.toLowerCase();
+									if (!filter) return true;
+									return x.name.toLowerCase().includes(lowerCaseFilter);
+								})
 								.map((x) => (
 									<Dropdown.Item
 										className="text-capitalize"

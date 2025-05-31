@@ -17,6 +17,7 @@ import { PrivacyBody, PrivacyHeader } from "./privacy-content";
 
 import { LogoComputer } from "../logo-computer";
 import "./styles.css";
+import packageJson from "../../../package.json";
 
 const Footer = () => {
 	const rollbar = useRollbar();
@@ -67,7 +68,7 @@ const Footer = () => {
 
 	return (
 		<div className="footer">
-			<span className="version">Version: 0.6.2</span>
+			<span className="version">Version: {packageJson.version}</span>
 			<div className="links">
 				<Button variant="link" onClick={openHelpModal}>
 					Help
