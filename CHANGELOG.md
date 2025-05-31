@@ -2,6 +2,9 @@
 
 # Changelog
 
+## 0.6.3
+-  Fix grammarian filtering bug
+
 ## 0.6.2
 -  Add OG data
 -  Add page titles and descriptions
