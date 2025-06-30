@@ -882,12 +882,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ag-grid-community@npm:33.3.1, ag-grid-community@npm:^33.3.1":
+"ag-charts-types@npm:12.0.0":
+  version: 12.0.0
+  resolution: "ag-charts-types@npm:12.0.0"
+  checksum: 10/7a684d4633ed224bf62364e4897ea2a6085467d20eda963da89e855927bd24e5a4ac30d4cf884a1ab5d67095ffbf85271d7704da39cd6be087fd4bcba3b7d3d4
+  languageName: node
+  linkType: hard
+
+"ag-grid-community@npm:33.3.1":
   version: 33.3.1
   resolution: "ag-grid-community@npm:33.3.1"
   dependencies:
     ag-charts-types: "npm:11.3.1"
   checksum: 10/f678ead26e348761d62d3ee465cd908d2dde28c9f2950f4da7af354f4ad418988100d00f14c009ff4c3ff959edfb64c873088e38fe927460caf02971902a0f0d
+  languageName: node
+  linkType: hard
+
+"ag-grid-community@npm:^34.0.0":
+  version: 34.0.0
+  resolution: "ag-grid-community@npm:34.0.0"
+  dependencies:
+    ag-charts-types: "npm:12.0.0"
+  checksum: 10/5815e3653b1ffb4fe49ab60d9bfc958ffe438164fdd7f5ddd3c282bc2191e277f953b904cdc06524c49ef90b63305e3fcd3be42948c82979727188c139eda13f
   languageName: node
   linkType: hard
 
@@ -1523,7 +1539,7 @@ __metadata:
     "@types/react-dom": "npm:^19.1.5"
     "@types/react-router": "npm:^5.1.20"
     "@vitejs/plugin-react-swc": "npm:^3.10.0"
-    ag-grid-community: "npm:^33.3.1"
+    ag-grid-community: "npm:^34.0.0"
     ag-grid-react: "npm:^33.3.1"
     cypress: "npm:^14.4.0"
     lightningcss: "npm:^1.30.1"
