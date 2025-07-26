@@ -27,7 +27,7 @@
 		"rollbar": "^2.26.4"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "1.9.4",
+		"@biomejs/biome": "2.1.2",
 		"@swc/core": "1.13.1",
 		"@swc/helpers": "^0.5.17",
 		"@types/mocha": "^10.0.10",
