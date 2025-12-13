@@ -1665,7 +1665,7 @@ __metadata:
     react: "npm:^19.2.3"
     react-bootstrap: "npm:^2.10.10"
     react-dom: "npm:^19.2.3"
-    react-router: "npm:^7.6.1"
+    react-router: "npm:^7.10.1"
     rollbar: "npm:^2.26.4"
     typescript: "npm:^5.8.3"
     vite: "npm:6.3.5"
@@ -3232,9 +3232,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:^7.6.1":
-  version: 7.6.1
-  resolution: "react-router@npm:7.6.1"
+"react-router@npm:^7.10.1":
+  version: 7.10.1
+  resolution: "react-router@npm:7.10.1"
   dependencies:
     cookie: "npm:^1.0.1"
     set-cookie-parser: "npm:^2.6.0"
@@ -3244,7 +3244,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10/90d3038db6d9c0d48bc932b8698c287a80759629ecef65f1ead32fadd78ef17895c7402832d3c94b47c45f10f8478b79551a647360415887f2f3a8fae10aca30
+  checksum: 10/0de854fe2d7d4d8f62337b829dd51fc8ce8167d8dd57e286b55ed6113a5910abe94164f47dda5f0bf2b4344abddaaf1ad6cbe87c0e63ab1ab3766155262dd7da
   languageName: node
   linkType: hard
 
