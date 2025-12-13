@@ -1007,32 +1007,32 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ag-charts-types@npm:11.3.1":
-  version: 11.3.1
-  resolution: "ag-charts-types@npm:11.3.1"
-  checksum: 10/1430e967d04d0b2fca03136a342ed967edef992f4a9c018e385d831732816363fab9ac38e93e939c47453f4698c5a43bd19508f1c7e3c64a6e026e942a008ec3
+"ag-charts-types@npm:11.3.2":
+  version: 11.3.2
+  resolution: "ag-charts-types@npm:11.3.2"
+  checksum: 10/1a2bfa9a2c3aebc12af3893015e2ef339b7013d5ea02bb9d366ef26e74f7b3abd66247ef11912bb01ae9ac9038101fef51d9307c3f15325f3acb5cb3fef859f3
   languageName: node
   linkType: hard
 
-"ag-grid-community@npm:33.3.1, ag-grid-community@npm:^33.3.1":
-  version: 33.3.1
-  resolution: "ag-grid-community@npm:33.3.1"
+"ag-grid-community@npm:33.3.2, ag-grid-community@npm:^33.3.2":
+  version: 33.3.2
+  resolution: "ag-grid-community@npm:33.3.2"
   dependencies:
-    ag-charts-types: "npm:11.3.1"
-  checksum: 10/f678ead26e348761d62d3ee465cd908d2dde28c9f2950f4da7af354f4ad418988100d00f14c009ff4c3ff959edfb64c873088e38fe927460caf02971902a0f0d
+    ag-charts-types: "npm:11.3.2"
+  checksum: 10/9f9fbcb2ca77247bccd7d5bda61df9910bb9f66f68bf4afe7de837e511a3ab851fc0139571281a467919da8f315aa81d4d14ae9252bb5efe7321f46f701db696
   languageName: node
   linkType: hard
 
-"ag-grid-react@npm:^33.3.1":
-  version: 33.3.1
-  resolution: "ag-grid-react@npm:33.3.1"
+"ag-grid-react@npm:^33.3.2":
+  version: 33.3.2
+  resolution: "ag-grid-react@npm:33.3.2"
   dependencies:
-    ag-grid-community: "npm:33.3.1"
+    ag-grid-community: "npm:33.3.2"
     prop-types: "npm:^15.8.1"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
-  checksum: 10/2bbe2f2d9b44674a78a4d3426a0902f057a7a733a8c2a98bf2444a8c579653b4eaa91800b699a6ac020d9baf20fefa99436d8702c8d4928d8bd24ef5a6ce1492
+  checksum: 10/b9b68555c1dbbfdd6de79a47fb7da6cd7d9a2e4f22b988e1121382dc172c287512ab02e7fcf396b8877f216220581a643b2aed4da3987979c25db261b77a4f38
   languageName: node
   linkType: hard
 
@@ -1656,8 +1656,8 @@ __metadata:
     "@types/react-dom": "npm:^19.1.6"
     "@types/react-router": "npm:^5.1.20"
     "@vitejs/plugin-react-swc": "npm:^3.10.2"
-    ag-grid-community: "npm:^33.3.1"
-    ag-grid-react: "npm:^33.3.1"
+    ag-grid-community: "npm:^33.3.2"
+    ag-grid-react: "npm:^33.3.2"
     cypress: "npm:^14.5.1"
     lightningcss: "npm:^1.30.1"
     path: "npm:^0.12.7"
