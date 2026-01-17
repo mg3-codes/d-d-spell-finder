@@ -22,16 +22,22 @@ const getCookieExpiration = (deleteCookie: boolean): string => {
  * Set a cookie with the given name, value, and expiration.
  * @param name - The name of the cookie.
  * @param value - The value of the cookie.
- * @param expire - Whether the cookie should expire in 7 days.
+ * @param expire - Whether the cookie should expire in 7 days, or "delete" to set expiration in the past.
  */
 export const setCookie = (
 	name: string,
 	value: string,
-	expire: boolean,
+	expire: boolean | "delete",
 ): void => {
-	document.cookie = `${name}=${value};${
-		expire ? getCookieExpiration(false) : ""
-	}SameSite=strict;path=/`;
+	const expiration =
+		expire === "delete"
+			? getCookieExpiration(true)
+			: expire
+				? getCookieExpiration(false)
+				: "";
+
+	// biome-ignore lint/suspicious/noDocumentCookie: TODO: need to fix document cookies
+	document.cookie = `${name}=${value};${expiration}SameSite=strict;path=/`;
 };
 
 /**
@@ -53,9 +59,7 @@ export const getCookie = (name: string): string | null => {
  * @param name - The name of the cookie.
  */
 export const deleteCookie = (name: string): void => {
-	document.cookie = `${name}="";${getCookieExpiration(
-		true,
-	)}SameSite=strict;path=/`;
+	setCookie(name, "", "delete");
 };
 
 /**

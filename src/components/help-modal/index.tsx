@@ -4,14 +4,11 @@
  * @format
  */
 
-import React from "react";
-
 import Accordion from "react-bootstrap/Accordion";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-
-import { EdgeSymbolKey } from "../edge-symbol-key";
 import { EdgeDiceKey } from "../edge-dice-key";
+import { EdgeSymbolKey } from "../edge-symbol-key";
 
 export interface IHelpModalProps {
 	modalIsOpen: boolean;

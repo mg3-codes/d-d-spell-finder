@@ -4,9 +4,9 @@
  * @format
  */
 
+import { useRollbar } from "@rollbar/react";
 import type { RowNode } from "ag-grid-community";
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -73,7 +73,7 @@ const BooleanFilter = ({
 				return;
 			}
 
-			setSelectedState(Number.parseInt(state) as BooleanBasedFilterState);
+			setSelectedState(Number.parseInt(state, 10) as BooleanBasedFilterState);
 		},
 		[selectedState, rollbar],
 	);

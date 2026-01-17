@@ -62,7 +62,7 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				return;
 			}
 
-			const level = Number.parseInt(numberAsString);
+			const level = Number.parseInt(numberAsString, 10);
 			numberBasedFilterHandleCheck(
 				selectedLevels,
 				setSelectedLevels,

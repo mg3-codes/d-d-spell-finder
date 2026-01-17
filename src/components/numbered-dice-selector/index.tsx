@@ -8,10 +8,8 @@ import type React from "react";
 import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-
-import { DiceNumberInput } from "../dice-number-input";
-
 import NumberDie from "../../classes/number-die";
+import { DiceNumberInput } from "../dice-number-input";
 
 import "./styles.css";
 
@@ -38,35 +36,35 @@ export const NumberedDiceSelector = ({
 	const rollAllDice = useCallback((): void => {
 		const dice: NumberDie[] = [];
 
-		const twoSided = Number.parseInt(twoSidedInputValue);
+		const twoSided = Number.parseInt(twoSidedInputValue, 10);
 		for (let rolls = 0; rolls < twoSided; rolls++) {
 			dice.push(new NumberDie(2));
 		}
-		const fourSided = Number.parseInt(fourSidedInputValue);
+		const fourSided = Number.parseInt(fourSidedInputValue, 10);
 		for (let rolls = 0; rolls < fourSided; rolls++) {
 			dice.push(new NumberDie(4));
 		}
-		const sixSided = Number.parseInt(sixSidedInputValue);
+		const sixSided = Number.parseInt(sixSidedInputValue, 10);
 		for (let rolls = 0; rolls < sixSided; rolls++) {
 			dice.push(new NumberDie(6));
 		}
-		const eightSided = Number.parseInt(eightSidedInputValue);
+		const eightSided = Number.parseInt(eightSidedInputValue, 10);
 		for (let rolls = 0; rolls < eightSided; rolls++) {
 			dice.push(new NumberDie(8));
 		}
-		const tenSided = Number.parseInt(tenSidedInputValue);
+		const tenSided = Number.parseInt(tenSidedInputValue, 10);
 		for (let rolls = 0; rolls < tenSided; rolls++) {
 			dice.push(new NumberDie(10));
 		}
-		const twelveSided = Number.parseInt(twelveSidedInputValue);
+		const twelveSided = Number.parseInt(twelveSidedInputValue, 10);
 		for (let rolls = 0; rolls < twelveSided; rolls++) {
 			dice.push(new NumberDie(12));
 		}
-		const twentySided = Number.parseInt(twentySidedInputValue);
+		const twentySided = Number.parseInt(twentySidedInputValue, 10);
 		for (let rolls = 0; rolls < twentySided; rolls++) {
 			dice.push(new NumberDie(20));
 		}
-		const oneHundredSided = Number.parseInt(oneHundredSidedInputValue);
+		const oneHundredSided = Number.parseInt(oneHundredSidedInputValue, 10);
 		for (let rolls = 0; rolls < oneHundredSided; rolls++) {
 			dice.push(new NumberDie(100));
 		}
@@ -96,17 +94,20 @@ export const NumberedDiceSelector = ({
 	}, []);
 
 	useEffect(() => {
-		if (Number.parseInt(twoSidedInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(fourSidedInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(sixSidedInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(eightSidedInputValue) > 0)
+		if (Number.parseInt(twoSidedInputValue, 10) > 0) setRollIsDisabled(false);
+		else if (Number.parseInt(fourSidedInputValue, 10) > 0)
 			setRollIsDisabled(false);
-		else if (Number.parseInt(tenSidedInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(twelveSidedInputValue) > 0)
+		else if (Number.parseInt(sixSidedInputValue, 10) > 0)
 			setRollIsDisabled(false);
-		else if (Number.parseInt(twentySidedInputValue) > 0)
+		else if (Number.parseInt(eightSidedInputValue, 10) > 0)
 			setRollIsDisabled(false);
-		else if (Number.parseInt(oneHundredSidedInputValue) > 0)
+		else if (Number.parseInt(tenSidedInputValue, 10) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(twelveSidedInputValue, 10) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(twentySidedInputValue, 10) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(oneHundredSidedInputValue, 10) > 0)
 			setRollIsDisabled(false);
 		else setRollIsDisabled(true);
 	}, [
@@ -124,7 +125,7 @@ export const NumberedDiceSelector = ({
 		(
 			currentValue: string,
 			updateFunction: React.Dispatch<React.SetStateAction<string>>,
-		) => updateFunction((Number.parseInt(currentValue) + 1).toString()),
+		) => updateFunction((Number.parseInt(currentValue, 10) + 1).toString()),
 		[],
 	);
 
@@ -133,7 +134,9 @@ export const NumberedDiceSelector = ({
 			currentValue: string,
 			updateFunction: React.Dispatch<React.SetStateAction<string>>,
 		) =>
-			updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString()),
+			updateFunction(
+				Math.max(Number.parseInt(currentValue, 10) - 1, 0).toString(),
+			),
 		[],
 	);
 

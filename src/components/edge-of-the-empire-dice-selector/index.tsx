@@ -8,9 +8,6 @@ import type React from "react";
 import { useCallback, useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-
-import { DiceNumberInput } from "../dice-number-input";
-
 import AbilityDie from "../../classes/edge-of-the-empire-dice/ability-die";
 import BoostDie from "../../classes/edge-of-the-empire-dice/boost-die";
 import ChallengeDie from "../../classes/edge-of-the-empire-dice/challenge-die";
@@ -19,6 +16,7 @@ import ForceDie from "../../classes/edge-of-the-empire-dice/force-die";
 import ProficiencyDie from "../../classes/edge-of-the-empire-dice/proficiency-die";
 import SetbackDie from "../../classes/edge-of-the-empire-dice/setback-die";
 import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
+import { DiceNumberInput } from "../dice-number-input";
 
 import "./styles.css";
 
@@ -50,31 +48,31 @@ export const EdgeOfTheEmpireDiceSelector = ({
 			force: [],
 		};
 
-		const boost = Number.parseInt(boostInputValue);
+		const boost = Number.parseInt(boostInputValue, 10);
 		for (let rolls = 0; rolls < boost; rolls++) {
 			dice.boost.push(new BoostDie());
 		}
-		const setback = Number.parseInt(setbackInputValue);
+		const setback = Number.parseInt(setbackInputValue, 10);
 		for (let rolls = 0; rolls < setback; rolls++) {
 			dice.setback.push(new SetbackDie());
 		}
-		const ability = Number.parseInt(abilityInputValue);
+		const ability = Number.parseInt(abilityInputValue, 10);
 		for (let rolls = 0; rolls < ability; rolls++) {
 			dice.ability.push(new AbilityDie());
 		}
-		const difficulty = Number.parseInt(difficultyInputValue);
+		const difficulty = Number.parseInt(difficultyInputValue, 10);
 		for (let rolls = 0; rolls < difficulty; rolls++) {
 			dice.difficulty.push(new DifficultyDie());
 		}
-		const proficiency = Number.parseInt(proficiencyInputValue);
+		const proficiency = Number.parseInt(proficiencyInputValue, 10);
 		for (let rolls = 0; rolls < proficiency; rolls++) {
 			dice.proficiency.push(new ProficiencyDie());
 		}
-		const challenge = Number.parseInt(challengeInputValue);
+		const challenge = Number.parseInt(challengeInputValue, 10);
 		for (let rolls = 0; rolls < challenge; rolls++) {
 			dice.challenge.push(new ChallengeDie());
 		}
-		const force = Number.parseInt(forceInputValue);
+		const force = Number.parseInt(forceInputValue, 10);
 		for (let rolls = 0; rolls < force; rolls++) {
 			dice.force.push(new ForceDie());
 		}
@@ -102,15 +100,18 @@ export const EdgeOfTheEmpireDiceSelector = ({
 	}, []);
 
 	useEffect(() => {
-		if (Number.parseInt(boostInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(setbackInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(abilityInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(difficultyInputValue) > 0)
+		if (Number.parseInt(boostInputValue, 10) > 0) setRollIsDisabled(false);
+		else if (Number.parseInt(setbackInputValue, 10) > 0)
 			setRollIsDisabled(false);
-		else if (Number.parseInt(proficiencyInputValue) > 0)
+		else if (Number.parseInt(abilityInputValue, 10) > 0)
 			setRollIsDisabled(false);
-		else if (Number.parseInt(challengeInputValue) > 0) setRollIsDisabled(false);
-		else if (Number.parseInt(forceInputValue) > 0) setRollIsDisabled(false);
+		else if (Number.parseInt(difficultyInputValue, 10) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(proficiencyInputValue, 10) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(challengeInputValue, 10) > 0)
+			setRollIsDisabled(false);
+		else if (Number.parseInt(forceInputValue, 10) > 0) setRollIsDisabled(false);
 		else setRollIsDisabled(true);
 	}, [
 		boostInputValue,
@@ -126,7 +127,7 @@ export const EdgeOfTheEmpireDiceSelector = ({
 		(
 			currentValue: string,
 			updateFunction: React.Dispatch<React.SetStateAction<string>>,
-		) => updateFunction((Number.parseInt(currentValue) + 1).toString()),
+		) => updateFunction((Number.parseInt(currentValue, 10) + 1).toString()),
 		[],
 	);
 
@@ -135,7 +136,9 @@ export const EdgeOfTheEmpireDiceSelector = ({
 			currentValue: string,
 			updateFunction: React.Dispatch<React.SetStateAction<string>>,
 		) =>
-			updateFunction(Math.max(Number.parseInt(currentValue) - 1, 0).toString()),
+			updateFunction(
+				Math.max(Number.parseInt(currentValue, 10) - 1, 0).toString(),
+			),
 		[],
 	);
 

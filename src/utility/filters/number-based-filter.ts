@@ -23,7 +23,7 @@ export type NumberBasedFilterSetModel = {
  * @returns An array of disabled filters.
  */
 export const createDisabledFilterArray = (numFilters: number): number[] =>
-	Array.from({ length: numFilters }, (v, index) => index);
+	Array.from({ length: numFilters }, (_v, index) => index);
 
 /**
  * Check if the filter passes based on the submitted value and selected filters.
@@ -62,7 +62,7 @@ export const numberBasedFilterHandleCheck = (
 	setSelectedFilters: (value: React.SetStateAction<number[]>) => void,
 	submittedValue: string,
 ): void => {
-	const numValue = Number.parseInt(submittedValue);
+	const numValue = Number.parseInt(submittedValue, 10);
 	if (!selectedFilters.includes(numValue))
 		setSelectedFilters([...selectedFilters, numValue]);
 	else

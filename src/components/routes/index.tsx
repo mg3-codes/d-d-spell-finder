@@ -4,8 +4,6 @@
  * @format
  */
 
-import React from "react";
-
 import { IndexPage } from "../index-page";
 import PageWrapper from "../page-wrapper";
 

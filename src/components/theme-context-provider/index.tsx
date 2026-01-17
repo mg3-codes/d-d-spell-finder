@@ -8,8 +8,8 @@ import type React from "react";
 import { createContext, useCallback, useContext, useState } from "react";
 
 import { Theme } from "../../enums/theme";
-import { AppSettingsContext } from "../app-settings-provider";
 import { getCookie, setCookie } from "../../utility/cookies";
+import { AppSettingsContext } from "../app-settings-provider";
 
 export type ThemeContext = {
 	currentTheme: Theme;
@@ -47,14 +47,14 @@ export const ThemeContextProvider = ({
 	const [currentTheme, setCurrentTheme] = useState<Theme>(() => {
 		const cookie = getCookie(cookieName);
 
-		if (cookie) return Number.parseInt(cookie);
+		if (cookie) return Number.parseInt(cookie, 10);
 
 		return detectColorScheme();
 	});
 	const [selectedThemeOption, setSelectedThemeOption] = useState<Theme>(() => {
 		const cookie = getCookie(cookieName);
 
-		if (cookie) return Number.parseInt(cookie);
+		if (cookie) return Number.parseInt(cookie, 10);
 
 		return Theme.Auto;
 	});

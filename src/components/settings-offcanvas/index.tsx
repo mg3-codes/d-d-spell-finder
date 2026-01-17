@@ -59,7 +59,7 @@ const SettingsOffcanvas = (): React.ReactElement => {
 					return;
 				}
 
-				handleColumnChange(Number.parseInt(numberAsString));
+				handleColumnChange(Number.parseInt(numberAsString, 10));
 			},
 			[selectedColumns, handleColumnChange, rollbar, selectedColumns],
 		);
@@ -78,7 +78,7 @@ const SettingsOffcanvas = (): React.ReactElement => {
 				return;
 			}
 
-			updateTheme(Number.parseInt(numberAsString));
+			updateTheme(Number.parseInt(numberAsString, 10));
 		},
 		[rollbar, updateTheme],
 	);

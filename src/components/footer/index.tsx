@@ -41,7 +41,7 @@ const Footer = () => {
 				return;
 			}
 
-			setSelectedContent(Number.parseInt(numberAsString));
+			setSelectedContent(Number.parseInt(numberAsString, 10));
 			setModalIsOpen(true);
 		},
 		[rollbar],
