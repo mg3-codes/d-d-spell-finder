@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -17,13 +16,13 @@ import {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { Range, mapNumberToRangeDisplayName } from "../../../enums/ranges";
+import { mapNumberToRangeDisplayName, Range } from "../../../enums/ranges";
 import {
-	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./styles.css";
@@ -33,7 +32,6 @@ const filterDisabledArray = createDisabledFilterArray(25);
 const RangeFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const [selectedRanges, setSelectedRanges] =
 		useState<number[]>(filterDisabledArray);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedRanges.length === filterDisabledArray.length)
@@ -58,14 +56,11 @@ const RangeFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const range = e.target.getAttribute("data-range");
 
-			if (!range) {
-				rollbar.warning("range was null", e);
-				return;
-			}
+			if (!range) return;
 
 			numberBasedFilterHandleCheck(selectedRanges, setSelectedRanges, range);
 		},
-		[selectedRanges, rollbar],
+		[selectedRanges],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

@@ -4,7 +4,6 @@
  * @format
  */
 
-import { useRollbar } from "@rollbar/react";
 import {
 	type CellClickedEvent,
 	CellStyleModule,
@@ -12,15 +11,15 @@ import {
 	type ColDef,
 	type ColumnMovedEvent,
 	CustomFilterModule,
+	colorSchemeDark,
 	type GetRowIdParams,
 	ModuleRegistry,
 	RowApiModule,
 	RowSelectionModule,
 	TextFilterModule,
 	TooltipModule,
-	ValidationModule,
-	colorSchemeDark,
 	themeQuartz,
+	ValidationModule,
 } from "ag-grid-community";
 import { AgGridReact } from "ag-grid-react";
 import {
@@ -35,13 +34,12 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Toast from "react-bootstrap/Toast";
 import ToastContainer from "react-bootstrap/ToastContainer";
-import type { LogArgument } from "rollbar";
 
 import spellJson from "../../assets/5e-spells.json";
 import { mapColumnToDisplayName } from "../../enums/columns";
 import { Theme } from "../../enums/theme";
 import type Spell from "../../types/spell";
-import { type TableRow, buildRow } from "../../types/table-row";
+import { buildRow, type TableRow } from "../../types/table-row";
 import { getCookie, setCookie } from "../../utility/cookies";
 import {
 	defaultColDef,
@@ -84,7 +82,6 @@ const Table = (): React.ReactElement => {
 	const [modalText, setModalText] = useState<string>("");
 	const [showCookieToast, setShowCookieToast] = useState<boolean>(!useCookies);
 	const gridRef = useRef<AgGridReact>(null);
-	const rollbar = useRollbar();
 
 	const showModalWithMessage = (message: string): void => {
 		setModalText(message);
@@ -113,9 +110,9 @@ const Table = (): React.ReactElement => {
 
 			setSelectedRows(rows);
 		} catch (e: unknown) {
-			rollbar.warning("error updating selected rows", e as LogArgument);
+			console.warn("error updating selected rows", e);
 		}
-	}, [rollbar, setSelectedRows]);
+	}, [setSelectedRows]);
 
 	const onColumnMoved = useCallback(
 		(event: ColumnMovedEvent<unknown>): void => {

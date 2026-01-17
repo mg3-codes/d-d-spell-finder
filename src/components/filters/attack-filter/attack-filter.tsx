@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -19,11 +18,11 @@ import Form from "react-bootstrap/Form";
 
 import { Attack, mapNumberToAttackDisplayName } from "../../../enums/attacks";
 import {
-	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./styles.css";
@@ -34,7 +33,6 @@ const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const [selectedAttacks, setSelectedAttacks] = useState<number[]>(
 		attackFilterDisabledArray,
 	);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedAttacks.length === attackFilterDisabledArray.length)
@@ -62,14 +60,11 @@ const AttackFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const attack = e.target.getAttribute("data-attack");
 
-			if (!attack) {
-				rollbar.warning("distance was null", e);
-				return;
-			}
+			if (!attack) return;
 
 			numberBasedFilterHandleCheck(selectedAttacks, setSelectedAttacks, attack);
 		},
-		[selectedAttacks, rollbar],
+		[selectedAttacks],
 	);
 
 	const isChecked = (x: Attack): boolean | undefined =>

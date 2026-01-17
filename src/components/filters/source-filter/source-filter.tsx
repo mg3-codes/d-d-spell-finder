@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -17,13 +16,13 @@ import {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { Source, mapNumberToSourceDisplayName } from "../../../enums/sources";
+import { mapNumberToSourceDisplayName, Source } from "../../../enums/sources";
 import {
-	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./styles.css";
@@ -33,8 +32,6 @@ const filterDisabledArray = createDisabledFilterArray(9);
 const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const [selectedSources, setSelectedSources] =
 		useState<number[]>(filterDisabledArray);
-
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedSources.length === filterDisabledArray.length)
@@ -62,14 +59,11 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const source = e.target.getAttribute("data-source");
 
-			if (!source) {
-				rollbar.warning("source was null", e);
-				return;
-			}
+			if (!source) return;
 
 			numberBasedFilterHandleCheck(selectedSources, setSelectedSources, source);
 		},
-		[selectedSources, rollbar],
+		[selectedSources],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

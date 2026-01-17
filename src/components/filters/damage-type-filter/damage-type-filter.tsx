@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -22,11 +21,11 @@ import {
 	mapNumberToDamageTypeDisplayName,
 } from "../../../enums/damage-types";
 import {
-	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./styles.css";
@@ -39,7 +38,6 @@ const DamageTypeFilter = ({
 	const [selectedDamageTypes, setSelectedDamageTypes] = useState<number[]>(
 		damageTypeFilterDisabledArray,
 	);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedDamageTypes.length === damageTypeFilterDisabledArray.length)
@@ -67,10 +65,7 @@ const DamageTypeFilter = ({
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const damage = e.target.getAttribute("data-damage");
 
-			if (!damage) {
-				rollbar.warning("damage was null", e);
-				return;
-			}
+			if (!damage) return;
 
 			numberBasedFilterHandleCheck(
 				selectedDamageTypes,
@@ -78,7 +73,7 @@ const DamageTypeFilter = ({
 				damage,
 			);
 		},
-		[selectedDamageTypes, rollbar],
+		[selectedDamageTypes],
 	);
 
 	const isChecked = (x: DamageType): boolean | undefined =>

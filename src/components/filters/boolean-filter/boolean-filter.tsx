@@ -4,7 +4,6 @@
  * @format
  */
 
-import { useRollbar } from "@rollbar/react";
 import type { RowNode } from "ag-grid-community";
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
 import type React from "react";
@@ -39,7 +38,6 @@ const BooleanFilter = ({
 	const [selectedState, setSelectedState] = useState<BooleanBasedFilterState>(
 		BooleanBasedFilterState.All,
 	);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedState === BooleanBasedFilterState.All) onModelChange(null);
@@ -68,14 +66,11 @@ const BooleanFilter = ({
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const state = e.target.getAttribute("data-boolean");
 
-			if (!state) {
-				rollbar.warning("stat was null", e);
-				return;
-			}
+			if (!state) return;
 
 			setSelectedState(Number.parseInt(state, 10) as BooleanBasedFilterState);
 		},
-		[selectedState, rollbar],
+		[selectedState],
 	);
 
 	const isSelected = (x: BooleanBasedFilterState): boolean =>

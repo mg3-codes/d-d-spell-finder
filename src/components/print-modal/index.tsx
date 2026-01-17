@@ -4,7 +4,6 @@
  * @format
  */
 
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type MouseEventHandler,
@@ -40,7 +39,6 @@ const PrintModal = ({
 	const [selectedNumberPerRow, setSelectedNumberPerRow] = useState<number>(3);
 	const [printError, setPrintError] = useState<boolean>(false);
 	const { currentTheme } = useContext(ThemeContext);
-	const rollbar = useRollbar();
 
 	const clearPrintError = useCallback(() => setPrintError(false), []);
 
@@ -48,14 +46,11 @@ const PrintModal = ({
 		(e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
 			const selection = (e.target as HTMLElement).getAttribute("data-cards");
 
-			if (!selection) {
-				rollbar.warning("selection was null", e);
-				return;
-			}
+			if (!selection) return;
 
 			setSelectedNumberPerRow(Number.parseInt(selection, 10));
 		},
-		[rollbar],
+		[],
 	);
 
 	return (
