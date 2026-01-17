@@ -16,8 +16,8 @@
 	},
 	"dependencies": {
 		"@popperjs/core": "^2.11.8",
-		"ag-grid-community": "^33.3.2",
-		"ag-grid-react": "^33.3.2",
+		"ag-grid-community": "^35.0.0",
+		"ag-grid-react": "^35.0.0",
 		"path": "^0.12.7",
 		"react": "^19.2.3",
 		"react-bootstrap": "^2.10.10",
