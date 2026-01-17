@@ -69,39 +69,52 @@ ModuleRegistry.registerModules([
 const cookieName = "columnDefinition";
 
 const Table = (): React.ReactElement => {
-   const [spellRows, setSpellRows] = useState<TableRow[] | null>();
-   // Parse query params from URL
-   const getQueryParams = (): Record<string, string> => {
-	   if (typeof window === "undefined") return {};
-	   const params = new URLSearchParams(window.location.search);
-	   const result: Record<string, string> = {};
-	   params.forEach((value, key) => {
-		   result[key] = value;
-	   });
-	   return result;
-   };
-   useEffect(() => {
-	   const handleFilter = () => {
-		   const queryParams = getQueryParams();
-		   let rows = spellJson.map(buildRow);
-		   // Filter by name
-		   if (queryParams.name) {
-			   rows = rows.filter(row => row.name.toLowerCase().includes(queryParams.name.toLowerCase()));
-		   }
-		   // Filter by verbal
-		   if (queryParams.verbal) {
-			   const verbalValue = queryParams.verbal.toLowerCase() === "true";
-			   rows = rows.filter(row => row.verbal === verbalValue);
-		   }
-		   setSpellRows(rows);
-	   };
-	   handleFilter();
-	   window.addEventListener('popstate', handleFilter);
-	   return () => {
-		   window.removeEventListener('popstate', handleFilter);
-	   };
-   }, []);
-   // You can now use getQueryParams() to access query params for filtering in the next steps.
+	const [spellRows, setSpellRows] = useState<TableRow[] | null>();
+
+	// Parse query params from URL
+	const getQueryParams = useCallback((): Record<string, string> => {
+		if (typeof window === "undefined") return {};
+
+		const params = new URLSearchParams(window.location.search);
+		const result: Record<string, string> = {};
+
+		params.forEach((value, key) => {
+			result[key] = value;
+		});
+
+		return result;
+	}, []);
+
+	useEffect(() => {
+		const handleFilter = () => {
+			const queryParams = getQueryParams();
+			let rows = spellJson.map(buildRow);
+
+			// Filter by name
+			if (queryParams.name) {
+				rows = rows.filter((row) =>
+					row.name.toLowerCase().includes(queryParams.name.toLowerCase()),
+				);
+			}
+
+			// Filter by verbal
+			if (queryParams.verbal) {
+				const verbalValue = queryParams.verbal.toLowerCase() === "true";
+				rows = rows.filter((row) => row.verbal === verbalValue);
+			}
+
+			setSpellRows(rows);
+		};
+
+		handleFilter();
+
+		window.addEventListener("popstate", handleFilter);
+
+		return () => {
+			window.removeEventListener("popstate", handleFilter);
+		};
+	}, [getQueryParams]);
+
 	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
 	const { currentTheme: selectedTheme } = useContext(ThemeContext);
 	const { selectedColumns } = useContext(ColumnContext);
