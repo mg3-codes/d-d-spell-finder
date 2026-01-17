@@ -1,6 +1,14 @@
 <!-- @format -->
 
 # Changelog
+## 0.7.0
+### New Contributor
+-  [Sneekyboots](https://github.com/Sneekyboots)
+
+### Features
+-  Add ability to filter spell table by name and verbal
+
+
 ## 0.6.5
 -  Package updates
 -  Remove Rollbar
