@@ -1,6 +1,12 @@
 <!-- @format -->
 
 # Changelog
+## 0.6.5
+-  Package updates
+-  Remove Rollbar
+
+## 0.6.4
+-  Package updates
 
 ## 0.6.3
 -  Fix grammarian filtering bug where certain filters were not applied correctly due to a mismatch in filter criteria. Updated the filtering logic to ensure accurate application of grammarian filters.
