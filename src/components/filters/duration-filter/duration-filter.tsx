@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -16,18 +15,17 @@ import {
 } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
-
-import {
-	type NumberBasedFilterProps,
-	createDisabledFilterArray,
-	numberBasedFilterDoesFilterPass,
-	numberBasedFilterHandleCheck,
-	numberBasedFilterIsChecked,
-} from "../../../utility/filters/number-based-filter";
 import {
 	Duration,
 	mapNumberToDurationDisplayName,
 } from "../../../enums/durations";
+import {
+	createDisabledFilterArray,
+	numberBasedFilterDoesFilterPass,
+	numberBasedFilterHandleCheck,
+	numberBasedFilterIsChecked,
+	type NumberBasedFilterProps,
+} from "../../../utility/filters/number-based-filter";
 
 import "./styles.css";
 
@@ -36,7 +34,6 @@ const filterDisabledArray = createDisabledFilterArray(15);
 const DurationFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const [selectedDurations, setSelectedDurations] =
 		useState<number[]>(filterDisabledArray);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedDurations.length === filterDisabledArray.length)
@@ -57,10 +54,7 @@ const DurationFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const duration = e.target.getAttribute("data-duration");
 
-			if (!duration) {
-				rollbar.warning("duration is null", e);
-				return;
-			}
+			if (!duration) return;
 
 			numberBasedFilterHandleCheck(
 				selectedDurations,
@@ -68,7 +62,7 @@ const DurationFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				duration,
 			);
 		},
-		[selectedDurations, rollbar],
+		[selectedDurations],
 	);
 
 	const selectAllDurations = useCallback(

@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -22,11 +21,11 @@ import {
 	mapNumberToCastingTimeDisplayName,
 } from "../../../enums/casting-times";
 import {
-	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./styles.css";
@@ -38,7 +37,6 @@ const CastingTimeFilter = ({
 }: CustomFilterProps): ReactElement => {
 	const [selectedCastingTimes, setSelectedCastingTimes] =
 		useState<number[]>(filterDisabledArray);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedCastingTimes.length === filterDisabledArray.length)
@@ -69,10 +67,7 @@ const CastingTimeFilter = ({
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const castingTime = e.target.getAttribute("data-casting-time");
 
-			if (!castingTime) {
-				rollbar.warning("casting time was null", e);
-				return;
-			}
+			if (!castingTime) return;
 
 			numberBasedFilterHandleCheck(
 				selectedCastingTimes,
@@ -80,7 +75,7 @@ const CastingTimeFilter = ({
 				castingTime,
 			);
 		},
-		[selectedCastingTimes, rollbar],
+		[selectedCastingTimes],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

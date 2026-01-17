@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -39,7 +38,6 @@ const SavingThrowFilter = ({
 	const [selectedSavingThrows, setSelectedSavingThrows] = useState<number[]>(
 		savingThrowFilterDisabledArray,
 	);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedSavingThrows.length === savingThrowFilterDisabledArray.length)
@@ -70,10 +68,7 @@ const SavingThrowFilter = ({
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const savingThrow = e.target.getAttribute("data-throw");
 
-			if (!savingThrow) {
-				rollbar.warning("saving throw was null", e);
-				return;
-			}
+			if (!savingThrow) return;
 
 			numberBasedFilterHandleCheck(
 				selectedSavingThrows,
@@ -81,7 +76,7 @@ const SavingThrowFilter = ({
 				savingThrow,
 			);
 		},
-		[selectedSavingThrows, rollbar],
+		[selectedSavingThrows],
 	);
 
 	const isChecked = (x: SavingThrow): boolean | undefined =>

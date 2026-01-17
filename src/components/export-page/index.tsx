@@ -61,7 +61,7 @@ const ExportPage = () => {
 	// biome-ignore lint/correctness/useExhaustiveDependencies(queryParams.get): this should only execute on page load
 	const generatedCards = useMemo(() => {
 		const elements: React.ReactNode[] = [];
-		const numColumns = Number.parseInt(queryParams.get("numPerRow") ?? "3");
+		const numColumns = Number.parseInt(queryParams.get("numPerRow") ?? "3", 10);
 		const rowsPerPage = 2;
 		let counter = 0;
 		while (counter <= selectedRows.length) {

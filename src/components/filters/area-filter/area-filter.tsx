@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -23,13 +22,13 @@ import {
 	Distance,
 	mapNumberToDistanceDisplayName,
 } from "../../../enums/distances";
-import { Shape, mapNumberToShapeDisplayName } from "../../../enums/shapes";
+import { mapNumberToShapeDisplayName, Shape } from "../../../enums/shapes";
 import {
-	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./styles.css";
@@ -47,7 +46,6 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		shapeFilterDisabledArray,
 	);
 	const [showOverlay, setShowOverlay] = useState<boolean>(false);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (
@@ -62,10 +60,7 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const distance = e.target.getAttribute("data-distance");
 
-			if (!distance) {
-				rollbar.warning("distance was null", e);
-				return;
-			}
+			if (!distance) return;
 
 			numberBasedFilterHandleCheck(
 				selectedDistances,
@@ -73,7 +68,7 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				distance,
 			);
 		},
-		[selectedDistances, rollbar],
+		[selectedDistances],
 	);
 
 	const selectAllDistances = useCallback(
@@ -87,14 +82,11 @@ const AreaFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const shape = e.target.getAttribute("data-shape");
 
-			if (!shape) {
-				rollbar.warning("shape was null", e);
-				return;
-			}
+			if (!shape) return;
 
 			numberBasedFilterHandleCheck(selectedShapes, setSelectedShapes, shape);
 		},
-		[selectedShapes, rollbar],
+		[selectedShapes],
 	);
 
 	const selectAllShapes = useCallback(

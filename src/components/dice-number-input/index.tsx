@@ -29,7 +29,7 @@ export const DiceNumberInput = ({
 	const [decreaseIsDisabled, setDecreaseIsDisabled] = useState<boolean>(true);
 
 	const inputIsValid = useCallback((): boolean => {
-		const valueAsNumber = Number.parseInt(value);
+		const valueAsNumber = Number.parseInt(value, 10);
 
 		if (valueAsNumber < 0) return false;
 
@@ -40,7 +40,7 @@ export const DiceNumberInput = ({
 		if (!inputIsValid()) setShowError(true);
 		else setShowError(false);
 
-		const valueAsNumber = Number.parseInt(value);
+		const valueAsNumber = Number.parseInt(value, 10);
 		setDecreaseIsDisabled(Number.isNaN(valueAsNumber) || valueAsNumber <= 0);
 	}, [value, inputIsValid]);
 

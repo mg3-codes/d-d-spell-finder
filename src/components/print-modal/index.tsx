@@ -4,7 +4,6 @@
  * @format
  */
 
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type MouseEventHandler,
@@ -19,12 +18,10 @@ import Carousel from "react-bootstrap/Carousel";
 import Dropdown from "react-bootstrap/Dropdown";
 import Modal from "react-bootstrap/Modal";
 import { Link } from "react-router";
-
-import { PrintCard } from "../print-card";
-import { ThemeContext } from "../theme-context-provider";
-
 import { Theme } from "../../enums/theme";
 import type { TableRow } from "../../types/table-row";
+import { PrintCard } from "../print-card";
+import { ThemeContext } from "../theme-context-provider";
 
 import "./styles.css";
 
@@ -42,7 +39,6 @@ const PrintModal = ({
 	const [selectedNumberPerRow, setSelectedNumberPerRow] = useState<number>(3);
 	const [printError, setPrintError] = useState<boolean>(false);
 	const { currentTheme } = useContext(ThemeContext);
-	const rollbar = useRollbar();
 
 	const clearPrintError = useCallback(() => setPrintError(false), []);
 
@@ -50,14 +46,11 @@ const PrintModal = ({
 		(e: React.MouseEvent<HTMLElement, MouseEvent>): void => {
 			const selection = (e.target as HTMLElement).getAttribute("data-cards");
 
-			if (!selection) {
-				rollbar.warning("selection was null", e);
-				return;
-			}
+			if (!selection) return;
 
-			setSelectedNumberPerRow(Number.parseInt(selection));
+			setSelectedNumberPerRow(Number.parseInt(selection, 10));
 		},
-		[rollbar],
+		[],
 	);
 
 	return (

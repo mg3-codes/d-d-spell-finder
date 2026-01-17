@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -19,11 +18,11 @@ import Form from "react-bootstrap/Form";
 
 import { Effect, mapEffectToDisplayName } from "../../../enums/effects";
 import {
-	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./styles.css";
@@ -34,7 +33,6 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const [selectedEffectTypes, setSelectedEffectTypes] = useState<number[]>(
 		effectFilterDisabledArray,
 	);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedEffectTypes.length === effectFilterDisabledArray.length)
@@ -70,10 +68,7 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const effect = e.target.getAttribute("data-effect");
 
-			if (!effect) {
-				rollbar.warning("effect was null", e);
-				return;
-			}
+			if (!effect) return;
 
 			numberBasedFilterHandleCheck(
 				selectedEffectTypes,
@@ -81,7 +76,7 @@ const EffectFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				effect,
 			);
 		},
-		[selectedEffectTypes, rollbar],
+		[selectedEffectTypes],
 	);
 
 	const isChecked = (x: Effect): boolean | undefined =>

@@ -4,8 +4,6 @@
  * @format
  */
 
-import React from "react";
-
 import { DiceRollerPage } from "../dice-roller-page";
 import PageWrapper from "../page-wrapper";
 

@@ -52,7 +52,7 @@ export const RollHistoryModal = ({
 	const handlePaginationClick = useCallback(
 		(e: React.MouseEvent) =>
 			setCurrentRoll(
-				Number.parseInt(e.currentTarget.getAttribute("data-roll") ?? "0"),
+				Number.parseInt(e.currentTarget.getAttribute("data-roll") ?? "0", 10),
 			),
 		[],
 	);

@@ -12,6 +12,7 @@
 }
 
 * {
+	/* biome-ignore lint/complexity/noImportantStyles: this override is desired */
 	--bs-toast-bg: var(--bs-body-bg) !important;
 	--margin-sm: 6px;
 	--margin-md: 10px;

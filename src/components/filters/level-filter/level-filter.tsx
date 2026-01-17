@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -18,11 +17,11 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
 import {
-	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./styles.css";
@@ -32,7 +31,6 @@ const filterDisabledArray = createDisabledFilterArray(10);
 const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const [selectedLevels, setSelectedLevels] =
 		useState<number[]>(filterDisabledArray);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedLevels.length === filterDisabledArray.length)
@@ -58,18 +56,17 @@ const LevelFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 			const numberAsString = e.target.getAttribute("data-level");
 
 			if (!numberAsString) {
-				rollbar.warning("level was null", e);
 				return;
 			}
 
-			const level = Number.parseInt(numberAsString);
+			const level = Number.parseInt(numberAsString, 10);
 			numberBasedFilterHandleCheck(
 				selectedLevels,
 				setSelectedLevels,
 				level.toString(),
 			);
 		},
-		[selectedLevels, rollbar],
+		[selectedLevels],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

@@ -5,7 +5,6 @@
  */
 
 import { type CustomFilterProps, useGridFilter } from "ag-grid-react";
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -17,13 +16,13 @@ import {
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 
-import { School, mapNumberToSchoolDisplayName } from "../../../enums/schools";
+import { mapNumberToSchoolDisplayName, School } from "../../../enums/schools";
 import {
-	type NumberBasedFilterProps,
 	createDisabledFilterArray,
 	numberBasedFilterDoesFilterPass,
 	numberBasedFilterHandleCheck,
 	numberBasedFilterIsChecked,
+	type NumberBasedFilterProps,
 } from "../../../utility/filters/number-based-filter";
 
 import "./styles.css";
@@ -33,7 +32,6 @@ const filterDisabledArray = createDisabledFilterArray(8);
 const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const [selectedSchools, setSelectedSchools] =
 		useState<number[]>(filterDisabledArray);
-	const rollbar = useRollbar();
 
 	useEffect(() => {
 		if (selectedSchools.length === filterDisabledArray.length)
@@ -61,14 +59,11 @@ const SchoolFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 		(e: React.BaseSyntheticEvent<object, unknown, HTMLInputElement>): void => {
 			const school = e.target.getAttribute("data-school");
 
-			if (!school) {
-				rollbar.warning("school was null", e);
-				return;
-			}
+			if (!school) return;
 
 			numberBasedFilterHandleCheck(selectedSchools, setSelectedSchools, school);
 		},
-		[selectedSchools, rollbar],
+		[selectedSchools],
 	);
 
 	const isChecked = (x: number): boolean | undefined =>

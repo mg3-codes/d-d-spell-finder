@@ -4,24 +4,20 @@
  * @format
  */
 
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import { type MouseEventHandler, useCallback, useState } from "react";
 
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
+import packageJson from "../../../package.json";
 import { HelpModal } from "../help-modal";
+import { LogoComputer } from "../logo-computer";
 import { AttributionBody, AttributionHeader } from "./attribution-content";
 import { PrivacyBody, PrivacyHeader } from "./privacy-content";
-
-import { LogoComputer } from "../logo-computer";
 import "./styles.css";
-import packageJson from "../../../package.json";
 
 const Footer = () => {
-	const rollbar = useRollbar();
-
 	enum Content {
 		Attribution = 0,
 		Privacy = 1,
@@ -36,15 +32,12 @@ const Footer = () => {
 			const numberAsString = (e.target as HTMLButtonElement).getAttribute(
 				"data-type",
 			);
-			if (!numberAsString) {
-				rollbar.warning("value was null", e);
-				return;
-			}
+			if (!numberAsString) return;
 
-			setSelectedContent(Number.parseInt(numberAsString));
+			setSelectedContent(Number.parseInt(numberAsString, 10));
 			setModalIsOpen(true);
 		},
-		[rollbar],
+		[],
 	);
 
 	const openGithub = useCallback(

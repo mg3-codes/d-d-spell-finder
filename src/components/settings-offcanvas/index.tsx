@@ -4,7 +4,6 @@
  * @format
  */
 
-import { useRollbar } from "@rollbar/react";
 import type React from "react";
 import {
 	type ChangeEventHandler,
@@ -33,7 +32,6 @@ const SettingsOffcanvas = (): React.ReactElement => {
 	const { useCookies, setUseCookies } = useContext(AppSettingsContext);
 	const { updateTheme, selectedThemeOption } = useContext(ThemeContext);
 	const { selectedColumns, handleColumnChange } = useContext(ColumnContext);
-	const rollbar = useRollbar();
 
 	const handleOpen = useCallback(() => setShow(true), []);
 
@@ -54,14 +52,11 @@ const SettingsOffcanvas = (): React.ReactElement => {
 			): void => {
 				const numberAsString = e.target.getAttribute("data-column");
 
-				if (!numberAsString) {
-					rollbar.warning("column number was null", e);
-					return;
-				}
+				if (!numberAsString) return;
 
-				handleColumnChange(Number.parseInt(numberAsString));
+				handleColumnChange(Number.parseInt(numberAsString, 10));
 			},
-			[selectedColumns, handleColumnChange, rollbar, selectedColumns],
+			[selectedColumns, handleColumnChange, selectedColumns],
 		);
 
 	const isCheckboxChecked = (column: Column): boolean =>
@@ -73,14 +68,11 @@ const SettingsOffcanvas = (): React.ReactElement => {
 				"data-theme",
 			);
 
-			if (!numberAsString) {
-				rollbar.warning("value was null", e);
-				return;
-			}
+			if (!numberAsString) return;
 
-			updateTheme(Number.parseInt(numberAsString));
+			updateTheme(Number.parseInt(numberAsString, 10));
 		},
-		[rollbar, updateTheme],
+		[updateTheme],
 	);
 
 	return (

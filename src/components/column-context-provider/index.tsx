@@ -43,7 +43,7 @@ export const ColumnContextProvider = ({
 		const cookie = getCookie(cookieName);
 
 		if (cookie && useCookies)
-			return cookie.split(",").map((x) => Number.parseInt(x));
+			return cookie.split(",").map((x) => Number.parseInt(x, 10));
 
 		return defaultSelectedColumns;
 	});
