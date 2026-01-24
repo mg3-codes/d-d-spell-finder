@@ -1,12 +1,26 @@
 [
 	{
 		"name": "acid splash",
-		"acid": ["amid", "arid", "avid", "aced"],
-		"splash": ["splosh"]
+		"acid": [
+			"amid",
+			"arid",
+			"avid",
+			"aced"
+		],
+		"splash": [
+			"splosh"
+		]
 	},
 	{
 		"name": "blade ward",
-		"blade": ["clade", "glade", "blame", "blare", "blase", "blaze"],
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		],
 		"ward": [
 			"bard",
 			"card",
@@ -36,12 +50,29 @@
 			"booting",
 			"boozing"
 		],
-		"blade": ["clade", "glade", "blame", "blare", "blase", "blaze"]
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		]
 	},
 	{
 		"name": "chill touch",
-		"chill": ["shill", "child", "chili"],
-		"touch": ["couch", "pouch", "vouch", "torch", "tough"]
+		"chill": [
+			"shill",
+			"child",
+			"chili"
+		],
+		"touch": [
+			"couch",
+			"pouch",
+			"vouch",
+			"torch",
+			"tough"
+		]
 	},
 	{
 		"name": "control flames",
@@ -58,12 +89,17 @@
 	},
 	{
 		"name": "create bonfire",
-		"create": ["crease"],
+		"create": [
+			"crease"
+		],
 		"bonfire": []
 	},
 	{
 		"name": "dancing lights",
-		"dancing": ["lancing", "danging"],
+		"dancing": [
+			"lancing",
+			"danging"
+		],
 		"lights": [
 			"bights",
 			"eights",
@@ -82,11 +118,17 @@
 	{
 		"name": "eldritch blast",
 		"eldritch": [],
-		"blast": ["beast", "boast", "blase"]
+		"blast": [
+			"beast",
+			"boast",
+			"blase"
+		]
 	},
 	{
 		"name": "encode thoughts",
-		"encode": ["encore"],
+		"encode": [
+			"encore"
+		],
 		"thoughts": []
 	},
 	{
@@ -134,9 +176,26 @@
 	},
 	{
 		"name": "green-flame blade",
-		"green": ["preen", "greed", "greet"],
-		"flame": ["blame", "frame", "flume", "flake", "flare"],
-		"blade": ["clade", "glade", "blame", "blare", "blase", "blaze"]
+		"green": [
+			"preen",
+			"greed",
+			"greet"
+		],
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		],
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		]
 	},
 	{
 		"name": "guidance",
@@ -224,7 +283,9 @@
 	},
 	{
 		"name": "magic stone",
-		"magic": ["manic"],
+		"magic": [
+			"manic"
+		],
 		"stone": [
 			"atone",
 			"scone",
@@ -254,7 +315,9 @@
 	},
 	{
 		"name": "message",
-		"message": ["massage"]
+		"message": [
+			"massage"
+		]
 	},
 	{
 		"name": "mind sliver",
@@ -273,12 +336,23 @@
 			"mint",
 			"minx"
 		],
-		"sliver": ["shiver", "skiver", "slaver", "slicer", "slider"]
+		"sliver": [
+			"shiver",
+			"skiver",
+			"slaver",
+			"slicer",
+			"slider"
+		]
 	},
 	{
 		"name": "minor illusion",
-		"minor": ["manor", "miner"],
-		"illusion": ["allusion"]
+		"minor": [
+			"manor",
+			"miner"
+		],
+		"illusion": [
+			"allusion"
+		]
 	},
 	{
 		"name": "mold earth",
@@ -302,8 +376,14 @@
 	},
 	{
 		"name": "poison spray",
-		"poison": ["prison"],
-		"spray": ["stray", "splay", "sprat"]
+		"poison": [
+			"prison"
+		],
+		"spray": [
+			"stray",
+			"splay",
+			"sprat"
+		]
 	},
 	{
 		"name": "prestidigitation",
@@ -312,12 +392,22 @@
 	{
 		"name": "primal savagery",
 		"primal": [],
-		"savagery": ["savagely"]
+		"savagery": [
+			"savagely"
+		]
 	},
 	{
 		"name": "produce flame",
-		"produce": ["product"],
-		"flame": ["blame", "frame", "flume", "flake", "flare"]
+		"produce": [
+			"product"
+		],
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		]
 	},
 	{
 		"name": "ray of frost",
@@ -344,26 +434,10 @@
 			"rat",
 			"raw"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"frost": ["front", "frosh"]
+		"frost": [
+			"front",
+			"frosh"
+		]
 	},
 	{
 		"name": "resistance",
@@ -371,8 +445,16 @@
 	},
 	{
 		"name": "sacred flame",
-		"sacred": ["sacked"],
-		"flame": ["blame", "frame", "flume", "flake", "flare"]
+		"sacred": [
+			"sacked"
+		],
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		]
 	},
 	{
 		"name": "sapping sting",
@@ -390,11 +472,25 @@
 			"supping",
 			"sapling"
 		],
-		"sting": ["sling", "suing", "swing", "stung", "stink", "stint"]
+		"sting": [
+			"sling",
+			"suing",
+			"swing",
+			"stung",
+			"stink",
+			"stint"
+		]
 	},
 	{
 		"name": "shape water",
-		"shape": ["shade", "shake", "shale", "shame", "share", "shave"],
+		"shape": [
+			"shade",
+			"shake",
+			"shale",
+			"shame",
+			"share",
+			"shave"
+		],
 		"water": [
 			"cater",
 			"dater",
@@ -416,8 +512,16 @@
 	},
 	{
 		"name": "shocking grasp",
-		"shocking": ["chocking", "smocking", "stocking", "shacking", "shucking"],
-		"grasp": ["grass"]
+		"shocking": [
+			"chocking",
+			"smocking",
+			"stocking",
+			"shacking",
+			"shucking"
+		],
+		"grasp": [
+			"grass"
+		]
 	},
 	{
 		"name": "spare the dying",
@@ -435,13 +539,28 @@
 			"spark",
 			"spars"
 		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
-		"dying": ["hying", "lying", "tying", "vying", "dding", "doing"]
+		"dying": [
+			"hying",
+			"lying",
+			"tying",
+			"vying",
+			"dding",
+			"doing"
+		]
 	},
 	{
 		"name": "sword burst",
-		"sword": ["sward", "swore", "sworn"],
-		"burst": ["durst", "wurst", "burnt", "bursa"]
+		"sword": [
+			"sward",
+			"swore",
+			"sworn"
+		],
+		"burst": [
+			"durst",
+			"wurst",
+			"burnt",
+			"bursa"
+		]
 	},
 	{
 		"name": "thaumaturgy",
@@ -450,7 +569,16 @@
 	{
 		"name": "thorn whip",
 		"thorn": [],
-		"whip": ["chip", "ship", "whop", "whup", "whim", "whir", "whit", "whiz"]
+		"whip": [
+			"chip",
+			"ship",
+			"whop",
+			"whup",
+			"whim",
+			"whir",
+			"whit",
+			"whiz"
+		]
 	},
 	{
 		"name": "thunderclap",
@@ -475,7 +603,6 @@
 			"told",
 			"tole"
 		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
 		"dead": [
 			"bead",
 			"head",
@@ -491,7 +618,11 @@
 	},
 	{
 		"name": "true strike",
-		"true": ["grue", "tree", "trug"],
+		"true": [
+			"grue",
+			"tree",
+			"trug"
+		],
 		"strike": [
 			"shrike",
 			"stroke",
@@ -505,7 +636,10 @@
 	{
 		"name": "vicious mockery",
 		"vicious": [],
-		"mockery": ["rockery", "mockers"]
+		"mockery": [
+			"rockery",
+			"mockers"
+		]
 	},
 	{
 		"name": "word of radiance",
@@ -523,30 +657,13 @@
 			"worn",
 			"wort"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"radiance": []
 	},
 	{
 		"name": "absorb elements",
-		"absorb": ["adsorb"],
+		"absorb": [
+			"adsorb"
+		],
 		"elements": []
 	},
 	{
@@ -560,51 +677,26 @@
 	},
 	{
 		"name": "armor of agathys",
-		"armor": ["arbor", "ardor"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"armor": [
+			"arbor",
+			"ardor"
 		],
 		"agathys": []
 	},
 	{
 		"name": "arms of hadar",
-		"arms": ["aims", "alms", "arcs", "ares", "arks", "arts", "army"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"arms": [
+			"aims",
+			"alms",
+			"arcs",
+			"ares",
+			"arks",
+			"arts",
+			"army"
 		],
-		"hadar": ["radar"]
+		"hadar": [
+			"radar"
+		]
 	},
 	{
 		"name": "bane",
@@ -633,7 +725,14 @@
 	},
 	{
 		"name": "beast bond",
-		"beast": ["feast", "least", "yeast", "blast", "boast", "beaut"],
+		"beast": [
+			"feast",
+			"least",
+			"yeast",
+			"blast",
+			"boast",
+			"beaut"
+		],
 		"bond": [
 			"fond",
 			"pond",
@@ -649,11 +748,18 @@
 	},
 	{
 		"name": "bless",
-		"bless": ["bliss"]
+		"bless": [
+			"bliss"
+		]
 	},
 	{
 		"name": "burning hands",
-		"burning": ["turning", "burping", "burring", "burying"],
+		"burning": [
+			"turning",
+			"burping",
+			"burring",
+			"burying"
+		],
 		"hands": [
 			"bands",
 			"lands",
@@ -671,7 +777,10 @@
 	},
 	{
 		"name": "cause fear",
-		"cause": ["pause", "cruse"],
+		"cause": [
+			"pause",
+			"cruse"
+		],
 		"fear": [
 			"bear",
 			"dear",
@@ -693,7 +802,13 @@
 	},
 	{
 		"name": "chaos bolt",
-		"chaos": ["ciaos", "chads", "chaps", "chars", "chats"],
+		"chaos": [
+			"ciaos",
+			"chads",
+			"chaps",
+			"chars",
+			"chats"
+		],
 		"bolt": [
 			"colt",
 			"dolt",
@@ -712,27 +827,56 @@
 	},
 	{
 		"name": "charm person",
-		"charm": ["chasm", "chard", "chars", "chart", "chary"],
-		"person": ["parson"]
+		"charm": [
+			"chasm",
+			"chard",
+			"chars",
+			"chart",
+			"chary"
+		],
+		"person": [
+			"parson"
+		]
 	},
 	{
 		"name": "chromatic orb",
-		"chromatic": ["chromatin"],
-		"orb": ["orc", "ore", "org"]
+		"chromatic": [
+			"chromatin"
+		],
+		"orb": [
+			"orc",
+			"ore",
+			"org"
+		]
 	},
 	{
 		"name": "color spray",
-		"color": ["dolor", "colon"],
-		"spray": ["stray", "splay", "sprat"]
+		"color": [
+			"dolor",
+			"colon"
+		],
+		"spray": [
+			"stray",
+			"splay",
+			"sprat"
+		]
 	},
 	{
 		"name": "command",
-		"command": ["commend"]
+		"command": [
+			"commend"
+		]
 	},
 	{
 		"name": "compelled duel",
 		"compelled": [],
-		"duel": ["fuel", "dual", "dull", "dues", "duet"]
+		"duel": [
+			"fuel",
+			"dual",
+			"dull",
+			"dues",
+			"duet"
+		]
 	},
 	{
 		"name": "comprehend languages",
@@ -741,7 +885,9 @@
 	},
 	{
 		"name": "create or destroy water",
-		"create": ["crease"],
+		"create": [
+			"crease"
+		],
 		"or": [
 			"er",
 			"fr",
@@ -810,7 +956,6 @@
 	{
 		"name": "evil and good",
 		"evil": [],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"good": [
 			"food",
 			"hood",
@@ -827,35 +972,64 @@
 	},
 	{
 		"name": "detect magic",
-		"detect": ["defect", "deject", "detest"],
-		"magic": ["manic"]
+		"detect": [
+			"defect",
+			"deject",
+			"detest"
+		],
+		"magic": [
+			"manic"
+		]
 	},
 	{
 		"name": "detect poison and disease",
-		"detect": ["defect", "deject", "detest"],
-		"poison": ["prison"],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
+		"detect": [
+			"defect",
+			"deject",
+			"detest"
+		],
+		"poison": [
+			"prison"
+		],
 		"disease": []
 	},
 	{
 		"name": "disguise self",
 		"disguise": [],
-		"self": ["pelf", "serf", "sell"]
+		"self": [
+			"pelf",
+			"serf",
+			"sell"
+		]
 	},
 	{
 		"name": "dissonant whispers",
 		"dissonant": [],
-		"whispers": ["whimpers", "whippers", "whiskers"]
+		"whispers": [
+			"whimpers",
+			"whippers",
+			"whiskers"
+		]
 	},
 	{
 		"name": "distort value",
-		"distort": ["disport"],
-		"value": ["vague", "valve"]
+		"distort": [
+			"disport"
+		],
+		"value": [
+			"vague",
+			"valve"
+		]
 	},
 	{
 		"name": "divine favor",
-		"divine": ["divide", "diving"],
-		"favor": ["savor"]
+		"divine": [
+			"divide",
+			"diving"
+		],
+		"favor": [
+			"savor"
+		]
 	},
 	{
 		"name": "earth tremor",
@@ -877,12 +1051,18 @@
 	},
 	{
 		"name": "entangle",
-		"entangle": ["untangle"]
+		"entangle": [
+			"untangle"
+		]
 	},
 	{
 		"name": "expeditious retreat",
-		"expeditious": ["expeditions"],
-		"retreat": ["retread"]
+		"expeditious": [
+			"expeditions"
+		],
+		"retreat": [
+			"retread"
+		]
 	},
 	{
 		"name": "faerie fire",
@@ -924,7 +1104,11 @@
 	},
 	{
 		"name": "feather fall",
-		"feather": ["heather", "leather", "weather"],
+		"feather": [
+			"heather",
+			"leather",
+			"weather"
+		],
 		"fall": [
 			"ball",
 			"call",
@@ -957,11 +1141,17 @@
 			"fink",
 			"fins"
 		],
-		"familiar": ["familial"]
+		"familiar": [
+			"familial"
+		]
 	},
 	{
 		"name": "floating disk",
-		"floating": ["bloating", "gloating", "flouting"],
+		"floating": [
+			"bloating",
+			"gloating",
+			"flouting"
+		],
 		"disk": [
 			"risk",
 			"desk",
@@ -996,29 +1186,20 @@
 			"for",
 			"fox"
 		],
-		"cloud": ["aloud", "clout"]
+		"cloud": [
+			"aloud",
+			"clout"
+		]
 	},
 	{
 		"name": "gift of alacrity",
-		"gift": ["lift", "rift", "sift", "gilt", "girt", "gist"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"gift": [
+			"lift",
+			"rift",
+			"sift",
+			"gilt",
+			"girt",
+			"gist"
 		],
 		"alacrity": []
 	},
@@ -1028,11 +1209,16 @@
 	},
 	{
 		"name": "grease",
-		"grease": ["crease", "greasy"]
+		"grease": [
+			"crease",
+			"greasy"
+		]
 	},
 	{
 		"name": "guiding bolt",
-		"guiding": ["gliding"],
+		"guiding": [
+			"gliding"
+		],
 		"bolt": [
 			"colt",
 			"dolt",
@@ -1066,26 +1252,9 @@
 			"haul",
 			"hair"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"thorns": ["thorny"]
+		"thorns": [
+			"thorny"
+		]
 	},
 	{
 		"name": "healing word",
@@ -1126,16 +1295,34 @@
 	},
 	{
 		"name": "hex",
-		"hex": ["sex", "vex", "hem", "hen", "hep", "her", "hes", "hew", "hey"]
+		"hex": [
+			"sex",
+			"vex",
+			"hem",
+			"hen",
+			"hep",
+			"her",
+			"hes",
+			"hew",
+			"hey"
+		]
 	},
 	{
 		"name": "hideous laughter",
-		"hideous": ["hideout"],
-		"laughter": ["daughter"]
+		"hideous": [
+			"hideout"
+		],
+		"laughter": [
+			"daughter"
+		]
 	},
 	{
 		"name": "hunter's mark",
-		"hunter's": ["punter's", "hinter's", "hunger's"],
+		"hunter's": [
+			"punter's",
+			"hinter's",
+			"hunger's"
+		],
 		"mark": [
 			"bark",
 			"dark",
@@ -1153,21 +1340,31 @@
 	},
 	{
 		"name": "ice knife",
-		"ice": ["ace", "ire", "icy"],
+		"ice": [
+			"ace",
+			"ire",
+			"icy"
+		],
 		"knife": []
 	},
 	{
 		"name": "identify",
-		"identify": ["identity"]
+		"identify": [
+			"identity"
+		]
 	},
 	{
 		"name": "illusory script",
 		"illusory": [],
-		"script": ["scrips"]
+		"script": [
+			"scrips"
+		]
 	},
 	{
 		"name": "inflict wounds",
-		"inflict": ["inflect"],
+		"inflict": [
+			"inflect"
+		],
 		"wounds": [
 			"bounds",
 			"founds",
@@ -1182,13 +1379,35 @@
 	},
 	{
 		"name": "jim's magic missile",
-		"jim's": ["aim's", "rim's", "sim's", "vim's", "jam's", "jib's", "jig's"],
-		"magic": ["manic"],
-		"missile": ["fissile", "misfile", "missive"]
+		"jim's": [
+			"aim's",
+			"rim's",
+			"sim's",
+			"vim's",
+			"jam's",
+			"jib's",
+			"jig's"
+		],
+		"magic": [
+			"manic"
+		],
+		"missile": [
+			"fissile",
+			"misfile",
+			"missive"
+		]
 	},
 	{
 		"name": "jump",
-		"jump": ["bump", "dump", "hump", "lump", "pump", "rump", "sump"]
+		"jump": [
+			"bump",
+			"dump",
+			"hump",
+			"lump",
+			"pump",
+			"rump",
+			"sump"
+		]
 	},
 	{
 		"name": "longstrider",
@@ -1214,12 +1433,21 @@
 			"magi",
 			"mags"
 		],
-		"armor": ["arbor", "ardor"]
+		"armor": [
+			"arbor",
+			"ardor"
+		]
 	},
 	{
 		"name": "magic missile",
-		"magic": ["manic"],
-		"missile": ["fissile", "misfile", "missive"]
+		"magic": [
+			"manic"
+		],
+		"missile": [
+			"fissile",
+			"misfile",
+			"missive"
+		]
 	},
 	{
 		"name": "magnify gravity",
@@ -1228,10 +1456,14 @@
 	},
 	{
 		"name": "protection from evil and good",
-		"protection": ["projection"],
-		"from": ["prom", "frog"],
+		"protection": [
+			"projection"
+		],
+		"from": [
+			"prom",
+			"frog"
+		],
 		"evil": [],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"good": [
 			"food",
 			"hood",
@@ -1248,7 +1480,9 @@
 	},
 	{
 		"name": "purify food and drink",
-		"purify": ["purity"],
+		"purify": [
+			"purity"
+		],
 		"food": [
 			"good",
 			"hood",
@@ -1261,8 +1495,11 @@
 			"fool",
 			"foot"
 		],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
-		"drink": ["brink", "drank", "drunk"]
+		"drink": [
+			"brink",
+			"drank",
+			"drunk"
+		]
 	},
 	{
 		"name": "ray of sickness",
@@ -1288,25 +1525,6 @@
 			"rap",
 			"rat",
 			"raw"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"sickness": []
 	},
@@ -1335,7 +1553,13 @@
 			"seaming",
 			"seating"
 		],
-		"smite": ["spite", "suite", "smote", "smile", "smith"]
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
 	},
 	{
 		"name": "shield",
@@ -1344,35 +1568,27 @@
 	{
 		"name": "shield of faith",
 		"shield": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"faith": ["saith"]
+		"faith": [
+			"saith"
+		]
 	},
 	{
 		"name": "silent image",
 		"silent": [],
-		"image": ["imago"]
+		"image": [
+			"imago"
+		]
 	},
 	{
 		"name": "sleep",
-		"sleep": ["bleep", "sheep", "steep", "sweep", "sleek", "sleet"]
+		"sleep": [
+			"bleep",
+			"sheep",
+			"steep",
+			"sweep",
+			"sleek",
+			"sleet"
+		]
 	},
 	{
 		"name": "snare",
@@ -1390,26 +1606,59 @@
 	},
 	{
 		"name": "speak with animals",
-		"speak": ["sneak", "steak", "speck", "spear"],
-		"with": ["kith", "pith", "wish", "wits"],
+		"speak": [
+			"sneak",
+			"steak",
+			"speck",
+			"spear"
+		],
+		"with": [
+			"kith",
+			"pith",
+			"wish",
+			"wits"
+		],
 		"animals": []
 	},
 	{
 		"name": "tasha's caustic brew",
-		"tasha's": ["pasha's"],
+		"tasha's": [
+			"pasha's"
+		],
 		"caustic": [],
-		"brew": ["crew", "drew", "grew", "blew", "brow", "bred"]
+		"brew": [
+			"crew",
+			"drew",
+			"grew",
+			"blew",
+			"brow",
+			"bred"
+		]
 	},
 	{
 		"name": "tasha's hideous laughter",
-		"tasha's": ["pasha's"],
-		"hideous": ["hideout"],
-		"laughter": ["daughter"]
+		"tasha's": [
+			"pasha's"
+		],
+		"hideous": [
+			"hideout"
+		],
+		"laughter": [
+			"daughter"
+		]
 	},
 	{
 		"name": "tenser's floating disk",
-		"tenser's": ["censer's", "teaser's", "tender's"],
-		"floating": ["bloating", "gloating", "flouting"],
+		"tenser's": [
+			"censer's",
+			"teaser's",
+			"tender's"
+		],
+		"floating": [
+			"bloating",
+			"gloating",
+			"flouting"
+		],
 		"disk": [
 			"risk",
 			"desk",
@@ -1425,7 +1674,13 @@
 	{
 		"name": "thunderous smite",
 		"thunderous": [],
-		"smite": ["spite", "suite", "smote", "smile", "smith"]
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
 	},
 	{
 		"name": "thunderwave",
@@ -1467,7 +1722,13 @@
 	{
 		"name": "wrathful smite",
 		"wrathful": [],
-		"smite": ["spite", "suite", "smote", "smile", "smith"]
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
 	},
 	{
 		"name": "zephyr strike",
@@ -1484,13 +1745,21 @@
 	},
 	{
 		"name": "acid arrow",
-		"acid": ["amid", "arid", "avid", "aced"],
+		"acid": [
+			"amid",
+			"arid",
+			"avid",
+			"aced"
+		],
 		"arrow": []
 	},
 	{
 		"name": "aganazzar's scorcher",
 		"aganazzar's": [],
-		"scorcher": ["scorched", "scorches"]
+		"scorcher": [
+			"scorched",
+			"scorches"
+		]
 	},
 	{
 		"name": "aid",
@@ -1512,8 +1781,18 @@
 	},
 	{
 		"name": "alter self",
-		"alter": ["after", "apter", "aster", "alder", "altar"],
-		"self": ["pelf", "serf", "sell"]
+		"alter": [
+			"after",
+			"apter",
+			"aster",
+			"alder",
+			"altar"
+		],
+		"self": [
+			"pelf",
+			"serf",
+			"sell"
+		]
 	},
 	{
 		"name": "animal messenger",
@@ -1522,7 +1801,9 @@
 	},
 	{
 		"name": "arcane lock",
-		"arcane": ["arcade"],
+		"arcane": [
+			"arcade"
+		],
 		"lock": [
 			"bock",
 			"cock",
@@ -1544,12 +1825,16 @@
 	{
 		"name": "arcanist's magic aura",
 		"arcanist's": [],
-		"magic": ["manic"],
+		"magic": [
+			"manic"
+		],
 		"aura": []
 	},
 	{
 		"name": "augury",
-		"augury": ["augurs"]
+		"augury": [
+			"augurs"
+		]
 	},
 	{
 		"name": "barkskin",
@@ -1557,79 +1842,87 @@
 	},
 	{
 		"name": "beast sense",
-		"beast": ["feast", "least", "yeast", "blast", "boast", "beaut"],
-		"sense": ["dense", "tense"]
+		"beast": [
+			"feast",
+			"least",
+			"yeast",
+			"blast",
+			"boast",
+			"beaut"
+		],
+		"sense": [
+			"dense",
+			"tense"
+		]
 	},
 	{
 		"name": "blindness/deafness",
-		"blindness": ["blandness", "blondness"],
-		"deafness": ["dearness"]
+		"blindness": [
+			"blandness",
+			"blondness"
+		],
+		"deafness": [
+			"dearness"
+		]
 	},
 	{
 		"name": "blur",
-		"blur": ["slur", "blue"]
+		"blur": [
+			"slur",
+			"blue"
+		]
 	},
 	{
 		"name": "branding smite",
-		"branding": ["braiding"],
-		"smite": ["spite", "suite", "smote", "smile", "smith"]
+		"branding": [
+			"braiding"
+		],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
 	},
 	{
 		"name": "calm emotions",
-		"calm": ["balm", "palm", "calf", "calk", "call"],
+		"calm": [
+			"balm",
+			"palm",
+			"calf",
+			"calk",
+			"call"
+		],
 		"emotions": []
 	},
 	{
 		"name": "cloud of daggers",
-		"cloud": ["aloud", "clout"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"cloud": [
+			"aloud",
+			"clout"
 		],
-		"daggers": ["naggers", "taggers", "diggers", "dangers"]
+		"daggers": [
+			"naggers",
+			"taggers",
+			"diggers",
+			"dangers"
+		]
 	},
 	{
 		"name": "continual flame",
 		"continual": [],
-		"flame": ["blame", "frame", "flume", "flake", "flare"]
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		]
 	},
 	{
 		"name": "cordon of arrows",
 		"cordon": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"arrows": []
 	},
 	{
@@ -1644,30 +1937,16 @@
 			"crowd",
 			"crows"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"madness": ["badness", "sadness"]
+		"madness": [
+			"badness",
+			"sadness"
+		]
 	},
 	{
 		"name": "darkness",
-		"darkness": ["dankness"]
+		"darkness": [
+			"dankness"
+		]
 	},
 	{
 		"name": "dark vision",
@@ -1689,13 +1968,20 @@
 	},
 	{
 		"name": "detect thoughts",
-		"detect": ["defect", "deject", "detest"],
+		"detect": [
+			"defect",
+			"deject",
+			"detest"
+		],
 		"thoughts": []
 	},
 	{
 		"name": "dragon's breath",
 		"dragon's": [],
-		"breath": ["wreath", "breach"]
+		"breath": [
+			"wreath",
+			"breach"
+		]
 	},
 	{
 		"name": "dust devil",
@@ -1722,12 +2008,17 @@
 	{
 		"name": "enhance ability",
 		"enhance": [],
-		"ability": ["agility"]
+		"ability": [
+			"agility"
+		]
 	},
 	{
 		"name": "enlarge/reduce",
 		"enlarge": [],
-		"reduce": ["deduce", "seduce"]
+		"reduce": [
+			"deduce",
+			"seduce"
+		]
 	},
 	{
 		"name": "enthrall",
@@ -1749,7 +2040,13 @@
 			"fink",
 			"fins"
 		],
-		"steed": ["speed", "stead", "steel", "steep", "steer"]
+		"steed": [
+			"speed",
+			"stead",
+			"steel",
+			"steep",
+			"steer"
+		]
 	},
 	{
 		"name": "find traps",
@@ -1767,12 +2064,32 @@
 			"fink",
 			"fins"
 		],
-		"traps": ["craps", "wraps", "trips", "trams", "trans", "trays"]
+		"traps": [
+			"craps",
+			"wraps",
+			"trips",
+			"trams",
+			"trans",
+			"trays"
+		]
 	},
 	{
 		"name": "flame blade",
-		"flame": ["blame", "frame", "flume", "flake", "flare"],
-		"blade": ["clade", "glade", "blame", "blare", "blase", "blaze"]
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		],
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		]
 	},
 	{
 		"name": "flaming sphere",
@@ -1789,59 +2106,41 @@
 	},
 	{
 		"name": "flock of familiars",
-		"flock": ["block", "clock", "frock", "flack", "fleck", "flick"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"flock": [
+			"block",
+			"clock",
+			"frock",
+			"flack",
+			"fleck",
+			"flick"
 		],
 		"familiars": []
 	},
 	{
 		"name": "fortune's favor",
 		"fortune's": [],
-		"favor": ["savor"]
+		"favor": [
+			"savor"
+		]
 	},
 	{
 		"name": "gentle repose",
-		"gentle": ["gently"],
-		"repose": ["depose"]
+		"gentle": [
+			"gently"
+		],
+		"repose": [
+			"depose"
+		]
 	},
 	{
 		"name": "gift of gab",
-		"gift": ["lift", "rift", "sift", "gilt", "girt", "gist"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"gift": [
+			"lift",
+			"rift",
+			"sift",
+			"gilt",
+			"girt",
+			"gist"
 		],
 		"gab": [
 			"cab",
@@ -1873,25 +2172,6 @@
 			"rust",
 			"gist",
 			"gush"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"wind": [
 			"bind",
@@ -1942,7 +2222,11 @@
 			"heap",
 			"hear"
 		],
-		"metal": ["fetal", "petal", "medal"]
+		"metal": [
+			"fetal",
+			"petal",
+			"medal"
+		]
 	},
 	{
 		"name": "hold person",
@@ -1962,12 +2246,18 @@
 			"hols",
 			"holy"
 		],
-		"person": ["parson"]
+		"person": [
+			"parson"
+		]
 	},
 	{
 		"name": "immovable object",
-		"immovable": ["immovably"],
-		"object": ["abject"]
+		"immovable": [
+			"immovably"
+		],
+		"object": [
+			"abject"
+		]
 	},
 	{
 		"name": "invisibility",
@@ -1975,7 +2265,15 @@
 	},
 	{
 		"name": "jim's glowing coin",
-		"jim's": ["aim's", "rim's", "sim's", "vim's", "jam's", "jib's", "jig's"],
+		"jim's": [
+			"aim's",
+			"rim's",
+			"sim's",
+			"vim's",
+			"jam's",
+			"jib's",
+			"jig's"
+		],
 		"glowing": [
 			"blowing",
 			"flowing",
@@ -1985,15 +2283,31 @@
 			"globing",
 			"gloving"
 		],
-		"coin": ["join", "loin", "chin", "coon", "corn", "coif", "coil", "coir"]
+		"coin": [
+			"join",
+			"loin",
+			"chin",
+			"coon",
+			"corn",
+			"coif",
+			"coil",
+			"coir"
+		]
 	},
 	{
 		"name": "knock",
-		"knock": ["knack"]
+		"knock": [
+			"knack"
+		]
 	},
 	{
 		"name": "lesser restoration",
-		"lesser": ["leaser", "lessor", "lessee", "lessen"],
+		"lesser": [
+			"leaser",
+			"lessor",
+			"lessee",
+			"lessen"
+		],
 		"restoration": []
 	},
 	{
@@ -2002,7 +2316,9 @@
 	},
 	{
 		"name": "locate animals or plants",
-		"locate": ["locale"],
+		"locate": [
+			"locale"
+		],
 		"animals": [],
 		"or": [
 			"er",
@@ -2025,33 +2341,65 @@
 			"ox",
 			"oz"
 		],
-		"plants": ["slants", "plaits", "planes", "planks"]
+		"plants": [
+			"slants",
+			"plaits",
+			"planes",
+			"planks"
+		]
 	},
 	{
 		"name": "locate object",
-		"locate": ["locale"],
-		"object": ["abject"]
+		"locate": [
+			"locale"
+		],
+		"object": [
+			"abject"
+		]
 	},
 	{
 		"name": "magic mouth",
-		"magic": ["manic"],
-		"mouth": ["south", "youth", "month"]
+		"magic": [
+			"manic"
+		],
+		"mouth": [
+			"south",
+			"youth",
+			"month"
+		]
 	},
 	{
 		"name": "magic weapon",
-		"magic": ["manic"],
+		"magic": [
+			"manic"
+		],
 		"weapon": []
 	},
 	{
 		"name": "maximilian's earthen grasp",
 		"maximilian's": [],
-		"earthen": ["earthed"],
-		"grasp": ["grass"]
+		"earthen": [
+			"earthed"
+		],
+		"grasp": [
+			"grass"
+		]
 	},
 	{
 		"name": "melf's acid arrow",
-		"melf's": ["pelf's", "self's", "milf's", "meld's", "melt's"],
-		"acid": ["amid", "arid", "avid", "aced"],
+		"melf's": [
+			"pelf's",
+			"self's",
+			"milf's",
+			"meld's",
+			"melt's"
+		],
+		"acid": [
+			"amid",
+			"arid",
+			"avid",
+			"aced"
+		],
 		"arrow": []
 	},
 	{
@@ -2071,17 +2419,37 @@
 			"mint",
 			"minx"
 		],
-		"spike": ["spake", "spoke", "spice", "spine", "spire", "spite", "spiky"]
+		"spike": [
+			"spake",
+			"spoke",
+			"spice",
+			"spine",
+			"spire",
+			"spite",
+			"spiky"
+		]
 	},
 	{
 		"name": "mirror image",
 		"mirror": [],
-		"image": ["imago"]
+		"image": [
+			"imago"
+		]
 	},
 	{
 		"name": "misty step",
-		"misty": ["musty", "minty", "mists"],
-		"step": ["seep", "stop", "stem", "stet", "stew"]
+		"misty": [
+			"musty",
+			"minty",
+			"mists"
+		],
+		"step": [
+			"seep",
+			"stop",
+			"stem",
+			"stet",
+			"stew"
+		]
 	},
 	{
 		"name": "moonbeam",
@@ -2090,7 +2458,9 @@
 	{
 		"name": "nystul's magic aura",
 		"nystul's": [],
-		"magic": ["manic"],
+		"magic": [
+			"manic"
+		],
 		"aura": []
 	},
 	{
@@ -2114,34 +2484,32 @@
 			"past"
 		],
 		"without": [],
-		"trace": ["brace", "grace", "trice", "truce", "trade", "track", "tract"]
+		"trace": [
+			"brace",
+			"grace",
+			"trice",
+			"truce",
+			"trade",
+			"track",
+			"tract"
+		]
 	},
 	{
 		"name": "phantasmal force",
 		"phantasmal": [],
-		"force": ["farce", "forge", "forte"]
+		"force": [
+			"farce",
+			"forge",
+			"forte"
+		]
 	},
 	{
 		"name": "prayer of healing",
-		"prayer": ["grayer", "player", "prater", "prayed"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"prayer": [
+			"grayer",
+			"player",
+			"prater",
+			"prayed"
 		],
 		"healing": [
 			"dealing",
@@ -2157,9 +2525,16 @@
 	},
 	{
 		"name": "protection from poison",
-		"protection": ["projection"],
-		"from": ["prom", "frog"],
-		"poison": ["prison"]
+		"protection": [
+			"projection"
+		],
+		"from": [
+			"prom",
+			"frog"
+		],
+		"poison": [
+			"prison"
+		]
 	},
 	{
 		"name": "pyrotechnics",
@@ -2190,25 +2565,6 @@
 			"rat",
 			"raw"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"enfeeblement": []
 	},
 	{
@@ -2232,11 +2588,21 @@
 			"rove",
 			"ropy"
 		],
-		"trick": ["brick", "crick", "prick", "thick", "track", "truck", "trice"]
+		"trick": [
+			"brick",
+			"crick",
+			"prick",
+			"thick",
+			"track",
+			"truck",
+			"trice"
+		]
 	},
 	{
 		"name": "scorching ray",
-		"scorching": ["scotching"],
+		"scorching": [
+			"scotching"
+		],
 		"ray": [
 			"bay",
 			"cay",
@@ -2287,11 +2653,24 @@
 	{
 		"name": "shadow blade",
 		"shadow": [],
-		"blade": ["clade", "glade", "blame", "blare", "blase", "blaze"]
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		]
 	},
 	{
 		"name": "shatter",
-		"shatter": ["chatter", "scatter", "spatter", "swatter", "shutter"]
+		"shatter": [
+			"chatter",
+			"scatter",
+			"spatter",
+			"swatter",
+			"shutter"
+		]
 	},
 	{
 		"name": "silence",
@@ -2304,17 +2683,34 @@
 	{
 		"name": "snilloc's snowball swarm",
 		"snilloc's": [],
-		"snowball": ["snowfall"],
-		"swarm": ["sward"]
+		"snowball": [
+			"snowfall"
+		],
+		"swarm": [
+			"sward"
+		]
 	},
 	{
 		"name": "spider climb",
-		"spider": ["slider", "snider"],
-		"climb": ["clime"]
+		"spider": [
+			"slider",
+			"snider"
+		],
+		"climb": [
+			"clime"
+		]
 	},
 	{
 		"name": "spike growth",
-		"spike": ["spake", "spoke", "spice", "spine", "spire", "spite", "spiky"],
+		"spike": [
+			"spake",
+			"spoke",
+			"spice",
+			"spine",
+			"spire",
+			"spite",
+			"spiky"
+		],
 		"growth": []
 	},
 	{
@@ -2329,11 +2725,20 @@
 	{
 		"name": "summon beast",
 		"summon": [],
-		"beast": ["feast", "least", "yeast", "blast", "boast", "beaut"]
+		"beast": [
+			"feast",
+			"least",
+			"yeast",
+			"blast",
+			"boast",
+			"beaut"
+		]
 	},
 	{
 		"name": "tasha's mind whip",
-		"tasha's": ["pasha's"],
+		"tasha's": [
+			"pasha's"
+		],
 		"mind": [
 			"bind",
 			"find",
@@ -2349,7 +2754,16 @@
 			"mint",
 			"minx"
 		],
-		"whip": ["chip", "ship", "whop", "whup", "whim", "whir", "whit", "whiz"]
+		"whip": [
+			"chip",
+			"ship",
+			"whop",
+			"whup",
+			"whim",
+			"whir",
+			"whit",
+			"whiz"
+		]
 	},
 	{
 		"name": "warding bond",
@@ -2408,7 +2822,13 @@
 	},
 	{
 		"name": "web",
-		"web": ["deb", "wed", "wee", "wen", "wet"]
+		"web": [
+			"deb",
+			"wed",
+			"wee",
+			"wen",
+			"wet"
+		]
 	},
 	{
 		"name": "wristpocket",
@@ -2428,26 +2848,9 @@
 			"tone",
 			"zine"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"truth": ["troth"]
+		"truth": [
+			"troth"
+		]
 	},
 	{
 		"name": "animate dead",
@@ -2468,48 +2871,12 @@
 	{
 		"name": "aura of vitality",
 		"aura": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"vitality": []
 	},
 	{
 		"name": "beacon of hope",
-		"beacon": ["deacon"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"beacon": [
+			"deacon"
 		],
 		"hope": [
 			"cope",
@@ -2532,12 +2899,26 @@
 	{
 		"name": "bestow curse",
 		"bestow": [],
-		"curse": ["nurse", "purse", "curie", "curve"]
+		"curse": [
+			"nurse",
+			"purse",
+			"curie",
+			"curve"
+		]
 	},
 	{
 		"name": "blinding smite",
-		"blinding": ["blending", "blinking"],
-		"smite": ["spite", "suite", "smote", "smile", "smith"]
+		"blinding": [
+			"blending",
+			"blinking"
+		],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
 	},
 	{
 		"name": "blink",
@@ -2574,7 +2955,9 @@
 	},
 	{
 		"name": "catnap",
-		"catnap": ["catnip"]
+		"catnap": [
+			"catnip"
+		]
 	},
 	{
 		"name": "clairvoyance",
@@ -2596,7 +2979,9 @@
 	},
 	{
 		"name": "create food and water",
-		"create": ["crease"],
+		"create": [
+			"crease"
+		],
 		"food": [
 			"good",
 			"hood",
@@ -2609,7 +2994,6 @@
 			"fool",
 			"foot"
 		],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"water": [
 			"cater",
 			"dater",
@@ -2628,7 +3012,9 @@
 	{
 		"name": "crusader's mantle",
 		"crusader's": [],
-		"mantle": ["mangle"]
+		"mantle": [
+			"mangle"
+		]
 	},
 	{
 		"name": "daylight",
@@ -2637,7 +3023,9 @@
 	{
 		"name": "dispel magic",
 		"dispel": [],
-		"magic": ["manic"]
+		"magic": [
+			"manic"
+		]
 	},
 	{
 		"name": "elemental weapon",
@@ -2647,11 +3035,15 @@
 	{
 		"name": "enemies abound",
 		"enemies": [],
-		"abound": ["around"]
+		"abound": [
+			"around"
+		]
 	},
 	{
 		"name": "erupting earth",
-		"erupting": ["eructing"],
+		"erupting": [
+			"eructing"
+		],
 		"earth": []
 	},
 	{
@@ -2692,25 +3084,53 @@
 	},
 	{
 		"name": "feign death",
-		"feign": ["deign", "reign"],
-		"death": ["heath", "neath", "depth"]
+		"feign": [
+			"deign",
+			"reign"
+		],
+		"death": [
+			"heath",
+			"neath",
+			"depth"
+		]
 	},
 	{
 		"name": "fireball",
-		"fireball": ["firewall"]
+		"fireball": [
+			"firewall"
+		]
 	},
 	{
 		"name": "flame arrows",
-		"flame": ["blame", "frame", "flume", "flake", "flare"],
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		],
 		"arrows": []
 	},
 	{
 		"name": "fly",
-		"fly": ["ply", "sly", "fay", "fey", "fry", "fwy", "flt", "flu"]
+		"fly": [
+			"ply",
+			"sly",
+			"fay",
+			"fey",
+			"fry",
+			"fwy",
+			"flt",
+			"flu"
+		]
 	},
 	{
 		"name": "galder's tower",
-		"galder's": ["gilder's", "gadder's", "gander's"],
+		"galder's": [
+			"gilder's",
+			"gadder's",
+			"gander's"
+		],
 		"tower": [
 			"bower",
 			"cower",
@@ -2746,25 +3166,6 @@
 	{
 		"name": "glyph of warding",
 		"glyph": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"warding": [
 			"carding",
 			"larding",
@@ -2778,41 +3179,49 @@
 	},
 	{
 		"name": "haste",
-		"haste": ["baste", "caste", "paste", "taste", "waste", "hasty"]
+		"haste": [
+			"baste",
+			"caste",
+			"paste",
+			"taste",
+			"waste",
+			"hasty"
+		]
 	},
 	{
 		"name": "hunger of hadar",
-		"hunger": ["hanger", "hunker", "hunter"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"hunger": [
+			"hanger",
+			"hunker",
+			"hunter"
 		],
-		"hadar": ["radar"]
+		"hadar": [
+			"radar"
+		]
 	},
 	{
 		"name": "hypnotic pattern",
 		"hypnotic": [],
-		"pattern": ["pastern", "patters"]
+		"pattern": [
+			"pastern",
+			"patters"
+		]
 	},
 	{
 		"name": "incite greed",
-		"incite": ["indite", "invite", "incise"],
-		"greed": ["breed", "creed", "freed", "treed", "green", "greet"]
+		"incite": [
+			"indite",
+			"invite",
+			"incise"
+		],
+		"greed": [
+			"breed",
+			"creed",
+			"freed",
+			"treed",
+			"green",
+			"greet"
+		]
 	},
 	{
 		"name": "intellect fortress",
@@ -2822,7 +3231,15 @@
 	{
 		"name": "leomund's tiny hut",
 		"leomund's": [],
-		"tiny": ["winy", "tony", "tidy", "tine", "ting", "tins", "tint"],
+		"tiny": [
+			"winy",
+			"tony",
+			"tidy",
+			"tine",
+			"ting",
+			"tins",
+			"tint"
+		],
 		"hut": [
 			"but",
 			"cut",
@@ -2888,13 +3305,20 @@
 	},
 	{
 		"name": "magic circle",
-		"magic": ["manic"],
+		"magic": [
+			"manic"
+		],
 		"circle": []
 	},
 	{
 		"name": "major image",
-		"major": ["manor", "mayor"],
-		"image": ["imago"]
+		"major": [
+			"manor",
+			"mayor"
+		],
+		"image": [
+			"imago"
+		]
 	},
 	{
 		"name": "mass healing word",
@@ -2961,7 +3385,11 @@
 			"mend",
 			"melt"
 		],
-		"into": ["onto", "unto", "info"],
+		"into": [
+			"onto",
+			"unto",
+			"info"
+		],
 		"stone": [
 			"atone",
 			"scone",
@@ -2975,7 +3403,13 @@
 	},
 	{
 		"name": "melf's minute meteors",
-		"melf's": ["pelf's", "self's", "milf's", "meld's", "melt's"],
+		"melf's": [
+			"pelf's",
+			"self's",
+			"milf's",
+			"meld's",
+			"melt's"
+		],
 		"minute": [],
 		"meteors": []
 	},
@@ -3004,27 +3438,50 @@
 			"not",
 			"now"
 		],
-		"detection": ["defection", "dejection", "detention"]
+		"detection": [
+			"defection",
+			"dejection",
+			"detention"
+		]
 	},
 	{
 		"name": "phantom steed",
 		"phantom": [],
-		"steed": ["speed", "stead", "steel", "steep", "steer"]
+		"steed": [
+			"speed",
+			"stead",
+			"steel",
+			"steep",
+			"steer"
+		]
 	},
 	{
 		"name": "plant growth",
-		"plant": ["slant", "plait", "plane", "plank", "plans"],
+		"plant": [
+			"slant",
+			"plait",
+			"plane",
+			"plank",
+			"plans"
+		],
 		"growth": []
 	},
 	{
 		"name": "protection from energy",
-		"protection": ["projection"],
-		"from": ["prom", "frog"],
+		"protection": [
+			"projection"
+		],
+		"from": [
+			"prom",
+			"frog"
+		],
 		"energy": []
 	},
 	{
 		"name": "pulse wave",
-		"pulse": ["purse"],
+		"pulse": [
+			"purse"
+		],
 		"wave": [
 			"cave",
 			"eave",
@@ -3049,8 +3506,16 @@
 	},
 	{
 		"name": "remove curse",
-		"remove": ["rewove", "remote"],
-		"curse": ["nurse", "purse", "curie", "curve"]
+		"remove": [
+			"rewove",
+			"remote"
+		],
+		"curse": [
+			"nurse",
+			"purse",
+			"curie",
+			"curve"
+		]
 	},
 	{
 		"name": "revivify",
@@ -3075,8 +3540,20 @@
 	},
 	{
 		"name": "sleet storm",
-		"sleet": ["fleet", "sheet", "skeet", "sweet", "slept", "sleek", "sleep"],
-		"storm": ["store", "stork", "story"]
+		"sleet": [
+			"fleet",
+			"sheet",
+			"skeet",
+			"sweet",
+			"slept",
+			"sleek",
+			"sleep"
+		],
+		"storm": [
+			"store",
+			"stork",
+			"story"
+		]
 	},
 	{
 		"name": "slow",
@@ -3100,8 +3577,18 @@
 	},
 	{
 		"name": "speak with dead",
-		"speak": ["sneak", "steak", "speck", "spear"],
-		"with": ["kith", "pith", "wish", "wits"],
+		"speak": [
+			"sneak",
+			"steak",
+			"speck",
+			"spear"
+		],
+		"with": [
+			"kith",
+			"pith",
+			"wish",
+			"wits"
+		],
 		"dead": [
 			"bead",
 			"head",
@@ -3117,9 +3604,24 @@
 	},
 	{
 		"name": "speak with plants",
-		"speak": ["sneak", "steak", "speck", "spear"],
-		"with": ["kith", "pith", "wish", "wits"],
-		"plants": ["slants", "plaits", "planes", "planks"]
+		"speak": [
+			"sneak",
+			"steak",
+			"speck",
+			"spear"
+		],
+		"with": [
+			"kith",
+			"pith",
+			"wish",
+			"wits"
+		],
+		"plants": [
+			"slants",
+			"plaits",
+			"planes",
+			"planks"
+		]
 	},
 	{
 		"name": "spirit guardians",
@@ -3128,13 +3630,26 @@
 	},
 	{
 		"name": "sprit shroud",
-		"sprit": ["split", "sprat", "sprig"],
+		"sprit": [
+			"split",
+			"sprat",
+			"sprig"
+		],
 		"shroud": []
 	},
 	{
 		"name": "stinking cloud",
-		"stinking": ["slinking", "stonking", "sticking", "stinging", "stinting"],
-		"cloud": ["aloud", "clout"]
+		"stinking": [
+			"slinking",
+			"stonking",
+			"sticking",
+			"stinging",
+			"stinting"
+		],
+		"cloud": [
+			"aloud",
+			"clout"
+		]
 	},
 	{
 		"name": "summon fey",
@@ -3159,8 +3674,16 @@
 	{
 		"name": "summon lesser demons",
 		"summon": [],
-		"lesser": ["leaser", "lessor", "lessee", "lessen"],
-		"demons": ["lemons", "demobs"]
+		"lesser": [
+			"leaser",
+			"lessor",
+			"lessee",
+			"lessen"
+		],
+		"demons": [
+			"lemons",
+			"demobs"
+		]
 	},
 	{
 		"name": "summon shadowspawn",
@@ -3170,12 +3693,22 @@
 	{
 		"name": "summon undead",
 		"summon": [],
-		"undead": ["unread"]
+		"undead": [
+			"unread"
+		]
 	},
 	{
 		"name": "thunder step",
-		"thunder": ["chunder"],
-		"step": ["seep", "stop", "stem", "stet", "stew"]
+		"thunder": [
+			"chunder"
+		],
+		"step": [
+			"seep",
+			"stop",
+			"stem",
+			"stet",
+			"stew"
+		]
 	},
 	{
 		"name": "tidal wave",
@@ -3204,7 +3737,15 @@
 	},
 	{
 		"name": "tiny hut",
-		"tiny": ["winy", "tony", "tidy", "tine", "ting", "tins", "tint"],
+		"tiny": [
+			"winy",
+			"tony",
+			"tidy",
+			"tine",
+			"ting",
+			"tins",
+			"tint"
+		],
 		"hut": [
 			"but",
 			"cut",
@@ -3229,17 +3770,33 @@
 	},
 	{
 		"name": "tiny servant",
-		"tiny": ["winy", "tony", "tidy", "tine", "ting", "tins", "tint"],
+		"tiny": [
+			"winy",
+			"tony",
+			"tidy",
+			"tine",
+			"ting",
+			"tins",
+			"tint"
+		],
 		"servant": []
 	},
 	{
 		"name": "tongues",
-		"tongues": ["tongued"]
+		"tongues": [
+			"tongued"
+		]
 	},
 	{
 		"name": "vampiric touch",
 		"vampiric": [],
-		"touch": ["couch", "pouch", "vouch", "torch", "tough"]
+		"touch": [
+			"couch",
+			"pouch",
+			"vouch",
+			"torch",
+			"tough"
+		]
 	},
 	{
 		"name": "wall of sand",
@@ -3257,25 +3814,6 @@
 			"wail",
 			"wale",
 			"walk"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"sand": [
 			"band",
@@ -3308,25 +3846,6 @@
 			"wale",
 			"walk"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"water": [
 			"cater",
 			"dater",
@@ -3358,7 +3877,10 @@
 			"wager",
 			"waver"
 		],
-		"breathing": ["wreathing", "breaching"]
+		"breathing": [
+			"wreathing",
+			"breaching"
+		]
 	},
 	{
 		"name": "water walk",
@@ -3376,7 +3898,15 @@
 			"wager",
 			"waver"
 		],
-		"walk": ["balk", "calk", "talk", "wack", "wank", "wale", "wall"]
+		"walk": [
+			"balk",
+			"calk",
+			"talk",
+			"wack",
+			"wank",
+			"wale",
+			"wall"
+		]
 	},
 	{
 		"name": "wind wall",
@@ -3415,31 +3945,24 @@
 	},
 	{
 		"name": "arcane eye",
-		"arcane": ["arcade"],
-		"eye": ["aye", "bye", "dye", "lye", "rye", "eke", "ere", "eve", "ewe"]
+		"arcane": [
+			"arcade"
+		],
+		"eye": [
+			"aye",
+			"bye",
+			"dye",
+			"lye",
+			"rye",
+			"eke",
+			"ere",
+			"eve",
+			"ewe"
+		]
 	},
 	{
 		"name": "aura of life",
 		"aura": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"life": [
 			"fife",
 			"rife",
@@ -3457,26 +3980,10 @@
 	{
 		"name": "aura of purity",
 		"aura": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"purity": ["parity", "purify"]
+		"purity": [
+			"parity",
+			"purify"
+		]
 	},
 	{
 		"name": "banishment",
@@ -3484,17 +3991,43 @@
 	},
 	{
 		"name": "black tentacles",
-		"black": ["alack", "clack", "flack", "slack", "block", "blank"],
-		"tentacles": ["pentacles", "tentacled"]
+		"black": [
+			"alack",
+			"clack",
+			"flack",
+			"slack",
+			"block",
+			"blank"
+		],
+		"tentacles": [
+			"pentacles",
+			"tentacled"
+		]
 	},
 	{
 		"name": "blight",
-		"blight": ["alight", "flight", "plight", "slight", "bright"]
+		"blight": [
+			"alight",
+			"flight",
+			"plight",
+			"slight",
+			"bright"
+		]
 	},
 	{
 		"name": "charm monster",
-		"charm": ["chasm", "chard", "chars", "chart", "chary"],
-		"monster": ["minster", "mobster", "moister"]
+		"charm": [
+			"chasm",
+			"chard",
+			"chars",
+			"chart",
+			"chary"
+		],
+		"monster": [
+			"minster",
+			"mobster",
+			"moister"
+		]
 	},
 	{
 		"name": "compulsion",
@@ -3502,19 +4035,26 @@
 	},
 	{
 		"name": "confusion",
-		"confusion": ["contusion"]
+		"confusion": [
+			"contusion"
+		]
 	},
 	{
 		"name": "conjure minor elementals",
 		"conjure": [],
-		"minor": ["manor", "miner"],
+		"minor": [
+			"manor",
+			"miner"
+		],
 		"elementals": []
 	},
 	{
 		"name": "conjure woodland beings",
 		"conjure": [],
 		"woodland": [],
-		"beings": ["brings"]
+		"beings": [
+			"brings"
+		]
 	},
 	{
 		"name": "control water",
@@ -3536,7 +4076,11 @@
 	},
 	{
 		"name": "death ward",
-		"death": ["heath", "neath", "depth"],
+		"death": [
+			"heath",
+			"neath",
+			"depth"
+		],
 		"ward": [
 			"bard",
 			"card",
@@ -3557,7 +4101,14 @@
 	{
 		"name": "dimension door",
 		"dimension": [],
-		"door": ["boor", "moor", "poor", "doer", "dour", "doom"]
+		"door": [
+			"boor",
+			"moor",
+			"poor",
+			"doer",
+			"dour",
+			"doom"
+		]
 	},
 	{
 		"name": "divination",
@@ -3565,8 +4116,17 @@
 	},
 	{
 		"name": "dominate beast",
-		"dominate": ["nominate"],
-		"beast": ["feast", "least", "yeast", "blast", "boast", "beaut"]
+		"dominate": [
+			"nominate"
+		],
+		"beast": [
+			"feast",
+			"least",
+			"yeast",
+			"blast",
+			"boast",
+			"beaut"
+		]
 	},
 	{
 		"name": "elemental bane",
@@ -3597,8 +4157,18 @@
 	{
 		"name": "evard's black tentacles",
 		"evard's": [],
-		"black": ["alack", "clack", "flack", "slack", "block", "blank"],
-		"tentacles": ["pentacles", "tentacled"]
+		"black": [
+			"alack",
+			"clack",
+			"flack",
+			"slack",
+			"block",
+			"blank"
+		],
+		"tentacles": [
+			"pentacles",
+			"tentacled"
+		]
 	},
 	{
 		"name": "fabricate",
@@ -3607,7 +4177,15 @@
 	{
 		"name": "faithful hound",
 		"faithful": [],
-		"hound": ["bound", "found", "mound", "pound", "round", "sound", "wound"]
+		"hound": [
+			"bound",
+			"found",
+			"mound",
+			"pound",
+			"round",
+			"sound",
+			"wound"
+		]
 	},
 	{
 		"name": "find greater steed",
@@ -3625,8 +4203,17 @@
 			"fink",
 			"fins"
 		],
-		"greater": ["greeter", "greaser"],
-		"steed": ["speed", "stead", "steel", "steep", "steer"]
+		"greater": [
+			"greeter",
+			"greaser"
+		],
+		"steed": [
+			"speed",
+			"stead",
+			"steel",
+			"steep",
+			"steer"
+		]
 	},
 	{
 		"name": "fire shield",
@@ -3652,41 +4239,38 @@
 	{
 		"name": "freedom of movement",
 		"freedom": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"movement": []
 	},
 	{
 		"name": "galder's speedy courier",
-		"galder's": ["gilder's", "gadder's", "gander's"],
-		"speedy": ["speeds"],
-		"courier": ["courser"]
+		"galder's": [
+			"gilder's",
+			"gadder's",
+			"gander's"
+		],
+		"speedy": [
+			"speeds"
+		],
+		"courier": [
+			"courser"
+		]
 	},
 	{
 		"name": "giant insect",
-		"giant": ["grant"],
-		"insect": ["infect", "inject", "insert"]
+		"giant": [
+			"grant"
+		],
+		"insect": [
+			"infect",
+			"inject",
+			"insert"
+		]
 	},
 	{
 		"name": "grasping vine",
-		"grasping": ["grassing"],
+		"grasping": [
+			"grassing"
+		],
 		"vine": [
 			"cine",
 			"dine",
@@ -3715,56 +4299,25 @@
 	},
 	{
 		"name": "greater invisibility",
-		"greater": ["greeter", "greaser"],
+		"greater": [
+			"greeter",
+			"greaser"
+		],
 		"invisibility": []
 	},
 	{
 		"name": "guardian of faith",
 		"guardian": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"faith": ["saith"]
+		"faith": [
+			"saith"
+		]
 	},
 	{
 		"name": "guardian of nature",
 		"guardian": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"nature": ["mature"]
+		"nature": [
+			"mature"
+		]
 	},
 	{
 		"name": "hallucinatory terrain",
@@ -3773,30 +4326,55 @@
 	},
 	{
 		"name": "ice storm",
-		"ice": ["ace", "ire", "icy"],
-		"storm": ["store", "stork", "story"]
+		"ice": [
+			"ace",
+			"ire",
+			"icy"
+		],
+		"storm": [
+			"store",
+			"stork",
+			"story"
+		]
 	},
 	{
 		"name": "leomund's secret chest",
 		"leomund's": [],
 		"secret": [],
-		"chest": ["crest", "cheat", "chert", "chess"]
+		"chest": [
+			"crest",
+			"cheat",
+			"chert",
+			"chess"
+		]
 	},
 	{
 		"name": "locate creature",
-		"locate": ["locale"],
+		"locate": [
+			"locale"
+		],
 		"creature": []
 	},
 	{
 		"name": "mordenkainen's faithful hound",
 		"mordenkainen's": [],
 		"faithful": [],
-		"hound": ["bound", "found", "mound", "pound", "round", "sound", "wound"]
+		"hound": [
+			"bound",
+			"found",
+			"mound",
+			"pound",
+			"round",
+			"sound",
+			"wound"
+		]
 	},
 	{
 		"name": "mordenkainen's private sanctum",
 		"mordenkainen's": [],
-		"private": ["primate"],
+		"private": [
+			"primate"
+		],
 		"sanctum": []
 	},
 	{
@@ -3808,7 +4386,13 @@
 	{
 		"name": "phantasmal killer",
 		"phantasmal": [],
-		"killer": ["filler", "miller", "tiller", "kilter", "killed"]
+		"killer": [
+			"filler",
+			"miller",
+			"tiller",
+			"kilter",
+			"killed"
+		]
 	},
 	{
 		"name": "polymorph",
@@ -3816,7 +4400,9 @@
 	},
 	{
 		"name": "private sanctum",
-		"private": ["primate"],
+		"private": [
+			"primate"
+		],
 		"sanctum": []
 	},
 	{
@@ -3827,31 +4413,26 @@
 	{
 		"name": "secret chest",
 		"secret": [],
-		"chest": ["crest", "cheat", "chert", "chess"]
+		"chest": [
+			"crest",
+			"cheat",
+			"chert",
+			"chess"
+		]
 	},
 	{
 		"name": "shadow of moil",
 		"shadow": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"moil": ["boil", "coil", "foil", "roil", "soil", "toil", "mail", "moll"]
+		"moil": [
+			"boil",
+			"coil",
+			"foil",
+			"roil",
+			"soil",
+			"toil",
+			"mail",
+			"moll"
+		]
 	},
 	{
 		"name": "sickening radiance",
@@ -3860,8 +4441,16 @@
 	},
 	{
 		"name": "staggering smite",
-		"staggering": ["swaggering"],
-		"smite": ["spite", "suite", "smote", "smile", "smith"]
+		"staggering": [
+			"swaggering"
+		],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
 	},
 	{
 		"name": "stone shape",
@@ -3875,7 +4464,14 @@
 			"stove",
 			"stony"
 		],
-		"shape": ["shade", "shake", "shale", "shame", "share", "shave"]
+		"shape": [
+			"shade",
+			"shake",
+			"shale",
+			"shame",
+			"share",
+			"shave"
+		]
 	},
 	{
 		"name": "stoneskin",
@@ -3883,7 +4479,11 @@
 	},
 	{
 		"name": "storm sphere",
-		"storm": ["store", "stork", "story"],
+		"storm": [
+			"store",
+			"stork",
+			"story"
+		],
 		"sphere": []
 	},
 	{
@@ -3894,7 +4494,9 @@
 	{
 		"name": "summon construct",
 		"summon": [],
-		"construct": ["constrict"]
+		"construct": [
+			"constrict"
+		]
 	},
 	{
 		"name": "summon elemental",
@@ -3904,8 +4506,15 @@
 	{
 		"name": "summon greater demon",
 		"summon": [],
-		"greater": ["greeter", "greaser"],
-		"demon": ["lemon", "demob", "demos"]
+		"greater": [
+			"greeter",
+			"greaser"
+		],
+		"demon": [
+			"lemon",
+			"demob",
+			"demos"
+		]
 	},
 	{
 		"name": "vitriolic sphere",
@@ -3929,25 +4538,6 @@
 			"wale",
 			"walk"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"fire": [
 			"dire",
 			"hire",
@@ -3968,7 +4558,10 @@
 	},
 	{
 		"name": "watery sphere",
-		"watery": ["eatery", "waters"],
+		"watery": [
+			"eatery",
+			"waters"
+		],
 		"sphere": []
 	},
 	{
@@ -3978,7 +4571,10 @@
 	},
 	{
 		"name": "anti-life shell",
-		"anti": ["ante", "ants"],
+		"anti": [
+			"ante",
+			"ants"
+		],
 		"life": [
 			"fife",
 			"rife",
@@ -3992,11 +4588,20 @@
 			"live",
 			"lift"
 		],
-		"shell": ["smell", "spell", "swell", "shall", "shill", "shelf"]
+		"shell": [
+			"smell",
+			"spell",
+			"swell",
+			"shall",
+			"shill",
+			"shelf"
+		]
 	},
 	{
 		"name": "arcane hand",
-		"arcane": ["arcade"],
+		"arcane": [
+			"arcade"
+		],
 		"hand": [
 			"band",
 			"land",
@@ -4011,12 +4616,23 @@
 	},
 	{
 		"name": "awaken",
-		"awaken": ["awoken", "awakes"]
+		"awaken": [
+			"awoken",
+			"awakes"
+		]
 	},
 	{
 		"name": "banishing smite",
-		"banishing": ["vanishing"],
-		"smite": ["spite", "suite", "smote", "smile", "smith"]
+		"banishing": [
+			"vanishing"
+		],
+		"smite": [
+			"spite",
+			"suite",
+			"smote",
+			"smile",
+			"smith"
+		]
 	},
 	{
 		"name": "bigby's hand",
@@ -4036,25 +4652,6 @@
 	{
 		"name": "circle of power",
 		"circle": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"power": [
 			"bower",
 			"cower",
@@ -4074,13 +4671,24 @@
 	},
 	{
 		"name": "commune",
-		"commune": ["commute"]
+		"commune": [
+			"commute"
+		]
 	},
 	{
 		"name": "commune with nature",
-		"commune": ["commute"],
-		"with": ["kith", "pith", "wish", "wits"],
-		"nature": ["mature"]
+		"commune": [
+			"commute"
+		],
+		"with": [
+			"kith",
+			"pith",
+			"wish",
+			"wits"
+		],
+		"nature": [
+			"mature"
+		]
 	},
 	{
 		"name": "cone of cold",
@@ -4109,25 +4717,6 @@
 			"cont",
 			"cony"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"cold": [
 			"bold",
 			"fold",
@@ -4153,13 +4742,25 @@
 	{
 		"name": "conjure volley",
 		"conjure": [],
-		"volley": ["valley"]
+		"volley": [
+			"valley"
+		]
 	},
 	{
 		"name": "contact other plane",
 		"contact": [],
-		"other": ["ether", "ocher", "otter"],
-		"plane": ["place", "plate", "plank", "plans", "plant"]
+		"other": [
+			"ether",
+			"ocher",
+			"otter"
+		],
+		"plane": [
+			"place",
+			"plate",
+			"plank",
+			"plans",
+			"plant"
+		]
 	},
 	{
 		"name": "contagion",
@@ -4191,12 +4792,24 @@
 	},
 	{
 		"name": "danse macabre",
-		"danse": ["manse", "dense", "dance"],
+		"danse": [
+			"manse",
+			"dense",
+			"dance"
+		],
 		"macabre": []
 	},
 	{
 		"name": "dawn",
-		"dawn": ["fawn", "lawn", "pawn", "yawn", "down", "damn", "darn"]
+		"dawn": [
+			"fawn",
+			"lawn",
+			"pawn",
+			"yawn",
+			"down",
+			"damn",
+			"darn"
+		]
 	},
 	{
 		"name": "destructive wave",
@@ -4227,7 +4840,6 @@
 		"name": "dispel evil and good",
 		"dispel": [],
 		"evil": [],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"good": [
 			"food",
 			"hood",
@@ -4244,12 +4856,21 @@
 	},
 	{
 		"name": "dominate person",
-		"dominate": ["nominate"],
-		"person": ["parson"]
+		"dominate": [
+			"nominate"
+		],
+		"person": [
+			"parson"
+		]
 	},
 	{
 		"name": "dream",
-		"dream": ["bream", "cream", "dread", "drear"]
+		"dream": [
+			"bream",
+			"cream",
+			"dread",
+			"drear"
+		]
 	},
 	{
 		"name": "enervation",
@@ -4281,11 +4902,23 @@
 			"fax",
 			"fay"
 		],
-		"step": ["seep", "stop", "stem", "stet", "stew"]
+		"step": [
+			"seep",
+			"stop",
+			"stem",
+			"stet",
+			"stew"
+		]
 	},
 	{
 		"name": "flame strike",
-		"flame": ["blame", "frame", "flume", "flake", "flare"],
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		],
 		"strike": [
 			"shrike",
 			"stroke",
@@ -4315,7 +4948,10 @@
 	},
 	{
 		"name": "greater restoration",
-		"greater": ["greeter", "greaser"],
+		"greater": [
+			"greeter",
+			"greaser"
+		],
 		"restoration": []
 	},
 	{
@@ -4349,11 +4985,20 @@
 			"hols",
 			"holy"
 		],
-		"monster": ["minster", "mobster", "moister"]
+		"monster": [
+			"minster",
+			"mobster",
+			"moister"
+		]
 	},
 	{
 		"name": "holy weapon",
-		"holy": ["poly", "hold", "hole", "hols"],
+		"holy": [
+			"poly",
+			"hold",
+			"hole",
+			"hols"
+		],
 		"weapon": []
 	},
 	{
@@ -4362,7 +5007,9 @@
 	},
 	{
 		"name": "infernal calling",
-		"infernal": ["internal"],
+		"infernal": [
+			"internal"
+		],
 		"calling": [
 			"balling",
 			"falling",
@@ -4378,8 +5025,14 @@
 	},
 	{
 		"name": "insect plague",
-		"insect": ["infect", "inject", "insert"],
-		"plague": ["plaque"]
+		"insect": [
+			"infect",
+			"inject",
+			"insert"
+		],
+		"plague": [
+			"plaque"
+		]
 	},
 	{
 		"name": "legend lore",
@@ -4466,18 +5119,25 @@
 	},
 	{
 		"name": "mislead",
-		"mislead": ["misread"]
+		"mislead": [
+			"misread"
+		]
 	},
 	{
 		"name": "modify memory",
-		"modify": ["codify"],
+		"modify": [
+			"codify"
+		],
 		"memory": []
 	},
 	{
 		"name": "negative energy flood",
 		"negative": [],
 		"energy": [],
-		"flood": ["blood", "floor"]
+		"flood": [
+			"blood",
+			"floor"
+		]
 	},
 	{
 		"name": "passwall",
@@ -4485,7 +5145,9 @@
 	},
 	{
 		"name": "planar binding",
-		"planar": ["planer"],
+		"planar": [
+			"planer"
+		],
 		"binding": [
 			"finding",
 			"minding",
@@ -4552,12 +5214,23 @@
 	},
 	{
 		"name": "skill empowerment",
-		"skill": ["shill", "spill", "still", "swill", "skull"],
+		"skill": [
+			"shill",
+			"spill",
+			"still",
+			"swill",
+			"skull"
+		],
 		"empowerment": []
 	},
 	{
 		"name": "steel wind strike",
-		"steel": ["steal", "steed", "steep", "steer"],
+		"steel": [
+			"steal",
+			"steed",
+			"steep",
+			"steer"
+		],
 		"wind": [
 			"bind",
 			"find",
@@ -4592,12 +5265,18 @@
 	},
 	{
 		"name": "swift quiver",
-		"swift": ["shift"],
-		"quiver": ["quaver"]
+		"swift": [
+			"shift"
+		],
+		"quiver": [
+			"quaver"
+		]
 	},
 	{
 		"name": "synaptic static",
-		"synaptic": ["synoptic"],
+		"synaptic": [
+			"synoptic"
+		],
 		"static": []
 	},
 	{
@@ -4628,7 +5307,10 @@
 	{
 		"name": "temporal shunt",
 		"temporal": [],
-		"shunt": ["stunt", "shuns"]
+		"shunt": [
+			"stunt",
+			"shuns"
+		]
 	},
 	{
 		"name": "transmute rock",
@@ -4651,8 +5333,22 @@
 	},
 	{
 		"name": "tree stride",
-		"tree": ["free", "thee", "twee", "true", "trek", "trey"],
-		"stride": ["strode", "striae", "strife", "strike", "stripe", "strive"]
+		"tree": [
+			"free",
+			"thee",
+			"twee",
+			"true",
+			"trek",
+			"trey"
+		],
+		"stride": [
+			"strode",
+			"striae",
+			"strife",
+			"strike",
+			"stripe",
+			"strive"
+		]
 	},
 	{
 		"name": "wall of force",
@@ -4671,26 +5367,11 @@
 			"wale",
 			"walk"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"force": ["farce", "forge", "forte"]
+		"force": [
+			"farce",
+			"forge",
+			"forte"
+		]
 	},
 	{
 		"name": "wall of light",
@@ -4708,25 +5389,6 @@
 			"wail",
 			"wale",
 			"walk"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"light": [
 			"bight",
@@ -4757,25 +5419,6 @@
 			"wale",
 			"walk"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"stone": [
 			"atone",
 			"scone",
@@ -4789,31 +5432,18 @@
 	},
 	{
 		"name": "wrath of nature",
-		"wrath": ["wroth"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"wrath": [
+			"wroth"
 		],
-		"nature": ["mature"]
+		"nature": [
+			"mature"
+		]
 	},
 	{
 		"name": "arcane gate",
-		"arcane": ["arcade"],
+		"arcane": [
+			"arcade"
+		],
 		"gate": [
 			"bate",
 			"date",
@@ -4834,8 +5464,21 @@
 	},
 	{
 		"name": "blade barrier",
-		"blade": ["clade", "glade", "blame", "blare", "blase", "blaze"],
-		"barrier": ["carrier", "farrier", "harrier", "tarrier", "barmier"]
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
+		],
+		"barrier": [
+			"carrier",
+			"farrier",
+			"harrier",
+			"tarrier",
+			"barmier"
+		]
 	},
 	{
 		"name": "bones of the earth",
@@ -4857,56 +5500,23 @@
 			"boned",
 			"boner"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
 		"earth": []
 	},
 	{
 		"name": "chain lightning",
-		"chain": ["chair"],
+		"chain": [
+			"chair"
+		],
 		"lightning": []
 	},
 	{
 		"name": "circle of death",
 		"circle": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"death": ["heath", "neath", "depth"]
+		"death": [
+			"heath",
+			"neath",
+			"depth"
+		]
 	},
 	{
 		"name": "conjure fey",
@@ -4934,13 +5544,19 @@
 	},
 	{
 		"name": "create homunculus",
-		"create": ["crease"],
+		"create": [
+			"crease"
+		],
 		"homunculus": []
 	},
 	{
 		"name": "create undead",
-		"create": ["crease"],
-		"undead": ["unread"]
+		"create": [
+			"crease"
+		],
+		"undead": [
+			"unread"
+		]
 	},
 	{
 		"name": "disintegrate",
@@ -4954,8 +5570,17 @@
 	},
 	{
 		"name": "druid grove",
-		"druid": ["droid"],
-		"grove": ["drove", "prove", "trove", "glove", "grave", "grope"]
+		"druid": [
+			"droid"
+		],
+		"grove": [
+			"drove",
+			"prove",
+			"trove",
+			"glove",
+			"grave",
+			"grope"
+		]
 	},
 	{
 		"name": "eyebite",
@@ -4977,12 +5602,24 @@
 			"fink",
 			"fins"
 		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
-		"path": ["bath", "hath", "lath", "math", "oath", "pith", "pate", "pats"]
+		"path": [
+			"bath",
+			"hath",
+			"lath",
+			"math",
+			"oath",
+			"pith",
+			"pate",
+			"pats"
+		]
 	},
 	{
 		"name": "flesh to stone",
-		"flesh": ["fresh", "flash", "flush"],
+		"flesh": [
+			"fresh",
+			"flash",
+			"flush"
+		],
 		"to": [
 			"co",
 			"do",
@@ -5017,30 +5654,16 @@
 	},
 	{
 		"name": "freezing sphere",
-		"freezing": ["breezing"],
+		"freezing": [
+			"breezing"
+		],
 		"sphere": []
 	},
 	{
 		"name": "globe of invulnerability",
-		"globe": ["glove", "globs"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"globe": [
+			"glove",
+			"globs"
 		],
 		"invulnerability": []
 	},
@@ -5052,7 +5675,6 @@
 	{
 		"name": "guards and wards",
 		"guards": [],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"wards": [
 			"bards",
 			"cards",
@@ -5069,7 +5691,15 @@
 	},
 	{
 		"name": "harm",
-		"harm": ["farm", "warm", "hard", "hare", "hark", "harp", "hart"]
+		"harm": [
+			"farm",
+			"warm",
+			"hard",
+			"hare",
+			"hark",
+			"harp",
+			"hart"
+		]
 	},
 	{
 		"name": "heal",
@@ -5094,7 +5724,11 @@
 	{
 		"name": "heroes' feast",
 		"heroes'": [],
-		"feast": ["beast", "least", "yeast"]
+		"feast": [
+			"beast",
+			"least",
+			"yeast"
+		]
 	},
 	{
 		"name": "instant summons",
@@ -5104,73 +5738,26 @@
 	{
 		"name": "investiture of flame",
 		"investiture": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"flame": ["blame", "frame", "flume", "flake", "flare"]
+		"flame": [
+			"blame",
+			"frame",
+			"flume",
+			"flake",
+			"flare"
+		]
 	},
 	{
 		"name": "investiture of ice",
 		"investiture": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"ice": ["ace", "ire", "icy"]
+		"ice": [
+			"ace",
+			"ire",
+			"icy"
+		]
 	},
 	{
 		"name": "investiture of stone",
 		"investiture": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"stone": [
 			"atone",
 			"scone",
@@ -5185,25 +5772,6 @@
 	{
 		"name": "investiture of wind",
 		"investiture": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"wind": [
 			"bind",
 			"find",
@@ -5224,7 +5792,9 @@
 	},
 	{
 		"name": "magic jar",
-		"magic": ["manic"],
+		"magic": [
+			"manic"
+		],
 		"jar": [
 			"bar",
 			"car",
@@ -5273,8 +5843,15 @@
 	},
 	{
 		"name": "mental prison",
-		"mental": ["dental", "rental", "menial"],
-		"prison": ["orison", "poison"]
+		"mental": [
+			"dental",
+			"rental",
+			"menial"
+		],
+		"prison": [
+			"orison",
+			"poison"
+		]
 	},
 	{
 		"name": "move earth",
@@ -5297,19 +5874,30 @@
 	{
 		"name": "otiluke's freezing sphere",
 		"otiluke's": [],
-		"freezing": ["breezing"],
+		"freezing": [
+			"breezing"
+		],
 		"sphere": []
 	},
 	{
 		"name": "otto's irresistible dance",
 		"otto's": [],
-		"irresistible": ["irresistibly"],
-		"dance": ["lance", "dunce"]
+		"irresistible": [
+			"irresistibly"
+		],
+		"dance": [
+			"lance",
+			"dunce"
+		]
 	},
 	{
 		"name": "planar ally",
-		"planar": ["planer"],
-		"ally": ["ably"]
+		"planar": [
+			"planer"
+		],
+		"ally": [
+			"ably"
+		]
 	},
 	{
 		"name": "primordial ward",
@@ -5333,16 +5921,33 @@
 	},
 	{
 		"name": "programmed illusion",
-		"programmed": ["programmer"],
-		"illusion": ["allusion"]
+		"programmed": [
+			"programmer"
+		],
+		"illusion": [
+			"allusion"
+		]
 	},
 	{
 		"name": "scatter",
-		"scatter": ["shatter", "spatter", "swatter", "scanter", "scatted"]
+		"scatter": [
+			"shatter",
+			"spatter",
+			"swatter",
+			"scanter",
+			"scatted"
+		]
 	},
 	{
 		"name": "soul cage",
-		"soul": ["foul", "soil", "souk", "soup", "sour", "sous"],
+		"soul": [
+			"foul",
+			"soil",
+			"souk",
+			"soup",
+			"sour",
+			"sous"
+		],
 		"cage": [
 			"mage",
 			"page",
@@ -5363,7 +5968,9 @@
 	{
 		"name": "summon fiend",
 		"summon": [],
-		"fiend": ["field"]
+		"fiend": [
+			"field"
+		]
 	},
 	{
 		"name": "sunbeam",
@@ -5371,26 +5978,60 @@
 	},
 	{
 		"name": "tasha's other-worldly guise",
-		"tasha's": ["pasha's"],
-		"other": ["ether", "ocher", "otter"],
+		"tasha's": [
+			"pasha's"
+		],
+		"other": [
+			"ether",
+			"ocher",
+			"otter"
+		],
 		"worldly": [],
-		"guise": ["guide", "guile"]
+		"guise": [
+			"guide",
+			"guile"
+		]
 	},
 	{
 		"name": "tenser's transformation",
-		"tenser's": ["censer's", "teaser's", "tender's"],
+		"tenser's": [
+			"censer's",
+			"teaser's",
+			"tender's"
+		],
 		"transformation": []
 	},
 	{
 		"name": "transport via plants",
 		"transport": [],
-		"via": ["vie", "vii", "vim", "viz"],
-		"plants": ["slants", "plaits", "planes", "planks"]
+		"via": [
+			"vie",
+			"vii",
+			"vim",
+			"viz"
+		],
+		"plants": [
+			"slants",
+			"plaits",
+			"planes",
+			"planks"
+		]
 	},
 	{
 		"name": "true seeing",
-		"true": ["grue", "tree", "trug"],
-		"seeing": ["geeing", "peeing", "teeing", "weeing", "sewing", "sexing"]
+		"true": [
+			"grue",
+			"tree",
+			"trug"
+		],
+		"seeing": [
+			"geeing",
+			"peeing",
+			"teeing",
+			"weeing",
+			"sewing",
+			"sexing"
+		]
 	},
 	{
 		"name": "wall of ice",
@@ -5409,26 +6050,11 @@
 			"wale",
 			"walk"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"ice": ["ace", "ire", "icy"]
+		"ice": [
+			"ace",
+			"ire",
+			"icy"
+		]
 	},
 	{
 		"name": "wall of thorns",
@@ -5447,26 +6073,9 @@
 			"wale",
 			"walk"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"thorns": ["thorny"]
+		"thorns": [
+			"thorny"
+		]
 	},
 	{
 		"name": "wind walk",
@@ -5487,7 +6096,15 @@
 			"wins",
 			"winy"
 		],
-		"walk": ["balk", "calk", "talk", "wack", "wank", "wale", "wall"]
+		"walk": [
+			"balk",
+			"calk",
+			"talk",
+			"wack",
+			"wank",
+			"wale",
+			"wall"
+		]
 	},
 	{
 		"name": "word of recall",
@@ -5504,25 +6121,6 @@
 			"worm",
 			"worn",
 			"wort"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"recall": []
 	},
@@ -5543,25 +6141,6 @@
 			"crowd",
 			"crows"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"stars": [
 			"scars",
 			"sears",
@@ -5579,13 +6158,27 @@
 	},
 	{
 		"name": "delayed blast fireball",
-		"delayed": ["belayed", "relayed", "decayed", "delayer"],
-		"blast": ["beast", "boast", "blase"],
-		"fireball": ["firewall"]
+		"delayed": [
+			"belayed",
+			"relayed",
+			"decayed",
+			"delayer"
+		],
+		"blast": [
+			"beast",
+			"boast",
+			"blase"
+		],
+		"fireball": [
+			"firewall"
+		]
 	},
 	{
 		"name": "divine word",
-		"divine": ["divide", "diving"],
+		"divine": [
+			"divide",
+			"diving"
+		],
 		"word": [
 			"cord",
 			"ford",
@@ -5603,29 +6196,23 @@
 	},
 	{
 		"name": "dream of the blue veil",
-		"dream": ["bream", "cream", "dread", "drear"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"dream": [
+			"bream",
+			"cream",
+			"dread",
+			"drear"
 		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
-		"blue": ["clue", "flue", "glue", "slue", "blur"],
-		"veil": ["veal", "vein"]
+		"blue": [
+			"clue",
+			"flue",
+			"glue",
+			"slue",
+			"blur"
+		],
+		"veil": [
+			"veal",
+			"vein"
+		]
 	},
 	{
 		"name": "etherealness",
@@ -5642,26 +6229,11 @@
 			"zinger",
 			"finder"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"death": ["heath", "neath", "depth"]
+		"death": [
+			"heath",
+			"neath",
+			"depth"
+		]
 	},
 	{
 		"name": "fire storm",
@@ -5682,7 +6254,11 @@
 			"firm",
 			"firs"
 		],
-		"storm": ["store", "stork", "story"]
+		"storm": [
+			"store",
+			"stork",
+			"story"
+		]
 	},
 	{
 		"name": "forcecage",
@@ -5696,7 +6272,9 @@
 	{
 		"name": "mirage arcane",
 		"mirage": [],
-		"arcane": ["arcade"]
+		"arcane": [
+			"arcade"
+		]
 	},
 	{
 		"name": "mordenkainen's magnificent mansion",
@@ -5707,12 +6285,26 @@
 	{
 		"name": "mordenkainen's sword",
 		"mordenkainen's": [],
-		"sword": ["sward", "swore", "sworn"]
+		"sword": [
+			"sward",
+			"swore",
+			"sworn"
+		]
 	},
 	{
 		"name": "plane shift",
-		"plane": ["place", "plate", "plank", "plans", "plant"],
-		"shift": ["swift", "shaft", "shirt"]
+		"plane": [
+			"place",
+			"plate",
+			"plank",
+			"plans",
+			"plant"
+		],
+		"shift": [
+			"swift",
+			"shaft",
+			"shirt"
+		]
 	},
 	{
 		"name": "power word pain",
@@ -5759,16 +6351,26 @@
 	{
 		"name": "prismatic spray",
 		"prismatic": [],
-		"spray": ["stray", "splay", "sprat"]
+		"spray": [
+			"stray",
+			"splay",
+			"sprat"
+		]
 	},
 	{
 		"name": "project image",
-		"project": ["protect"],
-		"image": ["imago"]
+		"project": [
+			"protect"
+		],
+		"image": [
+			"imago"
+		]
 	},
 	{
 		"name": "regenerate",
-		"regenerate": ["degenerate"]
+		"regenerate": [
+			"degenerate"
+		]
 	},
 	{
 		"name": "resurrection",
@@ -5776,12 +6378,16 @@
 	},
 	{
 		"name": "reverse gravity",
-		"reverse": ["reverie"],
+		"reverse": [
+			"reverie"
+		],
 		"gravity": []
 	},
 	{
 		"name": "sequester",
-		"sequester": ["requester"]
+		"sequester": [
+			"requester"
+		]
 	},
 	{
 		"name": "simulacrum",
@@ -5798,26 +6404,6 @@
 	{
 		"name": "temple of the gods",
 		"temple": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
 		"gods": [
 			"bods",
 			"cods",
@@ -5834,7 +6420,10 @@
 	},
 	{
 		"name": "tether essence",
-		"tether": ["nether", "tither"],
+		"tether": [
+			"nether",
+			"tither"
+		],
 		"essence": []
 	},
 	{
@@ -5843,9 +6432,14 @@
 	},
 	{
 		"name": "abi-dalzim's horrid wilting",
-		"abi": ["obi", "abs"],
+		"abi": [
+			"obi",
+			"abs"
+		],
 		"dalzim's": [],
-		"horrid": ["torrid"],
+		"horrid": [
+			"torrid"
+		],
 		"wilting": [
 			"jilting",
 			"lilting",
@@ -5860,13 +6454,29 @@
 	{
 		"name": "animal shapes",
 		"animal": [],
-		"shapes": ["shades", "shakes", "shames", "shares", "shaves", "shaped"]
+		"shapes": [
+			"shades",
+			"shakes",
+			"shames",
+			"shares",
+			"shaves",
+			"shaped"
+		]
 	},
 	{
 		"name": "anti-magic field",
-		"anti": ["ante", "ants"],
-		"magic": ["manic"],
-		"field": ["wield", "yield", "fiend"]
+		"anti": [
+			"ante",
+			"ants"
+		],
+		"magic": [
+			"manic"
+		],
+		"field": [
+			"wield",
+			"yield",
+			"fiend"
+		]
 	},
 	{
 		"name": "antipathy/sympathy",
@@ -5875,12 +6485,22 @@
 	},
 	{
 		"name": "clone",
-		"clone": ["alone", "crone", "close", "clove", "clonk"]
+		"clone": [
+			"alone",
+			"crone",
+			"close",
+			"clove",
+			"clonk"
+		]
 	},
 	{
 		"name": "control weather",
 		"control": [],
-		"weather": ["feather", "heather", "leather"]
+		"weather": [
+			"feather",
+			"heather",
+			"leather"
+		]
 	},
 	{
 		"name": "dark star",
@@ -5916,8 +6536,14 @@
 	},
 	{
 		"name": "dominate monster",
-		"dominate": ["nominate"],
-		"monster": ["minster", "mobster", "moister"]
+		"dominate": [
+			"nominate"
+		],
+		"monster": [
+			"minster",
+			"mobster",
+			"moister"
+		]
 	},
 	{
 		"name": "earthquake",
@@ -5933,7 +6559,12 @@
 	},
 	{
 		"name": "holy aura",
-		"holy": ["poly", "hold", "hole", "hols"],
+		"holy": [
+			"poly",
+			"hold",
+			"hole",
+			"hols"
+		],
 		"aura": []
 	},
 	{
@@ -5944,12 +6575,19 @@
 	{
 		"name": "incendiary cloud",
 		"incendiary": [],
-		"cloud": ["aloud", "clout"]
+		"cloud": [
+			"aloud",
+			"clout"
+		]
 	},
 	{
 		"name": "maddening darkness",
-		"maddening": ["saddening"],
-		"darkness": ["dankness"]
+		"maddening": [
+			"saddening"
+		],
+		"darkness": [
+			"dankness"
+		]
 	},
 	{
 		"name": "maze",
@@ -5972,7 +6610,9 @@
 	},
 	{
 		"name": "mighty fortress",
-		"mighty": ["eighty"],
+		"mighty": [
+			"eighty"
+		],
 		"fortress": []
 	},
 	{
@@ -5992,7 +6632,14 @@
 			"mint",
 			"minx"
 		],
-		"blank": ["clank", "flank", "plank", "blink", "black", "bland"]
+		"blank": [
+			"clank",
+			"flank",
+			"plank",
+			"blink",
+			"black",
+			"bland"
+		]
 	},
 	{
 		"name": "power word stun",
@@ -6022,12 +6669,24 @@
 			"worn",
 			"wort"
 		],
-		"stun": ["shun", "spun", "stub", "stud"]
+		"stun": [
+			"shun",
+			"spun",
+			"stub",
+			"stud"
+		]
 	},
 	{
 		"name": "reality break",
 		"reality": [],
-		"break": ["creak", "freak", "wreak", "bleak", "bread", "bream"]
+		"break": [
+			"creak",
+			"freak",
+			"wreak",
+			"bleak",
+			"bread",
+			"bream"
+		]
 	},
 	{
 		"name": "sunburst",
@@ -6043,30 +6702,22 @@
 	},
 	{
 		"name": "astral projection",
-		"astral": ["astray"],
-		"projection": ["protection"]
+		"astral": [
+			"astray"
+		],
+		"projection": [
+			"protection"
+		]
 	},
 	{
 		"name": "blade of disaster",
-		"blade": ["clade", "glade", "blame", "blare", "blase", "blaze"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"blade": [
+			"clade",
+			"glade",
+			"blame",
+			"blare",
+			"blase",
+			"blaze"
 		],
 		"disaster": []
 	},
@@ -6175,7 +6826,9 @@
 	{
 		"name": "meteor swarm",
 		"meteor": [],
-		"swarm": ["sward"]
+		"swarm": [
+			"sward"
+		]
 	},
 	{
 		"name": "power word heal",
@@ -6290,7 +6943,9 @@
 	{
 		"name": "psychic scream",
 		"psychic": [],
-		"scream": ["stream"]
+		"scream": [
+			"stream"
+		]
 	},
 	{
 		"name": "ravenous void",
@@ -6303,25 +6958,10 @@
 	},
 	{
 		"name": "storm of vengeance",
-		"storm": ["store", "stork", "story"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
+		"storm": [
+			"store",
+			"stork",
+			"story"
 		],
 		"vengeance": []
 	},
@@ -6339,7 +6979,10 @@
 			"tine",
 			"tire"
 		],
-		"ravage": ["lavage", "savage"]
+		"ravage": [
+			"lavage",
+			"savage"
+		]
 	},
 	{
 		"name": "time stop",
@@ -6355,24 +6998,48 @@
 			"tine",
 			"tire"
 		],
-		"stop": ["atop", "shop", "slop", "step", "stow"]
+		"stop": [
+			"atop",
+			"shop",
+			"slop",
+			"step",
+			"stow"
+		]
 	},
 	{
 		"name": "true polymorph",
-		"true": ["grue", "tree", "trug"],
+		"true": [
+			"grue",
+			"tree",
+			"trug"
+		],
 		"polymorph": []
 	},
 	{
 		"name": "true resurrection",
-		"true": ["grue", "tree", "trug"],
+		"true": [
+			"grue",
+			"tree",
+			"trug"
+		],
 		"resurrection": []
 	},
 	{
 		"name": "weird",
-		"weird": ["weirs"]
+		"weird": [
+			"weirs"
+		]
 	},
 	{
 		"name": "wish",
-		"wish": ["dish", "fish", "wash", "with", "wise", "wisp", "wist"]
+		"wish": [
+			"dish",
+			"fish",
+			"wash",
+			"with",
+			"wise",
+			"wisp",
+			"wist"
+		]
 	}
 ]
