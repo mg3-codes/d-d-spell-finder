@@ -1,6 +1,10 @@
 <!-- @format -->
 
 # Changelog
+## 0.7.1
+-  Update packages
+-  Remove "of" from grammarian word variations
+
 ## 0.7.0
 ### New Contributor
 -  [Sneekyboots](https://github.com/Sneekyboots)
