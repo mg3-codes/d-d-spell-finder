@@ -344,25 +344,6 @@
 			"rat",
 			"raw"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"frost": ["front", "frosh"]
 	},
 	{
@@ -435,7 +416,6 @@
 			"spark",
 			"spars"
 		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
 		"dying": ["hying", "lying", "tying", "vying", "dding", "doing"]
 	},
 	{
@@ -475,7 +455,6 @@
 			"told",
 			"tole"
 		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
 		"dead": [
 			"bead",
 			"head",
@@ -523,25 +502,6 @@
 			"worn",
 			"wort"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"radiance": []
 	},
 	{
@@ -561,49 +521,11 @@
 	{
 		"name": "armor of agathys",
 		"armor": ["arbor", "ardor"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"agathys": []
 	},
 	{
 		"name": "arms of hadar",
 		"arms": ["aims", "alms", "arcs", "ares", "arks", "arts", "army"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"hadar": ["radar"]
 	},
 	{
@@ -810,7 +732,6 @@
 	{
 		"name": "evil and good",
 		"evil": [],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"good": [
 			"food",
 			"hood",
@@ -834,7 +755,6 @@
 		"name": "detect poison and disease",
 		"detect": ["defect", "deject", "detest"],
 		"poison": ["prison"],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"disease": []
 	},
 	{
@@ -1001,25 +921,6 @@
 	{
 		"name": "gift of alacrity",
 		"gift": ["lift", "rift", "sift", "gilt", "girt", "gist"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"alacrity": []
 	},
 	{
@@ -1065,25 +966,6 @@
 			"hall",
 			"haul",
 			"hair"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"thorns": ["thorny"]
 	},
@@ -1231,7 +1113,6 @@
 		"protection": ["projection"],
 		"from": ["prom", "frog"],
 		"evil": [],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"good": [
 			"food",
 			"hood",
@@ -1261,7 +1142,6 @@
 			"fool",
 			"foot"
 		],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"drink": ["brink", "drank", "drunk"]
 	},
 	{
@@ -1288,25 +1168,6 @@
 			"rap",
 			"rat",
 			"raw"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"sickness": []
 	},
@@ -1344,25 +1205,6 @@
 	{
 		"name": "shield of faith",
 		"shield": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"faith": ["saith"]
 	},
 	{
@@ -1582,25 +1424,6 @@
 	{
 		"name": "cloud of daggers",
 		"cloud": ["aloud", "clout"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"daggers": ["naggers", "taggers", "diggers", "dangers"]
 	},
 	{
@@ -1611,25 +1434,6 @@
 	{
 		"name": "cordon of arrows",
 		"cordon": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"arrows": []
 	},
 	{
@@ -1643,25 +1447,6 @@
 			"croon",
 			"crowd",
 			"crows"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"madness": ["badness", "sadness"]
 	},
@@ -1790,25 +1575,6 @@
 	{
 		"name": "flock of familiars",
 		"flock": ["block", "clock", "frock", "flack", "fleck", "flick"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"familiars": []
 	},
 	{
@@ -1824,25 +1590,6 @@
 	{
 		"name": "gift of gab",
 		"gift": ["lift", "rift", "sift", "gilt", "girt", "gist"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"gab": [
 			"cab",
 			"dab",
@@ -1873,25 +1620,6 @@
 			"rust",
 			"gist",
 			"gush"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"wind": [
 			"bind",
@@ -2124,25 +1852,6 @@
 	{
 		"name": "prayer of healing",
 		"prayer": ["grayer", "player", "prater", "prayed"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"healing": [
 			"dealing",
 			"pealing",
@@ -2189,25 +1898,6 @@
 			"rap",
 			"rat",
 			"raw"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"enfeeblement": []
 	},
@@ -2428,25 +2118,6 @@
 			"tone",
 			"zine"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"truth": ["troth"]
 	},
 	{
@@ -2468,49 +2139,11 @@
 	{
 		"name": "aura of vitality",
 		"aura": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"vitality": []
 	},
 	{
 		"name": "beacon of hope",
 		"beacon": ["deacon"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"hope": [
 			"cope",
 			"dope",
@@ -2609,7 +2242,6 @@
 			"fool",
 			"foot"
 		],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"water": [
 			"cater",
 			"dater",
@@ -2746,25 +2378,6 @@
 	{
 		"name": "glyph of warding",
 		"glyph": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"warding": [
 			"carding",
 			"larding",
@@ -2783,25 +2396,6 @@
 	{
 		"name": "hunger of hadar",
 		"hunger": ["hanger", "hunker", "hunter"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"hadar": ["radar"]
 	},
 	{
@@ -3258,25 +2852,6 @@
 			"wale",
 			"walk"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"sand": [
 			"band",
 			"hand",
@@ -3307,25 +2882,6 @@
 			"wail",
 			"wale",
 			"walk"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"water": [
 			"cater",
@@ -3421,25 +2977,6 @@
 	{
 		"name": "aura of life",
 		"aura": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"life": [
 			"fife",
 			"rife",
@@ -3457,25 +2994,6 @@
 	{
 		"name": "aura of purity",
 		"aura": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"purity": ["parity", "purify"]
 	},
 	{
@@ -3652,25 +3170,6 @@
 	{
 		"name": "freedom of movement",
 		"freedom": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"movement": []
 	},
 	{
@@ -3721,49 +3220,11 @@
 	{
 		"name": "guardian of faith",
 		"guardian": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"faith": ["saith"]
 	},
 	{
 		"name": "guardian of nature",
 		"guardian": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"nature": ["mature"]
 	},
 	{
@@ -3832,25 +3293,6 @@
 	{
 		"name": "shadow of moil",
 		"shadow": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"moil": ["boil", "coil", "foil", "roil", "soil", "toil", "mail", "moll"]
 	},
 	{
@@ -3928,25 +3370,6 @@
 			"wail",
 			"wale",
 			"walk"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"fire": [
 			"dire",
@@ -4036,25 +3459,6 @@
 	{
 		"name": "circle of power",
 		"circle": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"power": [
 			"bower",
 			"cower",
@@ -4108,25 +3512,6 @@
 			"cons",
 			"cont",
 			"cony"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"cold": [
 			"bold",
@@ -4227,7 +3612,6 @@
 		"name": "dispel evil and good",
 		"dispel": [],
 		"evil": [],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"good": [
 			"food",
 			"hood",
@@ -4671,25 +4055,6 @@
 			"wale",
 			"walk"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"force": ["farce", "forge", "forte"]
 	},
 	{
@@ -4708,25 +4073,6 @@
 			"wail",
 			"wale",
 			"walk"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"light": [
 			"bight",
@@ -4757,25 +4103,6 @@
 			"wale",
 			"walk"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"stone": [
 			"atone",
 			"scone",
@@ -4790,25 +4117,6 @@
 	{
 		"name": "wrath of nature",
 		"wrath": ["wroth"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"nature": ["mature"]
 	},
 	{
@@ -4857,26 +4165,6 @@
 			"boned",
 			"boner"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
 		"earth": []
 	},
 	{
@@ -4887,25 +4175,6 @@
 	{
 		"name": "circle of death",
 		"circle": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"death": ["heath", "neath", "depth"]
 	},
 	{
@@ -4977,7 +4246,6 @@
 			"fink",
 			"fins"
 		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
 		"path": ["bath", "hath", "lath", "math", "oath", "pith", "pate", "pats"]
 	},
 	{
@@ -5023,25 +4291,6 @@
 	{
 		"name": "globe of invulnerability",
 		"globe": ["glove", "globs"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"invulnerability": []
 	},
 	{
@@ -5052,7 +4301,6 @@
 	{
 		"name": "guards and wards",
 		"guards": [],
-		"and": ["end", "ind", "add", "aid", "ans", "ant", "any"],
 		"wards": [
 			"bards",
 			"cards",
@@ -5104,73 +4352,16 @@
 	{
 		"name": "investiture of flame",
 		"investiture": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"flame": ["blame", "frame", "flume", "flake", "flare"]
 	},
 	{
 		"name": "investiture of ice",
 		"investiture": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"ice": ["ace", "ire", "icy"]
 	},
 	{
 		"name": "investiture of stone",
 		"investiture": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"stone": [
 			"atone",
 			"scone",
@@ -5185,25 +4376,6 @@
 	{
 		"name": "investiture of wind",
 		"investiture": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"wind": [
 			"bind",
 			"find",
@@ -5409,25 +4581,6 @@
 			"wale",
 			"walk"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"ice": ["ace", "ire", "icy"]
 	},
 	{
@@ -5446,25 +4599,6 @@
 			"wail",
 			"wale",
 			"walk"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"thorns": ["thorny"]
 	},
@@ -5505,25 +4639,6 @@
 			"worn",
 			"wort"
 		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"recall": []
 	},
 	{
@@ -5542,25 +4657,6 @@
 			"croon",
 			"crowd",
 			"crows"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"stars": [
 			"scars",
@@ -5604,26 +4700,6 @@
 	{
 		"name": "dream of the blue veil",
 		"dream": ["bream", "cream", "dread", "drear"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
 		"blue": ["clue", "flue", "glue", "slue", "blur"],
 		"veil": ["veal", "vein"]
 	},
@@ -5641,25 +4717,6 @@
 			"winger",
 			"zinger",
 			"finder"
-		],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
 		],
 		"death": ["heath", "neath", "depth"]
 	},
@@ -5798,26 +4855,6 @@
 	{
 		"name": "temple of the gods",
 		"temple": [],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
-		"the": ["she", "tee", "tie", "toe", "tho", "thy"],
 		"gods": [
 			"bods",
 			"cods",
@@ -6049,25 +5086,6 @@
 	{
 		"name": "blade of disaster",
 		"blade": ["clade", "glade", "blame", "blare", "blase", "blaze"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"disaster": []
 	},
 	{
@@ -6304,25 +5322,6 @@
 	{
 		"name": "storm of vengeance",
 		"storm": ["store", "stork", "story"],
-		"of": [
-			"bf",
-			"cf",
-			"ff",
-			"hf",
-			"if",
-			"pf",
-			"sf",
-			"ob",
-			"oh",
-			"oi",
-			"om",
-			"on",
-			"op",
-			"or",
-			"ow",
-			"ox",
-			"oz"
-		],
 		"vengeance": []
 	},
 	{

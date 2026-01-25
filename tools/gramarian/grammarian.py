@@ -39,6 +39,8 @@ for spell in spellNames:
 	obj = {"name": spell}
 
 	for word in re.split(r'[^\w\']+', spell):
+		if word == "of" or word == "the" or word == "and":
+			continue
 		validWords = []
 		variations = createWordVariations(word)
 		for variation in variations:
