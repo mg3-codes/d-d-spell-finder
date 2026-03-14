@@ -27,7 +27,7 @@ import {
 
 import "./styles.css";
 
-const filterDisabledArray = createDisabledFilterArray(9);
+const filterDisabledArray = createDisabledFilterArray(10);
 
 const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 	const [selectedSources, setSelectedSources] =
@@ -98,6 +98,13 @@ const SourceFilter = ({ onModelChange }: CustomFilterProps): ReactElement => {
 				label={mapNumberToSourceDisplayName(Source.ExplorersGuideToWildemount)}
 				checked={isChecked(Source.ExplorersGuideToWildemount)}
 				data-source={Source.ExplorersGuideToWildemount}
+			/>
+			<Form.Check
+				type={"checkbox"}
+				onChange={handleCheck}
+				label={mapNumberToSourceDisplayName(Source.FizbansTreasuryOfDragons)}
+				checked={isChecked(Source.FizbansTreasuryOfDragons)}
+				data-source={Source.FizbansTreasuryOfDragons}
 			/>
 			<Form.Check
 				type={"checkbox"}
