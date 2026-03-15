@@ -14,6 +14,7 @@ export enum Source {
 	PlayersHandbook = 6,
 	TashasCauldronOfEverything = 7,
 	XanatharsGuideToEverything = 8,
+	FizbansTreasuryOfDragons = 9,
 }
 
 /**
@@ -42,6 +43,8 @@ export const mapNumberToSource = (x: number): number | null => {
 			return Source.TashasCauldronOfEverything;
 		case 8:
 			return Source.XanatharsGuideToEverything;
+		case 9:
+			return Source.FizbansTreasuryOfDragons;
 		default:
 			return null;
 	}
@@ -73,6 +76,8 @@ export const mapNumberToSourceDisplayName = (x: number): string => {
 			return "Tasha's Cauldron of Everything";
 		case 8:
 			return "Xanathar's Guide to Everything";
+		case 9:
+			return "Fizban's Treasury of Dragons";
 		default:
 			return "";
 	}

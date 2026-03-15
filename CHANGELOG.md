@@ -1,6 +1,10 @@
 <!-- @format -->
 
 # Changelog
+## 0.7.2
+-  Add new spell
+-  Update packages
+
 ## 0.7.1
 -  Update packages
 -  Remove "of" from grammarian word variations

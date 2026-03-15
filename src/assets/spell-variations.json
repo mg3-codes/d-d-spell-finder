@@ -5306,6 +5306,12 @@
 		]
 	},
 	{
+		"name": "raulothim's psychic lance",
+		"raulothim's": [],
+		"psychic": [],
+		"lance": ["dance"]
+	},
+	{
 		"name": "psychic scream",
 		"psychic": [],
 		"scream": ["stream"]
