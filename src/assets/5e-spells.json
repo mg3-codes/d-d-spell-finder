@@ -9781,7 +9781,7 @@
 		"name": "Raulothim's Psychic Lance",
 		"level": 4,
 		"school": -100000000,
-		"castingTime":0,
+		"castingTime": 0,
 		"duration": 0,
 		"range": 14,
 		"area": -1,
