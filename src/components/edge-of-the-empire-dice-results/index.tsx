@@ -4,20 +4,22 @@
  * @format
  */
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Table from "react-bootstrap/Table";
-
-import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
-
 import {
 	EdgeOfTheEmpireDiceSymbol,
 	mapSymbolToCharacter,
 } from "../../enums/edge-of-the-empire-dice-symbol";
+import type EdgeOfTheEmpireDiceCollection from "../../types/edge-of-the-empire-dice-collection";
 import type EdgeOfTheEmpireDiceResult from "../../types/edge-of-the-empire-dice-result";
 import { getOutcomeFromSymbols } from "../../utility/edge-of-the-empire-dice";
+import {
+	ConfettiColor,
+	ConfettiSideCannons,
+	type IConfettiSideCannonsHandle,
+} from "../confetti-side-cannons";
 import { EdgeDiceSymbol } from "../edge-dice-symbol";
-
 import "./styles.css";
 
 export interface IEdgeOfTheEmpireDiceResults {
@@ -96,8 +98,24 @@ export const EdgeOfTheEmpireDiceResults = ({
 		}
 	}, [results, resultsHaveDice]);
 
+	const ref = useRef<IConfettiSideCannonsHandle>(null);
+
+	const fireConfetti = useCallback(
+		(color: ConfettiColor) => ref.current?.fireConfetti(color),
+		[],
+	);
+
+	useEffect(() => {
+		if (calculatedResults && calculatedResults?.triumphs > 0)
+			fireConfetti(ConfettiColor.Colorful);
+
+		if (calculatedResults && calculatedResults?.despairs > 0)
+			fireConfetti(ConfettiColor.Red);
+	}, [calculatedResults, fireConfetti]);
+
 	return (
 		<div className="edge-dice-results">
+			<ConfettiSideCannons ref={ref} />
 			<Table className="results-table" striped bordered hover>
 				<thead>
 					<tr className="header">

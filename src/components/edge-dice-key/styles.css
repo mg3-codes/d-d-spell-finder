@@ -15,6 +15,7 @@
 		tr {
 			td:nth-child(1) {
 				position: sticky;
+				/* biome-ignore lint/suspicious/noDuplicateProperties: TO FIX */
 				position: -webkit-sticky;
 				left: 0;
 			}

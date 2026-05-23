@@ -1,6 +1,10 @@
 <!-- @format -->
 
 # Changelog
+## 0.7.3
+-  Update packages
+-  Add surprise celebration at triumph roll
+
 ## 0.7.2
 -  Add new spell
 -  Update packages
