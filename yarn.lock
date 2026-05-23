@@ -1717,10 +1717,10 @@ __metadata:
     lightningcss: "npm:^1.32.0"
     path: "npm:^0.12.7"
     prop-types: "npm:^15.8.1"
-    react: "npm:^19.2.4"
+    react: "npm:^19.2.6"
     react-bootstrap: "npm:^2.10.10"
-    react-dom: "npm:^19.2.4"
-    react-router: "npm:^7.13.1"
+    react-dom: "npm:^19.2.6"
+    react-router: "npm:^7.15.1"
     typescript: "npm:^5.9.3"
     vite: "npm:7.3.3"
   languageName: unknown
@@ -3249,14 +3249,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^19.2.4":
-  version: 19.2.4
-  resolution: "react-dom@npm:19.2.4"
+"react-dom@npm:^19.2.6":
+  version: 19.2.6
+  resolution: "react-dom@npm:19.2.6"
   dependencies:
     scheduler: "npm:^0.27.0"
   peerDependencies:
-    react: ^19.2.4
-  checksum: 10/ec17721a8cb131bc33480a9f738bc5bbfe4bd11b11cf69f3f473605346578a329ad26ceef6ef0761ea67a4b455803407dd7ed4ba3d8a5abd2cee8c32d221e498
+    react: ^19.2.6
+  checksum: 10/695122e37dec3460311231ff1f9a96368d74457d4ccf60010eaebc08c3e1c47b054c9267b40d98c689ae99d0c29a340acacfd405016a954a4f11613146191e68
   languageName: node
   linkType: hard
 
@@ -3274,9 +3274,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router@npm:^7.13.1":
-  version: 7.13.1
-  resolution: "react-router@npm:7.13.1"
+"react-router@npm:^7.15.1":
+  version: 7.15.1
+  resolution: "react-router@npm:7.15.1"
   dependencies:
     cookie: "npm:^1.0.1"
     set-cookie-parser: "npm:^2.6.0"
@@ -3286,7 +3286,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 10/da3c9f52ccb968647090013f735b8506b5f6a0290a43259d78e9ef6a664715978b6de90417e56b18717ce4ffc306e02826f0418e046aae22936a6f8cf386bc79
+  checksum: 10/0d9f352839708f13586e41bc21d4e74d1ef94ac747d8ba99a424734d17c7f9512926b16ac28a7659cc44ee4dd60b64f63ed58c704deb1cc68800056b377d3b40
   languageName: node
   linkType: hard
 
@@ -3305,10 +3305,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^19.2.4":
-  version: 19.2.4
-  resolution: "react@npm:19.2.4"
-  checksum: 10/18179fe217f67eb2d0bc61cd04e7ad3c282ea09a1dface7eacd71816f62609f4bbf566c447c704335284deb8397b00bca084e0cd60e6f437279a7498e2d0bfe0
+"react@npm:^19.2.6":
+  version: 19.2.6
+  resolution: "react@npm:19.2.6"
+  checksum: 10/205f0db93bd6c6485f94471d1c3437ae1d410f322297c76186fe4f658f88a6786bb0805e3cf8f330f24d1daa923b6b610ec63960d2461e9201bca64ca8361db9
   languageName: node
   linkType: hard
 
