@@ -749,7 +749,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/canvas-confetti@npm:^1":
+"@types/canvas-confetti@npm:^1.9.0":
   version: 1.9.0
   resolution: "@types/canvas-confetti@npm:1.9.0"
   checksum: 10/7c7423972465d21fc70a7842091735c51875bb7b4466bb623f11462de247272497c5e4a668aad6033e4bf5be3aaf0b57b059c9b26ac02592f4e02df423b86982
@@ -784,12 +784,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.12.0":
-  version: 24.12.0
-  resolution: "@types/node@npm:24.12.0"
+"@types/node@npm:^24.12.4":
+  version: 24.12.4
+  resolution: "@types/node@npm:24.12.4"
   dependencies:
     undici-types: "npm:~7.16.0"
-  checksum: 10/e9dcf8a378af5a636353b6d88a6fae018504bab776410ac6b5411e29afbe601ba9d7957356556fc27268a62814ca4085974f785613482c18f739686efcd49655
+  checksum: 10/4e5ce6faaf0e6f291114d6ac14fe546d491812b306107620802d5bef00ca36fb290637e79ec4fc24f33214f78f58c9b63254bd0ce94788bebfec03f26d45f2ea
   languageName: node
   linkType: hard
 
@@ -853,12 +853,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:19.2.14":
-  version: 19.2.14
-  resolution: "@types/react@npm:19.2.14"
+"@types/react@npm:19.2.15":
+  version: 19.2.15
+  resolution: "@types/react@npm:19.2.15"
   dependencies:
     csstype: "npm:^3.2.2"
-  checksum: 10/fbff239089ee64b6bd9b00543594db498278b06de527ef1b0f71bb0eb09cc4445a71b5dd3c0d3d0257255c4eed94406be40a74ad4a987ade8a8d5dd65c82bc5f
+  checksum: 10/f77447366a94804feea450568f7ebdadc00155457b4c74240972a73601294b09f45cac4e1a28aa97bc01da9ed130bb5fe9a687835d4da6307d457f92530acc3a
   languageName: node
   linkType: hard
 
@@ -1557,11 +1557,11 @@ __metadata:
     "@popperjs/core": "npm:^2.11.8"
     "@swc/core": "npm:1.15.18"
     "@swc/helpers": "npm:^0.5.19"
-    "@types/canvas-confetti": "npm:^1"
+    "@types/canvas-confetti": "npm:^1.9.0"
     "@types/mocha": "npm:^10.0.10"
-    "@types/node": "npm:^24.12.0"
+    "@types/node": "npm:^24.12.4"
     "@types/prop-types": "npm:^15.7.15"
-    "@types/react": "npm:19.2.14"
+    "@types/react": "npm:19.2.15"
     "@types/react-dom": "npm:^19.2.3"
     "@types/react-router": "npm:^5.1.20"
     "@vitejs/plugin-react-swc": "npm:^4.3.0"
