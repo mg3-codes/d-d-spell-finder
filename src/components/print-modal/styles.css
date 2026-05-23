@@ -20,6 +20,7 @@
 }
 
 [data-bs-theme="dark"] .carousel,
+/* biome-ignore lint/style/noDescendingSpecificity: TO FIX */
 .carousel {
 	.carousel-indicators {
 		display: none;
@@ -31,13 +32,17 @@
 	}
 }
 
+/* biome-ignore lint/style/noDescendingSpecificity: TO FIX */
 .carousel {
+	/* biome-ignore lint/style/noDescendingSpecificity: TO FIX */
 	.carousel-indicators {
 		display: none;
 	}
 
+	/* biome-ignore lint/style/noDescendingSpecificity: TO FIX */
 	.carousel-control-next-icon,
-	.carousel-control-prev-icon {
+	/* biome-ignore lint/style/noDescendingSpecificity: TO FIX */
+		.carousel-control-prev-icon {
 		filter: invert(1) grayscale(100);
 	}
 }

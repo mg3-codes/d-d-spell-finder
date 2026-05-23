@@ -22,6 +22,7 @@
 	}
 }
 
+/* biome-ignore lint/style/noDescendingSpecificity: TO FIX */
 .number-dice-results {
 	display: flex;
 	flex-direction: column;

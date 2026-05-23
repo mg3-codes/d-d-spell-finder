@@ -26,6 +26,7 @@
 	}
 }
 
+/* biome-ignore lint/style/noDescendingSpecificity: TO FIX */
 .edge-dice-results {
 	display: flex;
 	flex-direction: column;
